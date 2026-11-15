@@ -163,70 +163,82 @@
     `<label class="chip ${visible[t] ? "" : "off"}" data-t="${esc(t)}"><input type="checkbox" ${visible[t] ? "checked" : ""}><span class="dot" style="background:${esc(c.color)}"></span>${esc(c.label_ko || t)}</label>`).join("");
   $("session").innerHTML = `<option value="">전체 세션 (${sessions.length})</option>` + sessions.map((s) => `<option value="${esc(s.id)}">${esc(s.id)} — ${esc(short(s.label, 40))}</option>`).join("");
 
-  // 결정적 방사형 배치: 세션(중심) → 발표(고리) → 고유 개념(바깥 부채꼴), 공유 개념은 고리 안쪽
+  // 결정적 방사형 배치: 세션(중심) → 발표(고리) → 고유 개념(바깥 부채꼴).
+  // 한 세션 안에서 공유되는 개념은 고리 안쪽, 세션 사이에서 공유되는 개념은 세션 사이 기둥에 놓는다.
   function layout() {
     const vis = (id) => !cy.getElementById(id).hasClass("hidden");
-    const pos = new Map();
-    const vs = sessions.filter((s) => vis(s.id));
-    vs.forEach((s, i) => pos.set(s.id, { x: i * 1900, y: 0 }));
+    const pos = new Map(), angle = new Map(), home = new Map(), ringOf = new Map();
     const adj = new Map([...nodes.keys()].map((k) => [k, []]));
     valid.forEach((e) => { adj.get(e.source).push(e.target); adj.get(e.target).push(e.source); });
-    const angle = new Map(), home = new Map();
     const bySess = {};
     presentations.filter((p) => vis(p.id)).forEach((p) => (bySess[p.session] ||= []).push(p));
-    for (const [sid, ps] of Object.entries(bySess)) {
-      const c = pos.get(sid) || { x: 0, y: 0 };
+    const showPeople = visible.Person || visible.Organization;
+    const centers = [];
+    let x = 0, prevOuter = null;
+    for (const s of sessions) {
+      const ps = bySess[s.id] || [];
+      if (!vis(s.id) && !ps.length) continue;
+      const R = Math.max(270, ps.length * 50), outer = R + (showPeople ? 1150 : 420);
+      if (prevOuter !== null) x += prevOuter + outer + 420;      // 420: 세션 사이 기둥 자리
+      prevOuter = outer;
+      const c = { x, y: 0, R, outer };
+      centers.push(c);
+      if (vis(s.id)) pos.set(s.id, { x: c.x, y: 0 });
       ps.forEach((p, i) => {
         const a = -Math.PI / 2 + (2 * Math.PI * i) / ps.length;
-        angle.set(p.id, a); home.set(p.id, c);
-        pos.set(p.id, { x: c.x + 270 * Math.cos(a), y: c.y + 270 * Math.sin(a) });
+        angle.set(p.id, a); home.set(p.id, c); ringOf.set(p.id, ps.length);
+        pos.set(p.id, { x: c.x + R * Math.cos(a), y: R * Math.sin(a) });
       });
     }
     const fan = (items, pid, r0, step, spread) => items.forEach((id, i) => {
       const a = angle.get(pid) + (items.length > 1 ? (i / (items.length - 1) - 0.5) * spread : 0), c = home.get(pid);
-      const r = r0 + (i % 2) * step;
-      pos.set(id, { x: c.x + r * Math.cos(a), y: c.y + r * Math.sin(a) });
+      const r = c.R + r0 + (i % 2) * step;
+      pos.set(id, { x: c.x + r * Math.cos(a), y: r * Math.sin(a) });
     });
-    const sector = (pid) => (2 * Math.PI / (bySess[nodes.get(pid).session] || [1]).length) * 0.82;
-    const own = new Map(), shared = [];
-    const tiers = [["Problem", "Method", "System"], ["Person"]];
-    tiers.forEach((types, tier) => {
-      own.clear();
+    const inner = [], bridge = [];
+    [["Problem", "Method", "System"], ["Person"]].forEach((types, tier) => {
+      const own = new Map();
       for (const n of nodes.values()) {
         if (!types.includes(n.type) || !vis(n.id)) continue;
-        const ps = adj.get(n.id).filter((x) => angle.has(x));
+        const ps = adj.get(n.id).filter((v) => angle.has(v));
         if (ps.length === 1) (own.get(ps[0]) || own.set(ps[0], []).get(ps[0])).push(n.id);
-        else if (ps.length > 1) shared.push([n.id, ps, tier]);
+        else if (ps.length > 1) (new Set(ps.map((v) => home.get(v))).size > 1 ? bridge : inner).push([n.id, ps, tier]);
       }
       for (const [pid, items] of own) {
-        items.sort((x, y) => nodes.get(x).type.localeCompare(nodes.get(y).type));
-        fan(items, pid, tier ? 880 : 520, tier ? 90 : 130, sector(pid));
+        items.sort((u, v) => nodes.get(u).type.localeCompare(nodes.get(v).type));
+        fan(items, pid, tier ? 560 : 230, tier ? 90 : 130, (2 * Math.PI / ringOf.get(pid)) * 0.82);
       }
     });
-    for (const [id, ps, tier] of shared) {
-      const cx = ps.reduce((s, x) => s + pos.get(x).x, 0) / ps.length, cy0 = ps.reduce((s, x) => s + pos.get(x).y, 0) / ps.length;
-      const c = home.get(ps[0]), k = tier ? 3.4 : 0.55;
-      let dx = (cx - c.x) * k, dy = (cy0 - c.y) * k;
-      const d = Math.hypot(dx, dy), min = tier ? 1050 : 140 + (shared.findIndex((s) => s[0] === id) % 2) * 55;
-      if (d < min) {                       // 마주 보는 발표끼리 공유하면 중심과 겹치므로 밀어낸다
-        const a = d > 20 ? Math.atan2(dy, dx) : angle.get(ps[0]) + 1.0 + shared.findIndex((s) => s[0] === id) * 0.7;
-        dx = min * Math.cos(a); dy = min * Math.sin(a);
-      }
-      pos.set(id, { x: c.x + dx, y: c.y + dy });
+    inner.forEach(([id, ps, tier], i) => {
+      const c = home.get(ps[0]);
+      const mx = ps.reduce((s, v) => s + pos.get(v).x, 0) / ps.length - c.x, my = ps.reduce((s, v) => s + pos.get(v).y, 0) / ps.length;
+      const d = Math.hypot(mx, my);
+      const a = d > 20 ? Math.atan2(my, mx) : angle.get(ps[0]) + 1.0 + i * 0.7;   // 마주 보는 발표끼리 공유하면 방향을 임의로 정한다
+      const r = tier ? c.R + 760 : Math.max(130 + (i % 3) * 60, Math.min(d * 0.6, c.R - 110));
+      pos.set(id, { x: c.x + r * Math.cos(a), y: r * Math.sin(a) });
+    });
+    const cols = new Map();                                       // 세션 쌍마다 기둥 하나
+    for (const b of bridge) {
+      const cs = [...new Set(b[1].map((v) => home.get(v)))];
+      const key = cs.map((c) => c.x).sort((u, v) => u - v).join("|");
+      (cols.get(key) || cols.set(key, { x: cs.reduce((s, c) => s + c.x, 0) / cs.length, items: [] }).get(key)).items.push(b[0]);
     }
-    // 나머지(기관, 발표와 직접 연결되지 않은 노드): 이웃의 중심에서 바깥으로, 없으면 외곽 원
-    const rest = [...nodes.keys()].filter((id) => vis(id) && !pos.has(id));
+    for (const col of cols.values()) col.items.forEach((id, i) => pos.set(id, { x: col.x + ((i % 2) - 0.5) * 150, y: (i - (col.items.length - 1) / 2) * 120 }));
+    // 나머지(기관, 좌장, 발표와 직접 연결되지 않은 개념): 이웃의 중심에서 바깥으로
+    const rest = [...nodes.keys()].filter((id) => vis(id) && !pos.has(id))
+      .sort((u, v) => (nodes.get(u).type === "Organization") - (nodes.get(v).type === "Organization"));
     rest.forEach((id, i) => {
-      const nb = adj.get(id).filter((x) => pos.has(x));
-      if (nb.length) {
-        const x = nb.reduce((s, v) => s + pos.get(v).x, 0) / nb.length, y = nb.reduce((s, v) => s + pos.get(v).y, 0) / nb.length;
-        const c = { x: Math.round(x / 1900) * 1900, y: 0 }, d = Math.hypot(x - c.x, y - c.y) || 1;
-        const grow = nodes.get(id).type === "Organization" ? 170 : 110, tw = ((i % 3) - 1) * 0.06;
-        const a = Math.atan2(y - c.y, x - c.x) + tw;
-        pos.set(id, { x: c.x + (d + grow) * Math.cos(a), y: c.y + (d + grow) * Math.sin(a) });
+      const nb = adj.get(id).filter((v) => pos.has(v));
+      if (nb.length && centers.length) {
+        const px = nb.reduce((s, v) => s + pos.get(v).x, 0) / nb.length, py = nb.reduce((s, v) => s + pos.get(v).y, 0) / nb.length;
+        const c = centers.reduce((best, k) => (Math.abs(k.x - px) < Math.abs(best.x - px) ? k : best));
+        const d = Math.hypot(px - c.x, py), isOrg = nodes.get(id).type === "Organization";
+        const a = d > 20 ? Math.atan2(py, px - c.x) + ((i % 3) - 1) * 0.05 : (2 * Math.PI * i) / rest.length;
+        const r = isOrg ? Math.max(d + 170, c.R + 980) + (i % 3) * 70 : d > 20 ? d + 120 + (i % 3) * 50 : c.R + 860;
+        pos.set(id, { x: c.x + r * Math.cos(a), y: r * Math.sin(a) });
       } else {
         const a = (2 * Math.PI * i) / rest.length;
-        pos.set(id, { x: 1250 * Math.cos(a), y: 1250 * Math.sin(a) });
+        pos.set(id, { x: 1400 * Math.cos(a), y: 1400 * Math.sin(a) });
       }
     });
     cy.nodes().forEach((n) => { const q = pos.get(n.id()); if (q) n.position(q); });
@@ -239,6 +251,7 @@
         const d = nodes.get(n.id());
         n.toggleClass("hidden", !visible[d.type] || (sess && !sessOf.get(d.id).has(sess)));
       });
+      cy.edges().forEach((e) => e.toggleClass("hidden", e.source().hasClass("hidden") || e.target().hasClass("hidden")));
       cy.elements().removeClass("faded");
       if (q) {
         const hit = cy.nodes(":visible").filter((n) => {
@@ -327,7 +340,7 @@
 
   applyFilter(true);
   showOverview();
-  window.__ready = true;
+  window.__cy = cy; window.__ready = true;
 })();
 </script>
 </body>

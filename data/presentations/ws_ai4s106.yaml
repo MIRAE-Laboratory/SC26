@@ -1,0 +1,17 @@
+id: ws_ai4s106
+type: Presentation
+kind: paper
+label: "Limitations of Generative Inverse Design for Scientific Simulations"
+session: sess114
+time: "10:50-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s106"
+authors: [leslie-horace, vanessa-job, sharmistha-chakrabarti, nathan-debardeleben]
+addresses: [inverse-design-information-loss]
+proposes: [conditional-normalizing-flows]
+targets: [simulation-inputs]
+summary_ko: >
+  생성형 역설계는 같은 목표 출력을 내는 서로 다른 입력을 여러 개 만드는 다대일 문제다. 초기조건 이미지를 직접 생성하던 이전 연구와 달리, 실제 시뮬레이션처럼 실행 시점에 초기조건을 만드는 구성 변수를 생성 대상으로 삼는다. 결정론적 열확산 프록시(Cosine Phase, Perlin Noise 형상 함수)에서 조건부 정규화 흐름으로 최종 상태만 보고 입력 변수를 생성하고 시뮬레이션으로 검증한다.
+claims:
+  - "오차의 대부분은 형상 변수 모델링에서 나온다."
+  - "사후분포 분해 방식(완전 결합, 연쇄 결합, 분리)을 바꿔도 기준선 대비 개선이 거의 없다."
+  - "최종 출력이 상류 변수와 중간 표현의 정보를 충분히 보존하지 못할 수 있다."

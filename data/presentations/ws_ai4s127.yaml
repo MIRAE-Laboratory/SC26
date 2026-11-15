@@ -1,0 +1,18 @@
+id: ws_ai4s127
+type: Presentation
+kind: paper
+label: "On Multimodal Joint Embedding Predictive Architecture models for Tokamak Plasma Dynamics"
+session: sess114
+time: "16:50-17:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s127"
+authors: [leonardo-borgioli, neil-getty, milos-zefran, sandeep-madireddy]
+addresses: [sparse-multimodal-data]
+proposes: [jepa]
+targets: [sci-foundation-models, tokamak-plasma]
+summary_ko: >
+  토카막 실험 진단 데이터는 다중모달이고 이질적이며 방전마다 성기게 샘플링되어, 재사용 가능한 사전학습 표현이 유용하다. V-JEPA 2.1을 다중모달로 바꾼 T-JEPA는 폴로이달 자속의 공간 표현과 진단 인코더 6개를 양방향 교차 어텐션으로 묶는다. 평가는 MAST 방전 11,573건으로 만든 14개 과제 벤치마크 TokaMark로 한다.
+claims:
+  - "동결·부분·전체 적응에서 전이는 선택적이며, 동결 표현은 자속 맵과 플라즈마 전류 예측에서 경쟁력이 있다."
+  - "과제별 종단 간 모델이 그룹 1~2에서 TokaMind FT-Base 웜스타트 대비 NRMSE를 11.8~22.5% 낮춘다."
+  - "정규화, 액추에이터 조건화, 유효 배치 크기가 정확도와 안정성에 영향을 준다."
+  - "최고 정확도는 여전히 과제별 최적화가 가장 강하다."

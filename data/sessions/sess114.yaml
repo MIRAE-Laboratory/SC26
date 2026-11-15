@@ -1,0 +1,13 @@
+id: sess114
+type: Session
+label: "AI4S: 8th Workshop on AI and ML for Scientific Applications"
+kind: Workshop
+date: "2026-11-15"
+time: "09:00-17:30 CST"
+room: W183a
+url: https://sc26.conference-program.com/session/?sess=sess114
+chairs: [gokcen-kestor, dong-li, murali-emani, wenqian-dong]
+summary_ko: >
+  학계·정부·산업의 컴퓨터 과학자와 도메인 과학자가 과학 응용에 AI를 적용한 최근 연구를 공유하는 워크숍.
+  새로운 과학 문제를 소개하고 AI 기반 과학을 위한 도구와 인프라를 촉진하는 것이 목표이며,
+  심사를 거친 발표, 초청 강연, 패널로 구성된다.

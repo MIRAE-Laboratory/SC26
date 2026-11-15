@@ -15,6 +15,18 @@ Problem:
   workload-fingerprinting: {label: Workload fingerprinting, label_ko: 워크로드 식별}
   he-scalability: {label: Scalability of encrypted computation, label_ko: 암호화 연산의 확장성}
   compliance-governance: {label: "Standards, compliance, governance", label_ko: 표준·컴플라이언스·거버넌스, related: [sensitive-data-governance]}
+  env-configuration: {label: Environment configuration & reconstruction, label_ko: 실행 환경 구성·재구성}
+  inverse-design-information-loss: {label: Information loss in many-to-one inverse design, label_ko: 다대일 역설계의 정보 손실}
+  surrogate-payoff: {label: When neural surrogates actually pay off, label_ko: 대리모델의 실효 가속 여부}
+  manual-orchestration: {label: Manual orchestration of multi-step analysis, label_ko: 다단계 분석의 수작업 조율}
+  provenance-reproducibility: {label: Reproducibility & provenance, label_ko: 재현성·출처 추적}
+  ai-code-evaluation: {label: Evaluating AI-generated scientific code, label_ko: AI 생성 과학 코드의 평가, related: [ai-exploit-generation]}
+  data-stalls: {label: Data stalls from unpredictable agent access, label_ko: 에이전트의 예측 불가 접근에 따른 데이터 정체}
+  annotation-cost: {label: Labor-intensive annotation & proofreading, label_ko: 주석·교정의 인력 비용}
+  high-resolution-scaling: {label: Scaling to high-resolution data, label_ko: 고해상도 데이터 확장성}
+  rollout-error: {label: Autoregressive rollout error accumulation, label_ko: 자기회귀 롤아웃의 오차 누적}
+  sparse-multimodal-data: {label: Sparse multimodal diagnostics, label_ko: 희소·다중모달 진단 데이터}
+  physical-feasibility: {label: Physical feasibility of surrogate outputs, label_ko: 대리모델 출력의 물리적 타당성}
 Method:
   attack-trees: {label: Threat modeling with attack trees, label_ko: 공격 트리 기반 위협 모델링}
   tre-sde: {label: Trusted Research Environment (TRE/SDE), label_ko: 신뢰연구환경(TRE/SDE), related: [sensitive-data-governance]}
@@ -30,6 +42,23 @@ Method:
   sampling-coarsening: {label: Sampling-rate coarsening, label_ko: 샘플링 주기 완화}
   homomorphic-encryption: {label: Homomorphic encryption (BGV), label_ko: 동형암호(BGV), related: [pets]}
   mpi-parallelization: {label: Distributed-memory parallelization (MPI), label_ko: 분산메모리 병렬화(MPI)}
+  multi-agent-workflow: {label: Multi-agent LLM workflow, label_ko: 다중 LLM 에이전트 워크플로, related: [ai-agents]}
+  domain-benchmark: {label: Domain-specific benchmarks, label_ko: 도메인 특화 벤치마크}
+  conditional-normalizing-flows: {label: Conditional normalizing flows, label_ko: 조건부 정규화 흐름}
+  in-situ-inference: {label: HPC-native in-situ inference, label_ko: HPC 네이티브 인시투 추론}
+  mcp-tools: {label: Typed tools via Model Context Protocol (MCP), label_ko: MCP 기반 도구 노출, related: [ai-agents]}
+  skill-files: {label: Versioned skill files, label_ko: 버전 관리되는 스킬 파일}
+  provenance-logging: {label: "Provenance logging (MLflow, Tiled)", label_ko: 실행 기록·메타데이터 로깅, related: [provenance-reproducibility]}
+  hybrid-evaluators: {label: Deterministic checks + LLM evaluators, label_ko: 결정론적 검사와 LLM 평가의 결합}
+  agent-aware-memory: {label: Agent-aware memory management, label_ko: 에이전트 인지 메모리 관리}
+  generative-vae: {label: 3D convolutional VAE, label_ko: 3차원 합성곱 VAE}
+  event-triggered-correction: {label: Event-triggered context healing (ETCH), label_ko: 이벤트 기반 컨텍스트 복구}
+  domain-parallelism: {label: Domain parallelism (ShardTensor), label_ko: 도메인 병렬화}
+  gnn-surrogate: {label: Graph-network surrogate, label_ko: 그래프 신경망 대리모델, related: [neural-surrogates]}
+  mesh-coarsening: {label: Geometry-based mesh coarsening, label_ko: 형상 기반 격자 조대화}
+  jepa: {label: Joint-embedding predictive architecture (JEPA), label_ko: 결합 임베딩 예측 구조}
+  physics-aware-training: {label: Physics-aware training (augmented Lagrangian), label_ko: 물리 인지 학습(증강 라그랑지안)}
+  scaling-laws: {label: Scaling-law analysis, label_ko: 스케일링 법칙 분석}
 System:
   ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터}
   kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스}
@@ -40,3 +69,16 @@ System:
   hpc-network: {label: HPC network, label_ko: HPC 네트워크}
   power-telemetry: {label: Power telemetry (RAPL), label_ko: 전력 텔레메트리}
   encrypted-graph: {label: Encrypted graph analytics, label_ko: 암호화 그래프 분석}
+  cloud-science-environments: {label: Cloud science environments, label_ko: 클라우드 과학 실행 환경}
+  simulation-inputs: {label: Simulation configuration variables, label_ko: 시뮬레이션 구성 변수}
+  mpi-simulations: {label: MPI simulation codes, label_ko: MPI 시뮬레이션 코드, related: [mpi-parallelization]}
+  user-facility-beamline: {label: User-facility beamline (NSLS-II), label_ko: 사용자 시설 빔라인, related: [leadership-facility]}
+  hpc-libraries: {label: Production HPC libraries (PETSc), label_ko: 실전 HPC 라이브러리, related: [scientific-apps]}
+  storage-memory-hierarchy: {label: Storage-memory hierarchy, label_ko: 저장장치·메모리 계층}
+  connectomics: {label: Electron-microscopy connectomes, label_ko: 전자현미경 커넥톰}
+  neural-surrogates: {label: Neural surrogate models, label_ko: 신경망 대리모델}
+  sci-foundation-models: {label: Scientific foundation models, label_ko: 과학 파운데이션 모델}
+  sciml-training: {label: SciML training & inference (PyTorch), label_ko: 과학 ML 학습·추론}
+  lattice-boltzmann: {label: Lattice Boltzmann flows, label_ko: 격자 볼츠만 유동}
+  tokamak-plasma: {label: Tokamak plasma (MAST), label_ko: 토카막 플라즈마}
+  power-grid: {label: Power grid optimization (ACOPF), label_ko: 전력망 최적조류}

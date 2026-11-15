@@ -1,0 +1,19 @@
+id: ws_ai4s134
+type: Presentation
+kind: paper
+label: "A Distribution-Function GNN Surrogate for Lattice Boltzmann Flows: Adaptive Coarsening Is Where the Speedup Comes From"
+session: sess114
+time: "16:30-16:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s134"
+authors: [hiroki-kaneko, takashi-shimokawabe]
+addresses: [surrogate-payoff, rollout-error]
+proposes: [gnn-surrogate, mesh-coarsening]
+targets: [neural-surrogates, lattice-boltzmann]
+summary_ko: >
+  2차원 격자 볼츠만 유동의 그래프 신경망 대리모델을 정확도와 사례당 실행 시간 양쪽으로 평가한다. 모델은 속도 분포함수의 증분을 예측하고 LBM 정의에 따라 속도와 밀도를 복원한다. 형상만으로 정하는 가변 반경 포아송 디스크 선택으로 격자를 조대화한다.
+claims:
+  - "49스텝 롤아웃(솔버 9,800스텝)이 발산 없이 끝난다."
+  - "분포함수를 입력에 더하면 속도 오차가 20~46% 줄어든다."
+  - "조대화로 노드 수가 22.6배 줄어도 평가 격자에서의 정확도는 균일 격자와 비슷하다."
+  - "조대화하면 사례당 시간이 10분의 1로 줄어 기준 솔버보다 8.9배 빠르다. 균일 격자에서는 기준 솔버와 비슷한 수준이다."
+  - "같은 레이놀즈 수의 조대 격자 솔버와 비교하면 장점은 속도가 아니라 견고성이다(48개 사례 모두 해를 냄, 솔버는 42개)."

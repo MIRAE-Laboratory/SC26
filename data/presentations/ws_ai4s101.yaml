@@ -1,0 +1,17 @@
+id: ws_ai4s101
+type: Presentation
+kind: paper
+label: "EnvAgent: Multi-Agent Approach to Building Science Environments in the Clouds"
+session: sess114
+time: "10:30-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s101"
+authors: [yiming-cheng, chris-low, binrui-huang, mengshi-zhang, zihao-chen, kate-keahey, paul-marshall, kexin-pei]
+addresses: [env-configuration]
+proposes: [multi-agent-workflow, domain-benchmark]
+targets: [ai-agents, cloud-science-environments]
+summary_ko: >
+  운영체제, 의존성, 하드웨어 제약을 맞춰야 하는 환경 구성은 간과되는 난제다. 기존 LLM 워크플로는 미리 만든 Dockerfile이나 수작업 스크립트에 의존하거나 환경이 까다로운 저장소를 제외한다. 저장소에서 하드웨어를 고려한 Dockerfile을 자동 합성·빌드·검증하는 다중 에이전트 워크플로 EnvAgent, 필요한 연산 자원을 추론해 할당하는 EnvAgent+, 환경 재구성 충실도를 재는 벤치마크 EnvBench를 제시한다.
+claims:
+  - "Trovi와 Multi-SWE-bench의 저장소 54개(7개 언어)로 평가했다."
+  - "기준선 대비 실행 가능 건수가 16.2%, FCS 점수가 33.91% 늘었다."
+  - "기존 방식이 구성에 실패하던 저장소도 평가할 수 있게 된다."

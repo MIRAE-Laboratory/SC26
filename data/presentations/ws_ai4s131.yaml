@@ -1,0 +1,18 @@
+id: ws_ai4s131
+type: Presentation
+kind: paper
+label: "LightshowAI-Agent: An MCP-Based Agentic Framework for Real-Time and Reproducible X-Ray Absorption Spectral Analysis at Scientific User Facilities"
+session: sess114
+time: "11:30-11:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s131"
+authors: [ozgur-kilic, sairam-vatsavai, huihuo-zheng, anton-yanaky, xiaohui-qu, christopher-kelly, chuntian-cao, kari-barry, daniel-allan, lu-ma, stuart-wilkins, sara-mason, meifeng-lin, adolfy-hoisie, deyu-lu]
+addresses: [manual-orchestration, provenance-reproducibility]
+proposes: [mcp-tools, skill-files, provenance-logging]
+targets: [ai-agents, user-facility-beamline, neural-surrogates]
+summary_ko: >
+  X선 흡수 분광(XAS) 데이터에서 미지의 상을 식별하려면 후보 검색, 대리모델 추론, 스펙트럼 정렬, 전문가 기준 순위화, 출처 추적을 거쳐야 하고, 지금은 과학자가 여러 데이터베이스·모델·서비스를 손으로 조율한다. LightshowAI-Agent는 Materials Project, XAS 예측 대리모델, American Science Cloud 모델 서비스를 MCP의 타입 지정 도구로 노출해 이 파이프라인을 자동화한다.
+claims:
+  - "도메인 분석 절차를 버전 관리되는 스킬 파일에 두어 전문가가 프롬프트와 별개로 검토·수정한다."
+  - "재현성을 위해 에이전트·모델 활동은 MLflow로, 분석 메타데이터는 Tiled로 기록한다."
+  - "NSLS-II QAS 빔라인에서 스트리밍되는 Ti K-edge 스펙트럼으로 TiO2 다형체를 식별하는 워크플로를 시연했다."
+  - "공개 초록에는 정확도나 지연 시간 같은 정량 결과가 없다."

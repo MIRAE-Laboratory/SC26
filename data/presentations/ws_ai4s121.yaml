@@ -1,0 +1,18 @@
+id: ws_ai4s121
+type: Presentation
+kind: paper
+label: "ShardTensor: Democratizing Domain Parallelism for Scientific Machine Learning"
+session: sess114
+time: "16:10-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s121"
+authors: [corey-adams, peter-harrington, akshay-subramaniam, mohammad-abbas, jaideep-pathak, dallas-foster, mike-pritchard]
+addresses: [high-resolution-scaling]
+proposes: [domain-parallelism]
+targets: [sciml-training]
+summary_ko: >
+  과학 ML은 초고해상도 데이터에서 막히고, 기존 완화책은 확장이 안 되거나 정확도를 떨어뜨린다. 대규모 공간 데이터를 다루는 방법들은 특정 모델 전용이다. ShardTensor는 DDP가 데이터 병렬화를 보편화한 것처럼 도메인 병렬화를 표준 학습·추론에 가져오는 PyTorch 네이티브 추상화다.
+claims:
+  - "모델을 고치지 않고 쓸 수 있고, 기존 데이터 병렬·모델 병렬 기법과 결합된다."
+  - "수정하지 않은 모델이 GPU 한 장의 메모리보다 큰 입력으로 학습된다."
+  - "큰 입력에서 거의 선형으로 확장되고 고해상도 추론이 빨라진다."
+  - "공개 초록에는 구체적인 수치가 없다."
