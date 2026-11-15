@@ -1,0 +1,18 @@
+# SC26 온톨로지 스키마 — 클래스와 관계는 여기 정의된 것만 허용 (build.py가 검증)
+classes:
+  Session:      {color: "#6b7280", label_ko: 세션}
+  Presentation: {color: "#2563eb", label_ko: 발표}
+  Person:       {color: "#a3a3a3", label_ko: 인물}
+  Organization: {color: "#78716c", label_ko: 기관}
+  Problem:      {color: "#dc2626", label_ko: 문제·위협}
+  Method:       {color: "#059669", label_ko: 기법}
+  System:       {color: "#d97706", label_ko: 대상 시스템}
+relations:
+  partOf:         {from: [Presentation], to: [Session]}
+  chairedBy:      {from: [Session], to: [Person]}
+  authoredBy:     {from: [Presentation], to: [Person]}
+  affiliatedWith: {from: [Person], to: [Organization]}
+  addresses:      {from: [Presentation], to: [Problem]}
+  proposes:       {from: [Presentation], to: [Method]}
+  targets:        {from: [Presentation], to: [System]}
+  relatedTo:      {from: [Problem, Method, System], to: [Problem, Method, System]}

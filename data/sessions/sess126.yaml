@@ -1,0 +1,14 @@
+id: sess126
+type: Session
+label: "S-HPC 2026: 5th Intl. Workshop on Cyber Security in HPC"
+kind: Workshop
+date: "2026-11-15"
+time: "14:00-17:30 CST"
+room: W183b
+url: https://sc26.conference-program.com/session/?sess=sess126
+website: https://hpc.pnl.gov/S-HPC
+chairs: [andres-marquez, yang-guo, kevin-barker, nael-abu-ghazaleh, joseph-manzano]
+summary_ko: >
+  사이버보안과 HPC 연구자·실무자를 연결하는 워크숍. HPC 보안은 그동안 인증된 사용자로 접근을 제한하는
+  운영 문제로 다뤄져 보안 연구 커뮤니티와 분리되어 있었으나, 플랫폼과 사용자층이 다양해지면서
+  두 분야의 연결이 중요해졌다는 문제의식에서 출발한다.

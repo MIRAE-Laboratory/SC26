@@ -1,0 +1,35 @@
+andres-marquez: {name: Andres Marquez, orgs: [pnnl]}
+yang-guo: {name: Yang Guo, orgs: [nist]}
+kevin-barker: {name: Kevin J. Barker, orgs: [pnnl]}
+nael-abu-ghazaleh: {name: Nael Abu-Ghazaleh, orgs: [ucr]}
+joseph-manzano: {name: Joseph Manzano, orgs: [pnnl]}
+sadaf-alam: {name: Sadaf R. Alam, orgs: [bristol]}
+martin-oreilly: {name: Martin O'Reilly, orgs: [turing]}
+matt-craddock: {name: Matt Craddock, orgs: [turing]}
+jim-madge: {name: Jim Madge, orgs: [turing]}
+matt-penn: {name: Matt Penn, orgs: [kcl]}
+george-svarovsky: {name: George Svarovsky, orgs: [ucl]}
+jake-watson: {name: Jake Watson, orgs: [bristol]}
+babatunde-oyewo: {name: Babatunde Oyewo, orgs: [cambridge]}
+olivera-kotevska: {name: Olivera Kotevska, orgs: [ornl]}
+sumit-jha: {name: Sumit Jha, orgs: [ufl]}
+aurelien-bellet: {name: Aurélien Bellet, orgs: [inria]}
+rui-hu: {name: Rui Hu, orgs: [unr]}
+nathaniel-bastian: {name: Nathaniel Bastian, orgs: [jhu]}
+rafael-ferreira-da-silva: {name: Rafael Ferreira da Silva, orgs: [ornl]}
+ravi-madduri: {name: Ravi Madduri, orgs: [anl]}
+kibaek-kim: {name: Kibaek Kim, orgs: [anl]}
+michael-polinski: {name: Michael Polinski, orgs: [northwestern]}
+peter-dinda: {name: Peter Dinda, orgs: [northwestern]}
+tim-klawa: {name: Tim Klawa, orgs: [nvidia]}
+venkat-karanam: {name: Venkat Sai Suman Lamba Karanam, orgs: [bgsu, anl]}
+zahmeeth-sakkaff: {name: Zahmeeth Sakkaff, orgs: [wvutech, anl]}
+shubham-sundriyal: {name: Shubham Sundriyal, orgs: [bgsu]}
+kwesi-danso: {name: Kwesi Danso, orgs: [ttu]}
+samuel-abiola: {name: Samuel Abiola, orgs: [ttu]}
+susan-mengel: {name: Susan Mengel, orgs: [ttu]}
+charis-hulu: {name: Charis Hulu, orgs: [uic]}
+anrin-chakraborti: {name: Anrin Chakraborti, orgs: [uic]}
+sidharth-kumar: {name: Sidharth Kumar, orgs: [uic]}
+ryan-adamson: {name: Ryan Adamson, orgs: [ornl]}
+rickey-gregg: {name: Rickey Gregg, orgs: [hpcmp]}

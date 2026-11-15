@@ -1,0 +1,21 @@
+id: ws_shpc101
+type: Presentation
+kind: paper
+label: A Threat Model for Sensitive-Data Workloads on Multi-Tenant AI Supercomputers
+session: sess126
+time: "14:03-14:22"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc101"
+authors: [sadaf-alam, martin-oreilly, matt-craddock, jim-madge, matt-penn, george-svarovsky, jake-watson, babatunde-oyewo]
+addresses: [multi-tenant-isolation, sensitive-data-governance, split-responsibility, insider-threat]
+proposes: [attack-trees, tre-sde, portable-governance]
+targets: [ai-supercomputer, kubernetes-baremetal]
+summary_ko: >
+  민감데이터 연구에는 국가 AI 슈퍼컴퓨터 규모의 GPU가 필요하지만, 클라우드에서 통용되는 통제된 멀티테넌트 운영은
+  슈퍼컴퓨팅에 정착되지 않았다. TRE/SDE를 이런 시스템으로 확장하면 보안 책임이 용량 소유자, 인프라 제공자,
+  TRE/SDE 운영자로 나뉜다. 두 개의 베어메탈 국가 시스템에 멀티테넌트 쿠버네티스로 배치된 위성 TRE 아키텍처
+  FRIDGE를 근거로 공격 트리 형태의 위협 모델을 제시한다. 진행 중인 연구.
+claims:
+  - 적대자는 특권 호스트 운영자, 악의적 공동 테넌트, 일탈 연구자 세 유형이다.
+  - 기존 TRE 연구가 다루지 않은 슈퍼컴퓨팅 고유의 공격 표면을 포함한다.
+  - 각 공격 경로를 완화책과 그 책임 주체에 대응시킨다.
+  - 독립 운영되는 TRE/SDE 플랫폼 사이에서 거버넌스가 이식 가능해야 한다.

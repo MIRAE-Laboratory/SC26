@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SC26 온톨로지</title>
+<style>
+  :root { --bg:#fafaf9; --panel:#fff; --line:#e7e5e4; --text:#1c1917; --muted:#78716c; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { font: 14px/1.5 system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color: var(--text); background: var(--bg); display: flex; }
+  aside { width: 360px; flex: none; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; height: 100%; }
+  header { padding: 16px 18px 12px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: 17px; margin: 0 0 2px; }
+  header p { margin: 0; color: var(--muted); font-size: 12px; }
+  .controls { padding: 12px 18px; border-bottom: 1px solid var(--line); }
+  .controls input[type=search], .controls select { width: 100%; padding: 7px 9px; border: 1px solid var(--line); border-radius: 6px; font: inherit; margin-bottom: 8px; background: #fff; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; cursor: pointer; font-size: 12px; user-select: none; }
+  .chip input { display: none; }
+  .chip .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .chip.off { opacity: .4; }
+  #detail { padding: 14px 18px; overflow-y: auto; flex: 1; }
+  #detail h2 { font-size: 15px; margin: 4px 0 2px; line-height: 1.35; }
+  #detail h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
+  #detail p { margin: 4px 0; }
+  #detail ul { margin: 4px 0; padding-left: 18px; }
+  #detail li { margin: 3px 0; }
+  .tag { display: inline-block; font-size: 11px; color: #fff; border-radius: 4px; padding: 1px 7px; }
+  .muted { color: var(--muted); }
+  .src { font-size: 10px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; white-space: nowrap; }
+  .photos img { width: 100%; border-radius: 6px; border: 1px solid var(--line); margin-top: 6px; display: block; }
+  a { color: #2563eb; }
+  .link { cursor: pointer; color: #2563eb; }
+  .link:hover { text-decoration: underline; }
+  #warn { display: none; background: #fef3c7; color: #92400e; font-size: 12px; padding: 8px 18px; border-bottom: 1px solid #fde68a; white-space: pre-wrap; }
+  main { flex: 1; position: relative; min-width: 0; }
+  #cy { position: absolute; inset: 0; }
+  #fit { position: absolute; right: 14px; top: 14px; z-index: 5; padding: 6px 12px; border: 1px solid var(--line); background: #fff; border-radius: 6px; cursor: pointer; font: inherit; }
+  @media (max-width: 760px) { body { flex-direction: column; } aside { width: 100%; height: 48%; border-right: 0; border-bottom: 1px solid var(--line); } }
+</style>
+</head>
+<body>
+<aside>
+  <header>
+    <h1>SC26 온톨로지</h1>
+    <p id="stats">불러오는 중…</p>
+  </header>
+  <div id="warn"></div>
+  <div class="controls">
+    <select id="session"></select>
+    <input id="q" type="search" placeholder="검색 (제목, 개념, 인물)">
+    <div class="chips" id="chips"></div>
+  </div>
+  <div id="detail"></div>
+</aside>
+<main>
+  <button id="fit">화면 맞춤</button>
+  <div id="cy"></div>
+</main>
+
+<script src="vendor/js-yaml.min.js"></script>
+<script src="vendor/cytoscape.min.js"></script>
+<script>
+(async function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const loadYaml = async (path) => {
+    const r = await fetch(path, { cache: "no-cache" });
+    if (!r.ok) throw new Error(path + " 을(를) 읽을 수 없습니다 (" + r.status + ")");
+    return jsyaml.safeLoad(await r.text()) || {};
+  };
+
+  // ---------- 1. YAML 읽기 ----------
+  let schema, manifest, orgs, people, concepts, sessions, presentations;
+  try {
+    [schema, manifest, orgs, people, concepts] = await Promise.all(
+      ["schema.yaml", "data/manifest.yaml", "data/orgs.yaml", "data/people.yaml", "data/concepts.yaml"].map(loadYaml));
+    sessions = await Promise.all((manifest.sessions || []).map((f) => loadYaml("data/" + f)));
+    presentations = await Promise.all((manifest.presentations || []).map((f) => loadYaml("data/" + f)));
+  } catch (e) {
+    $("stats").textContent = "데이터를 불러오지 못했습니다.";
+    $("detail").innerHTML = "<p>" + esc(e.message) + "</p><p class='muted'>파일을 직접 열었다면 <code>python -m http.server</code>로 실행해 주세요.</p>";
+    return;
+  }
+
+  // ---------- 2. 그래프 구성 + 스키마 검증 ----------
+  const nodes = new Map(), edges = [], errors = [];
+  const addNode = (id, type, attrs) => {
+    if (nodes.has(id)) errors.push("중복 id: " + id);
+    nodes.set(id, Object.assign({ id, type }, attrs));
+  };
+  const addEdge = (source, rel, target) => edges.push({ source, rel, target });
+
+  for (const [id, name] of Object.entries(orgs)) addNode(id, "Organization", { label: name });
+  for (const [id, p] of Object.entries(people)) {
+    addNode(id, "Person", { label: p.name });
+    (p.orgs || []).forEach((o) => addEdge(id, "affiliatedWith", o));
+  }
+  for (const [type, items] of Object.entries(concepts))
+    for (const [id, c] of Object.entries(items || {})) {
+      addNode(id, type, { label: c.label, label_ko: c.label_ko });
+      (c.related || []).forEach((r) => addEdge(id, "relatedTo", r));
+    }
+  for (const s of sessions) {
+    addNode(s.id, "Session", s);
+    (s.chairs || []).forEach((c) => addEdge(s.id, "chairedBy", c));
+  }
+  const FIELD_REL = { authors: "authoredBy", addresses: "addresses", proposes: "proposes", targets: "targets" };
+  for (const p of presentations) {
+    addNode(p.id, "Presentation", p);
+    addEdge(p.id, "partOf", p.session);
+    for (const [field, rel] of Object.entries(FIELD_REL)) (p[field] || []).forEach((t) => addEdge(p.id, rel, t));
+  }
+  const valid = edges.filter((e) => {
+    const s = nodes.get(e.source), t = nodes.get(e.target), rule = (schema.relations || {})[e.rel];
+    if (!s || !t) { errors.push(`${e.rel}: 없는 노드 (${e.source} → ${e.target})`); return false; }
+    if (!rule) { errors.push("정의되지 않은 관계: " + e.rel); return false; }
+    if (!rule.from.includes(s.type) || !rule.to.includes(t.type)) { errors.push(`${e.rel}: ${s.type}(${s.id}) → ${t.type}(${t.id}) 허용되지 않음`); return false; }
+    return true;
+  });
+  if (errors.length) { $("warn").style.display = "block"; $("warn").textContent = "스키마 경고 " + errors.length + "건\n" + errors.join("\n"); }
+
+  // 각 노드가 속한 세션 (세션 필터용): 발표의 세션을 1~2단계 이웃에 전파
+  const sessOf = new Map([...nodes.keys()].map((k) => [k, new Set()]));
+  for (const s of sessions) sessOf.get(s.id).add(s.id);
+  for (const p of presentations) if (sessOf.has(p.id)) sessOf.get(p.id).add(p.session);
+  for (let pass = 0; pass < 2; pass++)
+    for (const e of valid) if (e.rel !== "relatedTo" && e.rel !== "partOf")
+      sessOf.get(e.source).forEach((s) => sessOf.get(e.target).add(s));
+
+  // ---------- 3. 그리기 ----------
+  const classes = schema.classes || {};
+  const color = (t) => (classes[t] || {}).color || "#888";
+  const SIZE = { Session: 56, Presentation: 40, Problem: 28, Method: 28, System: 28, Person: 16, Organization: 22 };
+  const SHAPE = { Session: "star", Presentation: "round-rectangle", Problem: "ellipse", Method: "diamond", System: "hexagon", Person: "ellipse", Organization: "rectangle" };
+  const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
+  const cy = cytoscape({
+    container: $("cy"),
+    elements: [
+      ...[...nodes.values()].map((n) => ({ data: { id: n.id, type: n.type, text: short(n.label_ko || n.label || n.id, n.type === "Presentation" ? 44 : 30) } })),
+      ...valid.map((e, i) => ({ data: { id: "e" + i, source: e.source, target: e.target, rel: e.rel } })),
+    ],
+    style: [
+      { selector: "node", style: {
+          "background-color": (n) => color(n.data("type")), shape: (n) => SHAPE[n.data("type")] || "ellipse",
+          width: (n) => SIZE[n.data("type")] || 20, height: (n) => SIZE[n.data("type")] || 20,
+          label: "data(text)", "font-size": 13, color: "#1c1917", "text-wrap": "wrap", "text-max-width": 150,
+          "text-valign": "bottom", "text-margin-y": 4, "text-background-color": "#fafaf9", "text-background-opacity": 0.8, "text-background-padding": 1 } },
+      { selector: 'node[type="Presentation"], node[type="Session"]', style: { "font-size": 14, "font-weight": 600 } },
+      { selector: "edge", style: { width: 1.2, "line-color": "#d6d3d1", "curve-style": "bezier", "target-arrow-shape": "triangle", "target-arrow-color": "#d6d3d1", "arrow-scale": 0.7 } },
+      { selector: 'edge[rel="relatedTo"]', style: { "line-style": "dashed", "target-arrow-shape": "none" } },
+      { selector: ".hidden", style: { display: "none" } },
+      { selector: ".faded", style: { opacity: 0.12 } },
+      { selector: "node.focus", style: { "border-width": 3, "border-color": "#1c1917" } },
+      { selector: "edge.hl", style: { "line-color": "#57534e", "target-arrow-color": "#57534e", width: 2, label: "data(rel)", "font-size": 9, color: "#57534e", "text-background-color": "#fafaf9", "text-background-opacity": 1, "text-rotation": "autorotate" } },
+    ],
+  });
+
+  // ---------- 4. 필터 ----------
+  const visible = Object.fromEntries(Object.keys(classes).map((t) => [t, !["Person", "Organization"].includes(t)]));
+  $("chips").innerHTML = Object.entries(classes).map(([t, c]) =>
+    `<label class="chip ${visible[t] ? "" : "off"}" data-t="${esc(t)}"><input type="checkbox" ${visible[t] ? "checked" : ""}><span class="dot" style="background:${esc(c.color)}"></span>${esc(c.label_ko || t)}</label>`).join("");
+  $("session").innerHTML = `<option value="">전체 세션 (${sessions.length})</option>` + sessions.map((s) => `<option value="${esc(s.id)}">${esc(s.id)} — ${esc(short(s.label, 40))}</option>`).join("");
+
+  // 결정적 방사형 배치: 세션(중심) → 발표(고리) → 고유 개념(바깥 부채꼴), 공유 개념은 고리 안쪽
+  function layout() {
+    const vis = (id) => !cy.getElementById(id).hasClass("hidden");
+    const pos = new Map();
+    const vs = sessions.filter((s) => vis(s.id));
+    vs.forEach((s, i) => pos.set(s.id, { x: i * 1900, y: 0 }));
+    const adj = new Map([...nodes.keys()].map((k) => [k, []]));
+    valid.forEach((e) => { adj.get(e.source).push(e.target); adj.get(e.target).push(e.source); });
+    const angle = new Map(), home = new Map();
+    const bySess = {};
+    presentations.filter((p) => vis(p.id)).forEach((p) => (bySess[p.session] ||= []).push(p));
+    for (const [sid, ps] of Object.entries(bySess)) {
+      const c = pos.get(sid) || { x: 0, y: 0 };
+      ps.forEach((p, i) => {
+        const a = -Math.PI / 2 + (2 * Math.PI * i) / ps.length;
+        angle.set(p.id, a); home.set(p.id, c);
+        pos.set(p.id, { x: c.x + 270 * Math.cos(a), y: c.y + 270 * Math.sin(a) });
+      });
+    }
+    const fan = (items, pid, r0, step, spread) => items.forEach((id, i) => {
+      const a = angle.get(pid) + (items.length > 1 ? (i / (items.length - 1) - 0.5) * spread : 0), c = home.get(pid);
+      const r = r0 + (i % 2) * step;
+      pos.set(id, { x: c.x + r * Math.cos(a), y: c.y + r * Math.sin(a) });
+    });
+    const sector = (pid) => (2 * Math.PI / (bySess[nodes.get(pid).session] || [1]).length) * 0.82;
+    const own = new Map(), shared = [];
+    const tiers = [["Problem", "Method", "System"], ["Person"]];
+    tiers.forEach((types, tier) => {
+      own.clear();
+      for (const n of nodes.values()) {
+        if (!types.includes(n.type) || !vis(n.id)) continue;
+        const ps = adj.get(n.id).filter((x) => angle.has(x));
+        if (ps.length === 1) (own.get(ps[0]) || own.set(ps[0], []).get(ps[0])).push(n.id);
+        else if (ps.length > 1) shared.push([n.id, ps, tier]);
+      }
+      for (const [pid, items] of own) {
+        items.sort((x, y) => nodes.get(x).type.localeCompare(nodes.get(y).type));
+        fan(items, pid, tier ? 880 : 520, tier ? 90 : 130, sector(pid));
+      }
+    });
+    for (const [id, ps, tier] of shared) {
+      const cx = ps.reduce((s, x) => s + pos.get(x).x, 0) / ps.length, cy0 = ps.reduce((s, x) => s + pos.get(x).y, 0) / ps.length;
+      const c = home.get(ps[0]), k = tier ? 3.4 : 0.55;
+      let dx = (cx - c.x) * k, dy = (cy0 - c.y) * k;
+      const d = Math.hypot(dx, dy), min = tier ? 1050 : 140 + (shared.findIndex((s) => s[0] === id) % 2) * 55;
+      if (d < min) {                       // 마주 보는 발표끼리 공유하면 중심과 겹치므로 밀어낸다
+        const a = d > 20 ? Math.atan2(dy, dx) : angle.get(ps[0]) + 1.0 + shared.findIndex((s) => s[0] === id) * 0.7;
+        dx = min * Math.cos(a); dy = min * Math.sin(a);
+      }
+      pos.set(id, { x: c.x + dx, y: c.y + dy });
+    }
+    // 나머지(기관, 발표와 직접 연결되지 않은 노드): 이웃의 중심에서 바깥으로, 없으면 외곽 원
+    const rest = [...nodes.keys()].filter((id) => vis(id) && !pos.has(id));
+    rest.forEach((id, i) => {
+      const nb = adj.get(id).filter((x) => pos.has(x));
+      if (nb.length) {
+        const x = nb.reduce((s, v) => s + pos.get(v).x, 0) / nb.length, y = nb.reduce((s, v) => s + pos.get(v).y, 0) / nb.length;
+        const c = { x: Math.round(x / 1900) * 1900, y: 0 }, d = Math.hypot(x - c.x, y - c.y) || 1;
+        const grow = nodes.get(id).type === "Organization" ? 170 : 110, tw = ((i % 3) - 1) * 0.06;
+        const a = Math.atan2(y - c.y, x - c.x) + tw;
+        pos.set(id, { x: c.x + (d + grow) * Math.cos(a), y: c.y + (d + grow) * Math.sin(a) });
+      } else {
+        const a = (2 * Math.PI * i) / rest.length;
+        pos.set(id, { x: 1250 * Math.cos(a), y: 1250 * Math.sin(a) });
+      }
+    });
+    cy.nodes().forEach((n) => { const q = pos.get(n.id()); if (q) n.position(q); });
+    cy.fit(cy.elements(":visible"), 40);
+  }
+  function applyFilter(relayout) {
+    const sess = $("session").value, q = $("q").value.trim().toLowerCase();
+    cy.batch(() => {
+      cy.nodes().forEach((n) => {
+        const d = nodes.get(n.id());
+        n.toggleClass("hidden", !visible[d.type] || (sess && !sessOf.get(d.id).has(sess)));
+      });
+      cy.elements().removeClass("faded");
+      if (q) {
+        const hit = cy.nodes(":visible").filter((n) => {
+          const d = nodes.get(n.id());
+          return [d.id, d.label, d.label_ko, d.summary_ko, ...(d.claims || []).map((c) => (typeof c === "string" ? c : c.text))].join(" ").toLowerCase().includes(q);
+        });
+        cy.elements().not(hit.union(hit.neighborhood())).addClass("faded");
+      }
+    });
+    const vn = cy.nodes(":visible").length, ve = cy.edges(":visible").length;
+    $("stats").textContent = `노드 ${vn} / ${nodes.size} · 관계 ${ve} / ${valid.length}`;
+    if (relayout) layout();
+  }
+  $("chips").addEventListener("change", (e) => {
+    const chip = e.target.closest(".chip");
+    visible[chip.dataset.t] = e.target.checked;
+    chip.classList.toggle("off", !e.target.checked);
+    applyFilter(true);
+  });
+  $("session").addEventListener("change", () => applyFilter(true));
+  $("q").addEventListener("input", () => applyFilter(false));
+  $("fit").addEventListener("click", () => cy.fit(cy.elements(":visible"), 40));
+
+  // ---------- 5. 상세 패널 ----------
+  const REL_KO = { partOf: "세션", chairedBy: "좌장", authoredBy: "저자·발표자", affiliatedWith: "소속", addresses: "다루는 문제", proposes: "제안 기법", targets: "대상 시스템", relatedTo: "관련 개념" };
+  const INV_KO = { partOf: "발표", chairedBy: "좌장을 맡은 세션", authoredBy: "발표", affiliatedWith: "소속 인물", addresses: "이 문제를 다루는 발표", proposes: "이 기법을 쓰는 발표", targets: "이 시스템을 다루는 발표", relatedTo: "관련 개념" };
+  const SRC_KO = { abstract: "초록", talk: "발표", slide: "슬라이드", qa: "질의응답" };
+  const nodeLink = (id) => { const n = nodes.get(id); return `<span class="link" data-id="${esc(id)}">${esc(n.label_ko ? n.label_ko + " (" + n.label + ")" : n.label)}</span>`; };
+
+  function showOverview() {
+    const counts = {};
+    valid.forEach((e) => { if (["addresses", "proposes", "targets"].includes(e.rel)) counts[e.target] = (counts[e.target] || 0) + 1; });
+    const shared = Object.entries(counts).filter(([, c]) => c > 1).sort((a, b) => b[1] - a[1]);
+    $("detail").innerHTML =
+      `<p class="muted">노드를 클릭하면 요약과 연결 관계가 표시됩니다. 인물·기관은 위 필터에서 켤 수 있습니다.</p>
+       <h3>세션</h3><ul>${sessions.map((s) => `<li>${nodeLink(s.id)}</li>`).join("")}</ul>
+       <h3>여러 발표가 공유하는 개념</h3>` +
+      (shared.length ? `<ul>${shared.map(([id, c]) => `<li>${nodeLink(id)} <span class="muted">· 발표 ${c}건</span></li>`).join("")}</ul>` : `<p class="muted">아직 없습니다.</p>`);
+  }
+  function showDetail(id) {
+    const n = nodes.get(id), cls = classes[n.type] || {};
+    let h = `<span class="tag" style="background:${esc(cls.color)}">${esc(cls.label_ko || n.type)}</span>
+             <h2>${esc(n.label)}</h2>` + (n.label_ko ? `<p class="muted">${esc(n.label_ko)}</p>` : "");
+    const meta = [n.kind, n.date, n.time, n.room].filter(Boolean).join(" · ");
+    if (meta) h += `<p class="muted">${esc(meta)}</p>`;
+    if (n.summary_ko) h += `<h3>요약</h3><p>${esc(n.summary_ko)}</p>`;
+    if ((n.claims || []).length) h += `<h3>핵심 주장</h3><ul>${n.claims.map((c) => {
+      const o = typeof c === "string" ? { text: c } : c;   // 문자열 또는 {text, source, at}
+      const src = o.source ? ` <span class="src">${esc(SRC_KO[o.source] || o.source)}${o.at ? " " + esc(o.at) : ""}</span>` : "";
+      return `<li>${esc(o.text)}${src}</li>`;
+    }).join("")}</ul>`;
+    if ((n.photos || []).length) h += `<h3>현장 사진</h3><div class="photos">${n.photos.map((ph) =>
+      `<a href="${esc(ph.file)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(ph.file)}" alt="${esc(ph.caption || "")}"></a>${ph.caption ? `<p class="muted">${esc(ph.caption)}</p>` : ""}`).join("")}</div>`;
+    if (n.transcript) h += `<h3>녹취록</h3><p><a href="${esc(n.transcript)}" target="_blank" rel="noopener">${esc(n.transcript)}</a></p>`;
+    const groups = {};
+    valid.forEach((e) => {
+      if (e.source === id) (groups[REL_KO[e.rel] || e.rel] ||= []).push(e.target);
+      else if (e.target === id) (groups[INV_KO[e.rel] || e.rel] ||= []).push(e.source);
+    });
+    for (const [title, ids] of Object.entries(groups)) h += `<h3>${esc(title)}</h3><ul>${[...new Set(ids)].map((x) => `<li>${nodeLink(x)}</li>`).join("")}</ul>`;
+    const links = [n.url && `<a href="${esc(n.url)}" target="_blank" rel="noopener">프로그램 페이지</a>`, n.website && `<a href="${esc(n.website)}" target="_blank" rel="noopener">워크숍 사이트</a>`].filter(Boolean);
+    if (links.length) h += `<h3>링크</h3><p>${links.join(" · ")}</p>`;
+    $("detail").innerHTML = h;
+    $("detail").scrollTop = 0;
+  }
+  function focus(id) {
+    const n = cy.getElementById(id);
+    if (n.hasClass("hidden")) {           // 숨겨진 종류의 노드를 고르면 그 종류를 켠다
+      const t = nodes.get(id).type;
+      visible[t] = true;
+      const chip = document.querySelector(`.chip[data-t="${t}"]`);
+      chip.classList.remove("off"); chip.querySelector("input").checked = true;
+      if ($("session").value && !sessOf.get(id).has($("session").value)) $("session").value = "";
+      applyFilter(true);
+    }
+    cy.elements().removeClass("faded focus hl");
+    const hood = n.closedNeighborhood();
+    cy.elements().not(hood).addClass("faded");
+    n.addClass("focus"); hood.edges().addClass("hl");
+    showDetail(id);
+  }
+  function clearFocus() { cy.elements().removeClass("focus hl"); applyFilter(false); showOverview(); }
+  cy.on("tap", "node", (e) => focus(e.target.id()));
+  cy.on("tap", (e) => { if (e.target === cy) clearFocus(); });
+  $("detail").addEventListener("click", (e) => { const l = e.target.closest(".link"); if (l) focus(l.dataset.id); });
+
+  applyFilter(true);
+  showOverview();
+  window.__ready = true;
+})();
+</script>
+</body>
+</html>

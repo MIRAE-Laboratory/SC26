@@ -1,0 +1,18 @@
+id: ws_shpc107
+type: Presentation
+kind: paper
+label: Towards Distributed-Memory All-Pairs Reachability over Homomorphically Encrypted Graphs
+session: sess126
+time: "16:41-17:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc107"
+authors: [charis-hulu, anrin-chakraborti, sidharth-kumar]
+addresses: [he-scalability]
+proposes: [homomorphic-encryption, mpi-parallelization]
+targets: [encrypted-graph]
+summary_ko: >
+  BGV로 암호화된 그래프의 추이적 폐포(전 쌍 도달 가능성)를 분산메모리 시스템에서 구현한다. 행렬의 각
+  행과 열을 별도 암호문으로 저장하고, 출력 원소 하나를 행 암호문 하나와 열 암호문 하나로 계산하며,
+  이를 2차원 MPI 프로세스 격자에 분산한다. 출력도 분산 상태로 유지해 다음 단계에 넘긴다.
+claims:
+  - 최대 1,024 MPI 랭크로 평가했다.
+  - N=16에서 32 OpenMP 스레드 단일 노드 기준 대비 5.66배 빠르다.

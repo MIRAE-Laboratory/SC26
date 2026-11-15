@@ -1,0 +1,42 @@
+# 세션을 넘어 공유되는 개념 노드. related: 개념 간 relatedTo 관계
+Problem:
+  multi-tenant-isolation: {label: Multi-tenant isolation, label_ko: 멀티테넌트 격리}
+  sensitive-data-governance: {label: Sensitive-data governance, label_ko: 민감데이터 거버넌스}
+  split-responsibility: {label: Split security responsibility, label_ko: 보안 책임 분할}
+  insider-threat: {label: Insider & privileged adversaries, label_ko: 내부자·특권 운영자 위협}
+  institutional-privacy: {label: Institution-level privacy leakage, label_ko: 기관 수준 프라이버시 누출}
+  metadata-side-channel: {label: Metadata & telemetry side channels, label_ko: 메타데이터·텔레메트리 부채널, related: [workload-fingerprinting, job-scheduler]}
+  pet-composability: {label: PETs do not compose across institutions, label_ko: 프라이버시 기술의 조합성 한계}
+  memory-safety: {label: Memory-safety vulnerabilities, label_ko: 메모리 안전성 취약점}
+  untrusted-input: {label: Untrusted input & result integrity, label_ko: 비신뢰 입력과 계산 결과 무결성}
+  agent-boundaries: {label: AI agent autonomy boundaries, label_ko: AI 에이전트 권한 경계}
+  attack-detection: {label: Attack detection in HPC, label_ko: HPC 공격 탐지}
+  telemetry-misalignment: {label: Temporal misalignment of telemetry, label_ko: 텔레메트리 시간 불일치}
+  workload-fingerprinting: {label: Workload fingerprinting, label_ko: 워크로드 식별}
+  he-scalability: {label: Scalability of encrypted computation, label_ko: 암호화 연산의 확장성}
+  compliance-governance: {label: "Standards, compliance, governance", label_ko: 표준·컴플라이언스·거버넌스, related: [sensitive-data-governance]}
+Method:
+  attack-trees: {label: Threat modeling with attack trees, label_ko: 공격 트리 기반 위협 모델링}
+  tre-sde: {label: Trusted Research Environment (TRE/SDE), label_ko: 신뢰연구환경(TRE/SDE), related: [sensitive-data-governance]}
+  portable-governance: {label: Portable governance, label_ko: 이식 가능한 거버넌스}
+  privacy-assurance: {label: Privacy as assurance (claim register), label_ko: 보증 문제로서의 프라이버시(주장 등록부)}
+  pets: {label: "Privacy-enhancing technologies (DP, FL, SMC, TEE)", label_ko: 프라이버시 강화 기술}
+  fuzzing: {label: Fuzzing & bug triage, label_ko: 퍼징·버그 분류}
+  ai-exploit-generation: {label: Coding-agent exploit generation, label_ko: 코딩 에이전트의 익스플로잇 생성, related: [ai-agents]}
+  runtime-sandbox: {label: Runtime isolation & policy enforcement, label_ko: 런타임 격리·정책 강제, related: [multi-tenant-isolation]}
+  zero-trust: {label: Zero trust, label_ko: 제로 트러스트}
+  tmd: {label: Temporal Mahalanobis Distance (TMD), label_ko: 시간 마할라노비스 거리}
+  streaming-detector: {label: Semi-supervised streaming detection, label_ko: 준지도 스트리밍 탐지}
+  sampling-coarsening: {label: Sampling-rate coarsening, label_ko: 샘플링 주기 완화}
+  homomorphic-encryption: {label: Homomorphic encryption (BGV), label_ko: 동형암호(BGV), related: [pets]}
+  mpi-parallelization: {label: Distributed-memory parallelization (MPI), label_ko: 분산메모리 병렬화(MPI)}
+System:
+  ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터}
+  kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스}
+  leadership-facility: {label: Leadership-class facility, label_ko: 리더십급 컴퓨팅 시설}
+  job-scheduler: {label: Job scheduler, label_ko: 작업 스케줄러}
+  scientific-apps: {label: "Scientific applications (Enzo, GROMACS, Laghos, LAMMPS)", label_ko: 과학 응용 코드}
+  ai-agents: {label: AI agents, label_ko: AI 에이전트}
+  hpc-network: {label: HPC network, label_ko: HPC 네트워크}
+  power-telemetry: {label: Power telemetry (RAPL), label_ko: 전력 텔레메트리}
+  encrypted-graph: {label: Encrypted graph analytics, label_ko: 암호화 그래프 분석}
