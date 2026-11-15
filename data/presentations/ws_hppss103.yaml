@@ -1,0 +1,17 @@
+id: ws_hppss103
+type: Presentation
+kind: talk
+label: "AI for Science with Python on AMD Supercomputers"
+session: sess124
+time: "14:45-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess124&id=ws_hppss103"
+authors: [giacomo-capodaglio, nicholas-malaya, jose-noudohouenou, sidafa-conde, alessandro-fanfarillo, jonathan-belof]
+addresses: [python-at-scale, software-ecosystem-readiness]
+proposes: [container-wheel-deployment]
+targets: [amd-gpu-systems, ai-agents, job-scheduler]
+summary_ko: >
+  AI가 과학 개발과 발견의 동반자가 되면서 파이썬 워크로드를 대규모로 돌리는 일이 중요해졌음. AI 에이전트를 포함한 AI 워크로드를 AMD GPU에서 대규모로 배치하는 여러 방법을 보임.
+claims:
+  - "휠과 컨테이너 두 배치 방식을 다루고, Slurm과 쿠버네티스 두 스케줄러에서 실행함."
+  - "과학자가 파이썬 AI 워크로드를 올릴 수 있는 추론 엔진 AMD Inference Microservices(AIM)를 소개함."
+  - "공개 초록에는 정량 결과가 없음."

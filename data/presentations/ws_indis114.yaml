@@ -1,0 +1,16 @@
+id: ws_indis114
+type: Presentation
+kind: talk
+label: "Characterizing Network Behavior of Distributed LLM Inference on a Four Node Edge Cluster"
+session: sess111
+time: "11:50-11:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis114"
+authors: [manas-das]
+addresses: [memory-bound-performance]
+proposes: [comparative-benchmarking]
+targets: [llm-inference]
+summary_ko: "범용 이더넷 스위치로 이은 NVIDIA GB10 시스템 4노드 클러스터에서 분산 추론 구성 20가지를 측정함. 토큰 생성은 메모리 대역폭에 묶여 있고, 링크 용량은 제약이 아님."
+claims:
+  - "노드당 트래픽은 200 Gb/s 링크의 4% 미만을 씀."
+  - "지연이 더 중요해서, RoCE는 TCP 대비 종단 간 토큰 지연을 2.0~7.1배 줄임."
+  - "텐서 병렬화는 RDMA에서 디코딩을 최대 2.5배 빠르게 함."

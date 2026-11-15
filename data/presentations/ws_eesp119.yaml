@@ -1,0 +1,16 @@
+id: ws_eesp119
+type: Presentation
+kind: paper
+label: "Collecting Infrastructure-Level Measures for Energy Analysis in Modern Computing Infrastructures"
+session: sess125
+time: "16:40-16:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp119"
+authors: [isac-pasianotto, stefano-cozzini, niccolo-tosato]
+addresses: [power-measurement-fidelity]
+proposes: [infrastructure-telemetry]
+targets: [ops-telemetry, power-telemetry]
+summary_ko: >
+  현대 HPC 시설은 구성요소가 밀결합되어 있어, 에너지 소비를 정확히 모델링하려면 개별 계산 노드 너머를 봐야 함. 구성요소 부하, 소프트웨어·하드웨어 카운터, 센서, 에너지 측정값을 여러 하위 시스템에서 모으는 확장 가능한 수집 파이프라인을 만들었고, 샘플링 주기를 맞추고 시설 전체의 수집을 동기화함.
+claims:
+  - "HPC, 쿠버네티스 서비스, 분산 스토리지가 섞인 운영 연구 데이터센터에서 한 달간 1 Hz로 모은 데이터셋을 공개함."
+  - "분산 I/O와 LLM 추론 사례에서, 클러스터 전체 계측이 국소 계측으로는 놓치는 시스템 수준 동역학을 드러냈음."

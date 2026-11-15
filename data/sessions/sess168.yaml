@@ -1,0 +1,35 @@
+id: sess168
+type: Session
+label: "Building Scalable Agentic Systems for Science: Concepts, Architectures, and Hands-On with Academy"
+kind: Tutorial
+date: "2026-11-15"
+time: "13:30-17:00 CST"
+room: W184b-c
+url: https://sc26.conference-program.com/session/?sess=sess168
+chairs: []
+summary_ko: >
+  과학 발견을 위한 확장 가능한 에이전트 시스템의 설계, 배치, 관리를 다루는 반일 튜토리얼. 공개 페이지에는 세션 설명과 좌장 정보가 없고, 발표 한 건의 설명문만 있음.
+diagram:
+  type: layers
+  title: 에이전트 미들웨어의 위치
+  items:
+    - {label: 과학 응용의 에이전트들, note: "재료 발견, 생물학, 화학 사례"}
+    - {label: 미들웨어 Academy, note: "비동기 실행, 상태를 가진 에이전트 조율, 동적 자원 관리"}
+    - {label: 과학 사이버인프라, note: "HPC 시스템, 실험 시설, 연합 데이터 저장소"}
+insights:
+  decision:
+    - head: 에이전트 시스템의 설계 결정은 세 가지로 모임.
+      text: 비동기 실행 모델, 상태를 가진 에이전트의 조율, 동적 자원 관리임. 튜토리얼이 핵심 개념으로 꼽은 항목임.
+      refs: [tut133]
+  trial:
+    - head: 공개 설명문에는 시행착오가 담겨 있지 않음.
+      text: 실습 중심의 튜토리얼이어서 결과 수치가 없음. 현장 자료나 녹취록이 있어야 이 관점을 채울 수 있음.
+      refs: [tut133]
+  korea:
+    - head: 기관 클러스터에서 실습을 재현해 볼 만함.
+      text: 파이썬 기반 미들웨어이므로, 계산 클러스터와 실험 장비를 함께 가진 기관은 작은 워크플로로 먼저 시험해 볼 수 있음.
+      refs: [tut133]
+  extra:
+    - head: 같은 연구 그룹이 에이전트 스택을 여러 층에서 내놓고 있음.
+      text: 이 튜토리얼의 발표자들은 연합 HPC 자원을 에이전트로 제어하는 발표의 저자이기도 함.
+      refs: [tut133, ws_aaihpc126]

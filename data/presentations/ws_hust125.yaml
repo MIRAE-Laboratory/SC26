@@ -1,0 +1,15 @@
+id: ws_hust125
+type: Presentation
+kind: paper
+label: "uv-manager: A Transparent Wrapper for Safe, Architecture-Aware Python Environments on Heterogeneous HPC Clusters"
+session: sess517
+time: "12:15-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust125"
+authors: [geoffrey-lentner, lev-gorenstein]
+addresses: [env-configuration]
+proposes: [environment-wrapper]
+targets: [user-support-services]
+summary_ko: "파이썬 패키지 관리자 uv는 HPC에 잘 맞지만, 클러스터는 그 전제 셋을 깸. 홈 디렉터리에 패키지 캐시를 둘 공간이 없고, 셸 프로파일을 쓸 수 없을 수 있고, 노드들의 CPU 아키텍처가 같지 않을 수 있음. uv-manager는 사이트 모듈로 배치하는 투명한 래퍼임."
+claims:
+  - "사용자 상태를 대용량 스토리지로 옮기고, 실행 노드에서 정한 아키텍처 키로 나눔."
+  - "대용량 스토리지는 파일 단위로 정리되는데 uv는 설치된 환경을 검증하지 않으므로, 부분 삭제된 환경을 실행 노드에서 탐지해 고침."

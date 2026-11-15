@@ -1,0 +1,16 @@
+id: ws_indis106
+type: Presentation
+kind: paper
+label: "A Multi-Task Benchmark for Time Series Foundation Models on R&E Backbone Telemetry"
+session: sess111
+time: "16:15-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis106"
+authors: [gretel-de-la-pena, hadi-sahin, renata-frez, italo-brito, vasilka-chergarova, luis-marin-vera, jeronimo-bezerra, julio-ibarra]
+addresses: [ops-data-complexity]
+proposes: [domain-benchmark, foundation-model-finetuning]
+targets: [research-networks, ops-telemetry, sci-foundation-models]
+summary_ko: "시계열 파운데이션 모델 5종(TimesFM, Moirai, Chronos, PatchTST, TTM/Granite)을 적응 전략 4가지와 자동 레이블 운영 과제 4가지로 벤치마크함. AmLight 백본의 SNMP 텔레메트리 26개월치를 쓰고 사람의 주석은 없음."
+claims:
+  - "제로샷 모델은 궤적·시점 과제에서 고전 기준선을 이기지만, 자기상관에 크게 의존하는 과제에서는 못 미침."
+  - "표준 미세조정은 일부 구조에서 파국적 망각을 일으킴."
+  - "동결한 백본에 작은 과제별 헤드를 붙이고 자동 레이블 윈도 500개 이하로 학습한 구성이 초과 탐지에서 미세조정 모델 전부를 앞섬."

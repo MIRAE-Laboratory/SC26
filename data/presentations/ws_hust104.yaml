@@ -1,0 +1,15 @@
+id: ws_hust104
+type: Presentation
+kind: paper
+label: "What Your Job Queue Isn't Telling You: Workflow Monitoring with Drona"
+session: sess517
+time: "11:45-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust104"
+authors: [ananya-adiki, owen-schillaci, surada-suwansathit, andrii-kryvenko, huy-le, huy-hoang, marinus-pennings, honggao-liu]
+addresses: [ops-data-complexity]
+proposes: [user-dashboards]
+targets: [workflow-systems, job-scheduler]
+summary_ko: "다단계 HPC 워크플로는 단순한 작업 제출을 훨씬 넘어서지만, 기존 도구는 주로 스케줄러 수준의 메타데이터만 보여 주어 사용자가 진행 상황, 성능, 결과를 흩어진 화면에서 맞춰 봐야 함. Drona 워크플로 엔진의 새 버전은 스키마 기반 틀과 지원 라이브러리로 워크플로 전 주기의 모니터링 화면을 만들게 함."
+claims:
+  - "실시간 관측과 대화형 작업 관리를 하나의 인터페이스로 제공함."
+  - "여러 도메인 워크플로의 모니터링 대시보드를 시연함."

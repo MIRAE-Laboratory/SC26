@@ -1,0 +1,15 @@
+id: ws_xloop110
+type: Presentation
+kind: paper
+label: "Exploring the Genesis Platform Capabilities to Accelerate Scientific Discovery in OPAL"
+session: sess117
+time: "11:55-12:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop110"
+authors: [daniel-rosendo, renan-souza, kelsey-carter, john-lagergren, frederic-suter, shelaine-curd, david-weston, rafael-ferreira-da-silva]
+addresses: [service-composition, provenance-reproducibility]
+proposes: [decoupled-service-ecosystem]
+targets: [genesis-platform, self-driving-labs, leadership-facility]
+summary_ko: >
+  자율적인 시설 간 과학은 어느 한 프로젝트가 따로 만들 일이 아닌 공용 서비스에 기댐. 장기 실행 서비스의 관리, 원격 계산 시스템으로의 버전 관리된 모델 배포, 통제된 LLM 접근, 실험 데이터의 공통 기반, 종단 간 출처 기록임. DOE Genesis Mission 플랫폼이 American Science Cloud를 통해 이를 재사용 가능한 서비스로 제공하는 방식을 설명함. 사례는 ORNL의 식물 표현형 실험실과 Frontier를 잇는 OPAL의 식물 표현형 워크플로임.
+claims:
+  - "40일간의 니켈 처리 캠페인에서 약 12시간의 수작업 분석을 몇 초에서 몇 분 안에 답이 오는 대화형 질의로 바꿨음."

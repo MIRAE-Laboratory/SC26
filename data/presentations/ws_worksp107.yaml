@@ -1,0 +1,15 @@
+id: ws_worksp107
+type: Presentation
+kind: paper
+label: "Decentralized Scheduling of Scientific Workflows"
+session: sess113
+time: "11:30-11:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp107"
+authors: [xavier-casas-moreno, komal-thareja, anirban-mandal, ewa-deelman, rosa-m-badia, francesc-lordan]
+addresses: [workflow-scheduling]
+proposes: [decentralized-scheduling]
+targets: [workflow-systems, leadership-facility]
+summary_ko: "워크플로 관리 시스템의 분산 스케줄링을 위한 일반적 접근을 제안함. 중앙 조정자나 공유 전역 상태 없이 에이전트들이 작업 배정에 합의하는 스케줄러를 만들어 COMPSs에 통합함."
+claims:
+  - "MareNostrum 5에서 분산 GridSearch 응용으로 평가했고, 실행 시간과 에이전트 간 부하 균형이 개선되었다고 보고함."
+  - "공개 초록에는 구체적 수치가 없음."

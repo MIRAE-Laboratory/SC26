@@ -1,0 +1,15 @@
+id: ws_worksa103
+type: Presentation
+kind: talk
+label: "The Self-Driving Fusion Workflow: A Vision for Automated Scientific Discovery"
+session: sess113
+time: "16:33-16:36"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksa103"
+authors: [kshitij-mehta, norbert-podhorszki, jong-choi, qian-gong, ana-gainaru, chandrayee-bhowmick, tushar-athawale, jaemoon-lee, eric-suchyta, frederic-suter, david-pugmire, greg-eisenhauer, julien-dominski, michael-churchill, scott-klasky]
+addresses: [workflow-composition-effort, cross-facility-integration]
+proposes: [agentic-workflow-composition, spec-first-validation]
+targets: [tokamak-plasma, ai-agents, leadership-facility]
+summary_ko: "핵융합 시뮬레이션 연구는 응용 설정, 워크플로 구성, 실행, 데이터 이동, 결과 분석을 사람이 조율함. 연구자가 목표와 제약을 자연어로 서술하면, 구성 계층이 컨테이너화된 핵융합 응용과 기계가 읽는 응용 기술서로 실행 가능한 워크플로를 만드는 AI 에이전트 기반 틀을 구상함."
+claims:
+  - "에이전트의 결정은 검증된 설정을 모은 지식 저장소에 근거하고, 실행 전·중·후의 정확성 검사로 통제됨."
+  - "구상 단계이며 공개 초록에 수치가 없음."

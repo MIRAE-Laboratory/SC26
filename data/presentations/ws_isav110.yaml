@@ -1,0 +1,17 @@
+id: ws_isav110
+type: Presentation
+kind: paper
+label: "Ensemble PBVR: Interactive In Situ Visualization of Ensemble Statistics on Rendering Particles"
+session: sess123
+time: "15:30-15:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav110"
+authors: [takuma-kawamura, kazuya-shimomura, yasuhiro-idomura]
+addresses: [delayed-feedback, data-deluge]
+proposes: [particle-based-rendering]
+targets: [in-situ-visualization, ensemble-simulations]
+summary_ko: >
+  앙상블 통계는 보통 모든 멤버를 저장한 뒤에야 계산함. 실행 중에 계산하려면 계산 노드에서 필드 데이터를 모아야 해 전역 통신과 메모리 복사가 듦. 앙상블 PBVR은 가시화 입자로 통계를 만듦. 입자 집합 하나가 링 교환으로 앙상블 멤버를 순환하며 평균, 분산, 변동계수를 입자 위치에 누적함.
+claims:
+  - "멤버 72개의 CityLBM 도시 플룸 확산 앙상블에 GPU 슈퍼컴퓨터에서 적용했음."
+  - "사후 ParaView 워크플로보다 첫 이미지가 4~30배 빨리 나오고 전송 데이터는 60배 적음."
+  - "대상 필드는 실행 중에 사용자가 준 대수식으로 정함."

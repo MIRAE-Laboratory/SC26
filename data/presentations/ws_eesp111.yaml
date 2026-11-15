@@ -1,0 +1,16 @@
+id: ws_eesp111
+type: Presentation
+kind: paper
+label: "A Deployment-Aware Multi-Objective Hyper-Parameter Optimization Framework for Machine Learning"
+session: sess125
+time: "15:30-15:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp111"
+authors: [matteo-zanotto, romeo-kienzler, gabriele-padovani, sandro-fiore]
+addresses: [energy-performance-tradeoff]
+proposes: [energy-aware-hpo]
+targets: [llm-inference, leadership-facility]
+summary_ko: >
+  모델 압축과 하이퍼파라미터 최적화는 주로 학습에 초점을 두고 배치 맥락을 무시함. 배치와 추론을 중심에 둔 범용 최적화 프레임워크를 제안하며, 정확도, 전력 소비, 지연, 메모리 사용 사이의 절충을 따질 수 있게 함.
+claims:
+  - "자원이 제한된 에지 장치의 비전 모델, 데이터센터급 하드웨어의 LLM 서빙, Frontier의 대규모 벤치마크 세 사례로 검증했음."
+  - "공개 초록에는 정량 결과가 없음."

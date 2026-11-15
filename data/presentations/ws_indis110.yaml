@@ -1,0 +1,16 @@
+id: ws_indis110
+type: Presentation
+kind: paper
+label: "FAB-Cache: A Programmable Multi-Site Caching Service for Remote Dataset Retrieval Using FABRIC"
+session: sess111
+time: "14:15-14:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis110"
+authors: [pinyi-shi, vaiden-logan, dakota-morgan, james-griffioen, zongming-fei, kenneth-calvert]
+addresses: [wan-data-distribution]
+proposes: [federated-caching]
+targets: [data-federations, research-networks]
+summary_ko: "기가바이트에서 수백 테라바이트에 이르는 과학 데이터셋은 전 세계 협력자에게 배포하기 어려움. FAB-Cache는 FABRIC 테스트베드 위의 프로그래밍 가능한 캐싱 서비스로, 지리적으로 분산된 노드의 프록시를 이어 요청된 데이터를 필요할 때 캐시함."
+claims:
+  - "프록시 경로는 perfSONAR 처리량 측정으로 고름."
+  - "캐시 적중은 공용 인터넷 직접 내려받기를 크게 앞섰고, 캐시 실패도 여러 경우에 그 처리량과 같거나 나았음."
+  - "공개 초록에는 구체적 처리량 수치가 없음."

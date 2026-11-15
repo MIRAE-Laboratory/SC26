@@ -1,0 +1,15 @@
+id: ws_indis112
+type: Presentation
+kind: talk
+label: "SciNet: Science-Aware Network Operations for Research Networks"
+session: sess111
+time: "11:35-11:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis112"
+authors: [mariam-kiran, k-k-ramakrishnan, harvey-newman, puneet-sharma, rafael-ferreira-da-silva]
+addresses: [science-unaware-networks, cross-facility-integration]
+proposes: [science-aware-networking]
+targets: [research-networks, self-driving-labs]
+summary_ko: "현재 연구망은 수동적이고, 실어 나르는 워크플로와 무관하게 패킷 전달만 최적화해 분산 실험과 다시설 워크플로에서 병목이 생김. SciNet은 네트워크 제어 평면에 AI를 넣어 과학 워크플로를 관찰하고, 네트워크 수요를 예측하고, 사람 개입 없이 조치하는 구상임."
+claims:
+  - "이용률이나 신뢰성을 겨냥하는 기존 도구와 달리, 워크플로 인지 경로 지정, 예측 기반 자원 할당, 자율 장애 완화로 과학 생산성을 최대화하려 함."
+  - "에너지부의 AI 기반 자율 실험실 구상과 연결함. 공개 초록에는 정량 결과가 없음."

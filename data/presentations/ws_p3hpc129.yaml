@@ -1,0 +1,15 @@
+id: ws_p3hpc129
+type: Presentation
+kind: paper
+label: "Extending the Performance Portability of Julia to Long-Vector Architectures"
+session: sess110
+time: "15:30-15:54"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc129"
+authors: [rintaro-togo, keichi-takahashi, tomonori-hayami, kota-sakakura, takashi-soga, arata-endo, susumu-date]
+addresses: [performance-portability]
+proposes: [portable-abstraction-layers]
+targets: [parallel-programming-models, hpc-processors]
+summary_ko: "JACC(Julia for Accelerators)는 CPU와 GPU를 지원하지만, 메모리 지연을 숨기고 메모리에 묶인 워크로드에서 높은 성능을 유지하는 긴 벡터 아키텍처는 고려하지 않았음. NEC Vector Engine용 실행 백엔드를 JACC에 더함."
+claims:
+  - "GPU 3종과 Vector Engine 2종에서 JACC 응용을 네이티브 구현과 비교했고, 대부분 아키텍처 전용 코드 없이 작성했음."
+  - "대부분의 경우 모든 아키텍처에서 상대 성능이 90%를 넘음."

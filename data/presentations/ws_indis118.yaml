@@ -1,0 +1,15 @@
+id: ws_indis118
+type: Presentation
+kind: paper
+label: "Who Benefits from Federation? Heterogeneous Gains in Cross-Operator Network Traffic Representation Learning"
+session: sess111
+time: "16:30-16:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis118"
+authors: [mohammad-arafath-uddin-shariff, byrav-ramamurthy]
+addresses: [institutional-privacy]
+proposes: [federated-learning]
+targets: [research-networks, ops-telemetry]
+summary_ko: "Internet2 백본 라우터 10대와 CESNET3 학술 기관 10곳의 실제 텔레메트리로 연합 표현 학습을 시험하고, 상용 ISP를 처음 보는 네트워크로 씀. 중앙집중, 연합, 로컬 전용 학습을 같은 예산으로 비교함."
+claims:
+  - "연합 학습은 중앙집중과 5% 동등 범위 안에서 같았음. 데이터를 로컬에 두어도 표현 품질이 떨어지지 않음."
+  - "이득은 고르지 않아서, 백본 클라이언트는 재구성 오차가 중앙값 9.2% 줄고 캠퍼스 클라이언트는 1.9% 줄었음."

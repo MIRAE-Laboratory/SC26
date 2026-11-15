@@ -1,0 +1,17 @@
+id: ws_hppss105
+type: Presentation
+kind: talk
+label: "A Distributed HPC/AI Services Ecosystem for the Genesis Mission Platform"
+session: sess124
+time: "16:15-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess124&id=ws_hppss105"
+authors: [aymen-alsaadi, andre-merzky, andrew-shao, shantenu-jha]
+addresses: [service-composition]
+proposes: [decoupled-service-ecosystem]
+targets: [genesis-platform, federated-clusters]
+summary_ko: >
+  HPC·AI 응용에는 필요할 때 배치하고 조합하고 접근할 수 있는 기능이 필요함. 재사용 가능한 서비스는 이기종 자원, 수명 주기, 저지연 데이터 교환을 조율해야 함. Genesis Mission의 American Science Cloud를 위한 분산 서비스 생태계를 제시함.
+claims:
+  - "서비스 관리, 워크플로 실행, 데이터 교환을 분리해, 응용별 통합 작업 없이 기능을 조합함."
+  - "비동기 OpenFOAM 최적화 워크플로로 시연했음."
+  - "공개 초록에는 정량 결과가 없음."

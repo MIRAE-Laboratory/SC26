@@ -1,0 +1,16 @@
+id: ws_worksp105
+type: Presentation
+kind: paper
+label: "Enabling Radio Astronomy to Use French Supercomputers"
+session: sess113
+time: "15:45-16:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp105"
+authors: [mathis-certenais, francois-bodin, benjamin-de-zordo]
+addresses: [identity-access, cross-facility-integration, compliance-governance]
+proposes: [named-service-accounts]
+targets: [leadership-facility]
+summary_ko: "SKA 같은 차세대 전파망원경은 국가 슈퍼컴퓨팅 자원이 필요한 엑사스케일 데이터를 내지만, 전파천문 커뮤니티는 프랑스 HPC 센터를 쓰기 어려움. 개인별 책임을 요구하는 ZRR 보안 체계가 커뮤니티의 공유 계정 방식과 충돌하기 때문임. 임시 버퍼와 응용 마이크로서비스를 쓰는 응용 서비스 틀을 실명 서비스 계정 모델로 확장함."
+claims:
+  - "LOFAR 보정 영상 파이프라인을 Jean Zay에서 돌려, 실행 시간이 노드 24개에서 68.8시간에서 8.7시간으로 줄었음(약 7.9배)."
+  - "전송 속도는 내려받기 최대 137.9 MB/s, 올리기 28.73 MB/s임."
+  - "Jean Zay와 Adastra 사이의 센터 간 실행을 검증했음."

@@ -1,0 +1,16 @@
+id: ws_worksp103
+type: Presentation
+kind: paper
+label: "Agents at Your Service: Reuse-First Workflow Composition with Laminar 3.0"
+session: sess113
+time: "14:30-14:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp103"
+authors: [marco-edoardo-santimaria, rosa-filgueira, alberto-mulone, iacopo-colonnelli, marco-aldinucci]
+addresses: [workflow-composition-effort]
+proposes: [reuse-first-retrieval, agentic-workflow-composition, serverless-execution]
+targets: [workflow-systems, ai-agents]
+summary_ko: "LLM은 환각 때문에 전문 조율 언어로 워크플로 구현을 직접 쓰기에는 믿을 수 없음. Laminar 3.0은 역할이 나뉜 LLM 에이전트의 제한된 파이프라인으로 워크플로를 찾고 구성함. 적합한 산출물이 없을 때만 골격을 제안하는 검색 우선 생성 방식임."
+claims:
+  - "조율 계층만 합성하고 호스트 의미는 개발자 통제 아래 둠."
+  - "의미 검색은 압축된 질의에서도 top-1 79%, top-3 81% 정확도를 유지함."
+  - "생성된 골격의 CodeBLEU는 0.946으로, 단순 프롬프트 직접 생성을 크게 앞섬."

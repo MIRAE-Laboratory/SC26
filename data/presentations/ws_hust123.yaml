@@ -1,0 +1,16 @@
+id: ws_hust123
+type: Presentation
+kind: paper
+label: "AskALCF: A Self-Improving Agentic System for Intelligent HPC User Support"
+session: sess517
+time: "09:35-09:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust123"
+authors: [jingyan-jiang, akhilesh-bondapalli, krishna-rauniyar, murat-keceli, yasaman-ghadar, haritha-siddabathuni-som, venkatram-vishwanath, michael-papka, rong-ge, huihuo-zheng]
+addresses: [user-support-load, ai-code-evaluation]
+proposes: [failure-attribution, llm-ops-assistant]
+targets: [user-support-services, ai-agents]
+summary_ko: "AskALCF는 HPC 사용자 지원에 쓰이는 AI 질의응답 도우미의 로그를 분석하는 에이전트 파이프라인임. 운영 중의 상호작용마다 점수를 매기고, 실패가 지식 부재, 검색, 프롬프트, 모델 거동, 도구 실행 중 어디서 왔는지 가려 수정 경로로 보냄."
+claims:
+  - "말뭉치에 없는 정보와, 있지만 검색되지 않은 정보를 구분하는 2단계 충분성 검사가 진단의 핵심임."
+  - "지원 대화 2,174턴에서 원인을 돌릴 수 없는 실패가 41.4%에서 14.2%로 줄었음."
+  - "전문가 레이블과의 일치는 150턴 중 108턴에서 123턴으로 올랐음."

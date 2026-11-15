@@ -1,0 +1,17 @@
+id: ws_xloop111
+type: Presentation
+kind: paper
+label: "Drava: An Event-Driven Runtime for Scientific Pipelines with Agentic Configuration Optimization"
+session: sess117
+time: "10:30-10:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop111"
+authors: [ahmedur-rahman-shovon, romain-pereira, xingfu-wu, brice-videau, swann-perarnau]
+addresses: [data-deluge, pipeline-config-tuning, energy-performance-tradeoff]
+proposes: [event-driven-runtime, agentic-config-optimization]
+targets: [user-facility-beamline, ai-agents]
+summary_ko: >
+  여러 분야의 검출기가 전송할 수 있는 속도보다 빨리 데이터를 내므로 분석을 장비 가까이에서 돌려야 함. Drava는 이런 에지 스트리밍 파이프라인을 위한 이벤트 기반 런타임임. 개발자는 파이프라인 단계를 재사용 가능한 콜백으로 쓰고, 스케줄링, 배치 처리, 데이터 이동, 전송 방식에 맞춘 실행은 Drava가 맡음. 배치 크기, 단계 간 전송, 자원 배치를 손으로 맞추는 일은 깨지기 쉽고 느림.
+claims:
+  - "타이코그래피와 단층촬영 파이프라인에서 런타임 경로로 31 kHz를 유지하고, 2 kHz 위에서 프레임을 잃는 PvaPy 기준선보다 최대 2.36배 빠름."
+  - "프레임을 잃지 않게 손으로 맞춘 PvaPy 구성보다도 약 2.6배 빠름."
+  - "관측성을 바탕으로 한 에이전트 최적화가 최선의 수동 구성보다 2.24배 빠른 구성을 찾았고, 에너지-처리량 절충도 드러냈음."

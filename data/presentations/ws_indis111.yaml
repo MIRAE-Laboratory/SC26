@@ -1,0 +1,15 @@
+id: ws_indis111
+type: Presentation
+kind: talk
+label: "Measured WAN Traffic Reduction from Federated Edge AI in a Distributed Cosmic-Ray Sensor Network"
+session: sess111
+time: "11:40-11:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis111"
+authors: [carlyn-lee, harvey-newman, yifan-wu, spencer-axani]
+addresses: [wan-data-distribution, institutional-privacy]
+proposes: [federated-learning]
+targets: [edge-sensor-networks, research-networks]
+summary_ko: "시민 과학 우주선 관측망은 스마트폰을 입자 검출기로 쓰는데, 원시 관측을 중앙으로 모으면 관측마다 광역 트래픽이 늘고 참가자가 원시 데이터를 내놓아야 함. 스마트폰 검출의 잡음 제거 분류기를 브라우저 안에서 학습해 검출 기록이 전화기를 떠나지 않는 연합 방식을 제안함."
+claims:
+  - "같은 정확도에서 연합 방식이 광역 트래픽을 3.2~11.4배 줄였음."
+  - "절감 폭은 클라이언트 수가 아니라 클라이언트당 데이터량에 달려 있음."

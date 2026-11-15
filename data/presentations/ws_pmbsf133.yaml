@@ -1,0 +1,15 @@
+id: ws_pmbsf133
+type: Presentation
+kind: paper
+label: "Performance comparison and analysis of macroscopic cross section lookup kernel on Cerebras CS-3 and NVIDIA GPUs"
+session: sess109
+time: "11:50-12:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf133"
+authors: [reo-nagashima, akeru-nakamura, john-r-tramm, takaaki-miyajima]
+addresses: [hardware-selection, memory-bound-performance]
+proposes: [comparative-benchmarking]
+targets: [wafer-scale-systems, reactor-physics-codes]
+summary_ko: "Cerebras CS-3는 2차원 메시의 처리 요소 약 90만 개와 높은 메모리 대역폭을 가져 메모리에 묶인 과학 워크로드에 맞음. 몬테카를로 입자 수송 미니앱 XSBench의 거시 단면적 조회 커널을 평가함. 연산 강도가 낮고 메모리 접근이 불규칙한 커널임."
+claims:
+  - "추가 최적화 없이 초당 9.44×10⁹ 조회에 이르고, CS-2보다 기하평균 11% 높음."
+  - "같은 조건에서 NVIDIA GH200의 6.34배, A100의 11.90배 처리량을 냄."

@@ -1,0 +1,16 @@
+id: ws_isav104
+type: Presentation
+kind: paper
+label: "N-VEG: 3D Gaussian Encoding for Neural Volume Compression"
+session: sess123
+time: "16:50-17:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav104"
+authors: [eero-dunham, qi-wu, landon-dyken, victor-mateevitsi, silvio-rizzi, joseph-insley, mengjiao-han, janet-knowles, michael-papka]
+addresses: [data-deluge]
+proposes: [neural-volume-compression, in-situ-reduction]
+targets: [in-situ-visualization]
+summary_ko: >
+  대규모 3D 체적 데이터를 압축하는 혼합 방법으로, 3D 가우시안 재구성과 신경 표현을 함께 학습함. 암묵적 신경 표현은 압축률이 높고 압축을 풀지 않고 조회할 수 있지만 고주파 세부를 배우기 어려움. 여기서는 3D 가우시안이 작은 신경망의 인코더 역할을 하고, 각 기본 요소에 잠재 특징 벡터가 붙음.
+claims:
+  - "기본 요소만 쓰는 방법보다 재구성 품질이 좋고, 빠른 학습과 높은 압축률을 유지함."
+  - "공개 초록에는 구체적 수치가 없음."

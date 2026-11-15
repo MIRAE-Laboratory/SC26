@@ -1,0 +1,16 @@
+id: ws_worksp117
+type: Presentation
+kind: paper
+label: "Complexity and Scale in AI-Assisted Workflow Management: A Federated Learning Case Study"
+session: sess113
+time: "14:45-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp117"
+authors: [komal-thareja, hamza-safri, rajiv-mayani, anirban-mandal, ewa-deelman]
+addresses: [workflow-composition-effort, ai-code-evaluation]
+proposes: [spec-first-validation, skill-files, repair-loop, agentic-workflow-composition]
+targets: [workflow-systems, ai-agents]
+summary_ko: "의료 영상 연합학습 워크플로는 규모가 커지면 하위 워크플로 101개, 네 사이트의 GPU 작업 2,679개가 되어, 전문가가 몇 달을 주로 워크플로 기계 작업에 씀. Pegasus 전용 스킬 플러그인에 기반한 LLM 에이전트가 먼저 확인 가능한 제약과 수용 기준을 담은 검토용 명세를 내고, 그다음 실행 가능한 워크플로를 생성함."
+claims:
+  - "검증 루프가 실행 실패를 고치고, 코드를 명세와 대조하고, 명세만으로 구현을 다시 생성함."
+  - "명세 대조 검사가 실패 기반 디버깅이 놓친 조용한 오류 3건을 잡았고, 그중 하나는 작업 1,700개를 무작위 텐서로 학습시킨 오류였음."
+  - "LLM 에이전트 3종을 평가했고 FABRIC 테스트베드에서 종단 간 실행을 보고함."

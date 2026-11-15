@@ -1,0 +1,16 @@
+id: ws_eesp115
+type: Presentation
+kind: paper
+label: "Energy and Cost-Aware Control at Scale: Multi-Dimensional Frequency Steering on AMD MI300A"
+session: sess125
+time: "15:40-15:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp115"
+authors: [christian-simmendinger, marcel-marquardt, elias-klett, ralf-schneider]
+addresses: [energy-cost-carbon, power-cap-slowdown]
+proposes: [frequency-steering]
+targets: [leadership-facility, amd-gpu-systems]
+summary_ko: >
+  대규모 HPC·AI 설비의 목표는 최대 처리량을 넘어 전기적 한계, 탄소 제약, 인프라 비용 압력 아래의 안정적 출력으로 넓어졌음. 운영 제어 방식 PowerSched를 GPU 아키텍처의 다차원 주파수 조향으로 확장해 CPU 부스트 주파수, GPU 클럭, 메모리·인터포저 관련 제어를 함께 다룸. 목적항을 설정할 수 있어 실행 중에 에너지-성능-비용 축을 따라 운영점을 옮길 수 있음.
+claims:
+  - "상호 제약, 이산값 조정 변수, 잡음 섞인 텔레메트리가 다차원 조향의 난점임."
+  - "AMD MI300A에서 상한 없는 시스템 대비 성능이 최대 10%, 에너지 효율이 최대 30% 올랐음."

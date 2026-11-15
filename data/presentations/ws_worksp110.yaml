@@ -1,0 +1,15 @@
+id: ws_worksp110
+type: Presentation
+kind: paper
+label: "Guarded, State-Aware Orchestration for Schema-Constrained Scientific Model Execution"
+session: sess113
+time: "14:15-14:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp110"
+authors: [nieb-hasan-neom, manas-ranjan-gartia, md-arifuzzaman]
+addresses: [llm-domain-validity]
+proposes: [spec-first-validation, tool-augmented-reasoning]
+targets: [ai-agents, neural-surrogates]
+summary_ko: "학습된 과학 예측 모델은 코드나 명령줄 도구로 공유되어 정확한 입력 형식을 요구하므로 많은 도메인 연구자가 쓰지 못함. 표준 LLM 함수 호출은 도구 인터페이스만 줄 뿐 입력을 모으고 검증하고 실행하고 고치는 논리는 주지 않음. 여러 턴에 걸쳐 입력을 모으고, 스키마로 인자의 타입을 확인하고, 입력이 불완전하면 실행을 막는 워크플로를 제안함."
+claims:
+  - "단백질 코로나 예측에 적용했고, 뒷단은 단백질별 분류기 178개(AUC-ROC 87.13%)임."
+  - "클라우드 LLM의 특징 추출 정확도는 300건에서 98.5%이고, 상호작용 시나리오 평가 300건을 모두 통과했음."

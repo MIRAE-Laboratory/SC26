@@ -1,0 +1,16 @@
+id: ws_ross106
+type: Presentation
+kind: paper
+label: "Mosaic: Ephemeral, Capability-Aware Scheduling Across Heterogeneous Rack-Scale Systems"
+session: sess118
+time: "10:30-10:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=ws_ross106"
+authors: [gourav-rattihalli, aditya-dhakal, kunal-sharma, dejan-milojicic]
+addresses: [env-configuration, heterogeneity-complexity, failure-resilience]
+proposes: [version-aware-admission]
+targets: [heterogeneous-racks, job-scheduler]
+summary_ko: "이기종 HPC 랙은 CPU, GPU, FPGA를 섞어 쓰고 워크로드마다 다른 하드웨어·소프트웨어 스택이 필요함. 하드웨어 호환성만 확인하는 배치는, 상주 작업자의 OS 이미지, 라이브러리, 드라이버 버전이 어긋나면 실패함. Mosaic은 Slurm을 보완하는 수명주기 제어기로, 버전 인지 수락, 능력 기반 배분, 명시적 초기화 경계를 결합함."
+claims:
+  - "제어기 하나로 동시 작업자 32개가 약 17초 만에 모두 준비되었음."
+  - "작업별 이미지 실행의 100%에서 기대한 패키지 환경이 나왔고, 주기적 Ansible은 45.83%, 주기적 재이미징은 24.17%였음."
+  - "장애 뒤 검증된 구성을 약 1.5초 만에 복구했음."

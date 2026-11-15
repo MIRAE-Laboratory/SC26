@@ -1,0 +1,16 @@
+id: ws_pmbss116
+type: Presentation
+kind: paper
+label: "CXDVirt: Low Latency Kernel Module Based CXL-SSD Emulation"
+session: sess109
+time: "11:00-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbss116"
+authors: [hyunsun-chung, seongho-bong, hong-yeon-kim, youngjae-kim]
+addresses: [simulation-scale-limits]
+proposes: [system-simulation]
+targets: [storage-memory-hierarchy]
+summary_ko: "CXL-SSD는 작은 DRAM 캐시를 통해 NAND 규모 용량에 메모리처럼 접근하게 하므로, 연구에는 에뮬레이션이 핵심임. 기존 에뮬레이터는 가상 머신 안에서 워크로드를 돌려 DRAM 실패마다 3 μs 넘게 더하는데, 이는 고성능 NAND 읽기 지연보다 큼. CXDVirt는 가상 머신을 없애고 맞춤 페이지 폴트 경로로 NAND 지연을 모델링함."
+claims:
+  - "실패당 지연이 1.4~1.6배(P99.9에서 4.1배) 줄었음."
+  - "스레드 8개에서 실패 지연이 2배만 늘어, 기존 방식의 8~9배 증가와 대비됨."
+  - "NAND 트래픽이 없을 때 원격 DRAM의 5% 이내를 유지함."

@@ -1,0 +1,16 @@
+id: ws_worksp111
+type: Presentation
+kind: paper
+label: "The Other Half of Workflow Portability: Evidence-Backed HPC Site Profiles with Agentic Discovery"
+session: sess113
+time: "15:30-15:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp111"
+authors: [md-saiful-islam, douglas-thain]
+addresses: [workload-portability]
+proposes: [site-profiles, deterministic-llm-split]
+targets: [workflow-systems, ai-agents, leadership-facility]
+summary_ko: "워크플로는 새 HPC 사이트에서 돌기까지 시행착오가 필요함. 패키지 관리자와 컨테이너는 워크플로가 무엇을 필요로 하는지 설명하지만 사이트를 어떻게 써야 하는지는 설명하지 않기 때문임. 사이트의 자원, 스토리지, 네트워크 권한, 운영 정책을 구조화해 적은 사이트 프로파일을 제안하며, 각 항목은 근거가 되는 측정, 문서, 시험 작업과 연결됨."
+claims:
+  - "범위가 제한된 언어 모델 에이전트가 문서에서 항목을 인용과 함께 뽑고, 각 항목은 결정론적으로 검증되거나 버려짐."
+  - "프로파일로 워크플로를 사전 점검해 실행 계획을 내거나, 설명 가능한 조기 실패를 냄."
+  - "운영 사이트 세 곳에서 프로파일을 만들어 평가했음."

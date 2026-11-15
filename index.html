@@ -10,7 +10,10 @@
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
   body { font: calc(15px * var(--scale))/1.55 system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; color: var(--text); background: var(--bg); display: flex; }
-  aside { width: min(calc(460px * var(--scale)), 60vw); flex: none; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; height: 100%; }
+  aside { width: var(--aside-w, min(calc(460px * var(--scale)), 60vw)); min-width: 260px; max-width: 85vw; flex: none; background: var(--panel); display: flex; flex-direction: column; height: 100%; }
+  #split { flex: none; width: 7px; cursor: col-resize; background: var(--line); touch-action: none; }
+  #split:hover, #split.drag { background: var(--link); }
+  #toggle-graph { display: none; }
   header { padding: 14px 18px 10px; border-bottom: 1px solid var(--line); display: flex; align-items: flex-start; gap: 10px; }
   header > div:first-child { flex: 1; min-width: 0; }
   h1 { font-size: 1.2em; margin: 0 0 2px; }
@@ -33,7 +36,37 @@
   #detail li { margin: 5px 0; }
   .insight h3 { font-size: .95em !important; color: var(--text) !important; letter-spacing: 0 !important; margin-top: 18px !important; padding-bottom: 3px; border-bottom: 2px solid var(--line); }
   .insight h3 small { font-weight: 400; color: var(--muted); }
-  .ref { display: inline-block; font-size: .76em; color: var(--link); background: var(--chip); border-radius: 4px; padding: 0 6px; margin: 2px 3px 0 0; cursor: pointer; }
+  .ref { display: inline-block; font-size: .76em; line-height: 1.35; color: var(--link); background: var(--chip); border-radius: 4px; padding: 2px 6px; margin: 3px 3px 0 0; cursor: pointer; }
+  #sess-btn { width: 100%; text-align: left; padding: 8px 10px; margin-bottom: 8px; display: flex; gap: 8px; align-items: flex-start; line-height: 1.4; font-weight: 600; }
+  #sess-btn span { flex: 1; }
+  #sess-menu { border: 1px solid var(--line); border-radius: 6px; margin: -4px 0 8px; max-height: 50vh; overflow-y: auto; background: var(--panel); }
+  #sess-menu div { padding: 8px 10px; cursor: pointer; line-height: 1.4; border-bottom: 1px solid var(--line); }
+  #sess-menu div:last-child { border-bottom: 0; }
+  #sess-menu div:hover, #sess-menu div.on { background: var(--chip); }
+  #session { display: none; }
+  ol.deep { padding-left: 1.3em; margin: 6px 0; }
+  ol.deep li { margin: 12px 0; }
+  ol.deep li p { margin: 4px 0 2px; }
+  .bar-row { display: grid; grid-template-columns: 1fr 5em 1.6em; gap: 8px; align-items: center; margin: 5px 0; font-size: .88em; line-height: 1.35; }
+  .bar { background: var(--chip); border-radius: 3px; height: .7em; }
+  .bar i { display: block; height: 100%; background: var(--link); border-radius: 3px; }
+  #sess-menu div[data-v^="theme:"] { color: var(--link); }
+  .dg { margin: 14px 0 6px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); }
+  .dg-t { font-weight: 700; margin: 0 0 10px; }
+  .dg-row, .dg-head { display: grid; grid-template-columns: 1fr 1.6em 1fr; gap: 6px; align-items: stretch; margin-top: 6px; }
+  .dg-head { font-size: .78em; color: var(--muted); margin-top: 0; }
+  .dg-head span:last-child { color: var(--link); font-weight: 600; }
+  .dg-from, .dg-to, .dg-step, .dg-layer { border-radius: 6px; padding: 7px 9px; line-height: 1.4; font-size: .92em; }
+  .dg-from { background: var(--chip); color: var(--muted); }
+  .dg-to { border: 1.5px solid var(--link); font-weight: 600; }
+  .dg-arrow { align-self: center; text-align: center; color: var(--link); font-weight: 700; }
+  .dg-step { border: 1.5px solid var(--link); }
+  .dg-step b, .dg-layer b { display: block; }
+  .dg-step span, .dg-layer span { color: var(--muted); font-size: .92em; }
+  .dg-down { text-align: center; color: var(--link); font-weight: 700; line-height: 1.5; }
+  .dg-loop { margin-top: 8px; padding: 6px 9px; border: 1.5px dashed var(--link); border-radius: 6px; color: var(--link); font-size: .9em; font-weight: 600; text-align: center; }
+  .dg-layer { display: grid; grid-template-columns: 6.5em 1fr; gap: 10px; align-items: center; background: var(--chip); border-left: 5px solid var(--link); margin-top: 5px; }
+  .dg-layer:nth-child(odd) { background: transparent; border: 1px solid var(--line); border-left: 5px solid var(--link); }
   .ref:hover { text-decoration: underline; }
   .tag { display: inline-block; font-size: .76em; color: #fff; border-radius: 4px; padding: 1px 7px; }
   .muted { color: var(--muted); }
@@ -48,7 +81,16 @@
   main { flex: 1; position: relative; min-width: 0; }
   #cy { position: absolute; inset: 0; }
   #fit { position: absolute; right: 14px; top: 14px; z-index: 5; }
-  @media (max-width: 760px) { body { flex-direction: column; } aside { width: 100%; height: 55%; border-right: 0; border-bottom: 1px solid var(--line); } }
+  @media (max-width: 760px) {
+    body { flex-direction: column; }
+    aside { width: 100% !important; max-width: none; height: auto; flex: 1; min-height: 0; }
+    #split { display: none; }
+    #toggle-graph { display: block; flex: none; width: 100%; border-radius: 0; border-width: 1px 0; padding: 11px; font-weight: 600; background: var(--chip); }
+    main { flex: none; height: 0; overflow: hidden; }
+    body.graph-open main { height: 55vh; }
+    body:not(.graph-open) #q, body:not(.graph-open) #chips { display: none; }
+    body:not(.graph-open) .controls select { margin-bottom: 0; }
+  }
 </style>
 </head>
 <body>
@@ -66,12 +108,16 @@
   </header>
   <div id="warn"></div>
   <div class="controls">
+    <button id="sess-btn" aria-haspopup="listbox"><span></span>▾</button>
+    <div id="sess-menu" hidden></div>
     <select id="session"></select>
     <input id="q" type="search" placeholder="그래프에서 검색 (제목, 개념, 인물)">
     <div class="chips" id="chips"></div>
   </div>
   <div id="detail"></div>
 </aside>
+<div id="split" role="separator" aria-orientation="vertical" title="끌어서 너비 조절 (두 번 누르면 초기화)"></div>
+<button id="toggle-graph">온톨로지 펼치기 ▲</button>
 <main>
   <button id="fit">화면 맞춤</button>
   <div id="cy"></div>
@@ -99,16 +145,18 @@
   };
 
   // ---------- 1. YAML 읽기 ----------
-  let schema, manifest, orgs, people, concepts, sessions, presentations, overview = {};
+  let schema, manifest, orgs, people, concepts, sessions, presentations, overview = {}, themes = [];
   try {
     [schema, manifest, orgs, people, concepts] = await Promise.all(
       ["schema.yaml", "data/manifest.yaml", "data/orgs.yaml", "data/people.yaml", "data/concepts.yaml"].map(loadYaml));
     sessions = await Promise.all((manifest.sessions || []).map((f) => loadYaml("data/" + f)));
     presentations = await Promise.all((manifest.presentations || []).map((f) => loadYaml("data/" + f)));
+    sessions.sort((a, b) => parseInt(a.id.replace(/\D/g, ""), 10) - parseInt(b.id.replace(/\D/g, ""), 10));
     overview = manifest.overview ? await loadYaml("data/" + manifest.overview) : {};
+    themes = manifest.themes ? (await loadYaml("data/" + manifest.themes)).themes || [] : [];
   } catch (e) {
-    $("stats").textContent = "데이터를 불러오지 못했습니다.";
-    $("detail").innerHTML = "<p>" + esc(e.message) + "</p><p class='muted'>파일을 직접 열었다면 <code>python -m http.server</code>로 실행해 주세요.</p>";
+    $("stats").textContent = "데이터를 불러오지 못함.";
+    $("detail").innerHTML = "<p>" + esc(e.message) + "</p><p class='muted'>파일을 직접 열었다면 <code>python -m http.server</code>로 실행해야 함.</p>";
     return;
   }
 
@@ -162,7 +210,7 @@
   const color = (t) => (classes[t] || {}).color || "#888";
   const SIZE = { Session: 56, Presentation: 40, Problem: 28, Method: 28, System: 28, Person: 16, Organization: 22 };
   const SHAPE = { Session: "star", Presentation: "round-rectangle", Problem: "ellipse", Method: "diamond", System: "hexagon", Person: "ellipse", Organization: "rectangle" };
-  const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
+  const sTitle = (s) => "(" + s.id.replace(/^sess/, "") + ") " + s.label;      // 세션 표기: (번호) 제목 전체
   function graphStyle() {
     const C = root.dataset.theme === "dark"
       ? { text: "#f5f5f4", bg: "#1c1917", edge: "#57534e", hl: "#d6d3d1" }
@@ -185,7 +233,7 @@
   const cy = cytoscape({
     container: $("cy"),
     elements: [
-      ...[...nodes.values()].map((n) => ({ data: { id: n.id, type: n.type, text: short(n.label_ko || n.label || n.id, n.type === "Presentation" ? 44 : 30) } })),
+      ...[...nodes.values()].map((n) => ({ data: { id: n.id, type: n.type, text: n.type === "Session" ? sTitle(n) : n.label_ko || n.label || n.id } })),
       ...valid.map((e, i) => ({ data: { id: "e" + i, source: e.source, target: e.target, rel: e.rel } })),
     ],
     style: graphStyle(),
@@ -195,7 +243,37 @@
   const visible = Object.fromEntries(Object.keys(classes).map((t) => [t, !["Person", "Organization"].includes(t)]));
   $("chips").innerHTML = Object.entries(classes).map(([t, c]) =>
     `<label class="chip ${visible[t] ? "" : "off"}" data-t="${esc(t)}"><input type="checkbox" ${visible[t] ? "checked" : ""}><span class="dot" style="background:${esc(c.color)}"></span>${esc(c.label_ko || t)}</label>`).join("");
-  $("session").innerHTML = `<option value="">전체 세션 (${sessions.length})</option>` + sessions.map((s) => `<option value="${esc(s.id)}">${esc(s.id)} — ${esc(short(s.label, 40))}</option>`).join("");
+  const sessOptions = [["", `전체 세션 (${sessions.length}개) 종합`],
+    ...themes.map((th, i) => ["theme:" + th.id, `심층 요약 ${i + 1}. ${th.label}`]), ...sessions.map((s) => [s.id, sTitle(s)])];
+  // 심층 요약의 범위: 지정한 개념 + 그 개념과 연결된 발표 + 그 발표의 세션·저자·기관
+  const themeScope = new Map();
+  for (const th of themes) {
+    const set = new Set((th.concepts || []).filter((c) => nodes.has(c))), ps = new Set();
+    valid.forEach((e) => { if (["addresses", "proposes", "targets"].includes(e.rel) && set.has(e.target)) ps.add(e.source); });
+    ps.forEach((p) => set.add(p));
+    for (let pass = 0; pass < 2; pass++)
+      valid.forEach((e) => { if (["partOf", "authoredBy", "affiliatedWith"].includes(e.rel) && set.has(e.source)) set.add(e.target); });
+    themeScope.set("theme:" + th.id, { set, ps });
+  }
+  const inScope = (id) => {
+    const v = $("session").value;
+    return !v || (v.startsWith("theme:") ? themeScope.get(v).set.has(id) : sessOf.get(id).has(v));
+  };
+  $("session").innerHTML = sessOptions.map(([v, l]) => `<option value="${esc(v)}">${esc(l)}</option>`).join("");
+  const syncSessBtn = () => {
+    const v = $("session").value;
+    $("sess-btn").firstElementChild.textContent = sessOptions.find((o) => o[0] === v)[1];
+    $("sess-menu").innerHTML = sessOptions.map(([id, l]) => `<div role="option" data-v="${esc(id)}" class="${id === v ? "on" : ""}">${esc(l)}</div>`).join("");
+  };
+  syncSessBtn();
+  $("sess-btn").addEventListener("click", () => { $("sess-menu").hidden = !$("sess-menu").hidden; });
+  $("sess-menu").addEventListener("click", (e) => {
+    const o = e.target.closest("[data-v]");
+    if (!o) return;
+    $("session").value = o.dataset.v;
+    $("sess-menu").hidden = true;
+    $("session").dispatchEvent(new Event("change"));
+  });
 
   // 결정적 방사형 배치: 세션(중심) → 발표(고리) → 고유 개념(바깥 부채꼴).
   // 한 세션 안에서 공유되는 개념은 고리 안쪽, 여러 세션이 공유하는 개념은 그 세션들 사이에 놓는다.
@@ -254,7 +332,7 @@
       const c = home.get(ps[0]);
       const mx = mean(ps, "x") - c.x, my = mean(ps, "y") - c.y, d = Math.hypot(mx, my);
       const a = d > 20 ? Math.atan2(my, mx) : angle.get(ps[0]) + 1.0 + i * 0.7;   // 마주 보는 발표끼리 공유하면 방향을 임의로 정한다
-      const r = tier ? c.R + 760 : Math.max(130 + (i % 3) * 60, Math.min(d * 0.6, c.R - 110));
+      const r = tier ? c.R + 760 + (i % 4) * 45 : Math.max(130 + (i % 3) * 60, Math.min(d * 0.6, c.R - 110));
       const key = [...ps].sort().join("|"), j = seen.get(key) || 0;                // 같은 발표 조합을 공유하는 개념은 옆으로 벌린다
       seen.set(key, j + 1);
       const a2 = a + Math.ceil(j / 2) * (j % 2 ? 1 : -1) * (95 / r);
@@ -266,6 +344,7 @@
       const key = cs.map((c) => c.id).sort().join("|");
       (groups.get(key) || groups.set(key, { cs, items: [] }).get(key)).items.push(id);
     }
+    const used = new Map();
     for (const { cs, items } of groups.values()) {
       const gx = cs.reduce((s, c) => s + c.x, 0) / cs.length, gy = cs.reduce((s, c) => s + c.y, 0) / cs.length;
       if (cs.length === 2) {                 // 두 세션 사이: 두 중심을 잇는 선에 수직으로 늘어놓는다
@@ -276,8 +355,10 @@
           pos.set(id, { x: gx + ux * o - uy * k, y: gy + uy * o + ux * k });
         });
       } else {                               // 셋 이상이 공유: 전체 중심에 격자로
-        const cols = Math.ceil(Math.sqrt(items.length));
-        items.forEach((id, i) => pos.set(id, { x: gx + ((i % cols) - (cols - 1) / 2) * 230, y: gy + (Math.floor(i / cols) - (Math.ceil(items.length / cols) - 1) / 2) * 120 }));
+        const cols = Math.ceil(Math.sqrt(items.length)), rows = Math.ceil(items.length / cols);
+        const key = Math.round(gx / 300) + "," + Math.round(gy / 300), off = used.get(key) || 0;   // 중심이 겹치는 묶음은 아래로 이어 붙인다
+        used.set(key, off + rows * 120 + 60);
+        items.forEach((id, i) => pos.set(id, { x: gx + ((i % cols) - (cols - 1) / 2) * 230, y: gy + off + (Math.floor(i / cols) - (rows - 1) / 2) * 120 }));
       }
     }
     // 나머지(기관, 좌장, 발표와 직접 연결되지 않은 개념): 이웃의 중심에서 바깥으로
@@ -298,26 +379,26 @@
       }
     });
     cy.nodes().forEach((nd) => { const q = pos.get(nd.id()); if (q) nd.position(q); });
-    cy.fit(cy.elements(":visible"), 40);
+    cy.fit(cy.elements().not(".hidden"), 40);
   }
   function applyFilter(relayout) {
-    const sess = $("session").value, q = $("q").value.trim().toLowerCase();
+    const q = $("q").value.trim().toLowerCase();
     cy.batch(() => {
       cy.nodes().forEach((n) => {
         const d = nodes.get(n.id());
-        n.toggleClass("hidden", !visible[d.type] || (sess && !sessOf.get(d.id).has(sess)));
+        n.toggleClass("hidden", !visible[d.type] || !inScope(d.id));
       });
       cy.edges().forEach((e) => e.toggleClass("hidden", e.source().hasClass("hidden") || e.target().hasClass("hidden")));
       cy.elements().removeClass("faded");
       if (q) {
-        const hit = cy.nodes(":visible").filter((n) => {
+        const hit = cy.nodes().not(".hidden").filter((n) => {
           const d = nodes.get(n.id());
           return [d.id, d.label, d.label_ko, d.summary_ko, ...(d.claims || []).map((c) => (typeof c === "string" ? c : c.text))].join(" ").toLowerCase().includes(q);
         });
         cy.elements().not(hit.union(hit.neighborhood())).addClass("faded");
       }
     });
-    const vn = cy.nodes(":visible").length, ve = cy.edges(":visible").length;
+    const vn = cy.nodes().not(".hidden").length, ve = cy.edges().not(".hidden").length;
     $("stats").textContent = `노드 ${vn} / ${nodes.size} · 관계 ${ve} / ${valid.length}`;
     if (relayout) layout();
   }
@@ -327,23 +408,55 @@
     chip.classList.toggle("off", !e.target.checked);
     applyFilter(true);
   });
-  $("session").addEventListener("change", () => { cy.elements().removeClass("focus hl"); applyFilter(true); showOverview(); });
+  $("session").addEventListener("change", () => { syncSessBtn(); cy.elements().removeClass("focus hl"); applyFilter(true); showOverview(); });
   $("q").addEventListener("input", () => applyFilter(false));
-  $("fit").addEventListener("click", () => cy.fit(cy.elements(":visible"), 40));
+  $("fit").addEventListener("click", () => cy.fit(cy.elements().not(".hidden"), 40));
 
   // ---------- 5. 상세 패널 ----------
   const REL_KO = { partOf: "세션", chairedBy: "좌장", authoredBy: "저자·발표자", affiliatedWith: "소속", addresses: "다루는 문제", proposes: "제안 기법", targets: "대상 시스템", relatedTo: "관련 개념" };
   const INV_KO = { partOf: "발표", chairedBy: "좌장을 맡은 세션", authoredBy: "발표", affiliatedWith: "소속 인물", addresses: "이 문제를 다루는 발표", proposes: "이 기법을 쓰는 발표", targets: "이 시스템을 다루는 발표", relatedTo: "관련 개념" };
   const SRC_KO = { abstract: "초록", talk: "발표", slide: "슬라이드", qa: "질의응답" };
-  const nodeLink = (id) => { const n = nodes.get(id); return `<span class="link" data-id="${esc(id)}">${esc(n.label_ko ? n.label_ko + " (" + n.label + ")" : n.label)}</span>`; };
+  const nodeLink = (id) => { const n = nodes.get(id); return `<span class="link" data-id="${esc(id)}">${esc(n.type === "Session" ? sTitle(n) : n.label_ko ? n.label_ko + " (" + n.label + ")" : n.label)}</span>`; };
 
   const VIEWS = [["decision", "1. 결정 주체와 기준", "누가, 무엇을 근거로 판단하는가"], ["trial", "2. 시행착오와 조건", "무엇이 안 됐고, 어떤 조건에서 됐는가"],
-    ["korea", "3. 한국 연구기관으로의 적용", "초록을 바탕으로 한 제안"], ["extra", "4. 그 밖의 포인트", ""]];
-  const refChip = (id) => { const n = nodes.get(id); return n ? `<span class="ref" data-id="${esc(id)}" title="${esc(n.label)}">${esc(short(n.label, 30))}</span>` : ""; };
+    ["korea", "3. 한국 연구기관으로의 적용", "초록을 바탕으로 한 제안임"], ["extra", "4. 그 밖의 포인트", ""]];
+  const refChip = (id) => { const n = nodes.get(id); return n ? `<span class="ref" data-id="${esc(id)}">${esc(n.label)}</span>` : ""; };
+  function diagramHtml(d) {
+    if (!d || !(d.items || []).length) return "";
+    let h = `<div class="dg"><p class="dg-t">${esc(d.title || "한눈에 보기")}</p>`;
+    if (d.type === "shift") {
+      h += `<div class="dg-head"><span>${esc(d.from_label || "이전")}</span><span></span><span>${esc(d.to_label || "지금")}</span></div>` +
+        d.items.map((it) => `<div class="dg-row"><div class="dg-from">${esc(it.from)}</div><div class="dg-arrow">→</div><div class="dg-to">${esc(it.to)}</div></div>`).join("");
+    } else if (d.type === "layers") {
+      h += d.items.map((it) => `<div class="dg-layer"><b>${esc(it.label)}</b><span>${esc(it.note || "")}</span></div>`).join("");
+    } else {
+      h += d.items.map((it) => `<div class="dg-step"><b>${esc(it.label)}</b>${it.note ? `<span>${esc(it.note)}</span>` : ""}</div>`).join(`<div class="dg-down">↓</div>`);
+      if (d.loop) h += `<div class="dg-loop">↺ ${esc(d.loop)} (처음으로 돌아감)</div>`;
+    }
+    return h + `</div>`;
+  }
+  function showTheme(th) {
+    const sc = themeScope.get("theme:" + th.id), per = {};
+    sc.ps.forEach((p) => { const s = nodes.get(p).session; per[s] = (per[s] || 0) + 1; });
+    const max = Math.max(1, ...Object.values(per));
+    let h = `<div class="insight"><h2>${esc(th.label)}</h2><p class="muted">심층 요약 · 세션 ${Object.keys(per).length}개의 발표 ${sc.ps.size}건을 개념 ${th.concepts.length}개로 묶음</p>` +
+      (th.summary_ko ? `<p>${esc(th.summary_ko)}</p>` : "") + diagramHtml(th.diagram) + `<h3>관점별 심층 요약</h3><ol class="deep">` +
+      (th.sections || []).map((s) => `<li><b>${esc(s.head)}</b><p>${esc(s.text)}</p>${(s.refs || []).map(refChip).join("")}</li>`).join("") + `</ol>` +
+      `<h3>세션별 관련 발표 수</h3><div class="bars">` +
+      sessions.filter((s) => per[s.id]).sort((a, b) => per[b.id] - per[a.id]).map((s) =>
+        `<div class="bar-row"><span class="link" data-sess="${esc(s.id)}">${esc(sTitle(s))}</span><div class="bar"><i style="width:${(100 * per[s.id]) / max}%"></i></div><b>${per[s.id]}</b></div>`).join("") + `</div>` +
+      `<details><summary>이 관점을 이루는 개념 ${th.concepts.length}개</summary><ul>${th.concepts.filter((c) => nodes.has(c)).map((c) => `<li>${nodeLink(c)}</li>`).join("")}</ul></details></div>`;
+    $("detail").innerHTML = h;
+    $("detail").scrollTop = 0;
+  }
   function showOverview() {
+    if ($("session").value.startsWith("theme:")) return showTheme(themes.find((x) => "theme:" + x.id === $("session").value));
     const sid = $("session").value, s = sessions.find((x) => x.id === sid), ins = (s ? s.insights : overview.insights) || {};
-    let h = `<div class="insight"><h2>${esc(s ? s.label : overview.label || "전체 세션 종합")}</h2>` +
-      (s ? `<p class="muted">${esc([s.kind, s.date, s.time, s.room].filter(Boolean).join(" · "))} · <span class="link" data-id="${esc(s.id)}">세션 개요</span></p>` : `<p class="muted">세션을 고르면 세션별 고찰이 나옵니다. 근거 발표를 누르면 그래프에서 해당 발표로 이동합니다.</p>`);
+    const src = s || overview;
+    let h = `<div class="insight"><h2>${esc(s ? sTitle(s) : overview.label || "전체 세션 종합")}</h2>` +
+      (s ? `<p class="muted">${esc([s.kind, s.date, s.time, s.room].filter(Boolean).join(" · "))} · <span class="link" data-id="${esc(s.id)}">발표 목록</span></p>` : "") +
+      (src.summary_ko ? `<p>${esc(src.summary_ko)}</p>` : "") + diagramHtml(src.diagram) +
+      `<p class="muted" style="font-size:.85em">아래 항목의 근거 발표를 누르면 그래프의 해당 발표로 이동함.</p>`;
     for (const [key, title, sub] of VIEWS) {
       const items = ins[key] || [];
       if (!items.length) continue;
@@ -352,7 +465,7 @@
         return `<li>${o.head ? `<b>${esc(o.head)}</b> ` : ""}${esc(o.text)}${(o.refs || []).length ? "<br>" + o.refs.map(refChip).join("") : ""}</li>`;
       }).join("") + `</ul>`;
     }
-    if (!Object.keys(ins).length) h += `<p class="muted">이 세션의 고찰이 아직 없습니다.</p>`;
+    if (!Object.keys(ins).length) h += `<p class="muted">이 세션의 고찰이 아직 없음.</p>`;
     h += `</div>`;
     const counts = {};
     valid.forEach((e) => { if (["addresses", "proposes", "targets"].includes(e.rel) && (!sid || nodes.get(e.source).session === sid)) counts[e.target] = (counts[e.target] || 0) + 1; });
@@ -364,7 +477,7 @@
   function showDetail(id) {
     const n = nodes.get(id), cls = classes[n.type] || {};
     let h = `<p><button id="back">← 고찰로 돌아가기</button></p><span class="tag" style="background:${esc(cls.color)}">${esc(cls.label_ko || n.type)}</span>
-             <h2>${esc(n.label)}</h2>` + (n.label_ko ? `<p class="muted">${esc(n.label_ko)}</p>` : "");
+             <h2>${esc(n.type === "Session" ? sTitle(n) : n.label)}</h2>` + (n.label_ko ? `<p class="muted">${esc(n.label_ko)}</p>` : "");
     const meta = [n.kind, n.date, n.time, n.room].filter(Boolean).join(" · ");
     if (meta) h += `<p class="muted">${esc(meta)}</p>`;
     if (n.summary_ko) h += `<h3>요약</h3><p>${esc(n.summary_ko)}</p>`;
@@ -394,7 +507,7 @@
       visible[t] = true;
       const chip = document.querySelector(`.chip[data-t="${t}"]`);
       chip.classList.remove("off"); chip.querySelector("input").checked = true;
-      if ($("session").value && !sessOf.get(id).has($("session").value)) $("session").value = "";
+      if (!inScope(id)) { $("session").value = ""; syncSessBtn(); }
       applyFilter(true);
     }
     cy.elements().removeClass("faded focus hl");
@@ -408,6 +521,8 @@
   cy.on("tap", (e) => { if (e.target === cy) clearFocus(); });
   $("detail").addEventListener("click", (e) => {
     if (e.target.id === "back") return clearFocus();
+    const go = e.target.closest("[data-sess]");
+    if (go) { $("session").value = go.dataset.sess; return $("session").dispatchEvent(new Event("change")); }
     const l = e.target.closest(".link, .ref");
     if (l) focus(l.dataset.id);
   });
@@ -416,6 +531,32 @@
     store.set("sc26-theme", root.dataset.theme);
     themeLabel();
     cy.style(graphStyle());
+  });
+  // 세로 칸막이: 끌어서 왼쪽 패널 너비 조절
+  const split = $("split");
+  const savedW = parseFloat(store.get("sc26-aside-w"));
+  if (savedW) root.style.setProperty("--aside-w", Math.min(savedW, innerWidth * 0.85) + "px");
+  split.addEventListener("pointerdown", (e) => { split.setPointerCapture(e.pointerId); split.classList.add("drag"); e.preventDefault(); });
+  split.addEventListener("pointermove", (e) => {
+    if (!split.classList.contains("drag")) return;
+    root.style.setProperty("--aside-w", Math.max(260, Math.min(e.clientX, innerWidth - 160)) + "px");
+    cy.resize();
+  });
+  const endDrag = () => {
+    if (!split.classList.contains("drag")) return;
+    split.classList.remove("drag");
+    store.set("sc26-aside-w", parseFloat(getComputedStyle(root).getPropertyValue("--aside-w")));
+    cy.resize();
+  };
+  split.addEventListener("pointerup", endDrag);
+  split.addEventListener("pointercancel", endDrag);
+  split.addEventListener("dblclick", () => { root.style.removeProperty("--aside-w"); store.set("sc26-aside-w", ""); cy.resize(); });
+  // 모바일: 온톨로지 펼치기/접기
+  $("toggle-graph").addEventListener("click", () => {
+    const open = document.body.classList.toggle("graph-open");
+    $("toggle-graph").textContent = open ? "온톨로지 접기 ▼" : "온톨로지 펼치기 ▲";
+    cy.resize();
+    if (open) cy.fit(cy.elements().not(".hidden"), 30);
   });
   $("fs-up").addEventListener("click", () => { scale = Math.min(1.6, +(scale + 0.1).toFixed(2)); applyScale(); cy.resize(); });
   $("fs-down").addEventListener("click", () => { scale = Math.max(0.8, +(scale - 0.1).toFixed(2)); applyScale(); cy.resize(); });

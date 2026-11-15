@@ -1,0 +1,17 @@
+id: ws_xloop102
+type: Presentation
+kind: paper
+label: "Fine-Tuning Foundation Models for Micro-CT Image Segmentation Using HPC Platforms"
+session: sess117
+time: "09:35-09:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop102"
+authors: [xiaoya-chong, david-abramov, pradyumna-elavarthi, elizabeth-clark, petrus-zwart, wiebke-koepp, dilworth-parkinson, dylan-mcreynolds, daniel-allan, johanna-nelson-weker, nicholas-schwarz, francesco-de-carlo, nghia-vo, sharif-ahmed, tim-snow, tamas-varga, tyler-farr, harry-lisabeth, andrew-mcelrone, tanny-chavez, alexander-hexemer]
+addresses: [data-deluge]
+proposes: [foundation-model-finetuning]
+targets: [sci-foundation-models, user-facility-beamline, leadership-facility]
+summary_ko: >
+  방사광 X선 마이크로 CT 이미지 분할에 파운데이션 모델을 맞추고 배치하는 방법을 설명함. 개체 분할에는 SAM3, 의미 분할에는 DINOv3-Seg를 쓰고, 데이터 전처리, 모델 구성, 손실 설계, 하이퍼파라미터 튜닝을 다룸.
+claims:
+  - "미세조정은 웹 기반 학습 인터페이스로 로컬 GPU 서버에서, Slurm 작업 제출로 NERSC에서 함."
+  - "추론은 NERSC와 ALCF에서 GPU 수백 개에 분산해 대규모 방사광 데이터를 준실시간으로 분할함."
+  - "공개 초록에는 정확도 수치가 없음."

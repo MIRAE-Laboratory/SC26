@@ -1,0 +1,17 @@
+id: ws_isav111
+type: Presentation
+kind: talk
+label: "A Distributed Particle-Based Volume Rendering Framework for Fugaku and Beyond"
+session: sess123
+time: "17:10-17:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav111"
+authors: [tsukasa-osaki, jorji-nonaka, takuma-kawamura]
+addresses: [data-deluge]
+proposes: [particle-based-rendering, in-situ-reduction]
+targets: [in-situ-visualization, leadership-facility]
+summary_ko: >
+  GPU 가속 플래그십 시스템에서는 CPU 자원이 인시투 처리에 남음. HPC 시스템의 CPU가 체적 필드를 인시투로 작은 가시화 입자로 바꾸고, 대화형 렌더링은 GPU를 갖춘 원격 클라이언트에서 하는 분산 입자 기반 볼륨 렌더링 틀을 만들고 있음.
+claims:
+  - "Fugaku에서 OpenFOAM으로 계산 노드 2,304개(CPU 코어 110,592개)까지 입자 생성을 보였음."
+  - "432³ 격자, 576 MPI 랭크 측정에서 입자 파일은 압축하지 않은 필드보다 98.1% 작았음."
+  - "FugakuNEXT 같은 미래 이기종 시스템에의 적용 가능성을 논의함."

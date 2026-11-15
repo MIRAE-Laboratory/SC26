@@ -1,0 +1,14 @@
+id: ws_pmbsf138
+type: Presentation
+kind: paper
+label: "DMSim: Configurable Data Management Simulation Framework for Scientific Computing Grid"
+session: sess109
+time: "15:50-16:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf138"
+authors: [kuan-chieh-hsu, raees-ahmad-khan, sairam-vatsavai, tasnuva-chowdhury, ozgur-kilic, sankha-dutta, shengyu-feng, david-park, fatih-furkan-akman, rui-xue, john-rembrandt-remy-steele, yihui-ren, paul-nilsson, tatiana-korchuganova, joseph-boudreau, scott-klasky, tadashi-maeno, verena-ingrid-martinez-outschoorn, norbert-podhorszki, frederic-suter, wei-yang, yiming-yang, shinjae-yoo, kenny-yo, alexei-klimentov, adolfy-hoisie]
+addresses: [simulation-scale-limits, wan-data-distribution]
+proposes: [system-simulation]
+targets: [hep-pipelines, data-federations]
+summary_ko: "컴퓨팅 그리드 시뮬레이터는 시스템 구성과 작업 할당에 치중하고 데이터 관리는 단순화하는 경우가 많음. 그러나 전 세계 LHC 컴퓨팅 그리드 같은 데이터 중심 인프라에서는 복제본 배치와 전송 정책이 네트워크 경합, 준비 지연, 스토리지 이용에 영향을 줌. DMSim은 전역 파일시스템 관리자와 통신 모델링으로 복제본을 추적하고 경합 인지 전송을 시뮬레이션함."
+claims:
+  - "PanDA와 Rucio의 과거 기록으로 검증했고, 시뮬레이션한 준비 시간은 대역폭 기반 하한보다 크고 관측된 작업 대기 시간보다 작았음."

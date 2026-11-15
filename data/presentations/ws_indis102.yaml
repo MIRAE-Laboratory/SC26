@@ -1,0 +1,15 @@
+id: ws_indis102
+type: Presentation
+kind: talk
+label: "National Data Platform, National Research Platform and Open Science Data Federation: How they collectively enable data-intensive science"
+session: sess111
+time: "11:30-11:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis102"
+authors: [fabio-andrijauskas, frank-wurthwein, s-curt-dodds]
+addresses: [wan-data-distribution]
+proposes: [federated-caching]
+targets: [data-federations]
+summary_ko: "대규모 연구 데이터셋의 관리와 처리는 현대 과학의 핵심 과제임. Open Science Data Federation(OSDF)은 전 세계 연구 데이터 배포망으로, Open Science Grid의 StashCache에서 출발해 지금은 Pelican 플랫폼 위에서 돎."
+claims:
+  - "Pelican은 지리 기반 경로 지정, 원본·캐시 웹 인터페이스, 중앙 등록, 상태 텔레메트리를 더함."
+  - "National Data Platform, National Research Platform, Open Science Pool이 이를 통해 복잡한 워크플로의 데이터 조율을 단순화함."

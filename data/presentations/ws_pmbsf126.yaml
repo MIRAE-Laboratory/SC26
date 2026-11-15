@@ -1,0 +1,16 @@
+id: ws_pmbsf126
+type: Presentation
+kind: paper
+label: "Enhancing Data Center Efficiency and Throughput by Co-Scheduling"
+session: sess109
+time: "14:20-14:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf126"
+authors: [paul-lin, nestor-demeure, jonathan-skone, dhruva-kulkarni, mathias-wagner, francesca-tartaglione, jack-deslippe, ian-karlin, garima-kochhar, brian-austin]
+addresses: [underused-resources]
+proposes: [co-scheduling]
+targets: [leadership-facility, job-scheduler]
+summary_ko: "많은 HPC 센터가 CPU 전용 노드와 GPU 노드를 따로 운용하므로, GPU 노드의 남는 CPU 자원에서 CPU 전용 작업을 돌리면 처리량을 올릴 수 있음. 간섭을 통제 가능한 범위로 묶는 것이 관건임."
+claims:
+  - "NERSC Perlmutter 워크로드 분석에서 GPU 노드 시간의 약 60%가 CPU 코어 12개 미만, 호스트 메모리 128 GB 미만을 썼음."
+  - "Grace-Hopper 노드에서 메모리 분할과 네트워크 서비스 품질로 격리하고, 공동 스케줄링 없는 경우보다 처리량이 70% 늘었음."
+  - "예비 연구임."

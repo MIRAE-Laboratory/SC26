@@ -1,0 +1,14 @@
+id: misc202
+type: Presentation
+kind: invited
+label: "Research Infrastructure as enabler of New Scientific Research"
+session: sess111
+time: "16:45-17:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=misc202"
+authors: [deep-medhi]
+addresses: []
+proposes: []
+targets: [research-networks]
+summary_ko: "많은 연구는 전통적 도구로도 할 수 있지만, 연구 인프라는 새로운 종류의 탐구를 가능하게 함. 데이터 집약 과학을 중심으로 네트워킹과 분산 시스템 연구 인프라의 이 역할을 살핌."
+claims:
+  - "공개 초록에는 수치와 시스템 이름이 없음."

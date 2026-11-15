@@ -1,0 +1,15 @@
+id: ws_pmbsf122
+type: Presentation
+kind: paper
+label: "PortWarp: A Cycle-Accurate GPU-Accelerated HPC Network Simulator Using Port-per-Thread Model"
+session: sess109
+time: "15:30-15:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf122"
+authors: [jun-tan, boning-li, kevin-brown, zhiling-lan, christopher-carothers]
+addresses: [simulation-scale-limits]
+proposes: [system-simulation]
+targets: [hpc-network]
+summary_ko: "사이클 정확 시뮬레이터는 HPC 네트워크 모델링의 표준이지만, 단일 스레드 사이클 루프가 탐색 가능한 시스템 크기와 시간 범위를 제한함. PortWarp는 포트마다 스레드 하나를 배정해 GPU에서 사이클 정확 시뮬레이션을 돌림."
+claims:
+  - "같은 검증 빌드로 NVIDIA H100에서 445배, B100에서 513배 빨라졌음."
+  - "포화 구간에서 거의 모든 포트 스레드가 매 사이클 유효한 일을 함."

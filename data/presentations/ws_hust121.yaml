@@ -1,0 +1,16 @@
+id: ws_hust121
+type: Presentation
+kind: paper
+label: "From Answering to Acting: An AI Agent for Research Computing User Support"
+session: sess517
+time: "10:45-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust121"
+authors: [andrew-pasquale, vikram-gazula, joseph-e-bacal]
+addresses: [user-support-load, agent-boundaries]
+proposes: [llm-ops-assistant, human-approval-gates, hybrid-evaluators]
+targets: [user-support-services, ai-agents]
+summary_ko: "국가 사이버인프라 프로그램을 위한 에이전트로, 정적인 지원 챗봇을 넘어 실시간 인프라 데이터로 답함. 연구자를 대신해 행사 등록, 공지 게시, 티켓 제출 같은 조치도 하며, 연구자 본인의 연합 신원으로 수행함."
+claims:
+  - "사용자 데이터는 기관 인프라 안에 머물고, 결과를 낳는 쓰기 작업 전에는 확인 단계를 둠."
+  - "사람 검토자와 대조해 검증한 심사기로 채점하면 에이전트는 0.97, 단순 검색은 0.47임."
+  - "평가는 자체 퇴행을 잡는 출시 관문과, 기반 정보가 낡았음을 알리는 변동 탐지기 두 방식으로 돎."

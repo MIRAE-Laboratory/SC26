@@ -1,0 +1,15 @@
+id: ws_worksp115
+type: Presentation
+kind: paper
+label: "How far can network congestion awareness improve scientific workflow scheduling?"
+session: sess113
+time: "11:45-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp115"
+authors: [luis-antonio-momm-duarte, guilherme-piegas-koslovski]
+addresses: [network-congestion, workflow-scheduling]
+proposes: [congestion-aware-admission]
+targets: [workflow-systems, hpc-network]
+summary_ko: "공유 HPC 시스템에서 워크플로는 통신 경합으로 생기는 네트워크 혼잡 때문에 느려짐. 작업을 미루면 영향을 줄일 수 있지만, 공유 병목이 있고 임계 경로 밖에 여유가 있을 때만 그러함. Valley-Filling Admission은 혼잡 정점에서 임계 경로 밖 전송을 붙잡아 두었다가 대역폭이 빌 때 내보냄."
+claims:
+  - "실제 네트워크 텔레메트리 기준으로 실행 시간이 SoyKB 최대 9.2%, 771 GB Chip-Seq 최대 11.2% 줄었음."
+  - "네트워크 토폴로지 3종, 워크플로 8개의 시뮬레이션 결과임."

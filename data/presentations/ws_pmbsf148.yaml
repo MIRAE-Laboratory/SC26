@@ -1,0 +1,15 @@
+id: ws_pmbsf148
+type: Presentation
+kind: paper
+label: "Custodian: Enabling Automatic Performance Engineering Agents on the NERSC HPC System"
+session: sess109
+time: "14:40-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf148"
+authors: [abdulhannan-mohammed, oscar-antepara, dhruva-kulkarni, muaaz-gul-awan, samuel-williams, jack-deslippe]
+addresses: [ops-data-complexity]
+proposes: [performance-agent, roofline-analysis]
+targets: [ai-agents, ops-telemetry, leadership-facility]
+summary_ko: "Custodian은 LLM 기반 HPC 성능 분석 에이전트임. 이미 수집된 작업 텔레메트리와 응용 출력을 검토해 응용의 거동을 특성화하고 병목 후보를 짚은 뒤, 자연어 설명과 그림, 최적화 제안으로 바꿈."
+claims:
+  - "텔레메트리에서 얻은 응용 상태와 루프라인 분석을 NVIDIA Nsight 도구와 대조해 Perlmutter의 대표 응용 4종에서 검증했음."
+  - "HPC 에이전트의 절충, 비용, 생산성을 논의함. 공개 초록에는 수치가 없음."

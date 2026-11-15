@@ -1,0 +1,15 @@
+id: ws_p3hpc104
+type: Presentation
+kind: paper
+label: "Meganeura: Vulkan and Metal as a Performance-Portability Layer for GPU Training and Inference"
+session: sess110
+time: "11:18-11:42"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc104"
+authors: [dzmitry-malyshau]
+addresses: [performance-portability]
+proposes: [portable-abstraction-layers, autotuning]
+targets: [sciml-training, hpc-processors]
+summary_ko: "그래픽 API인 Vulkan과 Metal을 GPU 추론·학습의 공통 기반으로 삼아 Rust로 구현함. 계산 그래프 컴파일과 범위가 제한된 자동 커널 튜닝을 결합해, 엔진을 작고 일반적으로 유지하면서 하드웨어에 맞춤."
+claims:
+  - "NVIDIA, AMD, Intel, Apple GPU에서 PyTorch를 기준으로 평가함."
+  - "벤더별 구현을 따로 유지하지 않고 작은 엔진이 얼마만큼의 성능 이식성을 낼 수 있는지가 핵심 질문임. 공개 초록에는 수치가 없음."

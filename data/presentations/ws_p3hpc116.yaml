@@ -1,0 +1,15 @@
+id: ws_p3hpc116
+type: Presentation
+kind: paper
+label: "Triton Attention Backend: Portable High-Performance Paged Attention for Production-Grade LLM Inference"
+session: sess110
+time: "17:06-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc116"
+authors: [burkhard-ringlein, jan-van-lunteren, radu-stoica, thomas-parnell]
+addresses: [performance-portability, software-ecosystem-readiness]
+proposes: [portable-abstraction-layers]
+targets: [llm-inference]
+summary_ko: "어텐션 커널은 LLM에서 성능에 가장 민감한 GPU 커널이고, 지금의 선도적 추론은 GPU 아키텍처마다 손으로 튜닝한 커널에 기댐. 성능은 좋지만 소프트웨어 생태계가 갈라지고 모델과 하드웨어가 새로 나올 때마다 공학 작업이 듦. 플랫폼 중립적인 Triton 구현으로 페이지드 어텐션의 성능 이식성을 사례 연구함."
+claims:
+  - "Triton 커널은 최신 NVIDIA와 AMD GPU에서 플랫폼 전용 커널과 같은 수준임."
+  - "기존 이식형 어텐션 구현보다 최대 7배 빠름."

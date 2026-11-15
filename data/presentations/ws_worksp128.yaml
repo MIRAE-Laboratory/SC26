@@ -1,0 +1,15 @@
+id: ws_worksp128
+type: Presentation
+kind: paper
+label: "RLSA: Adaptive LLM Gating for Multi-Agent HPC Scheduling Agents"
+session: sess113
+time: "14:00-14:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp128"
+authors: [hongwei-jin, krishnan-raghavan, anirban-mandal, ewa-deelman]
+addresses: [agent-inference-cost, workflow-scheduling]
+proposes: [llm-gating, decentralized-scheduling]
+targets: [ai-agents, job-scheduler]
+summary_ko: "분산 워크플로 스케줄링에서 작업에 입찰하는 LLM 에이전트는 느리고 비쌈. 모든 결정에 LLM이 필요한지 묻고, PPO로 학습한 강화학습 정책이 LLM과 빠른 대리모델 중 하나를 고르는 RLSA를 제안함."
+claims:
+  - "통제된 경매에서 작업당 LLM 호출이 4.00회에서 2.06회로 줄었고, 실행 시간은 항상 LLM을 쓰는 경우와 비슷했음(7,686초 대 7,285초)."
+  - "실제 LLM 입찰자와 VM 17대의 FABRIC 배치에서 LLM 호출이 입찰자 수에 대해 선형보다 느리게 늘었음."

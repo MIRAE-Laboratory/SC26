@@ -1,0 +1,16 @@
+id: ws_worksp131
+type: Presentation
+kind: paper
+label: "HPC-CARLA: Closed-Loop Evaluation of Autonomous Driving Agents as a Resilient, Schedulable HPC Workload"
+session: sess113
+time: "16:15-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp131"
+authors: [jey-kang, seungbum-jung, kangryeol-kim, cory-gardner, jae-seung-yeom, tae-hyuk-ahn, jongwon-kim]
+addresses: [failure-resilience]
+proposes: [resilient-campaign-execution]
+targets: [autonomous-driving-evaluation, job-scheduler]
+summary_ko: "HPC-CARLA는 자율주행 평가 캠페인을 다중 노드 작업 큐로 돌림. GPU마다 CARLA 시뮬레이터 서비스 하나를 유지하고, 실패한 서비스를 다시 띄우고, 작업 상태와 무관하게 에피소드 체크포인트를 저장함."
+claims:
+  - "A100 GPU에서 에이전트 다섯으로 유효한 경로 평가 13,059건을 건졌고, 그중 94.3%가 결국 실패한 작업에서 나왔음."
+  - "L40S 캠페인 3회로 다른 GPU와 드라이버 스택을 시험했고, 점수 일치는 에이전트에 따라 달랐음."
+  - "범위가 넓어지자 오프라인 난이도 점수와 주행 성능의 관계가 뒤집혀, 배분기를 에이전트별 포함 요건 우선으로 고쳤음."

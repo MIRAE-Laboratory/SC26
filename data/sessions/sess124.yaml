@@ -1,0 +1,58 @@
+id: sess124
+type: Session
+label: "High Performance Python for Science at Scale"
+kind: Workshop
+date: "2026-11-15"
+time: "14:00-17:30 CST"
+room: W178a
+url: https://sc26.conference-program.com/session/?sess=sess124
+chairs: [pete-mendygral, sunita-chandrasekaran, sam-foreman, daniel-margala, davin-potts, andy-terrel]
+summary_ko: >
+  슈퍼컴퓨터에서 파이썬 응용과 워크플로를 확장한 경험을 연구자, 개발자, 실무자가 공유하는 심포지엄 형식의 워크숍. 발표와 시연으로 모범 사례와 성공 사례를 다루고, 라이브러리·런타임·프레임워크에 대한 오픈소스 기여를 권함.
+diagram:
+  type: layers
+  title: 파이썬이 연결층이 되는 구조
+  items:
+    - {label: 과학자와 에이전트, note: 시설 경계를 넘어 자원을 조합}
+    - {label: 파이썬 조율 계층, note: "약점은 시작·조율 오버헤드, 환경 이식성, 동시성, 출처·거버넌스 비용"}
+    - {label: 서비스 계층, note: "서비스 관리, 워크플로 실행, 데이터 교환을 분리"}
+    - {label: 솔버와 라이브러리, note: 자동 생성 바인딩과 무복사 공유로 연결}
+    - {label: 시스템, note: "GPU 벤더와 스케줄러가 다양함. 생태계 준비도가 확장성을 좌우"}
+insights:
+  decision:
+    - head: 프레임워크 선택은 성능보다 생태계 준비도가 정함.
+      text: AMD GPU 시스템에서 안정적으로 돈 것은 PyTorch DDP와 TensorFlow DTensor였고, CUDA에 의존하는 접근은 배치 단계에서 막혔음.
+      refs: [ws_hppss104]
+    - head: 무엇을 벤치마크할지가 다시 열린 질문이 되었음.
+      text: 커널과 응용 성능을 계속 잴지, 종단 간 과학적 성과를 잴지가 패널의 쟁점임. 벤치마크가 다음 시스템의 설계를 이끈다는 전제임.
+      refs: [miscp120]
+    - head: 연결의 표준은 파이썬 계층으로 수렴함.
+      text: 시뮬레이션, 학습, 워크플로, 출처 기록, 에이전트가 공통 파이썬 계층에서 만나고, 시설 경계를 넘는 조합도 그 위에서 함.
+      refs: [misc199, ws_hppss105]
+  trial:
+    - head: 파이썬은 대규모에서 네 군데가 약함.
+      text: 시작과 조율 오버헤드, 시설 간 환경 이식성, 동시성, 자율 루프에서의 출처·거버넌스 비용임.
+      refs: [misc199]
+    - head: 바인딩을 손으로 쓰면 라이브러리 변화를 못 따라감.
+      text: 바인딩 코드의 상당 부분을 도구로 생성하고, 배열을 복사 없이 공유해 AI 프레임워크와 바로 이음.
+      refs: [ws_hppss101]
+    - head: 기능을 서비스로 쓰려면 세 가지를 분리해야 함.
+      text: 서비스 관리, 워크플로 실행, 데이터 교환을 나눠야 응용마다 통합 작업을 다시 하지 않음.
+      refs: [ws_hppss105]
+  korea:
+    - head: 비 NVIDIA 가속기를 검토할 때는 소프트웨어 스택 검증이 먼저임.
+      text: 하드웨어 성능보다, 쓰려는 프레임워크와 병렬화 방식이 그 시스템에서 실제로 도는지를 도입 전에 확인해야 함.
+      refs: [ws_hppss104, ws_hppss103]
+    - head: 자체 해석 코드에 파이썬 인터페이스를 자동 생성으로 붙임.
+      text: 포트란·C++ 솔버를 파이썬에서 복사 없이 쓰게 하면 AI 프레임워크와의 결합 비용이 크게 줌. 수작업 바인딩은 유지가 어려움.
+      refs: [ws_hppss101]
+    - head: 기관 간 자원 연계는 서비스 계층을 나눠 설계함.
+      text: 여러 기관의 계산 자원과 실험 시설을 묶는 플랫폼을 구상한다면, 미국의 서비스 분리 구조와 파이썬 조율 계층의 한계 목록이 참고 자료임.
+      refs: [ws_hppss105, misc199]
+  extra:
+    - head: Genesis Mission이 발표들의 공통 배경임.
+      text: AI, 엑사스케일, 실험 시설, 자율 실험실을 한 플랫폼으로 묶는 미국의 사업이 초청 강연과 일반 발표에 함께 등장함.
+      refs: [misc199, ws_hppss105]
+    - head: 에이전트가 파이썬 워크숍의 주제로 들어왔음.
+      text: 에이전트 배치, 연합 과학 에이전트, 에이전틱 과학 벤치마크가 일곱 발표 중 셋에 나옴.
+      refs: [ws_hppss103, misc199, miscp120]

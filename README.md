@@ -13,6 +13,7 @@ SC26 세션의 초록을 읽고 세션별 고찰을 도출한 저장소입니다
 | `schema.yaml`                             | 클래스 7종과 관계 8종 정의. 위반 사항은 뷰어 상단에 경고로 표시됩니다.           |
 | `data/manifest.yaml`                      | 뷰어가 읽을 세션·발표 파일 목록                                                 |
 | `data/overview.yaml`                      | 세션 전체를 묶은 종합 고찰                                                       |
+| `data/themes.yaml`                        | 여러 세션을 개념 묶음으로 가로지른 심층 요약                                     |
 | `data/sessions/`, `data/presentations/` | 세션·발표당 파일 하나 (세션은 고찰, 발표는 요약과 핵심 주장 포함)               |
 | `data/concepts.yaml`                      | 세션 간에 공유되는 Problem / Method / System 개념                                |
 | `data/people.yaml`, `data/orgs.yaml`    | 인물과 소속 기관                                                                 |
@@ -46,11 +47,39 @@ claims:
 
 ## 수록 세션
 
-- `sess126` — S-HPC 2026: 5th International Workshop on Cyber Security in HPC (2026-11-15)
-- `sess114` — AI4S: 8th Workshop on Artificial Intelligence and Machine Learning for Scientific Applications (2026-11-15)
-- `sess120` — AgenticAI4HPC'26: The First International Workshop on Agentic AI for HPC (2026-11-15)
+- (126) 5th International Workshop on Cyber Security in High Performance Computing (S-HPC 2026) (2026-11-15)
+- (114) AI4S: 8th Workshop on Artificial Intelligence and Machine Learning for Scientific Applications (2026-11-15)
+- (120) AgenticAI4HPC'26: The First International Workshop on Agentic AI for HPC (2026-11-15)
+- (125) EESP 2026: 3rd International Workshop on Energy Efficiency with Sustainable Performance (2026-11-15)
+- (124) High Performance Python for Science at Scale (2026-11-15)
+- (123) ISAV26: In Situ AI, Analysis and Visualization (2026-11-15)
+- (117) XLOOP 2026: The 8th Annual Workshop on Extreme-Scale Experiment-in-the-Loop Computing (2026-11-15)
+- (168) Building Scalable Agentic Systems for Science: Concepts, Architectures, and Hands-On with Academy (2026-11-15)
+- (113) 21st Workshop on Workflows in Support of Large-Scale Science (WORKS26) (2026-11-15)
+- (118) 15th International Workshop on Runtime and Operating Systems for Supercomputers (ROSS 2026) (2026-11-15)
+- (111) 13th Annual International Workshop on Innovating the Network for Data Intensive Science (INDIS) (2026-11-15)
+- (109) PMBS26: The 17th International Workshop on Performance Modeling, Benchmarking, and Simulation of High Performance Computer Systems (2026-11-15)
+- (517) HUST-26: 13th International Workshop on HPC User Support Tools (2026-11-15)
+- (110) 2026 International Workshop on Performance, Portability, and Productivity in HPC (P3HPC) (2026-11-15)
 
-요약과 주장은 공개 프로그램 페이지의 초록을 한국어로 요약한 것이며 원문 인용이 아닙니다. 패널(`miscp115`)과 초청 강연 세 건(`misc226`, `misc217`, `misc187`)은 공개된 설명문이 없어 제목과 참여자만 담았습니다.
+프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
+
+## 심층 요약
+
+`data/themes.yaml`은 여러 세션을 가로지르는 관점별 심층 요약입니다. 뷰어의 세션 목록에서 "심층 요약 N"을 고르면 표시됩니다. 각 항목의 `concepts`에 개념 id를 적으면 그 개념과 연결된 발표가 자동으로 모여 그래프와 세션별 분포에 나타납니다.
+
+```yaml
+themes:
+  - id: agents
+    label: 관점 제목
+    summary_ko: 두세 문장 요약
+    concepts: [ai-agents, mcp-tools]      # concepts.yaml 의 id
+    diagram: {type: layers, title: ..., items: [...]}
+    sections:
+      - {head: 요지 한 문장, text: 풀이, refs: [발표 id]}
+```
+
+요약과 주장은 공개 프로그램 페이지의 초록을 한국어로 요약한 것이며 원문 인용이 아닙니다. 패널(`miscp115`)과 초청·주제 강연 다섯 건(`misc226`, `misc217`, `misc187`, `misc173`, `misc198`)과 단편 발표 세 건(`misc179`, `misc180`, `misc181`)은 공개된 설명문이 없어 제목과 참여자만 담았습니다.
 
 ## 고찰
 
@@ -61,6 +90,18 @@ claims:
 3. `korea` — 한국 연구기관으로의 적용: 초록을 바탕으로 한 제안이며 발표 내용이 아닙니다
 4. `extra` — 그 밖의 포인트
 
+세션 요약 아래에는 한눈에 보는 도식이 나옵니다. 세션 파일의 `diagram`에 정의하며, 종류는 전환(`shift`: 이전 → 지금), 흐름(`flow`: 단계의 연쇄), 계층(`layers`: 층별 정리) 세 가지입니다.
+
+```yaml
+diagram:
+  type: shift            # shift | flow | layers
+  title: 도식 제목
+  items:
+    - {from: 이전 상태, to: 바뀐 상태}        # flow, layers는 {label: 이름, note: 설명}
+```
+
+고찰과 요약의 문장은 "~함.", "~임."으로 끝나는 개조식으로 씁니다.
+
 ```yaml
 insights:
   decision:
@@ -69,4 +110,4 @@ insights:
       refs: [ws_shpc101]        # 근거 발표 id. 뷰어에서 누르면 그래프의 해당 발표로 이동
 ```
 
-뷰어 오른쪽 위의 버튼으로 글씨 크기(가−, 가+)와 밝은·어두운 테마를 바꿀 수 있고, 선택은 브라우저에 저장됩니다.
+뷰어 왼쪽 패널 위의 버튼으로 글씨 크기(가−, 가+)와 밝은·어두운 테마를 바꿀 수 있습니다. 패널과 그래프 사이의 세로 칸막이는 끌어서 옮길 수 있고, 두 번 누르면 처음 너비로 돌아갑니다. 선택은 브라우저에 저장됩니다. 모바일에서는 고찰이 화면 전체에 나오고, 아래의 "온톨로지 펼치기" 버튼으로 그래프를 열고 닫습니다.

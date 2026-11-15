@@ -1,0 +1,16 @@
+id: ws_hust103
+type: Presentation
+kind: paper
+label: "Supporting a Fast-Paced National AI Resource: Portal, Identity, and Federated Access at Scale"
+session: sess517
+time: "09:05-09:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust103"
+authors: [sadaf-alam, ashish-tom, christopher-woods]
+addresses: [identity-access, user-support-load]
+proposes: [shared-identity-portal]
+targets: [ai-supercomputer, user-support-services]
+summary_ko: "영국 AI Research Resource(AIRR)는 2년 만에 사용자 5,000명 이상, 선정 과제 800건 이상으로 커졌고, 모두 자율 운영 사이트들로 가는 하나의 진입점을 거침. 지원 모델은 공용 관문 AIRRPortal(운영 중), 공용 신원 계층 AIRR ConnectID(관문에 적용, 사이트 중개는 개발 중), 연합 사용자 지원(향후 과제)의 세 부분임."
+claims:
+  - "지원은 잘못 측정되기 쉬움. 로그인이 안 되는 사용자는 인증이 필요한 헬프데스크에 티켓을 낼 수 없어, 가장 심각한 실패가 가려짐."
+  - "25개월 운영 데이터에서 신원 문제가 크고 숨은 지원 부담이었으며, 그 비용은 사용자의 분야보다 계정 수명주기를 누가 소유하느냐를 따라감."
+  - "자가 관리 신원은 계정의 13%인데 신원 관련 지원의 70%를 만들어, 사용자당 15.3배 차이가 남."

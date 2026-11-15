@@ -1,0 +1,15 @@
+id: ws_pmbsf117
+type: Presentation
+kind: paper
+label: "FHE-STREAM: Characterizing Memory Access Behavior in Fully Homomorphic Encryption Workloads"
+session: sess109
+time: "17:10-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf117"
+authors: [ashlesha-malla, yash-kumar, michael-beebe, wendy-poole, yong-chen, steve-poole]
+addresses: [memory-bound-performance, he-scalability]
+proposes: [comparative-benchmarking]
+targets: [fhe-workloads]
+summary_ko: "FHE-STREAM은 완전동형암호 라이브러리의 메모리 배치를 재현하는 마이크로벤치마크 모음으로, 알고리즘이 옮기려는 바이트와 메모리 시스템이 실제로 옮기는 바이트의 차이를 잼."
+claims:
+  - "이 차이는 주로 캐시 라인 활용에 달려 있어, 캐시 라인보다 작은 임의 접근이 트래픽을 크게 늘림."
+  - "OpenFHE의 재선형화는 실행 시간의 절반 이상을 메모리 대기에 씀."

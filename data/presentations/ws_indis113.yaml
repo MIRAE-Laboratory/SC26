@@ -1,0 +1,16 @@
+id: ws_indis113
+type: Presentation
+kind: paper
+label: "ORBIT: An AI-Powered Assistant for NOC Operations in a Data-Intensive Science Network"
+session: sess111
+time: "14:30-14:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis113"
+authors: [bin-dong, sukhada-gholba, brooklin-gore, shawn-kwang, david-mitchell, samuel-oehlert, garrett-stewart, brendan-white, luke-baker, edward-balas, britt-gathright, chin-guok, john-paul-herron, john-macauley, scott-richmond, chris-robb, christopher-tracy, kesheng-john-wu]
+addresses: [ops-data-complexity]
+proposes: [llm-ops-assistant, human-approval-gates]
+targets: [research-networks, ai-agents]
+summary_ko: "ORBIT은 네트워크 운영 센터 직원이 따로 떨어진 시스템들의 정보를 합쳐 장애에 대응하도록 돕는 AI 보조 도구임. 중앙 추론 서비스와 공용 모델 접근 관문을 통한 에이전트 AI로, 종합한 결과를 운영자의 주 작업 화면에 바로 넣음."
+claims:
+  - "AI가 만든 출력은 모두 운영자 검토를 위해 기록되고, 민감 데이터 접근은 엄격히 통제됨."
+  - "프롬프트 설계와 사람이 개입하는 구조가 신뢰와 채택의 열쇠라고 밝힘."
+  - "ESnet 운영 센터의 초기 시험 결과를 공유하며, 공개 초록에는 수치가 없음."

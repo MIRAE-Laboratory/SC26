@@ -1,0 +1,15 @@
+id: ws_hust116
+type: Presentation
+kind: paper
+label: "Pelicanvil: A Web Platform for Discovering, Browsing, and Accessing Federated Datasets on HPC"
+session: sess517
+time: "11:15-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust116"
+authors: [branden-turner, guangzhen-jin, bithi-de, howard-zhong, emma-turetsky]
+addresses: [wan-data-distribution]
+proposes: [dataset-catalog, federated-caching]
+targets: [data-federations, user-support-services]
+summary_ko: "Pelican은 데이터 연합 플랫폼이고, OSDF는 그 위의 국가 연합으로 연구자가 로컬 사본 없이 외부 데이터셋을 HPC 워크플로에 쓰게 함. 운영 클러스터에서의 타당성 연구는 성능은 쓸 만하지만 두 장벽이 있음을 확인함. 연합 전체의 카탈로그가 없고, 데이터셋이 파일 단위로 스트리밍되는지는 원본의 포장 방식에 달려 있음."
+claims:
+  - "Pelicanvil은 운영 클러스터의 Open OnDemand 포털 안에서 연합 데이터셋을 찾고 살펴보고 접근하는 하나의 인터페이스를 제공함."
+  - "공개 초록에는 구체적 수치가 없음."

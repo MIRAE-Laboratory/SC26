@@ -1,0 +1,15 @@
+id: ws_ross107
+type: Presentation
+kind: paper
+label: "DECARD: A Runtime for Distributed and Heterogeneous Architectures Based on Dataflow"
+session: sess118
+time: "11:20-11:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=ws_ross107"
+authors: [diego-andres-roa-perdomo, xiaoming-li]
+addresses: [heterogeneity-complexity]
+proposes: [dataflow-runtime]
+targets: [task-runtimes]
+summary_ko: "분산 이기종 아키텍처는 구조를 드러낼수록 프로그래밍과 런타임 설계가 어려워짐. 데이터플로에서 착안한 Codelet 모델을 분산 이기종 시스템으로 확장한 런타임 DECARD를 제시하며, C++, OpenMP, MPI로 구현함."
+claims:
+  - "런타임 비용은 codelet당 1.14~1.23 µs로 안정적임."
+  - "공유 노드에서 4코어에서 48코어로 10.55배 가속(효율 87.95%), 48코어 노드 5개에서 분산 확장 효율 96.67%임."

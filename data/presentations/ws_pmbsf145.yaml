@@ -1,0 +1,14 @@
+id: ws_pmbsf145
+type: Presentation
+kind: paper
+label: "AMAI: Algebraic Modelling of Distributed AI Computations for Symbolic Performance Analysis"
+session: sess109
+time: "16:10-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf145"
+authors: [ruben-coll-sanchez, thibaut-tachon, pierre-leca, teng-su, chong-li]
+addresses: [resource-prediction]
+proposes: [analytical-performance-model]
+targets: [distributed-training]
+summary_ko: "AMAI는 분산 딥러닝 워크로드의 성능 분석 틀임. 계산을 기술하는 선언적 언어와, 프로그램을 시간과 장치별 메모리의 기호 모델로 옮기는 조합적 비용 의미론을 결합해, 어떤 규모에서도 분석하고 기계 간에 재사용할 수 있음."
+claims:
+  - "다중 노드 NPU 클러스터에서 Qwen3.5 0.8B 학습에 적용했을 때, 예측이 측정한 스텝 시간과 최대 메모리의 3% 안에 들었음."

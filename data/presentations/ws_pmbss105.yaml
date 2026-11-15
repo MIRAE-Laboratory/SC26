@@ -1,0 +1,14 @@
+id: ws_pmbss105
+type: Presentation
+kind: paper
+label: "Orrery: Modeling and Simulation of GPU-direct MPI Communication with SimGrid"
+session: sess109
+time: "10:45-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbss105"
+authors: [ahmad-moh-d-saleh-a-belbeisi, amir-raoofy, josef-weidendorfer, majid-salimi-beni]
+addresses: [simulation-scale-limits]
+proposes: [system-simulation]
+targets: [hpc-network, mpi-simulations]
+summary_ko: "Orrery는 SimGrid의 SMPI 위에 만든 삽입 계층으로, GPU 인지 MPI 통신을 모델링함. GPU 메모리 할당, 커널 실행, 데이터 전송, MPI 연산을 가로채 대상 시스템 사양에 따라 모델링하므로 실제 GPU 없이 시뮬레이션이 돎."
+claims:
+  - "CUDA 인지 MPI 마이크로벤치마크와 야코비 솔버로 MUSICA 슈퍼컴퓨터의 최대 32노드에서 검증했음."

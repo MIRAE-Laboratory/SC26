@@ -1,0 +1,16 @@
+id: ws_p3hpc108
+type: Presentation
+kind: paper
+label: "A Multi-Layer Workflow for Diagnosing Performance Portability in RAJA Applications"
+session: sess110
+time: "12:06-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc108"
+authors: [befikir-bogale, ian-lumsden, stephanie-brink, olga-pearce, michela-taufer]
+addresses: [performance-portability]
+proposes: [compiler-level-diagnosis]
+targets: [performance-portable-kernels]
+summary_ko: "실행 시간 측정을 GPU 자원 사용, 최적화 메모, LLVM IR 지표 같은 컴파일러 수준의 증거와 결합해, RAJA 응용에서 성능이 어디서 갈리는지뿐 아니라 왜 갈리는지를 설명하는 워크플로임."
+claims:
+  - "RAJA 성능 모음의 커널 55개를 두 백엔드, 최적화 수준 3단계, 문제 크기 3가지로 총 1,980개 구성에 적용했음."
+  - "성능 손실을 과도한 루프 풀기, 레지스터 압박, 점유율 저하, 제어 흐름 복잡도 같은 원인과 연결함."
+  - "안내에 따른 소스 수정으로 커널 4개가 네이티브 수준 성능을 되찾았고, 다섯째 커널은 컴파일러가 유발한 레지스터 압박을 없앴음."

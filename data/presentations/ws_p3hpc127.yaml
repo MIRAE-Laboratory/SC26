@@ -1,0 +1,16 @@
+id: ws_p3hpc127
+type: Presentation
+kind: paper
+label: "Performance Portability of Multi-GPU Hydrodynamics: SCALSALE with MPI+OpenMP Target Offload"
+session: sess110
+time: "10:54-11:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc127"
+authors: [avitay-geltman, shahar-maimon, yehonatan-fridman, ron-wagner, shay-shani, re-em-harel]
+addresses: [performance-portability, legacy-modernization]
+proposes: [portability-metrics, roofline-analysis]
+targets: [legacy-fortran, parallel-programming-models]
+summary_ko: "모던 포트란으로 쓴 다물질 라그랑지안-오일러 유체역학 프록시 응용 SCALSALE을 벤더 전용 코드 없이 MPI+OpenMP 오프로드로 다중 노드 GPU 실행까지 확장함. 분기가 많은 오일러 이류를 재구성하고, 호스트를 거치던 경계 교환을 GPU 인지 MPI로 바꿈."
+claims:
+  - "약한 확장 효율은 GPU 노드 안에서 84~91%, GPU 노드 3개에서 88~91%, CPU 노드에서 95~96%임."
+  - "Pennycook 지표의 성능 이식성 점수는 전체 플랫폼에서 34.9%(오일러), 37.9%(라그랑지안), GPU만으로는 44.1%, 42.2%임."
+  - "지배적인 이류 구간의 효율 편차가 커서 주된 최적화 대상으로 지목됨."

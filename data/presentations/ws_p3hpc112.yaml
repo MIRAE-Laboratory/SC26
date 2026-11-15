@@ -1,0 +1,15 @@
+id: ws_p3hpc112
+type: Presentation
+kind: paper
+label: "The Price of a Single Source: Performance Portability of Chapel and Julia across CPUs and GPUs"
+session: sess110
+time: "15:54-16:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc112"
+authors: [andrew-morgan]
+addresses: [performance-portability]
+proposes: [portable-abstraction-layers, portability-metrics]
+targets: [parallel-programming-models]
+summary_ko: "이식성 프레임워크를 써도 많은 코드가 플랫폼 전용으로 남음. 한 미니 응용의 C++ 구현 5종에서 모든 백엔드가 공유하는 소스는 16%뿐임. Chapel과 Julia는 저수준 통제를 일부 내주고 생산성과 이식성을 얻는 단일 소스 접근임. 미니 응용 3종을 두 언어로 구현해 CUDA, HIP, OpenMP C++ 기준선과 Pennycook 지표로 비교함."
+claims:
+  - "GPU 플랫폼 3종에서 CloverLeaf는 Julia 89%, Chapel 86%이고, TeaLeaf에서는 순서가 뒤집혀 Chapel 77%, Julia 62%임."
+  - "두 언어 모두 코드 줄 수가 45~64% 적고, CPU와 GPU 사이에서 거의 모든 소스를 공유함."

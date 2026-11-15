@@ -1,0 +1,16 @@
+id: ws_pmbsf137
+type: Presentation
+kind: paper
+label: "Benchmarking Physical GCD Placement Effects on Performance, Energy, and Co-Execution"
+session: sess109
+time: "14:00-14:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf137"
+authors: [arthur-lorenzon, antigoni-georgiadou, james-white-iii, bruno-alvarez, jorda-polo, karl-schulz, philippe-navaux, bronson-messer]
+addresses: [node-variation, energy-performance-tradeoff]
+proposes: [co-scheduling, comparative-benchmarking]
+targets: [leadership-facility, hpc-processors]
+summary_ko: "GPU 슈퍼컴퓨터는 명목상 같은 자원을 많이 갖지만, 장치의 물리적 편차가 성능과 에너지 효율에 영향을 줌. Frontier에서 합성 워크로드 6종으로 노드 할당 600건, AMD MI250X 연산 다이 관측 4,800건을 수집해 특성화함."
+claims:
+  - "가장 좋은 다이와 나쁜 다이의 차이가 성능 18.7%, GPU 패키지 평균 전력 32.3%, 에너지 36.9%에 이름."
+  - "서로 보완되는 워크로드의 동시 실행은 이상적 겹침에 가깝고 에너지를 약 40% 줄임."
+  - "워크로드 궁합이 공유의 이득 여부를 정하고, 물리적 배치가 그 크기와 안정성을 정함."

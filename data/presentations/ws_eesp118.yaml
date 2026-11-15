@@ -1,0 +1,17 @@
+id: ws_eesp118
+type: Presentation
+kind: paper
+label: "OBSERVE: An Observable, Sustainable, and Fault-Tolerant Runtime for Hyperparameter Optimization on Production HPC Systems"
+session: sess125
+time: "17:16-17:28"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp118"
+authors: [marco-de-carlo, gabriele-padovani, gabriele-accarino, valentine-anantharaj, paola-nassisi, sandro-fiore]
+addresses: [energy-performance-tradeoff]
+proposes: [energy-aware-hpo]
+targets: [sciml-training, leadership-facility]
+summary_ko: >
+  HPC에서 긴 하이퍼파라미터 최적화 캠페인을 돌리기는 지속가능성, 계산 비용, 중단, 혼합 하드웨어, 제한된 가시성 때문에 어려움. 기존 프레임워크는 탐색 효과에 치중하고 운영 요건을 소홀히 함. OBSERVE는 베이지안 최적화에 에너지 인지 다목적 최적화, 내결함성 체크포인트, 런타임 관측성을 더한 HPC 네이티브 프레임워크임.
+claims:
+  - "ClimateBench와 MLPerf-DeepCAM으로, 스케줄러와 GPU가 다른 여러 플랫폼에서 검증했음."
+  - "베이지안 최적화의 효과를 유지하면서 에너지-성능 절충을 드러냄."
+  - "공개 초록에는 구체적 수치가 없음."

@@ -1,0 +1,16 @@
+id: ws_indis105
+type: Presentation
+kind: paper
+label: "LLM-Driven Root Cause Analysis of BGP and BFD Flap Events"
+session: sess111
+time: "12:15-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis105"
+authors: [hadi-sahin, jeronimo-bezerra, renata-frez, italo-brito, vasilka-chergarova, luis-marin-vera, gretel-de-la-pena, julio-ibarra]
+addresses: [ops-data-complexity]
+proposes: [llm-ops-assistant, context-retrieval]
+targets: [research-networks, ops-telemetry]
+summary_ko: "잦은 BGP·BFD 플랩은 네트워크 불안정의 신호이고, 운영자가 여러 출처의 증거를 맞춰 봐야 해서 진단이 느림. 로컬에 배치한 오픈소스 LLM으로 프로토콜 로그를 토폴로지, 서비스 상태, 전달 정보와 연결해 근본 원인과 영향받은 대상을 찾는 프로토타입을 제시함."
+claims:
+  - "프롬프트 설계가 근본 원인 정확도를 크게 좌우하며, 구조화된 도메인 특화 프롬프트로 중간 크기 모델 여럿이 완전한 정확도에 도달했음."
+  - "대상 추출은 프롬프트와 모델에 따라 편차가 큼."
+  - "로컬 LLM으로 비용이 낮고 데이터가 밖으로 나가지 않는 분석이 가능하다고 결론지음."

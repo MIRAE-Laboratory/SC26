@@ -1,0 +1,16 @@
+id: ws_hust106
+type: Presentation
+kind: paper
+label: "hpcGPT: A Flexible Framework for Agentic User Support in HPC"
+session: sess517
+time: "10:30-10:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust106"
+authors: [albert-bode, rohan-marwaha, volodymyr-kindratenko, ritvik-singal, yifei-li, nihar-koganti, gulam-uddin, niall-gaffney, amit-majumdar, paul-rodriguez, marty-kandes, summer-wang, zhao-zhang]
+addresses: [user-support-load]
+proposes: [llm-ops-assistant, mcp-tools, context-retrieval]
+targets: [user-support-services, ai-agents]
+summary_ko: "HPC 센터는 계정, 소프트웨어 환경, 작업 스케줄링, 시스템 구조에 관한 반복 질문에 인력을 많이 씀. 과거 티켓을 보면 소수의 주제가 요청의 큰 몫을 차지하지만, 그 지식은 닫힌 티켓과 흩어진 문서에 묻혀 있음. hpcGPT는 사이트 문서, 과거 티켓 지식, 실시간 클러스터 정보를 결합하는 명령줄 지원 에이전트임."
+claims:
+  - "제공자에 묶이지 않는 터미널 인터페이스와 MCP 도구 위에 만들었고, 해결하지 못한 문제는 기존 티켓 절차로 넘김."
+  - "티켓 지식 파이프라인은 수집, 개인정보 제거, 검색으로 구성됨."
+  - "운영 환경 시범 배치를 보고하며, 공개 초록에는 수치가 없음."

@@ -1,0 +1,16 @@
+id: ws_xloop105
+type: Presentation
+kind: paper
+label: "Real-time Optimization of Simulation and Data Processing Pipelines for Experiments on Exascale Computing Platforms"
+session: sess117
+time: "09:05-09:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop105"
+authors: [thomas-wester, harikrishna-tummalapalli, christine-simpson]
+addresses: [exascale-workflow-scaling]
+proposes: [multi-stage-scheduling]
+targets: [leadership-facility, hep-pipelines]
+summary_ko: >
+  고에너지 물리와 우주론의 대형 실험은 분석과 모델링에 엑사스케일 컴퓨팅이 필요한 양의 데이터를 냄. 엑사스케일 기계에서는 워크플로를 확장하고 자원을 효율적으로 쓰기 어려움. 자원 사용과 작업 배치를 최적화하는 다단계 작업 스케줄링 방식을 제안하고, Short Baseline Near Detector(SBND)의 몬테카를로 시뮬레이션 파이프라인으로 시연함.
+claims:
+  - "작업 스케줄링을 모델링하는 이론·수치 도구로 최적 전략을 찾고, 문제 크기에 맞는 자원 선택을 도움."
+  - "공개 초록에는 정량 결과가 없음."

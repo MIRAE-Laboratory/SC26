@@ -58,3 +58,136 @@ lbnl: Lawrence Berkeley National Laboratory
 spintwo: spinTwo LLC
 rpi: Rensselaer Polytechnic Institute
 amd: Advanced Micro Devices (AMD)
+fau: FAU Erlangen-Nürnberg
+kaust: King Abdullah University of Science and Technology
+hlrs: High-Performance Computing Center Stuttgart (HLRS)
+intel: Intel Corporation
+vanderbilt: Vanderbilt University
+purdue: Purdue University
+fulda: Fulda University of Applied Sciences
+tudarmstadt: Technical University of Darmstadt
+trieste: University of Trieste
+areasciencepark: Area Science Park
+emcool: EMCOOL Inc
+cmcc: CMCC Foundation
+columbia: Columbia University
+ibm: IBM Research
+utahstate: Utah State University
+wsu: Washington State University
+syracuse: Syracuse University
+earthmover: Earthmover
+appliomics: Appliomics
+umbc: "University of Maryland, Baltimore County"
+pppl: Princeton Plasma Physics Laboratory
+rise: RISE Research Institutes of Sweden
+utk: "University of Tennessee, Knoxville"
+vastdata: VAST Data
+slac: SLAC National Accelerator Laboratory
+fzj: Forschungszentrum Jülich
+psi: Paul Scherrer Institute
+jaea: Japan Atomic Energy Agency
+unm: University of New Mexico
+rennes: University of Rennes
+usc: University of Southern California
+sib: Swiss Institute of Bioinformatics
+weillcornell: Weill Cornell Medical Center
+rptu: RPTU University
+umacau: University of Macau
+siat: "Shenzhen Institutes of Advanced Technology, CAS"
+3dverse: 3dverse technologies inc.
+kobe: Kobe University
+riken: RIKEN Center for Computational Science
+luminary: Luminary Cloud Inc
+vt: Virginia Tech
+diamond: Diamond Light Source
+ucdavis: "University of California, Davis"
+esnet: Energy Sciences Network (ESnet)
+renci: "Renaissance Computing Institute (RENCI)"
+uniandes: "Universidad de los Andes"
+missouri: "University of Missouri"
+mst: "Missouri University of Science and Technology"
+lsu: "Louisiana State University"
+torino: "University of Turin"
+epcc: "Edinburgh Parallel Computing Centre"
+notredame: "University of Notre Dame"
+uc3m: "Universidad Carlos III de Madrid"
+parthenope: "University of Naples Parthenope"
+gist: "Gwangju Institute of Science and Technology"
+slu: "Saint Louis University"
+sano: "Sano Centre for Computational Medicine"
+jagiellonian: "Jagiellonian University"
+bme: "Budapest University of Technology and Economics"
+uva: "University of Amsterdam"
+swinburne: "Swinburne University of Technology"
+lmu: "Loyola Marymount University"
+udesc: "Santa Catarina State University"
+irisa: "Université de Rennes, IRISA"
+sandia: "Sandia National Laboratories"
+eth: "ETH Zürich"
+chalmers: "Chalmers University of Technology"
+ciena: "Ciena Corporation"
+iu: "Indiana University"
+ifes: "Federal Institute of Espírito Santo"
+usp: "University of São Paulo"
+doeascr: "DOE Office of Advanced Scientific Computing Research"
+fnal: "Fermi National Accelerator Laboratory"
+ucsd: "University of California, San Diego (SDSC)"
+hawaii: "University of Hawaii"
+caltech: "California Institute of Technology"
+oligo: "Oligo Space"
+cpp: "California State Polytechnic University, Pomona"
+unl: "University of Nebraska-Lincoln"
+siue: "Southern Illinois University Edwardsville"
+gwu: "George Washington University"
+fiu: "Florida International University"
+rnp: "Rede Nacional de Ensino e Pesquisa"
+uky: "University of Kentucky"
+illinoisedc: "Illinois EDC"
+infleqtion: "Infleqtion"
+umd: "University of Maryland"
+nsf: "National Science Foundation"
+tuwien: "Technical University of Vienna"
+york: "University of York"
+nnsa: "National Nuclear Security Administration"
+cea: "French Alternative Energies and Atomic Energy Commission (CEA)"
+sipearl: "SiPearl"
+gwdg: "University of Göttingen, GWDG"
+tum: "Technical University of Munich"
+lrz: "Leibniz Supercomputing Centre"
+tudresden: "Technical University Dresden"
+sogang: "Sogang University"
+etri: "ETRI"
+meiji: "Meiji University"
+ufrgs: "Federal University of Rio Grande do Sul"
+queens: "Queen's University"
+huawei: "Huawei Technologies"
+sorbonne: "Sorbonne University"
+bonn: "University of Bonn"
+cmu: "Carnegie Mellon University"
+umass: "University of Massachusetts"
+cern: "CERN"
+pitt: "University of Pittsburgh"
+uwa: "University of Western Australia"
+globus: "Globus"
+tamu: "Texas A&M University"
+northeastern: "Northeastern University"
+morgridge: "Morgridge Institute for Research"
+sweetfizzy: "Sweet & Fizzy Digital"
+clemson: "Clemson University"
+ull: "University of Louisiana at Lafayette"
+utaustin: "University of Texas at Austin"
+osc: "Ohio Supercomputer Center"
+msu: "Michigan State University"
+umich: "University of Michigan"
+uoregon: "University of Oregon"
+uw: "University of Washington"
+nrcn: "Nuclear Research Center - Negev"
+technion: "Technion - Israel Institute of Technology"
+bgu: "Ben-Gurion University of the Negev"
+tau: "Tel Aviv University"
+epfl: "EPFL"
+osaka: "The University of Osaka"
+naist: "Nara Institute of Science and Technology"
+awe: "AWE Nuclear Security Technologies"
+autodesk: "Autodesk Research"
+independent: "Independent Researcher"

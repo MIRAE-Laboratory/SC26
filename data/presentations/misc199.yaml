@@ -1,0 +1,16 @@
+id: misc199
+type: Presentation
+kind: invited
+label: "Python as the Connective Tissue of the Genesis Mission: From Exascale Workflows to Federated Scientific Agents"
+session: sess124
+time: "15:45-16:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess124&id=misc199"
+authors: [rafael-ferreira-da-silva]
+addresses: [python-at-scale, workload-portability, provenance-reproducibility]
+proposes: [python-orchestration, multi-agent-workflow]
+targets: [genesis-platform, ai-agents, leadership-facility]
+summary_ko: >
+  DOE Genesis Mission은 AI, 엑사스케일 컴퓨팅, 실험 시설, 자율 실험실을 하나의 발견 플랫폼으로 잇는 것이 목표이고, 파이썬이 그 연결의 큰 부분임. 시뮬레이션 캠페인, AI 학습·추론, 워크플로 조율, 출처 수집, 다중 에이전트 시스템이 모두 공통 파이썬 계층에 기대어 기관과 시설의 경계를 넘어 자원을 조합함.
+claims:
+  - "파이썬이 AI 결합 과학의 조율 계층으로 잘 작동하는 곳과 부족한 곳을 평가함."
+  - "문제 영역은 대규모에서의 시작·조율 오버헤드, 시설 간 환경 이식성, 동시성, 자율 루프에서의 출처·거버넌스 비용임."

@@ -1,0 +1,17 @@
+id: ws_xloop107
+type: Presentation
+kind: paper
+label: "Emblase: Using Tiled as an AI-Ready Data Access Service for Live Scientific Workflows"
+session: sess117
+time: "11:40-11:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop107"
+authors: [venkateswaran-shekar, yevgen-matviychuk, eliot-gann, daniel-allan]
+addresses: [manual-orchestration, cross-facility-integration]
+proposes: [unified-data-access]
+targets: [user-facility-beamline, genesis-platform]
+summary_ko: >
+  NSLS-II 같은 국가 사용자 시설에는 빔라인 취득에서 기계학습 분석, 과학자와의 상호작용까지 데이터를 나르는 믿을 만한 파이프라인이 필요함. Tiled를 중심에 둔 구조로, 과학 데이터와 추론 결과를 하나의 인터페이스로 내보내고 계산, 모델 등록소, 언어 모델 서비스는 교체할 수 있게 둠. American Science Cloud의 계산, 모델 호스팅, LLM 추론 서비스를 쓰는 응용 Emblase를 NSLS-II의 SMI 산란 워크플로에서 시연했음.
+claims:
+  - "데이터 취득이 만든 실행을 Tiled가 이벤트 기반 추론 서비스에 노출하고, 서비스는 버전이 있는 물리 정보 ML 모델로 프레임을 처리해 임베딩을 Tiled에 다시 씀."
+  - "인증된 Tiled 도구로 저장된 데이터에 근거한 자연어 상호작용을 지원함."
+  - "공개 초록에는 정량 결과가 없음."

@@ -1,0 +1,15 @@
+id: ws_p3hpc115
+type: Presentation
+kind: paper
+label: "Performance Improvement of Multi-Dimensional Parallel Loops in Kokkos"
+session: sess110
+time: "16:18-16:42"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc115"
+authors: [adrien-taberner, hariprasad-kannan, yuuichi-asahi, dong-hun-lee, trevis-morvany, jean-francois-david, nevin-liber, nicolas-morales, christian-r-trott, julien-bigot, damien-lebrun-grandie]
+addresses: [performance-portability]
+proposes: [portable-abstraction-layers]
+targets: [performance-portable-kernels]
+summary_ko: "Kokkos 라이브러리에서 촘촘히 중첩된 다차원 병렬성의 성능을 개선하고, GPU와 CPU 백엔드 모두에 구현함. 널리 쓰이는 라이브러리는 사용자와 개발자 모두에게 친화적인 방식으로 갱신되어야 한다고 봄."
+claims:
+  - "여러 벤치마크로 Kokkos 사용자가 성능 이식형 코드를 더 생산적으로 쓸 수 있음을 보임."
+  - "공개 초록에는 구체적 수치가 없음."

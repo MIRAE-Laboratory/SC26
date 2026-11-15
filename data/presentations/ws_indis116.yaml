@@ -1,0 +1,15 @@
+id: ws_indis116
+type: Presentation
+kind: paper
+label: "Fine-Grained Application-Aware Congestion Mitigation with Telemetry-Tuned Weighted SRv6 Policies"
+session: sess111
+time: "12:00-12:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis116"
+authors: [shashwitha-puttaswamy, mariam-kiran]
+addresses: [network-congestion]
+proposes: [science-aware-networking]
+targets: [research-networks]
+summary_ko: "광역망과 연구망은 성능 요구가 다른 여러 응용을 실어 나르므로, 최단 경로나 최소 이용 경로 같은 단일 전략은 모두에게 최선일 수 없음. 기존 텔레메트리 도구는 트래픽 클래스를 무시하고 10~500 ms 단위로 샘플링함."
+claims:
+  - "SRv6 헤더에 트래픽 클래스 식별자를 담고, 홉별·클래스별 혼잡 증거를 터널 안에서 운반하는 클래스 인지 혼잡 피드백을 제안함."
+  - "공개 초록에는 정량 결과가 없음."

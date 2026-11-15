@@ -1,0 +1,13 @@
+id: miscp123
+type: Presentation
+kind: panel
+label: "Quantum Computing: State of the Industry and Illinois' Ecosystem"
+session: sess111
+time: "15:30-16:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=miscp123"
+authors: [preeti-chalsani, hanhee-paik, aaron-lott, caitlyn-carnahan, jean-utke]
+addresses: []
+proposes: []
+targets: [quantum-hpc-systems]
+summary_ko: "양자 컴퓨팅 산업 현황과 일리노이 생태계 패널. 공개 페이지에 설명문이 없어 제목과 패널만 기록했음."
+claims: []

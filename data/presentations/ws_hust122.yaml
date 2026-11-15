@@ -1,0 +1,15 @@
+id: ws_hust122
+type: Presentation
+kind: paper
+label: "Analyzing User Logs as a First Diagnostic Step in Open OnDemand"
+session: sess517
+time: "12:00-12:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust122"
+authors: [arsalan-akhter, serena-caplins, ganesan-murugan, ghanghoon-paik]
+addresses: [user-support-load, llm-domain-validity]
+proposes: [deterministic-llm-split, llm-ops-assistant]
+targets: [user-support-services]
+summary_ko: "Open OnDemand 세션 실패는 개발자용 로그를 남겨 연구자를 헷갈리게 하고 지원 인력에게 반복 티켓을 만듦. LLM이 실패를 읽기 쉽게 설명할 수 있지만, 제약 없는 모델은 근본 원인을 지어낼 수 있음. LogLight는 세션 카드 안의 비동기 진단 패널로, 호출한 사용자의 리눅스 권한으로 돎."
+claims:
+  - "네 출처의 신뢰 위계를 두어 로그와 스케줄러 회계에서의 결정론적 추출을 우선하고, LLM은 서술 종합에만 씀."
+  - "운영 세션 30건의 블라인드 평가에서, 결정론적 발견을 프롬프트에 묶자 진단 정확도가 크게 올라 경량 Mistral-7B가 GPT-OSS-20B와 같은 수준이 되었음."

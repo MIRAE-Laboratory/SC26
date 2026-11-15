@@ -1,0 +1,16 @@
+id: ws_p3hpc117
+type: Presentation
+kind: paper
+label: "Mojo-Driven Performance Portability for LBM"
+session: sess110
+time: "16:42-17:06"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc117"
+authors: [giulio-malenza, matthew-a-smith, zadok-storkey, massimiliano-meneghin, marco-aldinucci, robert-birke, steven-a-wright]
+addresses: [performance-portability]
+proposes: [portable-abstraction-layers, portability-metrics]
+targets: [lattice-boltzmann, parallel-programming-models]
+summary_ko: "파이썬 수준의 생산성과 고성능을 함께 노리는 저수준 프레임워크 Mojo를 격자 볼츠만 유체 시뮬레이션으로 평가하고, CUDA, HIP, SYCL과 성능 이식성을 비교함."
+claims:
+  - "Mojo의 템플릿 메타프로그래밍은 수동 루프 풀기 없이 높은 이식성을 냄."
+  - "FluidX3D 대비 GPU에서는 응용 효율이 80%를 넘지만 CPU에서는 낮아, 전체 성능 이식성 점수는 0.59임."
+  - "이기종 컴퓨팅에 유망하나 CPU 플랫폼에서 개선이 필요하다고 결론지음."

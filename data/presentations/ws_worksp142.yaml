@@ -1,0 +1,15 @@
+id: ws_worksp142
+type: Presentation
+kind: paper
+label: "Consumption-Aware Memory Prediction for Scientific Workflows"
+session: sess113
+time: "10:45-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp142"
+authors: [nagarjuna-kandimalla, bhanu-prakash-vangala, tanu-malik]
+addresses: [resource-prediction]
+proposes: [consumption-provenance]
+targets: [workflow-systems, bioinformatics-workflows, job-scheduler]
+summary_ko: "분산 과학 워크플로는 작업마다 메모리 사용이 크게 달라, 메모리 부족 실패를 피하려면 최대 메모리를 정확히 추정해야 함. 기존 스케줄러는 파일 크기나 도구 이름 같은 정적 특징에 의존해 비선형 증가를 놓침. CAMP는 eBPF 커널 프로브로 작업이 실제로 읽은 바이트를 재는 폐루프 프레임워크임."
+claims:
+  - "추적 오버헤드를 줄이려고, 정보가 많은 작업만 골라 계측하는 능동학습 정책을 씀."
+  - "Slurm에서 돌린 생명정보 워크플로 기록 수천 건에서, 크기 기반 기준선 대비 중앙 절대 백분율 오차가 최대 40.31% 줄었음."

@@ -1,0 +1,15 @@
+id: misc221
+type: Presentation
+kind: invited
+label: "ROSS'26 Invited Opening Talk: Challenges in Integrating Quantum and HPC"
+session: sess118
+time: "09:05-09:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=misc221"
+authors: [yoonho-park]
+addresses: [quantum-hpc-integration, heterogeneity-complexity]
+proposes: []
+targets: [quantum-hpc-systems, job-scheduler]
+summary_ko: "양자 컴퓨팅이 실험에서 실용으로 넘어가면서 CPU, GPU와 함께 HPC 생태계에 통합하는 과제를 살핌. 이기종이고 지리적으로 분산된 인프라의 관리는 자원 스케줄링, 워크플로 조율, 보안, 상호운용성의 문제를 낳음."
+claims:
+  - "양자 자원이 미래 HPC 환경의 일급 구성원이 되려면 운영체제와 자원 관리자가 어떻게 바뀌어야 하는지를 다룸."
+  - "공개 초록에는 수치가 없음."

@@ -1,0 +1,16 @@
+id: ws_isav103
+type: Presentation
+kind: talk
+label: "Using Persistent Digital Twins as Spatial Environments for Robotics Simulation and Deployment"
+session: sess123
+time: "16:40-16:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav103"
+authors: [pierre-forestier]
+addresses: [site-deployment-effort]
+proposes: [digital-twin-coupling]
+targets: [robotics-digital-twin]
+summary_ko: >
+  지속형 3D 디지털 트윈을 외부 로봇 시뮬레이터의 재사용 가능한 공간 환경으로 쓸 수 있는지 시험하는 진행 중인 산업 프로젝트임. 새 고객 현장에 자율 로봇을 배치할 때, 로봇 시뮬레이션 설정과 운영용 3D 현장 모델 사이에 중복되는 작업을 줄이는 것이 목표임. 양방향 인터페이스가 로봇 자세를 3D 환경에 보내고 깊이 정보를 시뮬레이터로 돌려줌.
+claims:
+  - "API 기반 웹 구조로 독립된 두 시스템을 몇 주 만에 통합했음."
+  - "실시간 결합, 센서 피드백, 지연이 논의 주제임."

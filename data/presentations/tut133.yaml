@@ -1,0 +1,17 @@
+id: tut133
+type: Presentation
+kind: tutorial
+label: "Building Scalable Agentic Systems for Science: Concepts, Architectures, and Hands-On with Academy"
+session: sess168
+time: "13:30-17:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess168&id=tut133"
+authors: [kyle-chard, ian-foster, alok-kamatar, greg-pauloski]
+addresses: [agents-on-cyberinfrastructure]
+proposes: [agent-middleware, python-orchestration]
+targets: [ai-agents, federated-clusters]
+summary_ko: >
+  자율 에이전트가 협력해 복잡한 문제를 푸는 에이전트 시스템을 HPC 시스템, 실험 시설, 연합 데이터 저장소 같은 과학 사이버인프라에 적용하면 새로운 기술 과제가 생김. 이기종 연구 환경에 걸친 에이전트 워크플로를 위한 파이썬 기반 미들웨어 Academy를 소개함.
+claims:
+  - "비동기 실행 모델, 상태를 가진 에이전트의 조율, 동적 자원 관리가 핵심 개념임."
+  - "안내에 따라 참가자가 자신의 에이전트 워크플로를 만들고 띄우는 실습이 있음."
+  - "사례 연구는 재료 발견, 생물학, 화학임."

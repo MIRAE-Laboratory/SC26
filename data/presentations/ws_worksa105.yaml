@@ -1,0 +1,15 @@
+id: ws_worksa105
+type: Presentation
+kind: talk
+label: "Agentic-ready data management workflow for material science"
+session: sess113
+time: "16:36-16:39"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksa105"
+authors: [vinay-amatya, nathan-tallent]
+addresses: [data-readiness]
+proposes: [data-lakehouse, skill-files]
+targets: [materials-workflows, ai-agents]
+summary_ko: "재료과학 데이터는 불완전하고 일관되지 않으며 장비, 노트, 파일시스템, 시뮬레이션, 논문에 흩어져 있어 LLM 기반 에이전트 워크플로를 막음. 도메인 특성화와 스키마화, 데이터 목록화, 레이크하우스 구조의 통합 관리, 에이전트 해석을 위한 데이터셋 보강을 포괄하는 방법론을 제시함."
+claims:
+  - "에이전트용으로 정비한 데이터셋을 정비하지 않은 기준선과 비교해 가치를 보임."
+  - "공개 초록에는 정량 결과가 없음."

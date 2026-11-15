@@ -1,0 +1,16 @@
+id: ws_pmbsf107
+type: Presentation
+kind: paper
+label: "Scalable AMG Preconditioning for DG Neutron Diffusion Solvers on Manycore CPUs"
+session: sess109
+time: "16:30-16:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf107"
+authors: [antoine-kempf, ansar-calloo, cedric-chevalier, romain-le-tellier, marc-perache]
+addresses: [memory-bound-performance, data-locality]
+proposes: [roofline-analysis]
+targets: [reactor-physics-codes, hpc-processors]
+summary_ko: "중성자 수송에서 나오는 3차원 불연속 갈레르킨 확산 계를 위한 대수 다중격자 전처리기를 Trilinos/MueLu와 Kokkos로 구현함. 표준 ILU 전처리기의 한계인 격자 의존 반복 증가와 큰 채움을 피함."
+claims:
+  - "Takeda 벤치마크 모델 1(미지수 최대 710만 개)에서 격자와 무관한 수렴과 ILU 대비 158배 가속을 얻었음."
+  - "Sapphire Rapids, Genoa, Grace에서의 루프라인 분석 결과 솔버의 모든 단계가 메모리에 묶여 있음."
+  - "이중 소켓 노드는 소켓 경계에서 확장성을 잃고, 단일 소켓 Grace가 더 적은 코어로 가장 짧은 해결 시간을 냄. 코어 수가 아니라 메모리 구조가 확장성을 좌우함."

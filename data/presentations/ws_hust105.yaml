@@ -1,0 +1,15 @@
+id: ws_hust105
+type: Presentation
+kind: paper
+label: "HPCMosaic: Adaptive Dashboard for an Evolving HPC User Base"
+session: sess517
+time: "11:00-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust105"
+authors: [sahil-vartak, owen-schillaci, surada-suwansathit, roni-serrano, marinus-pennings, honggao-liu]
+addresses: [user-support-load]
+proposes: [user-dashboards]
+targets: [user-support-services]
+summary_ko: "HPCMosaic은 계산 분야 밖 연구자를 위한 HPC 대시보드 틀임. 사용자의 목표가 아니라 시스템 구성요소 중심으로 짜인 기존 대시보드는 이들에게 맞지 않음. 사용자 작업 방식에의 적응, 흔한 작업은 단순하게 두고 고급 기능은 접근 가능하게 하는 점진적 노출, 기술적 맥락을 담은 요청 양식으로 지원 고리를 닫는 것의 세 원칙으로 만듦."
+claims:
+  - "조립형 위젯 구조로 핵심 코드를 고치지 않고 확장할 수 있음."
+  - "대형 연구 대학의 HPC 센터에서 운영 중이고 오픈소스로 공개됨. 공개 초록에는 수치가 없음."

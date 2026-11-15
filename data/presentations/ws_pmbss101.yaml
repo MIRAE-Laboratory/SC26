@@ -1,0 +1,15 @@
+id: ws_pmbss101
+type: Presentation
+kind: paper
+label: "Repository-Scale Performance Characterization of the IO500 Benchmark"
+session: sess109
+time: "10:30-10:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbss101"
+authors: [aasish-kumar-sharma, anila-ghazanfar, sepehr-mahmoodianhamedani, sascha-safenreiter, julian-kunkel]
+addresses: [benchmark-validity]
+proposes: [comparative-benchmarking]
+targets: [storage-memory-hierarchy]
+summary_ko: "2019~2025년 116개 사이트의 IO500 제출 294건을 분석해, 개별 벤치마크 단계가 종합 순위와 어떻게 이어지는지 평가함."
+claims:
+  - "비슷한 I/O 동작을 재는 단계끼리는 강하게 연관되지만, 대역폭과 메타데이터 성능의 관계는 약하고 규모에 따라 달라짐."
+  - "시간 추이와 로그 수준 분석이 종합 점수가 가리는 세부를 드러냄."

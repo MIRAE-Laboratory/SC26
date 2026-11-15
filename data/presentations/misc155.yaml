@@ -1,0 +1,17 @@
+id: misc155
+type: Presentation
+kind: invited
+label: "Keynote: This Data Will Self-Destruct in One Microsecond: Live Data Reduction and Steering at LCLS-II"
+session: sess123
+time: "14:10-14:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=misc155"
+authors: [jana-thayer]
+addresses: [data-deluge, delayed-feedback, trust-in-automated-decisions]
+proposes: [in-situ-reduction, experiment-steering]
+targets: [xfel-facility]
+summary_ko: >
+  SLAC의 X선 자유전자레이저 LCLS-II는 최대 1 MHz로 발사되어, 원시 데이터율이 280 GB/s에서 시작해 2020년대 말에는 1,120 GB/s에 가까워짐. 전부 저장해 나중에 분석하는 방식은 불가능하고, 대부분의 원시 데이터를 취득 직후에 줄이거나 특성화하거나 버려야 함. 검출기 판독에서 분산 데이터 축소 파이프라인, 빠른 피드백까지의 데이터 시스템 설계와, ML 모델로 실험을 준실시간 조향하는 ILLUMINE 프로젝트를 소개함.
+claims:
+  - "AI/ML이 지금 쓸모 있는 곳은 이벤트 거부, 빠른 특징 추출, 디지털 트윈 보조 재구성이고, 아직 진행 중인 영역도 있음."
+  - "공학적 난제는 마이크로초 단위 지연 예산, 이기종 에지 하드웨어에의 모델 배치, 원격 HPC 시설과의 결합임."
+  - "사람이 데이터를 보기 전에 내려진 결정에 대해 과학자의 신뢰를 얻어야 함."

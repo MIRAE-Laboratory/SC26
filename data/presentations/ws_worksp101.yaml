@@ -1,0 +1,15 @@
+id: ws_worksp101
+type: Presentation
+kind: paper
+label: "nFlows: Enabling Efficient Data Movement in Data-Intensive Scientific Workflows on Non-Uniform Memory Access Architectures"
+session: sess113
+time: "10:30-10:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp101"
+authors: [aurelio-vivas, thomas-applencourt, harold-castro]
+addresses: [data-locality]
+proposes: [numa-aware-scheduling]
+targets: [workflow-systems, storage-memory-hierarchy]
+summary_ko: "슈퍼컴퓨터 메모리 시스템에서의 데이터 이동은 데이터 집약 워크플로의 주요 병목이고, 현재 워크플로 스케줄러는 지역성 보존을 거의 지원하지 않음. nFlows는 데이터 이동을 연구하고 메모리 구조 인지 스케줄링을 시험하는 런타임 시스템임."
+claims:
+  - "NUMA 인지 스케줄링으로 데이터의 60% 이상을 로컬에서 읽는 실행이 27.64%에서 68.33%로 늘었음."
+  - "실행 시간이 개선된 실행은 3.07%에서 11.71%로, 최선의 단축은 10.22%에서 44.28%로 늘었음."

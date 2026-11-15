@@ -1,0 +1,15 @@
+id: ws_indis101
+type: Presentation
+kind: paper
+label: "A Next Generation Multi-Terabit/sec Campus and Global Network System for Data Intensive Sciences: The Global Network Advancement Group Data Intensive Science and AutoGOLE/SENSE Working Groups"
+session: sess111
+time: "14:45-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis101"
+authors: [harvey-newman]
+addresses: [wan-data-distribution, network-congestion]
+proposes: [science-aware-networking, federated-caching]
+targets: [research-networks, hep-pipelines]
+summary_ko: "Global Network Advancement Group은 LHC, Rubin 천문대, SKA, 유전체학, 분산 AI/ML처럼 데이터량이 급증하는 과학을 위해 초당 멀티 테라비트급 전 지구 네트워크 시스템을 개발 중임. 프로그래밍 가능한 네트워킹, 다중 도메인 조율(SENSE, AutoGOLE), 실시간 텔레메트리, ML 기반 도구, 400G~800G 전송 노드와 지역 캐시를 결합함."
+claims:
+  - "FABRIC, NRP 등의 테스트베드에서 검증했고, ESnet, Internet2, GEANT, StarLight 등의 멀티 Tbps 광망에서 운용함."
+  - "SC25에서 16개 협력 시연과 함께 대규모로 시연했고, 연구개발에서 본 운영까지의 단계적 배치를 설명함."

@@ -1,0 +1,15 @@
+id: ws_indis109
+type: Presentation
+kind: paper
+label: "Towards Efficient Vertical Federated Learning on Distributed Scientific Infrastructure"
+session: sess111
+time: "14:00-14:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis109"
+authors: [evangelos-pipilikas, alexandros-koufakis, ana-oprescu]
+addresses: [institutional-privacy]
+proposes: [federated-learning]
+targets: [research-networks]
+summary_ko: "과학 협력은 원시 데이터를 노출하지 않고 여러 기관의 데이터를 결합해야 할 때가 많고, 수직 연합학습이 이를 지원함. 그러나 지리적으로 분산된 인프라에서는 실행 오버헤드가 크고 계산 비용과 프라이버시 사이의 절충이 생김. 정책 인지 미들웨어 DYNAMOS 안에 여러 실행 전략을 배치해 통신 오버헤드를 줄임."
+claims:
+  - "기본 프로토콜과 통신 효율형 변형 둘을 비교했고, 최적화 전략이 예측 성능을 유지하면서 실행 시간을 크게 줄였음."
+  - "공개 초록에는 구체적 수치가 없음."

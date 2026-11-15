@@ -1,0 +1,16 @@
+id: ws_p3hpc114
+type: Presentation
+kind: paper
+label: "14 GPU Programming Paradigms Put to the Test: Performance Portability and Halstead Difficulty in Scientific Computing"
+session: sess110
+time: "09:40-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc114"
+authors: [jonas-schuhmacher, hans-joachim-bungartz]
+addresses: [performance-portability]
+proposes: [portability-metrics, comparative-benchmarking]
+targets: [parallel-programming-models, performance-portable-kernels]
+summary_ko: "GPU 프로그래밍 패러다임 14종을 NVIDIA, AMD, Intel의 GPU 6종에서 워크로드 4가지로 벤치마크함. 성능 이식성을 코드 줄 수, Halstead 난이도와 함께 추적함."
+claims:
+  - "Kokkos, Boost.Compute, RAJA가 복잡한 과학 커널에서 가장 강한 이식 성능을 냈음."
+  - "OpenCL은 장황하지만 6개 플랫폼 모두에서 돌았고 속도에서 자주 앞섰음."
+  - "암묵적 병렬화와 지시문 기반 오프로딩은 단순한 커널에서만 잘 동작했음."

@@ -1,0 +1,16 @@
+id: ws_isav112
+type: Presentation
+kind: paper
+label: "PULSE: Parallel Uncertainty-guided Landscape Sampling Engine for In-Situ Molecular Dynamics"
+session: sess123
+time: "15:50-16:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav112"
+authors: [harshita-sahni, silvina-caino-lores, jack-marquez, ewa-deelman, michel-cuendet, harel-weinstein, michela-taufer, trilce-estrada]
+addresses: [delayed-feedback]
+proposes: [experiment-steering, uncertainty-guided-sampling]
+targets: [molecular-dynamics]
+summary_ko: >
+  기존 적응 샘플링은 궤적을 오프라인 배치로 분석해 피드백이 늦고, 중복 탐색에 계산을 낭비함. PULSE는 동기화된 생산자-소비자 런타임으로 분자동역학 시뮬레이션과 분석 사이의 피드백 루프를 닫음. 구조 상태를 온라인으로 식별하고, 설명되지 않은 영역을 찾아 실행 중에 계산을 그쪽으로 돌림.
+claims:
+  - "Villin Headpiece와 베타락토글로불린에서 새로 샘플링한 구조의 70.77%, 37.17%가 기준선이 탐색하지 못한 영역이었음."
+  - "GPU 8개에서 종단 간 실행을 보였고, 조율 오버헤드는 궤적 32개까지 거의 일정함."

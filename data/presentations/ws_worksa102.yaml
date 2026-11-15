@@ -1,0 +1,15 @@
+id: ws_worksa102
+type: Presentation
+kind: talk
+label: "Scaling a Heterogeneous Metagenomics Workflow to 100,000 Samples with Nextflow on HPC"
+session: sess113
+time: "16:30-16:33"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksa102"
+authors: [piotr-kica, kinga-zielinska, micha-orzechowski, tomasz-kosciolek, maciej-malawski]
+addresses: [resource-prediction]
+proposes: []
+targets: [workflow-systems, bioinformatics-workflows]
+summary_ko: "13단계 Nextflow 워크플로 GutMap으로 사람 장내 메타게놈 10만 건 이상(총 189 TB)을 처리했음."
+claims:
+  - "Helios 슈퍼컴퓨터에서 거의 150만 CPU 시간을 썼음."
+  - "메모리 관련 최적화와 스토리지 한계의 우회 방법을 설명함."

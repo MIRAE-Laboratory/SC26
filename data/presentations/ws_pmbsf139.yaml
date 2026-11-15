@@ -1,0 +1,16 @@
+id: ws_pmbsf139
+type: Presentation
+kind: paper
+label: "HPL and HPL-MxP at Exascale on Aurora: Performance Engineering and Characterization"
+session: sess109
+time: "11:30-11:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf139"
+authors: [kazushige-goto, huda-ibeid, kalyan-kumaran, servesh-muralidharan, anthony-trung-nguyen, aditya-nishtala]
+addresses: [data-locality]
+proposes: [mixed-precision, comparative-benchmarking]
+targets: [leadership-facility]
+summary_ko: "엑사스케일에서 HPL과 HPL-MxP를 돌리려면 최적화된 커널만이 아니라 통신, 프로세스·장치 배치, 런타임 설정, CPU-GPU 상호작용, 혼합 정밀도 실행을 함께 조정해야 함. Aurora에서의 대규모 벤치마킹을 보고함."
+claims:
+  - "FP64 HPL이 5,439노드의 0.585 EF/s에서 9,234노드의 1.01 EF/s로 올랐고, HPL-MxP는 9,500노드에서 11.64 EF/s에 이르렀음."
+  - "랭크, GPU, 메모리, NIC의 지역성 인지 배치와 단계별 NIC 배정이 핵심 선택이었음."
+  - "Aurora 고유의 발견과 밀결합 이기종 시스템에 일반적으로 통하는 원칙을 구분해 정리함."

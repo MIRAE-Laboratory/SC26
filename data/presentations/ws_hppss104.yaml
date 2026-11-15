@@ -1,0 +1,17 @@
+id: ws_hppss104
+type: Presentation
+kind: talk
+label: "Python-Based Distributed Training on AMD GPU Supercomputers: Lessons from Data, Pipeline, and Tensor Parallelism on LUMI"
+session: sess124
+time: "16:30-16:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess124&id=ws_hppss104"
+authors: [vijeta-sharma]
+addresses: [software-ecosystem-readiness, python-at-scale]
+proposes: [container-wheel-deployment]
+targets: [amd-gpu-systems, distributed-training]
+summary_ko: >
+  AMD GPU 기반 시스템 LUMI에서 Vision Transformer 학습의 데이터·파이프라인·텐서 병렬화를 실증 평가했음. 컨테이너화된 ROCm 환경에서 PyTorch, FairScale, TensorFlow DTensor, Colossal-AI를 쓰고, 프레임워크 호환성, 이식성, 구현 복잡도, 재현성을 봄.
+claims:
+  - "소프트웨어 생태계의 준비도가 AI 학습의 확장성을 크게 좌우함."
+  - "PyTorch DDP와 TensorFlow DTensor는 안정적으로 돌았고, CUDA에 의존하는 여러 접근은 AMD 아키텍처에서 배치에 어려움을 겪었음."
+  - "공개 초록에는 정량 결과가 없음."

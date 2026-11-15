@@ -1,0 +1,16 @@
+id: ws_isav107
+type: Presentation
+kind: paper
+label: "Bridging In-Situ Visualization to Game Engines: From ParaView Catalyst via ANARI to Unreal Engine"
+session: sess123
+time: "14:40-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav107"
+authors: [thomas-george, severin-a-t-klapproth, jens-henrik-gobbert, jonathan-windgassen, andreas-adelmann, sriramkrishnan-muralikrishnan]
+addresses: [data-deluge]
+proposes: [scene-streaming]
+targets: [in-situ-visualization]
+summary_ko: >
+  HPC 시뮬레이션 데이터를 ParaView의 ANARI 렌더링 API를 거쳐 Unreal Engine 5로 잇는, 디스크를 쓰지 않는 인시투 파이프라인임. 수정한 ANARI-USD 장치가 장면 그래프를 메모리에서 잡아 내장 ZeroMQ 브로커로 USD 형식 그대로 스트리밍하고, 클라이언트의 JuSync 미들웨어와 플러그인이 도착하는 형상을 실행 중에 렌더링 요소로 보냄.
+claims:
+  - "시뮬레이션 실행이 가시화 부하와 분리되어, 클라이언트가 언제든 붙고 떨어질 수 있음."
+  - "JURECA-DC에서 자유전자레이저 시뮬레이션의 입자 수천만 개 점군을 스트리밍했음."

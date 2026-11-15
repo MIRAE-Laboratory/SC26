@@ -1,0 +1,16 @@
+id: misc133
+type: Presentation
+kind: invited
+label: "Distinguished Talk: Scaling Autonomy: Federated Agentic Middleware and Serverless Systems for Scientific Computing"
+session: sess113
+time: "09:05-09:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=misc133"
+authors: [kyle-chard]
+addresses: [workflow-composition-effort, agents-on-cyberinfrastructure]
+proposes: [agent-middleware, serverless-execution]
+targets: [ai-agents, federated-clusters]
+summary_ko: "연합 서버리스 시스템이 뒷받침하는 자율적 에이전트 과학의 구상을 제시함. 발견에는 대규모 실험, 시뮬레이션, AI 모델을 여러 컴퓨팅 환경에 걸쳐 통합해야 하는데, 기존 워크플로와 미들웨어는 연합 자원으로 확장하기 어렵고 사람이라는 병목을 넘을 자율성이 없음."
+claims:
+  - "에이전트 미들웨어가 상태를 가진 협업 에이전트를 이기종 자원에 걸쳐 조율하고, 서버리스 컴퓨팅이 필요할 때 탄력적으로 실행함."
+  - "Parsl, funcX, Globus, Academy의 경험에서 사례를 듦."
+  - "공개 초록에는 정량 결과가 없음."

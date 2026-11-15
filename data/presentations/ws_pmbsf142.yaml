@@ -1,0 +1,15 @@
+id: ws_pmbsf142
+type: Presentation
+kind: paper
+label: "FP64 Performance and the Limits of Ozaki Emulation on HPC Systems"
+session: sess109
+time: "12:10-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf142"
+authors: [katarzyna-kasia-swirydowicz, nicholas-malaya, noah-wolfe, paul-bauman, pieter-ghysels, jonathan-belof]
+addresses: [hardware-selection]
+proposes: [roofline-analysis, mixed-precision]
+targets: [hpc-processors, scientific-apps]
+summary_ko: "저정밀 텐서 코어로 필요할 때 FP64를 에뮬레이션할 수 있으니 가속기에서 FP64의 우선순위를 낮춰도 된다는 업계의 견해를 검증함. 대표 HPC 워크로드의 루프라인 프로파일링과 Ozaki 방식 에뮬레이션의 가능성·한계를 제시함."
+claims:
+  - "에뮬레이션은 FP64의 대체가 아니라 최적화로 다뤄야 하며, 크고 조밀하고 행렬곱에 가까운 워크로드에만 적용됨. 이는 HPC 생태계의 10% 미만이라고 봄."
+  - "그 경우에도 행렬곱 가속만으로는 부족하고, 수치 거동, 작업 공간, 행렬 형태, 통합 오버헤드가 응용 수준의 이득을 정함."

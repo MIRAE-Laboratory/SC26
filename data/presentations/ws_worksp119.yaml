@@ -1,0 +1,15 @@
+id: ws_worksp119
+type: Presentation
+kind: paper
+label: "Dynamic and Static Workflow Orchestration for Large-Scale Uncertainty Quantification Campaigns"
+session: sess113
+time: "12:00-12:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp119"
+authors: [karol-zajac, levente-sandor, piotr-nowakowski, benjamin-csippa, gabor-zavodszky, maciej-malawski]
+addresses: [workflow-scheduling]
+proposes: [comparative-benchmarking]
+targets: [workflow-systems, job-scheduler, ensemble-simulations]
+summary_ko: "대규모 불확실성 정량화 캠페인을 HPC에서 조율하는 두 전략을 병렬 혈류역학 응용으로 비교함. 하나는 EasyVVUQ와 Dask Distributed로 작업자 풀을 동적으로 관리하는 방식, 다른 하나는 각 시뮬레이션을 독립 배치 작업으로 내는 스케줄러 작업 배열 방식임."
+claims:
+  - "강한 확장성 실험과 두 방식의 캠페인 실행을 함께 수행해, 동적 조율과 정적 조율의 절충을 정리함."
+  - "공개 초록에는 구체적 수치가 없음."

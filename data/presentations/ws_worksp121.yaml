@@ -1,0 +1,15 @@
+id: ws_worksp121
+type: Presentation
+kind: paper
+label: "Adapting Classic List-Scheduling Heuristics for Conditional Task Graphs"
+session: sess113
+time: "12:15-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp121"
+authors: [gabriel-twigg-ho, jared-coleman, taina-coleman, mohammadali-khodabandehlou, bhaskar-krishnamachari]
+addresses: [workflow-scheduling]
+proposes: [conditional-list-scheduling]
+targets: [workflow-systems, neural-surrogates]
+summary_ko: "여러 분기 중 하나만 실행되는 조건부 작업 그래프에 고전 리스트 스케줄링 휴리스틱(HEFT, CPoP)을 맞춤. 서로 배타적인 작업이 프로세서를 공유하게 하는 스케줄 표현과, 실행 확률로 가중한 우선순위 함수 두 가지를 바꿈."
+claims:
+  - "상호 배제의 활용이 이득의 대부분을 주어, 기대 실행 시간이 전지적 스케줄러의 몇 퍼센트 안에 들어옴."
+  - "확률 가중은 드문 분기에 무거운 작업이 있을 때 크게 도움이 되며, 대리모델 워크플로가 그런 경우임."

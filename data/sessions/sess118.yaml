@@ -1,0 +1,51 @@
+id: sess118
+type: Session
+label: "15th International Workshop on Runtime and Operating Systems for Supercomputers (ROSS 2026)"
+kind: Workshop
+date: "2026-11-15"
+time: "09:00-12:30 CST"
+room: W175bc
+url: https://sc26.conference-program.com/session/?sess=sess118
+chairs: [kurt-b-ferreira, balazs-gerofi, torsten-hoefler, john-lange]
+summary_ko: "초대형 슈퍼컴퓨터와 클라우드 환경의 런타임과 운영체제를 다루는 워크숍. 높은 병렬성, 이기종성, 에너지·메모리 한계, 양자·뉴로모픽 같은 새 아키텍처가 과제이며, 아직 덜 익은 아이디어와 입장 논문도 받음."
+diagram:
+  type: layers
+  title: 시스템 소프트웨어의 계층별 과제
+  items:
+    - {label: 응용과 AI 프레임워크, note: 체크포인트만으로는 부족해 계층 간 복구 조율이 필요함}
+    - {label: 런타임, note: "이후 데이터 위치까지 고려한 배치로 복사량 39~81% 감소"}
+    - {label: 자원 관리, note: "버전까지 맞는 작업자만 수락. 기대한 환경이 100% 재현됨"}
+    - {label: 운영체제, note: 장치 접근을 바이트 단위로 위임}
+    - {label: 하드웨어, note: "CPU, GPU, FPGA에 양자 자원이 더해짐"}
+insights:
+  decision:
+    - head: 하드웨어가 맞아도 버전이 안 맞으면 작업을 받지 않음.
+      text: 등록된 능력과 관측된 버전이 모두 호환될 때만 작업자를 수락함. 작업별 이미지 방식은 기대한 환경을 100% 재현했고, 주기적 설정 관리는 45.83%에 그쳤음.
+      refs: [ws_ross106]
+    - head: 배치는 지금의 작업이 아니라 이후의 데이터 위치까지 보고 정함.
+      text: 복사가 적은 대안을 평가하되, 완료 시간이 기존 선택보다 나쁘지 않을 때만 채택함.
+      refs: [ws_ross101]
+    - head: 커널은 장치 접근을 필요한 만큼만 위임함.
+      text: 지연에 민감한 레지스터 접근만 사용자 공간에 넘기고 같은 페이지의 특권 레지스터는 막음.
+      refs: [ws_ross102]
+  trial:
+    - head: 가장 빨리 끝나는 곳에 두는 배치가 나중의 통신을 늘림.
+      text: 데이터 위치를 고려하자 입력 복사량이 39~81% 줄고 1.18~1.31배 빨라졌음.
+      refs: [ws_ross101]
+    - head: 대규모 AI에서는 체크포인트만으로 복구가 안 됨.
+      text: 상태가 수천 장치에 퍼져 있어 장애 하나가 학습과 추론에 모두 영향을 줌. 응용에서 텔레메트리까지 복구를 조율해야 한다는 입장이며, 수치는 없음.
+      refs: [ws_ross103]
+    - head: 상주 작업자는 시간이 지나면 환경이 어긋남.
+      text: 작업마다 사용자 공간을 교체하고 명시적으로 초기화하자 장애 뒤 약 1.5초 만에 검증된 구성으로 돌아왔음.
+      refs: [ws_ross106]
+  korea:
+    - head: 소규모 이기종 클러스터에 작업별 환경 교체 방식이 맞음.
+      text: CPU, GPU, FPGA가 섞인 연구실 규모 시스템은 환경 어긋남이 잦음. 기존 스케줄러를 바꾸지 않고 보완하는 구조여서 도입 부담이 작음.
+      refs: [ws_ross106]
+    - head: 양자 자원 도입을 준비한다면 시스템 소프트웨어 과제를 먼저 봄.
+      text: 스케줄링, 워크플로 조율, 보안, 상호운용성이 과제로 꼽혔음. 양자 장치를 들이는 것과 기존 HPC 운영에 통합하는 것은 별개의 일임.
+      refs: [misc221]
+  extra:
+    - head: 양자와 HPC의 통합이 세 세션에 걸쳐 나옴.
+      text: 이 세션의 초청 강연, 실험 연동 워크숍의 단편 발표, 네트워크 워크숍의 패널이 같은 주제를 다룸. 뒤의 둘은 공개된 설명문이 없음.
+      refs: [misc221, misc179, miscp123]

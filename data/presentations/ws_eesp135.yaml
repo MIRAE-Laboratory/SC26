@@ -1,0 +1,17 @@
+id: ws_eesp135
+type: Presentation
+kind: paper
+label: "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling"
+session: sess125
+time: "14:45-14:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp135"
+authors: [mobina-kashaniyan, ali-jannesari]
+addresses: [energy-performance-tradeoff]
+proposes: [generation-scheduling]
+targets: [llm-inference]
+summary_ko: >
+  LLM 추론 시점 확장에서 후보 응답 수 N이 실제 시스템 비용과 어떻게 이어지는지 조사했음. N만으로는 후보가 어떻게 실행되는지 알 수 없음. 같은 예산을 한 번의 배치 호출로도, 여러 번의 순차 호출로도 채울 수 있기 때문임. N을 8로 고정하고 네 가지 생성 스케줄(1×8, 2×4, 4×2, 8×1)의 지연, 처리량, GPU 시간, 에너지를 A100에서 측정했음.
+claims:
+  - "GSM8K 500문항에서 N을 1에서 8로 올리면 정확도가 Phi3-mini 8.4점, Qwen2.5-1.5B 18.4점 오름."
+  - "순차 호출 8회는 배치 호출 1회보다 에너지를 4.64~4.86배 쓰고 P95 지연이 5.77~6.12배임."
+  - "추론 시점 확장 평가는 후보 수와 함께 생성 스케줄과 GPU 수준 지표를 보고해야 함."

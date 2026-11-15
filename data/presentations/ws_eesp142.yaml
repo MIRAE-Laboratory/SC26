@@ -1,0 +1,16 @@
+id: ws_eesp142
+type: Presentation
+kind: paper
+label: "Decay-Driven Multi-Objective Reinforcement Learning for Preference-Aware Power Control in HPC"
+session: sess125
+time: "16:04-16:16"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp142"
+authors: [akhilesh-raj, swann-perarnau, aniruddha-gokhale]
+addresses: [power-cap-slowdown, energy-performance-tradeoff]
+proposes: [rl-power-control]
+targets: [power-telemetry]
+summary_ko: >
+  온라인 강화학습은 운영 환경에서 비현실적이고, 오프라인 강화학습은 선호 가중치가 고정되어 운영점마다 에이전트가 따로 필요함. DDMORL은 단일 노드 에너지 관리를 위한 다목적 강화학습 틀로, 사용자가 지정하는 허용 성능 저하 δ(0~1) 하나만 제어 변수로 노출함. 응용별 진행률-전력 상한 모델이 이 목표를 선호 신호로 바꿔, 오프라인 학습 정책이 RAPL로 전력을 실시간 제어함.
+claims:
+  - "저하 수준이 전력 상한에 안정적으로 대응되고, 요청한 저하 한도 안에서 에너지를 크게 절감함."
+  - "공개 초록에는 구체적 수치가 없음."

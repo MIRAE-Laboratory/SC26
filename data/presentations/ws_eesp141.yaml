@@ -1,0 +1,17 @@
+id: ws_eesp141
+type: Presentation
+kind: paper
+label: "Heterogeneous Energy Characterization of GPU-Powered Datalog Engines"
+session: sess125
+time: "14:50-14:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp141"
+authors: [ahmedur-rahman-shovon, yihao-sun, zhiling-lan, swann-perarnau, thomas-gilray, kristopher-micinski, michael-papka, sidharth-kumar]
+addresses: [energy-performance-tradeoff]
+proposes: [energy-profiling]
+targets: [datalog-engines, power-telemetry]
+summary_ko: >
+  GPU 기반 Datalog 엔진의 CPU-GPU 통합 에너지 특성을 처음으로 분석했음. 설계가 다른 엔진 다섯 개를 A100에서 평가하며, NVML로 GPU 전력을, RAPL로 CPU 패키지 전력을 샘플링하는 경량 도구 Powerlog로 총 에너지, 줄당 명령어 수, 에너지-지연 곱을 잼.
+claims:
+  - "가장 빠른 구성이 항상 가장 에너지 효율적인 것은 아님."
+  - "엔진 선택에 따라 총 에너지가 최대 3배 달라지고, CPU가 총 에너지의 32~55%를 차지함."
+  - "GPU를 1개에서 4개로 늘리면 실행 시간은 최대 2.9배 줄지만 에너지는 24~42% 늘어남."

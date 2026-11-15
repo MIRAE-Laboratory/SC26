@@ -1,0 +1,15 @@
+id: ws_eesp121
+type: Presentation
+kind: paper
+label: "Variation-Aware Non-Uniform Node Power Capping for Exascale HPC Systems"
+session: sess125
+time: "15:52-16:04"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp121"
+authors: [solomon-bekele, brad-geltz, swann-perarnau, siddhartha-jana, christopher-m-cantalupo, servesh-muralidharan, kevin-harms, paul-rich, brice-videau, kalyan-kumaran]
+addresses: [node-variation, power-cap-slowdown]
+proposes: [nonuniform-power-capping]
+targets: [leadership-facility]
+summary_ko: >
+  엑사스케일 시스템 Aurora에서 명목상 같은 노드도 제조, 노화, 열 차이로 와트당 성능이 다름. 균일한 노드 전력 상한에서는 이 편차가 밀결합 응용의 임계 경로 노드를 늦춤. 대규모 RAPL 전력 스윕으로 노드별 전력-성능 응답을 특성화하고, 2차 또는 구간 선형 모델로 표현해 고정된 작업 전력 예산 안에서 노드별 상한을 다르게 계산함.
+claims:
+  - "Nekbone 실측에서 균일 상한 대비 응용 성능이 중간 규모(약 512 노드)에서 최대 7.5%, 8,210 노드에서 6.8% 올랐음."

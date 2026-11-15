@@ -1,0 +1,17 @@
+id: ws_xloop103
+type: Presentation
+kind: paper
+label: "Navigating the Spectrum of Science Workloads with ESnet JLab FPGA Accelerated Transport (EJFAT)"
+session: sess117
+time: "11:00-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop103"
+authors: [harinarayan-krishnan, david-shapiro, ronald-pandolfi, sophie-morley, yatish-kumar]
+addresses: [data-deluge, cross-facility-integration]
+proposes: [accelerated-transport]
+targets: [user-facility-beamline]
+summary_ko: >
+  원격 실험실에서 다기관 협력까지 시설 간 워크플로가 필수가 되고 있고, 사용자 시설은 처리·저장이 따라가지 못하는 속도로 데이터를 냄. 성능과 확장성이 이미 입증된 EJFAT를 실제 과학 실험에 통합하려면 무엇이 필요한지를 따짐.
+claims:
+  - "데이터를 최대한 빨리 옮기도록 밀접하게 통합하고 튜닝한 워크플로와, 과학자가 최소한의 수고로 HPC 자원을 쓰게 하는 범용 생태계 두 응용을 연구했음."
+  - "두 사례가 사용자 시설의 일반적인 응용 유형을 대표함."
+  - "공개 초록에는 정량 결과가 없음."

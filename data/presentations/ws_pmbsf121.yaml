@@ -1,0 +1,15 @@
+id: ws_pmbsf121
+type: Presentation
+kind: paper
+label: "Automated Design Space Exploration of ARM CMN-Based HPC Architectures: A Case Study for the European Rhea Family Processors"
+session: sess109
+time: "09:35-09:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf121"
+authors: [lilia-zaourar, mohamed-benazouz, valentin-dubois-fournet, eric-mercier]
+addresses: [hardware-selection]
+proposes: [design-space-exploration]
+targets: [hpc-processors]
+summary_ko: "HPC 프로세서의 메모리 성능을 크게 좌우하는 Arm 메시 인터커넥트의 자동 다목적 설계 공간 탐색 방법을 제시하고, 유럽 Rhea 계열 프로세서의 하위 시스템에 적용함."
+claims:
+  - "자동 탐색이 유효 구성 343개 중 26개만 평가하고도 전수 평가와 같은 최적 구성을 찾았음."
+  - "탐색 시간이 약 140시간에서 약 2시간으로 줄었음."

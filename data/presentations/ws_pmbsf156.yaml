@@ -1,0 +1,16 @@
+id: ws_pmbsf156
+type: Presentation
+kind: paper
+label: "NVIDIA Vera: A Microarchitecture-Level Comparison with Grace, Turin, and Granite Rapids"
+session: sess109
+time: "09:15-09:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf156"
+authors: [joseph-moore, thomas-green, simon-mcintosh-smith]
+addresses: [hardware-selection, memory-bound-performance]
+proposes: [comparative-benchmarking]
+targets: [hpc-processors]
+summary_ko: "NVIDIA의 첫 자체 코어 설계를 쓴 데이터센터 CPU Vera를 AMD Turin, Intel Granite Rapids와 비교하고 Grace를 기준선으로 삼음. 마이크로벤치마크에서 NAS 커널과 미니앱, 과학 코드의 단일 소켓 실행까지 평가함."
+claims:
+  - "Vera는 대부분의 코드에서 앞서며, 원인은 높은 메모리 대역폭과 저지연 메모리 하위 시스템으로 봄."
+  - "부동소수점 성능은 상대적으로 평범해, 연산에 묶인 일부 워크로드에서 Intel과 AMD에 뒤짐."
+  - "공개 초록에는 구체적 수치가 없음."

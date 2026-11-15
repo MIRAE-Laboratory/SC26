@@ -1,0 +1,17 @@
+id: ws_isav102
+type: Presentation
+kind: paper
+label: "Utilizing Deep Learning-Based Video Frame Interpolation for Scientific Visualization"
+session: sess123
+time: "16:10-16:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav102"
+authors: [jonas-lukasczyk, christoph-garth, ethan-stam, david-rogers, divya-banesh]
+addresses: [data-deluge]
+proposes: [frame-interpolation, in-situ-reduction]
+targets: [in-situ-visualization]
+summary_ko: >
+  과학 가시화 워크플로는 시각 품질과 대규모 이미지 모음의 저장·I/O 비용 사이에서 절충해야 함. 저장한 키프레임에서 생략한 이미지를 딥러닝 프레임 보간으로 되살리는 방법을 연구했음. FILM과 RIFE 모델을 평가해 PyCinema에 통합하고, 이웃 키프레임이 허용 오차 안에서 재구성하지 못할 때만 이미지를 저장하는 탐욕적 키프레임 선택 알고리즘을 만들었음.
+claims:
+  - "알고리즘이 국소 정보만 써서 ParaView Catalyst 인시투 워크플로에 넣을 수 있음."
+  - "생략한 이미지를 정확히 재구성하면서 디스크에 쓰는 프레임 수를 크게 줄임."
+  - "공개 초록에는 구체적 수치가 없음."

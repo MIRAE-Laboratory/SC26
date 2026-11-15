@@ -1,0 +1,64 @@
+id: sess110
+type: Session
+label: "2026 International Workshop on Performance, Portability, and Productivity in HPC (P3HPC)"
+kind: Workshop
+date: "2026-11-15"
+time: "09:00-17:30 CST"
+room: W181c
+url: https://sc26.conference-program.com/session/?sess=sess110
+chairs: [cj-newburn, scott-j-parker, john-pennycook, kenneth-weiss]
+summary_ko: "현재와 미래의 HPC 시스템에서 개발 생산성을 잃지 않고 성능이 잘 나오는 응용을 만드는 실용적 도구, 기술, 방법을 공유하는 워크숍. 컴파일러·런타임 전문가, 응용 개발자, 도메인 과학자가 성공과 실패를 함께 나눔."
+diagram:
+  type: layers
+  title: 성능 이식성을 얻는 층
+  items:
+    - {label: 응용 코드, note: 단일 소스는 정확성의 이식만 보장함}
+    - {label: 이식성 계층, note: "라이브러리와 언어 수준의 추상화. 코드가 45~64% 줄어듦"}
+    - {label: 자동 튜닝, note: "배치와 루프를 자동 조정해 전문가 수작업보다 최대 1.5배 빠름"}
+    - {label: 컴파일러, note: 성능이 갈리는 원인을 컴파일러 수준 증거로 진단}
+    - {label: 지표, note: "이식성 점수로 비교. 같은 방식이 응용에 따라 62~89%"}
+    - {label: 하드웨어, note: "여러 벤더의 GPU, CPU, 벡터 엔진"}
+insights:
+  decision:
+    - head: 이식성은 점수로 판단함.
+      text: 여러 플랫폼에서의 효율을 하나의 지표로 묶어 비교함. 같은 언어도 응용에 따라 62%에서 89%까지 갈렸고, 포트란 유체역학 코드는 34.9~44.1%였음.
+      refs: [ws_p3hpc112, ws_p3hpc127, ws_p3hpc117]
+    - head: 생산성도 함께 잼.
+      text: 코드 줄 수와 난이도 지표를 성능 옆에 둠. 단일 소스 언어는 코드를 45~64% 줄였고, 기존 방식은 백엔드가 공유하는 소스가 16%뿐이었음.
+      refs: [ws_p3hpc112, ws_p3hpc114]
+    - head: 튜닝은 사람이 아니라 도구가 맡음.
+      text: 코드에 튜닝 지점을 두고 자동으로 조정하는 방식이 전문가의 수작업보다 빠르고 개발 시간도 적게 들었음.
+      refs: [ws_p3hpc102, misc200]
+  trial:
+    - head: 단일 소스는 정확성만 옮겨 주고 성능은 옮겨 주지 않음.
+      text: 하드웨어 전용 기능을 쓰지 않아도 플랫폼마다 성능이 갈렸음. 자동 튜닝으로 GPU 1.47배, CPU 1.53배를 되찾았음.
+      refs: [ws_p3hpc102]
+    - head: 지시문 방식은 단순한 커널에서만 통함.
+      text: 14개 패러다임을 비교하니 복잡한 과학 커널에서는 라이브러리 기반 추상화가 가장 강했음.
+      refs: [ws_p3hpc114]
+    - head: 성능이 갈리는 원인은 컴파일러 수준에 있음.
+      text: 과도한 루프 풀기와 레지스터 압박 같은 원인을 찾아 소스를 고치자 커널 5개의 성능이 회복되었음.
+      refs: [ws_p3hpc108]
+    - head: 새 언어는 GPU에서는 되고 CPU에서 약함.
+      text: 한 신생 프레임워크는 GPU에서 효율 80%를 넘었지만 CPU에서 낮아 전체 점수가 0.59에 그쳤음.
+      refs: [ws_p3hpc117]
+    - head: 벤더 전용 커널 없이도 같은 성능이 가능함.
+      text: 플랫폼 중립 구현이 두 벤더의 최신 GPU에서 전용 커널과 같은 수준이었고, 기존 이식형 구현보다 최대 7배 빨랐음.
+      refs: [ws_p3hpc116]
+  korea:
+    - head: 포트란 해석 코드를 벤더에 묶이지 않고 GPU로 옮긴 사례가 있음.
+      text: 이스라엘의 원자력 연구 기관이 포트란 유체역학 코드를 표준 지시문만으로 다중 노드 GPU에 올렸음. 포트란 자산이 많은 기관이 참고할 경로임.
+      refs: [ws_p3hpc127]
+    - head: 핵융합 코드의 자동 튜닝 사례를 참고함.
+      text: 프랑스의 토카막 플라즈마 코드에서 뽑은 미니 응용이 자동 튜닝으로 전문가 수작업을 앞섰음.
+      refs: [ws_p3hpc102]
+    - head: 가속기 도입 평가에 이식성 점수를 넣음.
+      text: 한 벤더에서의 최고 성능이 아니라 여러 플랫폼에서의 효율을 함께 보면 벤더 종속 위험이 수치로 드러남.
+      refs: [ws_p3hpc112, ws_p3hpc114]
+  extra:
+    - head: 에이전트 개발이 이 분야의 다음 의제로 올라옴.
+      text: 주제 강연이 AI 코딩 에이전트와 추상화 수준의 관계를 다뤘고, 에이전트 개발 시대를 주제로 한 패널이 열렸음. 패널은 공개된 설명문이 없음.
+      refs: [misc200, miscp125]
+    - head: 한 건은 읽지 못했음.
+      text: 입자-격자 방법의 이식형 GPU 구현 발표는 페이지 오류로 초록을 확인하지 못해 제목과 저자만 담았음.
+      refs: [ws_p3hpc125]

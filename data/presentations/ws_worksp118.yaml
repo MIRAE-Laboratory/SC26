@@ -1,0 +1,15 @@
+id: ws_worksp118
+type: Presentation
+kind: paper
+label: "CURATE: Leveraging LLM Agents to Compose, Catalog, and Deploy Reproducible Workflows"
+session: sess113
+time: "09:45-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp118"
+authors: [nolan-cutler, chia-chen-kuo, nanda-velugoti, kathryn-newhart, renato-figueiredo]
+addresses: [workflow-composition-effort, provenance-reproducibility]
+proposes: [agentic-workflow-composition, reuse-first-retrieval, human-approval-gates]
+targets: [workflow-systems, ai-agents]
+summary_ko: "기존 코딩 에이전트는 코드 생성에서 멈추고 배치와 공유를 사용자에게 남김. CURATE는 LLM 에이전트로 계산 워크플로의 전 주기를 관리하는, 사람이 개입하는 다중 에이전트 시스템임."
+claims:
+  - "모듈 카탈로그가 모듈을 저장해 여러 워크플로에서 재사용함."
+  - "초기 프로토타입과 실험 6건으로 실현 가능성을 보임."

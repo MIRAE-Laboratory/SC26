@@ -1,0 +1,14 @@
+id: ws_hust109
+type: Presentation
+kind: paper
+label: "Skip the SuperPOD - The User-Driven Case for Throughput-Optimized GPU Clusters"
+session: sess517
+time: "09:20-09:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess517&id=ws_hust109"
+authors: [preston-smith, ryan-derue, scott-michael, kanin-bender, greg-bauer, christopher-heller, kevin-hildebrand, brock-palen, brian-o-shea, derek-weitzel, caughlin-bohn, janna-nugent, doug-johnson, samuel-khuvis, dan-majchrzak, vlad-kholodovych, exequiel-punzalan, xiao-zhu]
+addresses: [hardware-selection]
+proposes: [usage-based-capacity-planning]
+targets: [hpc-processors, user-support-services]
+summary_ko: "AI 컴퓨팅 구조는 시장의 수요, 곧 하이퍼스케일러의 AI 학습에 맞춰 설계됨. 대학 사이버인프라 책임자는 고등교육의 워크로드 특성을 이해하고 동료 기관과 비교해야 함. 여러 대학 HPC 센터의 워크로드 특성을 비교해 사용 패턴이 일관된지 확인하고, GPU 수요의 용량 계획을 위한 데이터 기반 모델을 만듦."
+claims:
+  - "공개 초록에는 구체적 수치가 없음."

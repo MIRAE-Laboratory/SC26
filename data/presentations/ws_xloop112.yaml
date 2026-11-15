@@ -1,0 +1,17 @@
+id: ws_xloop112
+type: Presentation
+kind: paper
+label: "Every State, Every Loop, All at Once: Reaching the Outer Loop of an Autonomous Laboratory"
+session: sess117
+time: "11:25-11:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop112"
+authors: [woong-shin, craig-a-bridges, frederic-suter, marshall-mcdonnell, rafael-ferreira-da-silva]
+addresses: [agent-state-fragmentation, human-in-outer-loop]
+proposes: [unified-state-graph, human-approval-gates]
+targets: [self-driving-labs, ai-agents]
+summary_ko: >
+  자율 실험실의 안쪽 루프는 이미 닫혔지만, 합성·측정·시뮬레이션을 잇는 바깥 루프는 여전히 사람을 거치고, 그 사람의 결과가 다음 결정을 바꿈. 바깥 루프에서 일하는 에이전트에게는 필요한 상태가 없음. 그 정보가 누군가의 머릿속에 있거나, 서로 어긋나는 도구에 흩어져 있거나, 질의할 수 없는 파일에 있기 때문임. reach는 지식, 실행, 운영 상태를 탐색 가능한 그래프 하나로 유지하는 상태 계층임.
+claims:
+  - "상태를 주소로 찾을 수 있게 되면 에이전트가 캠페인을 계획하고 다음 단계를 정하며, 과학자는 신뢰 구배에 따라 감독함."
+  - "오래 실행되는 외부 시스템이 구현할 수 있는 접합 계약을 제시함."
+  - "자율 화학 실험실에서 에이전트가 계획한 바이알 이송 연쇄를 구동했고, 측정한 회절 패턴을 에이전트 기반 리트벨트 정련까지 넘겼음."

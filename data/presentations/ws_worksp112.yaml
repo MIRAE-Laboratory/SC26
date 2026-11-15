@@ -1,0 +1,16 @@
+id: ws_worksp112
+type: Presentation
+kind: paper
+label: "Interoperable Performance Prediction through Standardized Metadata Capture and Analysis"
+session: sess113
+time: "11:00-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp112"
+authors: [nicolo-giacomini, debora-pina, rosa-m-badia, raul-sirvent]
+addresses: [resource-prediction]
+proposes: [standardized-run-metadata, analytical-performance-model]
+targets: [workflow-systems, job-scheduler]
+summary_ko: "사용자는 작업 전에 자원과 실행 시간 한도를 요청해야 하는데, 관련 데이터는 형식이 서로 다른 프로파일러, 스케줄러, 워크플로 엔진에 흩어져 있음. 실행 데이터를 한 번 쓰고 버리는 입력이 아니라 표준화된 재사용 자산으로 다뤄야 한다고 주장함."
+claims:
+  - "분산 자원 사용을 Workflow Run RO-Crate로 묶어 질의 가능한 저장소 ProvStor에 둠."
+  - "COMPSs와 새 Slurm 인지 프로파일러로 시연했고, 해석 모델(Universal Scalability Law)과 기계학습을 결합해 예측함."
+  - "공개 초록에는 정량 결과가 없음."

@@ -1,0 +1,16 @@
+id: ws_pmbss103
+type: Presentation
+kind: paper
+label: "Matching Workloads to Blackwell: Power-Resolved Benchmarking of NVIDIA B200 and B300 across HPC and AI Workloads"
+session: sess109
+time: "11:15-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbss103"
+authors: [mohsen-zand, trung-dac-nguyen, h-birali-runesha]
+addresses: [hardware-selection, energy-performance-tradeoff]
+proposes: [comparative-benchmarking, energy-profiling]
+targets: [hpc-processors, llm-inference]
+summary_ko: "NVIDIA B200과 B300 GPU를 독립된 8-GPU 클러스터 둘에서 비전 추론·학습, LLM 추론, 운영 HPC 코드 6종으로 벤치마크함. B300이 B200을 일률적으로 앞서지 않음."
+claims:
+  - "B300은 합성곱 추론에서 최대 5.6배, 3D 비전 트랜스포머 학습에서 최대 8배, 배정밀도 Quantum ESPRESSO에서 16배 뒤짐."
+  - "합성곱 워크로드에서 B300은 1,100 W 한도의 36~53%만 끌어 쓰고, 앞서는 워크로드에서는 두 GPU 모두 95~97%로 돎."
+  - "같은 B300 노드 둘이 개발 중인 vLLM 빌드 하나 때문에 첫 토큰까지의 시간이 2.1배 달랐음."

@@ -1,0 +1,15 @@
+id: ws_ross101
+type: Presentation
+kind: paper
+label: "Resolving Placement–Residency Conflicts in Multi-GPU Task-Graph Runtimes"
+session: sess118
+time: "10:55-11:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=ws_ross101"
+authors: [long-cheng, yicheng-li, jing-chen, miquel-pericas]
+addresses: [data-locality]
+proposes: [communication-aware-placement]
+targets: [task-runtimes]
+summary_ko: "다중 GPU 작업 그래프 런타임에서 작업을 어디에 두느냐는 실행 시간과 데이터 지역성 모두에 영향을 줌. 최조 완료 시간 배치는 현재 작업의 통신만 따지고 이후 작업을 위한 데이터 위치 변화는 고려하지 않아, 나중에 통신이 늘 수 있음."
+claims:
+  - "복사가 적은 대안을 평가하되, 모델상 완료 시간이 기존 선택보다 나쁘지 않을 때만 받아들임."
+  - "NVIDIA L4 GPU 8개에서 입력 복사량이 39~81% 줄었고, 배치가 바뀐 두 워크로드에서 1.18~1.31배 빨라졌음."

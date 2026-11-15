@@ -1,0 +1,16 @@
+id: ws_pmbsf116
+type: Presentation
+kind: paper
+label: "Exploiting the Interplay of Compute- and Memory-Bound kernels in MPI Applications"
+session: sess109
+time: "16:50-17:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess109&id=ws_pmbsf116"
+authors: [ayesha-afzal, krishna-manda, georg-hager]
+addresses: [memory-bound-performance]
+proposes: [analytical-performance-model]
+targets: [mpi-simulations]
+summary_ko: "통신이 적고 연산 구간과 메모리 구간이 번갈아 나오는 MPI 응용에서는, 통신 지연이 뜻하지 않게 메모리 대역폭 경합을 줄일 수 있다고 주장함. 광선 추적 커널과 광학 흐름 커널을 짝지은 솔버로 보임."
+claims:
+  - "두 구간의 자연스러운 비동기화가 가속을 주며, 메모리 구간의 프로세스 수가 대역폭 포화점 근처일 때 최대가 됨."
+  - "MPI 비동기 진행은 동시 경합을 늘려 성능을 떨어뜨릴 수 있음."
+  - "공개 초록에는 구체적 가속 수치가 없음."
