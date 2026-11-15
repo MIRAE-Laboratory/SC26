@@ -1,0 +1,17 @@
+id: ws_aaihpc131
+type: Presentation
+kind: paper
+label: "Agentic MLIR-to-QIR Translation with Dual-Backend Testing: A Hybrid Deterministic and LLM Approach"
+session: sess120
+time: "09:40-09:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc131"
+authors: [sharmin-afrose, vicente-leyton-ortega, narasinga-rao-miniskar, elaine-wong, travis-s-humble]
+addresses: [code-translation, translation-verification]
+proposes: [deterministic-llm-split, differential-testing, repair-loop]
+targets: [quantum-compilers]
+summary_ko: >
+  양자 프레임워크마다 MLIR 방언이 달라 QIR 런타임으로 옮기려면 방언별 패스를 손으로 써야 한다. 번역기는 알려진 문법(Catalyst, Quake)에는 결정론적 컴파일러 경로, 처음 보는 방언에는 LLM 에이전트 경로, 결정론적 출력이 시험에 실패하면 수리 경로를 고른다. 원본 MLIR과 생성된 QIR을 독립 시뮬레이터에서 실행해 출력 분포를 총변동거리로 비교한다.
+claims:
+  - "3개 방언, 5~100 큐비트의 회로 41개에서 결정론적 경로는 회로-방언 쌍 70개 모두 게이트 단위로 정확하다."
+  - "처음 보는 결함허용(FTQC) 방언에서 모델 6개 중 4개가 첫 반복에 유효한 논리 수준 QIR을 냈다."
+  - "작은 오픈 웨이트 모델에는 RAG 대신 인라인 컨텍스트 구성을 쓰고, 불완전한 출력에서 유효한 QIR을 재조립하는 가드레일을 둔다."

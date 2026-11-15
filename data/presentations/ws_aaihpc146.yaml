@@ -1,0 +1,18 @@
+id: ws_aaihpc146
+type: Presentation
+kind: paper
+label: "Recall Is Not Honesty: Benchmarking Multi-Agent Architectures for Trustworthy HPC Operational Analytics"
+session: sess120
+time: "12:18-12:24"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc146"
+authors: [kartik-shinde, tirthankar-ghosal, sreekantam-sai-venkat, siddhant-senapati, sanjay-das, tilak-kasturi, khaled-ibrahim, hugo-hernandez, kanad-basu, sukumar-rangan]
+addresses: [unanswerable-refusal]
+proposes: [domain-benchmark, typed-agent-messaging]
+targets: [ai-agents, ops-telemetry]
+summary_ko: >
+  에이전트 시스템은 HPC 텔레메트리에 대한 운영 질문에 답하지만, 도메인 과학자는 그 답을 검증하기 어렵다. 신뢰할 수 있는 시스템은 텔레메트리가 뒷받침하는 사실을 찾아내고 답할 수 없는 질문은 거절해야 한다. 도구를 쓰는 단일 에이전트 하나와 다중 에이전트 설계 넷을 비교하며, Fugaku 작업 텔레메트리에 대한 다중 의도 질의 55개(검증 가능한 사실 119개, 답할 수 없는 하위 질문 25개)의 벤치마크 EPIQ를 쓴다.
+claims:
+  - "단일 에이전트가 사실을 가장 많이 찾지만(84.9%) 답할 수 없는 질문을 가장 적게 거절한다."
+  - "동료 메시징에 타입이 있는 대화 행위 필드를 결합한 설계가 가장 많이 거절하며(92.0%), 재현율은 단일 에이전트와 오차 범위 안이고 토큰은 2.5배 든다."
+  - "에이전트 수는 재현율도 거절률도 설명하지 못한다."
+  - "재현율과 거절은 따로 설계해야 한다."

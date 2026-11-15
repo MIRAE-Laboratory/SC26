@@ -1,0 +1,18 @@
+id: ws_aaihpc124
+type: Presentation
+kind: paper
+label: "Towards Efficient HPC Systems for Agents: Challenges and Opportunities"
+session: sess120
+time: "10:40-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc124"
+authors: [yunjia-zheng, bintang-dwi-marthen, zachary-pan, minghao-li, raminder-singh, manasvita-joshi, minlan-yu, juncheng-yang]
+addresses: [human-centric-hpc, agent-boundaries]
+proposes: [agent-facility-codesign]
+targets: [ai-agents, job-scheduler]
+summary_ko: >
+  코딩 에이전트는 이미 HPC의 실제 사용자이지만, 지금의 HPC 추상화·인터페이스·정책은 사람을 기준으로 설계되었다. 에이전트는 작업을 잘게 쪼갠 탐색-수정-실행 루프로 돌려, 스케줄러 제어 평면 부하, 메타데이터 중심 I/O, 이전 세션이 알아낸 것의 반복 재발견, 프롬프트 주입과 정책 집행의 새 표면을 만든다.
+claims:
+  - "사용자의 19.5%가 코딩 에이전트를 썼고, 이들이 작업 제출의 55.8%, CPU 코어시간의 29.1%, GPU 시간의 42.7%를 차지했다."
+  - "에이전트는 사람의 20.8배 속도로 명령을 낸다."
+  - "에이전트를 금지하는 것도, 일반 사용자로 취급하는 것도 지속 가능하지 않다."
+  - "시설이 에이전트를 일급 주체로 다루는 공동 설계를 제안한다."

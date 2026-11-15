@@ -27,6 +27,18 @@ Problem:
   rollout-error: {label: Autoregressive rollout error accumulation, label_ko: 자기회귀 롤아웃의 오차 누적}
   sparse-multimodal-data: {label: Sparse multimodal diagnostics, label_ko: 희소·다중모달 진단 데이터}
   physical-feasibility: {label: Physical feasibility of surrogate outputs, label_ko: 대리모델 출력의 물리적 타당성}
+  code-translation: {label: Code translation across programming models, label_ko: 프로그래밍 모델 간 코드 변환}
+  legacy-modernization: {label: Legacy code modernization at scale, label_ko: 레거시 코드의 대규모 현대화}
+  translation-verification: {label: Verifying translated code (oracle bottleneck), label_ko: 변환 코드의 검증(오라클 병목), related: [ai-code-evaluation]}
+  workload-portability: {label: Portability across schedulers and sites, label_ko: 스케줄러·사이트 간 이식성}
+  llm-domain-validity: {label: LLM proposals violating domain validity, label_ko: 도메인 타당성을 어기는 LLM 제안}
+  human-centric-hpc: {label: HPC interfaces designed for humans not agents, label_ko: 사람 기준으로 설계된 HPC 인터페이스}
+  agent-state-fragmentation: {label: Fragmented agent state across stores, label_ko: 저장소별로 흩어진 에이전트 상태, related: [data-stalls]}
+  ops-data-complexity: {label: Operational data complexity, label_ko: 운영 데이터의 복잡성}
+  agent-job-execution: {label: Executing fine-grained agent jobs at scale, label_ko: 잘게 쪼개진 에이전트 작업의 대규모 실행}
+  prompt-injection: {label: Prompt injection & unsupported citations, label_ko: 프롬프트 주입·근거 없는 인용, related: [agent-boundaries]}
+  config-evaluation-cost: {label: Evaluating training configurations before running, label_ko: 실행 전 학습 구성 평가 비용}
+  unanswerable-refusal: {label: Refusing unanswerable questions, label_ko: 답할 수 없는 질문의 거절}
 Method:
   attack-trees: {label: Threat modeling with attack trees, label_ko: 공격 트리 기반 위협 모델링}
   tre-sde: {label: Trusted Research Environment (TRE/SDE), label_ko: 신뢰연구환경(TRE/SDE), related: [sensitive-data-governance]}
@@ -47,8 +59,8 @@ Method:
   conditional-normalizing-flows: {label: Conditional normalizing flows, label_ko: 조건부 정규화 흐름}
   in-situ-inference: {label: HPC-native in-situ inference, label_ko: HPC 네이티브 인시투 추론}
   mcp-tools: {label: Typed tools via Model Context Protocol (MCP), label_ko: MCP 기반 도구 노출, related: [ai-agents]}
-  skill-files: {label: Versioned skill files, label_ko: 버전 관리되는 스킬 파일}
-  provenance-logging: {label: "Provenance logging (MLflow, Tiled)", label_ko: 실행 기록·메타데이터 로깅, related: [provenance-reproducibility]}
+  skill-files: {label: Agent skills (versioned skill files), label_ko: 에이전트 스킬(버전 관리되는 스킬 파일)}
+  provenance-logging: {label: "Provenance logging (MLflow, Tiled, Flowcept)", label_ko: 실행 기록·출처 로깅, related: [provenance-reproducibility]}
   hybrid-evaluators: {label: Deterministic checks + LLM evaluators, label_ko: 결정론적 검사와 LLM 평가의 결합}
   agent-aware-memory: {label: Agent-aware memory management, label_ko: 에이전트 인지 메모리 관리}
   generative-vae: {label: 3D convolutional VAE, label_ko: 3차원 합성곱 VAE}
@@ -59,6 +71,23 @@ Method:
   jepa: {label: Joint-embedding predictive architecture (JEPA), label_ko: 결합 임베딩 예측 구조}
   physics-aware-training: {label: Physics-aware training (augmented Lagrangian), label_ko: 물리 인지 학습(증강 라그랑지안)}
   scaling-laws: {label: Scaling-law analysis, label_ko: 스케일링 법칙 분석}
+  repair-loop: {label: Execution feedback & iterative repair, label_ko: 실행 피드백 기반 반복 수리}
+  context-retrieval: {label: Target knowledge & context retrieval, label_ko: 대상 지식·컨텍스트 검색}
+  deterministic-llm-split: {label: Deterministic path + LLM only where needed, label_ko: 결정론적 경로와 LLM의 역할 분리}
+  differential-testing: {label: Differential output testing, label_ko: 출력 비교 시험}
+  bit-identical-gates: {label: Bit-identical reproduction gates, label_ko: 비트 단위 재현 관문}
+  human-approval-gates: {label: Human approval gates, label_ko: 사람의 승인 관문}
+  descriptive-execution: {label: Prose-driven agentic execution, label_ko: 서술형 지시 기반 실행}
+  tool-augmented-reasoning: {label: Tool-augmented reasoning loop, label_ko: 도구 결합 추론 루프}
+  agent-facility-codesign: {label: Agents as first-class facility principals, label_ko: 에이전트를 일급 주체로 두는 시설 공동 설계}
+  event-driven-continuation: {label: Event-driven agent continuation, label_ko: 이벤트 기반 에이전트 재개}
+  io-characterization: {label: Cross-state I/O characterization, label_ko: 교차 상태 I/O 특성 분석}
+  agent-execution-layer: {label: Agent execution layer (ParslBox), label_ko: 에이전트용 실행 계층}
+  origin-labeling: {label: Origin labeling & sink mediation (PALISADE), label_ko: 출처 레이블링·싱크 중재, related: [runtime-sandbox]}
+  workload-graph-prediction: {label: Workload-graph timing prediction, label_ko: 워크로드 그래프 기반 시간 예측}
+  selective-measurement: {label: Selective measurement, label_ko: 선택적 측정}
+  prov-loop-model: {label: W3C PROV agent-loop model, label_ko: W3C PROV 에이전트 루프 모델}
+  typed-agent-messaging: {label: Typed inter-agent messaging, label_ko: 타입이 있는 에이전트 간 메시징}
 System:
   ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터}
   kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스}
@@ -82,3 +111,13 @@ System:
   lattice-boltzmann: {label: Lattice Boltzmann flows, label_ko: 격자 볼츠만 유동}
   tokamak-plasma: {label: Tokamak plasma (MAST), label_ko: 토카막 플라즈마}
   power-grid: {label: Power grid optimization (ACOPF), label_ko: 전력망 최적조류}
+  wafer-scale-systems: {label: Wafer-scale systems (Cerebras CSL), label_ko: 웨이퍼 스케일 시스템}
+  quantum-compilers: {label: Quantum compilers (MLIR/QIR), label_ko: 양자 컴파일러}
+  parallel-programming-models: {label: "Parallel programming models (OpenMP, MPI, SYCL, CUDA)", label_ko: 병렬 프로그래밍 모델, related: [mpi-parallelization]}
+  legacy-fortran: {label: "Legacy Fortran codes (GAMESS, OpenFAST)", label_ko: 레거시 포트란 코드, related: [scientific-apps]}
+  molecular-design: {label: Molecular design, label_ko: 분자 설계}
+  federated-clusters: {label: Federated HPC clusters, label_ko: 연합 HPC 클러스터}
+  ops-telemetry: {label: HPC operational telemetry, label_ko: HPC 운영 텔레메트리, related: [power-telemetry]}
+  hpc-packaging: {label: HPC package management (Spack), label_ko: HPC 패키지 관리, related: [hpc-libraries]}
+  materials-workflows: {label: Computational materials workflows, label_ko: 계산재료 워크플로}
+  distributed-training: {label: Distributed LLM training (Megatron), label_ko: 분산 LLM 학습, related: [sciml-training]}

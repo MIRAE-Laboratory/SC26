@@ -1,0 +1,17 @@
+id: ws_aaihpc130
+type: Presentation
+kind: paper
+label: "The Agentic Memory Hierarchy: Cross-State I/O Characterization for a Unified Substrate"
+session: sess120
+time: "11:00-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc130"
+authors: [avinash-kumar-maurya, bogdan-nicolae, m-mustafa-rafique]
+addresses: [agent-state-fragmentation]
+proposes: [agent-aware-memory, io-characterization]
+targets: [ai-agents, storage-memory-hierarchy]
+summary_ko: >
+  LLM 에이전트의 상태는 한 저장소에 담기지 않는다. 모델 컨텍스트(KV 캐시), 도구 호출과 체크포인트의 실행 상태, 사실과 스킬의 인지 메모리, 대용량 아티팩트와 임베딩이 같은 메모리·저장 계층 위에서 서로 조율되지 않는 기반에 놓인다. 그 결과 수명이 어긋나고, 반복 내용을 알아보지 못하고, 축출이 한 예산을 두고 경쟁하며, 출처가 사라진다. 실제 트레이스에 추출-정규화-재생 방법을 적용한 첫 교차 상태 I/O 특성 분석이라고 밝힌다.
+claims:
+  - "네 상태는 크기 영역이 다르고 대부분의 구간에서 서로 경쟁한다."
+  - "KV 접두 블록의 절반 이상이 재사용 가능하지만, 최근성 기반 축출은 그중 3분의 1만 살린다."
+  - "각 발견을 통합 기반의 요구사항으로 연결하고, 스키마·추출기·재생 벤치마크를 공개한다."

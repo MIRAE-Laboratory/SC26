@@ -1,7 +1,9 @@
 # 뷰어가 읽을 파일 목록. 세션·발표 파일을 추가하면 여기에도 한 줄 추가합니다.
+overview: overview.yaml
 sessions:
   - sessions/sess126.yaml
   - sessions/sess114.yaml
+  - sessions/sess120.yaml
 presentations:
   - presentations/ws_shpc101.yaml
   - presentations/ws_shpc102.yaml
@@ -25,3 +27,22 @@ presentations:
   - presentations/ws_ai4s134.yaml
   - presentations/ws_ai4s127.yaml
   - presentations/ws_ai4s139.yaml
+  - presentations/misc187.yaml
+  - presentations/ws_aaihpc109.yaml
+  - presentations/ws_aaihpc131.yaml
+  - presentations/ws_aaihpc104.yaml
+  - presentations/ws_aaihpc117.yaml
+  - presentations/ws_aaihpc124.yaml
+  - presentations/ws_aaihpc126.yaml
+  - presentations/ws_aaihpc130.yaml
+  - presentations/ws_aaihpc134.yaml
+  - presentations/ws_aaihpc137.yaml
+  - presentations/ws_aaihpc103.yaml
+  - presentations/ws_aaihpc107.yaml
+  - presentations/ws_aaihpc114.yaml
+  - presentations/ws_aaihpc122.yaml
+  - presentations/ws_aaihpc132.yaml
+  - presentations/ws_aaihpc139.yaml
+  - presentations/ws_aaihpc142.yaml
+  - presentations/ws_aaihpc144.yaml
+  - presentations/ws_aaihpc146.yaml

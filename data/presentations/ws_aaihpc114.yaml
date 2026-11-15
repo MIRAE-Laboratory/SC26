@@ -1,0 +1,17 @@
+id: ws_aaihpc114
+type: Presentation
+kind: paper
+label: "An Agentic Workflow for Legacy HPC Modernization: Converting the Two-Electron-Integral Core of GAMESS"
+session: sess120
+time: "11:42-11:48"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc114"
+authors: [yuzhong-shen, masha-sosonkina, peng-xu, mark-gordon]
+addresses: [legacy-modernization, translation-verification]
+proposes: [multi-agent-workflow, bit-identical-gates, human-approval-gates]
+targets: [legacy-fortran]
+summary_ko: >
+  레거시 포트란 현대화는 변환 하나하나는 평범하지만 코드 규모 때문에 미뤄지는, 규모의 문제다. 에이전트 역할 셋이 각자의 프롬프트로 일하고, 스스로 작성한 버전 관리 명세를 따르며, 사람은 소수의 승인 관문만 통제한다. 안전성은 계산화학 분야에서 물려받은 정확한 검증 오라클에 기댄다.
+claims:
+  - "GAMESS의 2전자 적분 루틴 12개 파일(56,448줄, 서브루틴 225개)을 고정 형식 Fortran 77에서 자유 형식 Fortran 2008로 변환했다."
+  - "에이전트는 격리된 워크트리에서 Claude Code 역할로 실행했다."
+  - "병합 기준은 출력 에너지의 비트 단위 재현이고, 12개 파일 모두 표준 시험 51개를 화학적으로 의미 있는 차이 없이 통과했다."

@@ -1,0 +1,17 @@
+id: ws_aaihpc144
+type: Presentation
+kind: paper
+label: "PROV-AGENT-LOOP: Provenance Data Management for Agentic Loop Engineering"
+session: sess120
+time: "12:12-12:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc144"
+authors: [valesca-moura, gabriele-padovani, daniel-de-oliveira, rafael-ferreira-da-silva, renan-souza]
+addresses: [provenance-reproducibility]
+proposes: [provenance-logging, prov-loop-model]
+targets: [ai-agents, leadership-facility]
+summary_ko: >
+  LLM 에이전트는 코드를 바꾸고, 로그를 읽고, 계획을 고치고, 도구를 호출하고, 목표 달성 여부를 판단하므로, 계산 결과에 미친 영향을 설명할 출처 기록이 필요하다. PROV-AGENT-LOOP는 목표-계획-행동-평가 주기를 질의 가능한 출처로 기록하는 W3C PROV 호환 모델로, 루프 구조, 통신, 평가, 권한 부여, 위임, 호출 증거를 담는다. Flowcept에 구현해 에이전트, 워크플로, ML, 스케줄러, 텔레메트리 기록을 한 데이터베이스에 모은다.
+claims:
+  - "Frontier에서 AI 에이전트가 Dask 기반 학습 캠페인을 조정하는 사례로 검증했다."
+  - "교차 도메인 질의 8개에 구조적 증거 완전성 100%로 답했고, 이는 워크플로만 기록한 기준선의 두 배가 넘는다."
+  - "토큰 사용량과 데이터베이스 크기는 통제된 오버헤드 측정이 아니라 관측값이다."
