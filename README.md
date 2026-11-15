@@ -54,7 +54,6 @@ claims:
 - (124) High Performance Python for Science at Scale (2026-11-15)
 - (123) ISAV26: In Situ AI, Analysis and Visualization (2026-11-15)
 - (117) XLOOP 2026: The 8th Annual Workshop on Extreme-Scale Experiment-in-the-Loop Computing (2026-11-15)
-- (168) Building Scalable Agentic Systems for Science: Concepts, Architectures, and Hands-On with Academy (2026-11-15)
 - (113) 21st Workshop on Workflows in Support of Large-Scale Science (WORKS26) (2026-11-15)
 - (118) 15th International Workshop on Runtime and Operating Systems for Supercomputers (ROSS 2026) (2026-11-15)
 - (111) 13th Annual International Workshop on Innovating the Network for Data Intensive Science (INDIS) (2026-11-15)

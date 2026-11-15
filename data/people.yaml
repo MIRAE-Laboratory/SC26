@@ -399,8 +399,6 @@ david-weston: {name: "David Weston", orgs: [ornl]}
 tim-dunn: {name: "Tim Dunn", orgs: [slac]}
 justas-balcas: {name: "Justas Balcas", orgs: [esnet]}
 bo-su: {name: "Bo Su", orgs: [slac]}
-alok-kamatar: {name: "Alok Kamatar", orgs: [uchicago]}
-greg-pauloski: {name: "Greg Pauloski", orgs: [nvidia]}
 anirban-mandal: {name: "Anirban Mandal", orgs: [renci]}
 nolan-cutler: {name: "Nolan Cutler", orgs: [oregonstate]}
 chia-chen-kuo: {name: "Chia-Chen Kuo", orgs: [oregonstate]}

@@ -9,7 +9,6 @@ sessions:
   - sessions/sess124.yaml
   - sessions/sess123.yaml
   - sessions/sess117.yaml
-  - sessions/sess168.yaml
   - sessions/sess113.yaml
   - sessions/sess118.yaml
   - sessions/sess111.yaml
@@ -103,7 +102,6 @@ presentations:
   - presentations/ws_xloop107.yaml
   - presentations/ws_xloop110.yaml
   - presentations/misc181.yaml
-  - presentations/tut133.yaml
   - presentations/misc133.yaml
   - presentations/ws_worksp118.yaml
   - presentations/ws_worksp101.yaml
