@@ -1,0 +1,15 @@
+id: misc170
+type: Presentation
+kind: invited
+label: "HPC means Heterogeneity, Performance and Complexity"
+session: sess131
+time: "09:05-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=misc170"
+authors: [estela-suarez]
+addresses: [heterogeneity-complexity, energy-cost-carbon, hardware-selection]
+proposes: []
+targets: [heterogeneous-racks, quantum-hpc-systems, hpc-processors]
+summary_ko: "HPC를 쓰는 응용의 수와 계산·데이터 수요가 늘고 있음. 무어의 법칙이 물리적 한계에 닿으며 맞춤형 처리 장치, 가속기, 양자 컴퓨팅, 뉴로모픽 컴퓨팅 같은 접근이 나옴. 센터는 다양한 응용에 맞고 여러 처리 기술을 통합하며 에너지와 운영 비용을 줄이는 시스템을 지어야 함."
+claims:
+  - "노드 구조가 다른 여러 구획으로 이뤄진 이기종 설계는 시스템 운영, 병렬 프로그래밍, 성능 분석, 응용 최적화를 더 복잡하게 함."
+  - "HPC의 흐름을 개관하고 과제와 기회를 짚음. 공개 초록에는 수치가 없음."

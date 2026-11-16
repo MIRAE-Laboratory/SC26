@@ -1,0 +1,16 @@
+id: misc141
+type: Presentation
+kind: invited
+label: "Orchestrating QCSC Workflows in Containerized HPC Environments"
+session: sess128
+time: "09:10-09:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=misc141"
+authors: [shweta-salaria]
+addresses: [quantum-hpc-integration, workflow-composition-effort]
+proposes: [environment-wrapper, container-wheel-deployment]
+targets: [quantum-hpc-systems, workflow-systems, container-runtimes]
+summary_ko: "양자 중심 슈퍼컴퓨팅은 양자 프로세서와 HPC 자원을 한 워크플로에서 함께 쓰며, 서로 다른 자원, 실행 환경, 스케줄러를 조율해야 함. 양자 자원을 HPC 환경에 들이는 소프트웨어 스택과 워크플로 조율 도구를 통합함."
+claims:
+  - "컨테이너화한 개발 환경에서 빌드, 디버깅, 통합 시험을 한 뒤 더 큰 HPC 시스템과 양자 자원으로 확장함."
+  - "양자 표본 추출, 고전 처리, HPC 기반 대각화를 결합한 화학 워크플로로 시연함."
+  - "이기종 양자·HPC 스택에서 검증하며 얻은 실무 교훈과 과제를 정리함. 공개 초록에는 수치가 없음."

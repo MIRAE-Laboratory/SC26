@@ -67,6 +67,8 @@ claims:
 - (129) PDSW'26: The 11th International Parallel Data Systems Workshop (2026-11-16)
 - (141) AI on HPC: Performance Engineering, Challenges and Opportunities (2026-11-16)
 - (147) High-Accuracy Computing on Low-Precision Hardware (2026-11-16)
+- (128) 8th International Workshop on Containers and New Orchestration Paradigms for Isolated Environments in HPC (CANOPIE-HPC) (2026-11-16)
+- (131) 8th Workshop on Programming and Performance Visualization Tools (ProTools) (2026-11-16)
 
 프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`, `ws_corr114`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
 

@@ -1,0 +1,16 @@
+id: ws_prot113
+type: Presentation
+kind: paper
+label: "PInsight: Enabling In-Situ Performance Analysis for Parallel Applications"
+session: sess131
+time: "11:42-12:06"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot113"
+authors: [yonghong-yan, chunhua-liao]
+addresses: [performance-diagnosis-gap, delayed-feedback]
+proposes: [selective-measurement, in-situ-inference]
+targets: [performance-tools, parallel-programming-models]
+summary_ko: "MPI, OpenMP, 두 GPU 프로그래밍 모델에 걸친 병렬 응용을 실행 중에 분석하는 틀로, 시간이 맞춰진 하나의 추적을 만듦. 지금의 분석은 사후 방식이어서 튜닝 가설마다 전체를 다시 돌려야 함."
+claims:
+  - "비동기 추적과 구간별 속도 제한 표본 추출을 결합함."
+  - "세밀한 걸러 내기, 추적 구간, 노드 수준의 GPU 활동 정책을 제공하고, 응용을 재시작하지 않고 실행 중에 재구성함."
+  - "구간이 끝나면 1초 미만의 멈춤으로 추적을 넘기고 분석을 시작해, 긴 실행을 측정과 분석의 반복으로 나눔."

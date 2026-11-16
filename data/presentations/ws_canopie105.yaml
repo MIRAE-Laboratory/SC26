@@ -1,0 +1,16 @@
+id: ws_canopie105
+type: Presentation
+kind: paper
+label: "CI for E4S: Build and Test Automation for a Containerized HPC-AI Software Stack"
+session: sess128
+time: "15:30-16:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canopie105"
+authors: [wyatt-spear, luke-peyralans, sameer-shende, ethan-sloan, michael-heroux]
+addresses: [software-sustainability, site-deployment-effort, provenance-reproducibility]
+proposes: [ci-automation, container-wheel-deployment]
+targets: [hpc-packaging, container-runtimes]
+summary_ko: "세 가지 CPU 구조와 세 GPU 벤더용 변형에 걸쳐 컨테이너화한 HPC·AI 소프트웨어 스택을 배포하는 일은 작은 팀에 벅참. 자동화 파이프라인과 시험 모음이 단계별 바이너리 캐시, 환경 빌드, 컨테이너 이미지 생성, 패키지별 간이 시험을 맡음."
+claims:
+  - "최신 판 기준으로 파이프라인당 작업 약 200개를 돌리고, 구조별로 CPU 패키지 최대 127개를 빌드하며, 시험 236개를 수행함."
+  - "x86 CPU 전체 빌드는 5~8시간, 캐시가 있으면 분 단위로 끝남."
+  - "자동화가 유지 부담을 줄이고 재현성을 높이며 외부 기여의 문턱을 낮춤."

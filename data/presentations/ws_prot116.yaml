@@ -1,0 +1,16 @@
+id: ws_prot116
+type: Presentation
+kind: paper
+label: "Probe Less, Learn More: Characterizing and Correcting eBPF Instrumentation Overhead"
+session: sess131
+time: "11:18-11:42"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot116"
+authors: [viraj-thakkar, timo-soekler, john-byrne, myungjun-son, sekwon-lee, harumi-kuno, aditya-dhakal]
+addresses: [observability-overhead, benchmark-validity]
+proposes: [selective-measurement, analytical-performance-model]
+targets: [performance-tools, os-kernel]
+summary_ko: "낮은 부담의 추적 수단으로 널리 쓰이는 커널 추적 기술이 마이크로초 규모의 사건에서는 큰 부담을 준다는 것을 보임. 부담을 발동한 탐침마다 내는 고정 비용과 그 위의 연산별 비용으로 나눔."
+claims:
+  - "부담은 탐침 정의의 수(추가 탐침당 약 3 ns)가 아니라 발동하는 사건의 종류 수(각 약 42 ns)를 따름."
+  - "빈 탐침 하나는 약 50 ns이고, 기록 갱신이나 시각 표시 한 번이 100~300 ns를 더함."
+  - "탐침을 붙이기 전에 추적이 대상을 얼마나 왜곡할지 예측하는 관측 예산을 유도함."

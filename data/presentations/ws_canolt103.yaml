@@ -1,0 +1,14 @@
+id: ws_canolt103
+type: Presentation
+kind: talk
+label: "Benchmarking Agentic AI Workflows with Charliecloud"
+session: sess128
+time: "09:50-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt103"
+authors: [silba-dowell]
+addresses: [workload-portability, agentic-science-benchmarking]
+proposes: [unprivileged-containers, comparative-benchmarking]
+targets: [ai-agents, llm-inference, container-runtimes]
+summary_ko: "에이전트 워크플로는 여러 단계의 추론, 도구 호출, 계획을 수행하며, 운영 프레임워크는 LLM 추론 엔진과 모델 추상화 계층으로 이를 조율함. 이런 구성을 권한 없이 도는 컨테이너와 결합하는 이유와 종단 성능을 재는 방법을 설명함."
+claims:
+  - "여러 HPC 시스템에 걸친 이식성이 컨테이너를 쓰는 이점임. 공개 초록에는 수치가 없음."

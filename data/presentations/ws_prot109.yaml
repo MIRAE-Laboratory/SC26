@@ -1,0 +1,15 @@
+id: ws_prot109
+type: Presentation
+kind: paper
+label: "Deriving Vendor-Agnostic GPU Metrics from AMD MI300A and NVIDIA H100 Hardware Counters"
+session: sess131
+time: "15:30-15:54"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot109"
+authors: [amr-abouelmagd, michael-mckinsey, david-boehme, stephanie-brink, olga-pearce]
+addresses: [measurement-comparability, performance-portability, benchmark-validity]
+proposes: [hardware-counter-analysis, portability-metrics]
+targets: [amd-gpu-systems, hpc-processors, performance-tools]
+summary_ko: "두 GPU 벤더는 하드웨어 계수기를 따로 설계해 이름, 세밀함, 의미가 다름. 배정밀도 연산과 메모리 계층 지표에 대해 두 GPU의 계수기 대응을 만들고 검증하며, 성능 모음의 커널 12개로 짝을 평가함."
+claims:
+  - "비슷해 보이는 계수기가 다른 양을 잴 수 있음. 한 벤더는 배정밀도 명령을 실행 묶음 단위로 보고하면서 스레드 64개 중 몇 개가 활성이었는지 알려 주지 않아, 같은 커널에서 최대 3.19배 많은 연산을 보고함."
+  - "보정 방법을 보이고, 맞지 않는 짝과 대응할 수 없는 지표까지 모두 공개함."

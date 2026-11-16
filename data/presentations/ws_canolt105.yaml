@@ -1,0 +1,16 @@
+id: ws_canolt105
+type: Presentation
+kind: talk
+label: "Secure integration and scaling for thousands of Jupyter sessions across hybrid cloud and HPC resources on Anvil"
+session: sess128
+time: "14:50-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt105"
+authors: [erik-gough, lj-lumas]
+addresses: [underused-resources, identity-access, user-support-load]
+proposes: [opportunistic-inference, user-dashboards, gpu-sharing]
+targets: [kubernetes-baremetal, job-scheduler, campus-clusters, container-runtimes]
+summary_ko: "국립과학재단이 지원하는 슈퍼컴퓨터의 Kubernetes 기반 노트북 서비스임. 1,000노드 규모의 Slurm 파티션과 Kubernetes 자원을 이어 수천 명에게 노트북, 코드 편집기, 리눅스 데스크톱을 제공함."
+claims:
+  - "공개 소프트웨어인 동적 노드 관리자가 유휴 HPC 노드를 필요할 때 Kubernetes 노드로 바꿔 용량을 넘겨 씀."
+  - "컨테이너가 사용자의 계정 번호로 돌아 공유 HPC 파일시스템에 접근함."
+  - "사용자는 Slurm에 배치 작업을 내고, GPU를 메모리 필요량에 따라 나눠 쓰며, 컨테이너와 AI 에이전트, MCP 도구를 쓸 수 있음."

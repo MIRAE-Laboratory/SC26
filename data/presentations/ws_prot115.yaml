@@ -1,0 +1,15 @@
+id: ws_prot115
+type: Presentation
+kind: paper
+label: "A Heuristic Based Cache Miss Classifier"
+session: sess131
+time: "12:06-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot115"
+authors: [mo-ath-qutaish, david-abramson, chao-jin, bronis-r-de-supinski, jeffrey-k-hollingsworth]
+addresses: [performance-diagnosis-gap, memory-bound-performance]
+proposes: [hardware-counter-analysis]
+targets: [performance-tools, hpc-processors]
+summary_ko: "프로파일러는 캐시 미스가 어디서 나는지는 보여 주지만 이유는 보여 주지 않음. 용량 부족과 집합 충돌은 겉보기에 같으나 처방이 다름. 다섯 가지 신호를 결합해 용량과 충돌 사이의 눈금으로 판정하는 설명 가능한 분류기를 제시함."
+claims:
+  - "프로그램 구성 12개와 데이터 객체 범위 48개에서, 독립적으로 만든 기준의 다수 레이블과 시험한 모든 경우에 일치함."
+  - "한 벤치마크에서 기준 도구의 2.32배 실행 시간이 듦."

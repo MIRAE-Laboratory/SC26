@@ -99,6 +99,10 @@ Problem:
   shared-fabric-interference: {label: Storage and compute interference on shared resources, label_ko: 공유 자원에서의 저장·계산 간섭, related: [network-congestion]}
   fp64-scarcity: {label: Shrinking double-precision capability of accelerators, label_ko: 가속기의 배정밀도 성능 축소, related: [hardware-selection, numerical-error]}
   software-sustainability: {label: Sustainability of community software, label_ko: 커뮤니티 소프트웨어의 지속 가능성, related: [binding-maintenance]}
+  container-hpc-mismatch: {label: Mismatch between cloud container practice and HPC, label_ko: 클라우드식 컨테이너 관행과 HPC의 충돌, related: [env-configuration, software-ecosystem-readiness]}
+  performance-diagnosis-gap: {label: Tools show where but not why, label_ko: 성능 문제의 원인을 알려 주지 못하는 도구, related: [ops-data-complexity]}
+  observability-overhead: {label: Overhead and data volume of instrumentation, label_ko: 계측의 부담과 데이터 과다, related: [telemetry-misalignment]}
+  measurement-comparability: {label: Incomparable vendor measurements, label_ko: 벤더 간 측정값의 비교 불가, related: [benchmark-validity]}
 Method:
   attack-trees: {label: Threat modeling with attack trees, label_ko: 공격 트리 기반 위협 모델링}
   tre-sde: {label: Trusted Research Environment (TRE/SDE), label_ko: 신뢰연구환경(TRE/SDE), related: [sensitive-data-governance]}
@@ -258,6 +262,12 @@ Method:
   compression-quality-prediction: {label: Compression quality prediction, label_ko: 압축 품질 예측, related: [neural-volume-compression]}
   burst-buffer: {label: Burst buffer for streaming data, label_ko: 스트리밍용 버스트 버퍼}
   fp64-emulation: {label: Double-precision emulation on low-precision units, label_ko: 저정밀 연산기로 배정밀도 구현, related: [mixed-precision]}
+  unprivileged-containers: {label: Unprivileged HPC container runtimes, label_ko: 권한 없이 도는 HPC 컨테이너, related: [container-wheel-deployment]}
+  no-restart-elasticity: {label: Runtime rescaling without restart, label_ko: 재시작 없는 실행 중 규모 조정, related: [resilient-campaign-execution]}
+  snapshot-restore: {label: Checkpoint snapshot restore for fast start, label_ko: 스냅숏 복원을 통한 빠른 기동}
+  ci-automation: {label: Automated build and test pipelines, label_ko: 빌드·시험 자동화 파이프라인}
+  hardware-counter-analysis: {label: Hardware-counter based analysis, label_ko: 하드웨어 계수기 기반 분석, related: [analytical-performance-model]}
+  tool-interface-spec: {label: Shared semantic interface for tools, label_ko: 도구 공용 의미 명세}
 System:
   ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터}
   kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스}
@@ -328,3 +338,5 @@ System:
   dense-linear-algebra: {label: Dense linear algebra kernels, label_ko: 밀집 선형대수 커널, related: [hpc-libraries]}
   processing-in-memory: {label: Processing-in-memory hardware, label_ko: 메모리 내 연산 장치}
   campus-clusters: {label: Campus and enterprise clusters, label_ko: 대학·기업 클러스터}
+  container-runtimes: {label: HPC container runtimes, label_ko: HPC 컨테이너 런타임, related: [hpc-packaging]}
+  performance-tools: {label: Performance measurement and analysis tools, label_ko: 성능 측정·분석 도구}

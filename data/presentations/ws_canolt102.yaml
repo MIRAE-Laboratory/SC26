@@ -1,0 +1,15 @@
+id: ws_canolt102
+type: Presentation
+kind: talk
+label: "Overlay Containers in Apptainer"
+session: sess128
+time: "16:30-16:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt102"
+authors: [dave-dykstra]
+addresses: [container-hpc-mismatch, site-deployment-effort]
+proposes: [unprivileged-containers]
+targets: [container-runtimes, hep-pipelines]
+summary_ko: "Apptainer는 여러 층을 쓰는 표준과 달리 HPC에 유리한 단일 층 이미지를 써 왔음. 이제 빌드 시점의 덧씌움 옵션이 추가되어, 정의한 추가·변경분과 기반 이미지를 가리키는 정보만 담은 이미지를 만듦."
+claims:
+  - "소프트웨어 프로젝트가 대부분의 소프트웨어를 담은 공용 기반 이미지를 만들고, 구성원이 작은 변경분을 자기 덧씌움 이미지에 더하는 용도임."
+  - "기반 이미지는 덜 자주 바뀌어 미리 배포해 둘 수 있으므로 배포가 쉬워짐."

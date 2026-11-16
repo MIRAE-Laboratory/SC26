@@ -1,0 +1,16 @@
+id: ws_canolt101
+type: Presentation
+kind: talk
+label: "Expanded Slurm container runtime support"
+session: sess128
+time: "16:00-16:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt101"
+authors: [nathan-rini, doug-jacobsen]
+addresses: [container-hpc-mismatch, service-composition]
+proposes: [tool-interface-spec]
+targets: [job-scheduler, container-runtimes]
+summary_ko: "Slurm 26.11은 기존 컨테이너 지원을 대체하는 새 런타임 플러그인 기능을 넣으며, 앞으로 모든 컨테이너 런타임 엔진의 핵심 연동 지점이 됨."
+claims:
+  - "커뮤니티가 Lua 연결 코드로 Slurm을 각 런타임에 맞출 수 있음."
+  - "명령줄의 유연성을 유지하면서 REST 인터페이스까지 지원함."
+  - "컨테이너 런타임이 Slurm의 관리용 이름 공간 플러그인과 이름 공간을 올바르게 겹쳐 쓸 수 있음."

@@ -1,0 +1,15 @@
+id: misc140
+type: Presentation
+kind: invited
+label: "The case for unprivileged containerization in HPC, or: Does software simplicity still matter in 2026?"
+session: sess128
+time: "14:00-14:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=misc140"
+authors: [reid-priedhorsky]
+addresses: [container-hpc-mismatch, software-ecosystem-readiness]
+proposes: [unprivileged-containers]
+targets: [container-runtimes]
+summary_ko: "컨테이너는 리눅스 커널을 뺀 의존성과 함께 응용을 포장하며, 오래된 HPC 코드와 새 코드 모두에 잘 맞았음. 그러나 HPC의 관행은 클라우드와, 특히 컨테이너 표준과 충돌함. 컨테이너는 본질적으로 단순하다고 주장하며, 단순함과 권한 없는 실행을 중심으로 만든 HPC 컨테이너 구현의 동기를 10년의 경험으로 되짚음."
+claims:
+  - "HPC와 클라우드의 전제가 특히 기계학습·AI 분야에서 어떻게 충돌하는지 살피고 가능한 해법을 제시함."
+  - "발표자 스스로 아이디어가 아직 완성되지 않았다고 밝히며 커뮤니티의 논의를 요청함."

@@ -9,5 +9,5 @@ authors: [felix-tomski, semih-burak, matthias-muller]
 addresses: []
 proposes: []
 targets: []
-summary_ko: "발표 페이지가 열리지 않아 초록을 읽지 못했음. 제목과 저자만 기록했으며, 저자 소속은 확인하지 못함."
+summary_ko: "발표 페이지가 열리지 않아 초록을 읽지 못했음. 제목과 저자만 기록함. 저자 소속은 같은 저자들의 다른 발표 페이지에서 확인함."
 claims: []

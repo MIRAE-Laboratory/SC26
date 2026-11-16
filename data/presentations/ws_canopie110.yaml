@@ -1,0 +1,17 @@
+id: ws_canopie110
+type: Presentation
+kind: paper
+label: "No-Restart Elasticity in an Adaptive Runtime System for Cloud-Native HPC"
+session: sess128
+time: "11:00-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canopie110"
+authors: [aditya-bhosale, laxmikant-kale]
+addresses: [failure-resilience, underused-resources]
+proposes: [no-restart-elasticity]
+targets: [task-runtimes, cloud-science-environments]
+summary_ko: "병렬 런타임 Charm++에 재시작 없는 규모 조정 기능을 넣어, 응용이 실행 중에 크기를 바꿈. 클라우드의 저가 인스턴스가 회수되기 전에 줄이고 대체 인스턴스로 다시 늘림. 살아남은 프로세스는 종료하지 않고 외부 조정자와 구성원을 협상한 뒤 상태를 유지한 채 재개함."
+claims:
+  - "재시작 기반 방식에서는 종료 절차가 부담의 최대 95%를 차지함."
+  - "인스턴스 4~32개에서 규모 조정 비용은 CPU 8~15 ms, GPU 7~11 ms로 재시작 기반 구현보다 두 자릿수 낮음."
+  - "GPU 장치 상태가 그대로 유지되어 체크포인트 데몬이 필요 없음."
+  - "동시 회수 8건의 비용은 실행 시간의 CPU 0.2%, GPU 0.6%임."

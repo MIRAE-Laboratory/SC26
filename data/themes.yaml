@@ -36,7 +36,7 @@ themes:
         refs: [ws_worksp128, ws_aaihpc107, ws_hust122, ws_aaihpc146]
       - head: 에이전트와 LLM 서비스가 운영 실무의 일부가 됨.
         text: 운영 현장에서는 에이전트가 절차 문서를 읽고 같은 작업 안에서 검증하고 보강하게 해 교대 사이에 사라지던 지식을 남겼음. 시뮬레이션 감시에서는 결정론적 조건이 걸러낸 상태만 멀티모달 에이전트가 판정해 틀린 계산의 39~68%를 아꼈음. 기관 자체의 LLM 서비스는 공정 배분 게이트웨이와 배치 시스템의 유휴 자원(노드 시간의 9.81%)을 쓰는 서빙으로 구성됨.
-        refs: [ws_hpcsysp105, ws_pdswwip113, ws_hpcsysp112, ws_aihpc107, misc144]
+        refs: [ws_hpcsysp105, ws_pdswwip113, ws_hpcsysp112, ws_aihpc107, misc144, ws_canopie102, misc171]
       - head: 한국 연구기관에의 적용(제안) - 사용자 지원과 운영 분석부터 시작하고, 계측과 기록을 먼저 갖춤.
         text: 위험이 낮고 효과를 재기 쉬운 영역은 사용자 지원과 운영 분석임. 과거 티켓, 문서, 기존 텔레메트리로 시작할 수 있고 외부로 데이터를 보내지 않는 로컬 모델로도 결과가 나왔음. 연구 코드와 실험 장비로 넓히기 전에 에이전트 사용량의 계측, 실행 경계, 행동 기록을 갖추는 순서를 권함.
         refs: [ws_hust106, ws_indis105, ws_pmbsf148, ws_aaihpc144]
@@ -48,7 +48,7 @@ themes:
                prov-loop-model, standardized-run-metadata, llm-domain-validity, untrusted-input, fuzzing, site-profiles, power-measurement-fidelity, multi-tier-power-metering,
                trust-in-automated-decisions, repair-loop, physical-feasibility, physics-aware-training, memory-safety,
                formal-verification, behavioral-equivalence-checks, exhaustive-oracle-testing, fp-exception-detection, probabilistic-error-analysis, fp-exceptions, numerical-error,
-               parallel-program-correctness, silent-training-failures, silent-data-corruption, dataset-reuse-context-loss, domain-bounds, deterministic-replay, failure-taxonomy, fault-injection]
+               parallel-program-correctness, measurement-comparability, observability-overhead, performance-diagnosis-gap, hardware-counter-analysis, silent-training-failures, silent-data-corruption, dataset-reuse-context-loss, domain-bounds, deterministic-replay, failure-taxonomy, fault-injection]
     diagram:
       type: flow
       title: 검증의 사다리 - 아래로 갈수록 더 많은 오류를 잡음
@@ -71,8 +71,8 @@ themes:
         text: 알려진 문법은 컴파일러가, 연결 코드는 도구가, 장애 원인은 로그 추출이, 사이트 정보는 측정과 문서 검증이, 보안 판정은 모델 밖의 레이블 전파가 처리함. LLM은 처음 보는 경우와 서술을 맡음. 이 분업이 코드 변환, 사용자 지원, 워크플로 이식, 보안 중재에서 각각 독립적으로 나왔음.
         refs: [ws_aaihpc131, ws_aaihpc139, ws_hust122, ws_worksp111, ws_aaihpc132]
       - head: 측정 자체가 검증 대상임.
-        text: 같은 AI 워크로드를 세 해상도로 재면 값이 다르고, 성긴 계측은 오류 표시 없이 틀린 숫자를 냄. 스토리지 종합 점수는 단계별 관계를 가리고, 같은 하드웨어가 소프트웨어 빌드 하나로 2.1배 달라지며, 같은 사양의 장치가 에너지에서 36.9% 차이 남. 이식성은 응용에 따라 62%에서 89%까지 갈려 단일 수치로 말할 수 없음.
-        refs: [ws_eesp144, ws_pmbss101, ws_pmbss103, ws_pmbsf137, ws_p3hpc112]
+        text: 같은 AI 워크로드를 세 해상도로 재면 값이 다르고, 성긴 계측은 오류 표시 없이 틀린 숫자를 냄. 스토리지 종합 점수는 단계별 관계를 가리고, 같은 하드웨어가 소프트웨어 빌드 하나로 2.1배 달라지며, 같은 사양의 장치가 에너지에서 36.9% 차이 남. 이식성은 응용에 따라 62%에서 89%까지 갈려 단일 수치로 말할 수 없음. 이름이 같은 GPU 계수기도 벤더마다 세는 것이 달라 최대 3.19배 차이가 났음.
+        refs: [ws_eesp144, ws_pmbss101, ws_pmbss103, ws_pmbsf137, ws_p3hpc112, ws_prot109]
       - head: 정형 검증이 AI와 결합해 실용 범위로 들어옴.
         text: 수치 라이브러리는 명세를 손으로 쓰기 어려워 정형 검증이 드물었음. LLM이 문서에서 작은 계약을 뽑고 결정론적 도구가 검사하는 방식으로 PETSc 함수의 버그를 찾았음. 대형 코드에서는 알고리즘이 필요로 하는 인터페이스만 작은 모델로 뽑아, 입력을 기호로 두고 질량 보존을 증명했음. 반대로 LLM 판정은 결함 변형 13개 중 3개를 받아들여 검증 수단이 되지 못했음.
         refs: [ws_corr112, ws_corr113, ws_corr111, ws_corr107]
@@ -97,7 +97,8 @@ themes:
                co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability,
                portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning,
                gpu-io-path, gpu-native-io, shared-fabric-interference, node-local-staging, contention-aware-io-placement, large-data-migration, burst-buffer, cross-layer-tracing,
-               fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, federated-allocation-platform, hardware-enforced-isolation, gpu-sharing, llm-training-scaling]
+               fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, federated-allocation-platform, hardware-enforced-isolation, gpu-sharing, llm-training-scaling,
+               container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore]
     diagram:
       type: flow
       loop: 결과와 결정이 다음 실험과 계산으로 되돌아감

@@ -1,0 +1,15 @@
+id: ws_canolt106
+type: Presentation
+kind: talk
+label: "Charliecloud: Image Build Optimization for AI Workloads"
+session: sess128
+time: "14:40-14:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt106"
+authors: [dionne-bang, angelica-loshak, jordan-ogas]
+addresses: [env-configuration]
+proposes: [unprivileged-containers]
+targets: [container-runtimes]
+summary_ko: "Git 기반 이미지 빌드 캐시는 층 기반 캐시보다 구조적 이점이 있으나, Git이 모든 파일 종류와 메타데이터를 추적하지 못해 빌드 명령마다 이미지 전체를 훑음. 파일 변경을 감시하는 방식으로 이를 줄이려 함."
+claims:
+  - "감시는 일부 명령을 빠르게 하지만 다른 명령은 느리게 함. 바뀐 파일이 많을수록 이득이 줄어 손해로 바뀜."
+  - "감시의 이점은 살리고 비용은 줄이는 혼합 전략을 목표로 함. 공개 초록에는 수치가 없음."

@@ -1,0 +1,15 @@
+id: ws_canolt104
+type: Presentation
+kind: talk
+label: "The Bipartible Architecture Pattern: Transparently Directing HTTP Requests over InfiniBand"
+session: sess128
+time: "16:10-16:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt104"
+authors: [richard-henwood, john-lockman, luke-wilson]
+addresses: [site-deployment-effort, network-congestion]
+proposes: [accelerated-transport]
+targets: [hpc-network, container-runtimes]
+summary_ko: "워크로드 구현이나 네트워크 설정을 바꾸지 않고 HTTP 트래픽을 고속 내부망으로 돌리는 구조를 제안함. 호스트의 서비스가 HTTP 요청을 가로채 전역 파일시스템 요청으로 바꿔, 인터페이스는 유지하면서 데이터는 고속망으로 보냄."
+claims:
+  - "객체 저장소와 패키지 저장소용 시제품으로 실현 가능성을 보임."
+  - "과학 소프트웨어 컨테이너를 대규모로 배치할 때의 성능 문제에 대한 여러 접근 중 하나로 제시함. 공개 초록에는 수치가 없음."

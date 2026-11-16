@@ -1,0 +1,16 @@
+id: misc142
+type: Presentation
+kind: invited
+label: "The American Science Cloud and the Genesis Mission"
+session: sess128
+time: "16:40-17:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=misc142"
+authors: [sarp-oral, zach-mayes]
+addresses: [cross-facility-integration, service-composition]
+proposes: [decoupled-service-ecosystem]
+targets: [genesis-platform, kubernetes-baremetal, leadership-facility]
+summary_ko: "Genesis Mission은 AI 기반 과학 발견을 앞당기려는 미국 에너지부의 사업임. 핵심인 American Science Cloud는 리더십 컴퓨팅 시설, 국립연구소, 실험 사용자 시설을 하나의 환경으로 잇는 보안형 연합 플랫폼임."
+claims:
+  - "에너지부 연구소 전체에 걸친 사업 개요를 전함."
+  - "플랫폼 구조와 컨테이너, Kubernetes, 클라우드 인프라 같은 클라우드 네이티브 기술의 역할을 다룸."
+  - "플랫폼이 풀려는 주요 과제와 향후 목표를 논의함. 공개 초록에는 수치가 없음."

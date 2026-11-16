@@ -1,0 +1,15 @@
+id: ws_canopie102
+type: Presentation
+kind: paper
+label: "Agentic Orchestration of HPC Applications in Cloud"
+session: sess128
+time: "10:30-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canopie102"
+authors: [vanessa-sochat, daniel-milroy]
+addresses: [config-evaluation-cost, site-deployment-effort, agent-job-execution]
+proposes: [agentic-config-optimization, multi-agent-workflow]
+targets: [ai-agents, kubernetes-baremetal, cloud-science-environments, scientific-apps]
+summary_ko: "HPC 응용의 클라우드 실험 전 과정을 LLM 기반 에이전트가 맡도록 설계함. 컨테이너 빌드, Kubernetes 배치, 최적화, 확장 실험 조율이 그 범위임."
+claims:
+  - "잘 알려진 HPC 응용 5종에 대해 여러 플랫폼용 컨테이너 이미지를 만들고, Kubernetes의 인스턴스 유형 21가지에서 성능 지표를 최적화함."
+  - "성공한 에이전트 확장 실험, 완료 시간을 줄이는 설계, 에이전트 설계와 협업의 권장 사항을 제시함."

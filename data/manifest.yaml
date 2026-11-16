@@ -24,6 +24,8 @@ sessions:
   - sessions/sess132.yaml
   - sessions/sess147.yaml
   - sessions/sess129.yaml
+  - sessions/sess128.yaml
+  - sessions/sess131.yaml
 presentations:
   - presentations/ws_shpc101.yaml
   - presentations/ws_shpc102.yaml
@@ -285,3 +287,30 @@ presentations:
   - presentations/ws_pdswwip101.yaml
   - presentations/ws_pdswwip108.yaml
   - presentations/ws_pdswwip114.yaml
+  - presentations/misc141.yaml
+  - presentations/ws_canolt103.yaml
+  - presentations/ws_canopie102.yaml
+  - presentations/ws_canopie110.yaml
+  - presentations/ws_canopie104.yaml
+  - presentations/ws_canopie113.yaml
+  - presentations/misc140.yaml
+  - presentations/ws_canolt106.yaml
+  - presentations/ws_canolt105.yaml
+  - presentations/ws_canopie105.yaml
+  - presentations/ws_canolt101.yaml
+  - presentations/ws_canolt104.yaml
+  - presentations/ws_canolt107.yaml
+  - presentations/ws_canolt102.yaml
+  - presentations/misc142.yaml
+  - presentations/misc170.yaml
+  - presentations/ws_prot104.yaml
+  - presentations/ws_prot105.yaml
+  - presentations/ws_prot116.yaml
+  - presentations/ws_prot113.yaml
+  - presentations/ws_prot115.yaml
+  - presentations/misc171.yaml
+  - presentations/ws_prot109.yaml
+  - presentations/ws_prot110.yaml
+  - presentations/ws_prot112.yaml
+  - presentations/ws_prot111.yaml
+  - presentations/ws_prot106.yaml

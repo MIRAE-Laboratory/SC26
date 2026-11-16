@@ -1,0 +1,16 @@
+id: ws_prot104
+type: Presentation
+kind: paper
+label: "Orion: Observability framework for hybrid workflow-centric I/O monitoring in HPC systems"
+session: sess131
+time: "10:30-10:54"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot104"
+authors: [hariharan-devarajan, ray-a-o-sinurat, izzet-yildirim, olga-kogiou, aniruddha-marathe, nikoli-dryden]
+addresses: [observability-overhead, ops-data-complexity]
+proposes: [selective-measurement, io-characterization]
+targets: [performance-tools, workflow-systems, hpc-storage-systems]
+summary_ko: "워크플로 중심의 입출력 모니터링 틀로, 사용자가 구간마다 시간·공간 계측의 세밀함을 동적으로 고름. 관심 구간에서는 중요한 입출력 사건을 잡고 나머지는 집계된 모습만 유지함."
+claims:
+  - "추적과 프로파일을 초당 35만~115만 사건의 속도로 맞춤."
+  - "대규모 천문 영상 워크플로와 LLM 미세조정에서 선택적 집계가 추적 사건을 6.8~36배 줄이고도 심각한 병목의 상위 순위를 100% 맞힘."
+  - "이기종 시스템 두 곳 사이에서 옮겨 쓸 수 있음."

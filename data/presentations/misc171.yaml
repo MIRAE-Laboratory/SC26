@@ -1,0 +1,15 @@
+id: misc171
+type: Presentation
+kind: invited
+label: "Accelerating HPC Performance Analysis with AI Agents"
+session: sess131
+time: "14:00-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=misc171"
+authors: [kevin-huck]
+addresses: [performance-diagnosis-gap, config-evaluation-cost]
+proposes: [performance-agent, skill-files, hardware-counter-analysis]
+targets: [ai-agents, performance-tools, amd-gpu-systems]
+summary_ko: "AI 에이전트는 명령줄 데이터 수집, 매개변수 실험 결과 관리, 알려진 구조에 성능 모델 적용, 하드웨어 계수기 해석, 컴파일러 보고서와 어셈블리의 정적 분석 같은 성능 분석 작업을 자동화할 수 있음."
+claims:
+  - "HPC 축소 응용을 분석한 성공 사례를 소개함. 한 성능 모음을 GPU에서 분석해 커널 하나에서 34배 향상을 찾아냄."
+  - "교훈과 한계를 논의하고, 에이전트의 효과를 높이려면 도구 개발자가 제공해야 할 절차 문서, 인터페이스, 규칙을 제시함."

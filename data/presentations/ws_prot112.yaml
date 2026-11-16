@@ -1,0 +1,16 @@
+id: ws_prot112
+type: Presentation
+kind: paper
+label: "An Omnistat-Guided Workflow for Energy-Efficiency Analysis"
+session: sess131
+time: "16:18-16:42"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot112"
+authors: [antigoni-georgiadou, nicholas-frontiere, bronson-messer, j-d-emberson, james-white-iii, jorda-polo, bruno-alvarez, karl-schulz, woong-shin, arthur-lorenzon]
+addresses: [energy-performance-tradeoff, power-measurement-fidelity, node-variation]
+proposes: [infrastructure-telemetry, energy-profiling]
+targets: [power-telemetry, mpi-simulations, amd-gpu-systems, leadership-facility]
+summary_ko: "시각이 찍힌 노드와 가속기 수준의 텔레메트리를 응용의 타이머와 알고리즘 단계에 맞추는 작업 흐름임. 도구는 사용자 권한으로 돌고 코드 수정이나 재컴파일이 필요 없음."
+claims:
+  - "64노드, 가속기 512개, 625단계의 우주론 유체역학 시뮬레이션에 적용함."
+  - "랭크 간 시간 차이가 가속기의 사용률, 주파수, 전력, 에너지로 어떻게 번지는지 보임."
+  - "단계별 에너지를 장치 간 전력 분산과 연결해, 부하 분산을 볼 구간과 전력 관리의 이득이 있을 단계를 찾음."

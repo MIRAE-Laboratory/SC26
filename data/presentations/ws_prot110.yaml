@@ -1,0 +1,16 @@
+id: ws_prot110
+type: Presentation
+kind: paper
+label: "Fantastic Hardware Counters and How to Use Them for Noise-Resilient Performance Modeling"
+session: sess131
+time: "15:54-16:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot110"
+authors: [alexander-gei, ahmad-tarraf, felix-wolf]
+addresses: [node-variation, benchmark-validity]
+proposes: [hardware-counter-analysis, analytical-performance-model]
+targets: [performance-tools, mpi-simulations]
+summary_ko: "성능 모델은 확장성 결함을 드러내고 확장을 예측하지만, 잡음 섞인 시간 측정이 모델을 왜곡함. 하드웨어 계수기가 대안이나 모두가 잡음에 강하거나 확장 거동을 반영하지는 않음. 계수기를 고르는 단계를 더함."
+claims:
+  - "잡음 내성 순위의 꺾이는 지점에서 자르고, 기준과 비교해 모델링 품질을 확인하며, 중복되는 계수기를 묶음."
+  - "고른 계수기에서 모델의 항 구조를 유도하고 실행 시간에서는 계수만 맞춤."
+  - "세 가지 코드에서 모델 오차를 최대 75% 줄이면서 측정 수고는 기존 수준을 유지함."

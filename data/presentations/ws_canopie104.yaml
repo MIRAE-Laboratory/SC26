@@ -1,0 +1,16 @@
+id: ws_canopie104
+type: Presentation
+kind: paper
+label: "Characterizing LLM Inference Performance on a WebAssembly Runtime"
+session: sess128
+time: "11:30-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canopie104"
+authors: [aono-shigematsu, mari-yamaoka, nozomi-aoki, akira-hirai, masahiro-miwa, masato-oguchi]
+addresses: [llm-serving-efficiency, workload-portability, memory-bound-performance]
+proposes: [comparative-benchmarking, numa-aware-scheduling]
+targets: [llm-inference, container-runtimes]
+summary_ko: "웹어셈블리 기반 LLM 런타임을 네이티브 실행과 다중 소켓 노드에서 비교함. 백엔드, 빌드 설정, 프롬프트를 맞춰 실행 환경만 다르게 함."
+claims:
+  - "10억~80억 파라미터 모델, 스레드 수, 문맥 길이, GPU 적재 비율을 바꿔도 GPU에 전부 올리면 성능이 같음."
+  - "CPU만 쓸 때 최대 1.38배 차이가 나며, 원인은 웹어셈블리의 부담이 아니라 주로 호스트 쪽 할당이 정하는 작업 버퍼의 페이지 내 위치임."
+  - "코어와 메모리를 한 노드에 묶으면 차이가 1.07~1.13배로, 작업 버퍼를 주 힙에서 할당하면 1.02~1.04배로 줄어듦."

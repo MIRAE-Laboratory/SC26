@@ -1,0 +1,16 @@
+id: ws_prot105
+type: Presentation
+kind: paper
+label: "DataCrumbs: Efficient Cross-Layer Data Capture for Explainable I/O Performance in HPC Storage Stacks"
+session: sess131
+time: "10:54-11:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot105"
+authors: [hariharan-devarajan, sarah-neuwirth, chen-wang, ray-a-o-sinurat, neeraj-rajesh, jay-lofstead, vanessa-sochat, daniel-milroy, thomas-scogland]
+addresses: [performance-diagnosis-gap, observability-overhead]
+proposes: [cross-layer-tracing, selective-measurement]
+targets: [performance-tools, hpc-storage-systems]
+summary_ko: "기존 도구는 인터페이스 수준의 통계로 무슨 일이 있었는지는 보여 주지만 이유는 보여 주지 못해, 성능 변동이 잡음으로 치부되곤 함. 커널 추적 기술은 부담이 낮지만 그대로 쓰면 데이터가 넘침. 함수 탐침으로 사용자 공간 런타임에서 커널의 파일시스템 경로까지 선택적이고 세밀한 데이터를 모음."
+claims:
+  - "함수 8,723개를 계측하며 부담은 프로파일링 0.1%, 추적 3% 미만임."
+  - "시간 창 기반의 병렬 사건 연결 알고리즘으로 계층 간 원인 분석을 확장함."
+  - "워크로드 넷에서 사용자 공간 도구로는 보이지 않는 사실을 드러냄. 미리 읽기 설정 조정으로 한 워크플로의 입출력 시간이 1.35배 줄어듦."

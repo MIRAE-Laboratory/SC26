@@ -1,0 +1,15 @@
+id: ws_prot106
+type: Presentation
+kind: paper
+label: "Novel Profiling Pipeline for Replay-Based Performance Analysis"
+session: sess131
+time: "17:06-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot106"
+authors: [didem-unat, javid-baydamirli, mohammad-issa, ilyas-turimbetov, magnus-strengert]
+addresses: [performance-diagnosis-gap, parallel-program-correctness]
+proposes: [selective-measurement]
+targets: [performance-tools, gpu-communication]
+summary_ko: "재생식 프로파일러는 코드를 지표 묶음마다 다시 돌려 하드웨어 지표를 모으는데, 랭크들이 함께 진행해야 하는 다중 GPU 통신 프로그램에서는 이 방식이 깨짐. 프로파일러 쪽 동기화와, 의존하는 커널을 랭크에 걸쳐 맞춰 재생하는 묶음 알고리즘을 제안함."
+claims:
+  - "지표 집합을 프로파일러 인스턴스에 나눠 맡기고 프로세스별 보고를 하나의 프로파일로 합침."
+  - "벤더의 프로파일러에 구현해 교착을 없애고, 단일 GPU 프로파일링 대비 최대 재생 횟수를 최대 3.50배 줄이면서 데이터 품질을 유지함."
