@@ -6,8 +6,8 @@ session: sess157
 time: "11:20-11:40"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss109"
 authors: [kevin-menear]
-addresses: [energy-performance-tradeoff, config-evaluation-cost]
-proposes: [frequency-steering, resource-prediction]
+addresses: [energy-performance-tradeoff, config-evaluation-cost, resource-prediction]
+proposes: [frequency-steering]
 targets: [materials-workflows, hpc-processors]
 summary_ko: "GPU 클록을 낮추면 전자구조 계산 작업의 에너지를 제한된 속도 저하로 줄일 수 있지만 가장 좋은 클록은 작업마다 다름. 작업이 돌기 전에 입력 파일에서 클록을 고름."
 claims:
