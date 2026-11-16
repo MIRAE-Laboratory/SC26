@@ -6,7 +6,7 @@ session: sess111
 time: "11:35-11:40"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess111&id=ws_indis112"
 authors: [mariam-kiran, k-k-ramakrishnan, harvey-newman, puneet-sharma, rafael-ferreira-da-silva]
-addresses: [science-unaware-networks, cross-facility-integration]
+addresses: [network-congestion, cross-facility-integration]
 proposes: [science-aware-networking]
 targets: [research-networks, self-driving-labs]
 summary_ko: "현재 연구망은 수동적이고, 실어 나르는 워크플로와 무관하게 패킷 전달만 최적화해 분산 실험과 다시설 워크플로에서 병목이 생김. SciNet은 네트워크 제어 평면에 AI를 넣어 과학 워크플로를 관찰하고, 네트워크 수요를 예측하고, 사람 개입 없이 조치하는 구상임."

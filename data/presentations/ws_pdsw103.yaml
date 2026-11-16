@@ -6,7 +6,7 @@ session: sess129
 time: "14:40-15:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw103"
 authors: [zhaobin-zhu, sarah-neuwirth]
-addresses: [shared-fabric-interference, pipeline-config-tuning]
+addresses: [network-congestion, pipeline-config-tuning]
 proposes: [contention-aware-io-placement]
 targets: [hpc-storage-systems]
 summary_ko: "저장 대상을 공유하면 다른 작업의 부하에 따라 쓰기 대역폭이 출렁임. 운영 중인 파일시스템 셋에서 혼잡과 한산의 차이는 순간적이어서 튜닝은 작업마다 측정해야 함. 권한이 필요 없는 튜너가 쓰기 탐침으로 대상별 지연을 재고, 튜닝할지 정하고, 단순한 모델로 배치를 고르고, 작업을 한산한 대상에 무작위로 흩음."

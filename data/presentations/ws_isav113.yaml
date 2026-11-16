@@ -7,7 +7,7 @@ time: "17:00-17:10"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav113"
 authors: [yuta-nakasaki, kinari-matsuzaki, naohisa-sakamoto, jorji-nonaka]
 addresses: [data-deluge]
-proposes: [image-based-surrogates]
+proposes: [surrogate-substitution]
 targets: [in-situ-visualization, neural-surrogates]
 summary_ko: >
   이미지 기반 인시투 가시화를 확장해, 여러 시점에서 만든 가시화 이미지를 대화형 시각 분석과 기계학습을 잇는 공통 표현으로 씀. 정보량이 많은 이미지만 남기는 기존 방법과 달리, 렌더링한 이미지 전체를 저장해 오프라인 대리모델 학습에 씀.

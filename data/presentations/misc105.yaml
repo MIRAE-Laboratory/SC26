@@ -7,7 +7,7 @@ time: "14:01-15:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=misc105"
 authors: [tongping-liu]
 addresses: [silent-training-failures, trust-in-automated-decisions]
-proposes: [deterministic-replay, failure-attribution]
+proposes: [provenance-logging, failure-attribution]
 targets: [distributed-training]
 summary_ko: "결함 허용은 그동안 체크포인트와 재시작 같은 복구를 뜻했고, 결함이 크래시나 멈춤으로 스스로 드러난다고 가정했음. 대규모 AI 학습에는 드러나지 않는 실패가 있음. 작업은 끝나고 손실 곡선도 정상인데 모델이 틀림. 이런 실패에는 복구가 부족할 뿐 아니라 해로움. 결함이 재시작마다 이어지기 때문임."
 claims:

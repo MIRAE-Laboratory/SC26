@@ -7,7 +7,7 @@ time: "11:40-11:50"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale105"
 authors: [haley-duba-sullivan, patxi-fernandez-zelaia, obaidullah-rahman, amirkoushyar-ziabari]
 addresses: [delayed-feedback, imaging-data-scale]
-proposes: [generative-reconstruction]
+proposes: [generative-vae]
 targets: [scientific-imaging, user-facility-beamline, nuclear-materials-research]
 summary_ko: "단층촬영의 처리량은 투영 수와 투영당 검출기 적분 시간에 따라 늘어나는 촬영 시간에 묶임. 적은 투영이나 낮은 선량으로 복원하려면 촬영 조건마다 학습한 사전 모델이 필요했음. 여러 영상 분야로 학습한 확산 모델 하나를 고정한 채 여러 단층촬영 문제의 사전 모델로 씀."
 claims:

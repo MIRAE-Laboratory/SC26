@@ -2,6 +2,7 @@ id: sess124
 type: Session
 label: "High Performance Python for Science at Scale"
 kind: Workshop
+topic: 성능·도구
 date: "2026-11-15"
 time: "14:00-17:30 CST"
 room: W178a
@@ -41,12 +42,21 @@ insights:
       refs: [ws_hppss105]
   korea:
     - head: 비 NVIDIA 가속기를 검토할 때는 소프트웨어 스택 검증이 먼저임.
+      stage: now
+      area: 도입 평가·하드웨어
+      needs: 후보 장비에서의 주요 라이브러리 동작 시험
       text: 하드웨어 성능보다, 쓰려는 프레임워크와 병렬화 방식이 그 시스템에서 실제로 도는지를 도입 전에 확인해야 함.
       refs: [ws_hppss104, ws_hppss103]
     - head: 자체 해석 코드에 파이썬 인터페이스를 자동 생성으로 붙임.
+      stage: prep
+      area: 운영·사용자 지원
+      needs: 바인딩 생성 도구와 코드의 인터페이스 정리
       text: 포트란·C++ 솔버를 파이썬에서 복사 없이 쓰게 하면 AI 프레임워크와의 결합 비용이 크게 줌. 수작업 바인딩은 유지가 어려움.
       refs: [ws_hppss101]
     - head: 기관 간 자원 연계는 서비스 계층을 나눠 설계함.
+      stage: long
+      area: 협력·거버넌스
+      needs: 공용 서비스와 기관 고유 서비스의 구분 합의
       text: 여러 기관의 계산 자원과 실험 시설을 묶는 플랫폼을 구상한다면, 미국의 서비스 분리 구조와 파이썬 조율 계층의 한계 목록이 참고 자료임.
       refs: [ws_hppss105, misc199]
   extra:

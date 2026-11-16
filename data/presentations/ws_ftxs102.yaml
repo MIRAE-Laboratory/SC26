@@ -7,7 +7,7 @@ time: "15:30-15:54"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=ws_ftxs102"
 authors: [trupesh-patel, purushotham-v-bangalore]
 addresses: [failure-data-incomparability, failure-resilience]
-proposes: [failure-taxonomy]
+proposes: [failure-attribution]
 targets: [ai-supercomputer, leadership-facility, hpc-network]
 summary_ko: "HPC 연구는 대개 사용자 오류가 작업 실패의 대부분이라 하고, 대규모 AI 학습 보고는 하드웨어를 탓함. 두 분야는 보고 방식이 달라 거의 비교되지 않았음. 어떤 자료는 원인을, 어떤 자료는 스케줄러의 결과 레이블을, 어떤 자료는 사건 발생률만 적음. 공개 자료를 조사해 공통 분류 체계로 옮김."
 claims:

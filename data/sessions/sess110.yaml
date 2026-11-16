@@ -2,6 +2,7 @@ id: sess110
 type: Session
 label: "2026 International Workshop on Performance, Portability, and Productivity in HPC (P3HPC)"
 kind: Workshop
+topic: 성능·도구
 date: "2026-11-15"
 time: "09:00-17:30 CST"
 room: W181c
@@ -47,12 +48,19 @@ insights:
       refs: [ws_p3hpc116]
   korea:
     - head: 포트란 해석 코드를 벤더에 묶이지 않고 GPU로 옮긴 사례가 있음.
+      stage: ref
+      area: 도입 평가·하드웨어
       text: 이스라엘의 원자력 연구 기관이 포트란 유체역학 코드를 표준 지시문만으로 다중 노드 GPU에 올렸음. 포트란 자산이 많은 기관이 참고할 경로임.
       refs: [ws_p3hpc127]
     - head: 핵융합 코드의 자동 튜닝 사례를 참고함.
+      stage: ref
+      area: 도입 평가·하드웨어
       text: 프랑스의 토카막 플라즈마 코드에서 뽑은 미니 응용이 자동 튜닝으로 전문가 수작업을 앞섰음.
       refs: [ws_p3hpc102]
     - head: 가속기 도입 평가에 이식성 점수를 넣음.
+      stage: now
+      area: 도입 평가·하드웨어
+      needs: 이식성 점수 계산에 쓸 자체 코드와 비교 대상 시스템
       text: 한 벤더에서의 최고 성능이 아니라 여러 플랫폼에서의 효율을 함께 보면 벤더 종속 위험이 수치로 드러남.
       refs: [ws_p3hpc112, ws_p3hpc114]
   extra:

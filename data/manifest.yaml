@@ -1,3 +1,4 @@
+bundle: {core: bundle-core.json, rest: bundle-rest.json}
 # 뷰어가 읽을 파일 목록. 세션·발표 파일을 추가하면 여기에도 한 줄 추가합니다.
 overview: overview.yaml
 themes: themes.yaml
@@ -27,9 +28,6 @@ sessions:
   - sessions/sess128.yaml
   - sessions/sess131.yaml
   - sessions/sess112.yaml
-  - sessions/sess119.yaml
-  - sessions/sess130.yaml
-  - sessions/sess146.yaml
   - sessions/sess148.yaml
   - sessions/sess149.yaml
   - sessions/sess153.yaml
@@ -341,22 +339,6 @@ presentations:
   - presentations/ws_sfwm118.yaml
   - presentations/misc197.yaml
   - presentations/miscp119.yaml
-  - presentations/misc184.yaml
-  - presentations/miscp118.yaml
-  - presentations/misc207.yaml
-  - presentations/misc208.yaml
-  - presentations/misc204.yaml
-  - presentations/misc205.yaml
-  - presentations/misc211.yaml
-  - presentations/misc212.yaml
-  - presentations/misc213.yaml
-  - presentations/misc224.yaml
-  - presentations/misc214.yaml
-  - presentations/misc229.yaml
-  - presentations/misc230.yaml
-  - presentations/misc231.yaml
-  - presentations/misc232.yaml
-  - presentations/miscp126.yaml
   - presentations/misc234.yaml
   - presentations/misc235.yaml
   - presentations/misc236.yaml

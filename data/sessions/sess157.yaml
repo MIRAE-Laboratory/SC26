@@ -2,6 +2,7 @@ id: sess157
 type: Session
 label: "Sustainable Supercomputing"
 kind: Workshop
+topic: 에너지·지속 가능성
 date: "2026-11-20"
 time: "08:30-12:00 CST"
 room: W179ab
@@ -40,12 +41,21 @@ insights:
       refs: [ws_ss105]
   korea:
     - head: 장비 교체 주기를 정할 때 제조 탄소를 함께 계산함.
+      stage: prep
+      area: 계측·에너지
+      needs: 장비별 제조 탄소 자료
       text: 새 장비가 효율이 높다고 빨리 바꾸는 것이 총배출을 늘릴 수 있음. 교체 심의의 평가 항목으로 넣을 수 있는 계산 틀이 제시됨.
       refs: [ws_ss103]
     - head: 재료 계산 작업에 클록 조정을 적용해 볼 만함.
+      stage: prep
+      area: 계측·에너지
+      needs: 작업별 민감도 측정과 클록 조정 권한
       text: 대상이 된 응용은 국내 재료·화학 연구에서도 널리 쓰는 전자구조 계산 코드임. 다른 GPU 기종으로는 보정 작업 한 건으로 옮겨졌음.
       refs: [ws_ss109]
     - head: 폐열의 가치를 금액으로 따져 봄.
+      stage: long
+      area: 계측·에너지
+      needs: 인근 열 수요 조사와 배관 투자
       text: 독일 센터의 냉각 데이터로 검증한 경제 모델이 온도별 산업 수요, 기반 시설 비용, 회수 기간을 계산함. 신규 전산동이나 AI 데이터센터 계획에 쓸 수 있음. 공개 초록에는 금액이 없음.
       refs: [ws_ss106]
   extra:

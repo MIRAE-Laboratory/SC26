@@ -7,7 +7,7 @@ time: "11:25-11:40"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop112"
 authors: [woong-shin, craig-a-bridges, frederic-suter, marshall-mcdonnell, rafael-ferreira-da-silva]
 addresses: [agent-state-fragmentation, human-in-outer-loop]
-proposes: [unified-state-graph, human-approval-gates]
+proposes: [agent-aware-memory, human-approval-gates]
 targets: [self-driving-labs, ai-agents]
 summary_ko: >
   자율 실험실의 안쪽 루프는 이미 닫혔지만, 합성·측정·시뮬레이션을 잇는 바깥 루프는 여전히 사람을 거치고, 그 사람의 결과가 다음 결정을 바꿈. 바깥 루프에서 일하는 에이전트에게는 필요한 상태가 없음. 그 정보가 누군가의 머릿속에 있거나, 서로 어긋나는 도구에 흩어져 있거나, 질의할 수 없는 파일에 있기 때문임. reach는 지식, 실행, 운영 상태를 탐색 가능한 그래프 하나로 유지하는 상태 계층임.

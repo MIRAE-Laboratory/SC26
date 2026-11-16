@@ -6,7 +6,7 @@ session: sess131
 time: "16:42-17:06"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot111"
 authors: [semih-burak, felix-tomski, joachim-jenke, william-moses, matthias-muller]
-addresses: [parallel-program-correctness, binding-maintenance]
+addresses: [parallel-program-correctness, software-sustainability]
 proposes: [tool-interface-spec]
 targets: [performance-tools, gpu-communication, parallel-programming-models]
 summary_ko: "병렬 프로그래밍 모델의 의미를 도구 구현에서 떼어 내는 통합 의미 인터페이스 명세를 제안함. 제안된 MPI 인터페이스 형식을 일반화하고 GPU 의미와 데이터 흐름·동기화 계층을 더해, 모델별 지식 없이 프로시저를 추론할 수 있게 함."

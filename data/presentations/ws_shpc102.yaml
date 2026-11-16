@@ -6,8 +6,8 @@ session: sess126
 time: "14:22-14:41"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc102"
 authors: [olivera-kotevska, sumit-jha, aurelien-bellet, rui-hu, nathaniel-bastian, rafael-ferreira-da-silva, ravi-madduri, kibaek-kim]
-addresses: [institutional-privacy, pet-composability, metadata-side-channel]
-proposes: [privacy-assurance, pets]
+addresses: [institutional-privacy, metadata-side-channel]
+proposes: [privacy-assurance]
 targets: [leadership-facility, job-scheduler, ai-agents]
 summary_ko: >
   공유 과학 AI의 프라이버시 위험은 개인 레코드보다 기관의 참여 여부, 전략, 역량 노출에 있다고 봄.

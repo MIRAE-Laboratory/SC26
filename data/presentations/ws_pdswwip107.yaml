@@ -7,7 +7,7 @@ time: "16:35-16:40"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip107"
 authors: [xinxin-mei, jie-ren, jon-zarling, cameron-clarke, vardan-gyurjyan]
 addresses: [data-deluge, delayed-feedback, cross-facility-integration]
-proposes: [burst-buffer, event-driven-runtime]
+proposes: [node-local-staging, event-driven-runtime]
 targets: [hpc-storage-systems, hep-pipelines, user-facility-beamline]
 summary_ko: "실험이 스트리밍 판독으로 옮겨 가며 메가바이트 단위의 검출기 프레임을 HPC 시설로 보냄. 100 Gbps 노드 쌍의 처리량은 하류 처리를 켜면 35에서 6 Gbps로 떨어짐. 객체 저장소를 완충 장치로 써서 상류 취득과 하류 처리를 분리하자고 제안함."
 claims:

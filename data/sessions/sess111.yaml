@@ -2,6 +2,7 @@ id: sess111
 type: Session
 label: "13th Annual International Workshop on Innovating the Network for Data Intensive Science (INDIS)"
 kind: Workshop
+topic: 데이터·워크플로·네트워크
 date: "2026-11-15"
 time: "09:00-17:25 CST"
 room: W175a
@@ -47,12 +48,21 @@ insights:
       refs: [ws_indis118]
   korea:
     - head: 연구망 운영에 로컬 LLM 기반 장애 분석을 시험해 볼 만함.
+      stage: prep
+      area: 에이전트·AI 서비스
+      needs: 로컬 모델을 돌릴 GPU와 장애 기록 정리
       text: 로그를 외부로 보내지 않고도 중간 크기 모델로 근본 원인 분석이 되었음. 보안상 외부 모델을 쓰기 어려운 운영 조직에 맞는 방식임.
       refs: [ws_indis105, ws_indis113]
     - head: 대용량 실험 데이터의 공유는 캐시 연합으로 설계함.
+      stage: long
+      area: 데이터·저장
+      needs: 참여 기관 간 캐시 서버 배치와 운영 합의
       text: 사본을 기관마다 두는 대신 원본과 캐시를 연합으로 묶는 방식이 미국에서 운영 중임. 대형 실험 데이터를 여러 기관이 쓰는 경우의 선택지임.
       refs: [ws_indis102, ws_indis110]
     - head: 데이터를 모을 수 없는 기관 간 협력에는 연합학습을 검토하되 이득의 분포를 먼저 봄.
+      stage: prep
+      area: 데이터·저장
+      needs: 기관별 데이터 분포 조사
       text: 통신 비용과 프라이버시 사이의 절충이 있고, 참여 기관마다 얻는 것이 다름.
       refs: [ws_indis109, ws_indis118]
   extra:

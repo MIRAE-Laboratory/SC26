@@ -7,7 +7,7 @@ time: "11:45-12:10"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=ws_ross103"
 authors: [clarete-riana-crasta, samantika-sury]
 addresses: [failure-resilience]
-proposes: [cross-stack-recovery]
+proposes: [resilient-campaign-execution]
 targets: [distributed-training, llm-inference]
 summary_ko: "AI 모델은 매개변수, 통신 상태, 추론 캐시를 수천 개 장치에 퍼뜨리므로, 장치나 랭크 하나의 장애가 학습 진행, 모델 품질, 추론 지연에 영향을 줌. 체크포인트·재시작은 여전히 필수지만 그것만으로는 부족하다고 보고, 복원력을 최적화 문제로 다룸."
 claims:

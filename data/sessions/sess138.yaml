@@ -2,6 +2,7 @@ id: sess138
 type: Session
 label: "Sovereign AI Supercomputing Cloud Workshop"
 kind: Workshop
+topic: 운영·인프라
 date: "2026-11-16"
 time: "09:00-12:30 CST"
 room: W178a
@@ -38,12 +39,20 @@ insights:
       refs: [ws_scc101, ws_scc108, ws_scc105]
   korea:
     - head: 일본의 방식은 참고할 만한 가까운 사례임.
+      stage: ref
+      area: 협력·거버넌스
       text: 2025년 12월 첫 AI 기본계획을 채택하고, 이화학연구소가 GPU 1,600개 규모의 과학용 AI 슈퍼컴퓨터를 2026년에 도입했음. 추경으로 대학 4곳이 공용 GPU 자원을 늘리며 운영 방식을 표준화하고, 한 대학이 작업을 잇는 허브를 맡음.
       refs: [ws_scc105]
     - head: 국가 AI 컴퓨팅 자원을 여러 기관이 나눠 운영한다면 배분·정산 층을 먼저 정함.
+      stage: long
+      area: 협력·거버넌스
+      needs: 참여 기관과 재원 기관의 합의
       text: 자금 지원 기관, 사용자, 심의위원회가 서로 다른 사이트를 한 화면으로 보는 구조가 유럽 연합 플랫폼에서 운영 중임. 각 기관은 자기 스케줄러와 정책을 유지함.
       refs: [ws_scc103]
     - head: 도입 평가에 교체 가능성을 넣음.
+      stage: now
+      area: 도입 평가·하드웨어
+      needs: 구성요소별 대체품 조사
       text: 스케줄러, 시스템 관리 도구, 소프트웨어 스택 각각에 대해 공급자가 방침을 바꿀 때 대체할 수 있는지를 확인함. 공동 거버넌스 프로젝트에 참여하는 것도 선택지임.
       refs: [ws_scc104, ws_scc106]
   extra:

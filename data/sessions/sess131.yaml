@@ -2,6 +2,7 @@ id: sess131
 type: Session
 label: "8th Workshop on Programming and Performance Visualization Tools (ProTools)"
 kind: Workshop
+topic: 성능·도구
 date: "2026-11-16"
 time: "09:00-17:30 CST"
 room: W176c
@@ -46,12 +47,21 @@ insights:
       refs: [ws_prot106]
   korea:
     - head: 두 벤더의 GPU를 함께 운영한다면 계수기 대응표가 필요함.
+      stage: prep
+      area: 도입 평가·하드웨어
+      needs: 두 벤더 장비에서의 계수기 대조 측정
       text: 벤더별 측정값을 그대로 비교하면 틀린 결론이 나옴. 공개된 대응표와 보정법은 도입 평가와 성능 보고의 기준으로 쓸 수 있음.
       refs: [ws_prot109]
     - head: 에너지 분석은 코드 수정 없이 텔레메트리와 응용 단계를 맞추는 데서 시작함.
+      stage: now
+      area: 계측·에너지
+      needs: 사용자 권한 텔레메트리 도구 설치
       text: 사용자 권한으로 도는 도구로 노드와 가속기의 텔레메트리를 응용의 시간 단계와 맞춰, 부하 분산과 전력 관리가 필요한 구간을 찾았음.
       refs: [ws_prot112]
     - head: 성능 분석에 에이전트를 쓸 때는 도구 쪽이 절차와 인터페이스를 내줘야 함.
+      stage: prep
+      area: 에이전트·AI 서비스
+      needs: 도구별 절차 문서와 호출 규칙
       text: 벤더 발표는 명령줄 수집, 매개변수 실험 관리, 계수기 해석을 에이전트가 맡은 사례와 함께, 도구 개발자가 제공해야 할 절차 문서와 규칙을 제시했음.
       refs: [misc171, ws_pmbsf148]
   extra:

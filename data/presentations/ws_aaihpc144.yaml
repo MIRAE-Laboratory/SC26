@@ -7,7 +7,7 @@ time: "12:12-12:18"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc144"
 authors: [valesca-moura, gabriele-padovani, daniel-de-oliveira, rafael-ferreira-da-silva, renan-souza]
 addresses: [provenance-reproducibility]
-proposes: [provenance-logging, prov-loop-model]
+proposes: [provenance-logging]
 targets: [ai-agents, leadership-facility]
 summary_ko: >
   LLM 에이전트는 코드를 바꾸고, 로그를 읽고, 계획을 고치고, 도구를 호출하고, 목표 달성 여부를 판단하므로, 계산 결과에 미친 영향을 설명할 출처 기록이 필요함. PROV-AGENT-LOOP는 목표-계획-행동-평가 주기를 질의 가능한 출처로 기록하는 W3C PROV 호환 모델로, 루프 구조, 통신, 평가, 권한 부여, 위임, 호출 증거를 담음. Flowcept에 구현해 에이전트, 워크플로, ML, 스케줄러, 텔레메트리 기록을 한 데이터베이스에 모음.

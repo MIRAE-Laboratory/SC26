@@ -2,6 +2,7 @@ id: sess132
 type: Session
 label: "HPC Systems Professionals Workshop (HPCSYSPROS26)"
 kind: Workshop
+topic: 운영·인프라
 date: "2026-11-16"
 time: "09:00-17:30 CST"
 room: W183a
@@ -48,12 +49,20 @@ insights:
       refs: [ws_hpcsysp111]
   korea:
     - head: 소규모 기관의 전산실 개선 사례가 구체적 수치로 나와 있음.
+      stage: ref
+      area: 계측·에너지
       text: 브라질의 한 대학은 통로 밀폐와 풍량 개선으로 평균 전력 사용 효율을 2.14에서 1.56으로 낮췄음. 냉각기 2대 가동과 1대 대기로 운영함.
       refs: [ws_hpcsysp102]
     - head: 운영 지식을 사람이 아닌 저장소에 둠.
+      stage: now
+      area: 운영·사용자 지원
+      needs: 버전 관리 저장소와 기록 규칙
       text: 교대 근무 사이에 사라지는 지식을 4주 만에 구축한 작은 시스템으로 보존한 사례임. 구성요소 여섯 중 다섯은 대부분의 기관이 이미 갖고 있음.
       refs: [ws_hpcsysp105, ws_hpcsysp109]
     - head: 사용자 창구를 웹으로 통일하면 관리 부담이 줄어듦.
+      stage: prep
+      area: 운영·사용자 지원
+      needs: 웹 포털 도입과 승인 절차 정의
       text: 프로젝트, 저장소, 라이선스, 접근 권한을 승인 절차와 감사 기록이 붙은 자가 관리로 바꿨음. 기반 시스템은 바꾸지 않았음.
       refs: [ws_hpcsysp108]
   extra:

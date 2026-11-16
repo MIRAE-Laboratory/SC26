@@ -8,7 +8,7 @@ url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=m
 authors: [jana-thayer]
 addresses: [data-deluge, delayed-feedback, trust-in-automated-decisions]
 proposes: [in-situ-reduction, experiment-steering]
-targets: [xfel-facility]
+targets: [user-facility-beamline]
 summary_ko: >
   SLAC의 X선 자유전자레이저 LCLS-II는 최대 1 MHz로 발사되어, 원시 데이터율이 280 GB/s에서 시작해 2020년대 말에는 1,120 GB/s에 가까워짐. 전부 저장해 나중에 분석하는 방식은 불가능하고, 대부분의 원시 데이터를 취득 직후에 줄이거나 특성화하거나 버려야 함. 검출기 판독에서 분산 데이터 축소 파이프라인, 빠른 피드백까지의 데이터 시스템 설계와, ML 모델로 실험을 준실시간 조향하는 ILLUMINE 프로젝트를 소개함.
 claims:

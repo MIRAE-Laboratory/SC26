@@ -2,6 +2,7 @@ id: sess149
 type: Session
 label: "4th Annual Trillion Parameter Workshop: Building Open AI Infrastructure, Models, and Agentic Systems for Science"
 kind: Workshop
+topic: AI·에이전트
 date: "2026-11-20"
 time: "08:30-12:00 CST"
 room: W181abc
@@ -48,12 +49,20 @@ insights:
       refs: [ws_tpw136]
   korea:
     - head: 원자력 분야 에이전트 설계의 직접적 참고 사례가 나옴.
+      stage: ref
+      area: 에이전트·AI 서비스
       text: 핵연료 분야에서 지식 저장소, 재사용 절차, 문헌 추적 검증 에이전트를 조합해 평가한 결과가 공개됨. 국내 원자력 특화 에이전트의 구성과 평가 방법을 정할 때 비교 기준이 됨.
       refs: [ws_tpw111, ws_tpw120]
     - head: 반출할 수 없는 데이터는 연합 학습으로 다룸.
+      stage: long
+      area: 데이터·저장
+      needs: 참여 기관 간 데이터 계약과 검증 표준
       text: 수출 통제나 기밀 때문에 모을 수 없는 데이터를 기관에 둔 채 연구소 셋과 시설 넷에 걸쳐 학습한 경험이 정리됨. 비동기 연합, 유출 감사, 검증 표준, 데이터 계약이 남은 과제로 꼽힘.
       refs: [ws_tpw115]
     - head: 방사광 시설의 데이터 처리 자동화에 안전 계층을 함께 둠.
+      stage: prep
+      area: 실험시설 연계
+      needs: 장비 제어의 안전 한계 목록과 검사 계층
       text: 도구 61개를 조율하는 운영 중인 다중 에이전트 틀이 프롬프트 한 번으로 검출기 기하를 복구하고 측정 묶음을 처리했음. 장비를 움직이는 에이전트에는 모델 밖의 안전 검사가 필수임을 수치로 보임.
       refs: [ws_tpw139]
   extra:

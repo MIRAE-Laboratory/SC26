@@ -6,8 +6,8 @@ session: sess117
 time: "10:45-11:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=ws_xloop101"
 authors: [christian-engelmann, andrew-ayres, stephen-dewitt, michael-j-brim, brett-eiffert]
-addresses: [federated-ecosystem-failures]
-proposes: [resilience-design-patterns]
+addresses: [failure-resilience]
+proposes: [resilient-campaign-execution]
 targets: [self-driving-labs]
 summary_ko: >
   장비 과학을 위한 연합 생태계에서 장애가 나면 실험이 중단되어 쓸모없어지고 자원이 낭비됨. ORNL의 INTERSECT는 자율 실험, 자율 실험실, 스마트 제조, AI 기반 설계·발견을 지원하는 연합 생태계임. 복원력 설계 패턴에 기반한 구조, 복원력 있는 시스템 오브 시스템즈와 마이크로서비스 구조, 신뢰성 있는 서비스 통신과 동기·비동기 장애 탐지·통지를 갖춘 개발 도구를 제시함.

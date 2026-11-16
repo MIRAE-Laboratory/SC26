@@ -7,7 +7,7 @@ time: "12:06-12:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess110&id=ws_p3hpc108"
 authors: [befikir-bogale, ian-lumsden, stephanie-brink, olga-pearce, michela-taufer]
 addresses: [performance-portability]
-proposes: [compiler-level-diagnosis]
+proposes: [hardware-counter-analysis]
 targets: [performance-portable-kernels]
 summary_ko: "실행 시간 측정을 GPU 자원 사용, 최적화 메모, LLVM IR 지표 같은 컴파일러 수준의 증거와 결합해, RAJA 응용에서 성능이 어디서 갈리는지뿐 아니라 왜 갈리는지를 설명하는 워크플로임."
 claims:

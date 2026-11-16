@@ -2,6 +2,7 @@ id: sess113
 type: Session
 label: "21st Workshop on Workflows in Support of Large-Scale Science (WORKS26)"
 kind: Workshop
+topic: 데이터·워크플로·네트워크
 date: "2026-11-15"
 time: "09:00-17:30 CST"
 room: W176b
@@ -53,15 +54,25 @@ insights:
       refs: [ws_worksp101]
   korea:
     - head: 보안 구역 규정이 있는 전산 자원에 대형 실험 커뮤니티를 받는 방법으로 참고할 만함.
+      stage: ref
+      area: 운영·사용자 지원
       text: 프랑스는 개인 책임 원칙을 유지하면서 실명 서비스 계정과 임시 버퍼로 전파천문 파이프라인을 국가 슈퍼컴퓨터에 올렸음. 보안 규정이 엄격한 기관의 외부 공동 활용에 대응되는 사례임.
       refs: [ws_worksp105]
     - head: 에이전트로 워크플로를 만들 때 명세 대조를 필수 단계로 둠.
+      stage: now
+      area: 검증·신뢰
+      needs: 사람이 검토한 워크플로 명세
       text: 실행 여부만 보면 조용한 오류가 남음. 명세를 사람이 검토하고 구현을 그 명세와 대조하는 절차를 도입 조건으로 삼을 만함.
       refs: [ws_worksp117, ws_worksa106]
     - head: 기관 클러스터의 사이트 프로파일을 만들어 둠.
+      stage: now
+      area: 운영·사용자 지원
+      needs: 클러스터의 큐, 모듈, 제한 사항 문서화
       text: 외부 워크플로를 받거나 자기 워크플로를 다른 시설로 옮길 때의 시행착오가 줄어듦. 프로파일의 각 항목에 근거를 붙이는 방식이 핵심임.
       refs: [ws_worksp111]
     - head: 핵융합 분야는 미국의 자율 워크플로 구상을 지켜볼 만함.
+      stage: ref
+      area: 실험시설 연계
       text: 검증된 설정을 모은 저장소와 실행 전·중·후 검사를 전제로 한 에이전트 워크플로 구상이 나왔음. 아직 구상 단계임.
       refs: [ws_worksa103]
   extra:

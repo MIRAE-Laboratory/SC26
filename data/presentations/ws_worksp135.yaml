@@ -6,7 +6,7 @@ session: sess113
 time: "11:15-11:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp135"
 authors: [kevin-assogba, nigel-tan, m-mustafa-rafique, michela-taufer, bogdan-nicolae]
-addresses: [scattered-small-io, provenance-reproducibility]
+addresses: [data-locality, provenance-reproducibility]
 proposes: [io-coalescing]
 targets: [storage-memory-hierarchy]
 summary_ko: "수치 재현성 분석 같은 워크로드는 큰 파일에서 작고 불연속적인 읽기를 많이 내는데, POSIX와 io_uring은 이를 잘 다루지 못함. SCISSOR는 가까운 요청을 연속 구간으로 합쳐 커널 상호작용을 줄이는 I/O 런타임임."

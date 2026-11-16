@@ -6,7 +6,7 @@ session: sess131
 time: "15:30-15:54"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess131&id=ws_prot109"
 authors: [amr-abouelmagd, michael-mckinsey, david-boehme, stephanie-brink, olga-pearce]
-addresses: [measurement-comparability, performance-portability, benchmark-validity]
+addresses: [benchmark-validity, performance-portability]
 proposes: [hardware-counter-analysis, portability-metrics]
 targets: [amd-gpu-systems, hpc-processors, performance-tools]
 summary_ko: "두 GPU 벤더는 하드웨어 계수기를 따로 설계해 이름, 세밀함, 의미가 다름. 배정밀도 연산과 메모리 계층 지표에 대해 두 GPU의 계수기 대응을 만들고 검증하며, 성능 모음의 커널 12개로 짝을 평가함."

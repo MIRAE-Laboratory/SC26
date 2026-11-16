@@ -1,28 +1,22 @@
-# 세션을 넘어 공유되는 개념 노드. related: 개념 간 relatedTo 관계
+# 세션 간에 공유되는 개념. 여러 발표가 같은 id를 가리켜야 세션 사이의 연결이 생깁니다.
 Problem:
   multi-tenant-isolation: {label: Multi-tenant isolation, label_ko: 멀티테넌트 격리}
   sensitive-data-governance: {label: Sensitive-data governance, label_ko: 민감데이터 거버넌스}
-  split-responsibility: {label: Split security responsibility, label_ko: 보안 책임 분할}
-  insider-threat: {label: Insider & privileged adversaries, label_ko: 내부자·특권 운영자 위협}
   institutional-privacy: {label: Institution-level privacy leakage, label_ko: 기관 수준 프라이버시 누출}
-  metadata-side-channel: {label: Metadata & telemetry side channels, label_ko: 메타데이터·텔레메트리 부채널, related: [workload-fingerprinting, job-scheduler]}
-  pet-composability: {label: PETs do not compose across institutions, label_ko: 프라이버시 기술의 조합성 한계}
-  memory-safety: {label: Memory-safety vulnerabilities, label_ko: 메모리 안전성 취약점}
-  untrusted-input: {label: Untrusted input & result integrity, label_ko: 비신뢰 입력과 계산 결과 무결성}
+  metadata-side-channel: {label: "Metadata & telemetry side channels", label_ko: 메타데이터·텔레메트리 부채널, related: [job-scheduler]}
+  memory-safety: {label: Memory and input safety, label_ko: 메모리·입력 안전성}
   agent-boundaries: {label: AI agent autonomy boundaries, label_ko: AI 에이전트 권한 경계}
   attack-detection: {label: Attack detection in HPC, label_ko: HPC 공격 탐지}
-  telemetry-misalignment: {label: Temporal misalignment of telemetry, label_ko: 텔레메트리 시간 불일치}
-  workload-fingerprinting: {label: Workload fingerprinting, label_ko: 워크로드 식별}
   he-scalability: {label: Scalability of encrypted computation, label_ko: 암호화 연산의 확장성}
   compliance-governance: {label: "Standards, compliance, governance", label_ko: 표준·컴플라이언스·거버넌스, related: [sensitive-data-governance]}
-  env-configuration: {label: Environment configuration & reconstruction, label_ko: 실행 환경 구성·재구성}
+  env-configuration: {label: "Environment configuration & reconstruction", label_ko: 실행 환경 구성·재구성}
   inverse-design-information-loss: {label: Information loss in many-to-one inverse design, label_ko: 다대일 역설계의 정보 손실}
   surrogate-payoff: {label: When neural surrogates actually pay off, label_ko: 대리모델의 실효 가속 여부}
   manual-orchestration: {label: Manual orchestration of multi-step analysis, label_ko: 다단계 분석의 수작업 조율}
-  provenance-reproducibility: {label: Reproducibility & provenance, label_ko: 재현성·출처 추적}
+  provenance-reproducibility: {label: "Reproducibility & provenance", label_ko: 재현성·출처 추적}
   ai-code-evaluation: {label: Evaluating AI-generated scientific code, label_ko: AI 생성 과학 코드의 평가, related: [ai-exploit-generation]}
   data-stalls: {label: Data stalls from unpredictable agent access, label_ko: 에이전트의 예측 불가 접근에 따른 데이터 정체}
-  annotation-cost: {label: Labor-intensive annotation & proofreading, label_ko: 주석·교정의 인력 비용}
+  annotation-cost: {label: "Labor-intensive annotation & proofreading", label_ko: 주석·교정의 인력 비용}
   high-resolution-scaling: {label: Scaling to high-resolution data, label_ko: 고해상도 데이터 확장성}
   rollout-error: {label: Autoregressive rollout error accumulation, label_ko: 자기회귀 롤아웃의 오차 누적}
   sparse-multimodal-data: {label: Sparse multimodal diagnostics, label_ko: 희소·다중모달 진단 데이터}
@@ -32,63 +26,54 @@ Problem:
   translation-verification: {label: Verifying translated code (oracle bottleneck), label_ko: 변환 코드의 검증(오라클 병목), related: [ai-code-evaluation]}
   workload-portability: {label: Portability across schedulers and sites, label_ko: 스케줄러·사이트 간 이식성}
   llm-domain-validity: {label: LLM proposals violating domain validity, label_ko: 도메인 타당성을 어기는 LLM 제안}
-  human-centric-hpc: {label: HPC interfaces designed for humans not agents, label_ko: 사람 기준으로 설계된 HPC 인터페이스}
+  human-centric-hpc: {label: "HPC interfaces designed for humans, not agents", label_ko: 사람 기준으로 설계된 HPC와 에이전트}
   agent-state-fragmentation: {label: Fragmented agent state across stores, label_ko: 저장소별로 흩어진 에이전트 상태, related: [data-stalls]}
   ops-data-complexity: {label: Operational data complexity, label_ko: 운영 데이터의 복잡성}
   agent-job-execution: {label: Executing fine-grained agent jobs at scale, label_ko: 잘게 쪼개진 에이전트 작업의 대규모 실행}
-  prompt-injection: {label: Prompt injection & unsupported citations, label_ko: 프롬프트 주입·근거 없는 인용, related: [agent-boundaries]}
+  prompt-injection: {label: "Prompt injection & unsupported citations", label_ko: 프롬프트 주입·근거 없는 인용, related: [agent-boundaries]}
   config-evaluation-cost: {label: Evaluating training configurations before running, label_ko: 실행 전 학습 구성 평가 비용}
-  unanswerable-refusal: {label: Refusing unanswerable questions, label_ko: 답할 수 없는 질문의 거절}
-  power-measurement-fidelity: {label: Power measurement resolution & fidelity, label_ko: 전력 계측의 해상도와 충실도, related: [metadata-side-channel]}
+  power-measurement-fidelity: {label: "Power measurement resolution & fidelity", label_ko: 전력 계측의 해상도와 충실도, related: [metadata-side-channel]}
   energy-performance-tradeoff: {label: Energy-performance trade-off, label_ko: 에너지와 성능의 절충}
   power-cap-slowdown: {label: Performance loss under power caps, label_ko: 전력 상한에서의 성능 손실}
   node-variation: {label: Node-to-node power-performance variation, label_ko: 노드 간 전력·성능 편차}
-  energy-cost-carbon: {label: Electricity cost & carbon constraints, label_ko: 전기료·탄소 제약}
+  energy-cost-carbon: {label: "Electricity cost and carbon, including embodied", label_ko: 전기료·탄소 제약(제조 탄소 포함)}
   chip-heat-density: {label: Chip-level heat density, label_ko: 칩 수준 열 밀도}
   python-at-scale: {label: Scaling Python on supercomputers, label_ko: 슈퍼컴퓨터에서의 파이썬 확장}
   software-ecosystem-readiness: {label: Non-CUDA software ecosystem readiness, label_ko: 비 CUDA 소프트웨어 생태계 준비도}
-  binding-maintenance: {label: Effort of exposing large HPC libraries, label_ko: 대형 HPC 라이브러리 노출의 수고}
   service-composition: {label: Composing HPC/AI capabilities as services, label_ko: HPC·AI 기능의 서비스 조합}
   agentic-science-benchmarking: {label: What to benchmark for agentic science, label_ko: 에이전틱 과학의 벤치마크 기준}
-  data-deluge: {label: Data volume exceeds storage & I/O, label_ko: 저장·입출력을 넘는 데이터량}
+  data-deluge: {label: "Data volume exceeds storage & I/O", label_ko: 저장·입출력을 넘는 데이터량}
   delayed-feedback: {label: Post hoc analysis delays feedback, label_ko: 사후 분석으로 인한 피드백 지연}
   trust-in-automated-decisions: {label: Trust in decisions made before humans see data, label_ko: 사람이 보기 전에 내린 결정에 대한 신뢰}
   site-deployment-effort: {label: Duplicate effort deploying robots to new sites, label_ko: 현장 배치 때의 중복 작업}
   exascale-workflow-scaling: {label: Scaling experiment workflows on exascale machines, label_ko: 엑사스케일에서의 실험 워크플로 확장}
   pipeline-config-tuning: {label: Brittle manual tuning of streaming pipelines, label_ko: 스트리밍 파이프라인의 수동 튜닝}
-  federated-ecosystem-failures: {label: Failures in federated instrument ecosystems, label_ko: 연합 장비 생태계의 장애}
   cross-facility-integration: {label: Integrating cross-facility workflows, label_ko: 시설 간 워크플로 통합, related: [workload-portability]}
   human-in-outer-loop: {label: Outer experiment loop still runs through a person, label_ko: 사람을 거치는 바깥 실험 루프}
-  agents-on-cyberinfrastructure: {label: Deploying agents across scientific cyberinfrastructure, label_ko: 과학 사이버인프라에의 에이전트 배치, related: [agent-job-execution]}
   workflow-composition-effort: {label: Building and maintaining workflows by hand, label_ko: 워크플로 작성·유지의 수작업 부담}
   workflow-scheduling: {label: Workflow scheduling decisions, label_ko: 워크플로 스케줄링 결정}
   resource-prediction: {label: Predicting memory and runtime needs, label_ko: 메모리·실행 시간 수요 예측}
   data-locality: {label: Data movement and locality bottleneck, label_ko: 데이터 이동·지역성 병목}
-  scattered-small-io: {label: Fine-grained scattered reads, label_ko: 잘게 흩어진 소규모 읽기}
   agent-inference-cost: {label: Cost and latency of LLM calls in agents, label_ko: 에이전트의 LLM 호출 비용·지연}
   continuum-risk: {label: Non-functional risks across edge and cloud, label_ko: 에지·클라우드 연속체의 비기능 위험}
-  failure-resilience: {label: Failures at scale, label_ko: 대규모 실행 중 장애, related: [federated-ecosystem-failures]}
+  failure-resilience: {label: Failures at scale, label_ko: 대규모 실행 중 장애}
   data-readiness: {label: Scattered and inconsistent domain data, label_ko: 흩어지고 불일치하는 도메인 데이터}
   identity-access: {label: Identity and account lifecycle, label_ko: 신원·계정 수명주기, related: [compliance-governance]}
   wan-data-distribution: {label: Distributing large datasets over wide-area networks, label_ko: 광역망을 통한 대용량 데이터 배포, related: [data-deluge]}
-  network-congestion: {label: Network congestion, label_ko: 네트워크 혼잡}
-  science-unaware-networks: {label: Networks unaware of the science they carry, label_ko: 과학 워크플로를 모르는 네트워크}
+  network-congestion: {label: Network congestion and shared-fabric interference, label_ko: 네트워크 혼잡과 공유망 간섭}
   hardware-selection: {label: Matching workloads to hardware, label_ko: 워크로드에 맞는 하드웨어 선택}
-  benchmark-validity: {label: What composite benchmark scores hide, label_ko: 종합 벤치마크 점수의 한계, related: [agentic-science-benchmarking]}
+  benchmark-validity: {label: Validity and comparability of benchmarks and measurements, label_ko: 벤치마크·측정값의 타당성과 비교 가능성, related: [agentic-science-benchmarking]}
   simulation-scale-limits: {label: Scale limits of system simulators and emulators, label_ko: 시스템 시뮬레이터·에뮬레이터의 규모 한계}
   underused-resources: {label: Idle resources inside allocated nodes, label_ko: 할당된 노드 안의 유휴 자원}
   memory-bound-performance: {label: Memory-bound performance, label_ko: 메모리 대역폭에 묶인 성능, related: [data-locality]}
   user-support-load: {label: Recurring user-support load, label_ko: 반복되는 사용자 지원 부담}
   performance-portability: {label: Performance portability across architectures, label_ko: 아키텍처 간 성능 이식성, related: [software-ecosystem-readiness]}
-  kernel-bypass-safety: {label: Safe low-latency device access, label_ko: 안전한 저지연 장치 접근}
   heterogeneity-complexity: {label: Programming and managing heterogeneous systems, label_ko: 이기종 시스템의 프로그래밍·관리 복잡성}
   quantum-hpc-integration: {label: Integrating quantum resources with HPC, label_ko: 양자 자원과 HPC의 통합}
   silent-data-corruption: {label: Silent data corruption, label_ko: 조용한 데이터 손상(SDC), related: [failure-resilience]}
   silent-training-failures: {label: Silent failures in AI training, label_ko: 드러나지 않는 AI 학습 실패, related: [silent-data-corruption, trust-in-automated-decisions]}
   failure-data-incomparability: {label: Incomparable failure reporting, label_ko: 비교할 수 없는 장애 보고, related: [benchmark-validity]}
-  dataset-reuse-context-loss: {label: Context loss in dataset reuse, label_ko: 데이터 재사용 시 맥락 유실, related: [data-readiness, provenance-reproducibility]}
-  fp-exceptions: {label: Floating-point exceptions on GPUs, label_ko: GPU 부동소수점 예외, related: [numerical-error]}
-  numerical-error: {label: Numerical rounding error and library accuracy, label_ko: 수치 반올림 오차와 라이브러리 정확도}
+  numerical-error: {label: Numerical error and floating-point exceptions, label_ko: 수치 오차와 부동소수점 예외}
   parallel-program-correctness: {label: Correctness of parallel communication, label_ko: 병렬 통신의 정확성, related: [memory-safety]}
   vendor-dependence: {label: Vendor dependence of critical infrastructure software, label_ko: 핵심 인프라 소프트웨어의 벤더 의존, related: [software-ecosystem-readiness, compliance-governance]}
   llm-serving-efficiency: {label: Efficiency of LLM serving on HPC, label_ko: HPC에서의 LLM 서빙 효율, related: [underused-resources]}
@@ -96,140 +81,103 @@ Problem:
   ops-knowledge-loss: {label: Loss of operational knowledge, label_ko: 운영 지식의 유실, related: [user-support-load]}
   large-data-migration: {label: Large-scale data migration, label_ko: 대규모 데이터 이전}
   gpu-io-path: {label: Host-mediated I/O for GPU applications, label_ko: 호스트를 거치는 GPU 입출력, related: [data-stalls]}
-  shared-fabric-interference: {label: Storage and compute interference on shared resources, label_ko: 공유 자원에서의 저장·계산 간섭, related: [network-congestion]}
   fp64-scarcity: {label: Shrinking double-precision capability of accelerators, label_ko: 가속기의 배정밀도 성능 축소, related: [hardware-selection, numerical-error]}
-  software-sustainability: {label: Sustainability of community software, label_ko: 커뮤니티 소프트웨어의 지속 가능성, related: [binding-maintenance]}
+  software-sustainability: {label: Sustainability and maintenance of community software, label_ko: 커뮤니티 소프트웨어의 유지·지속 가능성}
   container-hpc-mismatch: {label: Mismatch between cloud container practice and HPC, label_ko: 클라우드식 컨테이너 관행과 HPC의 충돌, related: [env-configuration, software-ecosystem-readiness]}
   performance-diagnosis-gap: {label: Tools show where but not why, label_ko: 성능 문제의 원인을 알려 주지 못하는 도구, related: [ops-data-complexity]}
-  observability-overhead: {label: Overhead and data volume of instrumentation, label_ko: 계측의 부담과 데이터 과다, related: [telemetry-misalignment]}
-  measurement-comparability: {label: Incomparable vendor measurements, label_ko: 벤더 간 측정값의 비교 불가, related: [benchmark-validity]}
+  observability-overhead: {label: Overhead and data volume of instrumentation, label_ko: 계측의 부담과 데이터 과다, related: [ops-data-complexity]}
   quantum-resource-scheduling: {label: Scheduling quantum resources alongside HPC, label_ko: 양자 자원을 HPC와 함께 스케줄링, related: [quantum-hpc-integration, workflow-scheduling]}
   quantum-noise-fidelity: {label: Noise and fidelity limits of quantum devices, label_ko: 양자 장치의 잡음과 충실도 한계, related: [quantum-hpc-integration]}
   imaging-data-scale: {label: Scale of scientific imaging data, label_ko: 과학 영상 데이터의 규모, related: [data-deluge, high-resolution-scaling]}
   request-usage-mismatch: {label: Mismatch between requested and used resources, label_ko: 요청한 자원과 실제 사용의 불일치, related: [underused-resources, resource-prediction]}
   software-stack-drift: {label: Performance regressions from software stack changes, label_ko: 소프트웨어 스택 변화로 인한 성능 회귀, related: [env-configuration]}
-  compiler-defects: {label: Defects in GPU offload compilers, label_ko: GPU 오프로드 컴파일러의 결함, related: [software-ecosystem-readiness]}
-  embodied-carbon: {label: Embodied carbon of hardware, label_ko: 하드웨어 제조에 든 내재 탄소, related: [energy-cost-carbon]}
   edge-resource-limits: {label: Resource limits at the edge, label_ko: 엣지 장치의 자원 한계, related: [continuum-risk]}
-  talent-pipeline: {label: HPC and AI talent pipeline, label_ko: HPC·AI 인력 양성}
 Method:
   attack-trees: {label: Threat modeling with attack trees, label_ko: 공격 트리 기반 위협 모델링}
-  tre-sde: {label: Trusted Research Environment (TRE/SDE), label_ko: 신뢰연구환경(TRE/SDE), related: [sensitive-data-governance]}
   portable-governance: {label: Portable governance, label_ko: 이식 가능한 거버넌스}
   privacy-assurance: {label: Privacy as assurance (claim register), label_ko: 보증 문제로서의 프라이버시(주장 등록부)}
-  pets: {label: "Privacy-enhancing technologies (DP, FL, SMC, TEE)", label_ko: 프라이버시 강화 기술}
-  fuzzing: {label: Fuzzing & bug triage, label_ko: 퍼징·버그 분류}
   ai-exploit-generation: {label: Coding-agent exploit generation, label_ko: 코딩 에이전트의 익스플로잇 생성, related: [ai-agents]}
-  runtime-sandbox: {label: Runtime isolation & policy enforcement, label_ko: 런타임 격리·정책 강제, related: [multi-tenant-isolation]}
+  runtime-sandbox: {label: "Runtime isolation & policy enforcement", label_ko: 런타임 격리·정책 강제, related: [multi-tenant-isolation]}
   zero-trust: {label: Zero trust, label_ko: 제로 트러스트}
-  tmd: {label: Temporal Mahalanobis Distance (TMD), label_ko: 시간 마할라노비스 거리}
   streaming-detector: {label: Semi-supervised streaming detection, label_ko: 준지도 스트리밍 탐지}
-  sampling-coarsening: {label: Sampling-rate coarsening, label_ko: 샘플링 주기 완화}
-  homomorphic-encryption: {label: Homomorphic encryption (BGV), label_ko: 동형암호(BGV), related: [pets]}
+  homomorphic-encryption: {label: Homomorphic encryption (BGV), label_ko: 동형암호(BGV), related: [privacy-assurance]}
   mpi-parallelization: {label: Distributed-memory parallelization (MPI), label_ko: 분산메모리 병렬화(MPI)}
   multi-agent-workflow: {label: Multi-agent LLM workflow, label_ko: 다중 LLM 에이전트 워크플로, related: [ai-agents]}
   domain-benchmark: {label: Domain-specific benchmarks, label_ko: 도메인 특화 벤치마크}
-  conditional-normalizing-flows: {label: Conditional normalizing flows, label_ko: 조건부 정규화 흐름}
   in-situ-inference: {label: HPC-native in-situ inference, label_ko: HPC 네이티브 인시투 추론}
   mcp-tools: {label: Typed tools via Model Context Protocol (MCP), label_ko: MCP 기반 도구 노출, related: [ai-agents]}
   skill-files: {label: Agent skills (versioned skill files), label_ko: 에이전트 스킬(버전 관리되는 스킬 파일)}
-  provenance-logging: {label: "Provenance logging (MLflow, Tiled, Flowcept)", label_ko: 실행 기록·출처 로깅, related: [provenance-reproducibility]}
+  provenance-logging: {label: Provenance logging and replay, label_ko: 실행 기록·출처 로깅과 재생, related: [provenance-reproducibility]}
   hybrid-evaluators: {label: Deterministic checks + LLM evaluators, label_ko: 결정론적 검사와 LLM 평가의 결합}
   agent-aware-memory: {label: Agent-aware memory management, label_ko: 에이전트 인지 메모리 관리}
-  generative-vae: {label: 3D convolutional VAE, label_ko: 3차원 합성곱 VAE}
-  event-triggered-correction: {label: Event-triggered context healing (ETCH), label_ko: 이벤트 기반 컨텍스트 복구}
-  domain-parallelism: {label: Domain parallelism (ShardTensor), label_ko: 도메인 병렬화}
-  gnn-surrogate: {label: Graph-network surrogate, label_ko: 그래프 신경망 대리모델, related: [neural-surrogates]}
+  generative-vae: {label: "Generative models (VAE, flows, diffusion)", label_ko: 생성 모델(VAE·흐름·확산)}
   mesh-coarsening: {label: Geometry-based mesh coarsening, label_ko: 형상 기반 격자 조대화}
   jepa: {label: Joint-embedding predictive architecture (JEPA), label_ko: 결합 임베딩 예측 구조}
   physics-aware-training: {label: Physics-aware training (augmented Lagrangian), label_ko: 물리 인지 학습(증강 라그랑지안)}
   scaling-laws: {label: Scaling-law analysis, label_ko: 스케일링 법칙 분석}
-  repair-loop: {label: Execution feedback & iterative repair, label_ko: 실행 피드백 기반 반복 수리}
-  context-retrieval: {label: Target knowledge & context retrieval, label_ko: 대상 지식·컨텍스트 검색}
+  repair-loop: {label: "Execution feedback & iterative repair", label_ko: 실행 피드백 기반 반복 수리}
+  context-retrieval: {label: "Target knowledge & context retrieval", label_ko: 대상 지식·컨텍스트 검색}
   deterministic-llm-split: {label: Deterministic path + LLM only where needed, label_ko: 결정론적 경로와 LLM의 역할 분리}
-  differential-testing: {label: Differential output testing, label_ko: 출력 비교 시험}
+  differential-testing: {label: Output and behavioral equivalence testing, label_ko: 출력·동작 동등성 시험}
   bit-identical-gates: {label: Bit-identical reproduction gates, label_ko: 비트 단위 재현 관문}
   human-approval-gates: {label: Human approval gates, label_ko: 사람의 승인 관문}
-  descriptive-execution: {label: Prose-driven agentic execution, label_ko: 서술형 지시 기반 실행}
   tool-augmented-reasoning: {label: Tool-augmented reasoning loop, label_ko: 도구 결합 추론 루프}
-  agent-facility-codesign: {label: Agents as first-class facility principals, label_ko: 에이전트를 일급 주체로 두는 시설 공동 설계}
-  event-driven-continuation: {label: Event-driven agent continuation, label_ko: 이벤트 기반 에이전트 재개}
   io-characterization: {label: Cross-state I/O characterization, label_ko: 교차 상태 I/O 특성 분석}
-  agent-execution-layer: {label: Agent execution layer (ParslBox), label_ko: 에이전트용 실행 계층}
-  origin-labeling: {label: Origin labeling & sink mediation (PALISADE), label_ko: 출처 레이블링·싱크 중재, related: [runtime-sandbox]}
+  agent-execution-layer: {label: Agent execution layer and middleware, label_ko: 에이전트용 실행 계층·미들웨어}
   workload-graph-prediction: {label: Workload-graph timing prediction, label_ko: 워크로드 그래프 기반 시간 예측}
   selective-measurement: {label: Selective measurement, label_ko: 선택적 측정}
-  prov-loop-model: {label: W3C PROV agent-loop model, label_ko: W3C PROV 에이전트 루프 모델}
   typed-agent-messaging: {label: Typed inter-agent messaging, label_ko: 타입이 있는 에이전트 간 메시징}
-  multi-tier-power-metering: {label: Multi-tier power metering (resolution ladder), label_ko: 다계층 전력 계측(해상도 사다리)}
-  generation-scheduling: {label: Batched candidate-generation scheduling, label_ko: 후보 생성 스케줄링(배치)}
   energy-profiling: {label: "Energy profiling (NVML, RAPL, PAPI)", label_ko: 에너지 프로파일링}
   llm-energy-refactoring: {label: LLM refactoring with power feedback, label_ko: 전력 피드백 기반 LLM 리팩토링}
   energy-aware-hpo: {label: Energy-aware multi-objective HPO, label_ko: 에너지 인지 다목적 하이퍼파라미터 최적화}
-  rl-power-control: {label: Offline RL power control, label_ko: 오프라인 강화학습 전력 제어}
+  rl-power-control: {label: Reinforcement learning for power and resource control, label_ko: 강화학습 기반 전력·자원 제어}
   frequency-steering: {label: Multi-dimensional frequency steering, label_ko: 다차원 주파수 조향}
   nonuniform-power-capping: {label: Variation-aware non-uniform power capping, label_ko: 편차 인지 비균일 전력 상한}
-  domain-power-rebalancing: {label: Domain-aware power rebalancing (U-PullUp), label_ko: 도메인 인지 전력 재배분}
   malleable-node-shutdown: {label: Scheduled node shutdown with malleable jobs, label_ko: 가단성 작업을 이용한 노드 셧다운}
   infrastructure-telemetry: {label: Synchronized infrastructure-wide telemetry, label_ko: 시설 전체 동기 계측}
-  energy-roofline: {label: Energy-aware roofline model, label_ko: 에너지 인지 루프라인 모델}
   mixed-precision: {label: Mixed-precision kernels, label_ko: 혼합 정밀도 커널}
   direct-liquid-cooling: {label: Direct-to-chip liquid cooling, label_ko: 칩 직접 액체 냉각}
-  container-wheel-deployment: {label: Container & wheel deployment, label_ko: 컨테이너·휠 배치}
-  generated-python-bindings: {label: Generated zero-copy Python bindings, label_ko: 자동 생성 파이썬 바인딩(무복사)}
+  container-wheel-deployment: {label: "Container & wheel deployment", label_ko: 컨테이너·휠 배치}
   python-orchestration: {label: Python as orchestration layer, label_ko: 조율 계층으로서의 파이썬}
   decoupled-service-ecosystem: {label: Decoupled service ecosystem, label_ko: 분리형 서비스 생태계}
   in-situ-reduction: {label: In situ data reduction, label_ko: 인시투 데이터 축소}
   experiment-steering: {label: Real-time steering, label_ko: 실시간 조향}
-  scene-streaming: {label: Scene streaming to game engines (USD), label_ko: 게임 엔진으로의 장면 스트리밍}
-  particle-based-rendering: {label: Particle-based volume rendering (PBVR), label_ko: 입자 기반 볼륨 렌더링}
-  uncertainty-guided-sampling: {label: Uncertainty-guided adaptive sampling, label_ko: 불확실성 기반 적응 샘플링}
-  frame-interpolation: {label: Deep-learning frame interpolation, label_ko: 딥러닝 프레임 보간}
-  learned-output-selection: {label: Learned adaptive output selection, label_ko: 학습 기반 적응 출력 선택}
-  neural-volume-compression: {label: Neural volume compression (3D Gaussians), label_ko: 신경 체적 압축}
-  image-based-surrogates: {label: Surrogates trained from in situ images, label_ko: 인시투 이미지 기반 대리모델}
+  particle-based-rendering: {label: In situ rendering techniques, label_ko: 인시투 렌더링·가시화 기법}
   digital-twin-coupling: {label: Digital twin - simulator coupling, label_ko: 디지털 트윈과 시뮬레이터 결합}
   multi-stage-scheduling: {label: Multi-stage task scheduling, label_ko: 다단계 작업 스케줄링}
   surrogate-substitution: {label: Surrogate substitution under typed contracts, label_ko: 입출력 계약을 유지한 대리모델 치환}
   residual-monitoring: {label: Residual-based out-of-regime alarm, label_ko: 잔차 기반 영역 이탈 경보}
   foundation-model-finetuning: {label: Fine-tuning vision foundation models, label_ko: 비전 파운데이션 모델 미세조정}
-  event-driven-runtime: {label: Event-driven streaming runtime, label_ko: 이벤트 기반 스트리밍 런타임, related: [event-driven-continuation]}
+  event-driven-runtime: {label: Event-driven streaming runtime, label_ko: 이벤트 기반 스트리밍 런타임, related: [agent-execution-layer]}
   agentic-config-optimization: {label: Agentic configuration optimization, label_ko: 에이전트 기반 구성 최적화}
-  resilience-design-patterns: {label: Resilience design patterns, label_ko: 복원력 설계 패턴}
   accelerated-transport: {label: FPGA-accelerated data transport (EJFAT), label_ko: FPGA 가속 데이터 전송}
-  unified-state-graph: {label: Unified state graph layer, label_ko: 통합 상태 그래프 계층}
   unified-data-access: {label: Single data-access service (Tiled), label_ko: 단일 데이터 접근 서비스}
-  agent-middleware: {label: Agent middleware (Academy), label_ko: 에이전트 미들웨어, related: [agent-execution-layer]}
   agentic-workflow-composition: {label: Agentic workflow composition, label_ko: 에이전트 기반 워크플로 구성, related: [multi-agent-workflow]}
   reuse-first-retrieval: {label: Reuse-first retrieval of workflow modules, label_ko: 재사용 우선의 모듈 검색, related: [context-retrieval]}
   spec-first-validation: {label: Specification and schema-based validation, label_ko: 명세·스키마 기반 검증, related: [hybrid-evaluators]}
   serverless-execution: {label: Federated serverless execution, label_ko: 연합 서버리스 실행}
   numa-aware-scheduling: {label: Memory-topology-aware scheduling, label_ko: 메모리 구조 인지 스케줄링}
-  consumption-provenance: {label: Consumption-level provenance (eBPF), label_ko: 실제 읽기량 기반 출처 계측}
   standardized-run-metadata: {label: Standardized run metadata (RO-Crate), label_ko: 표준화된 실행 메타데이터, related: [provenance-logging]}
   io-coalescing: {label: Offset-aware I/O coalescing, label_ko: 오프셋 인지 I/O 병합}
   decentralized-scheduling: {label: Decentralized consensus scheduling, label_ko: 분산 합의 스케줄링}
-  congestion-aware-admission: {label: Congestion-aware transfer admission, label_ko: 혼잡 인지 전송 수락}
-  conditional-list-scheduling: {label: List scheduling for conditional task graphs, label_ko: 조건부 작업 그래프의 리스트 스케줄링}
   llm-gating: {label: Learned gating between LLM and surrogate, label_ko: LLM 호출 여부를 정하는 학습 정책}
   site-profiles: {label: Evidence-backed HPC site profiles, label_ko: 근거가 붙은 사이트 프로파일}
-  named-service-accounts: {label: Application as a service with named service accounts, label_ko: 실명 서비스 계정 기반 응용 서비스}
   risk-contracts: {label: Risk-oriented contracts, label_ko: 위험 지향 계약}
-  resilient-campaign-execution: {label: Checkpointed resilient campaign execution, label_ko: 체크포인트 기반 복원형 캠페인 실행}
+  resilient-campaign-execution: {label: Failure recovery and resilience design, label_ko: 장애 복구·복원 설계}
   data-lakehouse: {label: Lakehouse data management, label_ko: 레이크하우스 데이터 관리}
   science-aware-networking: {label: Science-aware network control, label_ko: 과학 인지 네트워크 제어}
   federated-caching: {label: Federated data caching, label_ko: 연합 데이터 캐싱}
-  federated-learning: {label: Federated learning, label_ko: 연합학습, related: [pets]}
+  federated-learning: {label: Federated learning, label_ko: 연합학습, related: [privacy-assurance]}
   llm-ops-assistant: {label: LLM assistants for operations and support, label_ko: 운영·지원용 LLM 보조 도구}
   failure-attribution: {label: Failure attribution and self-improvement, label_ko: 실패 원인 분류와 자기 개선}
   comparative-benchmarking: {label: Comparative hardware benchmarking, label_ko: 하드웨어 비교 벤치마킹}
   design-space-exploration: {label: Automated design-space exploration, label_ko: 자동 설계 공간 탐색}
   system-simulation: {label: System simulation and emulation, label_ko: 시스템 시뮬레이션·에뮬레이션}
-  roofline-analysis: {label: Roofline analysis, label_ko: 루프라인 분석, related: [energy-roofline]}
+  roofline-analysis: {label: Roofline analysis, label_ko: 루프라인 분석}
   co-scheduling: {label: Co-scheduling on shared nodes, label_ko: 노드 공유 공동 스케줄링}
   analytical-performance-model: {label: Analytical performance models, label_ko: 해석적 성능 모델}
   performance-agent: {label: LLM performance-analysis agent, label_ko: LLM 성능 분석 에이전트, related: [ai-agents]}
-  shared-identity-portal: {label: Shared portal and identity layer, label_ko: 공용 포털·신원 계층}
+  shared-identity-portal: {label: "Shared portal, identity and allocation layer", label_ko: 공용 포털·신원·배분 계층}
   usage-based-capacity-planning: {label: Usage-based capacity planning, label_ko: 사용 패턴 기반 용량 계획}
   user-dashboards: {label: User-facing dashboards and monitoring, label_ko: 사용자용 대시보드·모니터링}
   dataset-catalog: {label: Federated dataset catalog, label_ko: 연합 데이터셋 카탈로그}
@@ -237,39 +185,26 @@ Method:
   portable-abstraction-layers: {label: "Portable abstraction layers (Kokkos, RAJA, Julia, Chapel, Mojo)", label_ko: 이식형 추상화 계층, related: [performance-portable-kernels]}
   autotuning: {label: Automated tuning, label_ko: 자동 튜닝}
   portability-metrics: {label: Performance-portability metrics, label_ko: 성능 이식성 지표}
-  compiler-level-diagnosis: {label: Compiler-level performance diagnosis, label_ko: 컴파일러 수준 성능 진단}
-  hardware-capabilities: {label: Hardware capabilities for device access, label_ko: 하드웨어 능력 기반 장치 접근 제어}
-  version-aware-admission: {label: Version-aware admission and reset, label_ko: 버전 인지 수락·초기화}
   communication-aware-placement: {label: Communication-aware task placement, label_ko: 통신 인지 작업 배치}
   dataflow-runtime: {label: Dataflow runtime, label_ko: 데이터플로 런타임}
-  cross-stack-recovery: {label: Cross-stack coordinated recovery, label_ko: 계층 간 조율 복구}
-  deterministic-replay: {label: Deterministic record and replay, label_ko: 결정론적 기록·재생, related: [provenance-logging]}
-  failure-taxonomy: {label: Common failure taxonomy, label_ko: 공통 장애 분류 체계, related: [failure-attribution]}
-  domain-bounds: {label: Domain bounds attached to data, label_ko: 데이터에 붙이는 적용 범위 정보, related: [standardized-run-metadata]}
-  local-recovery: {label: Checksum-based local recovery, label_ko: 체크섬 기반 국소 복구, related: [cross-stack-recovery]}
   unequal-error-protection: {label: Unequal error protection, label_ko: 차등 오류 보호}
-  fault-injection: {label: Fault injection study, label_ko: 결함 주입 실험, related: [fuzzing]}
+  fault-injection: {label: Fault injection and fuzzing, label_ko: 결함 주입·퍼징}
   formal-verification: {label: Formal verification and model checking, label_ko: 정형 검증과 모델 검사, related: [spec-first-validation]}
   fp-exception-detection: {label: Floating-point exception detection tools, label_ko: 부동소수점 예외 검출 도구}
   probabilistic-error-analysis: {label: Probabilistic rounding-error analysis, label_ko: 확률적 오차 한계 분석}
-  exhaustive-oracle-testing: {label: Exhaustive testing against a reference oracle, label_ko: 기준값 대비 전수 시험, related: [differential-testing]}
-  behavioral-equivalence-checks: {label: Tiered behavioral equivalence checks, label_ko: 단계별 동작 동등성 검사, related: [differential-testing, bit-identical-gates]}
   community-governance: {label: Community governance of open software, label_ko: 공개 소프트웨어의 공동 거버넌스}
   open-control-plane: {label: Open composable system management, label_ko: 공개형 시스템 관리 계층, related: [community-governance]}
-  federated-allocation-platform: {label: Federated allocation and accounting platform, label_ko: 연합 자원 배분·정산 플랫폼, related: [shared-identity-portal]}
   opportunistic-inference: {label: Opportunistic inference on idle capacity, label_ko: 유휴 자원을 쓰는 기회적 추론, related: [co-scheduling]}
   gpu-sharing: {label: GPU sharing and partitioning, label_ko: GPU 공유와 분할, related: [co-scheduling]}
   hardware-enforced-isolation: {label: Hardware-enforced performance isolation, label_ko: 하드웨어 수준의 성능 격리, related: [co-scheduling]}
   llm-gateway: {label: Fair multi-tenant LLM gateway, label_ko: 공정 배분형 LLM 게이트웨이}
   layered-image-pipeline: {label: Versioned layered OS image pipeline, label_ko: 버전 관리되는 계층형 OS 이미지}
-  full-system-health-tests: {label: Full-scale post-outage testing, label_ko: 전체 규모 장애 후 점검}
   infrastructure-inventory: {label: Single source of infrastructure records, label_ko: 인프라 기록의 단일 출처}
   gpu-native-io: {label: GPU-native I/O and data movement, label_ko: GPU에서 직접 하는 입출력과 데이터 이동}
   cross-layer-tracing: {label: Cross-layer tracing and attribution, label_ko: 계층을 가로지르는 추적과 귀속, related: [io-characterization]}
-  node-local-staging: {label: Staging data to node-local storage, label_ko: 노드 로컬 저장소로의 선반입}
+  node-local-staging: {label: Node-local staging and burst buffers, label_ko: 노드 로컬 선반입·완충 저장}
   contention-aware-io-placement: {label: Measured contention-aware placement, label_ko: 측정 기반 경합 회피 배치}
-  compression-quality-prediction: {label: Compression quality prediction, label_ko: 압축 품질 예측, related: [neural-volume-compression]}
-  burst-buffer: {label: Burst buffer for streaming data, label_ko: 스트리밍용 버스트 버퍼}
+  compression-quality-prediction: {label: Compression quality prediction, label_ko: 압축 품질 예측, related: [in-situ-reduction]}
   fp64-emulation: {label: Double-precision emulation on low-precision units, label_ko: 저정밀 연산기로 배정밀도 구현, related: [mixed-precision]}
   unprivileged-containers: {label: Unprivileged HPC container runtimes, label_ko: 권한 없이 도는 HPC 컨테이너, related: [container-wheel-deployment]}
   no-restart-elasticity: {label: Runtime rescaling without restart, label_ko: 재시작 없는 실행 중 규모 조정, related: [resilient-campaign-execution]}
@@ -280,16 +215,14 @@ Method:
   quantum-resource-interface: {label: Vendor-neutral quantum resource interface, label_ko: 벤더 중립 양자 자원 인터페이스, related: [tool-interface-spec]}
   quantum-hpc-workflows: {label: Hybrid quantum-HPC workflow orchestration, label_ko: 양자-HPC 혼합 워크플로 조율}
   fidelity-aware-scheduling: {label: Fidelity-aware quantum scheduling, label_ko: 충실도를 고려한 양자 스케줄링}
-  continuous-benchmarking: {label: Continuous benchmarking and regression testing, label_ko: 상시 벤치마크와 회귀 시험, related: [ci-automation, full-system-health-tests]}
+  continuous-benchmarking: {label: Continuous benchmarking and regression testing, label_ko: 상시 벤치마크와 회귀 시험, related: [ci-automation]}
   model-compression: {label: Model pruning and token reduction, label_ko: 모델 가지치기와 토큰 축소, related: [mixed-precision]}
-  generative-reconstruction: {label: Generative priors for image reconstruction, label_ko: 생성 모델 기반 영상 복원}
-  execution-integrity-guard: {label: Deterministic guard on agent execution, label_ko: 에이전트 실행의 결정론적 검사, related: [runtime-sandbox, origin-labeling]}
+  execution-integrity-guard: {label: Deterministic guard on agent execution, label_ko: 에이전트 실행의 결정론적 검사, related: [runtime-sandbox]}
   job-trace-analysis: {label: Job accounting trace analysis, label_ko: 작업 기록 분석, related: [io-characterization]}
   operations-visualization: {label: Visual analytics of operational data, label_ko: 운영 데이터의 시각 분석}
   heat-reuse: {label: Waste heat reuse, label_ko: 폐열 재사용}
   carbon-aware-upgrade: {label: Carbon-aware hardware refresh, label_ko: 탄소를 고려한 장비 교체}
   edge-cloud-routing: {label: Edge-cloud task routing, label_ko: 엣지와 클라우드 사이의 작업 분배}
-  rl-resource-scaling: {label: Reinforcement learning for resource scaling, label_ko: 강화학습 기반 자원 조정, related: [rl-power-control]}
 System:
   ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터}
   kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스}
@@ -299,17 +232,14 @@ System:
   ai-agents: {label: AI agents, label_ko: AI 에이전트}
   hpc-network: {label: HPC network, label_ko: HPC 네트워크}
   power-telemetry: {label: Power telemetry (RAPL), label_ko: 전력 텔레메트리}
-  encrypted-graph: {label: Encrypted graph analytics, label_ko: 암호화 그래프 분석}
   cloud-science-environments: {label: Cloud science environments, label_ko: 클라우드 과학 실행 환경}
-  simulation-inputs: {label: Simulation configuration variables, label_ko: 시뮬레이션 구성 변수}
   mpi-simulations: {label: MPI simulation codes, label_ko: MPI 시뮬레이션 코드, related: [mpi-parallelization]}
   user-facility-beamline: {label: User-facility beamline (NSLS-II), label_ko: 사용자 시설 빔라인, related: [leadership-facility]}
   hpc-libraries: {label: Production HPC libraries (PETSc), label_ko: 실전 HPC 라이브러리, related: [scientific-apps]}
   storage-memory-hierarchy: {label: Storage-memory hierarchy, label_ko: 저장장치·메모리 계층}
-  connectomics: {label: Electron-microscopy connectomes, label_ko: 전자현미경 커넥톰}
   neural-surrogates: {label: Neural surrogate models, label_ko: 신경망 대리모델}
   sci-foundation-models: {label: Scientific foundation models, label_ko: 과학 파운데이션 모델}
-  sciml-training: {label: SciML training & inference (PyTorch), label_ko: 과학 ML 학습·추론}
+  sciml-training: {label: "SciML training & inference (PyTorch)", label_ko: 과학 ML 학습·추론}
   lattice-boltzmann: {label: Lattice Boltzmann flows, label_ko: 격자 볼츠만 유동}
   tokamak-plasma: {label: Tokamak plasma (MAST), label_ko: 토카막 플라즈마}
   power-grid: {label: Power grid optimization (ACOPF), label_ko: 전력망 최적조류}
@@ -330,14 +260,10 @@ System:
   cooling-infrastructure: {label: Cooling infrastructure, label_ko: 냉각 설비}
   amd-gpu-systems: {label: AMD GPU supercomputers, label_ko: AMD GPU 슈퍼컴퓨터}
   genesis-platform: {label: Genesis Mission platform (American Science Cloud), label_ko: Genesis Mission 플랫폼, related: [federated-clusters]}
-  xfel-facility: {label: X-ray free-electron laser (LCLS-II), label_ko: X선 자유전자레이저 시설, related: [user-facility-beamline]}
   in-situ-visualization: {label: In situ visualization pipelines, label_ko: 인시투 가시화 파이프라인}
   ensemble-simulations: {label: Ensemble simulations, label_ko: 앙상블 시뮬레이션}
-  molecular-dynamics: {label: Molecular dynamics, label_ko: 분자동역학}
-  cardiac-simulation: {label: Cardiac electrophysiology simulation, label_ko: 심장 전기생리 시뮬레이션}
-  robotics-digital-twin: {label: Robotics digital twins, label_ko: 로봇 디지털 트윈}
+  robotics-digital-twin: {label: Experiment and robotics digital twins, label_ko: 실험·로봇 디지털 트윈}
   hep-pipelines: {label: High-energy physics experiment pipelines, label_ko: 고에너지 물리 실험 파이프라인}
-  aero-digital-twin: {label: Experimental aerodynamics digital twin, label_ko: 실험 공기역학 디지털 트윈}
   self-driving-labs: {label: Autonomous (self-driving) laboratories, label_ko: 자율 실험실}
   workflow-systems: {label: "Workflow management systems (Pegasus, COMPSs, Nextflow, Parsl)", label_ko: 워크플로 관리 시스템}
   research-networks: {label: Research and education networks, label_ko: 연구·교육망, related: [hpc-network]}

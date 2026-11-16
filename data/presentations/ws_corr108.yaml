@@ -7,7 +7,7 @@ time: "10:45-11:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr108"
 authors: [xingjian-qi, robert-strzodka]
 addresses: [numerical-error, benchmark-validity]
-proposes: [exhaustive-oracle-testing]
+proposes: [differential-testing]
 targets: [hpc-libraries, hpc-processors]
 summary_ko: "벡터 수학 라이브러리 넷(AOCL-LibM, GNU libmvec, SLEEF, Intel SVML)의 단정밀도 AVX2 단항 함수를 평가함. 모든 유한 단정밀도 입력을 256비트 MPFR 기준값과 전수 비교함."
 claims:

@@ -7,7 +7,7 @@ time: "12:15-12:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess113&id=ws_worksp121"
 authors: [gabriel-twigg-ho, jared-coleman, taina-coleman, mohammadali-khodabandehlou, bhaskar-krishnamachari]
 addresses: [workflow-scheduling]
-proposes: [conditional-list-scheduling]
+proposes: [multi-stage-scheduling]
 targets: [workflow-systems, neural-surrogates]
 summary_ko: "여러 분기 중 하나만 실행되는 조건부 작업 그래프에 고전 리스트 스케줄링 휴리스틱(HEFT, CPoP)을 맞춤. 서로 배타적인 작업이 프로세서를 공유하게 하는 스케줄 표현과, 실행 확률로 가중한 우선순위 함수 두 가지를 바꿈."
 claims:

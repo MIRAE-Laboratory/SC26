@@ -7,8 +7,8 @@ time: "16:25-16:40"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess123&id=ws_isav106"
 authors: [yehua-yang, yi-jiang, rongliang-chen, xiao-chuan-cai]
 addresses: [data-deluge]
-proposes: [learned-output-selection, in-situ-inference]
-targets: [cardiac-simulation, neural-surrogates]
+proposes: [in-situ-reduction, in-situ-inference]
+targets: [mpi-simulations, neural-surrogates]
 summary_ko: >
   고해상도 심장 전기 시뮬레이션은 데이터가 커서 저장·전송 비용이 큼. 고정 출력 간격은 중복 상태를 저장하면서 전기 전파가 빠른 구간은 덜 잡음. 어떤 상태를 남길지 학습하는 적응형 인시투 워크플로를 제안함. 오프라인 교사가 정보가 많은 전압 상태를 찾고, 병렬 시뮬레이션에 내장한 경량 인과 신경망이 실행 중에 출력 여부를 정함. 그렇게 고른 비균일 데이터로 연속 시간 신경 연산자를 학습함.
 claims:

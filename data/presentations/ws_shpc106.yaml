@@ -6,8 +6,8 @@ session: sess126
 time: "16:22-16:41"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc106"
 authors: [kwesi-danso, samuel-abiola, susan-mengel]
-addresses: [workload-fingerprinting, metadata-side-channel]
-proposes: [sampling-coarsening]
+addresses: [metadata-side-channel]
+proposes: [selective-measurement]
 targets: [power-telemetry]
 summary_ko: >
   공개되는 전력 텔레메트리로 HPC 워크로드를 식별할 수 있는지 측정함. 약 1 kHz로 수집한 Intel RAPL

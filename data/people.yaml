@@ -1186,37 +1186,7 @@ daan-camps: {name: "Daan Camps", orgs: [microsoft]}
 kristen-pudenz: {name: "Kristen Pudenz", orgs: [atomcomputing]}
 pooja-rao: {name: "Pooja Rao", orgs: [nvidia]}
 aleksander-wennersteen: {name: "Aleksander Wennersteen", orgs: [pasqal]}
-umit-v-catalyurek: {name: "Ümit V. Çatalyürek", orgs: [aws, gatech]}
-ana-lucia-varbanescu: {name: "Ana Lucia Varbanescu", orgs: [twente, uva]}
-carina-kemp: {name: "Carina Kemp", orgs: [aws]}
-lori-a-diachin: {name: "Lori A. Diachin", orgs: [llnl]}
-thierry-pellegrino: {name: "Thierry Pellegrino", orgs: [aws]}
 michele-weiland: {name: "Michele Weiland", orgs: [epcc]}
-isabel-schwerdtfeger: {name: "Isabel Schwerdtfeger", orgs: [ibm]}
-sally-r-ellingson: {name: "Sally R. Ellingson", orgs: [uky]}
-rabab-alomairy: {name: "Rabab Alomairy", orgs: [kaust]}
-giulia-guidi: {name: "Giulia Guidi", orgs: [cornell]}
-tong-shu: {name: "Tong Shu", orgs: [unt]}
-floris-jan-willemsen: {name: "Floris-Jan Willemsen", orgs: [leiden]}
-mitsuhisa-sato: {name: "Mitsuhisa Sato", orgs: [juntendo, riken]}
-tanner-crowder: {name: "Tanner Crowder", orgs: [doe]}
-kenneth-merz: {name: "Kenneth Merz", orgs: [clevelandclinic]}
-seiji-yunoki: {name: "Seiji Yunoki", orgs: [riken]}
-stefano-mensa: {name: "Stefano Mensa", orgs: [nvidia]}
-pedro-lopes: {name: "Pedro Lopes", orgs: [quera]}
-yasuko-eckert: {name: "Yasuko Eckert", orgs: [amd]}
-paul-nation: {name: "Paul Nation", orgs: [ibm]}
-javier-aizpurua: {name: "Javier Aizpurua", orgs: [basquequantum]}
-nitin-shivaraman: {name: "Nitin Shivaraman", orgs: [astar]}
-laura-schulz: {name: "Laura Schulz", orgs: [anl]}
-terry-jones: {name: "Terry Jones", orgs: [ornl]}
-james-a-ang: {name: "James A. Ang", orgs: [pnnl]}
-jim-brandt: {name: "Jim Brandt", orgs: [sandia]}
-michael-jantz: {name: "Michael Jantz", orgs: [utk]}
-satoshi-matsuoka: {name: "Satoshi Matsuoka", orgs: [riken]}
-galen-shipman: {name: "Galen Shipman", orgs: [lanl]}
-keith-underwood: {name: "Keith Underwood", orgs: [hpe]}
-hans-christian-hoppe: {name: "Hans-Christian Hoppe", orgs: [fzj]}
 xiao-wang: {name: "Xiao Wang", orgs: [ornl, utk]}
 mohamed-wahib: {name: "Mohamed Wahib", orgs: [riken]}
 charles-bouman: {name: "Charles Bouman", orgs: [purdue]}

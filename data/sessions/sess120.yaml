@@ -2,6 +2,7 @@ id: sess120
 type: Session
 label: "AgenticAI4HPC'26: The First International Workshop on Agentic AI for HPC"
 kind: Workshop
+topic: AI·에이전트
 date: "2026-11-15"
 time: "09:00-12:30 CST"
 room: W183b
@@ -52,15 +53,27 @@ insights:
       refs: [ws_aaihpc104]
   korea:
     - head: 레거시 포트란 코드 현대화에 바로 쓸 수 있는 절차임.
+      stage: prep
+      area: 검증·신뢰
+      needs: 기준 출력과 변환 대상 코드의 범위 확정
       text: 오래된 해석 코드를 보유한 기관은 기준 출력 재현을 병합 조건으로 삼는 방식을 적용할 수 있음. 단, 원자력 안전해석처럼 검증 요건이 엄격한 코드는 시험 사례가 덮지 않는 경로를 따로 확인해야 함.
       refs: [ws_aaihpc114, ws_aaihpc139]
     - head: 에이전트 사용량부터 잼.
+      stage: now
+      area: 에이전트·AI 서비스
+      needs: 셸·스케줄러 기록에서 에이전트 사용을 가려낼 방법
       text: 기관 클러스터에서 코딩 에이전트가 작업 제출과 파일시스템에 주는 부하를 계측해야 정책을 정할 수 있음. 한 시설에서는 사용자의 19.5%가 제출의 55.8%를 냈음.
       refs: [ws_aaihpc124]
     - head: 에이전트를 들이기 전에 기록과 경계를 갖춤.
+      stage: prep
+      area: 에이전트·AI 서비스
+      needs: 행동 기록 저장소와 권한 정책
       text: 에이전트가 바꾼 코드와 내린 판단을 질의할 수 있게 남기고, 작업 제출을 보안 경계로 다루는 통제를 먼저 둠.
       refs: [ws_aaihpc144, ws_aaihpc132]
     - head: 운영 지원 에이전트는 모른다고 답할 수 있어야 함.
+      stage: prep
+      area: 에이전트·AI 서비스
+      needs: 답할 수 없는 질문을 담은 평가 문항
       text: 시스템 운영 데이터를 질의하는 에이전트를 만들 때, 계측되지 않은 항목에 대한 질문을 거절하는지를 평가 항목에 넣음.
       refs: [ws_aaihpc146, ws_aaihpc134]
   extra:

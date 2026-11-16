@@ -121,12 +121,59 @@
   .area li { margin: 9px 0; line-height: 1.5; } .area li small { color: var(--muted); }
   .area ul { padding-left: 1.2em; margin: 4px 0; }
   .chk li { margin: 3px 0; }
+  .tyt { display: inline-block; font-size: .78em; font-weight: 600; line-height: 1.5; padding: 0 5px; border-radius: 4px; color: var(--tc); background: color-mix(in srgb, var(--tc) 14%, transparent); white-space: nowrap; }
+  table.mx tbody th.ty { border-left: 4px solid var(--tc); }
+  .tyl { margin-left: 8px; font-size: .9em; }
+  #sess-menu details { border-bottom: 1px solid var(--line); }
+  #sess-menu summary { padding: 8px 10px; cursor: pointer; font-weight: 600; background: color-mix(in srgb, var(--chip) 55%, transparent); }
+  #sess-menu summary small { font-weight: 400; color: var(--muted); }
+  #sess-menu details div { padding-left: 22px; }
+  #tabs .sep { flex: none; align-self: center; font-size: .74em; color: var(--muted); border-left: 1px solid var(--line); padding: 2px 4px 2px 10px; margin-left: 6px; white-space: nowrap; }
+  table.mx tr.tg th { position: static; font-size: .92em; color: var(--muted); border-left: 2px solid var(--muted); white-space: nowrap; cursor: default; }
+  table.mx tr.tg th:first-child { border-left: 0; }
+  table.mx .gl { border-left: 2px solid var(--muted); }
+  #view select { max-width: 100%; margin: 0 0 10px; padding: 6px 8px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+  .tagk { font-size: .72em; font-weight: 600; border: 1px solid var(--c-korea); color: var(--c-korea); border-radius: 999px; padding: 0 6px; white-space: nowrap; }
+  .tagk.x { border-color: var(--c-decision); color: var(--c-decision); }
+  .needs { font-size: .86em; color: var(--c-trial); }
+  .weak { font-size: .76em; border: 1px dashed var(--c-trial); color: var(--c-trial); border-radius: 4px; padding: 0 5px; white-space: nowrap; }
+  .weak.q { border-color: var(--muted); color: var(--muted); }
+  .doc { max-width: 60em; line-height: 1.6; --c: var(--c-decision); }
+  .doc h4 { font-size: .95em; margin: 16px 0 4px; }
+  .doc li { margin: 6px 0; } .doc b.n { color: var(--c-decision); white-space: nowrap; }
+  .doc p.ah { font-weight: 600; color: var(--c-korea); margin: 10px 0 0; }
+  .doc sup.cite { color: var(--link); font-size: .72em; }
+  .doc sup.cite a { position: relative; color: var(--link); text-decoration: none; padding: 0 1px; }
+  .doc sup.cite a:hover { text-decoration: underline; }
+  .doc sup.cite a:hover::after { content: attr(data-tip); position: absolute; left: 50%; bottom: 1.5em; transform: translateX(-50%); width: max-content; max-width: 26em; padding: 6px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--text); font-size: 1.25em; font-weight: 400; line-height: 1.4; white-space: normal; text-align: left; box-shadow: 0 4px 14px rgba(0,0,0,.18); z-index: 20; pointer-events: none; }
+  .ctable { border-collapse: collapse; width: 100%; font-size: .9em; margin: 8px 0; }
+  .ctable th, .ctable td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
+  .ctable th { white-space: nowrap; background: var(--panel); font-weight: 600; }
+  ol.refs { font-size: .86em; } ol.read > li { margin: 14px 0; }
+  .two.three { grid-template-columns: repeat(auto-fit, minmax(16em, 1fr)); }
+  .rank.cols { columns: 2 18em; column-gap: 26px; } .rank.cols li { break-inside: avoid; }
+  .slide { container-type: inline-size; position: relative; aspect-ratio: 16 / 9; max-width: 62em; margin: 14px 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); overflow: hidden; }
+  .slide > h3 { font-size: 2.5cqw !important; margin: 0 !important; padding: 3.4cqw 5cqw 1.2cqw !important; border: 0 !important; color: var(--c-decision); }
+  .slide .sb { font-size: 1.75cqw; line-height: 1.45; padding: 0 5cqw; margin: 0; --c: var(--c-decision); }
+  .slide .sb li { margin: .55em 0; } .slide .sb p { margin: .5em 0; } .slide .sb .needs { font-size: .8em; }
+  .slide .sb .cards { grid-template-columns: repeat(4, 1fr); gap: 1.4cqw; } .slide .sb .card b { font-size: 1.5em; }
+  .slide .sb .ref { font-size: .7em; } .slide .sb .dg { font-size: .7em; padding: .8cqw 1cqw; margin: 0; } .slide .sb .dg-t { margin-bottom: .4em; } .slide .sb .dg * { margin-top: 0; margin-bottom: 0; }
+  .slide .sb .dg-step, .slide .sb .dg-layer, .slide .sb .dg-from, .slide .sb .dg-to { padding: .3em .7em; line-height: 1.3; }
+  .slide .sb ul.c2 { columns: 2; column-gap: 4cqw; } .slide .sb ul.c2 li { break-inside: avoid; }
+  .slide .s-title { height: 100%; display: flex; flex-direction: column; justify-content: center; padding-top: 14cqw; }
+  .slide .s-title h2 { font-size: 4.4cqw !important; color: var(--c-decision); margin: 0 0 1cqw !important; }
+  .slide .sn { position: absolute; right: 2cqw; bottom: 1.2cqw; font-size: 1.2cqw; color: var(--muted); }
+  body.present #slides { position: fixed; inset: 0; z-index: 100; background: #000; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  body.present .slide { display: none; margin: 0; border: 0; border-radius: 0; max-width: none; width: min(100vw, 177.78vh); }
+  body.present .slide.cur { display: block; }
   @media print {
     html, body { height: auto; } body { display: block; background: #fff; color: #000; font-size: 11pt; }
     .tools, .controls, #split, #toggle-graph, #warn, #gloss, #back, #back0, #tograph, .lead, #stats, button { display: none !important; }
     aside { width: 100% !important; max-width: none; height: auto; display: block; }
     #detail { overflow: visible; padding: 0 14px; } main { display: none !important; }
     details.it, .dg, .card, .tcard, .area li { break-inside: avoid; }
+    body.ps #view > :not(#slides) { display: none; } body.ps .slide { break-after: page; break-inside: avoid; max-width: none; width: 100%; margin: 0; border: 0; }
+    .doc { max-width: none; } .doc button, .seg, #view select { display: none; }
     body.pv aside { display: none; } body.pv main { display: block !important; height: auto !important; overflow: visible; }
     body.pv #tabs, body.pv #graph { display: none !important; } body.pv #view { overflow: visible; padding: 0; }
     .ref { border: 1px solid #ccc; }
@@ -174,7 +221,8 @@
   table.mx { border-collapse: separate; border-spacing: 0; font-size: .82em; }
   table.mx th, table.mx td { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0; }
   table.mx thead th { position: sticky; top: 0; background: var(--panel); z-index: 2; padding: 4px 3px; font-weight: 600; cursor: pointer; }
-  table.mx thead th.v { writing-mode: vertical-rl; text-align: left; white-space: nowrap; padding: 6px 2px; max-height: 13em; font-weight: 500; }
+  table.mx thead th.v { vertical-align: bottom; padding: 8px 2px 6px; font-weight: 500; }
+  table.mx thead th.v > span { display: inline-block; writing-mode: vertical-rl; white-space: nowrap; text-align: left; line-height: 1.25; }
   table.mx tbody th { position: sticky; left: 0; background: var(--panel); z-index: 1; text-align: left; padding: 3px 8px; font-weight: 500; min-width: 11em; max-width: 21em; line-height: 1.3; cursor: pointer; }
   table.mx thead th:first-child { left: 0; z-index: 3; cursor: default; }
   table.mx td { min-width: 2.2em; height: 2em; text-align: center; cursor: pointer; }
@@ -233,10 +281,16 @@
     <button data-v="heat" class="on">세션–개념 지도</button>
     <button data-v="pm">문제–기법 대응</button>
     <button data-v="bridge">세션 사이의 다리</button>
-    <button data-v="org">기관·저자</button>
+    <button data-v="org">기관·협력 후보</button>
     <button data-v="apply">적용 모아 보기</button>
     <button data-v="graph">온톨로지 그래프</button>
     <button data-v="check">데이터 점검</button>
+    <span class="sep" aria-hidden="true">자료</span>
+    <button data-v="report">고찰 보고서</button>
+    <button data-v="slides">슬라이드</button>
+    <button data-v="trend">동향 요약</button>
+    <button data-v="read">열람 목록</button>
+    <button data-v="export">내보내기</button>
   </div>
   <div id="view"><p class="note">발표 데이터를 불러오는 중…</p></div>
   <div id="graph">
@@ -266,6 +320,8 @@
     if (!r.ok) throw new Error(path + " 을(를) 읽을 수 없습니다 (" + r.status + ")");
     return jsyaml.safeLoad(await r.text()) || {};
   };
+  const loadJson = async (path) => { try { const r = await fetch(path, { cache: "no-cache" }); return r.ok ? await r.json() : null; } catch (e) { return null; } };
+  let core = null;
   const fail = (e) => {
     $("stats").textContent = "데이터를 불러오지 못함.";
     $("detail").innerHTML = "<p>" + esc(e.message) + "</p><p class='muted'>파일을 직접 열었다면 <code>python -m http.server</code>로 실행해야 함.</p>";
@@ -285,14 +341,16 @@
   const addEdge = (source, rel, target) => edges.push({ source, rel, target });
   try {
     manifest = await loadYaml("data/manifest.yaml");
-    const [ov, th, ss, gl, ch] = await Promise.all([
+    if (manifest.bundle) core = await loadJson("data/" + manifest.bundle.core);   // 묶음 파일이 있으면 그것 하나만 읽음. 없거나 깨졌으면 YAML을 읽음.
+    const [ov, th, ss, gl, ch] = core ? [core.overview, core.themes, core.sessions, core.glossary, core.changelog] : await Promise.all([
       manifest.overview ? loadYaml("data/" + manifest.overview) : {},
       manifest.themes ? loadYaml("data/" + manifest.themes) : {},
       Promise.all((manifest.sessions || []).map((f) => loadYaml("data/" + f))),
       manifest.glossary ? loadYaml("data/" + manifest.glossary) : {},
       manifest.changelog ? loadYaml("data/" + manifest.changelog) : []]);
     overview = ov; themes = th.themes || []; sessions = ss; glossary = gl || {}; changelog = Array.isArray(ch) ? ch : [];
-    sessions.sort((a, b) => parseInt(sNum(a.id), 10) - parseInt(sNum(b.id), 10));
+    const tOrd = (s) => { const i = (overview.topics || []).indexOf(s.topic); return i < 0 ? 99 : i; };   // 주제 순, 그 안에서 번호 순
+    sessions.sort((a, b) => tOrd(a) - tOrd(b) || parseInt(sNum(a.id), 10) - parseInt(sNum(b.id), 10));
   } catch (e) { return fail(e); }
   for (const s of sessions) addNode(s.id, "Session", s);
 
@@ -302,7 +360,10 @@
   const syncSessBtn = () => {
     const v = $("session").value;
     $("sess-btn").firstElementChild.textContent = sessOptions.find((o) => o[0] === v)[1];
-    $("sess-menu").innerHTML = sessOptions.map(([id, l]) => `<div role="option" data-v="${esc(id)}" class="${id === v ? "on" : ""}">${esc(l)}</div>`).join("");
+    const opt = ([id, l]) => `<div role="option" data-v="${esc(id)}" class="${id === v ? "on" : ""}">${esc(l)}</div>`;
+    const tps = [...new Set(sessions.map((s) => s.topic || "그 밖"))];
+    $("sess-menu").innerHTML = sessOptions.slice(0, 1 + themes.length).map(opt).join("") +
+      tps.map((t) => { const ss = sessions.filter((s) => (s.topic || "그 밖") === t); return `<details ${ss.some((s) => s.id === v) ? "open" : ""}><summary>${esc(t)} <small>${ss.length}개</small></summary>${ss.map((s) => opt([s.id, sTitle(s)])).join("")}</details>`; }).join("");
   };
   syncSessBtn();
   const setSession = (v) => { $("session").value = v; $("session").dispatchEvent(new Event("change")); };
@@ -566,6 +627,7 @@
     syncSessBtn(); $("q").value = "";
     if (cy) { cy.elements().removeClass("focus hl"); applyFilter(true); }
     showOverview();
+    heatSess = "";
     if (A && ["heat"].includes(curView)) renderView();
   });
 
@@ -608,28 +670,184 @@
   const clab = (id) => nm(nodes.get(id));
   const TYPE_KO = { Problem: "문제", Method: "기법", System: "대상" };
 
+  const isNarrow = () => matchMedia("(max-width: 760px)").matches;
+  const topicOf = (s) => s.topic || "그 밖";
+  const topics = () => { const order = overview.topics || []; return [...new Set([...order, ...sessions.map(topicOf)])].filter((t) => sessions.some((s) => topicOf(s) === t)); };
+  let heatSess = "";
+  const tcol = (c) => esc((classes()[nodes.get(c).type] || {}).color || "var(--muted)");
+  const tyTag = (c) => (heatType === "all" ? `<span class="tyt" style="--tc:${tcol(c)}">${TYPE_KO[nodes.get(c).type]}</span> ` : "");   // 종류 표시는 전체 보기에서만, 색으로 구분
+  const tyLegend = () => (heatType === "all" ? ` <span class="tyl">${["Problem", "Method", "System"].map((t) => `<span class="tyt" style="--tc:${esc((classes()[t] || {}).color || "var(--muted)")}">${TYPE_KO[t]}</span>`).join(" ")}</span>` : "");
   function viewHeat() {
     const rows = [...A.cs].filter(([c]) => heatType === "all" || nodes.get(c).type === heatType)
       .map(([c, m]) => [c, m, [...m.values()].reduce((s, v) => s + v.length, 0)])
       .sort((a, b) => b[1].size - a[1].size || b[2] - a[2]).slice(0, 34);
-    const max = Math.max(...rows.flatMap(([, m]) => [...m.values()].map((v) => v.length)), 1), cur = $("session").value;
-    return `<h2>세션–개념 지도</h2><p class="note">행은 여러 세션에 걸쳐 나온 개념(많이 걸친 순), 열은 세션 번호임. 칸의 숫자는 그 세션에서 해당 개념을 다룬 발표 수이며, 칸을 누르면 발표 목록이 요약 칸에 나옴. 가로로 긴 행은 대회 전체의 공통 관심사, 한 칸만 짙은 행은 그 세션의 고유 주제임.</p>` +
-      `<div class="seg" id="heat-type">${[["all", "전체"], ["Problem", "문제"], ["Method", "기법"], ["System", "대상 시스템"]].map(([v, l]) => `<button data-t="${v}" class="${v === heatType ? "on" : ""}">${l}</button>`).join("")}</div>` +
-      `<div class="tw"><table class="mx"><thead><tr><th></th>${sessions.map((s) => `<th data-sess="${esc(s.id)}" title="${esc(s.label)}" ${s.id === cur ? 'style="color:var(--link)"' : ""}>${esc(sNum(s.id))}</th>`).join("")}<th class="tot">세션</th><th class="tot">발표</th></tr></thead><tbody>` +
-      rows.map(([c, m, tot]) => `<tr><th data-id="${esc(c)}" title="${esc(nodes.get(c).label)}"><span class="muted">${TYPE_KO[nodes.get(c).type]}</span> ${esc(clab(c))}</th>` +
-        sessions.map((s) => { const v = m.get(s.id) || []; return `<td ${tint(v.length, max)} ${v.length ? cellAttr(clab(c), sTitle(s), v) : ""}>${v.length || ""}</td>`; }).join("") +
-        `<td class="tot z">${m.size}</td><td class="tot z">${tot}</td></tr>`).join("") + `</tbody></table></div>`;
+    const cur = $("session").value;
+    const seg = `<div class="seg" id="heat-type">${[["all", "전체"], ["Problem", "문제"], ["Method", "기법"], ["System", "대상 시스템"]].map(([v, l]) => `<button data-t="${v}" class="${v === heatType ? "on" : ""}">${l}</button>`).join("")}</div>` + tyLegend();
+    if (isNarrow()) {                                           // 좁은 화면: 세션 하나를 골라 그 세션의 개념을 세로 목록으로
+      const sid = heatSess || (/^sess/.test(cur) ? cur : sessions[0].id), s = sessions.find((x) => x.id === sid);
+      const list = [...A.cs].filter(([c, m]) => m.has(sid) && (heatType === "all" || nodes.get(c).type === heatType)).map(([c, m]) => [c, m.get(sid), m.size]).sort((a, b) => b[1].length - a[1].length || b[2] - a[2]);
+      const mx = Math.max(1, ...list.map((x) => x[1].length));
+      return `<h2>세션–개념 지도</h2><p class="note">세션을 고르면 그 세션에서 다룬 개념이 발표 수 순으로 나옴. 항목을 누르면 발표 목록이 요약 칸에 나옴. 넓은 화면에서는 모든 세션을 한 표로 볼 수 있음.</p>` +
+        `<select id="heat-sess">${topics().map((t) => `<optgroup label="${esc(t)}">${sessions.filter((x) => topicOf(x) === t).map((x) => `<option value="${esc(x.id)}" ${x.id === sid ? "selected" : ""}>${esc(sTitle(x))}</option>`).join("")}</optgroup>`).join("")}</select>` + seg +
+        `<ul class="rank">` + list.map(([c, ps, n]) => `<li ${cellAttr(clab(c), sTitle(s), ps)}><span><b>${tyTag(c)}${esc(clab(c))}</b><small>이 세션 포함 ${n}개 세션에서 다룸</small><div class="bar"><i style="width:${(100 * ps.length) / mx}%"></i></div></span><em>발표 ${ps.length}</em></li>`).join("") + `</ul>`;
+    }
+    const max = Math.max(...rows.flatMap(([, m]) => [...m.values()].map((v) => v.length)), 1), tp = topics();
+    return `<h2>세션–개념 지도</h2><p class="note">행은 여러 세션에 걸쳐 나온 개념(많이 걸친 순), 열은 주제별로 묶은 세션 번호임. 칸의 숫자는 그 세션에서 해당 개념을 다룬 발표 수이며, 칸을 누르면 발표 목록이 요약 칸에 나옴. 가로로 긴 행은 대회 전체의 공통 관심사, 한 주제 안에만 짙은 행은 그 주제의 고유 관심사임.</p>` + seg +
+      `<div class="tw"><table class="mx"><thead><tr class="tg"><th></th>${tp.map((t) => `<th colspan="${sessions.filter((s) => topicOf(s) === t).length}">${esc(t)}</th>`).join("")}<th colspan="2"></th></tr>` +
+      `<tr><th></th>${sessions.map((s, i) => `<th data-sess="${esc(s.id)}" title="${esc(s.label)}" class="${i && topicOf(sessions[i - 1]) !== topicOf(s) ? "gl" : ""}" ${s.id === cur ? 'style="color:var(--link)"' : ""}>${esc(sNum(s.id))}</th>`).join("")}<th class="tot gl">세션</th><th class="tot">발표</th></tr></thead><tbody>` +
+      rows.map(([c, m, tot]) => `<tr><th data-id="${esc(c)}" title="${esc(nodes.get(c).label)}" ${heatType === "all" ? `class="ty" style="--tc:${tcol(c)}"` : ""}>${tyTag(c)}${esc(clab(c))}</th>` +
+        sessions.map((s, i) => { const v = m.get(s.id) || [], gl = i && topicOf(sessions[i - 1]) !== topicOf(s); return `<td ${v.length ? `class="${gl ? "gl" : ""}" style="background:color-mix(in srgb, var(--link) ${Math.round(12 + 70 * Math.min(1, v.length / max))}%, transparent)"` : `class="z${gl ? " gl" : ""}"`} ${v.length ? cellAttr(clab(c), sTitle(s), v) : ""}>${v.length || ""}</td>`; }).join("") +
+        `<td class="tot z gl">${m.size}</td><td class="tot z">${tot}</td></tr>`).join("") + `</tbody></table></div>`;
   }
-  function viewPM() {
+  // 문제–기법 통계 (대응 보기와 동향 요약에서 공용)
+  function pmStats() {
     const pair = new Map(), P = new Map(), M = new Map();
     A.pc.forEach((v, pid) => {
       v.addresses.forEach((p) => { const o = P.get(p) || P.set(p, { ps: [], ms: new Set() }).get(p); o.ps.push(pid); v.proposes.forEach((m) => o.ms.add(m)); });
       v.proposes.forEach((m) => { const o = M.get(m) || M.set(m, { ps: [], pr: new Set() }).get(m); o.ps.push(pid); v.addresses.forEach((p) => o.pr.add(p)); });
       v.addresses.forEach((p) => v.proposes.forEach((m) => { const k = p + "|" + m; (pair.get(k) || pair.set(k, []).get(k)).push(pid); }));
     });
-    const few = [...P].filter(([, o]) => o.ps.length >= 4).sort((a, b) => a[1].ms.size / a[1].ps.length - b[1].ms.size / b[1].ps.length).slice(0, 8);
-    const many = [...P].filter(([, o]) => o.ps.length >= 4).sort((a, b) => b[1].ms.size - a[1].ms.size).slice(0, 8);
-    const wide = [...M].sort((a, b) => b[1].pr.size - a[1].pr.size || b[1].ps.length - a[1].ps.length).slice(0, 8);
+    const big = [...P].filter(([, o]) => o.ps.length >= 4);
+    return { pair, P, M,
+      few: [...big].sort((a, b) => a[1].ms.size / a[1].ps.length - b[1].ms.size / b[1].ps.length).slice(0, 8),
+      many: [...big].sort((a, b) => b[1].ms.size - a[1].ms.size).slice(0, 8),
+      wide: [...M].sort((a, b) => b[1].pr.size - a[1].pr.size || b[1].ps.length - a[1].ps.length).slice(0, 8) };
+  }
+  // 협력 후보: 주제를 고르면 그 주제로 발표한 기관과 저자를 발표 수 순으로
+  let orgTopic = "";
+  function viewOrg() {
+    const opts = [["", "전체 발표"], ...themes.map((t, i) => ["theme:" + t.id, `심층 요약 ${i + 1}. ${t.label}`]), ...topics().map((t) => ["topic:" + t, "세션 주제: " + t])];
+    const scope = !orgTopic ? null : orgTopic.startsWith("theme:") ? A.themeScope.get(orgTopic).ps : new Set(presentations.filter((p) => topicOf(nodes.get(p.session)) === orgTopic.slice(6)).map((p) => p.id));
+    const inS = (pid) => !scope || scope.has(pid), KR = new Set(overview.korea_orgs || []);
+    const O = new Map(), W = new Map(), Wall = new Map();
+    A.po.forEach((set, pid) => { if (inS(pid)) set.forEach((o) => { const x = O.get(o) || O.set(o, { ps: [], ss: new Set() }).get(o); x.ps.push(pid); x.ss.add(nodes.get(pid).session); }); });
+    presentations.forEach((p) => (p.authors || []).forEach((a) => {
+      const y = Wall.get(a) || Wall.set(a, new Set()).get(a); y.add(p.session);
+      if (inS(p.id)) { const x = W.get(a) || W.set(a, { ps: [] }).get(a); x.ps.push(p.id); }
+    }));
+    const top = [...O].sort((a, b) => b[1].ps.length - a[1].ps.length).slice(0, 24);
+    const th = themes.map((t) => A.themeScope.get("theme:" + t.id).ps);
+    const max = Math.max(...top.flatMap(([, o]) => th.map((s) => o.ps.filter((p) => s.has(p)).length)), 1);
+    const who = [...W].filter(([a, x]) => x.ps.length >= 2 || Wall.get(a).size >= 3).sort((a, b) => b[1].ps.length - a[1].ps.length || Wall.get(b[0]).size - Wall.get(a[0]).size).slice(0, 24);
+    const krP = [...W].filter(([a]) => (A.porg.get(a) || []).some((o) => KR.has(o)));
+    const orgsOf = (a) => (A.porg.get(a) || []).map((o) => nodes.get(o).label).join(", ");
+    const person = ([a, x]) => `<li ${cellAttr(nodes.get(a).label, "참여한 발표", x.ps)}><span><b>${esc(nodes.get(a).label)}</b>${Wall.get(a).size >= 3 ? ` <span class="tagk x">여러 세션</span>` : ""}${(A.porg.get(a) || []).some((o) => KR.has(o)) ? ` <span class="tagk">한국</span>` : ""}<small>${esc(orgsOf(a) || "소속 미확인")} · 전체 세션 ${esc([...Wall.get(a)].map(sNum).sort().join(", "))}</small></span><em>발표 ${x.ps.length}</em></li>`;
+    return `<h2>기관·저자와 협력 후보</h2><p class="note">주제를 고르면 그 주제로 발표한 기관과 저자가 발표 수 순으로 나옴. 저자 소속을 따라 모은 것이며, 한 발표에 여러 기관이 있으면 각각 한 번씩 셈. 공개 페이지에 소속이 없는 발표자는 기관 집계에서 빠짐. "여러 세션"은 세 개 이상의 세션에 이름을 올린 사람, "한국"은 한국 기관 소속임.</p>` +
+      `<select id="org-topic">${opts.map(([v, l]) => `<option value="${esc(v)}" ${v === orgTopic ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>` +
+      `<h3>기관 <small class="muted">· 발표 수 순</small></h3><div class="tw"><table class="mx"><thead><tr><th></th><th class="tot">발표</th><th class="tot">세션</th>${themes.map((t, i) => `<th data-sess="theme:${esc(t.id)}" title="${esc(t.label)}">요약 ${i + 1}</th>`).join("")}</tr></thead><tbody>` +
+      top.map(([o, x]) => `<tr><th data-id="${esc(o)}">${esc(nodes.get(o).label)}${KR.has(o) ? ` <span class="tagk">한국</span>` : ""}</th><td ${cellAttr(nodes.get(o).label, "이 기관 소속 저자가 참여한 발표", x.ps)}>${x.ps.length}</td><td class="tot z">${x.ss.size}</td>` +
+        th.map((s, i) => { const v = x.ps.filter((p) => s.has(p)); return `<td ${tint(v.length, max)} ${v.length ? cellAttr(nodes.get(o).label, "심층 요약 " + (i + 1) + " 관련 발표", v) : ""}>${v.length || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody></table></div>` +
+      `<div class="two"><div><h3>저자 <small class="muted">· 이 주제의 발표가 둘 이상이거나 여러 세션에 걸친 사람</small></h3><ul class="rank">${who.map(person).join("") || `<li><span class="muted">해당하는 저자가 없음.</span></li>`}</ul></div>` +
+      `<div><h3>한국 기관 소속 발표자 <small class="muted">· ${krP.length}명</small></h3><ul class="rank">${krP.map(person).join("") || `<li><span class="muted">이 주제에는 한국 기관 소속 발표자가 없음.</span></li>`}</ul></div></div>`;
+  }
+  // 적용 제안: 세션·종합·심층 요약의 "한국 연구기관으로의 적용" 항목 모음
+  const STAGES = [["now", "바로 할 수 있는 것", "추가 예산이나 합의 없이 지금 자원으로 시작할 수 있음."], ["prep", "준비가 필요한 것", "도구, 측정, 인력 같은 선행 조건을 먼저 갖춰야 함."],
+    ["long", "장기 과제", "기관 간 합의나 시설 투자가 필요함."], ["ref", "참고 사례", "실행 항목이 아니라 지켜보거나 비교할 사례임."]];
+  function applyItems() {
+    const items = [];
+    (overview.insights && overview.insights.korea || []).forEach((o) => items.push(["전체 종합", "", o]));
+    sessions.forEach((s) => ((s.insights || {}).korea || []).forEach((o) => items.push(["(" + sNum(s.id) + ")", s.id, o])));
+    themes.forEach((th, i) => (th.sections || []).filter((o) => /^한국 연구기관/.test(o.head || "")).forEach((o) => items.push(["심층 요약 " + (i + 1), "theme:" + th.id, o])));
+    return items;
+  }
+  let applyBy = "stage";
+  function viewApply() {
+    const items = applyItems(), groups = new Map();
+    if (applyBy === "stage") STAGES.forEach(([k]) => groups.set(k, []));
+    items.forEach((it) => { const k = applyBy === "stage" ? it[2].stage || "prep" : it[2].area || "그 밖"; (groups.get(k) || groups.set(k, []).get(k)).push(it); });
+    const sl = Object.fromEntries(STAGES.map(([k, l, d]) => [k, [l, d]]));
+    return `<h2>적용 모아 보기</h2><p class="note">세션마다 적은 "한국 연구기관으로의 적용" 제안 ${items.length}개를 실행 단계 또는 영역으로 묶은 것임. 모두 공개 초록을 바탕으로 한 제안이며, 단계와 선행 조건은 제안의 성격을 보고 붙인 것이어서 기관 사정에 따라 달라질 수 있음. "복사"를 누르면 그 묶음이 글머리표 문단으로 복사됨.</p>` +
+      `<div class="seg" id="apply-by"><button data-b="stage" class="${applyBy === "stage" ? "on" : ""}">실행 단계별</button><button data-b="area" class="${applyBy === "area" ? "on" : ""}">영역별</button></div> <button id="print-view">이 화면 인쇄</button>` +
+      [...groups].filter(([, v]) => v.length).map(([k, v]) => `<div class="area"><h3>${esc(applyBy === "stage" ? sl[k][0] : k)} <small class="muted">${v.length}개${applyBy === "stage" ? " · " + esc(sl[k][1]) : ""}</small><button data-copy="${esc(applyBy === "stage" ? sl[k][0] : k)}">복사</button></h3><ul>` +
+        v.map(([w, sid, o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small><span class="link" data-sess="${esc(sid)}">${esc(w)}</span> · ${esc(applyBy === "stage" ? o.area || "" : (sl[o.stage] || [""])[0])}</small>${o.needs ? `<br><span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""}<br>${(o.refs || []).map(refChip).join("")}</li>`).join("") + `</ul></div>`).join("");
+  }
+  // ---------- 자료: 온톨로지에서 만들어 내는 보고서, 슬라이드, 동향 요약, 열람 목록 ----------
+  const evLevel = (refs) => { const c = { num: 0, qual: 0, none: 0 }; (refs || []).forEach((r) => { const e = evOf(r); if (e) c[e]++; }); return c.num ? "num" : c.qual ? "qual" : (refs || []).length ? "none" : ""; };
+  const firstSentence = (t) => { const s = String(t || ""); const i = s.indexOf(". "); return i > 0 ? s.slice(0, i + 1) : s; };
+  const evCounts = () => { const ev = { num: 0, qual: 0, none: 0 }; presentations.forEach((p) => ev[evOf(p.id)]++); return ev; };
+  function viewReport() {
+    const cited = [], cite = (refs) => { const ns = (refs || []).filter((r) => nodes.has(r)).map((r) => { let i = cited.indexOf(r); if (i < 0) i = cited.push(r) - 1; return i + 1; }); return ns.length ? `<sup class="cite">[${ns.map((n) => { const p = nodes.get(cited[n - 1]), tip = p.label + " · (" + sNum(p.session || "") + ") " + ({ num: "수치 제시", qual: "수치 없이 설명", none: "제목만 확인" }[evOf(p.id)] || ""); return `<a ${p.url ? `href="${esc(p.url)}" target="_blank" rel="noopener"` : `href="#ref-${n}"`} data-tip="${esc(tip)}" aria-label="${esc(tip)}">${n}</a>`; }).join(", ")}]</sup>` : ""; };
+    const weak = (refs) => { const l = evLevel(refs); return l === "none" ? ` <span class="weak">근거 약함: 제목만 확인</span>` : l === "qual" ? ` <span class="weak q">수치 없는 근거</span>` : ""; };
+    const item = (o) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")}${cite(o.refs)}${weak(o.refs)}</li>`;
+    const ev = evCounts(), tp = topics(), days = {};
+    sessions.forEach((s) => (days[s.date] = (days[s.date] || 0) + 1));
+    const ins = overview.insights || {}, items = applyItems();
+    let h = `<div class="doc"><h2>SC26 워크숍 고찰 보고서</h2><p class="muted">세션 ${sessions.length}개 · 발표 ${presentations.length}건 · 기준일 ${esc((changelog[0] || {}).date || "")} · 근거는 공개 프로그램 페이지의 초록임</p><p><button id="print-view">이 보고서 인쇄·PDF 저장</button></p>` +
+      `<h3>1. 개요</h3><p>SC26의 워크숍 ${sessions.length}개(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 발표 ${presentations.length}건의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 온톨로지로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용이라는 세 관점을 기본으로 삼았음.</p>` +
+      `<table class="ctable"><tr><th>주제</th><th>세션</th></tr>${tp.map((t) => `<tr><th>${esc(t)}</th><td>${sessions.filter((s) => topicOf(s) === t).map((s) => esc(sTitle(s))).join("<br>")}</td></tr>`).join("")}</table>` +
+      `<p><b>근거의 한계.</b> 발표 ${presentations.length}건 가운데 수치를 제시한 것이 ${ev.num}건, 수치 없이 방법이나 입장을 설명한 것이 ${ev.qual}건, 공개 설명문이 없어 제목만 확인한 것이 ${ev.none}건임. 모든 내용은 초록에 근거하며 논문 전문과 현장 발표는 반영하지 않았음. 근거가 약한 항목은 본문에 따로 표시함.</p>` +
+      ((overview.highlights || []).length ? `<p><b>핵심 수치.</b></p><ul>${overview.highlights.map((x) => `<li><b class="n">${esc(x.value)}</b> ${esc(x.label)}${cite([x.ref])}</li>`).join("")}</ul>` : "") +
+      `<h3>2. 주요 동향</h3>` + themes.map((th, i) => `<h4>2.${i + 1} ${esc(th.label)}</h4><p>${esc(th.summary_ko || "")}</p><ul>${(th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)).map(item).join("")}</ul>`).join("") +
+      `<h3>3. 시사점</h3><h4>3.1 결정 주체와 기준</h4><ul>${(ins.decision || []).map(item).join("")}</ul><h4>3.2 시행착오와 조건</h4><ul>${(ins.trial || []).map(item).join("")}</ul>` + ((ins.extra || []).length ? `<h4>3.3 그 밖의 포인트</h4><ul>${ins.extra.map(item).join("")}</ul>` : "") +
+      `<h3>4. 후속 조치</h3><p>한국 연구기관에 적용할 제안 ${items.filter((x) => x[2].stage !== "ref").length}개를 실행 단계로 나눔. 초록을 바탕으로 한 제안이므로 기관의 사정에 맞춘 검토가 필요함.</p>` +
+      STAGES.filter(([k]) => k !== "ref").map(([k, l, d], i) => { const v = items.filter((x) => (x[2].stage || "prep") === k); const areas = [...new Set(v.map((x) => x[2].area || "그 밖"))];
+        return `<h4>4.${i + 1} ${esc(l)} <small class="muted">${v.length}개 · ${esc(d)}</small></h4>` + areas.map((a) => `<p class="ah">${esc(a)}</p><ul>${v.filter((x) => (x[2].area || "그 밖") === a).map(([w, , o]) => `<li><b>${esc(o.head)}</b>${o.needs ? ` <span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""} <small class="muted">${esc(w)}</small>${cite(o.refs)}${weak(o.refs)}</li>`).join("")}</ul>`).join(""); }).join("") +
+      `<h4>4.4 참고 사례</h4><ul>${items.filter((x) => x[2].stage === "ref").map(([w, , o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small class="muted">${esc(w)}</small>${cite(o.refs)}</li>`).join("")}</ul>` +
+      `<h3>부록 A. 세션별 요약</h3><table class="ctable">${sessions.map((s) => `<tr><th>(${esc(sNum(s.id))})</th><td><b>${esc(s.label)}</b> <span class="muted">${esc(s.date || "")} · 발표 ${presentations.filter((p) => p.session === s.id).length}건</span><br>${esc(firstSentence(s.summary_ko))}</td></tr>`).join("")}</table>`;
+    h += `<h3>부록 B. 근거 발표</h3><p class="muted">● 수치 제시 · ○ 수치 없이 설명 · ◌ 제목만 확인</p><ol class="refs">${cited.map((r, i) => { const p = nodes.get(r); return `<li id="ref-${i + 1}">${EV_MARK[evOf(r)] || ""} ${esc(p.label)} <span class="muted">(${esc(sNum(p.session || ""))})</span>${p.url ? ` <a href="${esc(p.url)}" target="_blank" rel="noopener">프로그램 페이지</a>` : ""}</li>`; }).join("")}</ol></div>`;
+    return h;
+  }
+  function buildSlides() {
+    const S = [], ev = evCounts(), ins = overview.insights || {}, items = applyItems();
+    const bullets = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
+    S.push(["", `<div class="s-title"><h2>SC26 워크숍 고찰</h2><p>세션 ${sessions.length}개 · 발표 ${presentations.length}건의 초록에서 도출</p><p class="muted">기준일 ${esc((changelog[0] || {}).date || "")}</p></div>`]);
+    S.push(["범위와 방법", `<ul><li>워크숍 ${sessions.length}개의 발표 ${presentations.length}건을 읽고, 다루는 문제·제안 기법·대상 시스템을 온톨로지로 정리함.</li><li>주제: ${esc(topics().join(", "))}</li><li>고찰 관점: 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용</li><li>근거: 수치를 제시한 발표 ${ev.num}건, 수치 없이 설명한 발표 ${ev.qual}건, 제목만 확인한 발표 ${ev.none}건. 모두 공개 초록 기준임.</li></ul>`]);
+    if ((overview.highlights || []).length) S.push(["핵심 수치", `<div class="cards">${overview.highlights.map((x) => `<div class="card"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("")}</div>`]);
+    themes.forEach((th, i) => {
+      const secs = (th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)), kr = (th.sections || []).find((s) => /^한국 연구기관/.test(s.head));
+      S.push([`동향 ${i + 1}. ${th.label}`, `<p class="lead2">${esc(th.summary_ko || "")}</p>` + bullets(secs.map((s) => s.head), 7)]);
+      if (th.diagram) S.push([`동향 ${i + 1}. ${th.label}`, diagramHtml(th.diagram)]);
+      secs.slice(0, 2).forEach((s) => S.push([`동향 ${i + 1}. ${s.head}`, `<p class="lead2">${emph(s.text)}</p><p>${(s.refs || []).slice(0, 4).map(refChip).join("")}</p>`]));
+      if (kr) S.push([`동향 ${i + 1}의 적용`, `<p class="lead2"><b>${esc(kr.head.replace(/^한국 연구기관에의 적용\(제안\) - /, ""))}</b></p><p class="lead2">${emph(kr.text)}</p>`]);
+    });
+    S.push(["시사점: 결정 주체와 기준", bullets((ins.decision || []).map((o) => o.head), 9)]);
+    S.push(["시사점: 시행착오와 조건", bullets((ins.trial || []).map((o) => o.head), 14)]);
+    STAGES.filter(([k]) => k !== "ref").forEach(([k, l]) => { const v = items.filter((x) => (x[2].stage || "prep") === k); S.push([`후속 조치: ${l} (${v.length}개 중 일부)`, `<ul class="c2">${v.slice(0, 8).map(([, , o]) => `<li>${esc(o.head)}${o.needs ? `<br><span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""}</li>`).join("")}</ul>`]); });
+    S.push(["한계와 다음 단계", `<ul><li>모든 내용은 공개 초록에 근거하며 논문 전문과 현장 발표는 반영하지 않았음.</li><li>제목만 확인한 발표 ${ev.none}건은 현장 자료로 보완이 필요함.</li><li>문제와 기법의 분류는 초록을 요약하며 붙인 것임.</li><li>적용 제안의 단계와 선행 조건은 기관 사정에 맞춘 검토가 필요함.</li></ul>`]);
+    return S;
+  }
+  function viewSlides() {
+    const S = buildSlides();
+    return `<h2>고찰 슬라이드</h2><p class="note">온톨로지와 고찰에서 자동으로 엮은 ${S.length}장임. 데이터가 바뀌면 슬라이드도 바뀜. "발표 모드"에서는 화살표 키나 화면 좌우를 눌러 넘기고 Esc로 닫음. 인쇄하면 한 쪽에 한 장씩 가로로 나옴.</p>` +
+      `<p><button id="present">발표 모드</button> <button id="print-slides">인쇄·PDF 저장</button></p><div id="slides">` +
+      S.map(([t, b], i) => `<section class="slide" data-i="${i}">${t ? `<h3>${esc(t)}</h3>` : ""}<div class="sb insight grp">${b}</div><span class="sn">${i + 1} / ${S.length}</span></section>`).join("") + `</div>`;
+  }
+  function viewTrend() {
+    const st = pmStats(), n = (id) => esc(clab(id));
+    const common = [...A.cs].map(([c, m]) => [c, m.size, [...m.values()].flat().length]).sort((a, b) => b[1] - a[1] || b[2] - a[2]).slice(0, 8);
+    const col = (title, lead, rows) => `<div><h3>${title}</h3><p class="note">${lead}</p><ul class="rank">${rows}</ul></div>`;
+    return `<div class="doc"><h2>기술 동향 한 장 요약</h2><p class="note">발표 ${presentations.length}건에 붙인 "다루는 문제"와 "제안 기법"의 짝에서 뽑은 것임. 기획서의 문제 정의나 동향 절에 옮겨 쓸 수 있음. 분류는 공개 초록을 요약하며 붙인 것이라 초록에 없는 내용은 반영되지 않음.</p><p><button id="print-view">이 화면 인쇄</button></p>` +
+      `<div class="two three">` +
+      col("수렴한 것", "여러 문제에 두루 쓰이는 수단임. 분야를 가리지 않고 채택되고 있어 도입 위험이 낮음.", st.wide.slice(0, 6).map(([m, o]) => `<li ${cellAttr(clab(m), "이 기법을 쓴 발표", o.ps)}><span><b>${n(m)}</b><small>${[...o.pr].slice(0, 3).map(n).join(", ")}${o.pr.size > 3 ? " 외" : ""}</small></span><em>문제 ${o.pr.size} · 발표 ${o.ps.length}</em></li>`).join("")) +
+      col("갈리는 것", "관심은 크지만 해법이 여러 갈래로 나뉘어 아직 표준이 없음. 선택에 근거가 필요한 영역임.", st.many.slice(0, 6).map(([p, o]) => `<li ${cellAttr(clab(p), "이 문제를 다룬 발표", o.ps)}><span><b>${n(p)}</b><small>${[...o.ms].slice(0, 3).map(n).join(", ")} 외</small></span><em>발표 ${o.ps.length} · 기법 ${o.ms.size}</em></li>`).join("")) +
+      col("비어 있는 것", "발표 수에 비해 제안된 기법이 적음. 문제는 인식됐으나 해법이 한두 갈래뿐인 영역임.", st.few.slice(0, 6).map(([p, o]) => `<li ${cellAttr(clab(p), "이 문제를 다룬 발표", o.ps)}><span><b>${n(p)}</b><small>${[...o.ms].slice(0, 3).map(n).join(", ") || "제안 기법 없음"}</small></span><em>발표 ${o.ps.length} · 기법 ${o.ms.size}</em></li>`).join("")) +
+      `</div><h3>대회 전체의 공통 관심사</h3><p class="note">가장 많은 세션에 걸쳐 다뤄진 개념임.</p><ul class="rank cols">${common.map(([c, ns, np]) => `<li data-id="${esc(c)}"><span><b><span class="muted">${TYPE_KO[nodes.get(c).type]}</span> ${n(c)}</b></span><em>세션 ${ns} · 발표 ${np}</em></li>`).join("")}</ul>` +
+      `<h3>심층 요약과의 대응</h3><ul>${themes.map((t, i) => `<li><span class="link" data-sess="theme:${esc(t.id)}">${i + 1}. ${esc(t.label)}</span> <span class="muted">· 발표 ${A.themeScope.get("theme:" + t.id).ps.size}건</span></li>`).join("")}</ul></div>`;
+  }
+  function viewRead() {
+    const sc = new Map(), add = (r, w, why) => { if (!nodes.has(r) || evOf(r) !== "num") return; const x = sc.get(r) || sc.set(r, { s: 0, why: {} }).get(r); x.s += w; x.why[why] = (x.why[why] || 0) + 1; };
+    const scan = (groups) => Object.entries(groups || {}).forEach(([k, items]) => (items || []).forEach((o) => (o.refs || []).forEach((r) => add(r, k === "korea" ? 3 : 1, k === "korea" ? "적용 제안" : "고찰"))));
+    scan(overview.insights); sessions.forEach((s) => scan(s.insights));
+    themes.forEach((th) => (th.sections || []).forEach((o) => (o.refs || []).forEach((r) => add(r, /^한국 연구기관/.test(o.head) ? 3 : 2, /^한국 연구기관/.test(o.head) ? "적용 제안" : "심층 요약"))));
+    (overview.highlights || []).forEach((x) => add(x.ref, 2, "핵심 수치"));
+    const top = [...sc].sort((a, b) => b[1].s - a[1].s).slice(0, 20);
+    return `<div class="doc"><h2>후속 열람 목록</h2><p class="note">논문 전문을 읽을 만한 발표 스무 편임. 수치를 제시한 발표 가운데 적용 제안(3점), 심층 요약과 핵심 수치(2점), 그 밖의 고찰(1점)의 근거로 많이 쓰인 순으로 골랐음. 초록만 읽은 상태이므로 전문에서 조건과 한계를 확인할 필요가 있음.</p><p><button id="print-view">이 화면 인쇄</button></p><ol class="read">` +
+      top.map(([r, x]) => { const p = nodes.get(r), cl = (p.claims || []).map((c) => (typeof c === "string" ? c : c.text)).find((c) => NUM_RE.test(c)) || (p.claims || [])[0] || "";
+        return `<li><span class="link" data-id="${esc(r)}"><b>${esc(p.label)}</b></span> <span class="muted">(${esc(sNum(p.session))})</span>${p.url ? ` <a href="${esc(p.url)}" target="_blank" rel="noopener">프로그램 페이지</a>` : ""}<br><small class="muted">${esc(Object.entries(x.why).map(([k, v]) => k + " " + v + "건").join(" · "))}의 근거</small><br>${emph(typeof cl === "string" ? cl : "")}</li>`; }).join("") + `</ol></div>`;
+  }
+  function viewExport() {
+    const f = (href, name, desc) => `<li><a href="${href}" target="_blank" rel="noopener"><b>${name}</b></a> ${desc}</li>`;
+    return `<div class="doc"><h2>내보내기</h2><p class="note">온톨로지를 다른 도구에서 읽을 수 있는 형식으로 내려받음. 기관의 지식그래프에 싣거나 에이전트의 검색 자료로 쓸 수 있음. 파일은 데이터를 갱신할 때 <code>tools/make_bundle.py</code>가 함께 만듦.</p><ul>` +
+      f("export/ontology.jsonld", "ontology.jsonld", "JSON-LD 그래프. 세션, 발표, 인물, 기관, 개념을 노드로, 관계를 속성으로 담음.") +
+      f("export/nodes.csv", "nodes.csv", "노드 표. id, 종류, 이름, 한국어 이름, 세션, 근거 수준, 주소.") +
+      f("export/edges.csv", "edges.csv", "관계 표. 출발 id, 관계, 도착 id.") +
+      f("export/insights.csv", "insights.csv", "고찰 표. 출처(종합, 심층 요약, 세션), 관점, 요지, 풀이, 근거 발표, 실행 단계, 영역, 선행 조건.") +
+      f("data/bundle-core.json", "bundle-core.json", "뷰어가 첫 화면에 읽는 묶음(스키마, 종합, 심층 요약, 세션).") +
+      f("data/bundle-rest.json", "bundle-rest.json", "뷰어가 이어서 읽는 묶음(발표, 개념, 인물, 기관).") +
+      `</ul><h3>구조</h3><table class="ctable">${Object.entries(classes()).map(([k, c]) => `<tr><th>${esc(c.label_ko || k)}</th><td>${esc(k)} · ${[...nodes.values()].filter((n) => n.type === k).length}개</td></tr>`).join("")}<tr><th>관계</th><td>${esc(Object.keys(schema.relations || {}).join(", "))} · ${valid.length}개</td></tr></table></div>`;
+  }
+  function viewPM() {
+    const { pair, P, M, few, many, wide } = pmStats();
     const rows = [...P].sort((a, b) => b[1].ps.length - a[1].ps.length).slice(0, 20).map(([p]) => p);
     const colScore = new Map();
     pair.forEach((v, k) => { const [p, m] = k.split("|"); if (rows.includes(p)) colScore.set(m, (colScore.get(m) || 0) + v.length); });
@@ -643,10 +861,10 @@
       many.map(([p, o]) => li(p, `발표 ${o.ps.length} · 기법 ${o.ms.size}`, [...o.ms].slice(0, 3).map(clab).join(", ") + " 외", o.ps)).join("") + `</ul></div>` +
       `<div><h3>여러 문제에 두루 쓰이는 기법</h3><p class="note">분야를 가리지 않는 범용 수단임.</p><ul class="rank">` +
       wide.map(([m, o]) => li(m, `문제 ${o.pr.size} · 발표 ${o.ps.length}`, [...o.pr].slice(0, 3).map(clab).join(", ") + (o.pr.size > 3 ? " 외" : ""), o.ps)).join("") + `</ul></div></div>` +
-      `<h3>대응표 <small class="muted">· 발표가 많은 문제 ${rows.length}개 × 함께 나온 기법 ${cols.length}개</small></h3>` +
-      `<div class="tw"><table class="mx"><thead><tr><th></th>${cols.map((m) => `<th class="v" data-id="${esc(m)}">${esc(clab(m))}</th>`).join("")}</tr></thead><tbody>` +
+      (isNarrow() ? `<p class="note">대응표는 넓은 화면에서 볼 수 있음.</p>` : `<h3>대응표 <small class="muted">· 발표가 많은 문제 ${rows.length}개 × 함께 나온 기법 ${cols.length}개</small></h3>` +
+      `<div class="tw"><table class="mx"><thead><tr><th></th>${cols.map((m) => `<th class="v" data-id="${esc(m)}"><span>${esc(clab(m))}</span></th>`).join("")}</tr></thead><tbody>` +
       rows.map((p) => `<tr><th data-id="${esc(p)}">${esc(clab(p))} <span class="muted">${P.get(p).ps.length}</span></th>` +
-        cols.map((m) => { const v = pair.get(p + "|" + m) || []; return `<td ${tint(v.length, max)} ${v.length ? cellAttr(clab(p) + " × " + clab(m), "이 문제에 이 기법을 쓴 발표", v) : ""}>${v.length || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody></table></div>`;
+        cols.map((m) => { const v = pair.get(p + "|" + m) || []; return `<td ${tint(v.length, max)} ${v.length ? cellAttr(clab(p) + " × " + clab(m), "이 문제에 이 기법을 쓴 발표", v) : ""}>${v.length || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody></table></div>`);
   }
   function viewBridge() {
     const nS = (c) => A.cs.get(c).size, pairs = [];
@@ -670,46 +888,12 @@
         `<li ${cellAttr("(" + sNum(a.id) + ") 와 (" + sNum(b.id) + ") 의 공유 개념", sh.slice(0, 8).map(clab).join(", "), idsOf(a, b, sh))}><span><b>(${esc(sNum(a.id))}) ↔ (${esc(sNum(b.id))}) · ${esc(sh.slice(0, 4).map(clab).join(", "))}</b><small>${esc(a.label)}</small><small>${esc(b.label)}</small></span><em>공유 ${sh.length}개</em></li>`).join("") + `</ul></div>` +
       `<div><h3>여러 세션을 잇는 발표</h3><p class="note">다른 세션 셋 이상과 개념을 둘 넘게 공유하는 발표임(아주 흔한 개념은 제외).</p><ul class="rank">` + bridgeP.map(([p, o]) =>
         `<li data-id="${esc(p.id)}"><span><b>${esc(p.label)}</b><small>(${esc(sNum(p.session))}) 에서 발표 · 닿는 세션: ${esc(o.map((s) => sNum(s.id)).join(", "))}</small></span><em>${o.length}개 세션</em></li>`).join("") + `</ul></div></div>` +
-      `<h3>세션 간 가까움</h3><div class="tw"><table class="mx"><thead><tr><th></th>${sessions.map((s) => `<th data-sess="${esc(s.id)}" title="${esc(s.label)}">${esc(sNum(s.id))}</th>`).join("")}</tr></thead><tbody>` +
+      (isNarrow() ? `<p class="note">세션 간 가까움 표는 넓은 화면에서 볼 수 있음.</p>` : `<h3>세션 간 가까움</h3><div class="tw"><table class="mx"><thead><tr><th></th>${sessions.map((s) => `<th data-sess="${esc(s.id)}" title="${esc(s.label)}">${esc(sNum(s.id))}</th>`).join("")}</tr></thead><tbody>` +
       sessions.map((a) => `<tr><th data-sess="${esc(a.id)}" title="${esc(a.label)}">(${esc(sNum(a.id))}) ${esc(a.label)}</th>` + sessions.map((b) => {
         if (a.id === b.id) return `<td class="z muted">·</td>`;
         const [j, sh] = J.get(a.id + "|" + b.id);
         return `<td ${tint(j, max)} ${sh.length ? cellAttr("(" + sNum(a.id) + ") 와 (" + sNum(b.id) + ") 의 공유 개념", sh.slice(0, 8).map(clab).join(", "), idsOf(a, b, sh)) : ""}>${sh.length || ""}</td>`;
-      }).join("") + `</tr>`).join("") + `</tbody></table></div>`;
-  }
-  function viewOrg() {
-    const O = new Map();
-    A.po.forEach((set, pid) => set.forEach((o) => { const x = O.get(o) || O.set(o, { ps: [], ss: new Set() }).get(o); x.ps.push(pid); x.ss.add(nodes.get(pid).session); }));
-    const top = [...O].sort((a, b) => b[1].ps.length - a[1].ps.length).slice(0, 24);
-    const th = themes.map((t) => A.themeScope.get("theme:" + t.id).ps);
-    const max = Math.max(...top.flatMap(([, o]) => th.map((s) => o.ps.filter((p) => s.has(p)).length)), 1);
-    const W = new Map();
-    presentations.forEach((p) => (p.authors || []).forEach((a) => { const x = W.get(a) || W.set(a, { ps: [], ss: new Set() }).get(a); x.ps.push(p.id); x.ss.add(p.session); }));
-    const cross = [...W].filter(([, o]) => o.ss.size >= 3).sort((a, b) => b[1].ss.size - a[1].ss.size || b[1].ps.length - a[1].ps.length).slice(0, 16);
-    return `<h2>기관·저자</h2><p class="note">저자 소속을 따라 발표를 기관별로 모은 것임. 오른쪽 세 열은 심층 요약의 세 관점에 해당하는 발표 수로, 기관마다 어느 쪽에 무게를 두는지 보임. 한 발표에 여러 기관이 있으면 각각 한 번씩 셈. 공개 페이지에 소속이 없는 발표자는 빠져 있음.</p>` +
-      `<h3>발표가 많은 기관</h3><div class="tw"><table class="mx"><thead><tr><th></th><th class="tot">발표</th><th class="tot">세션</th>${themes.map((t, i) => `<th data-sess="theme:${esc(t.id)}" title="${esc(t.label)}">요약 ${i + 1}</th>`).join("")}</tr></thead><tbody>` +
-      top.map(([o, x]) => `<tr><th data-id="${esc(o)}">${esc(nodes.get(o).label)}</th><td ${cellAttr(nodes.get(o).label, "이 기관 소속 저자가 참여한 발표", x.ps)}>${x.ps.length}</td><td class="tot z">${x.ss.size}</td>` +
-        th.map((s, i) => { const v = x.ps.filter((p) => s.has(p)); return `<td ${tint(v.length, max)} ${v.length ? cellAttr(nodes.get(o).label, "심층 요약 " + (i + 1) + " 관련 발표", v) : ""}>${v.length || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody></table></div>` +
-      `<h3>여러 세션에 걸쳐 발표한 저자</h3><p class="note">세 개 이상의 세션에 이름을 올린 사람임. 분야를 잇는 인물이거나 큰 연구 그룹의 책임자인 경우가 많음.</p><ul class="rank">` +
-      cross.map(([a, x]) => `<li ${cellAttr(nodes.get(a).label, "참여한 발표", x.ps)}><span><b>${esc(nodes.get(a).label)}</b><small>${esc((A.porg.get(a) || []).map((o) => nodes.get(o).label).join(", "))} · 세션 ${esc([...x.ss].map(sNum).sort().join(", "))}</small></span><em>세션 ${x.ss.size} · 발표 ${x.ps.length}</em></li>`).join("") + `</ul>`;
-  }
-  const AREAS = [["인력·교육", /인력|교육|양성|학생/], ["에너지·시설", /에너지|전력|냉각|전산실|수랭|효율/], ["검증·신뢰", /검증|정확|시험 사례|기준 출력|벤치마크|신뢰|계약|결함|조용한|예외/],
-    ["데이터·저장", /데이터|저장|스트리밍|입출력|파일/], ["도입 평가·하드웨어", /도입|GPU|가속기|하드웨어|이식|배정밀도|사양|벤더|교체|양자/], ["에이전트·AI 서비스", /에이전트|LLM|추론|AI/],
-    ["운영·사용자 지원", /운영|지원|사용자|계정|신원|포털|스케줄|워크플로|절차|문서|환경/], ["협력·거버넌스", /연합|기관 간|거버넌스|공동|국가|정책|일본/]];
-  function viewApply() {
-    const items = [];
-    (overview.insights && overview.insights.korea || []).forEach((o) => items.push(["전체 종합", "", o]));
-    sessions.forEach((s) => ((s.insights || {}).korea || []).forEach((o) => items.push(["(" + sNum(s.id) + ")", s.id, o])));
-    themes.forEach((th, i) => (th.sections || []).filter((o) => /^한국 연구기관/.test(o.head || "")).forEach((o) => items.push(["심층 요약 " + (i + 1), "theme:" + th.id, o])));
-    const by = new Map(AREAS.map(([a]) => [a, []])); by.set("그 밖", []);
-    items.forEach((it) => {
-      const o = it[2], hit = o.area ? [o.area] : (AREAS.find(([, re]) => re.test(o.head || "")) || AREAS.find(([, re]) => re.test(o.text || "")) || ["그 밖"]);
-      (by.get(hit[0]) || by.set(hit[0], []).get(hit[0])).push(it);
-    });
-    return `<h2>적용 모아 보기</h2><p class="note">세션마다 적은 "한국 연구기관으로의 적용" 제안 ${items.length}개를 실행 영역별로 모은 것임. 모두 공개 초록을 바탕으로 한 제안이며, 영역은 제목의 낱말로 자동 분류함(YAML 항목에 <code>area:</code>를 적으면 그 값을 따름). "복사"를 누르면 그 영역이 글머리표 문단으로 복사됨.</p>` +
-      `<p><button id="print-view">이 화면 인쇄</button></p>` +
-      [...by].filter(([, v]) => v.length).map(([a, v]) => `<div class="area"><h3>${esc(a)} <small class="muted">${v.length}개</small><button data-copy="${esc(a)}">복사</button></h3><ul>` +
-        v.map(([w, sid, o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small><span class="link" data-sess="${esc(sid)}">${esc(w)}</span></small><br>${(o.refs || []).map(refChip).join("")}</li>`).join("") + `</ul></div>`).join("");
+      }).join("") + `</tr>`).join("") + `</tbody></table></div>`);
   }
   function viewCheck() {
     const noTag = presentations.filter((p) => !A.pc.get(p.id).all.size), none = presentations.filter((p) => evOf(p.id) === "none");
@@ -732,19 +916,24 @@
       sec("어느 발표에도 쓰이지 않은 개념", "지워도 되는 후보임.", unused, (n) => `<li>${nodeLink(n.id)}</li>`) +
       sec("소속이 없는 인물", "공개 페이지에 소속이 없거나 페이지를 읽지 못한 경우임. 기관·저자 보기에서 빠짐.", noOrg, (n) => `<li>${nodeLink(n.id)}</li>`);
   }
+  const RVIEWS = { heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, apply: viewApply, check: viewCheck, report: viewReport, slides: viewSlides, trend: viewTrend, read: viewRead, export: viewExport };
   function renderView() {
     document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.v === curView));
     document.querySelector("main").classList.toggle("g", curView === "graph");
     if (curView === "graph") { syncHash(); return ensureGraph(); }
     if (!A) return;
     cells.clear();
-    $("view").innerHTML = ({ heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, apply: viewApply, check: viewCheck }[curView] || viewHeat)();
+    $("view").innerHTML = (RVIEWS[curView] || viewHeat)();
     $("view").scrollTop = 0; syncHash();
   }
   $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { curView = b.dataset.v; renderView(); } });
   $("view").addEventListener("click", (e) => {
     const t = e.target.closest("#heat-type button");
     if (t) { heatType = t.dataset.t; return renderView(); }
+    const ab = e.target.closest("#apply-by button");
+    if (ab) { applyBy = ab.dataset.b; return renderView(); }
+    if (e.target.id === "present") return present(0);
+    if (e.target.id === "print-slides") { pageStyle.textContent = "@page { size: landscape; margin: 8mm; }"; document.body.classList.add("pv", "ps"); window.print(); return; }
     if (e.target.id === "print-view") { document.body.classList.add("pv"); window.print(); return; }
     const cp = e.target.closest("[data-copy]");
     if (cp) {
@@ -759,6 +948,35 @@
     if (s) return setSession(s.dataset.sess);
     select(n.dataset.id);
   });
+
+  $("view").addEventListener("change", (e) => {
+    if (e.target.id === "heat-sess") { heatSess = e.target.value; renderView(); }
+    if (e.target.id === "org-topic") { orgTopic = e.target.value; renderView(); }
+  });
+  // 발표 모드: 슬라이드를 한 장씩 화면 가득 보여 줌
+  const pageStyle = document.head.appendChild(document.createElement("style"));
+  let slideAt = -1;
+  function present(i) {
+    const all = [...document.querySelectorAll("#slides .slide")];
+    if (!all.length || i < 0) return;
+    if (i >= all.length) return endPresent();                  // 마지막 장 다음에는 닫음
+    slideAt = i; document.body.classList.add("present");
+    all.forEach((x, k) => x.classList.toggle("cur", k === i));
+  }
+  const endPresent = () => { slideAt = -1; document.body.classList.remove("present"); };
+  addEventListener("keydown", (e) => {
+    if (slideAt < 0) return;
+    if (e.key === "Escape") endPresent();
+    else if (["ArrowRight", "ArrowDown", "PageDown", " ", "Enter"].includes(e.key)) { e.preventDefault(); present(slideAt + 1); }
+    else if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); present(slideAt - 1); }
+  });
+  $("view").addEventListener("click", (e) => {
+    if (slideAt < 0 || e.target.id === "present") return;
+    e.stopPropagation();
+    if (e.target.id === "close-present") return endPresent();
+    present(slideAt + (e.clientX < innerWidth / 3 ? -1 : 1));
+  }, true);
+  matchMedia("(max-width: 760px)").addEventListener("change", () => { if (A && curView !== "graph") renderView(); });
 
   // ---------- 4. 온톨로지 그래프: 탭을 처음 열 때 라이브러리를 받아 그림 ----------
   const visible = {};
@@ -1029,7 +1247,7 @@
   let closedForPrint = [];
   $("print").addEventListener("click", () => window.print());
   addEventListener("beforeprint", () => { closedForPrint = [...document.querySelectorAll("#detail details:not([open]), #view details:not([open])")]; closedForPrint.forEach((d) => (d.open = true)); });
-  addEventListener("afterprint", () => { closedForPrint.forEach((d) => (d.open = false)); document.body.classList.remove("pv"); });
+  addEventListener("afterprint", () => { closedForPrint.forEach((d) => (d.open = false)); document.body.classList.remove("pv", "ps"); pageStyle.textContent = ""; });
   const split = $("split");
   const savedW = parseFloat(store.get("sc26-aside-w"));
   if (savedW) root.style.setProperty("--aside-w", Math.min(savedW, innerWidth * 0.85) + "px");
@@ -1067,8 +1285,12 @@
 
   // ---------- 2단계: 발표·개념·인물을 읽어 온톨로지를 완성하고 분석 보기를 채움 ----------
   const dataReady = (async () => {
-    [schema, orgs, people, concepts] = await Promise.all(["schema.yaml", "data/orgs.yaml", "data/people.yaml", "data/concepts.yaml"].map(loadYaml));
-    presentations = await Promise.all((manifest.presentations || []).map((f) => loadYaml("data/" + f)));
+    const rest = core ? await loadJson("data/" + manifest.bundle.rest) : null;
+    if (rest) { schema = core.schema; ({ orgs, people, concepts, presentations } = rest); }
+    else {
+      [schema, orgs, people, concepts] = await Promise.all(["schema.yaml", "data/orgs.yaml", "data/people.yaml", "data/concepts.yaml"].map(loadYaml));
+      presentations = await Promise.all((manifest.presentations || []).map((f) => loadYaml("data/" + f)));
+    }
     for (const [id, name] of Object.entries(orgs)) addNode(id, "Organization", { label: name });
     for (const [id, p] of Object.entries(people)) { addNode(id, "Person", { label: p.name }); (p.orgs || []).forEach((o) => addEdge(id, "affiliatedWith", o)); }
     for (const [type, items] of Object.entries(concepts))

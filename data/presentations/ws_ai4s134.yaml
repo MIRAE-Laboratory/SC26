@@ -7,7 +7,7 @@ time: "16:30-16:50"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=ws_ai4s134"
 authors: [hiroki-kaneko, takashi-shimokawabe]
 addresses: [surrogate-payoff, rollout-error]
-proposes: [gnn-surrogate, mesh-coarsening]
+proposes: [surrogate-substitution, mesh-coarsening]
 targets: [neural-surrogates, lattice-boltzmann]
 summary_ko: >
   2차원 격자 볼츠만 유동의 그래프 신경망 대리모델을 정확도와 사례당 실행 시간 양쪽으로 평가함. 모델은 속도 분포함수의 증분을 예측하고 LBM 정의에 따라 속도와 밀도를 복원함. 형상만으로 정하는 가변 반경 포아송 디스크 선택으로 격자를 조대화함.

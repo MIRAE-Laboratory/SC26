@@ -8,7 +8,7 @@ url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess117&id=w
 authors: [shunyu-yao, k-todd-lowe, dimitrios-nikolopoulos]
 addresses: [delayed-feedback, surrogate-payoff]
 proposes: [surrogate-substitution, residual-monitoring]
-targets: [neural-surrogates, aero-digital-twin]
+targets: [neural-surrogates, robotics-digital-twin]
 summary_ko: >
   실험 공기역학 시설은 표면 압력을 연속 측정하지만, 이를 해석할 CFD 모델은 평가 한 번에 몇 분에서 몇 시간이 걸려 실험의 제어 루프에 넣을 수 없음. DART는 CFD 디지털 트윈 파이프라인을 타입이 정해진 계산 단계의 방향성 비순환 그래프로 표현하는 워크플로 엔진임. 선언된 입출력 계약을 유지한 채 노드의 구현을 기계학습 모델로 바꾸는 대리모델 치환을 핵심 연산으로 삼아, 이웃 단계는 그대로 둠.
 claims:

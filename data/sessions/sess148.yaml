@@ -2,6 +2,7 @@ id: sess148
 type: Session
 label: "Scale to See: Scalable AI for Scientific Imaging and Spatiotemporal Data"
 kind: Workshop
+topic: AI·에이전트
 date: "2026-11-20"
 time: "08:30-12:00 CST"
 room: W180
@@ -40,9 +41,14 @@ insights:
       refs: [ws_scale103]
   korea:
     - head: 비파괴 검사와 중성자 영상에 바로 닿는 결과가 있음.
+      stage: ref
+      area: 실험시설 연계
       text: 한 생성 모델이 적층 금속 부품의 X선 단층촬영과 콘크리트의 중성자 단층촬영에서 적은 투영으로도 해석적 복원을 앞섰음. 촬영 시간이 처리량을 제한하는 연구로와 검사 시설에 적용할 수 있음.
       refs: [ws_scale105]
     - head: 실험 영상 처리를 GPU에서 끝까지 유지하는 경로를 검토함.
+      stage: prep
+      area: 실험시설 연계
+      needs: 장비 옆 GPU와 처리 경로 재작성
       text: 센서 판독부터 분류까지 영상을 GPU에 둔 채 처리하는 공개 도구 모음이 소개됨. 장비 옆에서의 즉시 분석을 목표로 함. 공개 초록의 수치는 "마이크로초 수준까지"라는 표현뿐임.
       refs: [misc237]
   extra:

@@ -2,6 +2,7 @@ id: sess128
 type: Session
 label: "8th International Workshop on Containers and New Orchestration Paradigms for Isolated Environments in HPC (CANOPIE-HPC)"
 kind: Workshop
+topic: 운영·인프라
 date: "2026-11-16"
 time: "09:00-17:30 CST"
 room: W181c
@@ -48,12 +49,21 @@ insights:
       refs: [ws_canopie102]
   korea:
     - head: 기관 클러스터에 노트북·추론 서비스를 얹을 때 참고할 구조가 나와 있음.
+      stage: prep
+      area: 운영·사용자 지원
+      needs: 컨테이너 클러스터와 사용자 계정 연동
       text: 배치 파티션의 유휴 노드를 컨테이너 클러스터로 돌려 쓰고 사용자 본인 권한으로 실행하는 방식은 기존 파일시스템과 계정 체계를 그대로 씀.
       refs: [ws_canolt105, ws_canolt101]
     - head: 소규모 팀의 소프트웨어 스택 유지에는 빌드·시험 자동화가 먼저임.
+      stage: prep
+      area: 운영·사용자 지원
+      needs: 자동화 파이프라인을 돌릴 서버와 캐시 저장소
       text: 한 배포판은 파이프라인당 작업 약 200개, 시험 236개를 자동으로 돌려 유지 부담을 줄이고 외부 기여의 문턱을 낮췄음. 전체 빌드는 5~8시간, 캐시가 있으면 분 단위임.
       refs: [ws_canopie105]
     - head: 양자 자원 연동은 컨테이너로 개발·시험 환경부터 맞춤.
+      stage: prep
+      area: 양자
+      needs: 컨테이너화한 개발 환경과 모의 장치
       text: 양자와 고전 단계를 잇는 워크플로를 컨테이너 환경에서 만들고 통합 시험을 한 뒤 큰 시스템으로 옮긴 사례가 보고됨.
       refs: [misc141]
   extra:

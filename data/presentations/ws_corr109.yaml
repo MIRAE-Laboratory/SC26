@@ -6,7 +6,7 @@ session: sess134
 time: "11:00-11:15"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr109"
 authors: [alishba-gul, sreepathi-pai]
-addresses: [fp-exceptions]
+addresses: [numerical-error]
 proposes: [fp-exception-detection]
 targets: [scientific-apps, hpc-processors]
 summary_ko: "NaN, 무한대, 0으로 나누기 같은 부동소수점 예외는 GPU 프로그램에서 조용히 퍼져 눈에 띄지 않는 틀린 결과를 냄. 기존 도구(FPChecker, GPU-FPX)는 실행 중에 검출하지만 부담이 커서 대규모 응용에 쓰기 어려움. 위험이 크다고 판단한 명령만 계측하는 정적 분석을 제안함."

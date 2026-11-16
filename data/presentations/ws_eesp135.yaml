@@ -7,7 +7,7 @@ time: "14:45-14:50"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp135"
 authors: [mobina-kashaniyan, ali-jannesari]
 addresses: [energy-performance-tradeoff]
-proposes: [generation-scheduling]
+proposes: [energy-aware-hpo]
 targets: [llm-inference]
 summary_ko: >
   LLM 추론 시점 확장에서 후보 응답 수 N이 실제 시스템 비용과 어떻게 이어지는지 조사했음. N만으로는 후보가 어떻게 실행되는지 알 수 없음. 같은 예산을 한 번의 배치 호출로도, 여러 번의 순차 호출로도 채울 수 있기 때문임. N을 8로 고정하고 네 가지 생성 스케줄(1×8, 2×4, 4×2, 8×1)의 지연, 처리량, GPU 시간, 에너지를 A100에서 측정했음.

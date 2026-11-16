@@ -7,7 +7,7 @@ time: "10:30-10:55"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=ws_ross106"
 authors: [gourav-rattihalli, aditya-dhakal, kunal-sharma, dejan-milojicic]
 addresses: [env-configuration, heterogeneity-complexity, failure-resilience]
-proposes: [version-aware-admission]
+proposes: [layered-image-pipeline]
 targets: [heterogeneous-racks, job-scheduler]
 summary_ko: "이기종 HPC 랙은 CPU, GPU, FPGA를 섞어 쓰고 워크로드마다 다른 하드웨어·소프트웨어 스택이 필요함. 하드웨어 호환성만 확인하는 배치는, 상주 작업자의 OS 이미지, 라이브러리, 드라이버 버전이 어긋나면 실패함. Mosaic은 Slurm을 보완하는 수명주기 제어기로, 버전 인지 수락, 능력 기반 배분, 명시적 초기화 경계를 결합함."
 claims:

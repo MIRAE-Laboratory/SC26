@@ -2,6 +2,7 @@ id: sess134
 type: Session
 label: "10th International Workshop on Software Correctness for HPC Applications (Correctness '26)"
 kind: Workshop
+topic: 검증·신뢰
 date: "2026-11-16"
 time: "09:00-12:30 CST"
 room: W175a
@@ -47,12 +48,21 @@ insights:
       refs: [ws_corr_sh101]
   korea:
     - head: 안전해석 코드에 AI를 쓸 때는 계약과 검사를 분리함.
+      stage: prep
+      area: 검증·신뢰
+      needs: 계약을 검토할 전문가와 정형 검사 도구
       text: 검증 요건이 엄격한 코드에서 LLM이 만든 검증물을 그대로 믿을 수 없음. 사람이 확인한 작은 계약과 결정론적 검사 도구의 조합은 인허가 대상 코드에 적용할 만한 구조임.
       refs: [ws_corr112, ws_corr111]
     - head: 핵심 수치 커널부터 작은 모델로 떼어 검증함.
+      stage: prep
+      area: 검증·신뢰
+      needs: 검증할 커널 선정과 모델 검사 도구 숙련
       text: 대형 코드 전체의 검증은 불가능하지만, 보존 법칙처럼 물리적으로 중요한 속성을 가진 커널은 인터페이스만 뽑아 증명할 수 있음.
       refs: [ws_corr113]
     - head: GPU로 옮긴 코드의 수치 예외와 라이브러리 정확도를 확인함.
+      stage: now
+      area: 검증·신뢰
+      needs: 예외 검출 도구 설치와 기준 입력
       text: 예외는 조용히 퍼져 틀린 결과를 내고, 수학 라이브러리의 정확도는 함수와 입력에 따라 다름. 단정밀도로 옮길 때 특히 확인이 필요함.
       refs: [ws_corr103, ws_corr108, ws_corr101]
   extra:

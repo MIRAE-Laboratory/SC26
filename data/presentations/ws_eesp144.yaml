@@ -7,7 +7,7 @@ time: "14:33-14:45"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp144"
 authors: [kevin-menear, kumaraguru-prabakar, deepthi-vaidhynathan]
 addresses: [power-measurement-fidelity]
-proposes: [multi-tier-power-metering]
+proposes: [infrastructure-telemetry]
 targets: [ai-power-delivery, power-telemetry]
 summary_ko: >
   같은 AI 워크로드라도 전력 계측기마다 다른 값을 보고한다는 것을 운영 중인 H100 랙에서 보였음. 같은 사건을 1분 단위 차단기, 100 ms 단위 GPU 텔레메트리, 랙 급전선의 10 kHz 전압·전류 세 계층으로 동시에 기록했음. 성긴 계층은 오류 표시 없이 틀린 숫자를 냄. 어느 계층이 어떤 현상을 분해하고 나머지는 어떻게 실패하는지를 해상도 사다리로 정리함.

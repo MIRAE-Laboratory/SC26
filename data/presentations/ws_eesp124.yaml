@@ -7,7 +7,7 @@ time: "16:52-17:04"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp124"
 authors: [maria-patrou, andrey-prokopenko, aditya-kashi, oscar-hernandez, jean-luc-fattebert]
 addresses: [energy-performance-tradeoff]
-proposes: [energy-roofline, mixed-precision, energy-profiling]
+proposes: [roofline-analysis, mixed-precision, energy-profiling]
 targets: [performance-portable-kernels]
 summary_ko: >
   성능 이식성 모델 Kokkos의 커널에서 FP32, FP64, 혼합 정밀도가 연산 강도, 처리량, GPU 에너지에 주는 영향을 두 응용으로 분석했음. 성능 분석에 에너지를 더한 에너지 인지 루프라인 모델과, 에너지를 실행 시간·GPU 온도·실행 순서와 함께 보는 열 인지 커널 간 에너지 모델을 제안함.

@@ -6,7 +6,7 @@ session: sess155
 time: "10:50-11:10"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=ws_hpct108"
 authors: [spencer-bryngelson, daniel-vickers, benjamin-wilfong]
-addresses: [compiler-defects, translation-verification, software-ecosystem-readiness]
+addresses: [software-ecosystem-readiness, translation-verification]
 proposes: [differential-testing, repair-loop]
 targets: [legacy-fortran, parallel-programming-models, scientific-apps]
 summary_ko: "포트란 GPU 오프로드 컴파일러는 미성숙하고, 시험 모음은 지시문 절의 조합을 놓침. 운영 중인 유동 해석 코드를 시험 도구로 써서 세 벤더의 도구 사슬을 조사함."

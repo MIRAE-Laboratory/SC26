@@ -18,6 +18,8 @@ SC26 세션의 초록을 읽고 세션별 고찰을 도출한 저장소입니다
 | `data/concepts.yaml`                      | 세션 간에 공유되는 Problem / Method / System 개념                                |
 | `data/people.yaml`, `data/orgs.yaml`    | 인물과 소속 기관                                                                 |
 | `media/`, `transcripts/`                | 현장 사진과 발표 녹취록 (세션별 하위 폴더)                                       |
+| `tools/make_bundle.py` | YAML에서 묶음 파일(`data/bundle-*.json`)과 내보내기 파일(`export/`)을 만드는 스크립트 |
+| `export/` | JSON-LD 그래프와 노드·관계·고찰 CSV |
 | `vendor/`                                 | Cytoscape.js, js-yaml (외부 CDN 없이 동작)                                       |
 
 ## 사용법
@@ -29,6 +31,15 @@ GitHub에 올린 뒤 Settings → Pages → Source를 **Deploy from a branch**, 
 ```bash
 python -m http.server 8000   # http://localhost:8000
 ```
+
+뷰어는 `data/manifest.yaml`에 `bundle:` 항목이 있으면 YAML 수백 개 대신 묶음 파일 두 개만 읽어 첫 화면을 빨리 띄웁니다. **YAML을 손으로 고친 뒤에는 묶음을 다시 만들어야 화면에 반영됩니다.**
+
+```bash
+pip install pyyaml
+python tools/make_bundle.py   # data/bundle-*.json 과 export/ 를 다시 만듦
+```
+
+스크립트를 돌릴 수 없으면 `data/manifest.yaml` 첫 줄의 `bundle:` 항목을 지우면 뷰어가 예전처럼 YAML을 직접 읽습니다.
 
 세션을 추가하려면 `data/sessions/`와 `data/presentations/`에 파일을 넣고 `data/manifest.yaml`에 경로를 적습니다. 새 개념만 `data/concepts.yaml`에 더하고, 기존 개념 id를 재사용할수록 세션 간 연결이 드러납니다.
 
@@ -70,9 +81,6 @@ claims:
 - (128) 8th International Workshop on Containers and New Orchestration Paradigms for Isolated Environments in HPC (CANOPIE-HPC) (2026-11-16)
 - (131) 8th Workshop on Programming and Performance Visualization Tools (ProTools) (2026-11-16)
 - (112) The 2nd International Workshop for Software Frameworks and Workload Management on Quantum-HPC Ecosystems (2026-11-15)
-- (119) RISE 2026: 1st International Workshop on Rising Innovators in Sustainable Exacomputing (2026-11-15)
-- (130) 2nd Annual Workshop on Large-Scale Quantum-Classical Computing (LSQCC) (2026-11-16)
-- (146) Sixth International Symposium on Quantitative Co-Design of Supercomputers (2026-11-16)
 - (148) Scale to See: Scalable AI for Scientific Imaging and Spatiotemporal Data (2026-11-20)
 - (149) 4th Annual Trillion Parameter Workshop: Building Open AI Infrastructure, Models, and Agentic Systems for Science (2026-11-20)
 - (153) Workshop on Operational Data Analytics in HPC (HPC-ODA) (2026-11-20)
@@ -88,7 +96,11 @@ claims:
 - 오른쪽 탭: 세션–개념 지도, 문제–기법 대응, 세션 사이의 다리, 기관·저자, 온톨로지 그래프. 표는 모두 YAML에서 브라우저가 계산합니다.
 - 첫 화면은 고찰에 필요한 파일만 먼저 읽어 그리고, 발표 파일과 그래프는 뒤이어 또는 탭을 열 때 읽습니다.
 - 근거 수준: 고찰 항목과 근거 발표에 ● 수치 제시, ○ 수치 없이 설명, ◌ 제목만 확인 표시가 붙습니다(발표 요약에서 자동 판정).
-- 적용 모아 보기: 세션마다 적은 한국 연구기관 적용 제안을 실행 영역별로 모읍니다. 항목에 `area:`를 적으면 자동 분류 대신 그 값을 씁니다.
+- 적용 모아 보기: 한국 연구기관 적용 제안을 실행 단계(바로 / 준비 필요 / 장기 / 참고 사례) 또는 영역으로 묶습니다. 항목의 `stage: now|prep|long|ref`, `area:`, `needs:`(선행 조건)를 읽습니다.
+- 세션 주제: 세션 파일의 `topic:`으로 세션 메뉴와 세션–개념 지도의 열을 묶습니다. 주제 순서는 `data/overview.yaml`의 `topics`, 한국 기관 표시는 `korea_orgs`에 적습니다.
+- 자료 탭: 고찰 보고서(각주로 근거 발표 표시, 근거가 약한 항목 표시), 슬라이드(발표 모드와 가로 인쇄), 동향 요약(수렴한 것 / 갈리는 것 / 비어 있는 것), 열람 목록(전문을 읽을 발표 20편), 내보내기. 모두 온톨로지에서 브라우저가 만들어 내므로 데이터가 바뀌면 함께 바뀝니다.
+- 기관·협력 후보: 심층 요약이나 세션 주제를 고르면 그 주제의 기관과 저자가 발표 수 순으로 나옵니다.
+- 좁은 화면에서는 세션–개념 지도가 세션 하나의 개념 목록으로 바뀌고, 넓은 대응표는 숨깁니다.
 - 용어 풀이는 `data/glossary.yaml`(용어: 한 줄 설명), 갱신 이력은 `data/changelog.yaml`에 적습니다.
 - 주소(#s=세션&v=탭&n=노드&q=검색어)에 지금 화면이 담기므로 그대로 공유할 수 있습니다. "인쇄" 버튼은 지금 보이는 요약을 인쇄하거나 PDF로 저장합니다.
 - 그래프는 전체 보기에서 세션과 여러 세션에 걸친 개념만 그리고, 세션을 누르면 발표가 펼쳐집니다. 데이터 점검 탭은 태그나 소속이 빈 곳을 보여 줍니다.

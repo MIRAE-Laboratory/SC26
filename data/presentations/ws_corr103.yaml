@@ -6,7 +6,7 @@ session: sess134
 time: "11:15-11:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr103"
 authors: [samin-islam, shirley-v-moore, christoph-q-lauter]
-addresses: [fp-exceptions, performance-portability]
+addresses: [numerical-error, performance-portability]
 proposes: [fp-exception-detection]
 targets: [amd-gpu-systems, hpc-processors]
 summary_ko: "GPU 벤더마다 예외 보고의 하드웨어 지원이 달라, 기존 도구는 벤더 전용이고 개발자는 NVIDIA와 AMD에 다른 도구를 써야 함. LLVM 중간 표현 수준에서 실행 중 예외 검사를 넣는 벤더 공통 도구 PaFEx를 제시함."

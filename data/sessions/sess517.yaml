@@ -2,6 +2,7 @@ id: sess517
 type: Session
 label: "HUST-26: 13th International Workshop on HPC User Support Tools"
 kind: Workshop
+topic: 운영·인프라
 date: "2026-11-15"
 time: "09:00-12:30 CST"
 room: W178a
@@ -49,12 +50,21 @@ insights:
       refs: [ws_hust116]
   korea:
     - head: 국가 차원의 AI 컴퓨팅 자원은 신원과 계정 체계를 먼저 정함.
+      stage: long
+      area: 협력·거버넌스
+      needs: 부처와 기관 간 신원 체계 합의
       text: 영국은 2년 만에 사용자 5,000명을 받으면서 신원 문제가 숨은 최대 지원 부담임을 확인했음. 여러 기관이 하나의 창구로 쓰는 자원을 설계할 때의 선행 과제임.
       refs: [ws_hust103]
     - head: 기관 전산 지원에 과거 티켓을 활용함.
+      stage: now
+      area: 에이전트·AI 서비스
+      needs: 과거 티켓의 정리와 개인정보 처리
       text: 닫힌 티켓과 문서, 실시간 클러스터 정보를 묶은 지원 도우미는 소수 인력으로 운영하는 센터에 맞음. 티켓의 개인정보 제거가 전제임.
       refs: [ws_hust106, ws_hust123]
     - head: 비전공 사용자를 위한 화면을 따로 둠.
+      stage: prep
+      area: 운영·사용자 지원
+      needs: 사용자 유형 조사와 화면 설계
       text: AI 수요로 계산 분야 밖 연구자가 늘면, 시스템 구성요소가 아니라 사용자의 목표를 기준으로 한 대시보드가 필요함.
       refs: [ws_hust105, ws_hust104]
   extra:

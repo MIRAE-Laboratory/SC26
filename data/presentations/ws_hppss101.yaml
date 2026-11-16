@@ -6,8 +6,8 @@ session: sess124
 time: "15:30-15:45"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess124&id=ws_hppss101"
 authors: [cody-balos, david-gardner, steven-roberts, daniel-reynolds, carol-woodward]
-addresses: [binding-maintenance]
-proposes: [generated-python-bindings]
+addresses: [software-sustainability]
+proposes: [python-orchestration]
 targets: [hpc-libraries, amd-gpu-systems]
 summary_ko: >
   sundials4py는 고성능 시간 적분기 모음 SUNDIALS의 파이썬 인터페이스로, AMD와 NVIDIA GPU 슈퍼컴퓨터에서 가속기 지원 솔버를 이식성 있게 쓸 수 있게 함.

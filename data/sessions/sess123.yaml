@@ -2,6 +2,7 @@ id: sess123
 type: Session
 label: "ISAV26: In Situ AI, Analysis and Visualization"
 kind: Workshop
+topic: 데이터·워크플로·네트워크
 date: "2026-11-15"
 time: "14:00-17:30 CST"
 room: W178b
@@ -49,12 +50,20 @@ insights:
       refs: [ws_isav102, ws_isav104, ws_isav113]
   korea:
     - head: 대형 실험시설은 "전부 저장"을 전제로 하지 않는 데이터 체계를 준비함.
+      stage: long
+      area: 데이터·저장
+      needs: 취득 단계 축소 알고리즘과 보존 정책 합의
       text: 검출기 속도가 오르는 가속기와 핵융합 장치는 취득 단계의 축소와 실시간 피드백을 설계에 넣어야 함. 사람이 보기 전의 결정을 어떻게 검증할지도 함께 정함.
       refs: [misc155]
     - head: 일본 원자력연구개발기구의 사례는 그대로 참고할 수 있음.
+      stage: ref
+      area: 데이터·저장
       text: 도시 확산 앙상블 72개를 실행 중에 가시화한 방식은 국내 원자력·방재 분야의 확산 해석과 불확실성 평가에 대응됨.
       refs: [ws_isav110, ws_isav111]
     - head: 시뮬레이션 출력 정책을 대리모델 학습까지 고려해 다시 정함.
+      stage: prep
+      area: 데이터·저장
+      needs: 대리모델 학습에 필요한 출력 변수 조사
       text: 무엇을 저장할지가 곧 학습 데이터의 품질임. 고정 간격 출력 대신 선택 저장을 시험할 만함.
       refs: [ws_isav106, ws_isav113]
   extra:

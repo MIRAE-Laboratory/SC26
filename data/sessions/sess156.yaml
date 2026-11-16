@@ -2,6 +2,7 @@ id: sess156
 type: Session
 label: "The 1st International Workshop on Edge-Cloud-HPC Operational Continuum (ECHO)"
 kind: Workshop
+topic: 데이터·워크플로·네트워크
 date: "2026-11-20"
 time: "08:30-12:00 CST"
 room: W194b
@@ -40,9 +41,14 @@ insights:
       refs: [ws_echo106]
   korea:
     - head: 배치 방식 시스템에서 AI 서비스를 돌릴 때의 구조적 충돌을 미리 봄.
+      stage: ref
+      area: 운영·사용자 지원
       text: 클라우드에 익숙한 사용자에게 국가 슈퍼컴퓨터를 열자, 시간 제한이 있는 할당과 오래 사는 서비스가 부딪쳤음. 신뢰 경계 안에 컨테이너 서비스를 두는 방안이 제안됨.
       refs: [ws_echo108, ws_canolt105]
     - head: 현장 센서 데이터는 과제 기준으로 압축함.
+      stage: prep
+      area: 데이터·저장
+      needs: 분석 과제별 성능 기준과 압축 시험
       text: 저장과 전송의 부담을 줄이려면 화질이 아니라 분석 과제의 성능을 기준으로 압축률을 정해야 함. 원격 감시나 현장 계측 데이터에 적용되는 원칙임.
       refs: [ws_echo104]
   extra:

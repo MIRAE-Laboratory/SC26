@@ -8,7 +8,7 @@ url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess114&id=w
 authors: [jyotsna-rajaraman, thomas-uram, mark-hereld, michael-papka]
 addresses: [annotation-cost, high-resolution-scaling]
 proposes: [generative-vae]
-targets: [connectomics]
+targets: [scientific-imaging]
 summary_ko: >
   대규모 전자현미경 커넥톰은 주석과 교정에 인력이 많이 듦. 수작업 재구성으로 학습한 생성 모델이 보완 경로가 됨. 조밀 체적 점유 격자는 커넥토믹스 워크플로에 맞지만 비용이 해상도의 세제곱으로 늘어 뉴런처럼 희소한 대상에는 불리함. 이 표현 위에 분산 생성 파이프라인을 만들고 비용과 충실도의 절충을 분석함.
 claims:

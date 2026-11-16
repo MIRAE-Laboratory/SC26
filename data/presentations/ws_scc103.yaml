@@ -7,7 +7,7 @@ time: "11:00-11:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc103"
 authors: [ilja-livenson]
 addresses: [vendor-dependence, identity-access, compliance-governance]
-proposes: [federated-allocation-platform]
+proposes: [shared-identity-portal]
 targets: [federated-clusters, job-scheduler, national-ai-infrastructure]
 summary_ko: "주권형 AI·HPC 사이트는 자기 정책을 집행하고 구성요소를 바꾸면서도 연합에 남아 있어야 함. MIT 라이선스의 배분·정산 플랫폼 Waldur를 소개함. EuroHPC 연합 플랫폼의 배분 구성요소이며 스위스, 영국, 에스토니아의 여러 사이트에서 운영 중임."
 claims:

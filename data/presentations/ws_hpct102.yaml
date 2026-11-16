@@ -6,7 +6,7 @@ session: sess155
 time: "11:10-11:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=ws_hpct102"
 authors: [maisy-dunlavy, zhiling-lan, michael-papka]
-addresses: [silent-data-corruption, measurement-comparability, failure-data-incomparability]
+addresses: [silent-data-corruption, benchmark-validity, failure-data-incomparability]
 proposes: [fault-injection, failure-attribution]
 targets: [hpc-processors, amd-gpu-systems]
 summary_ko: "GPU 결함 주입 결과를 플랫폼 사이에서 해석하는 기전 인지 방법임. 결과 레이블이나 분포가 일치해도 동작이 비교 가능하다는 뜻은 아님. 세 벤더의 운영 GPU 시스템에서 재현 가능한 사례 여섯에 적용함."

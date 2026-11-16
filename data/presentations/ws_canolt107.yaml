@@ -6,7 +6,7 @@ session: sess128
 time: "16:20-16:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess128&id=ws_canolt107"
 authors: [jason-kincl]
-addresses: [container-hpc-mismatch, scattered-small-io]
+addresses: [container-hpc-mismatch, data-locality]
 proposes: [io-coalescing]
 targets: [container-runtimes, hpc-storage-systems]
 summary_ko: "Podman은 이미지 층을 풀어 저장하고 덧씌움 파일시스템으로 합치며, 이는 로컬 디스크에 맞는 방식임. 층을 풀 때의 메타데이터 연산이 NFS나 Lustre 같은 공유 파일시스템에서 느림."

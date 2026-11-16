@@ -2,6 +2,7 @@ id: sess126
 type: Session
 label: "5th International Workshop on Cyber Security in High Performance Computing (S-HPC 2026)"
 kind: Workshop
+topic: 검증·신뢰
 date: "2026-11-15"
 time: "14:00-17:30 CST"
 room: W183b
@@ -49,15 +50,27 @@ insights:
       refs: [ws_shpc107]
   korea:
     - head: 공동 활용 GPU 자원에는 책임 분담표가 먼저임.
+      stage: now
+      area: 협력·거버넌스
+      needs: 자원 소유자, 운영자, 사용자 간 협의
       text: 여러 기관이 함께 쓰는 계산 자원에 의료, 원자력, 산업 데이터를 올리려면 자원 운영 기관, 플랫폼 운영자, 연구 책임자 사이에 공격 경로별 책임을 문서로 정해 두어야 함.
       refs: [ws_shpc101]
     - head: 공개하는 운영 정보의 해상도를 점검함.
+      stage: now
+      area: 운영·사용자 지원
+      needs: 공개 중인 운영 지표의 목록 점검
       text: 작업 큐 현황, 사용량 통계, 전력 모니터링처럼 무심코 공개하는 정보가 어느 기관이 무엇을 계산하는지 드러낼 수 있음.
       refs: [ws_shpc102, ws_shpc106]
     - head: 입력 파일을 받는 해석 코드를 퍼징함.
+      stage: prep
+      area: 검증·신뢰
+      needs: 퍼징 도구와 격리된 시험 환경
       text: 외부 기관이나 사용자가 만든 입력을 읽는 자체 개발 코드는 퍼징과 메모리 안전성 점검을 도입 절차에 넣을 만함. 비용은 낮고 발견은 많았음.
       refs: [ws_shpc104]
     - head: 에이전트 도입 전에 실행 경계를 정함.
+      stage: now
+      area: 에이전트·AI 서비스
+      needs: 에이전트에 허용할 명령과 경로의 목록
       text: 연구용 클러스터에서 AI 에이전트를 허용하기 전에 네트워크 접근, 실행 가능한 명령, 감독 방식을 정책으로 정해 두어야 함.
       refs: [misc163]
   extra:

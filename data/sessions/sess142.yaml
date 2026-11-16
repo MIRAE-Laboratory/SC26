@@ -2,6 +2,7 @@ id: sess142
 type: Session
 label: "FTXS: Workshop for Faults, Trustworthiness, and eXplainability for AI Systems at Scale"
 kind: Workshop
+topic: 검증·신뢰
 date: "2026-11-16"
 time: "14:00-17:30 CST"
 room: W176a
@@ -47,12 +48,21 @@ insights:
       refs: [misc105, ws_ftxs103]
   korea:
     - head: 장애 기록을 원인, 증상, 결과로 구분해 남김.
+      stage: now
+      area: 운영·사용자 지원
+      needs: 장애 기록 양식의 개정
       text: 기관마다 보고 형식이 달라 비교가 안 되는 것이 출발점이었음. 공개된 분류 체계를 운영 기록의 틀로 쓰면 다른 시설의 자료와 견줄 수 있음.
       refs: [ws_ftxs102]
     - head: AI 학습용으로 공개하는 연구 데이터에 적용 범위를 함께 적음.
+      stage: prep
+      area: 데이터·저장
+      needs: 데이터셋별 생성 조건의 정리
       text: 실험과 시뮬레이션 데이터는 생성 조건을 벗어나면 의미가 달라짐. 원자력 분야의 실험 데이터처럼 조건 의존성이 큰 자료를 AI 학습에 재사용할 때 필요한 장치임.
       refs: [ws_ftxs103]
     - head: 장기 학습 작업에는 조용한 실패를 확인하는 점검을 넣음.
+      stage: now
+      area: 검증·신뢰
+      needs: 학습 작업용 점검 항목 작성
       text: 기울기를 받지 않는 파라미터, 최적화기 상태가 빠진 재개, 정밀도 정책의 저하는 평가 지표가 나오는 며칠 뒤에야 드러나 수천 GPU 시간을 버림.
       refs: [misc105]
   extra:

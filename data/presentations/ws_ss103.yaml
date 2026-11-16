@@ -6,7 +6,7 @@ session: sess157
 time: "11:10-11:20"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss103"
 authors: [varsha-rao, clarisse-cheung, andrew-a-chien]
-addresses: [embodied-carbon, energy-cost-carbon, hardware-selection]
+addresses: [energy-cost-carbon, hardware-selection]
 proposes: [carbon-aware-upgrade]
 targets: [leadership-facility, hpc-processors]
 summary_ko: "상위 500개 HPC 시스템의 탄소 효율을 분석해 여러 요인이 서로 얽혀 있음을 보임. 옛 장비와 새 장비의 제조 탄소를 모두 따지는 절충형 교체를 제안함."

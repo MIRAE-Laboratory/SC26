@@ -2,6 +2,7 @@ id: sess109
 type: Session
 label: "PMBS26: The 17th International Workshop on Performance Modeling, Benchmarking, and Simulation of High Performance Computer Systems"
 kind: Workshop
+topic: 성능·도구
 date: "2026-11-15"
 time: "09:00-17:30 CST"
 room: W181a
@@ -52,15 +53,26 @@ insights:
       refs: [ws_pmbsf121]
   korea:
     - head: 원자력 해석 코드에 직접 닿는 발표가 두 건 있음.
+      stage: ref
+      area: 도입 평가·하드웨어
       text: 프랑스 원자력청의 중성자 확산 솔버와 몬테카를로 단면적 조회 커널 모두 메모리 대역폭이 성능을 정했음. 노물리 코드용 하드웨어는 코어 수보다 메모리 구조를 보고 고를 근거가 됨.
       refs: [ws_pmbsf107, ws_pmbsf133]
     - head: 가속기 도입 평가는 자기 워크로드와 전력 측정으로 함.
+      stage: now
+      area: 도입 평가·하드웨어
+      needs: 대표 워크로드 선정과 전력 측정 장비
       text: 공개 벤치마크 순위가 아니라 기관의 실제 코드로 재고, 전력을 함께 기록해야 신형이 불리한 경우를 걸러 냄.
       refs: [ws_pmbss103, ws_pmbsf137]
     - head: GPU 노드의 남는 CPU를 쓰는 운영을 검토함.
+      stage: prep
+      area: 운영·사용자 지원
+      needs: 노드 공유를 허용하는 스케줄러 설정과 격리 검증
       text: GPU 클러스터를 새로 들이는 기관은 사용 기록에서 유휴 CPU 비율을 먼저 확인할 만함. 간섭 통제가 전제임.
       refs: [ws_pmbsf126]
     - head: 성능 분석 에이전트는 이미 모으는 텔레메트리로 시작할 수 있음.
+      stage: prep
+      area: 에이전트·AI 서비스
+      needs: 기존 텔레메트리의 접근 권한 정리
       text: 새 계측 없이 기존 작업 텔레메트리와 응용 출력만으로 병목 후보를 짚는 방식이 제시되었음.
       refs: [ws_pmbsf148]
   extra:

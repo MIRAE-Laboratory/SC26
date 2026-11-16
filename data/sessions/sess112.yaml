@@ -2,6 +2,7 @@ id: sess112
 type: Session
 label: "The 2nd International Workshop for Software Frameworks and Workload Management on Quantum-HPC Ecosystems"
 kind: Workshop
+topic: 양자
 date: "2026-11-15"
 time: "09:00-17:30 CST"
 room: W181b
@@ -44,12 +45,17 @@ insights:
       refs: [ws_sfwm120]
   korea:
     - head: 양자 장치 도입 전에 스케줄러 연동 방식을 정함.
+      stage: prep
+      area: 양자
+      needs: 도입 사양에 넣을 인터페이스 선정
       text: 장치를 들이는 것과 기존 HPC 운영에 넣는 것은 별개의 일임. 공개 인터페이스 두 종이 검증 단계에 있어, 도입 사양에 인터페이스 지원을 넣을 수 있음.
       refs: [ws_sfwm112, ws_sfwm121]
     - head: 일본은 슈퍼컴퓨터와 양자 장치 둘을 이미 한 워크플로로 묶었음.
+      stage: ref
+      area: 양자
       text: 후가쿠가 서로 다른 벤더의 양자 장치 둘을 조율해 화학 계산을 수행한 시연이 보고됨.
       refs: [ws_sfwm111]
   extra:
-    - head: 공개 양자-HPC 소프트웨어 생태계가 세 워크숍에 걸쳐 소개됨.
-      text: 이 워크숍의 특별 세션, 월요일 양자-고전 워크숍, 컨테이너 워크숍의 초청 강연이 같은 스택을 다룸.
-      refs: [misc194, misc213, misc141]
+    - head: 공개 양자-HPC 소프트웨어 생태계가 두 워크숍에 걸쳐 소개됨.
+      text: 이 워크숍의 특별 세션과 컨테이너 워크숍의 초청 강연이 같은 스택을 다룸.
+      refs: [misc194, misc141]

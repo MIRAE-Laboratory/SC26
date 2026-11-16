@@ -6,8 +6,8 @@ session: sess126
 time: "14:03-14:22"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc101"
 authors: [sadaf-alam, martin-oreilly, matt-craddock, jim-madge, matt-penn, george-svarovsky, jake-watson, babatunde-oyewo]
-addresses: [multi-tenant-isolation, sensitive-data-governance, split-responsibility, insider-threat]
-proposes: [attack-trees, tre-sde, portable-governance]
+addresses: [multi-tenant-isolation, sensitive-data-governance, compliance-governance]
+proposes: [attack-trees, runtime-sandbox, portable-governance]
 targets: [ai-supercomputer, kubernetes-baremetal]
 summary_ko: >
   민감데이터 연구에는 국가 AI 슈퍼컴퓨터 규모의 GPU가 필요하지만, 클라우드에서 통용되는 통제된 멀티테넌트 운영은

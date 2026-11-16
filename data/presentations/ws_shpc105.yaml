@@ -6,8 +6,8 @@ session: sess126
 time: "16:03-16:22"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc105"
 authors: [venkat-karanam, zahmeeth-sakkaff, shubham-sundriyal]
-addresses: [attack-detection, telemetry-misalignment]
-proposes: [tmd, streaming-detector]
+addresses: [attack-detection, ops-data-complexity]
+proposes: [streaming-detector]
 targets: [hpc-network]
 summary_ko: >
   HPC 네트워크 공격 탐지를 위한 레이블 불필요 거리 척도 TMD를 제안함. 샘플링 주기, 공격 도달 시점,

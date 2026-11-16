@@ -7,7 +7,7 @@ time: "16:18-16:42"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=ws_ftxs104"
 authors: [elisabeth-giem, hemanth-kolla, saibal-de, jackson-mayo, martin-schatz, jeremey-myers, zizhong-chen]
 addresses: [silent-data-corruption, failure-resilience]
-proposes: [local-recovery]
+proposes: [resilient-campaign-execution]
 targets: [linear-solvers, mpi-simulations]
 summary_ko: "분산 메모리 선형 솔버는 많은 과학 응용의 중심이며 AI 알고리즘과도 닮았음. 시스템의 규모와 이기종성이 커질수록 조용한 데이터 손상에 취약해짐. 물리 기반 체크섬은 노드에서 손상을 잡지만 복구에는 체크포인트 되돌리기가 필요하고, 국소 체크포인트는 결함률이 오르면 확장되지 않음. 크릴로프 솔버의 비동기성을 높이면 복구의 확장성이 좋아진다고 주장함."
 claims:

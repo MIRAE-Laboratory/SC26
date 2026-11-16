@@ -7,7 +7,7 @@ time: "12:15-12:30"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr111"
 authors: [matthew-dearing, xingfu-wu, zhiling-lan, valerie-taylor]
 addresses: [translation-verification, ai-code-evaluation]
-proposes: [behavioral-equivalence-checks, repair-loop, hybrid-evaluators]
+proposes: [differential-testing, repair-loop, hybrid-evaluators]
 targets: [parallel-programming-models]
 summary_ko: "LLM은 사람이 검토하는 것보다 빠르게 병렬 과학 코드를 변환함. 지금의 파이프라인은 컴파일되고 실행되고 LLM 판정을 통과하면 받아들이지만, 어느 것도 동작이 보존됐음을 보이지 못함. 정형 명세가 없는 커널에 전체 증명은 비현실적임. 원본 프로그램의 관측 가능한 동작을 명세로 삼는 적응형 경험적 검증 틀이며 진행 중인 작업임."
 claims:

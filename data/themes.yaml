@@ -4,11 +4,7 @@ themes:
   - id: agents
     label: 에이전트가 연구 인프라의 새 사용자이자 운영자가 됨
     summary_ko: 에이전트는 코드 작성 보조를 넘어 워크플로 작성, 실험 조율, 시스템 운영과 사용자 지원까지 맡기 시작했음. 그 결과 인프라가 받는 부하의 성격이 바뀌었고, 권한과 비용을 어떻게 통제할지가 공통 과제로 떠올랐음.
-    concepts: [ai-agents, multi-agent-workflow, agentic-workflow-composition, mcp-tools, skill-files, agent-middleware, agent-execution-layer, human-centric-hpc, agent-facility-codesign,
-               agent-state-fragmentation, unified-state-graph, data-stalls, agent-aware-memory, agent-inference-cost, llm-gating, llm-ops-assistant, performance-agent, agents-on-cyberinfrastructure,
-               agent-job-execution, agent-boundaries, prompt-injection, origin-labeling, runtime-sandbox, event-driven-continuation, agentic-config-optimization, tool-augmented-reasoning,
-               descriptive-execution, typed-agent-messaging, failure-attribution, human-in-outer-loop, serverless-execution,
-               ops-knowledge-loss, llm-gateway, opportunistic-inference, llm-serving-efficiency, execution-integrity-guard]
+    concepts: [ai-agents, multi-agent-workflow, agentic-workflow-composition, mcp-tools, skill-files, agent-execution-layer, human-centric-hpc, agent-state-fragmentation, agent-aware-memory, data-stalls, agent-inference-cost, llm-gating, llm-ops-assistant, performance-agent, agent-job-execution, agent-boundaries, prompt-injection, execution-integrity-guard, runtime-sandbox, agentic-config-optimization, tool-augmented-reasoning, typed-agent-messaging, failure-attribution, human-in-outer-loop, serverless-execution, ops-knowledge-loss, llm-gateway, opportunistic-inference, llm-serving-efficiency]
     diagram:
       type: layers
       title: 에이전트가 놓이는 자리와 그 아래에서 바뀌는 것
@@ -41,17 +37,15 @@ themes:
         text: 핵연료 분야에서는 지식 저장소와 재사용 절차가 비용 증가보다 약 1.2~1.5배 더 답의 품질을 올렸음. 방사광 시설에서는 도구 61개를 조율하는 에이전트에 결정론적 검사 계층을 두자 위반이 200건 중 0건이었음. 우주론 분석에서는 에이전트와 과학자 팀이 서로 다른 것을 찾아 보완 관계임이 드러났음. 장애 조사 에이전트는 기관 안의 공개 모델로 요청의 89.2%를 처리했으나 진단 정확도는 아직 평가 전임.
         refs: [ws_tpw111, ws_tpw139, ws_tpw130, ws_odalt102, ws_tpw120]
       - head: 한국 연구기관에의 적용(제안) - 사용자 지원과 운영 분석부터 시작하고, 계측과 기록을 먼저 갖춤.
+        stage: now
+        area: 에이전트·AI 서비스
+        needs: 과거 티켓과 기존 텔레메트리
         text: 위험이 낮고 효과를 재기 쉬운 영역은 사용자 지원과 운영 분석임. 과거 티켓, 문서, 기존 텔레메트리로 시작할 수 있고 외부로 데이터를 보내지 않는 로컬 모델로도 결과가 나왔음. 연구 코드와 실험 장비로 넓히기 전에 에이전트 사용량의 계측, 실행 경계, 행동 기록을 갖추는 순서를 권함.
         refs: [ws_hust106, ws_indis105, ws_pmbsf148, ws_aaihpc144]
   - id: verification
     label: 기준이 "돌아간다"에서 "검증된다"로 옮겨 감
     summary_ko: AI가 코드와 워크플로를 싸게 만들어 내면서 병목이 생성에서 검증으로 옮겨 갔음. 같은 변화가 측정에도 나타나, 사양이나 종합 점수가 아니라 조건을 밝힌 측정이 판단의 근거가 됨.
-    concepts: [translation-verification, ai-code-evaluation, bit-identical-gates, hybrid-evaluators, spec-first-validation, deterministic-llm-split, differential-testing, domain-benchmark,
-               benchmark-validity, agentic-science-benchmarking, portability-metrics, unanswerable-refusal, residual-monitoring, human-approval-gates, provenance-reproducibility, provenance-logging,
-               prov-loop-model, standardized-run-metadata, llm-domain-validity, untrusted-input, fuzzing, site-profiles, power-measurement-fidelity, multi-tier-power-metering,
-               trust-in-automated-decisions, repair-loop, physical-feasibility, physics-aware-training, memory-safety,
-               formal-verification, behavioral-equivalence-checks, exhaustive-oracle-testing, fp-exception-detection, probabilistic-error-analysis, fp-exceptions, numerical-error,
-               parallel-program-correctness, compiler-defects, software-stack-drift, continuous-benchmarking, measurement-comparability, observability-overhead, performance-diagnosis-gap, hardware-counter-analysis, silent-training-failures, silent-data-corruption, dataset-reuse-context-loss, domain-bounds, deterministic-replay, failure-taxonomy, fault-injection]
+    concepts: [translation-verification, ai-code-evaluation, bit-identical-gates, hybrid-evaluators, spec-first-validation, deterministic-llm-split, differential-testing, domain-benchmark, benchmark-validity, agentic-science-benchmarking, portability-metrics, llm-domain-validity, residual-monitoring, human-approval-gates, provenance-reproducibility, provenance-logging, standardized-run-metadata, memory-safety, fault-injection, site-profiles, power-measurement-fidelity, infrastructure-telemetry, trust-in-automated-decisions, repair-loop, physical-feasibility, physics-aware-training, formal-verification, fp-exception-detection, probabilistic-error-analysis, numerical-error, parallel-program-correctness, software-ecosystem-readiness, software-stack-drift, continuous-benchmarking, observability-overhead, performance-diagnosis-gap, hardware-counter-analysis, silent-training-failures, silent-data-corruption, data-readiness, failure-attribution]
     diagram:
       type: flow
       title: 검증의 사다리 - 아래로 갈수록 더 많은 오류를 잡음
@@ -92,20 +86,15 @@ themes:
         text: 에이전트의 목표, 계획, 행동, 평가를 질의 가능한 출처 기록으로 남기는 모델, 실행 데이터를 표준 형식으로 묶어 재사용하는 저장소, 프라이버시 주장을 감사 가능한 양식으로 적는 틀이 제안됨. 무엇을 했는지 남지 않으면 나중에 검증할 수 없기 때문임.
         refs: [ws_aaihpc144, ws_worksp112, ws_shpc102, ws_ai4s131]
       - head: 한국 연구기관에의 적용(제안) - 기관 고유의 검증 자산을 먼저 정비함.
+        stage: now
+        area: 검증·신뢰
+        needs: 기준 출력과 시험 사례의 목록화
         text: 기준 출력, 시험 사례, 검증된 설정, 자체 벤치마크는 모델이 바뀌어도 남는 자산이며, AI가 만든 코드와 모델을 받아들일지 판단하는 유일한 근거임. 원자력 안전해석처럼 검증 요건이 엄격한 코드는 시험 사례가 실행하지 않는 경로를 따로 확인하는 절차가 필요함. 과제와 시스템 평가에는 측정 조건과 에너지를 함께 적게 함.
         refs: [ws_aaihpc114, ws_aaihpc139, ws_worksa103, ws_eesp141]
   - id: flows
     label: 데이터, 에너지, 자원의 흐름을 시설 규모에서 다시 설계함
     summary_ko: 데이터는 저장하고 옮기기에 너무 많아졌고, 전력은 예산이 되었으며, 하드웨어는 벤더와 종류가 늘었음. 발표들은 데이터가 생기는 곳에서 줄이고, 네트워크와 메모리에서 위치를 따지고, 전력을 계층마다 조정하고, 시설들을 하나의 플랫폼으로 잇는 방향으로 모임.
-    concepts: [data-deluge, in-situ-reduction, experiment-steering, delayed-feedback, wan-data-distribution, federated-caching, science-aware-networking, science-unaware-networks, network-congestion,
-               cross-facility-integration, genesis-platform, user-facility-beamline, xfel-facility, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access,
-               energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, domain-power-rebalancing, rl-power-control,
-               co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability,
-               portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning,
-               gpu-io-path, gpu-native-io, shared-fabric-interference, node-local-staging, contention-aware-io-placement, large-data-migration, burst-buffer, cross-layer-tracing,
-               fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, federated-allocation-platform, hardware-enforced-isolation, gpu-sharing, llm-training-scaling,
-               container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore,
-               request-usage-mismatch, job-trace-analysis, embodied-carbon, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-reconstruction, rl-resource-scaling]
+    concepts: [data-deluge, in-situ-reduction, experiment-steering, delayed-feedback, wan-data-distribution, federated-caching, science-aware-networking, network-congestion, cross-facility-integration, genesis-platform, user-facility-beamline, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access, energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, rl-power-control, co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability, portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning, gpu-io-path, gpu-native-io, node-local-staging, contention-aware-io-placement, large-data-migration, cross-layer-tracing, fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, shared-identity-portal, hardware-enforced-isolation, gpu-sharing, llm-training-scaling, container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore, request-usage-mismatch, job-trace-analysis, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-vae]
     diagram:
       type: flow
       loop: 결과와 결정이 다음 실험과 계산으로 되돌아감
@@ -146,6 +135,9 @@ themes:
         text: 미국은 AI, 엑사스케일, 실험 시설, 자율 실험실을 한 플랫폼으로 묶는 사업에서 모델 배포, 언어 모델 접근, 데이터 기반, 출처 기록을 공용 서비스로 제공하고 이미 실제 워크플로에 쓰고 있음. 영국의 국가 AI 자원은 신원 관리가 숨은 최대 지원 부담임을 확인했고, 프랑스는 보안 규정과 공유 계정의 충돌을 서비스 계정으로 풀었음.
         refs: [misc199, ws_xloop110, ws_hppss105, ws_hust103, ws_worksp105]
       - head: 한국 연구기관에의 적용(제안) - 대형 실험시설과 계산 자원을 하나의 데이터 흐름으로 설계함.
+        stage: long
+        area: 실험시설 연계
+        needs: 시설과 전산 부서의 공동 설계 조직
         text: 가속기, 연구용 원자로, 핵융합 장치는 취득 단계의 축소와 실시간 처리를 전제로 한 데이터 체계가 필요함. GPU 클러스터를 들일 때는 전력 계측 해상도와 자기 워크로드의 측정을 평가 항목에 넣고, 노드 편차와 유휴 자원을 확인한 뒤 상한과 공동 실행을 적용함. 기관 간 연계는 계산 자원보다 신원 체계와 공용 서비스의 구분을 먼저 정함.
         refs: [misc155, ws_eesp144, ws_pmbsf126, ws_hust103]
   - id: quantum
@@ -163,17 +155,20 @@ themes:
         - {label: 운영, note: "새로 생기는 역할 여섯과 각자가 필요로 하는 운영 데이터"}
     sections:
       - head: 양자 장치를 스케줄러가 다루는 자원으로 만드는 것이 첫 과제임.
-        text: 벤더 중립 인터페이스로 양자 자원을 CPU, GPU와 나란히 스케줄하게 했고, 배치 스케줄러와 클라우드 조율 플랫폼, 그래프 기반 스케줄러에서 검증했음. 소프트웨어 스택 전체를 장치 하나로 다루는 추상화도 제안됨. 공개 생태계가 세 워크숍에 걸쳐 소개됐음.
-        refs: [ws_sfwm112, ws_sfwm121, misc194, misc213]
+        text: 벤더 중립 인터페이스로 양자 자원을 CPU, GPU와 나란히 스케줄하게 했고, 배치 스케줄러와 클라우드 조율 플랫폼, 그래프 기반 스케줄러에서 검증했음. 소프트웨어 스택 전체를 장치 하나로 다루는 추상화도 제안됨. 공개 생태계가 두 워크숍에 걸쳐 소개됐음.
+        refs: [ws_sfwm112, ws_sfwm121, misc194]
       - head: 잡음 때문에 어디서 어떻게 돌리느냐가 결과를 좌우함.
         text: 같은 회로도 장치마다 충실도가 달라, 컴파일 전에 장치별 충실도를 예측해 배정하는 방식이 나옴. 20큐비트 장치에서는 전부 증폭하는 방식이 장치 시간을 6.7~104배 쓰고도 뚜렷한 이점이 없었고, 부분 결과를 묶어 쓰자 실행 횟수가 2.20~4.00배 줄었음.
         refs: [ws_sfwm104, ws_sfwm118, ws_sfwm120]
-      - head: 실제 통합 사례는 일본과 미국, 유럽에서 나옴.
-        text: 후가쿠가 서로 다른 벤더의 양자 장치 둘을 조율해 화학 계산을 수행했고, 미국에서는 컨테이너 환경에서 양자와 고전 단계를 잇는 워크플로를 시험한 뒤 큰 시스템으로 옮겼음. 다섯 나라 기관이 통합 전략을 발표했으나 공개 초록에는 수치가 없음.
-        refs: [ws_sfwm111, misc141, misc214, misc211]
+      - head: 실제 통합 사례는 일본과 미국에서 나옴.
+        text: 후가쿠가 서로 다른 벤더의 양자 장치 둘을 조율해 화학 계산을 수행했고, 미국에서는 컨테이너 환경에서 양자와 고전 단계를 잇는 워크플로를 시험한 뒤 큰 시스템으로 옮겼음.
+        refs: [ws_sfwm111, misc141]
       - head: 고전 계산 쪽의 부담도 함께 커짐.
         text: 양자 회로를 고전적으로 모의하는 작업은 할당받은 노드의 배치 모양에 따라 1.73~2.31배 달라졌고, 실행 시간 예측에는 별도의 모델이 필요했음. 양자와 고전 자원이 섞인 클라우드에서는 반복 횟수가 임계점을 넘으면 대기가 급격히 늘었음.
         refs: [ws_hpct103, ws_sfwm110, ws_sfwm102]
       - head: 한국 연구기관에의 적용(제안) - 장치 도입과 운영 통합을 따로 계획함.
+        stage: prep
+        area: 양자
+        needs: 인터페이스 선정과 운영 역할 정의
         text: 양자 장치를 들이는 일과 기존 HPC 운영에 넣는 일은 별개임. 도입 사양에 스케줄러 연동 인터페이스를 넣고, 운영에 새로 생기는 역할과 필요한 데이터를 미리 정하며, 개발·시험 환경은 컨테이너로 먼저 맞추는 순서를 권함.
         refs: [ws_sfwm112, ws_hpcoda123, misc141, misc221]

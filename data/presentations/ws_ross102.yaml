@@ -6,8 +6,8 @@ session: sess118
 time: "09:35-10:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess118&id=ws_ross102"
 authors: [friedrich-doku, jonathan-laughton, nick-wanninger, finn-mcmillan, arthur-zakrzewski, peter-dinda]
-addresses: [kernel-bypass-safety]
-proposes: [hardware-capabilities]
+addresses: [memory-safety]
+proposes: [hardware-enforced-isolation]
 targets: [os-kernel]
 summary_ko: "범용 시스템의 저지연 I/O는 오버헤드가 큰 커널 중재 인터페이스와, 민감한 하드웨어 자원을 사용자 공간에 노출하는 완전한 커널 우회 중 하나를 골라야 함. 표준 MMU가 페이지 단위로 동작해, 안전한 장치 레지스터만 따로 노출할 수 없기 때문임."
 claims:

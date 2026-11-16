@@ -6,7 +6,7 @@ session: sess120
 time: "12:18-12:24"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess120&id=ws_aaihpc146"
 authors: [kartik-shinde, tirthankar-ghosal, sreekantam-sai-venkat, siddhant-senapati, sanjay-das, tilak-kasturi, khaled-ibrahim, hugo-hernandez, kanad-basu, sukumar-rangan]
-addresses: [unanswerable-refusal]
+addresses: [llm-domain-validity]
 proposes: [domain-benchmark, typed-agent-messaging]
 targets: [ai-agents, ops-telemetry]
 summary_ko: >

@@ -7,7 +7,7 @@ time: "10:30-10:42"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo105"
 authors: [ade-pramono, jie-ren, ivy-peng]
 addresses: [request-usage-mismatch, underused-resources, resource-prediction]
-proposes: [rl-resource-scaling]
+proposes: [rl-power-control]
 targets: [kubernetes-baremetal, cloud-science-environments, scientific-apps]
 summary_ko: "메모리를 넉넉히 잡는 관행이 Kubernetes의 HPC 워크로드 활용률을 낮춤. 기본 자동 조정 도구는 처음 도는 작업의 단계별 메모리 급증을 놓침. 수직 메모리 조정을 결정 과정으로 모델링한 강화학습 추천기를 실제 지표 기록 3,353건으로 학습시킴."
 claims:

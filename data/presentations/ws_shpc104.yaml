@@ -6,8 +6,8 @@ session: sess126
 time: "14:41-15:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc104"
 authors: [michael-polinski, peter-dinda]
-addresses: [memory-safety, untrusted-input]
-proposes: [fuzzing, ai-exploit-generation]
+addresses: [memory-safety]
+proposes: [fault-injection, ai-exploit-generation]
 targets: [scientific-apps]
 summary_ko: >
   과학 소프트웨어가 조작된 입력을 이용한 통상적 공격에 얼마나 취약한지 조사함. 퍼징과 보안 관점의
