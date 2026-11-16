@@ -105,6 +105,33 @@
   .card { border-top: 3px solid var(--c, var(--link)); } .card b { color: var(--c, var(--link)) !important; }
   .tcard:nth-of-type(1) { --c: var(--c-decision); } .tcard:nth-of-type(2) { --c: var(--c-trial); } .tcard:nth-of-type(3) { --c: var(--c-korea); }
   .tcard { border-left-color: var(--c, var(--link)) !important; } .tcard i { color: var(--c, var(--link)) !important; }
+  /* ---- 근거 수준, 용어 풀이, 인쇄 ---- */
+  .ev { float: right; font-size: .72em; font-weight: 500; border-radius: 999px; padding: 0 7px; margin-left: 8px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; line-height: 1.7; }
+  .ev.a { border-color: var(--c-korea); color: var(--c-korea); } .ev.b { border-color: var(--c-decision); color: var(--c-decision); } .ev.d { border-style: dashed; }
+  .ref i { font-style: normal; margin-right: 3px; } .ref.e-num i { color: var(--c-korea); } .ref.e-none { opacity: .7; border: 1px dashed var(--line); background: none; }
+  .legend { font-size: .78em; color: var(--muted); margin: 8px 0 0 !important; }
+  .g { border-bottom: 1px dotted var(--muted); cursor: help; }
+  #gloss { position: fixed; left: 12px; bottom: 12px; z-index: 30; max-width: min(430px, calc(100vw - 24px)); background: var(--panel); border: 1px solid var(--link); border-radius: 8px; padding: 10px 12px; box-shadow: 0 6px 24px rgba(0,0,0,.18); font-size: .9em; line-height: 1.5; }
+  #gloss b { color: var(--link); }
+  .ctable { border-collapse: collapse; font-size: .88em; margin: 6px 0; width: 100%; }
+  .ctable td, .ctable th { border-bottom: 1px solid var(--line); padding: 4px 6px; text-align: left; vertical-align: top; }
+  .ctable th { color: var(--muted); font-weight: 500; white-space: nowrap; }
+  .area { border: 1px solid var(--line); border-radius: 8px; padding: 4px 14px 10px; margin: 14px 0; max-width: 64em; --c: var(--c-korea); }
+  .area h3 { display: flex; align-items: center; gap: 8px; color: var(--c-korea); border-bottom-color: var(--c-korea) !important; margin-top: 12px !important; }
+  .area h3 button { margin-left: auto; font-size: .8em; font-weight: 400; }
+  .area li { margin: 9px 0; line-height: 1.5; } .area li small { color: var(--muted); }
+  .area ul { padding-left: 1.2em; margin: 4px 0; }
+  .chk li { margin: 3px 0; }
+  @media print {
+    html, body { height: auto; } body { display: block; background: #fff; color: #000; font-size: 11pt; }
+    .tools, .controls, #split, #toggle-graph, #warn, #gloss, #back, #back0, #tograph, .lead, #stats, button { display: none !important; }
+    aside { width: 100% !important; max-width: none; height: auto; display: block; }
+    #detail { overflow: visible; padding: 0 14px; } main { display: none !important; }
+    details.it, .dg, .card, .tcard, .area li { break-inside: avoid; }
+    body.pv aside { display: none; } body.pv main { display: block !important; height: auto !important; overflow: visible; }
+    body.pv #tabs, body.pv #graph { display: none !important; } body.pv #view { overflow: visible; padding: 0; }
+    .ref { border: 1px solid #ccc; }
+  }
   /* ---- 요지 카드 ---- */
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.6em, 1fr)); gap: 8px; margin: 8px 0 4px; }
   .card { border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; background: var(--bg); cursor: pointer; line-height: 1.35; }
@@ -186,6 +213,7 @@
       <button id="fs-down" title="글씨 작게" aria-label="글씨 작게">가−</button>
       <button id="fs-up" title="글씨 크게" aria-label="글씨 크게">가+</button>
       <button id="theme" title="밝은/어두운 테마 전환"></button>
+      <button id="print" title="지금 보이는 요약을 인쇄하거나 PDF로 저장">인쇄</button>
     </div>
   </header>
   <div id="warn"></div>
@@ -198,6 +226,7 @@
   </div>
   <div id="detail"></div>
 </aside>
+<div id="gloss" hidden></div>
 <div id="split" role="separator" aria-orientation="vertical" title="끌어서 너비 조절 (두 번 누르면 초기화)"></div>
 <button id="toggle-graph">분석·온톨로지 펼치기 ▲</button>
 <main>
@@ -206,13 +235,15 @@
     <button data-v="pm">문제–기법 대응</button>
     <button data-v="bridge">세션 사이의 다리</button>
     <button data-v="org">기관·저자</button>
+    <button data-v="apply">적용 모아 보기</button>
     <button data-v="graph">온톨로지 그래프</button>
+    <button data-v="check">데이터 점검</button>
   </div>
   <div id="view"><p class="note">발표 데이터를 불러오는 중…</p></div>
   <div id="graph">
     <div id="cy"></div>
     <div id="gmsg">그래프를 그리는 중…</div>
-    <div id="gbar"><div class="chips" id="chips"></div><button id="fit">화면 맞춤</button></div>
+    <div id="gbar"><div class="chips" id="chips"></div><label class="chip off" title="발표, 저자까지 모두 그림"><input type="checkbox" id="expand"><span class="dot" style="background:var(--muted)"></span>발표까지 모두</label><button id="fit">화면 맞춤</button></div>
     <div id="gstats"></div>
   </div>
 </main>
@@ -245,7 +276,7 @@
   const CREL = ["addresses", "proposes", "targets"];
 
   // ---------- 1단계: 고찰에 필요한 파일만 먼저 읽고 첫 화면을 그림 ----------
-  let schema = {}, manifest, orgs = {}, people = {}, concepts = {}, sessions = [], presentations = [], overview = {}, themes = [];
+  let schema = {}, manifest, orgs = {}, people = {}, concepts = {}, sessions = [], presentations = [], overview = {}, themes = [], glossary = {}, changelog = [];
   const nodes = new Map(), edges = [], errors = [];
   let valid = [], full = false, cy = null, A = null;            // full: 발표까지 읽음, A: 온톨로지 분석 결과
   const addNode = (id, type, attrs) => {
@@ -255,11 +286,13 @@
   const addEdge = (source, rel, target) => edges.push({ source, rel, target });
   try {
     manifest = await loadYaml("data/manifest.yaml");
-    const [ov, th, ss] = await Promise.all([
+    const [ov, th, ss, gl, ch] = await Promise.all([
       manifest.overview ? loadYaml("data/" + manifest.overview) : {},
       manifest.themes ? loadYaml("data/" + manifest.themes) : {},
-      Promise.all((manifest.sessions || []).map((f) => loadYaml("data/" + f)))]);
-    overview = ov; themes = th.themes || []; sessions = ss;
+      Promise.all((manifest.sessions || []).map((f) => loadYaml("data/" + f))),
+      manifest.glossary ? loadYaml("data/" + manifest.glossary) : {},
+      manifest.changelog ? loadYaml("data/" + manifest.changelog) : []]);
+    overview = ov; themes = th.themes || []; sessions = ss; glossary = gl || {}; changelog = Array.isArray(ch) ? ch : [];
     sessions.sort((a, b) => parseInt(sNum(a.id), 10) - parseInt(sNum(b.id), 10));
   } catch (e) { return fail(e); }
   for (const s of sessions) addNode(s.id, "Session", s);
@@ -295,11 +328,49 @@
   const SRC_KO = { abstract: "초록", talk: "발표", slide: "슬라이드", qa: "질의응답" };
   const nm = (n) => (n.type === "Session" ? sTitle(n) : n.label_ko || n.label || n.id);
   const nodeLink = (id) => { const n = nodes.get(id); return n ? `<span class="link" data-id="${esc(id)}">${esc(n.type === "Session" ? sTitle(n) : n.label_ko ? n.label_ko + " (" + n.label + ")" : n.label)}</span>` : ""; };
-  const refChip = (id) => { const n = nodes.get(id); return n ? `<span class="ref" data-id="${esc(id)}">${esc(n.label)}</span>` : ""; };
+  const refChip = (id) => { const n = nodes.get(id), e = full ? evOf(id) : ""; return n ? `<span class="ref e-${e}" data-id="${esc(id)}">${e ? `<i>${EV_MARK[e]}</i>` : ""}${esc(n.label)}</span>` : ""; };
   const VIEWS = [["decision", "1. 결정 주체와 기준", "누가, 무엇을 근거로 판단하는가"], ["trial", "2. 시행착오와 조건", "무엇이 안 됐고, 어떤 조건에서 됐는가"],
     ["korea", "3. 한국 연구기관으로의 적용", "초록을 바탕으로 한 제안임"], ["extra", "4. 그 밖의 포인트", ""]];
   let panel = null;                                             // 지금 왼쪽에 보이는 목록 화면 (상세에서 돌아갈 곳)
-  const put = (h, keep) => { const t = $("detail").scrollTop; $("detail").innerHTML = h; $("detail").scrollTop = keep ? t : 0; };
+  let curNode = null;                                           // 지금 상세로 보고 있는 노드
+  const put = (h, keep) => { const t = $("detail").scrollTop; $("detail").innerHTML = h; $("detail").scrollTop = keep ? t : 0; syncHash(); };
+  // 주소에 지금 상태를 담음: #s=세션, v=탭, n=노드, q=검색어. 이 주소를 보내면 같은 화면이 열림.
+  function syncHash() {
+    const o = { s: $("session").value, v: curView === "heat" ? "" : curView, n: curNode || "", q: curNode ? "" : $("q").value.trim() };
+    const h = Object.entries(o).filter(([, v]) => v).map(([k, v]) => k + "=" + encodeURIComponent(v)).join("&");
+    try { history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); } catch (e) {}
+  }
+  const hash0 = Object.fromEntries(location.hash.slice(1).split("&").filter(Boolean).map((x) => { const i = x.indexOf("="); return [x.slice(0, i), decodeURIComponent(x.slice(i + 1))]; }));
+  // 용어 풀이: 글 안의 용어에 점선 밑줄을 긋고, 누르면 설명을 보여 줌
+  const gKeys = Object.keys(glossary).sort((a, b) => b.length - a.length);
+  const gRe = gKeys.length ? new RegExp(gKeys.map((k) => (/^[A-Za-z]/.test(k) ? "\\b" : "") + k.replace(/[.*+?^${}()|[\]\\\/]/g, "\\$&") + (/[A-Za-z]$/.test(k) ? "\\b" : "")).join("|"), "g") : null;
+  const gloss = (html) => { if (!gRe) return html; const seen = new Set(); return html.replace(gRe, (m) => (seen.has(m) ? m : (seen.add(m), `<span class="g" data-g="g${gKeys.indexOf(m)}">${m}</span>`))); };
+  document.addEventListener("click", (e) => {
+    const g = e.target.closest(".g");
+    if (!g) { $("gloss").hidden = true; return; }
+    const k = gKeys[+g.dataset.g.slice(1)];
+    $("gloss").innerHTML = `<b>${esc(k)}</b> ${esc(glossary[k])}`; $("gloss").hidden = false;
+    e.stopPropagation();
+  }, true);
+  // 근거 수준: 발표가 수치를 제시하는지, 정성적인지, 공개 설명 없이 제목뿐인지
+  const NUM_RE = /\d[\d,.]*(?:~\d[\d,.]*)?\s?(?:%|배|건|개|초|분|주|시간|PB|TB\/s|TB|GB\/s|GB|Gbps|ms|µs|TFLOP\/s|kHz|대|명)(?![A-Za-z])/;
+  const evOf = (id) => {
+    const p = nodes.get(id);
+    if (!p || p.type !== "Presentation") return "";
+    if (/설명문이 없|읽지 못했|설명문과 패널 명단이 없|만 기록함|만 기록했/.test(p.summary_ko || "") && !(p.claims || []).length) return "none";
+    const txt = (p.claims || []).map((c) => (typeof c === "string" ? c : c.text)).filter((c) => !/수치가 없/.test(c)).join(" ") + " " + (p.summary_ko || "");
+    return NUM_RE.test(txt) ? "num" : "qual";
+  };
+  const EV_MARK = { num: "●", qual: "○", none: "◌" };
+  const evBadge = (refs) => {
+    if (!full || !(refs || []).length) return "";
+    const c = { num: 0, qual: 0, none: 0 };
+    refs.forEach((r) => { const e = evOf(r); if (e) c[e]++; });
+    if (c.num >= 2) return `<span class="ev a" title="수치를 제시한 발표 ${c.num}건이 근거임">근거 ${c.num}건</span>`;
+    if (c.num === 1) return `<span class="ev b" title="수치를 제시한 발표 1건이 근거임">근거 1건</span>`;
+    if (c.qual) return `<span class="ev c" title="근거 발표가 수치 없이 방법이나 입장을 설명함">정성 근거</span>`;
+    return `<span class="ev d" title="근거 발표의 공개 설명문이 없어 제목만 확인함">제목만 확인</span>`;
+  };
 
   function diagramHtml(d) {
     if (!d || !(d.items || []).length) return "";
@@ -316,12 +387,13 @@
     return h + `</div>`;
   }
   // 풀이 안의 수치(단위가 붙은 숫자)를 관점 색으로 강조
-  const emph = (s) => esc(s).replace(/\d[\d,.]*(?:~\d[\d,.]*)?\s?(?:%|배|건|개|초|분|주|시간|PB|TB\/s|TB|GB\/s|GB|Gbps|ms|µs|TFLOP\/s|kHz|대|명)(?![A-Za-z])/g, (m) => `<b class="n">${m}</b>`);
+  const emph = (s) => gloss(esc(s)).replace(/\d[\d,.]*(?:~\d[\d,.]*)?\s?(?:%|배|건|개|초|분|주|시간|PB|TB\/s|TB|GB\/s|GB|Gbps|ms|µs|TFLOP\/s|kHz|대|명)(?![A-Za-z])/g, (m) => `<b class="n">${m}</b>`);
   const insightItems = (items, open) => items.map((it) => {
     const o = typeof it === "string" ? { head: it, text: "" } : it;
-    return `<details class="it${/^한국 연구기관/.test(o.head || "") ? " kr" : ""}"${open ? " open" : ""}><summary>${esc(o.head || o.text)}</summary><div>${o.head ? emph(o.text) : ""}${(o.refs || []).length ? "<br>" + o.refs.map(refChip).join("") : ""}</div></details>`;
+    return `<details class="it${/^한국 연구기관/.test(o.head || "") ? " kr" : ""}"${open ? " open" : ""}><summary>${evBadge(o.refs)}${esc(o.head || o.text)}</summary><div>${o.head ? emph(o.text) : ""}${(o.refs || []).length ? "<br>" + o.refs.map(refChip).join("") : ""}</div></details>`;
   }).join("");
   function showTheme(th, keep) {
+    curNode = null;
     const sc = A && A.themeScope.get("theme:" + th.id), per = {};
     if (sc) sc.ps.forEach((p) => { const s = nodes.get(p).session; per[s] = (per[s] || 0) + 1; });
     const max = Math.max(1, ...Object.values(per));
@@ -334,7 +406,7 @@
     put(h + `</div>`, keep);
   }
   function showOverview(keep) {
-    panel = showOverview;
+    panel = showOverview; curNode = null;
     const sid = $("session").value;
     if (sid.startsWith("theme:")) return showTheme(themes.find((x) => "theme:" + x.id === sid), keep);
     const s = sessions.find((x) => x.id === sid), ins = (s ? s.insights : overview.insights) || {}, src = s || overview;
@@ -354,12 +426,15 @@
       h += `<div class="grp" style="--c:var(--c-${key})"><h3>${esc(title)} <small>· ${items.length}개${sub ? " · " + esc(sub) : ""}</small></h3>` + insightItems(items, !!s) + `</div>`;
     }
     if (!s) h += `<p class="lead">항목을 누르면 풀이와 근거 발표가 펼쳐짐. 세션을 고르면 그 세션의 고찰이 나옴.</p>`;
+    h += `<p class="legend">근거 표시: ● 수치를 제시한 발표 · ○ 수치 없이 방법이나 입장을 설명한 발표 · ◌ 공개 설명문이 없어 제목만 확인한 발표</p>`;
     if (!Object.keys(ins).length) h += `<p class="muted">이 세션의 고찰이 아직 없음.</p>`;
     h += `</div>`;
     if (full) {
       const counts = {};
       valid.forEach((e) => { if (CREL.includes(e.rel) && (!sid || nodes.get(e.source).session === sid)) counts[e.target] = (counts[e.target] || 0) + 1; });
       const shared = Object.entries(counts).filter(([, c]) => c > 1).sort((a, b) => b[1] - a[1]);
+      if (!s && gKeys.length) h += `<details><summary>용어 풀이 ${gKeys.length}개</summary><ul>${Object.keys(glossary).sort((a, b) => a.localeCompare(b, "ko")).map((k) => `<li><b>${esc(k)}</b> ${esc(glossary[k])}</li>`).join("")}</ul></details>`;
+      if (!s && changelog.length) h += `<details><summary>갱신 이력 · 최근 ${esc(changelog[0].date)}</summary><ul>${changelog.map((c) => `<li><span class="muted">${esc(c.date)}</span> ${esc(c.text)}</li>`).join("")}</ul></details>`;
       if (shared.length) h += `<details><summary>여러 발표가 공유하는 개념 ${shared.length}개</summary><ul>${shared.map(([id, c]) => `<li>${nodeLink(id)} <span class="muted">· 발표 ${c}건</span></li>`).join("")}</ul></details>`;
     }
     put(h, keep);
@@ -368,15 +443,18 @@
     const n = nodes.get(id);
     if (!n) return;
     const cls = classes()[n.type] || {};
+    curNode = id;
     let h = `<p><button id="back">← 돌아가기</button> <button id="tograph" data-id="${esc(id)}">그래프에서 보기</button></p><span class="tag" style="background:${esc(cls.color || "#888")}">${esc(cls.label_ko || n.type)}</span>
              <h2>${esc(n.type === "Session" ? sTitle(n) : n.label)}</h2>` + (n.label_ko ? `<p class="muted">${esc(n.label_ko)}</p>` : "");
     const meta = [n.type === "Presentation" && nodes.get(n.session) ? "(" + sNum(n.session) + ")" : "", n.kind, n.date, n.time, n.room].filter(Boolean).join(" · ");
     if (meta) h += `<p class="muted">${esc(meta)}</p>`;
-    if (n.summary_ko) h += `<h3>요약</h3><p>${esc(n.summary_ko)}</p>`;
+    if (n.type === "Presentation" && full) h += `<p class="muted">근거 수준: ${{ num: "● 수치를 제시함", qual: "○ 수치 없이 방법이나 입장을 설명함", none: "◌ 공개 설명문이 없어 제목만 확인함" }[evOf(id)]}</p>`;
+    if (n.summary_ko) h += `<h3>요약</h3><p>${gloss(esc(n.summary_ko))}</p>`;
+    if (A && A.cs.has(id)) h += conceptProfile(id);
     if ((n.claims || []).length) h += `<h3>핵심 주장</h3><ul>${n.claims.map((c) => {
       const o = typeof c === "string" ? { text: c } : c;   // 문자열 또는 {text, source, at}
       const src = o.source ? ` <span class="src">${esc(SRC_KO[o.source] || o.source)}${o.at ? " " + esc(o.at) : ""}</span>` : "";
-      return `<li>${esc(o.text)}${src}</li>`;
+      return `<li>${gloss(esc(o.text))}${src}</li>`;
     }).join("")}</ul>`;
     if ((n.photos || []).length) h += `<h3>현장 사진</h3><div class="photos">${n.photos.map((ph) =>
       `<a href="${esc(ph.file)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(ph.file)}" alt="${esc(ph.caption || "")}"></a>${ph.caption ? `<p class="muted">${esc(ph.caption)}</p>` : ""}`).join("")}</div>`;
@@ -390,6 +468,25 @@
     const links = [n.url && `<a href="${esc(n.url)}" target="_blank" rel="noopener">프로그램 페이지</a>`, n.website && `<a href="${esc(n.website)}" target="_blank" rel="noopener">워크숍 사이트</a>`].filter(Boolean);
     if (links.length) h += `<h3>링크</h3><p>${links.join(" · ")}</p>`;
     put(h);
+  }
+  // 개념 상세: 어느 세션에서, 어떤 문제·기법·대상과 함께 다뤄졌는지
+  function conceptProfile(id) {
+    const m = A.cs.get(id), ps = [...m.values()].flat(), tot = ps.length, n = nodes.get(id);
+    const top = [...m].sort((a, b) => b[1].length - a[1].length);
+    const co = { Problem: new Map(), Method: new Map(), System: new Map() };
+    ps.forEach((p) => A.pc.get(p).all.forEach((c) => { if (c !== id) { const k = co[nodes.get(c).type]; k.set(c, (k.get(c) || 0) + 1); } }));
+    const rank = (t, k = 5) => [...co[t]].sort((a, b) => b[1] - a[1]).slice(0, k);
+    const names = (t) => rank(t, 3).map(([c]) => clab(c)).join(", ");
+    const role = { Problem: "이 문제는", Method: "이 기법은", System: "이 대상은" }[n.type];
+    let s = `${role} 세션 ${m.size}개의 발표 ${tot}건에서 다뤄짐. 가장 많이 다룬 세션은 (${sNum(top[0][0])})로 ${top[0][1].length}건임.`;
+    if (n.type !== "Problem" && co.Problem.size) s += ` 함께 다뤄진 문제는 주로 ${names("Problem")}임.`;
+    if (n.type !== "Method" && co.Method.size) s += ` 함께 쓰인 기법은 주로 ${names("Method")}임.`;
+    if (n.type !== "System" && co.System.size) s += ` 대상은 주로 ${names("System")}임.`;
+    if (m.size === 1) s += " 한 세션에서만 나온 고유 주제임.";
+    const row = (title, t) => rank(t).length ? `<tr><th>${title}</th><td>${rank(t).map(([c, k]) => `${nodeLink(c)} <span class="muted">${k}</span>`).join(" · ")}</td></tr>` : "";
+    return `<h3>한눈에 보기</h3><p>${esc(s)}</p><table class="ctable">` +
+      `<tr><th>세션별 발표</th><td>${top.map(([sid, v]) => `<span class="link" data-sess="${esc(sid)}">(${esc(sNum(sid))})</span> <span class="muted">${v.length}</span>`).join(" · ")}</td></tr>` +
+      row("함께 나온 문제", "Problem") + row("함께 나온 기법", "Method") + row("함께 나온 대상", "System") + `</table>`;
   }
   // 발표 묶음을 세션·시간순으로 보여 줌 (표의 칸, 검색 결과, 주제 경로에서 공용)
   const presList = (ids, mark) => {
@@ -414,12 +511,14 @@
     return out + esc(t.slice(i));
   };
   function showList(title, sub, ids, extra) {
+    curNode = null;
     const f = () => put(`<p><button id="back0">← 고찰로</button></p><div class="insight"><h2>${esc(title)}</h2>` + (sub ? `<p class="muted">${esc(sub)}</p>` : "") + (extra || "") + presList(ids) + `</div>`);
     panel = f; f();
   }
   function showSearch() {
     const q = terms();
     if (!q.length) return showOverview();
+    curNode = null;
     const f = () => {
       const has = (...t) => t.some((x) => x && q.some((w) => String(x).toLowerCase().includes(w)));
       const ins = [];
@@ -432,8 +531,10 @@
       valid.forEach((e) => { if (CREL.includes(e.rel) && cSet.has(e.target)) viaC.add(e.source); });
       const pHit = presentations.filter((p) => viaC.has(p.id) || has(p.label, p.summary_ko, ...(p.claims || []).map((c) => (typeof c === "string" ? c : c.text)))).map((p) => p.id);
       const who = [...nodes.values()].filter((n) => ["Person", "Organization"].includes(n.type) && has(n.label)).slice(0, 12);
+      const gHit = gKeys.filter((k) => has(k));
       let h = `<p><button id="back0">← 고찰로</button></p><div class="insight"><h2>"${esc($("q").value.trim())}" 관련 내용</h2>` +
         `<p class="muted">고찰 ${ins.length}개 · 발표 ${pHit.length}건${full ? "" : " (발표 불러오는 중)"} · 개념 ${cHit.length}개</p>`;
+      if (gHit.length) h += `<h3>용어 풀이</h3><ul>${gHit.slice(0, 6).map((k) => `<li><b>${esc(k)}</b> ${esc(glossary[k])}</li>`).join("")}</ul>`;
       if (cHit.length) h += `<h3>개념</h3><p>${cHit.slice(0, 24).map((n) => nodeLink(n.id)).join(" · ")}</p>`;
       if (ins.length) h += `<h3>고찰</h3>` + ins.slice(0, 40).map(([w, v, o]) =>
         `<div class="hit"><b>${hl(o.head || "", q)}</b> <span class="link" data-sess="${esc(v)}" style="font-size:.82em">${esc(w)}</span><small>${hl(o.text || "", q)}</small></div>`).join("");
@@ -454,7 +555,7 @@
     if (cy && $("graph").offsetParent) focusGraph(id);
   }
   $("detail").addEventListener("click", (e) => {
-    if (e.target.id === "back") { if (cy) cy.elements().removeClass("faded focus hl"); return (panel || showOverview)(); }
+    if (e.target.id === "back") { if (cy) cy.elements().removeClass("faded focus hl"); curNode = null; return (panel || showOverview)(); }
     if (e.target.id === "back0") { $("q").value = ""; if (cy) applyFilter(false); return showOverview(); }
     if (e.target.id === "tograph") return openGraph(e.target.dataset.id);
     const go = e.target.closest("[data-sess]");
@@ -593,19 +694,65 @@
       `<h3>여러 세션에 걸쳐 발표한 저자</h3><p class="note">세 개 이상의 세션에 이름을 올린 사람임. 분야를 잇는 인물이거나 큰 연구 그룹의 책임자인 경우가 많음.</p><ul class="rank">` +
       cross.map(([a, x]) => `<li ${cellAttr(nodes.get(a).label, "참여한 발표", x.ps)}><span><b>${esc(nodes.get(a).label)}</b><small>${esc((A.porg.get(a) || []).map((o) => nodes.get(o).label).join(", "))} · 세션 ${esc([...x.ss].map(sNum).sort().join(", "))}</small></span><em>세션 ${x.ss.size} · 발표 ${x.ps.length}</em></li>`).join("") + `</ul>`;
   }
+  const AREAS = [["인력·교육", /인력|교육|양성|학생/], ["에너지·시설", /에너지|전력|냉각|전산실|수랭|효율/], ["검증·신뢰", /검증|정확|시험 사례|기준 출력|벤치마크|신뢰|계약|결함|조용한|예외/],
+    ["데이터·저장", /데이터|저장|스트리밍|입출력|파일/], ["도입 평가·하드웨어", /도입|GPU|가속기|하드웨어|이식|배정밀도|사양|벤더|교체|양자/], ["에이전트·AI 서비스", /에이전트|LLM|추론|AI/],
+    ["운영·사용자 지원", /운영|지원|사용자|계정|신원|포털|스케줄|워크플로|절차|문서|환경/], ["협력·거버넌스", /연합|기관 간|거버넌스|공동|국가|정책|일본/]];
+  function viewApply() {
+    const items = [];
+    (overview.insights && overview.insights.korea || []).forEach((o) => items.push(["전체 종합", "", o]));
+    sessions.forEach((s) => ((s.insights || {}).korea || []).forEach((o) => items.push(["(" + sNum(s.id) + ")", s.id, o])));
+    themes.forEach((th, i) => (th.sections || []).filter((o) => /^한국 연구기관/.test(o.head || "")).forEach((o) => items.push(["심층 요약 " + (i + 1), "theme:" + th.id, o])));
+    const by = new Map(AREAS.map(([a]) => [a, []])); by.set("그 밖", []);
+    items.forEach((it) => {
+      const o = it[2], hit = o.area ? [o.area] : (AREAS.find(([, re]) => re.test(o.head || "")) || AREAS.find(([, re]) => re.test(o.text || "")) || ["그 밖"]);
+      (by.get(hit[0]) || by.set(hit[0], []).get(hit[0])).push(it);
+    });
+    return `<h2>적용 모아 보기</h2><p class="note">세션마다 적은 "한국 연구기관으로의 적용" 제안 ${items.length}개를 실행 영역별로 모은 것임. 모두 공개 초록을 바탕으로 한 제안이며, 영역은 제목의 낱말로 자동 분류함(YAML 항목에 <code>area:</code>를 적으면 그 값을 따름). "복사"를 누르면 그 영역이 글머리표 문단으로 복사됨.</p>` +
+      `<p><button id="print-view">이 화면 인쇄</button></p>` +
+      [...by].filter(([, v]) => v.length).map(([a, v]) => `<div class="area"><h3>${esc(a)} <small class="muted">${v.length}개</small><button data-copy="${esc(a)}">복사</button></h3><ul>` +
+        v.map(([w, sid, o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small><span class="link" data-sess="${esc(sid)}">${esc(w)}</span></small><br>${(o.refs || []).map(refChip).join("")}</li>`).join("") + `</ul></div>`).join("");
+  }
+  function viewCheck() {
+    const noTag = presentations.filter((p) => !A.pc.get(p.id).all.size), none = presentations.filter((p) => evOf(p.id) === "none");
+    const used = new Map(); A.cs.forEach((m, c) => used.set(c, [...m.values()].flat().length));
+    const cAll = [...nodes.values()].filter((n) => ["Problem", "Method", "System"].includes(n.type));
+    const once = cAll.filter((n) => used.get(n.id) === 1), unused = cAll.filter((n) => !used.get(n.id));
+    const noOrg = [...nodes.values()].filter((n) => n.type === "Person" && !(A.porg.get(n.id) || []).length);
+    const weak = [];
+    const scan = (w, sid, groups) => Object.values(groups || {}).forEach((items) => (items || []).forEach((o) => { if ((o.refs || []).length && o.refs.every((r) => evOf(r) === "none")) weak.push([w, sid, o]); }));
+    scan("전체 종합", "", overview.insights); sessions.forEach((s) => scan("(" + sNum(s.id) + ")", s.id, s.insights));
+    const ev = { num: 0, qual: 0, none: 0 }; presentations.forEach((p) => ev[evOf(p.id)]++);
+    const sec = (title, note, list, f) => `<h3>${esc(title)} <small class="muted">${list.length}건</small></h3><p class="note">${esc(note)}</p>` + (list.length ? `<details><summary>목록 보기</summary><ul class="chk">${list.map(f).join("")}</ul></details>` : "");
+    const pl = (p) => `<li>${nodeLink(p.id)} <span class="muted">(${esc(sNum(p.session))})</span></li>`;
+    return `<h2>데이터 점검</h2><p class="note">분석 보기의 정확도는 발표마다 붙인 태그와 저자 정보에 달려 있음. 아래는 온톨로지에서 비어 있거나 약한 곳임. 스키마 위반은 화면 왼쪽 위에 따로 경고로 표시됨.</p>` +
+      `<div class="cards" style="max-width:46em"><div class="card"><b>${ev.num}</b><span>● 수치를 제시한 발표</span></div><div class="card"><b>${ev.qual}</b><span>○ 수치 없이 설명한 발표</span></div><div class="card"><b>${ev.none}</b><span>◌ 제목만 확인한 발표</span></div><div class="card"><b>${errors.length}</b><span>스키마 경고</span></div></div>` +
+      sec("공개 설명문이 없는 발표", "제목과 연사만 기록함. 녹취록이나 사진이 있으면 채울 수 있음.", none, pl) +
+      sec("문제·기법·대상 태그가 하나도 없는 발표", "세션–개념 지도와 문제–기법 대응에서 빠짐.", noTag, pl) +
+      sec("근거 발표가 모두 제목뿐인 고찰", "근거가 약하므로 현장 자료로 확인이 필요함.", weak, ([w, sid, o]) => `<li><b>${esc(o.head)}</b> <span class="link" data-sess="${esc(sid)}">${esc(w)}</span></li>`) +
+      sec("한 발표에만 쓰인 개념", "다른 개념과 합칠 수 있는지 볼 후보임. 고유 주제일 수도 있음.", once, (n) => `<li>${nodeLink(n.id)}</li>`) +
+      sec("어느 발표에도 쓰이지 않은 개념", "지워도 되는 후보임.", unused, (n) => `<li>${nodeLink(n.id)}</li>`) +
+      sec("소속이 없는 인물", "공개 페이지에 소속이 없거나 페이지를 읽지 못한 경우임. 기관·저자 보기에서 빠짐.", noOrg, (n) => `<li>${nodeLink(n.id)}</li>`);
+  }
   function renderView() {
     document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.v === curView));
     document.querySelector("main").classList.toggle("g", curView === "graph");
-    if (curView === "graph") return ensureGraph();
+    if (curView === "graph") { syncHash(); return ensureGraph(); }
     if (!A) return;
     cells.clear();
-    $("view").innerHTML = { heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg }[curView]();
-    $("view").scrollTop = 0;
+    $("view").innerHTML = ({ heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, apply: viewApply, check: viewCheck }[curView] || viewHeat)();
+    $("view").scrollTop = 0; syncHash();
   }
   $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { curView = b.dataset.v; renderView(); } });
   $("view").addEventListener("click", (e) => {
     const t = e.target.closest("#heat-type button");
     if (t) { heatType = t.dataset.t; return renderView(); }
+    if (e.target.id === "print-view") { document.body.classList.add("pv"); window.print(); return; }
+    const cp = e.target.closest("[data-copy]");
+    if (cp) {
+      const txt = [...cp.closest(".area").querySelectorAll("li")].map((li) => "- " + li.querySelector("b").textContent + " " + [...li.childNodes].filter((x) => x.nodeType === 3 || (x.tagName === "B" && x.className === "n") || (x.tagName === "SPAN" && x.className === "g")).map((x) => x.textContent).join("").trim() + " " + li.querySelector("small").textContent).join("\n");
+      (navigator.clipboard ? navigator.clipboard.writeText(cp.dataset.copy + "\n" + txt) : Promise.reject()).then(() => { cp.textContent = "복사됨"; setTimeout(() => (cp.textContent = "복사"), 1500); }, () => { cp.textContent = "복사 실패"; });
+      return;
+    }
     const c = e.target.closest("[data-cell]"), s = e.target.closest("[data-sess]"), n = e.target.closest("[data-id]");
     if (!c && !s && !n) return;
     if (matchMedia("(max-width: 760px)").matches) { document.body.classList.remove("graph-open"); syncToggle(); }   // 모바일: 결과가 보이도록 접음
@@ -616,7 +763,7 @@
 
   // ---------- 4. 온톨로지 그래프: 탭을 처음 열 때 라이브러리를 받아 그림 ----------
   const visible = {};
-  const nodeSize = (n) => Math.min(120, 12 + 2.4 * (n.data("deg") || 0));   // 노드 크기는 보이는 연결 수에 비례
+  const nodeSize = (n) => (n.hasClass("big") ? Math.min(420, 70 + 13 * (n.data("deg") || 0)) : Math.min(120, 12 + 2.4 * (n.data("deg") || 0)));   // 노드 크기는 보이는 연결 수에 비례
   const edgeWidth = (e) => (e.hasClass("agg") ? Math.min(90, 6 * e.data("count")) : 1);   // 굵은 선은 세션–개념 요약선: 발표 수에 비례
   const SHAPE = { Session: "star", Presentation: "round-rectangle", Problem: "ellipse", Method: "diamond", System: "hexagon", Person: "ellipse", Organization: "rectangle" };
   function graphStyle() {
@@ -639,6 +786,8 @@
       { selector: "node.focus", style: { "border-width": 3, "border-color": C.text } },
       { selector: "edge.hl", style: { "line-color": C.hl, "target-arrow-color": C.hl, width: (e) => Math.max(2, edgeWidth(e)), label: "data(rel)", "font-size": 9, color: C.hl, "text-background-color": C.bg, "text-background-opacity": 1, "text-rotation": "autorotate" } },
       { selector: "edge.agg.hl", style: { "line-color": C.agg, opacity: 0.75, "font-size": 40 } },
+      { selector: "node.big", style: { "font-size": 84, "text-max-width": 900, "text-margin-y": 14, "min-zoomed-font-size": 5 } },
+      { selector: 'node.big[type="Session"]', style: { "font-size": 78, "text-max-width": 1100 } },
     ];
   }
   // 결정적 방사형 배치: 세션(중심) → 발표(고리) → 고유 개념(바깥 부채꼴).
@@ -747,13 +896,46 @@
     cy.nodes().forEach((nd) => { const q = pos.get(nd.id()); if (q) nd.position(q); });
     cy.fit(cy.elements().not(".hidden"), 40);
   }
+  // 단순 보기: 세션과 주요 개념만 그림. 세션은 원 위에, 개념은 자신을 다룬 세션들의 무게중심에 놓음.
+  let expandAll = false;
+  const isCompact = () => !/^sess/.test($("session").value) && !expandAll;
+  function layoutCompact() {
+    const vis = (id) => !cy.getElementById(id).hasClass("hidden"), pos = new Map();
+    const S = sessions.filter((s) => vis(s.id)), R = Math.max(2400, S.length * 210);
+    S.forEach((s, i) => { const a = -Math.PI / 2 + (2 * Math.PI * i) / S.length; pos.set(s.id, { x: R * Math.cos(a), y: R * Math.sin(a) }); });
+    const taken = new Set(), CW = 980, CH = 420, offs = [];
+    for (let dx = -7; dx <= 7; dx++) for (let dy = -9; dy <= 9; dy++) offs.push([dx, dy]);
+    offs.sort((a, b) => Math.hypot(a[0] * CW, a[1] * CH) - Math.hypot(b[0] * CW, b[1] * CH));
+    S.forEach((s) => { const q = pos.get(s.id); for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) taken.add(Math.round(q.x / CW + dx) + "," + Math.round(q.y / CH + dy)); });
+    const cs = [...nodes.values()].filter((n) => A.cs.has(n.id) && vis(n.id)).map((n) => {
+      let x = 0, y = 0, w = 0, k = 0;
+      A.cs.get(n.id).forEach((ps, sid) => { const q = pos.get(sid); if (q) { x += q.x * ps.length; y += q.y * ps.length; w += ps.length; k++; } });
+      return [n.id, w ? x / w : 0, w ? y / w : 0, k];
+    }).sort((a, b) => b[3] - a[3]);
+    cs.forEach(([id, x, y, k]) => {
+      const f = k > 1 ? 0.86 : 1.22;                              // 한 세션만의 개념은 원 바깥으로
+      const gx = Math.round((x * f) / CW), gy = Math.round((y * f) / CH);
+      const o = offs.find(([dx, dy]) => !taken.has(gx + dx + "," + (gy + dy))) || [0, 0];
+      taken.add(gx + o[0] + "," + (gy + o[1]));
+      pos.set(id, { x: (gx + o[0]) * CW, y: (gy + o[1]) * CH });
+    });
+    cy.nodes().forEach((nd) => { const q = pos.get(nd.id()); if (q) nd.position(q); });
+    cy.fit(cy.elements().not(".hidden"), 40);
+  }
   function applyFilter(relayout) {
     const q = terms();
     cy.batch(() => {
-      cy.nodes().forEach((n) => { const d = nodes.get(n.id()); n.toggleClass("hidden", !visible[d.type] || !inScope(d.id)); });
+      const sv = $("session").value, compact = isCompact(), thSet = sv.startsWith("theme:") ? new Set(themes.find((x) => "theme:" + x.id === sv).concepts) : null;
+      cy.nodes().forEach((n) => {
+        const d = nodes.get(n.id());
+        const show = compact
+          ? (d.type === "Session" ? visible.Session && inScope(d.id) : A.cs.has(d.id) && visible[d.type] && (thSet ? thSet.has(d.id) : A.cs.get(d.id).size >= 4))
+          : visible[d.type] && inScope(d.id);
+        n.toggleClass("hidden", !show); n.toggleClass("big", compact);
+      });
       const oneSess = /^sess/.test($("session").value);
-      cy.edges().forEach((e) => e.toggleClass("hidden", e.source().hasClass("hidden") || e.target().hasClass("hidden") || (oneSess && e.hasClass("agg"))));
-      cy.nodes().forEach((n) => n.data("deg", n.connectedEdges().not(".hidden").not(".agg").length));
+      cy.edges().forEach((e) => { const agg = e.hasClass("agg"); e.toggleClass("hidden", e.source().hasClass("hidden") || e.target().hasClass("hidden") || (agg ? oneSess || (!compact && e.data("count") < 2) : compact)); });
+      cy.nodes().forEach((n) => n.data("deg", compact ? n.connectedEdges().not(".hidden").length : n.connectedEdges().not(".hidden").not(".agg").length));
       cy.elements().removeClass("faded");
       if (q.length) {
         const hit = cy.nodes().not(".hidden").filter((n) => {
@@ -764,13 +946,18 @@
       }
     });
     const vn = cy.nodes().not(".hidden").length, ve = cy.edges().not(".hidden").not(".agg").length;
-    $("gstats").textContent = `노드 ${vn} / ${nodes.size} · 관계 ${ve} / ${valid.length} · 굵은 파란 선은 세션에서 그 개념을 다룬 발표 수`;
-    if (relayout) layout();
+    $("gstats").textContent = isCompact()
+      ? `세션과 여러 세션에 걸친 개념 ${vn}개 · 노드 크기는 연결 수, 선의 굵기는 그 세션에서 개념을 다룬 발표 수 · 세션을 누르면 발표가 펼쳐짐`
+      : `노드 ${vn} / ${nodes.size} · 관계 ${ve} / ${valid.length} · 굵은 파란 선은 세션에서 그 개념을 다룬 발표 수`;
+    $("expand").checked = expandAll; $("expand").closest("label").classList.toggle("off", !expandAll);
+    $("expand").closest("label").style.display = /^sess/.test($("session").value) ? "none" : "";
+    if (relayout) (isCompact() ? layoutCompact : layout)();
   }
   function focusGraph(id) {
     const n = cy.getElementById(id);
     if (n.hasClass("hidden")) {           // 숨겨진 종류의 노드를 고르면 그 종류를 켠다
       const t = nodes.get(id).type;
+      if (isCompact()) { if (t === "Presentation") { $("session").value = nodes.get(id).session; syncSessBtn(); } else expandAll = true; }
       visible[t] = true;
       const chip = document.querySelector(`.chip[data-t="${t}"]`);
       chip.classList.remove("off"); chip.querySelector("input").checked = true;
@@ -791,7 +978,7 @@
       await new Promise((r) => setTimeout(r, 30));              // "그리는 중" 문구가 먼저 보이게 함
       const aggCount = new Map();
       A.cs.forEach((m, c) => m.forEach((ps, s) => aggCount.set(s + "|" + c, ps.length)));
-      const aggEdges = [...aggCount].filter(([, c]) => c >= 2).map(([k, c], i) => {
+      const aggEdges = [...aggCount].map(([k, c], i) => {
         const [s, c2] = k.split("|");
         return { data: { id: "a" + i, source: s, target: c2, rel: `발표 ${c}건`, count: c }, classes: "agg" };
       });
@@ -804,7 +991,11 @@
         ],
         style: graphStyle(),
       });
-      cy.on("tap", "node", (e) => { showDetail(e.target.id()); focusGraph(e.target.id()); });
+      cy.on("tap", "node", (e) => {
+        const id = e.target.id();
+        if (isCompact() && nodes.get(id).type === "Session") return setSession(id);   // 단순 보기에서 세션을 누르면 발표가 펼쳐짐
+        showDetail(id); focusGraph(id);
+      });
       cy.on("tap", (e) => { if (e.target === cy) { cy.elements().removeClass("focus hl"); applyFilter(false); (panel || showOverview)(); } });
       applyFilter(true);
       $("gmsg").style.display = "none";
@@ -825,6 +1016,7 @@
     chip.classList.toggle("off", !e.target.checked);
     if (cy) applyFilter(true);
   });
+  $("gbar").addEventListener("change", (e) => { if (e.target.id === "expand") { expandAll = e.target.checked; if (cy) applyFilter(true); } });
   $("fit").addEventListener("click", () => cy && cy.fit(cy.elements().not(".hidden"), 40));
 
   // ---------- 5. 공통 조작 ----------
@@ -835,6 +1027,10 @@
     if (cy) cy.style(graphStyle());
   });
   const resized = () => { if (cy) cy.resize(); };
+  let closedForPrint = [];
+  $("print").addEventListener("click", () => window.print());
+  addEventListener("beforeprint", () => { closedForPrint = [...document.querySelectorAll("#detail details:not([open]), #view details:not([open])")]; closedForPrint.forEach((d) => (d.open = true)); });
+  addEventListener("afterprint", () => { closedForPrint.forEach((d) => (d.open = false)); document.body.classList.remove("pv"); });
   const split = $("split");
   const savedW = parseFloat(store.get("sc26-aside-w"));
   if (savedW) root.style.setProperty("--aside-w", Math.min(savedW, innerWidth * 0.85) + "px");
@@ -862,7 +1058,11 @@
   $("fs-down").addEventListener("click", () => { scale = Math.max(0.8, +(scale - 0.1).toFixed(2)); applyScale(); resized(); });
 
   // ---------- 첫 화면 ----------
+  if (hash0.s && sessOptions.some((o) => o[0] === hash0.s)) { $("session").value = hash0.s; syncSessBtn(); }
+  if (hash0.v) { curView = hash0.v; document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.v === curView)); if (curView !== "heat") { document.body.classList.add("graph-open"); syncToggle(); } }
+  const keepHash = location.hash;
   showOverview();
+  if (keepHash) try { history.replaceState(null, "", keepHash); } catch (e) {}   // 2단계가 끝날 때까지 받은 주소를 유지
   $("stats").textContent = `세션 ${sessions.length}개 · 발표를 불러오는 중…`;
   window.__first = true;
 
@@ -897,7 +1097,9 @@
     $("stats").textContent = `세션 ${sessions.length} · 발표 ${presentations.length} · 개념 ${nC} · 인물 ${Object.keys(people).length} · 기관 ${Object.keys(orgs).length}`;
   })();
   try { await dataReady; } catch (e) { return fail(e); }
-  if (panel && !$("back")) panel(true);                                       // 근거 발표 이름을 채워 다시 그림 (스크롤 유지)
+  if (hash0.q) { $("q").value = hash0.q; showSearch(); }
+  else if (hash0.n && nodes.has(hash0.n)) showDetail(hash0.n);
+  else if (panel && !$("back")) panel(true);                                       // 근거 발표 이름을 채워 다시 그림 (스크롤 유지)
   renderView();
   window.__ready = true;
 })();

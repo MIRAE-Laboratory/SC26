@@ -1,6 +1,8 @@
 # 뷰어가 읽을 파일 목록. 세션·발표 파일을 추가하면 여기에도 한 줄 추가합니다.
 overview: overview.yaml
 themes: themes.yaml
+glossary: glossary.yaml
+changelog: changelog.yaml
 sessions:
   - sessions/sess126.yaml
   - sessions/sess114.yaml
