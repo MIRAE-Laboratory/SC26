@@ -90,6 +90,21 @@
     body.graph-open main { height: 55vh; }
   }
   #fit { position: static; flex: none; }
+  /* ---- 관점별 색: 결정(파랑), 시행착오(주황), 한국 적용(초록), 그 밖(보라) ---- */
+  :root { --c-decision:#1d4ed8; --c-trial:#b45309; --c-korea:#047857; --c-extra:#7c3aed; }
+  :root[data-theme="dark"] { --c-decision:#93c5fd; --c-trial:#fbbf24; --c-korea:#6ee7b7; --c-extra:#c4b5fd; }
+  .grp { --c: var(--link); margin-top: 18px; }
+  .insight .grp > h3 { color: var(--c) !important; margin: 0 !important; padding: 6px 9px; border-bottom: 2px solid var(--c); border-radius: 6px 6px 0 0; background: color-mix(in srgb, var(--c) 9%, transparent); }
+  .insight .grp > h3 small { color: var(--muted); }
+  .grp details.it > summary::marker { color: var(--c); }
+  .grp details.it[open] { border-left: 3px solid var(--c); padding-left: 9px; background: color-mix(in srgb, var(--c) 4%, transparent); }
+  .grp details.it[open] > summary { color: var(--c); }
+  .grp b.n { color: var(--c); font-weight: 700; white-space: nowrap; }
+  .grp .it.kr { --c: var(--c-korea); }
+  .card:nth-child(4n+1) { --c: var(--c-decision); } .card:nth-child(4n+2) { --c: var(--c-trial); } .card:nth-child(4n+3) { --c: var(--c-korea); } .card:nth-child(4n+4) { --c: var(--c-extra); }
+  .card { border-top: 3px solid var(--c, var(--link)); } .card b { color: var(--c, var(--link)) !important; }
+  .tcard:nth-of-type(1) { --c: var(--c-decision); } .tcard:nth-of-type(2) { --c: var(--c-trial); } .tcard:nth-of-type(3) { --c: var(--c-korea); }
+  .tcard { border-left-color: var(--c, var(--link)) !important; } .tcard i { color: var(--c, var(--link)) !important; }
   /* ---- 요지 카드 ---- */
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.6em, 1fr)); gap: 8px; margin: 8px 0 4px; }
   .card { border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; background: var(--bg); cursor: pointer; line-height: 1.35; }
@@ -300,16 +315,18 @@
     }
     return h + `</div>`;
   }
+  // 풀이 안의 수치(단위가 붙은 숫자)를 관점 색으로 강조
+  const emph = (s) => esc(s).replace(/\d[\d,.]*(?:~\d[\d,.]*)?\s?(?:%|배|건|개|초|분|주|시간|PB|TB\/s|TB|GB\/s|GB|Gbps|ms|µs|TFLOP\/s|kHz|대|명)(?![A-Za-z])/g, (m) => `<b class="n">${m}</b>`);
   const insightItems = (items, open) => items.map((it) => {
     const o = typeof it === "string" ? { head: it, text: "" } : it;
-    return `<details class="it"${open ? " open" : ""}><summary>${esc(o.head || o.text)}</summary><div>${o.head ? esc(o.text) : ""}${(o.refs || []).length ? "<br>" + o.refs.map(refChip).join("") : ""}</div></details>`;
+    return `<details class="it${/^한국 연구기관/.test(o.head || "") ? " kr" : ""}"${open ? " open" : ""}><summary>${esc(o.head || o.text)}</summary><div>${o.head ? emph(o.text) : ""}${(o.refs || []).length ? "<br>" + o.refs.map(refChip).join("") : ""}</div></details>`;
   }).join("");
   function showTheme(th, keep) {
     const sc = A && A.themeScope.get("theme:" + th.id), per = {};
     if (sc) sc.ps.forEach((p) => { const s = nodes.get(p).session; per[s] = (per[s] || 0) + 1; });
     const max = Math.max(1, ...Object.values(per));
     let h = `<div class="insight"><h2>${esc(th.label)}</h2><p class="muted">심층 요약` + (sc ? ` · 세션 ${Object.keys(per).length}개의 발표 ${sc.ps.size}건을 개념 ${th.concepts.length}개로 묶음` : "") + `</p>` +
-      (th.summary_ko ? `<p>${esc(th.summary_ko)}</p>` : "") + diagramHtml(th.diagram) + `<h3>관점별 심층 요약</h3>` + insightItems(th.sections || [], true);
+      (th.summary_ko ? `<p>${esc(th.summary_ko)}</p>` : "") + diagramHtml(th.diagram) + `<div class="grp"><h3>관점별 심층 요약</h3>` + insightItems(th.sections || [], true) + `</div>`;
     if (sc) h += `<h3>세션별 관련 발표 수</h3><div class="bars">` +
       sessions.filter((s) => per[s.id]).sort((a, b) => per[b.id] - per[a.id]).map((s) =>
         `<div class="bar-row"><span class="link" data-sess="${esc(s.id)}">${esc(sTitle(s))}</span><div class="bar"><i style="width:${(100 * per[s.id]) / max}%"></i></div><b>${per[s.id]}</b></div>`).join("") + `</div>` +
@@ -334,7 +351,7 @@
     for (const [key, title, sub] of VIEWS) {
       const items = ins[key] || [];
       if (!items.length) continue;
-      h += `<h3>${esc(title)} <small>· ${items.length}개${sub ? " · " + esc(sub) : ""}</small></h3>` + insightItems(items, !!s);
+      h += `<div class="grp" style="--c:var(--c-${key})"><h3>${esc(title)} <small>· ${items.length}개${sub ? " · " + esc(sub) : ""}</small></h3>` + insightItems(items, !!s) + `</div>`;
     }
     if (!s) h += `<p class="lead">항목을 누르면 풀이와 근거 발표가 펼쳐짐. 세션을 고르면 그 세션의 고찰이 나옴.</p>`;
     if (!Object.keys(ins).length) h += `<p class="muted">이 세션의 고찰이 아직 없음.</p>`;
