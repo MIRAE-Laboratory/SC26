@@ -1,0 +1,16 @@
+id: ws_aihpc107
+type: Presentation
+kind: paper
+label: "OPSERVE: Opportunistic LLM Inference over Fragmented GPU Capacity in HPC Systems"
+session: sess141
+time: "14:01-14:13"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc107"
+authors: [patrick-watters, xiaolong-ma, harry-yu, ian-foster, michael-papka, lei-yang, feng-yan, rajkumar-kettimuthu]
+addresses: [underused-resources, llm-serving-efficiency]
+proposes: [opportunistic-inference]
+targets: [llm-inference, job-scheduler, leadership-facility]
+summary_ko: "배치 스케줄링 시스템은 노드를 일시적으로 비워 둠. 상주 추론 작업자와 임시 작업자를 결합하고, 작업자 역할을 프리필과 디코드 사이에서 바꾸며, 끝난 프리필 상태를 공유 저장소로 재사용하는 유연한 LLM 서빙 시스템임."
+claims:
+  - "1년 치 기록 분석에서 이 미사용 자원은 전체 노드 시간의 9.81%이고 초 단위로 변함."
+  - "요청 기록 3종과 모델 3종으로 평가함. 양쪽 모두 도착률을 감당할 때 고정 배치 대비 95분위 종단 지연이 1.5~2.1배 줄어듦."
+  - "과부하에서는 적응형 배분이 대기열 증가를 줄여 95분위 지연이 최대 14.3배 낮음."

@@ -1,0 +1,16 @@
+id: ws_pdsw113
+type: Presentation
+kind: paper
+label: "STARCH: RPC-Lifecycle Tracing of Margo-Based Distributed Systems for Performance Analysis"
+session: sess129
+time: "15:30-15:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw113"
+authors: [alexander-klassen, osamu-tatebe]
+addresses: [ops-data-complexity]
+proposes: [cross-layer-tracing]
+targets: [hpc-storage-systems]
+summary_ko: "분산 서비스 프레임워크 기반 응용의 원격 호출 생애주기를 대상 코드 수정 없이 낮은 교란으로 추적하는 시스템임. 노드별 수집기가 클라이언트와 서버 사건을 모으고, 요청과 응답의 대응은 HPC 작업 밖에서 함."
+claims:
+  - "추적 데이터베이스로 통계와 가설 검정을 할 수 있어, 손으로 계측한 실험을 여러 번 돌릴 필요가 없음."
+  - "한 분산 파일시스템의 알려진 성능 저하를 분석해 원격 호출 처리의 특정 영역으로 문제를 좁힘."
+  - "부담은 벤치마크에서 대체로 1.7% 미만임."

@@ -1,0 +1,16 @@
+id: ws_pdswwip113
+type: Presentation
+kind: talk
+label: "Trigger-Gated Multimodal LLM Agents for In-situ Scientific Simulation Monitoring"
+session: sess129
+time: "12:15-12:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip113"
+authors: [hua-xu, jaime-cernuda, anthony-kougkas, ana-gainaru, scott-klasky, xian-he-sun, jay-lofstead]
+addresses: [silent-training-failures, trust-in-automated-decisions, agent-inference-cost]
+proposes: [llm-gating, in-situ-inference, deterministic-llm-split]
+targets: [ai-agents, in-situ-visualization, mpi-simulations]
+summary_ko: "시뮬레이션이 틀린 답을 계산하며 완주하는 낭비를 다룸. 조건 검사, 렌더링, 추론의 순서로 된 파이프라인을 입출력 라이브러리의 플러그인으로 만듦. 결정론적 조건 검사는 매 시간 단계 쓰기와 함께 돌고, 표시된 상태만 시각화 노드로 전송됨. 거기서 멀티모달 LLM 에이전트가 도구 호출로 시각화 도구를 구동해 구조화된 판정을 돌려줌."
+claims:
+  - "네 가지 코드에서 응용별 학습 없이 매개변수로 생긴 실패를 모두 확인하고, 정상 실행에 일부러 건 경보는 기각함."
+  - "경보 시점에 멈추면 해상도가 부족한 실행의 39~68%를 아낌."
+  - "조건 검사의 비용은 256프로세스에서 실행 시간의 0.05%임."

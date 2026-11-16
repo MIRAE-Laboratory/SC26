@@ -1,0 +1,17 @@
+id: ws_corr108
+type: Presentation
+kind: paper
+label: "Evaluating Function-Level Accuracy and Performance of SIMD Math Libraries with FP32 Inputs"
+session: sess134
+time: "10:45-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr108"
+authors: [xingjian-qi, robert-strzodka]
+addresses: [numerical-error, benchmark-validity]
+proposes: [exhaustive-oracle-testing]
+targets: [hpc-libraries, hpc-processors]
+summary_ko: "벡터 수학 라이브러리 넷(AOCL-LibM, GNU libmvec, SLEEF, Intel SVML)의 단정밀도 AVX2 단항 함수를 평가함. 모든 유한 단정밀도 입력을 256비트 MPFR 기준값과 전수 비교함."
+claims:
+  - "대부분의 함수는 라이브러리가 밝힌 한계보다 오차가 작음."
+  - "AOCL과 SLEEF의 일부 함수는 명시된 정확도 한계를 넘음."
+  - "싼 벡터 경로는 스칼라 호출보다 빠르지만, 비싼 보정 경로에서는 벡터 함수가 스칼라보다 느릴 수 있음."
+  - "함수별, 입력별 정확도와 성능의 참조 자료를 제공함."

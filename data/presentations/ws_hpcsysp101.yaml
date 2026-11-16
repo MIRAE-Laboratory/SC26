@@ -1,0 +1,17 @@
+id: ws_hpcsysp101
+type: Presentation
+kind: paper
+label: "Security and Day-2 Resilience as First Class Control Plane Primitives for Heterogeneous Supercomputers"
+session: sess132
+time: "16:25-16:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp101"
+authors: [sadaf-alam, alex-lovell-troy, mark-klein]
+addresses: [vendor-dependence, env-configuration, failure-resilience]
+proposes: [open-control-plane, layered-image-pipeline, zero-trust]
+targets: [kubernetes-baremetal, job-scheduler, ai-supercomputer]
+summary_ko: "재단 아래에서 만들어져 여러 사이트에 배치된 공개형, API 우선, 조합형 HPC 관리 계층 OpenCHAMI를 재현성, 보안, 안전한 사후 운영의 관점에서 보고함. Slurm과 Kubernetes 기반 AI를 함께 돌리는 센터를 대상으로 하며, 검증된 것과 계획 단계인 것을 구분해 적음."
+claims:
+  - "상태가 스냅숏 기반이고 예측 가능하게 저하되는 마이크로서비스 구조임."
+  - "한 번만 도는 초기화로 설정 어긋남을 없애는 계층형 이미지 파이프라인을 씀."
+  - "임시 부트스트랩 방식으로 이미지에 장기 자격 증명을 남기지 않음."
+  - "저자 보고에 따르면 부팅에서 스케줄러 준비까지가 약 8분에서 90초로 줄었고, 사이트, 아키텍처, 워크로드 종류를 넘어 옮겨 쓸 수 있음."

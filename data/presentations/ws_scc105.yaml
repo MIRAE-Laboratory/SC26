@@ -1,0 +1,16 @@
+id: ws_scc105
+type: Presentation
+kind: talk
+label: "AI4S and Sovereign Supercomputing in Japan"
+session: sess138
+time: "11:30-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc105"
+authors: [toshihiro-hanawa]
+addresses: [underused-resources]
+proposes: [usage-based-capacity-planning]
+targets: [national-ai-infrastructure, ai-supercomputer, sci-foundation-models]
+summary_ko: "일본은 2025년 12월 AI 추진법에 따른 첫 AI 기본계획을 채택하고 AI 컴퓨팅 인프라를 우선 과제로 삼았음. 문부과학성이 두 갈래로 과학을 위한 AI를 추진함."
+claims:
+  - "이화학연구소가 2026년 NVIDIA Blackwell GPU 1,600개의 과학용 AI 슈퍼컴퓨터 RIKYU를 도입했음. 후가쿠를 보완해 과학 파운데이션 모델에 쓰임."
+  - "2025 회계연도 추경으로 대학 4곳(홋카이도, 쓰쿠바, 도쿄, 규슈)이 공용 GPU 자원을 늘리고 효율을 높임."
+  - "네 대학이 운영 지식을 공유하고 방식을 표준화하며, 도쿄대가 작업을 잇는 허브를 맡음."

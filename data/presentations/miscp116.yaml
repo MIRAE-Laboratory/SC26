@@ -1,0 +1,13 @@
+id: miscp116
+type: Presentation
+kind: panel
+label: "Mixed Precision at Scale: From Peak FLOPs to Trusted Science"
+session: sess147
+time: "16:40-17:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess147&id=miscp116"
+authors: [piotr-luszczek, toshiyuki-imamura, scott-atchley, harun-bayraktar, kasia-swirydowicz]
+addresses: [fp64-scarcity]
+proposes: [mixed-precision]
+targets: []
+summary_ko: "대규모 혼합 정밀도를 최대 연산 속도에서 믿을 수 있는 과학의 관점으로 다루는 패널. 연구소, 리더십 시설, 두 GPU 벤더의 패널이 참여함. 공개 페이지에 설명문이 없음."
+claims: []

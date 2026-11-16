@@ -1,0 +1,14 @@
+id: misc144
+type: Presentation
+kind: invited
+label: "AI Agents for Data Infrastructure: From Telemetry to Optimization"
+session: sess129
+time: "16:50-17:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=misc144"
+authors: [dong-dai]
+addresses: [ops-data-complexity, agentic-science-benchmarking]
+proposes: [llm-ops-assistant, performance-agent]
+targets: [ai-agents, hpc-storage-systems, ops-telemetry]
+summary_ko: "AI 에이전트가 데이터 인프라를 이해하고 관리하고 최적화하는 방식을 어떻게 바꿀 수 있는지 살핌. 텔레메트리 전처리, 진단, 입출력 최적화의 사례로 기회와 과제를 따짐."
+claims:
+  - "공용 벤치마크와 공개 실험 환경을 함께 만들자고 커뮤니티에 요청함."

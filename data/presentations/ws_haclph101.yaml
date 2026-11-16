@@ -1,0 +1,15 @@
+id: ws_haclph101
+type: Presentation
+kind: paper
+label: "Optimizing Semiconductor Device Simulations through Low-Precision Arithmetic"
+session: sess147
+time: "16:10-16:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess147&id=ws_haclph101"
+authors: [alexander-maeder, denghui-lu, nicolas-vetsch, vincent-maillou, anders-winka, jiang-cao, mauro-dossena, alexandros-nikolaos-ziogas, mathieu-luisier]
+addresses: [fp64-scarcity, numerical-error]
+proposes: [mixed-precision]
+targets: [scientific-apps, materials-workflows]
+summary_ko: "GPU의 저정밀 연산 능력이 늘며 배정밀도 기반 HPC 응용에는 과제이자 기회가 됨. 단순한 자료 변환은 정확도를 낮추거나 틀린 결과를 내므로 응용마다 수치 안정성을 분석해야 함. 배정밀도 엑사급 지속 성능을 낸 공개 양자 수송 솔버로 정확도 손실과 속도 향상의 절충을 조사함."
+claims:
+  - "대표 벤치마크 구조 셋으로 수치 성질을 탐색함."
+  - "더 크고 현실적인 시스템에 적용해, 정확한 결과로 처리량이 최대 51% 높고 배정밀도 기준보다 HPC 자원을 40% 덜 씀."

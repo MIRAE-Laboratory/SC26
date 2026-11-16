@@ -1,0 +1,16 @@
+id: ws_aihpc124
+type: Presentation
+kind: paper
+label: "HOLOS: A Gradient-Descent-Based Design-Space Exploration Framework for Hierarchical AI Accelerator Systems"
+session: sess141
+time: "16:48-17:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc124"
+authors: [sairam-vatsavai, daniel-peralta-velazquez, siyuan-ma, george-biros, jaydeep-kulkarni, lizy-kurian-john, andreas-gerstlauer, adolfy-hoisie, lingda-li]
+addresses: [hardware-selection, simulation-scale-limits]
+proposes: [design-space-exploration, analytical-performance-model]
+targets: [distributed-training, hpc-processors]
+summary_ko: "계층적 AI 가속기 시스템의 하드웨어와 소프트웨어를 함께 설계하는 경사하강 기반 설계 공간 탐색 틀임. 각 매핑에서 필요한 최소 하드웨어를 추론해, 하드웨어와 매핑의 곱이던 탐색을 매핑 수준으로 줄임."
+claims:
+  - "미분 가능한 연산별 모델로 지연, 면적, 에너지를 추정함."
+  - "기존 도구 대비 130억~5,400억 파라미터 모델에서 상관계수 0.99, 평균 절대 백분율 오차 약 4%임."
+  - "현실적인 메모리와 인터커넥트 제약에서 27~64배 적은 설계를 평가하고 최적 에너지·지연 곱의 약 1% 이내에 도달함."

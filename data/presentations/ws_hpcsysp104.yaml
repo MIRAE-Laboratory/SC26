@@ -1,0 +1,15 @@
+id: ws_hpcsysp104
+type: Presentation
+kind: paper
+label: "Architecting Multi-Petabyte Data Migration in a Live HPC Environment: From Strategy to Execution"
+session: sess132
+time: "12:00-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp104"
+authors: [deepa-phanish, aiden-lambert, aaron-jezghani, ruben-lara, rachel-lombardi, kenneth-suda, grigori-yourganov]
+addresses: [large-data-migration]
+proposes: [unified-data-access]
+targets: [hpc-storage-systems, campus-clusters]
+summary_ko: "연구 프로젝트 900개, 3.28 PB, 33억 개 파일을 운영 중에 한 병렬 파일시스템에서 다른 파일시스템으로 옮긴 계획과 실행을 다룸. 자동 마운트 추상화와 이중 데이터 경로로 만든 기술 중립적 이름 공간이 워크플로 이전과 데이터 이동을 분리함."
+claims:
+  - "메타데이터를 보존하는 자체 도구가 프로젝트 우선순위, 사전 복사, 증분 동기화, 자동 검증을 처리함."
+  - "관리 부담을 줄이고 파일시스템 무결성을 지켰으며, 워크플로 중단에 관한 사용자 접수는 0건이었음."

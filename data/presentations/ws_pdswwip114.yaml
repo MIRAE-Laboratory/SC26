@@ -1,0 +1,14 @@
+id: ws_pdswwip114
+type: Presentation
+kind: talk
+label: "Towards PIM-Aware Expert Decomposition and Mapping for MoE Inference"
+session: sess129
+time: "17:25-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip114"
+authors: [sitian-chen, haonan-wang, amelie-chi-zhou]
+addresses: [llm-serving-efficiency, heterogeneity-complexity]
+proposes: []
+targets: [processing-in-memory, llm-inference]
+summary_ko: "메모리 내 연산이 GPU를 보완해 전문가 혼합 모델의 추론 효율을 높일 수 있는지 살피는 진행 중인 작업임. 전문가마다 부하와 실행 특성이 달라, 적합한 전문가 계산만 메모리 내 연산에 맡기고 나머지는 GPU에 둠."
+claims:
+  - "전문가를 어떻게 나누어 가용 자원에 대응시킬지를 다룸. 평가는 다음 단계이며 수치는 없음."

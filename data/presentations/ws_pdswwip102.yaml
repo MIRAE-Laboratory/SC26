@@ -1,0 +1,13 @@
+id: ws_pdswwip102
+type: Presentation
+kind: talk
+label: "DAOS Update: Version 2.8 and MLPerf Storage"
+session: sess129
+time: "16:30-16:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip102"
+authors: [michael-hennecke]
+addresses: []
+proposes: []
+targets: [hpc-storage-systems]
+summary_ko: "공개 소프트웨어 정의 고성능 객체 저장 시스템 DAOS의 2.8 버전 새 기능과 AI 저장소 벤치마크 결과를 소개하는 진행 보고. 공개 초록에는 수치가 없음."
+claims: []

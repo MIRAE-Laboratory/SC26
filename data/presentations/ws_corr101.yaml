@@ -1,0 +1,16 @@
+id: ws_corr101
+type: Presentation
+kind: paper
+label: "Tighter error bounds using structural floating-point properties and tail bounds"
+session: sess134
+time: "10:30-10:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr101"
+authors: [mohit-tekriwal, ignacio-laguna, yichen-tao, jean-baptiste-jeannin]
+addresses: [numerical-error]
+proposes: [probabilistic-error-analysis]
+targets: [scientific-apps]
+summary_ko: "전통적인 결정론적 오차 분석은 최악의 경우의 한계를 내고, 기존의 확률적 분석은 부동소수점의 구조적 성질을 반영하지 않아 상쇄가 많은 경우에 한계가 느슨함. 혼합 분석으로 긴 합산과 내적 커널의 더 좁은 한계를 유도함."
+claims:
+  - "FPChecker 도구를 확장해 전역·국소 반올림 오차를 추적하고 Sterbenz 보조정리 같은 구조적 성질의 통계를 계산함."
+  - "이 통계를 수정한 Bernstein 꼬리 한계에 넣고, Higham과 Mary의 확률적 한계와 비교함."
+  - "압축성 유동 시뮬레이션에 쓰는 밀도파 함수의 푸리에 모드 크기 계산에 적용함. 공개 초록에는 수치가 없음."

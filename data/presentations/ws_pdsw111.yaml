@@ -1,0 +1,15 @@
+id: ws_pdsw111
+type: Presentation
+kind: paper
+label: "GPUH5: A GPU-first I/O Library for Scientific Data"
+session: sess129
+time: "10:50-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw111"
+authors: [joshua-fernandes, luke-logan, xian-he-sun, anthony-kougkas]
+addresses: [gpu-io-path]
+proposes: [gpu-native-io]
+targets: [hpc-storage-systems, scientific-apps]
+summary_ko: "계속 도는 GPU 커널이 호스트로 배열을 복사하러 나가지 않고 데이터를 직접 쓰게 하는 과학 데이터 입출력 라이브러리임. HDF5의 계층 경로와 조각 배열은 유지하고 컨테이너 형식을 키-값 저장소로 바꿈."
+claims:
+  - "호스트가 각 조각의 키를 미리 계산해, 커널 내 쓰기는 포인터를 대기열에 넣는 일뿐임. 생산 커널의 점유율은 98.8%로 유지됨."
+  - "단일 GPU 반응-확산 시뮬레이션에서 스냅숏 380개를 쓸 때, 동기식 구현이 드러내는 입출력의 96%를 가리고 기본 HDF5보다 1.9배 빨리 끝남."

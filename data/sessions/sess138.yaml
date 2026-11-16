@@ -1,0 +1,52 @@
+id: sess138
+type: Session
+label: "Sovereign AI Supercomputing Cloud Workshop"
+kind: Workshop
+date: "2026-11-16"
+time: "09:00-12:30 CST"
+room: W178a
+url: https://sc26.conference-program.com/session/?sess=sess138
+chairs: [maxime-martinasso, sadaf-alam, david-hancock, alex-lovell-troy, francois-tessier]
+summary_ko: "HPC가 대규모 AI 시스템으로 옮겨 가는 상황에서 기관이 자율적이고 투명한 슈퍼컴퓨팅 인프라를 어떻게 갖출지 다루는 워크숍. NVIDIA의 SchedMD 인수 같은 업계 통합은, 핵심 구성요소를 하드웨어 제조사가 쥐면 오픈소스라는 사실만으로는 벤더의 영향에서 보호되지 않음을 보여 준다고 봄. 오픈소스를 수동적으로 쓰는 데서 커뮤니티 거버넌스에 능동적으로 참여하는 쪽으로의 전환을 논의함."
+diagram:
+  type: layers
+  title: 주권을 층마다 확보하는 방법
+  items:
+    - {label: 정책과 재원, note: "미국 NAIRR 운영센터, 일본 AI 기본계획과 대학 4곳의 공용 GPU 기반"}
+    - {label: 배분과 정산, note: "스케줄러 위에 사이트 정책을 꽂는 연합 플랫폼. 구성요소를 바꿔도 연합에 남음"}
+    - {label: 소프트웨어 배포, note: "커뮤니티가 관리하는 스택(E4S, EESSI). x86, Arm, RISC-V와 두 GPU 벤더 지원"}
+    - {label: 작업 관리, note: "Slurm과 Kubernetes. 특정 관리자에 묶이지 않게 그 아래 층을 사이트가 통제"}
+    - {label: 시스템 관리, note: "공개 거버넌스의 관리 계층(OpenCHAMI). 노드 발견, 부팅, 재배정"}
+    - {label: 하드웨어, note: "유럽산 프로세서와 RISC-V 가속기 시험대"}
+insights:
+  decision:
+    - head: 오픈소스라는 사실이 통제권을 보장하지 않음.
+      text: 스케줄러 개발사가 하드웨어 제조사에 인수된 일을 계기로, 코드 공개 여부가 아니라 누가 방향을 정하는지가 기준이 됨. 재단 아래의 공동 거버넌스에 참여하는 것이 대안으로 제시됨.
+      refs: [ws_scc104, ws_scc106, ws_scc102]
+    - head: 표준화할 것과 사이트에 남길 것의 경계를 정함.
+      text: 연합 플랫폼은 배분과 정산의 공통 데이터 모델만 표준화하고, 실제 백엔드와 정책은 사이트의 에이전트가 맡음. 이 경계가 구성요소의 라이선스가 바뀔 때 영향 범위를 제한함.
+      refs: [ws_scc103]
+    - head: 작업 관리자 아래 층을 사이트가 쥠.
+      text: 노드 발견, 부팅, 설정을 공개 관리 계층에 두면 Slurm과 Kubernetes 사이에서 노드를 옮길 수 있고, 특정 작업 관리자나 배포판에 묶이지 않음.
+      refs: [ws_scc104, ws_scc101]
+  trial:
+    - head: 추론 서비스에서는 유휴 장비가 모델을 서빙하기까지의 시간이 지표가 됨.
+      text: 빠른 재부팅으로 베어메탈 노드를 필요할 때 컨테이너 클러스터의 작업자로 붙였음. 공개 초록에는 시간 수치가 없음.
+      refs: [ws_scc104]
+    - head: 주권 논의는 유럽에서 하드웨어 층까지 내려갔음.
+      text: 유럽산 프로세서와 RISC-V 가속기 위에서 모든 것을 컨테이너로 돌리는 시험대가 보고됨. 미국과 일본의 발표는 소프트웨어와 운영 층에 머묾.
+      refs: [ws_scc101, ws_scc108, ws_scc105]
+  korea:
+    - head: 일본의 방식은 참고할 만한 가까운 사례임.
+      text: 2025년 12월 첫 AI 기본계획을 채택하고, 이화학연구소가 GPU 1,600개 규모의 과학용 AI 슈퍼컴퓨터를 2026년에 도입했음. 추경으로 대학 4곳이 공용 GPU 자원을 늘리며 운영 방식을 표준화하고, 한 대학이 작업을 잇는 허브를 맡음.
+      refs: [ws_scc105]
+    - head: 국가 AI 컴퓨팅 자원을 여러 기관이 나눠 운영한다면 배분·정산 층을 먼저 정함.
+      text: 자금 지원 기관, 사용자, 심의위원회가 서로 다른 사이트를 한 화면으로 보는 구조가 유럽 연합 플랫폼에서 운영 중임. 각 기관은 자기 스케줄러와 정책을 유지함.
+      refs: [ws_scc103]
+    - head: 도입 평가에 교체 가능성을 넣음.
+      text: 스케줄러, 시스템 관리 도구, 소프트웨어 스택 각각에 대해 공급자가 방침을 바꿀 때 대체할 수 있는지를 확인함. 공동 거버넌스 프로젝트에 참여하는 것도 선택지임.
+      refs: [ws_scc104, ws_scc106]
+  extra:
+    - head: 같은 관리 계층이 운영 실무 워크숍에서도 보고됨.
+      text: 운영 워크숍의 발표는 이 관리 계층으로 부팅에서 스케줄러 준비까지의 시간이 약 8분에서 90초로 줄었다고 보고함.
+      refs: [ws_scc104, ws_hpcsysp101]

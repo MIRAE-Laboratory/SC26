@@ -1,0 +1,16 @@
+id: ws_aihpc110
+type: Presentation
+kind: paper
+label: "Performance Characterization of GPU Sharing Strategies for LLM Inference"
+session: sess141
+time: "14:13-14:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc110"
+authors: [madoka-takato, akira-hirai, reika-kinoshita, masahiro-miwa, masato-oguchi]
+addresses: [underused-resources, llm-serving-efficiency]
+proposes: [gpu-sharing, comparative-benchmarking]
+targets: [llm-inference]
+summary_ko: "수요가 줄면 추론 서비스의 GPU가 유휴 상태가 됨. GPU 하나에서 여러 모델을 동시에 서빙하는 두 방식을 비교함. 추론 서버의 소프트웨어 수준 공유와, 하드웨어 수준 분할(MIG)을 결합한 방식임."
+claims:
+  - "동시에 도는 모델 수와 부하를 바꿔 가며 측정함."
+  - "하드웨어 분할은 성능이 안정적이고, 모든 인스턴스가 꽉 찼을 때 소프트웨어 공유보다 조금 나음."
+  - "소프트웨어 공유는 남는 자원을 쓰므로 동시에 도는 모델이 적을 때 처리량이 높고 지연이 낮음."

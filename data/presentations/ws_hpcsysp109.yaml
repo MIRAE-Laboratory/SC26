@@ -1,0 +1,15 @@
+id: ws_hpcsysp109
+type: Presentation
+kind: talk
+label: "Death by a Thousand Spreadsheets: Consolidating Infrastructure Data with NetBox"
+session: sess132
+time: "16:50-17:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp109"
+authors: [jeffrey-winters, rebecca-pinheiro]
+addresses: [ops-knowledge-loss]
+proposes: [infrastructure-inventory]
+targets: [campus-clusters, hpc-network]
+summary_ko: "스프레드시트, 도면, 개인의 기억에 흩어진 HPC 인프라 기록을 한 도구로 모으는 방법을 살핌. 랙, 장비, 케이블의 관리 기능과 주소 공간, 가상 랜의 관리 기능을 다룸."
+claims:
+  - "목록 구축, 토폴로지 대응, 데이터 통합의 실연이 중심임."
+  - "이전이 고치는 것과 고치지 못하는 것을 함께 보여, 각 사이트가 할 만한지 판단하게 함."

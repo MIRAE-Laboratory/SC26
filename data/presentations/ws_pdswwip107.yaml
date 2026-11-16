@@ -1,0 +1,17 @@
+id: ws_pdswwip107
+type: Presentation
+kind: talk
+label: "Exploring DAOS as a Burst Buffer for Nx100 Gbps Scientific Streaming"
+session: sess129
+time: "16:35-16:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip107"
+authors: [xinxin-mei, jie-ren, jon-zarling, cameron-clarke, vardan-gyurjyan]
+addresses: [data-deluge, delayed-feedback, cross-facility-integration]
+proposes: [burst-buffer, event-driven-runtime]
+targets: [hpc-storage-systems, hep-pipelines, user-facility-beamline]
+summary_ko: "실험이 스트리밍 판독으로 옮겨 가며 메가바이트 단위의 검출기 프레임을 HPC 시설로 보냄. 100 Gbps 노드 쌍의 처리량은 하류 처리를 켜면 35에서 6 Gbps로 떨어짐. 객체 저장소를 완충 장치로 써서 상류 취득과 하류 처리를 분리하자고 제안함."
+claims:
+  - "2024년의 한 실험은 실시간 스트리밍에 리더십급 시스템 노드 약 300개가 필요했음을 시사함."
+  - "8.6 KB 원시 패킷을 비동기 대기열로 써서 종단 32 Gbps에 도달했고, 한계는 단일 연결이었음."
+  - "진행 중인 실험은 클라이언트 쪽이 거의 선형으로 확장됨을 시사함."
+  - "작은 객체의 읽기 벌점, 꼬리 지연, 처리량과 지연의 절충이 과제임."

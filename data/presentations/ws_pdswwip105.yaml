@@ -1,0 +1,14 @@
+id: ws_pdswwip105
+type: Presentation
+kind: talk
+label: "Type-Safe, Dynamically Defined Metadata Support for Scientific Applications"
+session: sess129
+time: "16:45-16:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip105"
+authors: [joshua-teves, curtis-brinker, anthony-kougkas, ana-gainaru, scott-klasky, xian-he-sun, jay-lofstead]
+addresses: [data-readiness]
+proposes: [standardized-run-metadata]
+targets: [scientific-apps, hpc-storage-systems]
+summary_ko: "기존의 풍부한 메타데이터 시스템은 다룰 수 있는 메타데이터의 자료형과 구조가 제한됨. 한 시스템은 실행과 시간 단계를 포함한 응용 구조를 고정해 사용자에게 강요하고, 격자 배치를 가정해 격자에 놓이지 않는 시뮬레이션이나 실험 데이터에 맞지 않음."
+claims:
+  - "여러 언어에서 쓸 수 있는 Rust 기반의, 완전히 유연하고 자료형이 안전한 메타데이터 관리 방식을 제시함."

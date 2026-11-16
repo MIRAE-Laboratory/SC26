@@ -1,0 +1,17 @@
+id: ws_aihpc123
+type: Presentation
+kind: paper
+label: "Characterizing and Auto-Tuning 175B-Parameter LLM Training on Intel Data Center GPU Max 1550 Accelerators"
+session: sess141
+time: "15:55-16:07"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc123"
+authors: [ajay-navilarekal-rajgopal, nikolai-solmsdorf]
+addresses: [llm-training-scaling, pipeline-config-tuning]
+proposes: [autotuning, io-characterization]
+targets: [distributed-training, hpc-processors]
+summary_ko: "SuperMUC-NG 2단계의 Intel 가속기에서 맞춤 커널 없이 공개된 학습 프레임워크로 GPT 계열 학습을 조사함. 36억, 200억, 1,750억 파라미터 모델에서 텐서 병렬, 파이프라인 병렬, 묶음 크기, 기울기 누적의 영향을 평가함."
+claims:
+  - "노드의 타일 8개 경계를 넘는 텐서 병렬 통신에 뚜렷한 벌점이 있음."
+  - "1,750억 모델의 설정 공간을 베이즈 최적화해 타일당 58.91 TFLOP/s를 얻음."
+  - "128노드(1,024타일)에서 약한 확장 91%, 강한 확장 82%를 유지함."
+  - "비용 분해로 자동 튜닝만으로 얻을 수 있는 한계를 밝힘."

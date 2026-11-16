@@ -1,0 +1,16 @@
+id: ws_aihpc101
+type: Presentation
+kind: paper
+label: "MiniLlama-Infra: Micro-Architecture Ablation of LLM Inference on Commodity GPU Accelerators"
+session: sess141
+time: "14:49-15:01"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc101"
+authors: [zijian-zhang]
+addresses: [llm-serving-efficiency, memory-bound-performance]
+proposes: [roofline-analysis, mixed-precision]
+targets: [llm-inference, hpc-processors]
+summary_ko: "10억 파라미터급 모델용 추론 엔진을 CUDA로 처음부터 만들어 여섯 단계의 마이크로아키텍처 연구에 씀. 양자화가 자동으로 빨라지지 않음을 보임."
+claims:
+  - "노트북 GPU에서 단순한 8비트 행렬-벡터 곱은 메모리 처리량을 58.1에서 19.2 GB/s로 낮추고 지연을 289.1에서 298.5 µs로 늘림."
+  - "워프 협력형 매핑은 커널 지연을 52.3 µs로 줄여 5.7배 빠름."
+  - "가중치와 활성값 모두 8비트로 하면 디코딩 처리량이 노트북 GPU에서 15.8%, 데이터센터 GPU에서 12.8% 오르고, 추정 에너지 효율은 17.0%, 8.4% 개선됨."

@@ -1,0 +1,16 @@
+id: ws_corr112
+type: Presentation
+kind: paper
+label: "Verification of PETSc with CIVL using LLM-generated ACSL contracts and deterministic driver generation"
+session: sess134
+time: "11:45-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr112"
+authors: [hansol-suh, jan-huckelheim, stephen-f-siegel]
+addresses: [translation-verification, ai-code-evaluation]
+proposes: [formal-verification, deterministic-llm-split, spec-first-validation]
+targets: [hpc-libraries]
+summary_ko: "PETSc는 틀린 결과의 대가가 큰 과학·공학에 널리 쓰이지만 수치 라이브러리는 정형 검증되는 일이 드묾. 명세와 검증 드라이버를 손으로 쓰기는 어렵고 버그를 더할 수 있음. LLM이 드라이버와 참조 모델을 한 번에 생성하는 방식은 불안정하고, 검증되지 않은 코드를 만들어 다시 감사해야 함."
+claims:
+  - "LLM은 함수 문서에서 작고 사람이 인증할 수 있는 ACSL 계약을 생성하는 역할만 맡음."
+  - "제한된 ACSL 프로파일을 지원하는 결정론적 도구가 드라이버를 생성하고, CIVL로 구현을 계약과 대조함."
+  - "PETSc 함수 셋에 전체 파이프라인을 적용해 MatAYPX에서 버그를 찾았음."

@@ -1,0 +1,17 @@
+id: ws_hpcsysp112
+type: Presentation
+kind: paper
+label: "Obleth: Fair Multi-Tenant LLM Serving for Self-Hosted Campus Infrastructure"
+session: sess132
+time: "10:30-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp112"
+authors: [johnathan-lee]
+addresses: [llm-serving-efficiency, compliance-governance, multi-tenant-isolation]
+proposes: [llm-gateway, opportunistic-inference, mcp-tools]
+targets: [llm-inference, campus-clusters, job-scheduler]
+summary_ko: "대학이 규정 준수, 비용, 데이터 주권 때문에 자체 호스팅하는 LLM을 위한 게이트웨이임. 클라우드용 게이트웨이와 달리 추론 용량을 테넌트 사이에 비례 배분하는 가중 공정 배분 수락 스케줄러를 포함함."
+claims:
+  - "Slurm 프로비저너가 선점 가능한 파티션의 남는 계산 자원을 쓰고 선점 시 자동 복구함."
+  - "자동 라우터가 등록된 모델 중 능력, 용량, 비용으로 고름."
+  - "실행 중 설정 가능한 확장으로 기관 내 콘텐츠 정책 집행과 도구 연동을 더함."
+  - "공정성 보장과 게이트웨이 부담을 재현 가능한 벤치마크로 평가함. 공개 초록에는 수치가 없음."

@@ -1,0 +1,14 @@
+id: ws_pdswwip112
+type: Presentation
+kind: talk
+label: "Correctness Evidence for I/O Optimizations in VPIC-Kokkos: Preliminary Results"
+session: sess129
+time: "12:10-12:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip112"
+authors: [connor-browne, nigel-tan, scott-luedtke, michela-taufer, brian-albright]
+addresses: [translation-verification]
+proposes: [differential-testing]
+targets: [mpi-simulations, performance-portable-kernels]
+summary_ko: "과학 입출력 최적화에는 응용 개발자가 검토할 수 있는 정확성 증거가 필요함. 플라스마 입자 코드에서 결정론적 내보내기 시험과 과학자가 검증한 종단 분석을 조사하는 진행 중인 작업임."
+claims:
+  - "두 검증은 기준이 다르고 겨냥하는 속성이 달라, 입출력 최적화에 어떤 정확성 증거가 따라붙어야 하는지를 탐색함."

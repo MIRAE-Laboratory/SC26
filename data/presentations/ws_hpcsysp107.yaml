@@ -1,0 +1,17 @@
+id: ws_hpcsysp107
+type: Presentation
+kind: paper
+label: "Operationalizing Workflow Support on Slurm: A Site Toolkit for Choosing Nextflow Deployment Strategies"
+session: sess132
+time: "09:35-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp107"
+authors: [nil-tianchen-mu]
+addresses: [workflow-scheduling, site-deployment-effort]
+proposes: [comparative-benchmarking, site-profiles]
+targets: [job-scheduler, bioinformatics-workflows, workflow-systems, campus-clusters]
+summary_ko: "운영자가 돌리는 도구 모음으로, 사이트와 워크로드 상태를 고정하고 깨끗한 시작 조건에서 시험하며 스케줄러 호출 부담을 벤치마크별로 귀속시키고 과학적 완료를 검증함. 네 가지 배치 방식을 세 번씩 비교함."
+claims:
+  - "실제 4,823개 작업의 정렬 워크로드를 기본 Slurm, 작업 배열, HyperQueue, Flux에 적용함."
+  - "작업 배열은 모든 짝 비교에서 실행 시간과 호출 부담을 줄이면서 요소별 스케줄러 제어를 유지함."
+  - "Flux는 호출 부담을 더 줄였으나 배열보다 오래 걸렸고, HyperQueue의 가장 빠른 중앙값은 반복이나 클러스터에 따라 불안정했음."
+  - "제약에서 출발하는 결정 절차와 배치 설정을 제공함."

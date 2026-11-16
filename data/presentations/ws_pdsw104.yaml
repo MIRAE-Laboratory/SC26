@@ -1,0 +1,16 @@
+id: ws_pdsw104
+type: Presentation
+kind: paper
+label: "Large Scale Sorting on UPMEM Processing-in-Memory Architectures"
+session: sess129
+time: "16:10-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw104"
+authors: [matthew-gardner, james-harris, revanth-munugala, tasmia-jannat, satish-puri, michael-gowanlock]
+addresses: [memory-bound-performance, hardware-selection]
+proposes: [comparative-benchmarking]
+targets: [processing-in-memory]
+summary_ko: "메모리 내 연산 플랫폼에서 대규모로 도는 비교 기반 정렬 알고리즘임. 분산 메모리, 처리 장치 사이의 직접 통신 부재, 가벼운 코어를 다룸. 가동 장치 2,546개의 시스템에서 최대 155 GiB의 균등·편향 입력으로 시험함."
+claims:
+  - "균등 데이터 79 GiB에서 대역폭이 더 높은 별도 플랫폼의 병렬 CPU 기준보다 최대 1.24배 빠름."
+  - "중복이 많은 입력에서는 캐시 재사용 덕에 다중 코어 CPU가 더 빠름."
+  - "병렬 CPU 알고리즘보다 에너지 효율이 최대 35% 높음."

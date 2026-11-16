@@ -1,0 +1,16 @@
+id: ws_hpcsysp103
+type: Presentation
+kind: paper
+label: "HPC Infrastructure Management at Scale"
+session: sess132
+time: "11:00-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp103"
+authors: [jeremiah-hoyle, nishit-patel, daniel-rix, cory-kim, carl-dukatz, chris-young, michael-gujral, adam-hough, fokko-masselink, john-thiesfeld, ronald-cogswell]
+addresses: [env-configuration, site-deployment-effort]
+proposes: [layered-image-pipeline]
+targets: [campus-clusters]
+summary_ko: "대규모 HPC 인프라 관리는 기준 이미지만으로 부족함. 도는 작업을 방해하지 않고 노드 역할별로 맞는 OS 이미지를 만들고 버전을 매겨 배치해야 함. 기존 프로비저닝을 사내 클러스터용 중앙 패치 출처로 대체한 사례임."
+claims:
+  - "세 리눅스 배포판의 CPU·GPU 계층형 이미지를 자동화 도구로 만들고, 출시 메타데이터와 함께 버전 관리되는 산출물로 저장함."
+  - "CPU·GPU 노드 300대 규모 시험에서 가장 안정적인 지점은 동시 배치 100대였고, 한계는 배치 도구가 아닌 주변 서비스와 조직 고유의 절충에서 나옴."
+  - "이전 방식은 약 60대에서 안정됐음."

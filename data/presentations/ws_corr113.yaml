@@ -1,0 +1,17 @@
+id: ws_corr113
+type: Presentation
+kind: paper
+label: "Developing a Numerical Algorithm with CIVL Model Checking in the Loop"
+session: sess134
+time: "12:00-12:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr113"
+authors: [youngjun-lee, anshu-dubey, jan-huckelheim]
+addresses: [translation-verification, parallel-program-correctness, memory-safety]
+proposes: [formal-verification, spec-first-validation]
+targets: [scientific-apps, mpi-simulations]
+summary_ko: "대형 과학 시뮬레이션의 수치 알고리즘 검증 사례임. 전체 프레임워크는 모델 검사하기에 너무 크고, 단위 시험은 표본 입력만 확인함. 다물리 프레임워크 Flash-X의 새 입자 배분(cloud-in-cell) 알고리즘을 CIVL 모델 검사기를 계속 쓰며 개발함."
+claims:
+  - "Flash-X 안에서 검증하지 않고, 알고리즘이 필요로 하는 인터페이스만 작은 독립 C 모델로 뽑았음."
+  - "입자 위치를 기호 값으로 두어 허용되는 위치의 연속 전체를 검사함."
+  - "질량 보존과 배분 위치의 두 물리 속성을 증명하고, 메모리 안전성과 MPI 교착 및 데이터 경합이 없음을 범위 안에서 확인함."
+  - "검증 속성을 먼저 쓰고 단계마다 다시 확인해 CIVL이 설계의 안전장치가 됨. 무작위 시드 시험이 놓친 결함을 드러냄."

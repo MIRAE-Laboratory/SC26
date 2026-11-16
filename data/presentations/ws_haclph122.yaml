@@ -1,0 +1,16 @@
+id: ws_haclph122
+type: Presentation
+kind: paper
+label: "No Bits Left Behind: A Precision-Preserving On-Wafer Reduction for FP64 GEMM"
+session: sess147
+time: "14:45-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess147&id=ws_haclph122"
+authors: [varuni-katti-sastry, venkatram-vishwanath]
+addresses: [fp64-scarcity]
+proposes: [fp64-emulation]
+targets: [wafer-scale-systems, dense-linear-algebra]
+summary_ko: "웨이퍼 규모 AI 장치는 다이 하나에 코어 수십만 개가 있지만 저정밀 연산만 있고 배정밀도가 없음. 각 피연산자를 16비트 조각으로 나누는 오자키 기법으로 배정밀도 행렬 곱을 웨이퍼 위에서만 구현해 실제 배정밀도 정확도에 맞춤."
+claims:
+  - "공유 메모리가 없어, 하위 비트를 버리지 않으려면 조각을 웨이퍼 위에서 확장 정밀도로 합쳐야 함."
+  - "측정한 모든 크기(최대 3360×3360)에서 배정밀도급 정확도를 유지하고, 웨이퍼의 약 50%까지 확장됨."
+  - "호스트 쪽 래퍼로 복소수 배정밀도로 확장하고, 반복 솔버를 배정밀도급 잔차까지 구동함."

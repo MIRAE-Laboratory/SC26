@@ -1,0 +1,15 @@
+id: ws_corr107
+type: Presentation
+kind: paper
+label: "Parameterized Verification of Deterministic MPI Programs"
+session: sess134
+time: "11:30-11:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr107"
+authors: [stephen-f-siegel]
+addresses: [parallel-program-correctness]
+proposes: [formal-verification]
+targets: [mpi-simulations]
+summary_ko: "프로세스 수가 매개변수인 메시지 전달 프로그램의 검증을 다룸. 사용자가 세 종류의 함수를 제공함. 프로세스 i에서 j로 보내는 메시지 수, 각 통신 사건의 선후 관계 계층에서의 수준, i에서 j로 보낸 k번째 메시지에 성립하는 사실임. 이를 써서 프로그램을 매개변수화된 순차 프로그램으로 바꾸고, 순차 프로그램용 기법으로 검증함."
+claims:
+  - "C/MPI 프로그램 검증을 위해 Frama-C/WP의 확장으로 구현함."
+  - "공개 초록에는 평가 수치가 없음."

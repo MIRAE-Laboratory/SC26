@@ -1,0 +1,17 @@
+id: ws_hpcsysp102
+type: Presentation
+kind: paper
+label: "The Evolution of the Coaraci HPC Infrastructure: Operational Lessons from a Brazilian Research Computing Center"
+session: sess132
+time: "15:30-16:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp102"
+authors: [mateus-francisco, fabio-andrijauskas]
+addresses: [energy-cost-carbon, chip-heat-density]
+proposes: [infrastructure-telemetry]
+targets: [cooling-infrastructure, campus-clusters]
+summary_ko: "브라질 한 대학 물리연구소의 HPC 인프라가 발전해 온 과정을 정리함. 전력, 비상 발전, 무정전 전원, 정밀 냉각, 기류 관리, 고속 네트워크, 작업 관리, 모니터링, 사용자 등록과 기술 지원을 개선해 학술 전산실을 현대화함."
+claims:
+  - "열 관리 개선은 냉통로 밀폐, 고유량 바닥 패널, 고풍량 랙 문임."
+  - "평균 전력 사용 효율이 2024년 4월 2.14에서 2025년 6월 1.56으로 약 27% 낮아짐."
+  - "냉각기 2대 가동, 1대 대기로 운영할 수 있게 됨."
+  - "2024년 2월부터 24시간 운영하며 등록 사용자 366명 중 284명이 작업을 실행했음."

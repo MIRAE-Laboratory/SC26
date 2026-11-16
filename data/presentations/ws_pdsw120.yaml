@@ -1,0 +1,15 @@
+id: ws_pdsw120
+type: Presentation
+kind: paper
+label: "Copy2: Data Sync Tool For High Performance Storages"
+session: sess129
+time: "14:20-14:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw120"
+authors: [aiden-lambert, aaron-jezghani, deepa-phanish]
+addresses: [large-data-migration, energy-performance-tradeoff]
+proposes: [io-coalescing]
+targets: [hpc-storage-systems, campus-clusters]
+summary_ko: "병렬·분산 저장소를 위한 자원 인지형 전송 도구임. 한 HPC 시설의 대규모 저장소 이전에서 출발함. 세밀한 병렬 메타데이터 순회, 하드 링크 보존, 고병행 비동기 입출력, 한도가 있는 메모리 관리를 씀."
+claims:
+  - "다양한 파일 크기와 개수에서 기존 두 도구보다 전송 대역폭이 2~4배 높고 에너지 소비가 3~5배 낮으며, 사용자가 정한 메모리 한도를 지킴."
+  - "수억 개 파일의 운영 배치에서 예측 가능한 고처리량 이동을 보임."

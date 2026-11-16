@@ -1,0 +1,16 @@
+id: ws_aihpc127
+type: Presentation
+kind: paper
+label: "Co-designing MoE Architectures and System Stacks for Scalable Training on Leadership Supercomputers"
+session: sess141
+time: "16:07-16:19"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc127"
+authors: [sajal-dash, yueming-yuan, junqi-yin, minjia-zhang, feiyi-wang]
+addresses: [llm-training-scaling, performance-portability, software-ecosystem-readiness]
+proposes: [foundation-model-finetuning]
+targets: [sci-foundation-models, amd-gpu-systems, leadership-facility, distributed-training]
+summary_ko: "LLM은 과학 파운데이션 모델로 유망하지만 사전학습 비용이 병목이며, 전문가 혼합(MoE) 구조가 해법임. 기존 MoE 연구는 NVIDIA 플랫폼을 겨냥했으나 과학 모델은 다양한 가속기의 슈퍼컴퓨터에서 학습됨. 최신 MoE 학습 기법을 Frontier의 AMD 스택으로 옮김."
+claims:
+  - "과학 문헌 데이터셋으로 사전학습 전략을 조사하고 높은 처리량의 핵심 요인을 확인함."
+  - "대규모 MoE 학습이 GPU 수천 개 규모로 확장됨을 보임."
+  - "이를 바탕으로 만든 SMOREs 모델군은 과학 질의응답 벤치마크 두 종에서 학습 초기 단계에 밀집 모델보다 나음."

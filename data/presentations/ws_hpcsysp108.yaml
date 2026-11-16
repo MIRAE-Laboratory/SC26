@@ -1,0 +1,15 @@
+id: ws_hpcsysp108
+type: Presentation
+kind: paper
+label: "Subsurface to Stellar: HPC Enablement with Open OnDemand and ColdFront at bp and NASA"
+session: sess132
+time: "14:00-14:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp108"
+authors: [arianna-martin, jeremy-first, jeff-triplet, tim-gregoire]
+addresses: [user-support-load, identity-access]
+proposes: [user-dashboards, shared-identity-portal]
+targets: [user-support-services, campus-clusters]
+summary_ko: "협약에 따라 에너지 기업과 NASA가 웹 인터페이스로 사용자와 HPC 자원 사이의 마찰을 줄임. 기업 쪽은 브라우저 우선 인터페이스를 배치·확장해 응용 배치, 운영 가시성, 사용자가 만든 웹 응용의 거버넌스를 지원함."
+claims:
+  - "NASA 쪽은 플러그인 구조로 확장해 프로젝트, 저장소, 라이선스, 접근 통제를 자가 관리하게 하고 승인 절차와 감사 기능을 넣음."
+  - "기반 HPC 시스템을 근본적으로 바꾸지 않고 접근성, 신규 사용자 적응, 사용자 자율성을 높이고 관리 부담을 줄였다고 주장함."

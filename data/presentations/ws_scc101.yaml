@@ -1,0 +1,15 @@
+id: ws_scc101
+type: Presentation
+kind: talk
+label: "Building a Kubernetes-first, sovereign HPC system: OpenCUBE"
+session: sess138
+time: "09:40-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc101"
+authors: [utz-uwe-haus]
+addresses: [vendor-dependence, heterogeneity-complexity]
+proposes: [open-control-plane]
+targets: [kubernetes-baremetal, hpc-processors]
+summary_ko: "유럽산 하드웨어를 위한 벤더 중립적이고 바로 배치할 수 있는 플랫폼을 목표로 한 시스템·사용자 관리 소프트웨어 스택임. 이기종 시스템의 성능, 에너지 효율, 프로그래밍 효율을 겨냥함."
+claims:
+  - "OpenCUBE 시험대는 OpenCHAMI, Talos, Slingshot 네트워크, 기존 스토리지, OpenFAM으로 모든 것이 컨테이너로 도는 Kubernetes 환경을 구성함."
+  - "SiPearl의 Rhea 프로세서와 RISC-V 가속기(EPAC2) 위에서 동작함."

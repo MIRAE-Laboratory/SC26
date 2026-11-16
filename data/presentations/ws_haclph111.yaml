@@ -1,0 +1,17 @@
+id: ws_haclph111
+type: Presentation
+kind: paper
+label: "Mixed-Precision Cholesky Factorization for Semidefinite Programming Using Ozaki Scheme II"
+session: sess147
+time: "14:30-14:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess147&id=ws_haclph111"
+authors: [haruki-nakamae, toshio-endo, katsuki-fujisawa]
+addresses: [fp64-scarcity]
+proposes: [fp64-emulation, mixed-precision]
+targets: [dense-linear-algebra, hpc-processors]
+summary_ko: "8비트 정수 연산으로 배정밀도 행렬 곱을 구성하는 오자키 기법 II를 쓴 혼합 정밀도 촐레스키 분해임. 타일 알고리즘에서 대칭 갱신만 이 기법으로 처리하고 나머지 단계는 배정밀도로 둠."
+claims:
+  - "미리 보기와 동적 타일 크기 스케줄러를 더함."
+  - "배정밀도 처리 성능이 제한된 GPU를 가진 서버에서 CPU 라이브러리의 분해보다 3.04배 빠르면서 배정밀도 정확도를 유지함."
+  - "시험 범위에서 배정밀도 정확도를 지키려면 조각 15개가 필요함."
+  - "배정밀도 반정부호 계획 솔버에 넣어 한 벤치마크에서 1.47배 빨라짐."

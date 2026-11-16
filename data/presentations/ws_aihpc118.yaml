@@ -1,0 +1,15 @@
+id: ws_aihpc118
+type: Presentation
+kind: paper
+label: "A Comparative Study of Energy Scaling Behavior for AI Training: Wafer or Die Scale"
+session: sess141
+time: "16:36-16:48"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc118"
+authors: [philipp-bader, jophin-john, eishi-arima, michael-gerndt, martin-schulz]
+addresses: [energy-performance-tradeoff, hardware-selection]
+proposes: [energy-profiling, comparative-benchmarking]
+targets: [wafer-scale-systems, sciml-training]
+summary_ko: "학습 에너지가 모델 크기에 따라 어떻게 늘어나는지를 웨이퍼 규모 장치(Cerebras WSE-2)와 다이 규모 장치(NVIDIA GH200)에서 비교함. 합성곱망과 비전 트랜스포머 7종을 묶음 크기 2~512로 맞춰 측정하고 에너지 모델을 교차 검증함."
+claims:
+  - "웨이퍼 규모 장치는 데이터플로 실행 덕분에 확장이 더 예측 가능함."
+  - "기본 전력이 높고 워크로드가 제어하는 전력 관리가 없어 모델 크기와 묶음 크기에 더 민감함."

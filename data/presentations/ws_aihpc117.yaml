@@ -1,0 +1,15 @@
+id: ws_aihpc117
+type: Presentation
+kind: paper
+label: "Theoretical and Empirical Analysis of Sparse Convolution"
+session: sess141
+time: "16:24-16:36"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc117"
+authors: [keshvi-tuteja, yu-hsiang-tsai, gregor-olenik, markus-gotz, achim-streit, hartwig-anzt, charlotte-debus]
+addresses: [memory-bound-performance]
+proposes: [roofline-analysis]
+targets: [hpc-processors]
+summary_ko: "가지치기한 합성곱 신경망의 희소 커널은 계산과 메모리를 줄일 수 있지만, 불규칙한 메모리 접근과 부하 불균형 때문에 활용이 어려움. 희소 가중치의 합성곱을 루프라인 분석으로 조사함."
+claims:
+  - "3×3 희소 합성곱의 연산 집약도는 약 10 FLOP/byte로, 밀집 합성곱의 약 96에 비해 낮음."
+  - "제안 기법의 예비 결과는 밀집 합성곱 대비 데이터센터 GPU에서 최대 1.65배, 내장형 GPU에서 최대 1.52배임."

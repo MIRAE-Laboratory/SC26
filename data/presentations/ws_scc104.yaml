@@ -1,0 +1,16 @@
+id: ws_scc104
+type: Presentation
+kind: talk
+label: "OpenCHAMI for Deployment of Inference Services"
+session: sess138
+time: "10:30-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc104"
+authors: [travis-cotton]
+addresses: [vendor-dependence, workload-portability]
+proposes: [open-control-plane, community-governance]
+targets: [kubernetes-baremetal, llm-inference, job-scheduler]
+summary_ko: "커뮤니티가 관리하는 공개 시스템 관리 플랫폼 OpenCHAMI를 Slurm과 Kubernetes 아래의 사이트 통제 층으로 써서 노드 발견, 부팅, 설정, 재배정을 맡김. 유휴 하드웨어에서 모델 서빙까지의 시간을 줄이는 것이 목표임."
+claims:
+  - "빠른 재부팅으로 노드를 Slurm과 Kubernetes 사이에서 옮기던 이전 작업을 확장해, 베어메탈 노드를 컨테이너 클러스터의 필요 시 작업자로 추가함."
+  - "프로비저닝이 특정 작업 관리자나 Kubernetes 배포판에 의존하지 않게 함."
+  - "다른 Kubernetes 스택과 실험적 오퍼레이터로 확장 중임. 공개 초록에는 수치가 없음."

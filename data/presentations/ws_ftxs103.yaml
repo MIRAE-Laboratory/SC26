@@ -1,0 +1,17 @@
+id: ws_ftxs103
+type: Presentation
+kind: paper
+label: "Domain Bounds as a Silent-Fault Detector for AI-Ready Scientific Data"
+session: sess142
+time: "15:54-16:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=ws_ftxs103"
+authors: [katie-knight, patrick-widener, heather-bort]
+addresses: [dataset-reuse-context-loss, data-readiness]
+proposes: [domain-bounds]
+targets: [sci-foundation-models]
+summary_ko: "AI를 쓰는 계산과학에서 데이터셋 재사용이 늘며 새 유형의 데이터 결함이 생김. 데이터셋의 범주, 척도, 레이블은 만들어진 조건에 의존하는데, 그 맥락은 모델 학습에 쓰이는 하류에서 대개 사라짐. 이 맥락을 적용 범위 정보로 데이터에 붙이자고 제안함. 값이 모두 기대 범위 안이어도 의도하지 않은 맥락에서 재사용되면 표시함."
+claims:
+  - "계산과학과 생의학에서 적용 범위 정보가 없어 조용한 재사용 오류가 생긴 사례를 제시함."
+  - "설명 기록과 출처 기록 방식은 이런 오류를 잡지 못한다고 주장함."
+  - "검출기는 표준 데이터 컨테이너 기술을 쓰며, 비용이 데이터셋 크기에 의존하지 않음."
+  - "계보와 설명 기록이 받아들인 주입 오용 18건 중 17건을 잡았음."

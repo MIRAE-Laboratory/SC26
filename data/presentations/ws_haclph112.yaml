@@ -1,0 +1,17 @@
+id: ws_haclph112
+type: Presentation
+kind: paper
+label: "Error-Explicit Low-Precision Factorizations for Iterative Refinement"
+session: sess147
+time: "15:55-16:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess147&id=ws_haclph112"
+authors: [joseph-mclaughlin, jee-choi]
+addresses: [fp64-scarcity, memory-bound-performance, hardware-selection]
+proposes: [mixed-precision, fp64-emulation]
+targets: [linear-solvers, dense-linear-algebra, hpc-processors]
+summary_ko: "최신 GPU는 저정밀 처리량을 우선해, 배정밀도 처리 성능이 연속된 두 세대 사이에 37에서 1.25 TFLOP/s로 떨어짐. 혼합 정밀도 보정은 단정밀도로 분해하지만 잔차 계산을 위해 원래 행렬을 배정밀도로 보관해 저장량이 큼. 행렬을 단정밀도 두 워드로 저장하는 방식과, 분해의 잔차만 단정밀도로 저장하고 원래 행렬은 버리는 방식을 제안함."
+claims:
+  - "잔차 저장 방식은 저장량을 12n²에서 8n² 바이트로 줄이며, 정확도는 단정밀도 저장이 아니라 잔차 계산에서 제한됨."
+  - "GPU 다섯 종에서 이점은 단정밀도 대 배정밀도 성능 비를 따름."
+  - "신형 GPU, 크기 32,768에서 두 워드 방식은 에뮬레이션 배정밀도보다 25배, 벤더 보정보다 1.4배 빠름. 잔차 방식은 우변 8,192개에서 24배 빠름."
+  - "잔차를 흘려 만드는 방식은 기존 저장량으로는 들어가지 않는 크기 184,320에 도달함."

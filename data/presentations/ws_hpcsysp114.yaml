@@ -1,0 +1,15 @@
+id: ws_hpcsysp114
+type: Presentation
+kind: talk
+label: "Teaching HPC to Advanced High School Students at a Summer Program"
+session: sess132
+time: "17:10-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp114"
+authors: [mike-renfro, sharon-colson, jim-moroney, trevor-clark]
+addresses: []
+proposes: []
+targets: [campus-clusters]
+summary_ko: "2023년부터 한 대학의 정보기술 부서가 고등학생 대상 3주 여름 과정의 연구 탐구 그룹을 맡았음. 일부 학생이 노트북 가상 머신과 폐기된 데스크톱으로 작지만 온전히 작동하는 HPC 클러스터를 만듦."
+claims:
+  - "리눅스 시스템 관리, 네트워크, 벤치마크, 병렬 프로그래밍을 익히고, 자기 클러스터에서 돌린 응용을 발표함."
+  - "다른 기관과 대상에 맞게 바꾸는 방법을 소개함."

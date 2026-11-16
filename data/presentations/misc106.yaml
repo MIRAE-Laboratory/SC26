@@ -1,0 +1,14 @@
+id: misc106
+type: Presentation
+kind: talk
+label: "Adopting Emerging AI Frameworks in HPC Environments"
+session: sess141
+time: "16:19-16:24"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=misc106"
+authors: [sasmita-mohapatra]
+addresses: [env-configuration, site-deployment-effort]
+proposes: [environment-wrapper]
+targets: [llm-inference, campus-clusters]
+summary_ko: "계산과학자는 AI 도구를 점점 더 쓰지만 환경 구성, 의존성 관리, 모델 확보, 공용 HPC에서 각 프레임워크를 돌리는 방법을 알아내는 데 시간을 많이 씀. AI 도구의 배치와 실행을 표준화하는 재현 가능한 워크플로를 제안함."
+claims:
+  - "이미지 생성, 고처리량 LLM 추론 서버, 가벼운 로컬 LLM 서빙, 단백질 구조 예측의 네 도구로 시연함."

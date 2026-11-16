@@ -1,0 +1,18 @@
+id: misc105
+type: Presentation
+kind: invited
+label: "(Featured Speaker) From Recovery to Explanation: Deterministic Replay as Evidence for Fault Diagnosis at Scale"
+session: sess142
+time: "14:01-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=misc105"
+authors: [tongping-liu]
+addresses: [silent-training-failures, trust-in-automated-decisions]
+proposes: [deterministic-replay, failure-attribution]
+targets: [distributed-training]
+summary_ko: "결함 허용은 그동안 체크포인트와 재시작 같은 복구를 뜻했고, 결함이 크래시나 멈춤으로 스스로 드러난다고 가정했음. 대규모 AI 학습에는 드러나지 않는 실패가 있음. 작업은 끝나고 손실 곡선도 정상인데 모델이 틀림. 이런 실패에는 복구가 부족할 뿐 아니라 해로움. 결함이 재시작마다 이어지기 때문임."
+claims:
+  - "예시는 학습 대상으로 선언됐지만 기울기를 받지 못하는 파라미터, 가중치만 복원하고 최적화기 상태는 복원하지 않는 재개, 조용히 저하되는 정밀도 정책임."
+  - "이런 결함은 수천 GPU 시간을 버리고, 평가 지표가 나오는 며칠 뒤에 드러나는 일이 많음."
+  - "텔레메트리 기반 원인 분석은 표면 신호로 추정하지만, 결정론적 기록·재생은 실행 자체를 조사할 수 있게 함. 결함 허용의 다음 기본 수단으로 질의 가능한 증거 기반을 제안함."
+  - "AI 워크로드가 바꾸는 것은 세 가지임. 원시 바이트와 모델의 논리적 개체 사이의 의미 간극, 랭크별 증거가 각자는 일관되나 단독으로는 부족한 분산성, 그리고 기존 기법이 의존하던 계기를 없애는 침묵임."
+  - "의미 귀속 계층의 초기 작업을 소개하며, 출처 기록이 값의 정확성을 증명하지는 않는다는 한계를 명시함."

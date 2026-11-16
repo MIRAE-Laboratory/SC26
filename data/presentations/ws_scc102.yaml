@@ -1,0 +1,15 @@
+id: ws_scc102
+type: Presentation
+kind: talk
+label: "E4S: An HPC-AI Software Ecosystem for Science"
+session: sess138
+time: "09:00-09:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc102"
+authors: [sameer-shende]
+addresses: [vendor-dependence, site-deployment-effort]
+proposes: [community-governance, container-wheel-deployment]
+targets: [hpc-packaging]
+summary_ko: "재단(HPSF) 프로젝트인 E4S는 Spack 기반으로 HPC, 전자설계, AI/ML 패키지 100개 이상을 선별해 배포함. 컨테이너와 베어메탈 설치를 모두 지원하고 주요 상용 클라우드에 배치할 수 있음."
+claims:
+  - "PyTorch, JAX, 추론 서버, 에이전트 도구 등 AI 도구와 Jupyter, 시각화 도구를 포함하며 웹 브라우저로 접근함."
+  - "HPC와 AI의 교육·연구를 위한 공개 플랫폼을 지향함."

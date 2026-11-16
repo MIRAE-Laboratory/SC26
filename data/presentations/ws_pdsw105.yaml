@@ -1,0 +1,15 @@
+id: ws_pdsw105
+type: Presentation
+kind: paper
+label: "Dynamic Planning for Scalable Data Movement in Accelerated Query Engines"
+session: sess129
+time: "11:10-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw105"
+authors: [richard-zamora, tom-augspurger, peter-entschev, mads-kristensen, lawrence-mitchell, matthew-murray, niranda-perera, vyas-ramasubramani, matthew-roeschke, benjamin-zaitlen]
+addresses: [data-locality]
+proposes: [dataflow-runtime]
+targets: [datalog-engines]
+summary_ko: "질의 최적화에서 연산자가 데이터 이동 전략(섞기, 방송, 중간 결과 축소)을 실행 전이 아니라 실행 중에 고르게 하는 동적 계획법임. GPU 데이터프레임 엔진에 구현함."
+claims:
+  - "실행 주체들이 테이블 조각을 관찰하고 메타데이터를 교환한 뒤 전략을 고름."
+  - "통제된 소규모 벤치마크와 한 질의 사례에서 안정성과 성능을 지키며 합리적인 결정을 내림. 공개 초록에는 수치가 없음."

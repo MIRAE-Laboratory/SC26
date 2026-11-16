@@ -1,0 +1,17 @@
+id: ws_pdsw101
+type: Presentation
+kind: paper
+label: "Sharing a Fabric with Collective Communication: Two Storage Penalties in DL Training"
+session: sess129
+time: "14:00-14:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw101"
+authors: [chen-wang, wenzhao-wu, hyojin-kim, jae-seung-yeom]
+addresses: [shared-fabric-interference, data-stalls]
+proposes: [node-local-staging, io-characterization]
+targets: [distributed-training, hpc-network, hpc-storage-systems]
+summary_ko: "HPC의 분산 딥러닝 학습은 집합 통신과 병렬 파일시스템 입출력이 한 패브릭을 공유하는 일이 많음. 그래프 신경망 워크로드로 두 가지 비용을 드러냄."
+claims:
+  - "패브릭을 공유하는 입출력은 데이터 적재에 꼬리가 긴 정지를 일으킴. 평소 15 ms인 대기가 Lustre에서는 반복의 28%, VAST에서는 12%에서 초 단위로 튐."
+  - "트래픽 등급을 공유하는 저장소는 집합 통신도 늦춤. Lustre는 올리듀스를 단독 실행 대비 최대 145배 정지시킴."
+  - "별도 등급의 전용 올플래시 계층은 도움이 되지만 긴 꼬리는 남음."
+  - "노드 로컬 NVMe로 데이터를 선반입하면 두 효과를 모두 피하며, 캐시가 채워진 상태에서 Lustre의 7.4배, VAST의 1.31배 처리량을 냄."

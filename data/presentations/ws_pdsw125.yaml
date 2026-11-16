@@ -1,0 +1,15 @@
+id: ws_pdsw125
+type: Presentation
+kind: paper
+label: "GDSight: Per-Operation Cross-Layer Attribution for GPUDirect Storage"
+session: sess129
+time: "11:30-11:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw125"
+authors: [izzet-yildirim, xian-he-sun, anthony-kougkas]
+addresses: [gpu-io-path, benchmark-validity]
+proposes: [cross-layer-tracing]
+targets: [hpc-storage-systems, hpc-libraries]
+summary_ko: "GPU 직접 저장 경로에서 각 저장 장치 명령을 그것을 일으킨 응용 연산에 귀속시킴. 연산이 전용 경로로 갔든 일반 경로로 물러났든 추적함. 제출이 비동기가 되면 시간 기반 대응은 실패하므로, 커널 추적 기술로 시간과 물리 주소를 함께 써서 대응시킴."
+claims:
+  - "세 가지 라이브러리에 수정 없이 적용해, 라이브러리 계수기가 놓치는 조용한 우회, 장치 수준 4배 증폭, 꼬리 지연 22배 팽창을 드러냄."
+  - "각 진단은 측정된 처방에 대응하며, 처리량이 한계인 경우 최대 17배의 효과가 있고 그렇지 않으면 효과가 없음."

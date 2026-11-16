@@ -1,0 +1,15 @@
+id: ws_corr_sh101
+type: Presentation
+kind: paper
+label: "Reducing Confusion and Broadcasting Understanding: An Empirical Study of the Semantics of NCCL"
+session: sess134
+time: "09:50-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess134&id=ws_corr_sh101"
+authors: [max-stupple, alastair-donaldson, azalea-raad]
+addresses: [parallel-program-correctness]
+proposes: [differential-testing]
+targets: [gpu-communication, distributed-training]
+summary_ko: "NVIDIA GPU에서 도는 분산 기계학습과 HPC 소프트웨어의 핵심 구성요소인 통신 라이브러리 NCCL의 의미를 정형화하기 위한 기초 작업임. 공식 문서 분석과 라이브러리 실험을 결합해 NCCL의 병행 프로그래밍 모델을 조사함."
+claims:
+  - "명령 대응(command matching) 개념을 도입함."
+  - "정의되지 않은 동작이 관측될 수 있는 조건을 설명함. 공개 초록에는 수치가 없음."

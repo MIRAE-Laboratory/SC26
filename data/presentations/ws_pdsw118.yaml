@@ -1,0 +1,17 @@
+id: ws_pdsw118
+type: Presentation
+kind: paper
+label: "Stress-Testing Exascale Scientific Data Output - ADIOS2 Configuration Strategies for WarpX under Extreme Load Imbalance"
+session: sess129
+time: "11:50-12:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw118"
+authors: [greg-eisenhauer, junmin-gu, axel-huebl, scott-klasky, norbert-podhorszki, alexander-sim, jean-luc-vay, kesheng-john-wu]
+addresses: [data-deluge, pipeline-config-tuning]
+proposes: [io-characterization, comparative-benchmarking]
+targets: [hpc-storage-systems, mpi-simulations, leadership-facility]
+summary_ko: "입자 가속기 시뮬레이션 코드의 출력 설정을 두 리더십급 시스템에서 평가함. 균형 잡힌 3차원 출력과, 랭크 사이의 쏠림과 여러 단계에 걸친 스냅숏이 겹치는 진단 출력을 비교함."
+claims:
+  - "균형 출력은 Frontier 2,048노드에서 비압축 3.64 TB/s, Perlmutter 512노드에서 1 TB/s 이상임."
+  - "무손실 압축을 쓰면 Frontier에서 응용 수준 유효 처리량이 약 7 TB/s임."
+  - "쏠림이 큰 구성에서는 비동기 쓰기 조합이 가장 높은 처리량을 냄. 단계를 합치는 설정은 쓰기 부담과 읽기 벌점 없이 완전한 스냅숏을 만듦."
+  - "하위 파일 수가 제한될 때는 데이터 크기 기반 집계가 처리량을 높임."

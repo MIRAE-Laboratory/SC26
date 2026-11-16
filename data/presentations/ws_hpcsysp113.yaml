@@ -1,0 +1,16 @@
+id: ws_hpcsysp113
+type: Presentation
+kind: paper
+label: "Faster Post-Outage Testing at Full Machine Scale"
+session: sess132
+time: "16:00-16:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp113"
+authors: [rory-kelly, ben-matthews, jenett-tillotson]
+addresses: [failure-resilience, network-congestion]
+proposes: [full-system-health-tests]
+targets: [hpc-network, leadership-facility]
+summary_ko: "예기치 않은 장애 뒤의 점검은 저하된 하드웨어를 찾고 시스템을 빨리 운영에 복귀시키는 데 초점을 둠. 구성요소별 시험으로 기계 전체를 확인하고, 단순한 합격·불합격 결과와 실패 시 조치를 제시하며, 전체 규모에서 짧은 시간에 끝나는 점검 도구를 개발함."
+claims:
+  - "도구가 찾아낸 네트워크 대역폭 문제를 조사함."
+  - "문제가 메시지 크기와 상관되어, 저하된 부품이 아니라 정지 현상으로 보임. 우선순위 흐름 제어를 켠 것과 관련됐을 수 있음."
+  - "다음 단계는 네트워크 카드 수준의 계수기를 기록해 일시 정지 프레임을 찾는 것임."

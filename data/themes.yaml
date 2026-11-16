@@ -7,7 +7,8 @@ themes:
     concepts: [ai-agents, multi-agent-workflow, agentic-workflow-composition, mcp-tools, skill-files, agent-middleware, agent-execution-layer, human-centric-hpc, agent-facility-codesign,
                agent-state-fragmentation, unified-state-graph, data-stalls, agent-aware-memory, agent-inference-cost, llm-gating, llm-ops-assistant, performance-agent, agents-on-cyberinfrastructure,
                agent-job-execution, agent-boundaries, prompt-injection, origin-labeling, runtime-sandbox, event-driven-continuation, agentic-config-optimization, tool-augmented-reasoning,
-               descriptive-execution, typed-agent-messaging, failure-attribution, human-in-outer-loop, serverless-execution]
+               descriptive-execution, typed-agent-messaging, failure-attribution, human-in-outer-loop, serverless-execution,
+               ops-knowledge-loss, llm-gateway, opportunistic-inference, llm-serving-efficiency]
     diagram:
       type: layers
       title: 에이전트가 놓이는 자리와 그 아래에서 바뀌는 것
@@ -33,6 +34,9 @@ themes:
       - head: 성능과 비용은 에이전트 수가 아니라 구조가 정함.
         text: 결정마다 LLM을 부르지 않게 하자 호출이 작업당 4.00회에서 2.06회로 줄고 결과는 비슷했음. 실패 유형별로 수리 경로를 나누자 토큰을 최대 52.4% 덜 쓰고 정확률이 올랐음. 원인 추출을 결정론적 절차에 맡기자 작은 모델이 큰 모델과 같은 진단 정확도를 냈음. 에이전트 수는 재현율도 거절률도 설명하지 못했음.
         refs: [ws_worksp128, ws_aaihpc107, ws_hust122, ws_aaihpc146]
+      - head: 에이전트와 LLM 서비스가 운영 실무의 일부가 됨.
+        text: 운영 현장에서는 에이전트가 절차 문서를 읽고 같은 작업 안에서 검증하고 보강하게 해 교대 사이에 사라지던 지식을 남겼음. 시뮬레이션 감시에서는 결정론적 조건이 걸러낸 상태만 멀티모달 에이전트가 판정해 틀린 계산의 39~68%를 아꼈음. 기관 자체의 LLM 서비스는 공정 배분 게이트웨이와 배치 시스템의 유휴 자원(노드 시간의 9.81%)을 쓰는 서빙으로 구성됨.
+        refs: [ws_hpcsysp105, ws_pdswwip113, ws_hpcsysp112, ws_aihpc107, misc144]
       - head: 한국 연구기관에의 적용(제안) - 사용자 지원과 운영 분석부터 시작하고, 계측과 기록을 먼저 갖춤.
         text: 위험이 낮고 효과를 재기 쉬운 영역은 사용자 지원과 운영 분석임. 과거 티켓, 문서, 기존 텔레메트리로 시작할 수 있고 외부로 데이터를 보내지 않는 로컬 모델로도 결과가 나왔음. 연구 코드와 실험 장비로 넓히기 전에 에이전트 사용량의 계측, 실행 경계, 행동 기록을 갖추는 순서를 권함.
         refs: [ws_hust106, ws_indis105, ws_pmbsf148, ws_aaihpc144]
@@ -42,7 +46,9 @@ themes:
     concepts: [translation-verification, ai-code-evaluation, bit-identical-gates, hybrid-evaluators, spec-first-validation, deterministic-llm-split, differential-testing, domain-benchmark,
                benchmark-validity, agentic-science-benchmarking, portability-metrics, unanswerable-refusal, residual-monitoring, human-approval-gates, provenance-reproducibility, provenance-logging,
                prov-loop-model, standardized-run-metadata, llm-domain-validity, untrusted-input, fuzzing, site-profiles, power-measurement-fidelity, multi-tier-power-metering,
-               trust-in-automated-decisions, repair-loop, physical-feasibility, physics-aware-training, memory-safety]
+               trust-in-automated-decisions, repair-loop, physical-feasibility, physics-aware-training, memory-safety,
+               formal-verification, behavioral-equivalence-checks, exhaustive-oracle-testing, fp-exception-detection, probabilistic-error-analysis, fp-exceptions, numerical-error,
+               parallel-program-correctness, silent-training-failures, silent-data-corruption, dataset-reuse-context-loss, domain-bounds, deterministic-replay, failure-taxonomy, fault-injection]
     diagram:
       type: flow
       title: 검증의 사다리 - 아래로 갈수록 더 많은 오류를 잡음
@@ -52,6 +58,7 @@ themes:
         - {label: 기준 출력의 비트 단위 재현, note: "강력하지만 주입 결함 14개 중 3개가 통과함"}
         - {label: 명세와 스키마 대조, note: "실행은 되는 오류 3건 적발. 입력이 불완전하면 실행 차단"}
         - {label: 물리 제약과 실측 대조, note: "제약 위반 약 19배 감소, 학습 범위 이탈을 잔차로 감지"}
+        - {label: 모델 검사와 증명, note: "입력을 기호로 두어 허용 범위 전체를 확인. 무작위 시험이 놓친 결함 적발"}
         - {label: 사람의 승인, note: 소수의 관문에서 명세와 결과를 검토}
     sections:
       - head: 실행 성공은 다섯 가지 방식으로 틀릴 수 있음.
@@ -66,6 +73,12 @@ themes:
       - head: 측정 자체가 검증 대상임.
         text: 같은 AI 워크로드를 세 해상도로 재면 값이 다르고, 성긴 계측은 오류 표시 없이 틀린 숫자를 냄. 스토리지 종합 점수는 단계별 관계를 가리고, 같은 하드웨어가 소프트웨어 빌드 하나로 2.1배 달라지며, 같은 사양의 장치가 에너지에서 36.9% 차이 남. 이식성은 응용에 따라 62%에서 89%까지 갈려 단일 수치로 말할 수 없음.
         refs: [ws_eesp144, ws_pmbss101, ws_pmbss103, ws_pmbsf137, ws_p3hpc112]
+      - head: 정형 검증이 AI와 결합해 실용 범위로 들어옴.
+        text: 수치 라이브러리는 명세를 손으로 쓰기 어려워 정형 검증이 드물었음. LLM이 문서에서 작은 계약을 뽑고 결정론적 도구가 검사하는 방식으로 PETSc 함수의 버그를 찾았음. 대형 코드에서는 알고리즘이 필요로 하는 인터페이스만 작은 모델로 뽑아, 입력을 기호로 두고 질량 보존을 증명했음. 반대로 LLM 판정은 결함 변형 13개 중 3개를 받아들여 검증 수단이 되지 못했음.
+        refs: [ws_corr112, ws_corr113, ws_corr111, ws_corr107]
+      - head: 가장 찾기 어려운 것은 정상으로 보이는 실패임.
+        text: 학습 작업이 끝나고 손실 곡선이 정상이어도 모델이 틀릴 수 있고, 이때 재시작은 결함을 이어 감. 값이 모두 정상 범위인 데이터도 만든 맥락을 벗어나면 결함이며, 계보 기록이 통과시킨 오용 18건 중 17건을 적용 범위 정보가 잡았음. 부동소수점 예외는 GPU 코드에서 조용히 퍼지고, 수학 라이브러리 일부는 스스로 밝힌 오차 한계를 넘었음.
+        refs: [misc105, ws_ftxs103, ws_corr109, ws_corr108]
       - head: 평가 기준은 아직 합의되지 않았음.
         text: 코드 변환, 보안, 운영 분석, 네트워크 텔레메트리 발표가 저마다 벤치마크를 새로 만들었음. 결과끼리 비교하기 어렵고, 무엇을 벤치마크할지 자체가 패널의 질문으로 올라옴. 재현율이 높은 구성이 답할 수 없는 질문은 가장 적게 거절했다는 결과는 지표 하나로 신뢰를 잴 수 없음을 보여 줌.
         refs: [ws_aaihpc109, ws_aaihpc132, ws_aaihpc146, ws_indis106, miscp120]
@@ -82,7 +95,9 @@ themes:
                cross-facility-integration, genesis-platform, user-facility-beamline, xfel-facility, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access,
                energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, domain-power-rebalancing, rl-power-control,
                co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability,
-               portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning]
+               portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning,
+               gpu-io-path, gpu-native-io, shared-fabric-interference, node-local-staging, contention-aware-io-placement, large-data-migration, burst-buffer, cross-layer-tracing,
+               fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, federated-allocation-platform, hardware-enforced-isolation, gpu-sharing, llm-training-scaling]
     diagram:
       type: flow
       loop: 결과와 결정이 다음 실험과 계산으로 되돌아감
@@ -110,6 +125,12 @@ themes:
       - head: 하드웨어는 다양해지고, 선택은 워크로드별로 해야 함.
         text: 신형 가속기가 구형보다 최대 16배 느린 워크로드가 있었고, 저정밀 연산으로 배정밀도를 대신할 수 있는 워크로드는 10% 미만으로 평가됨. 불규칙 메모리 접근에는 웨이퍼 규모 시스템이 GPU의 6~12배 처리량을 냈음. 벤더에 묶인 소프트웨어는 다른 시스템에서 배치 단계에 막혔고, 이식형 계층은 코드를 45~64% 줄이면서 응용에 따라 62~89%의 이식성 점수를 냈음.
         refs: [ws_pmbss103, ws_pmbsf142, ws_pmbsf133, ws_hppss104, ws_p3hpc112]
+      - head: 저장 경로는 GPU와 네트워크를 함께 봐야 함.
+        text: GPU 커널이 호스트를 거치지 않고 직접 쓰게 하자 입출력의 96%가 가려지고 1.9배 빨라졌음. 학습에서는 저장과 통신이 한 망을 쓰며 서로를 늦췄고, 노드 로컬 선반입이 병렬 파일시스템의 7.4배 처리량을 냈음. 공유 저장 대상의 혼잡은 순간적이어서 작업마다 재서 배치해야 했음. 실험 스트리밍은 완충 계층으로 취득과 처리를 분리함.
+        refs: [ws_pdsw111, ws_pdsw101, ws_pdsw103, ws_pdswwip107, ws_pdsw125]
+      - head: 배정밀도와 통제권이 하드웨어 선택의 새 기준이 됨.
+        text: 신형 GPU의 배정밀도 성능이 세대 사이에 37에서 1.25 TFLOP/s로 줄어, 배정밀도 코드는 에뮬레이션이나 혼합 정밀도 보정이 필요해졌음. 한편 스케줄러 개발사의 인수를 계기로, 시스템 관리와 소프트웨어 배포, 배분·정산 층을 공동 거버넌스 아래 두어 교체 가능성을 지키려는 움직임이 나옴.
+        refs: [ws_haclph112, ws_haclph101, ws_scc104, ws_scc103, ws_scc106]
       - head: 시설을 하나의 플랫폼으로 잇는 일은 서비스와 신원에서 시작함.
         text: 미국은 AI, 엑사스케일, 실험 시설, 자율 실험실을 한 플랫폼으로 묶는 사업에서 모델 배포, 언어 모델 접근, 데이터 기반, 출처 기록을 공용 서비스로 제공하고 이미 실제 워크플로에 쓰고 있음. 영국의 국가 AI 자원은 신원 관리가 숨은 최대 지원 부담임을 확인했고, 프랑스는 보안 규정과 공유 계정의 충돌을 서비스 계정으로 풀었음.
         refs: [misc199, ws_xloop110, ws_hppss105, ws_hust103, ws_worksp105]

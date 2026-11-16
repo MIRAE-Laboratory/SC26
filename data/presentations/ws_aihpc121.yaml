@@ -1,0 +1,15 @@
+id: ws_aihpc121
+type: Presentation
+kind: paper
+label: "Analytical Resource Management for Fine-Grained MoE Computation-Communication Overlap"
+session: sess141
+time: "15:43-15:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc121"
+authors: [hongyu-liu, minyu-cui, miquel-pericas]
+addresses: [llm-serving-efficiency]
+proposes: [analytical-performance-model]
+targets: [llm-inference, gpu-communication]
+summary_ko: "전문가 혼합(MoE) 모델의 분산 추론에서 계산과 통신을 세밀하게 겹치면 부분 결과를 일찍 보낼 수 있음. 통신과 계산 작업이 GPU 자원을 두고 경합하는데 고정 분할은 적응하지 못함. 분석 모델로 통신 작업 수를 실행 전에 정하는 자원 관리자를 제안함."
+claims:
+  - "프로파일링이나 재컴파일이 필요 없음."
+  - "GPU 4개에서 MoE 모델 3종으로 평가함. 기존 구현 대비 속도 향상은 연산자 수준 4.218배, MoE 층 수준 2.584배, 모델 전체 프리필 수준 1.439배임."

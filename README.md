@@ -60,8 +60,15 @@ claims:
 - (109) PMBS26: The 17th International Workshop on Performance Modeling, Benchmarking, and Simulation of High Performance Computer Systems (2026-11-15)
 - (517) HUST-26: 13th International Workshop on HPC User Support Tools (2026-11-15)
 - (110) 2026 International Workshop on Performance, Portability, and Productivity in HPC (P3HPC) (2026-11-15)
+- (134) 10th International Workshop on Software Correctness for HPC Applications (Correctness '26) (2026-11-16)
+- (142) FTXS: Workshop for Faults, Trustworthiness, and eXplainability for AI Systems at Scale (2026-11-16)
+- (138) Sovereign AI Supercomputing Cloud Workshop (2026-11-16)
+- (132) HPC Systems Professionals Workshop (HPCSYSPROS26) (2026-11-16)
+- (129) PDSW'26: The 11th International Parallel Data Systems Workshop (2026-11-16)
+- (141) AI on HPC: Performance Engineering, Challenges and Opportunities (2026-11-16)
+- (147) High-Accuracy Computing on Low-Precision Hardware (2026-11-16)
 
-프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
+프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`, `ws_corr114`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
 
 ## 심층 요약
 

@@ -1,0 +1,15 @@
+id: ws_aihpc112
+type: Presentation
+kind: paper
+label: "LLBPE: Linked-List Based GPU-Parallel BPE Tokenizer"
+session: sess141
+time: "14:25-14:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc112"
+authors: [aditya-kovilur, varun-chandra-shekar, ariful-azad]
+addresses: [llm-serving-efficiency, memory-bound-performance]
+proposes: []
+targets: [llm-inference]
+summary_ko: "입력 바이트를 토큰으로 바꾸는 BPE 토큰화의 GPU 병렬 구현임. 기존 GPU 구현은 계산이 아니라 데이터 이동에 묶여 있다고 봄. 토큰 열을 배열 기반 연결 리스트로 표현해 병합을 상수 시간의 포인터 갱신으로 바꿈."
+claims:
+  - "순위 조회, 최솟값 선택, 병합을 한 커널로 합쳐 중복 해시 조회를 없앰."
+  - "기존 최고 GPU 구현보다 처리량이 최대 5.2배, 최적화된 CPU 구현보다 24.6배 높음. 토큰화 결과에 작은 차이가 있음."

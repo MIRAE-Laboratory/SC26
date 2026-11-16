@@ -1,0 +1,16 @@
+id: ws_pdswwip103
+type: Presentation
+kind: talk
+label: "Move Metadata, Not Data: A Register-in-Place Lakehouse for Large Autonomous-Driving Datasets"
+session: sess129
+time: "16:40-16:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip103"
+authors: [jey-kang, kangryeol-kim, jinwang-mok, ho-kim, hyunje-sung, sun-park, jongwon-kim]
+addresses: [wan-data-distribution, data-readiness, large-data-migration]
+proposes: [data-lakehouse, dataset-catalog]
+targets: [autonomous-driving-evaluation, hpc-storage-systems]
+summary_ko: "자율주행 센서 파일을 복사하지 않고 제자리에서 등록하는 공개 테이블 형식 기반 레이크하우스를 만듦. 133 TB 공개 자율주행 데이터셋 중 보유한 약 13 TB 표본에서 라이다와 레이더 파일 약 64만 7천 개를 네트워크 파일시스템으로 약 2시간 8분에 등록함."
+claims:
+  - "네 규모의 실험에서 등록 시간은 파일 수에 선형으로 늘어남."
+  - "메타데이터 또는 구체화 테이블 질의 11개의 중앙값 지연은 예열 뒤 21~352 ms이며, 등록된 행 수는 36배 늘었음. 일반적인 센서·미디어 스캔의 성능을 뜻하지는 않음."
+  - "테이블 삭제 명령이 의도치 않게 원본 약 11 TB를 지워, 안전장치를 마련함."

@@ -1,0 +1,16 @@
+id: ws_pdswwip101
+type: Presentation
+kind: talk
+label: "GPU-Initiated Data Movement for Accelerator-Centric HPC"
+session: sess129
+time: "17:15-17:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip101"
+authors: [baodi-shan, mauricio-araya-polo, barbara-chapman]
+addresses: [gpu-io-path]
+proposes: [gpu-native-io, accelerated-transport]
+targets: [hpc-network, parallel-programming-models]
+summary_ko: "전송의 시작을 GPU 실행 안으로 옮겨, 데이터가 준비되는 시점에 이동을 시작하고 독립된 작업과 겹침. 표준 오프로드 모델 위에서 장치가 호출할 수 있는 넣기, 가져오기, 완료 연산을 고속 네트워크로 제공함."
+claims:
+  - "대리 경로는 동적 요청을 CPU 작업자를 통해 보내고, GPU 방아쇠 경로는 준비된 네트워크 연산을 나중의 CPU 제출 없이 내보냄."
+  - "한 시스템의 2노드 파이프라인에서 GPU 인지 MPI보다 최대 1.23배 빠르고, 재진입 제거로 5.6~6.8 마이크로초를 아낌."
+  - "반복 솔버의 약한 확장은 두 시스템에서 1.87배, 1.82배임. 저장소 쪽 작업은 다음 단계임."

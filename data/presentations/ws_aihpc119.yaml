@@ -1,0 +1,13 @@
+id: ws_aihpc119
+type: Presentation
+kind: paper
+label: "T-CCL: Resource Efficient and Performant Collective Communication using Tensor Memory Accelerator"
+session: sess141
+time: "15:31-15:43"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc119"
+authors: [keyvan-dadashzadeh, yuehong-zhou, minyu-cui, miquel-pericas]
+addresses: []
+proposes: []
+targets: [gpu-communication]
+summary_ko: "텐서 메모리 가속기를 이용한 집합 통신을 다루는 발표. 공개 페이지에 설명문이 없어 제목과 연사만 기록함."
+claims: []

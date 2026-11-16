@@ -1,0 +1,16 @@
+id: ws_haclph105
+type: Presentation
+kind: paper
+label: "DGEMM with Ozaki Scheme I/II on FP4 Tensor Cores: A Base-13 E2M1 Limb Representation"
+session: sess147
+time: "16:25-16:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess147&id=ws_haclph105"
+authors: [shun-ichiro-hayashi, daichi-mukunoki, tetsuya-hoshino, takahiro-katagiri]
+addresses: [fp64-scarcity]
+proposes: [fp64-emulation]
+targets: [dense-linear-algebra, hpc-processors]
+summary_ko: "4비트 부동소수점 텐서 연산기에서 오자키 기법 I, II로 배정밀도 행렬 곱을 구성함. 4비트 값은 두 배 하면 모두 정수가 되고, 이 집합을 13의 배수로 옮기면 모든 정수를 덮음. 임의의 정수를 13진 자릿수로 표현해 중간 합을 단정밀도 누산기에서 오차 없이 유지함."
+claims:
+  - "같은 원리로 8비트 정수 행렬 곱을 4비트 연산기에서 비트 단위로 정확히 구현함."
+  - "4비트의 처리량이 8비트의 두 배여서 이론상 8비트 기반보다 조금 높은 성능을 냄."
+  - "전문가용 최신 GPU에서 기존 8비트 기반 구현과 대등하고, 크기 16384에서 앞섬."

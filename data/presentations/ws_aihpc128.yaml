@@ -1,0 +1,16 @@
+id: ws_aihpc128
+type: Presentation
+kind: paper
+label: "Characterizing Simulation-AI Coupled Workflows on Frontier: Benchmarks and Digital-Twin Replay"
+session: sess141
+time: "17:12-17:24"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc128"
+authors: [ketan-maheshwari, riccardo-balin, wesley-brewer]
+addresses: [exascale-workflow-scaling, energy-performance-tradeoff]
+proposes: [system-simulation, infrastructure-telemetry, comparative-benchmarking]
+targets: [leadership-facility, ensemble-simulations, workflow-systems]
+summary_ko: "시뮬레이션과 AI가 결합된 분산 워크플로의 자원 사용을 기계학습 구조 6종에 걸쳐 특성화하는 틀임. 시뮬레이션-AI 벤치마크 모음과 시스템 디지털 트윈을 결합함."
+claims:
+  - "Frontier에서 구조별로 64노드 실험 6건을 돌려, 소스 계측 없이 계산, 입출력, 에너지 텔레메트리를 수집함."
+  - "변환기로 텔레메트리를 디지털 트윈에서 재생할 수 있게 함."
+  - "가정 시나리오 평가로 더 큰 규모의 에너지와 다른 스케줄링 정책의 결과를 예측함."

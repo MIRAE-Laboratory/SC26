@@ -1,0 +1,15 @@
+id: ws_pdswwip106
+type: Presentation
+kind: talk
+label: "One Bus Accident Away from Death: The Fragility of HPC I/O Tools"
+session: sess129
+time: "12:25-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip106"
+authors: [ray-a-o-sinurat, radita-liem, sarah-neuwirth]
+addresses: [software-sustainability]
+proposes: []
+targets: [hpc-libraries]
+summary_ko: "HPC 입출력 도구는 응용 성능을 이해하는 데 필수이지만 개발과 유지를 소수의 개인이 이끄는 일이 많음. 공개 도구의 유지 가능성을 저장소 활동, 기여자 분포, 코드 소유, 유지의 연속성 같은 지표로 조사함."
+claims:
+  - "개발 책임이 프로젝트에 어떻게 퍼져 있는지 분석하고 핵심 관리자에 대한 의존을 확인함."
+  - "입출력 소프트웨어 뒤의 사람 쪽 지속 가능성 위험에 주의를 촉구함."

@@ -1,0 +1,15 @@
+id: ws_aihpc125
+type: Presentation
+kind: paper
+label: "Watts Behind the Weights: Characterizing Energy Consumption of the AI Training Lifecycle in HPC"
+session: sess141
+time: "17:00-17:12"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc125"
+authors: [alexandre-fernandes, alicia-oliveira, beatriz-cepa, claudia-brito, ricardo-macedo]
+addresses: [power-measurement-fidelity, energy-performance-tradeoff]
+proposes: [energy-profiling]
+targets: [sciml-training, power-telemetry]
+summary_ko: "HPC에서 AI 학습의 에너지는 대개 실행에만 묶인 한 덩어리로 다뤄짐. 준비와 사후 단계를 포함한 학습 생애주기 전체에서 에너지를 재고, 실행을 단계로 나눠 단계와 사건별로 귀속시킴."
+claims:
+  - "운영 중인 슈퍼컴퓨터에서 적용함. 실행 단계는 입출력이 많은 ResNet-50과 GPU에 묶인 LLM으로 시험함."
+  - "에너지를 정확히 귀속하고 학습 파이프라인의 효율을 높이기 위한 교훈을 제시함. 공개 초록에는 수치가 없음."

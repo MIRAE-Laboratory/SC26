@@ -1,0 +1,14 @@
+id: ws_scc108
+type: Presentation
+kind: talk
+label: "Future directions from NSF's Office of Advanced Cyberinfrastructure"
+session: sess138
+time: "09:20-09:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc108"
+authors: [katerina-antypas]
+addresses: []
+proposes: []
+targets: [national-ai-infrastructure]
+summary_ko: "미국 국립과학재단 첨단사이버인프라실의 현황과 방향을 소개함. 컴퓨팅, 데이터 인프라, HPC 시스템의 조정 서비스, 소프트웨어, 인력 양성을 다룸."
+claims:
+  - "국가 AI 연구 자원(NAIRR)과 새로 선정된 NAIRR 운영센터의 현황을 전함. 공개 초록에는 수치가 없음."

@@ -1,0 +1,19 @@
+id: ws_ftxs102
+type: Presentation
+kind: paper
+label: "Characterizing Failure Types Across HPC and AI Clusters"
+session: sess142
+time: "15:30-15:54"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=ws_ftxs102"
+authors: [trupesh-patel, purushotham-v-bangalore]
+addresses: [failure-data-incomparability, failure-resilience]
+proposes: [failure-taxonomy]
+targets: [ai-supercomputer, leadership-facility, hpc-network]
+summary_ko: "HPC 연구는 대개 사용자 오류가 작업 실패의 대부분이라 하고, 대규모 AI 학습 보고는 하드웨어를 탓함. 두 분야는 보고 방식이 달라 거의 비교되지 않았음. 어떤 자료는 원인을, 어떤 자료는 스케줄러의 결과 레이블을, 어떤 자료는 사건 발생률만 적음. 공개 자료를 조사해 공통 분류 체계로 옮김."
+claims:
+  - "공개 데이터셋과 보고서 162건을 조사해 증거 수준을 평가하고, 장애 유형을 원인, 증상, 결과로 구분하는 11개 분류에 대응시켰음."
+  - "결과는 38개 시스템, 44개 열의 대응표이며 GPU 다섯 세대의 오류 분류 특성을 포함함."
+  - "공통 기준으로 읽으면 장애율은 비슷하나 노출량이 다름."
+  - "장애 건수로 세는 것과 계산량으로 가중하는 것은 반대의 우선순위를 냄."
+  - "GPU 하드웨어 장애에서 원인이 밝혀진 것 중 최다는 인터커넥트이고, 기록된 GPU 오류의 최대 분류는 응용이 유발한 것임."
+  - "조사표, 분류 체계, 출처 인용문을 공개함."

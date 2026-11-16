@@ -211,6 +211,9 @@
   const SIZE = { Session: 56, Presentation: 40, Problem: 28, Method: 28, System: 28, Person: 16, Organization: 22 };
   const SHAPE = { Session: "star", Presentation: "round-rectangle", Problem: "ellipse", Method: "diamond", System: "hexagon", Person: "ellipse", Organization: "rectangle" };
   const sTitle = (s) => "(" + s.id.replace(/^sess/, "") + ") " + s.label;      // 세션 표기: (번호) 제목 전체
+  // 노드 크기는 화면에 보이는 연결 수에 비례, 관계선 두께는 양 끝 노드의 연결 수 합에 비례 (상한 있음)
+  const nodeSize = (n) => Math.min(120, 12 + 2.4 * (n.data("deg") || 0));
+  const edgeWidth = (e) => Math.min(7, 0.4 + 0.11 * (e.data("w") || 0));
   function graphStyle() {
     const C = root.dataset.theme === "dark"
       ? { text: "#f5f5f4", bg: "#1c1917", edge: "#57534e", hl: "#d6d3d1" }
@@ -218,16 +221,16 @@
     return [
       { selector: "node", style: {
           "background-color": (n) => color(n.data("type")), shape: (n) => SHAPE[n.data("type")] || "ellipse",
-          width: (n) => SIZE[n.data("type")] || 20, height: (n) => SIZE[n.data("type")] || 20,
+          width: nodeSize, height: nodeSize,
           label: "data(text)", "font-size": 13, color: C.text, "text-wrap": "wrap", "text-max-width": 150,
           "text-valign": "bottom", "text-margin-y": 4, "text-background-color": C.bg, "text-background-opacity": 0.8, "text-background-padding": 1 } },
       { selector: 'node[type="Presentation"], node[type="Session"]', style: { "font-size": 14, "font-weight": 600 } },
-      { selector: "edge", style: { width: 1.2, "line-color": C.edge, "curve-style": "bezier", "target-arrow-shape": "triangle", "target-arrow-color": C.edge, "arrow-scale": 0.7 } },
+      { selector: "edge", style: { width: edgeWidth, "line-color": C.edge, "curve-style": "bezier", "target-arrow-shape": "triangle", "target-arrow-color": C.edge, "arrow-scale": 0.7 } },
       { selector: 'edge[rel="relatedTo"]', style: { "line-style": "dashed", "target-arrow-shape": "none" } },
       { selector: ".hidden", style: { display: "none" } },
       { selector: ".faded", style: { opacity: 0.12 } },
       { selector: "node.focus", style: { "border-width": 3, "border-color": C.text } },
-      { selector: "edge.hl", style: { "line-color": C.hl, "target-arrow-color": C.hl, width: 2, label: "data(rel)", "font-size": 9, color: C.hl, "text-background-color": C.bg, "text-background-opacity": 1, "text-rotation": "autorotate" } },
+      { selector: "edge.hl", style: { "line-color": C.hl, "target-arrow-color": C.hl, width: (e) => Math.max(2, edgeWidth(e)), label: "data(rel)", "font-size": 9, color: C.hl, "text-background-color": C.bg, "text-background-opacity": 1, "text-rotation": "autorotate" } },
     ];
   }
   const cy = cytoscape({
@@ -389,6 +392,8 @@
         n.toggleClass("hidden", !visible[d.type] || !inScope(d.id));
       });
       cy.edges().forEach((e) => e.toggleClass("hidden", e.source().hasClass("hidden") || e.target().hasClass("hidden")));
+      cy.nodes().forEach((n) => n.data("deg", n.connectedEdges().not(".hidden").length));
+      cy.edges().forEach((e) => e.data("w", e.source().data("deg") + e.target().data("deg")));
       cy.elements().removeClass("faded");
       if (q) {
         const hit = cy.nodes().not(".hidden").filter((n) => {

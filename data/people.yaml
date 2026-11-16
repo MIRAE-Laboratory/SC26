@@ -808,3 +808,255 @@ burkhard-ringlein: {name: "Burkhard Ringlein", orgs: [ibm]}
 jan-van-lunteren: {name: "Jan van Lunteren", orgs: [ibm]}
 radu-stoica: {name: "Radu Stoica", orgs: [ibm]}
 thomas-parnell: {name: "Thomas Parnell", orgs: [ibm]}
+scott-levy: {name: "Scott Levy", orgs: [sandia]}
+bo-fang: {name: "Bo Fang", orgs: [uta]}
+hailong-jiang: {name: "Hailong Jiang", orgs: [youngstown]}
+tongping-liu: {name: "Tongping Liu", orgs: [teyon]}
+trupesh-patel: {name: "Trupesh Patel", orgs: [alabama]}
+purushotham-v-bangalore: {name: "Purushotham V. Bangalore", orgs: [alabama]}
+katie-knight: {name: "Katie Knight", orgs: [ornl]}
+patrick-widener: {name: "Patrick Widener", orgs: [ornl]}
+heather-bort: {name: "Heather Bort", orgs: [ornl]}
+elisabeth-giem: {name: "Elisabeth Giem", orgs: [sandia, ucr]}
+hemanth-kolla: {name: "Hemanth Kolla", orgs: [sandia]}
+saibal-de: {name: "Saibal De", orgs: [sandia]}
+jackson-mayo: {name: "Jackson Mayo", orgs: [sandia]}
+martin-schatz: {name: "Martin Schatz", orgs: [meta, sandia]}
+jeremey-myers: {name: "Jeremey Myers", orgs: [qualcomm, sandia]}
+zizhong-chen: {name: "Zizhong Chen", orgs: [ucr]}
+luis-carlos-n-todd: {name: "Luis Carlos N. Todd", orgs: [cenat, tec-cr]}
+esteban-meneses: {name: "Esteban Meneses", orgs: [cenat, tec-cr]}
+elvis-rojas: {name: "Elvis Rojas", orgs: [una-cr]}
+florina-ciorba: {name: "Florina Ciorba", orgs: [basel]}
+ruiwen-shan: {name: "Ruiwen Shan", orgs: [clemson]}
+jon-c-calhoun: {name: "Jon C. Calhoun", orgs: [clemson]}
+ignacio-laguna: {name: "Ignacio Laguna", orgs: [llnl]}
+cindy-rubio-gonzalez: {name: "Cindy Rubio-González", orgs: [ucdavis]}
+hal-finkel: {name: "Hal Finkel", orgs: [doe]}
+felix-tomski: {name: "Felix Tomski", orgs: []}
+semih-burak: {name: "Semih Burak", orgs: []}
+matthias-muller: {name: "Matthias Müller", orgs: []}
+max-stupple: {name: "Max Stupple", orgs: [imperial]}
+alastair-donaldson: {name: "Alastair Donaldson", orgs: [imperial]}
+azalea-raad: {name: "Azalea Raad", orgs: [imperial]}
+mohit-tekriwal: {name: "Mohit Tekriwal", orgs: [llnl]}
+yichen-tao: {name: "Yichen Tao", orgs: [umich]}
+jean-baptiste-jeannin: {name: "Jean-Baptiste Jeannin", orgs: [umich]}
+xingjian-qi: {name: "Xingjian Qi", orgs: [heidelberg]}
+robert-strzodka: {name: "Robert Strzodka", orgs: [heidelberg]}
+alishba-gul: {name: "Alishba Gul", orgs: [rochester]}
+sreepathi-pai: {name: "Sreepathi Pai", orgs: [rochester]}
+samin-islam: {name: "Samin Islam", orgs: [utep]}
+shirley-v-moore: {name: "Shirley V. Moore", orgs: [utep]}
+christoph-q-lauter: {name: "Christoph Q. Lauter", orgs: [utep]}
+stephen-f-siegel: {name: "Stephen F. Siegel", orgs: [udel]}
+hansol-suh: {name: "Hansol Suh", orgs: [anl]}
+jan-huckelheim: {name: "Jan Hückelheim", orgs: [anl]}
+youngjun-lee: {name: "Youngjun Lee", orgs: [anl]}
+anshu-dubey: {name: "Anshu Dubey", orgs: [riken]}
+maxime-martinasso: {name: "Maxime Martinasso", orgs: [cscs, eth]}
+david-hancock: {name: "David Hancock", orgs: [iu]}
+alex-lovell-troy: {name: "Alex Lovell-Troy", orgs: [lanl]}
+francois-tessier: {name: "Francois Tessier", orgs: [inria]}
+sameer-shende: {name: "Sameer Shende", orgs: [uoregon, paratools]}
+katerina-antypas: {name: "Katerina Antypas", orgs: [nsf]}
+utz-uwe-haus: {name: "Utz-Uwe Haus", orgs: [hpe]}
+travis-cotton: {name: "Travis Cotton", orgs: [lanl]}
+ilja-livenson: {name: "Ilja Livenson", orgs: [opennode]}
+toshihiro-hanawa: {name: "Toshihiro Hanawa", orgs: [utokyo]}
+helena-vela-beltran: {name: "Helena Vela Beltran", orgs: [doitnow]}
+siavash-ghiasvand: {name: "Siavash Ghiasvand", orgs: [tudresden]}
+ajeet-ram-pathak: {name: "Ajeet Ram Pathak", orgs: [ntnu]}
+patrick-watters: {name: "Patrick Watters", orgs: [unr]}
+xiaolong-ma: {name: "Xiaolong Ma", orgs: [anl]}
+harry-yu: {name: "Harry Yu", orgs: [cornell]}
+lei-yang: {name: "Lei Yang", orgs: [unr]}
+feng-yan: {name: "Feng Yan", orgs: [houston]}
+rajkumar-kettimuthu: {name: "Rajkumar Kettimuthu", orgs: [anl]}
+madoka-takato: {name: "Madoka Takato", orgs: [ochanomizu]}
+akira-hirai: {name: "Akira Hirai", orgs: [fujitsu]}
+reika-kinoshita: {name: "Reika Kinoshita", orgs: [fujitsu]}
+masahiro-miwa: {name: "Masahiro Miwa", orgs: [fujitsu]}
+masato-oguchi: {name: "Masato Oguchi", orgs: [ochanomizu]}
+aditya-kovilur: {name: "Aditya Kovilur", orgs: [tamu]}
+varun-chandra-shekar: {name: "Varun Chandra Shekar", orgs: [tamu]}
+ariful-azad: {name: "Ariful Azad", orgs: [tamu]}
+farhana-amin: {name: "Farhana Amin", orgs: [vt]}
+sabiha-afroz: {name: "Sabiha Afroz", orgs: [vt]}
+mona-moghadampanah: {name: "Mona Moghadampanah", orgs: [vt]}
+dimitrios-s-nikolopoulos: {name: "Dimitrios S. Nikolopoulos", orgs: [vt]}
+zijian-zhang: {name: "Zijian Zhang", orgs: [ecnu]}
+keyvan-dadashzadeh: {name: "Keyvan Dadashzadeh", orgs: [chalmers]}
+yuehong-zhou: {name: "Yuehong Zhou", orgs: [chalmers]}
+minyu-cui: {name: "Minyu Cui", orgs: [linnaeus]}
+hongyu-liu: {name: "Hongyu Liu", orgs: [chalmers]}
+ajay-navilarekal-rajgopal: {name: "Ajay Navilarekal Rajgopal", orgs: [lrz]}
+nikolai-solmsdorf: {name: "Nikolai Solmsdorf", orgs: [intel]}
+sajal-dash: {name: "Sajal Dash", orgs: [ornl]}
+yueming-yuan: {name: "Yueming Yuan", orgs: [uiuc]}
+sasmita-mohapatra: {name: "Sasmita Mohapatra", orgs: [utdallas]}
+keshvi-tuteja: {name: "Keshvi Tuteja", orgs: [kit]}
+yu-hsiang-tsai: {name: "Yu-Hsiang Tsai", orgs: [tum]}
+gregor-olenik: {name: "Gregor Olenik", orgs: [tum]}
+markus-gotz: {name: "Markus Götz", orgs: [kit, tum]}
+achim-streit: {name: "Achim Streit", orgs: [kit]}
+hartwig-anzt: {name: "Hartwig Anzt", orgs: [kit, utk]}
+charlotte-debus: {name: "Charlotte Debus", orgs: [kit]}
+philipp-bader: {name: "Philipp Bader", orgs: [tum]}
+jophin-john: {name: "Jophin John", orgs: [lrz]}
+eishi-arima: {name: "Eishi Arima", orgs: [tum]}
+michael-gerndt: {name: "Michael Gerndt", orgs: [tum]}
+martin-schulz: {name: "Martin Schulz", orgs: [tum]}
+daniel-peralta-velazquez: {name: "Daniel Peralta Velazquez", orgs: [utaustin]}
+siyuan-ma: {name: "Siyuan Ma", orgs: [utaustin]}
+george-biros: {name: "George Biros", orgs: [utaustin]}
+jaydeep-kulkarni: {name: "Jaydeep Kulkarni", orgs: [utaustin]}
+lizy-kurian-john: {name: "Lizy Kurian John", orgs: [utaustin]}
+andreas-gerstlauer: {name: "Andreas Gerstlauer", orgs: [utaustin]}
+lingda-li: {name: "Lingda Li", orgs: [bnl]}
+alexandre-fernandes: {name: "Alexandre Fernandes", orgs: [inesctec, minho]}
+alicia-oliveira: {name: "Alícia Oliveira", orgs: [inesctec, minho]}
+beatriz-cepa: {name: "Beatriz Cepa", orgs: [inesctec, minho]}
+claudia-brito: {name: "Cláudia Brito", orgs: [inesctec, minho]}
+ricardo-macedo: {name: "Ricardo Macedo", orgs: [inesctec, minho]}
+ketan-maheshwari: {name: "Ketan Maheshwari", orgs: [ornl]}
+riccardo-balin: {name: "Riccardo Balin", orgs: [anl]}
+wesley-brewer: {name: "Wesley Brewer", orgs: [ornl]}
+michael-hartman: {name: "Michael Hartman", orgs: [core42]}
+jay-blair: {name: "Jay Blair", orgs: [pg]}
+david-clifton: {name: "David Clifton", orgs: []}
+christopher-samuel: {name: "Christopher Samuel", orgs: [lbnl]}
+nil-tianchen-mu: {name: "Nil Tianchen Mu", orgs: [asu]}
+johnathan-lee: {name: "Johnathan Lee", orgs: [asu]}
+jeremiah-hoyle: {name: "Jeremiah Hoyle", orgs: [accenture]}
+nishit-patel: {name: "Nishit Patel", orgs: [shell]}
+daniel-rix: {name: "Daniel Rix", orgs: [accenture]}
+cory-kim: {name: "Cory Kim", orgs: [accenture]}
+carl-dukatz: {name: "Carl Dukatz", orgs: [accenture]}
+chris-young: {name: "Chris Young", orgs: [accenture]}
+michael-gujral: {name: "Michael Gujral", orgs: [shell]}
+adam-hough: {name: "Adam Hough", orgs: [microsoft]}
+fokko-masselink: {name: "Fokko Masselink", orgs: [shell]}
+john-thiesfeld: {name: "John Thiesfeld", orgs: [shell]}
+ronald-cogswell: {name: "Ronald Cogswell", orgs: [shell]}
+deepa-phanish: {name: "Deepa Phanish", orgs: [gatech]}
+aiden-lambert: {name: "Aiden Lambert", orgs: [gatech]}
+aaron-jezghani: {name: "Aaron Jezghani", orgs: [gatech]}
+ruben-lara: {name: "Ruben Lara", orgs: [gatech]}
+rachel-lombardi: {name: "Rachel Lombardi", orgs: [gatech]}
+kenneth-suda: {name: "Kenneth Suda", orgs: [gatech]}
+grigori-yourganov: {name: "Grigori Yourganov", orgs: [gatech]}
+arianna-martin: {name: "Arianna Martin", orgs: [bp]}
+jeremy-first: {name: "Jeremy First", orgs: [bp]}
+jeff-triplet: {name: "Jeff Triplet", orgs: [nasa]}
+tim-gregoire: {name: "Tim Gregoire", orgs: [nasa]}
+jenett-tillotson: {name: "Jenett Tillotson", orgs: [ncar]}
+mateus-francisco: {name: "Mateus Francisco", orgs: [unicamp]}
+rory-kelly: {name: "Rory Kelly", orgs: [ncar]}
+ben-matthews: {name: "Ben Matthews", orgs: [ncar]}
+mark-klein: {name: "Mark Klein", orgs: [cscs]}
+jeffrey-winters: {name: "Jeffrey Winters", orgs: [neuvys]}
+rebecca-pinheiro: {name: "Rebecca Pinheiro", orgs: [neuvys]}
+mike-renfro: {name: "Mike Renfro", orgs: [tntech]}
+sharon-colson: {name: "Sharon Colson", orgs: [tntech]}
+jim-moroney: {name: "Jim Moroney", orgs: [tntech]}
+trevor-clark: {name: "Trevor Clark", orgs: [tntech]}
+reet-barik: {name: "Reet Barik", orgs: [anl]}
+piotr-luszczek: {name: "Piotr Luszczek", orgs: [mitll, utk]}
+hao-lu: {name: "Hao Lu", orgs: [ornl]}
+balavignesh-vemparala-narayana-murthy: {name: "Balavignesh Vemparala Narayana Murthy", orgs: [synopsys]}
+eric-nielsen: {name: "Eric Nielsen", orgs: [nasa]}
+haruki-nakamae: {name: "Haruki Nakamae", orgs: [sciencetokyo]}
+toshio-endo: {name: "Toshio Endo", orgs: [sciencetokyo]}
+katsuki-fujisawa: {name: "Katsuki Fujisawa", orgs: [sciencetokyo]}
+varuni-katti-sastry: {name: "Varuni Katti Sastry", orgs: [anl]}
+pradeep-dubey: {name: "Pradeep Dubey", orgs: [intel]}
+joseph-mclaughlin: {name: "Joseph McLaughlin", orgs: [uoregon]}
+jee-choi: {name: "Jee Choi", orgs: [uoregon]}
+alexander-maeder: {name: "Alexander Maeder", orgs: [eth]}
+denghui-lu: {name: "Denghui Lu", orgs: [eth]}
+nicolas-vetsch: {name: "Nicolas Vetsch", orgs: [eth]}
+vincent-maillou: {name: "Vincent Maillou", orgs: [eth]}
+anders-winka: {name: "Anders Winka", orgs: [eth]}
+jiang-cao: {name: "Jiang Cao", orgs: [eth]}
+mauro-dossena: {name: "Mauro Dossena", orgs: [eth]}
+alexandros-nikolaos-ziogas: {name: "Alexandros Nikolaos Ziogas", orgs: [eth]}
+mathieu-luisier: {name: "Mathieu Luisier", orgs: [eth]}
+shun-ichiro-hayashi: {name: "Shun-ichiro Hayashi", orgs: [nagoya]}
+tetsuya-hoshino: {name: "Tetsuya Hoshino", orgs: [nagoya]}
+takahiro-katagiri: {name: "Takahiro Katagiri", orgs: [nagoya]}
+toshiyuki-imamura: {name: "Toshiyuki Imamura", orgs: [riken]}
+scott-atchley: {name: "Scott Atchley", orgs: [ornl]}
+harun-bayraktar: {name: "Harun Bayraktar", orgs: [nvidia]}
+kasia-swirydowicz: {name: "Kasia Swirydowicz", orgs: [amd]}
+jay-lofstead: {name: "Jay Lofstead", orgs: [sandia, unm]}
+sarah-neuwirth: {name: "Sarah Neuwirth", orgs: [mainz]}
+lipeng-wan: {name: "Lipeng Wan", orgs: [gsu]}
+radita-liem: {name: "Radita Liem", orgs: [mainz]}
+dean-hildebrand: {name: "Dean Hildebrand", orgs: [google]}
+christine-kirkpatrick: {name: "Christine Kirkpatrick", orgs: [sdsc]}
+lena-oden: {name: "Lena Oden", orgs: [hagen]}
+joshua-fernandes: {name: "Joshua Fernandes", orgs: [iit]}
+luke-logan: {name: "Luke Logan", orgs: [iit]}
+xian-he-sun: {name: "Xian-He Sun", orgs: [iit]}
+anthony-kougkas: {name: "Anthony Kougkas", orgs: [iit]}
+richard-zamora: {name: "Richard Zamora", orgs: [nvidia]}
+tom-augspurger: {name: "Tom Augspurger", orgs: [nvidia]}
+peter-entschev: {name: "Peter Entschev", orgs: [nvidia]}
+mads-kristensen: {name: "Mads Kristensen", orgs: [nvidia]}
+lawrence-mitchell: {name: "Lawrence Mitchell", orgs: [nvidia]}
+matthew-murray: {name: "Matthew Murray", orgs: [nvidia]}
+niranda-perera: {name: "Niranda Perera", orgs: [nvidia]}
+vyas-ramasubramani: {name: "Vyas Ramasubramani", orgs: [nvidia]}
+matthew-roeschke: {name: "Matthew Roeschke", orgs: [nvidia]}
+benjamin-zaitlen: {name: "Benjamin Zaitlen", orgs: [nvidia]}
+izzet-yildirim: {name: "Izzet Yildirim", orgs: [iit]}
+junmin-gu: {name: "Junmin Gu", orgs: [lbnl]}
+axel-huebl: {name: "Axel Huebl", orgs: [lbnl]}
+alexander-sim: {name: "Alexander Sim", orgs: [lbnl]}
+jean-luc-vay: {name: "Jean-Luc Vay", orgs: [lbnl]}
+connor-browne: {name: "Connor Browne", orgs: [utk, uw]}
+scott-luedtke: {name: "Scott Luedtke", orgs: [lanl]}
+brian-albright: {name: "Brian Albright", orgs: [lanl]}
+hua-xu: {name: "Hua Xu", orgs: [iit]}
+jaime-cernuda: {name: "Jaime Cernuda", orgs: [iit]}
+andreas-dilger: {name: "Andreas Dilger", orgs: [lustrecollective]}
+jean-luca-bez: {name: "Jean Luca Bez", orgs: [esnet, lbnl]}
+ray-a-o-sinurat: {name: "Ray A. O. Sinurat", orgs: [uchicago]}
+chen-wang: {name: "Chen Wang", orgs: [ntu-sg]}
+wenzhao-wu: {name: "Wenzhao Wu", orgs: [ntu-sg]}
+hyojin-kim: {name: "Hyojin Kim", orgs: [llnl]}
+zhaobin-zhu: {name: "Zhaobin Zhu", orgs: [mainz]}
+alexander-klassen: {name: "Alexander Klassen", orgs: [tsukuba]}
+osamu-tatebe: {name: "Osamu Tatebe", orgs: [tsukuba]}
+adelina-zheng: {name: "Adelina Zheng", orgs: [brown]}
+dong-dai: {name: "Dong Dai", orgs: [udel]}
+sheng-di: {name: "Sheng Di", orgs: [anl]}
+franck-cappello: {name: "Franck Cappello", orgs: [anl]}
+jinzhen-wang: {name: "Jinzhen Wang", orgs: [uncc]}
+matthew-gardner: {name: "Matthew Gardner", orgs: [nau]}
+james-harris: {name: "James Harris", orgs: [nau]}
+revanth-munugala: {name: "Revanth Munugala", orgs: [nau]}
+tasmia-jannat: {name: "Tasmia Jannat", orgs: [mst]}
+satish-puri: {name: "Satish Puri", orgs: [mst]}
+michael-gowanlock: {name: "Michael Gowanlock", orgs: [nau]}
+michael-hennecke: {name: "Michael Hennecke", orgs: [hpe]}
+xinxin-mei: {name: "Xinxin Mei", orgs: [jlab]}
+jie-ren: {name: "Jie Ren", orgs: [wm]}
+jon-zarling: {name: "Jon Zarling", orgs: [jlab]}
+cameron-clarke: {name: "Cameron Clarke", orgs: [jlab]}
+vardan-gyurjyan: {name: "Vardan Gyurjyan", orgs: [jlab]}
+jinwang-mok: {name: "JinWang Mok", orgs: [gist]}
+ho-kim: {name: "Ho Kim", orgs: [gist]}
+hyunje-sung: {name: "Hyunje Sung", orgs: [gist]}
+sun-park: {name: "Sun Park", orgs: [gist]}
+joshua-teves: {name: "Joshua Teves", orgs: [sandia]}
+curtis-brinker: {name: "Curtis Brinker", orgs: [sandia]}
+baodi-shan: {name: "Baodi Shan", orgs: [stonybrook]}
+mauricio-araya-polo: {name: "Mauricio Araya-Polo", orgs: [totalenergies]}
+barbara-chapman: {name: "Barbara Chapman", orgs: [stonybrook]}
+nikoli-dryden: {name: "Nikoli Dryden", orgs: [llnl]}
+hariharan-devarajan: {name: "Hariharan Devarajan", orgs: [llnl]}
+sitian-chen: {name: "Sitian Chen", orgs: [hkbu]}
+haonan-wang: {name: "Haonan Wang", orgs: [hkbu]}
+amelie-chi-zhou: {name: "Amelie Chi Zhou", orgs: [hkbu]}

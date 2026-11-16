@@ -15,6 +15,13 @@ sessions:
   - sessions/sess109.yaml
   - sessions/sess517.yaml
   - sessions/sess110.yaml
+  - sessions/sess142.yaml
+  - sessions/sess134.yaml
+  - sessions/sess138.yaml
+  - sessions/sess141.yaml
+  - sessions/sess132.yaml
+  - sessions/sess147.yaml
+  - sessions/sess129.yaml
 presentations:
   - presentations/ws_shpc101.yaml
   - presentations/ws_shpc102.yaml
@@ -192,3 +199,87 @@ presentations:
   - presentations/ws_p3hpc115.yaml
   - presentations/ws_p3hpc117.yaml
   - presentations/ws_p3hpc116.yaml
+  - presentations/misc105.yaml
+  - presentations/ws_ftxs102.yaml
+  - presentations/ws_ftxs103.yaml
+  - presentations/ws_ftxs104.yaml
+  - presentations/ws_ftxs106.yaml
+  - presentations/ws_ftxs107.yaml
+  - presentations/misc223.yaml
+  - presentations/ws_corr114.yaml
+  - presentations/ws_corr_sh101.yaml
+  - presentations/ws_corr101.yaml
+  - presentations/ws_corr108.yaml
+  - presentations/ws_corr109.yaml
+  - presentations/ws_corr103.yaml
+  - presentations/ws_corr107.yaml
+  - presentations/ws_corr112.yaml
+  - presentations/ws_corr113.yaml
+  - presentations/ws_corr111.yaml
+  - presentations/ws_scc102.yaml
+  - presentations/ws_scc108.yaml
+  - presentations/ws_scc101.yaml
+  - presentations/ws_scc104.yaml
+  - presentations/ws_scc103.yaml
+  - presentations/ws_scc105.yaml
+  - presentations/ws_scc106.yaml
+  - presentations/ws_aihpc107.yaml
+  - presentations/ws_aihpc110.yaml
+  - presentations/ws_aihpc112.yaml
+  - presentations/ws_aihpc120.yaml
+  - presentations/ws_aihpc101.yaml
+  - presentations/ws_aihpc119.yaml
+  - presentations/ws_aihpc121.yaml
+  - presentations/ws_aihpc123.yaml
+  - presentations/ws_aihpc127.yaml
+  - presentations/misc106.yaml
+  - presentations/ws_aihpc117.yaml
+  - presentations/ws_aihpc118.yaml
+  - presentations/ws_aihpc124.yaml
+  - presentations/ws_aihpc125.yaml
+  - presentations/ws_aihpc128.yaml
+  - presentations/ws_hpcsysp111.yaml
+  - presentations/ws_hpcsysp107.yaml
+  - presentations/ws_hpcsysp112.yaml
+  - presentations/ws_hpcsysp103.yaml
+  - presentations/ws_hpcsysp105.yaml
+  - presentations/ws_hpcsysp104.yaml
+  - presentations/ws_hpcsysp108.yaml
+  - presentations/ws_hpcsysp115.yaml
+  - presentations/ws_hpcsysp102.yaml
+  - presentations/ws_hpcsysp113.yaml
+  - presentations/ws_hpcsysp101.yaml
+  - presentations/ws_hpcsysp109.yaml
+  - presentations/ws_hpcsysp114.yaml
+  - presentations/misc165.yaml
+  - presentations/ws_haclph111.yaml
+  - presentations/ws_haclph122.yaml
+  - presentations/misc166.yaml
+  - presentations/ws_haclph112.yaml
+  - presentations/ws_haclph101.yaml
+  - presentations/ws_haclph105.yaml
+  - presentations/miscp116.yaml
+  - presentations/misc137.yaml
+  - presentations/ws_pdsw114.yaml
+  - presentations/ws_pdsw111.yaml
+  - presentations/ws_pdsw105.yaml
+  - presentations/ws_pdsw125.yaml
+  - presentations/ws_pdsw118.yaml
+  - presentations/ws_pdswwip112.yaml
+  - presentations/ws_pdswwip113.yaml
+  - presentations/ws_pdswwip104.yaml
+  - presentations/ws_pdswwip106.yaml
+  - presentations/ws_pdsw101.yaml
+  - presentations/ws_pdsw120.yaml
+  - presentations/ws_pdsw103.yaml
+  - presentations/ws_pdsw113.yaml
+  - presentations/ws_pdsw108.yaml
+  - presentations/ws_pdsw104.yaml
+  - presentations/ws_pdswwip102.yaml
+  - presentations/ws_pdswwip107.yaml
+  - presentations/ws_pdswwip103.yaml
+  - presentations/ws_pdswwip105.yaml
+  - presentations/misc144.yaml
+  - presentations/ws_pdswwip101.yaml
+  - presentations/ws_pdswwip108.yaml
+  - presentations/ws_pdswwip114.yaml

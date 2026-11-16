@@ -1,0 +1,16 @@
+id: ws_pdsw108
+type: Presentation
+kind: paper
+label: "PRISM: Lightweight Surrogation for Lossy Compression Quality Prediction"
+session: sess129
+time: "15:50-16:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw108"
+authors: [adelina-zheng, dong-dai, sheng-di, franck-cappello, jinzhen-wang]
+addresses: [pipeline-config-tuning, config-evaluation-cost]
+proposes: [compression-quality-prediction, foundation-model-finetuning]
+targets: [neural-surrogates, ensemble-simulations]
+summary_ko: "오차 한계가 있는 손실 압축은 엑사스케일 워크플로에 중요하지만 압축기 설정을 고르려면 비싼 품질 평가가 필요함. 심층 대리모델이 돕지만 필드, 압축기, 지표가 바뀔 때마다 재학습해야 함. 기반 모델 하나를 학습하고 저차원 적응으로 새 과제에 맞춤."
+claims:
+  - "허리케인 데이터의 필드 8개, 압축기 4종, 지표 3종에서 96개 과제 중 81개가 평균 절대 백분율 오차 10% 미만임."
+  - "학습 파라미터를 1% 미만으로 줄임(107배 감소)."
+  - "표본이 적을 때 처음부터 학습하는 방식보다 나음."

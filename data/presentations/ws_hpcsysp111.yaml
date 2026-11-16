@@ -1,0 +1,16 @@
+id: ws_hpcsysp111
+type: Presentation
+kind: paper
+label: "Enabling Performance Isolation for Co-scheduled Workflows"
+session: sess132
+time: "09:10-09:35"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp111"
+authors: [daniel-margala, jonathan-skone, christopher-samuel]
+addresses: [underused-resources, multi-tenant-isolation]
+proposes: [hardware-enforced-isolation, co-scheduling]
+targets: [job-scheduler, ai-supercomputer, hpc-processors]
+summary_ko: "강력한 GPU와 상당한 CPU 용량을 함께 가진 노드에서 GPU 작업은 CPU의 많은 부분을 비워 둠. 하드웨어가 강제하는 격리로 CPU 작업과 GPU 작업을 한 노드에서 함께 돌리는 개념 증명임."
+claims:
+  - "Arm의 자원 분할 기능으로 CPU, L3 캐시, 메모리 대역폭을, InfiniBand 서비스 품질로 호스트 네트워크를 격리함."
+  - "Slurm의 격리 기능을 확장해 작업에 코어, 캐시, 메모리 대역폭, 네트워크 대역폭이 정해진 전용 조각을 줌."
+  - "이기종 HPC·AI 노드의 다중 테넌트 운영 모델을 평가할 수 있게 함. 공개 초록에는 수치가 없음."

@@ -1,0 +1,15 @@
+id: ws_ftxs106
+type: Presentation
+kind: paper
+label: "Studying Silent Data Corruption Sensitivity of Precision Reduction Techniques during Deep Neural Network Training"
+session: sess142
+time: "16:42-17:06"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess142&id=ws_ftxs106"
+authors: [luis-carlos-n-todd, esteban-meneses, elvis-rojas, florina-ciorba]
+addresses: [silent-data-corruption]
+proposes: [fault-injection, mixed-precision]
+targets: [sciml-training]
+summary_ko: "모델이 커지며 메모리와 에너지를 줄이는 정밀도 축소 기법이 개발됐음. 이 기법이 모델 성능에 주는 영향은 알려졌지만 조용한 데이터 손상에 얼마나 민감한지는 공백이었음. 정밀도를 낮춘 모델이 비트 반전에 어떻게 반응하는지 조사함."
+claims:
+  - "정밀도를 낮춘 모델은 대부분의 경우 원래 모델보다 비트 반전에 뜻밖에 잘 견뎠음."
+  - "공개 초록에는 수치와 대상 모델이 없음."

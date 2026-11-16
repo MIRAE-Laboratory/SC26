@@ -1,0 +1,16 @@
+id: ws_pdsw114
+type: Presentation
+kind: paper
+label: "GPU-Aware h5py: A Pure-Python Extension for HDF5–GPU Data Movement"
+session: sess129
+time: "10:30-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdsw114"
+authors: [lena-oden]
+addresses: [gpu-io-path, python-at-scale]
+proposes: [gpu-native-io]
+targets: [hpc-storage-systems, hpc-libraries]
+summary_ko: "파이썬의 HDF5 인터페이스에 GPU를 인지하는 읽기, 쓰기, 축소를 더하는 순수 파이썬 확장임. 기존 C 확장과 HDF5 라이브러리는 고치지 않음. 결과가 호스트 메모리에 놓이든 GPU 배열에 놓이든 같은 방식으로 잘라 씀."
+claims:
+  - "호스트 메모리를 한 번 고정해 재사용하고, 호스트에서 장치로의 전송을 다음 조각의 저장소 읽기와 겹침."
+  - "호출자가 준 변환이나 축소를 같은 흐름에 합칠 수 있으며, 계산이 전송보다 커지기 전까지는 추가 비용이 없음."
+  - "읽기 비용은 고른 데이터에만 들고, 데이터셋이 한 자릿수 이상 커져도 호스트 메모리가 일정함."

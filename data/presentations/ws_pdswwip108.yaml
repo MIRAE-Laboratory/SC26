@@ -1,0 +1,15 @@
+id: ws_pdswwip108
+type: Presentation
+kind: talk
+label: "DPUCrumbs: Dissecting DPU Pathways"
+session: sess129
+time: "17:20-17:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip108"
+authors: [ray-a-o-sinurat, sarah-neuwirth, radita-liem, jay-lofstead, nikoli-dryden, hariharan-devarajan]
+addresses: [ops-data-complexity]
+proposes: [cross-layer-tracing]
+targets: [hpc-network]
+summary_ko: "데이터 처리 장치는 HPC에서 집합 통신, 압축, 데이터 이동을 넘겨받지만, 그 비용은 응용과 카드 사이의 모든 계층에 걸쳐 있고 기존 도구는 계층 하나만 서로 다른 시계로 봄. 추적 범위를 카드 위까지 넓힌 추적기임."
+claims:
+  - "응용, 벤더 라이브러리, 드라이버, 커널의 경로를 수집하고 네트워크 카드의 시각 표시로 양 끝을 한 시간축에 놓음."
+  - "원격 메모리 접근 왕복 시험에서 버스 통과가 13.2와 8.6 µs, 장치의 응답이 0.82 µs이며, 응답이 호스트에 소비되기 전 카드에서 6.1 µs 기다림을 보임. 부담은 3.6%임."

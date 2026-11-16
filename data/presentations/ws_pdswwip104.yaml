@@ -1,0 +1,15 @@
+id: ws_pdswwip104
+type: Presentation
+kind: talk
+label: "Fair, Random IO Operations are Hard"
+session: sess129
+time: "12:20-12:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess129&id=ws_pdswwip104"
+authors: [jay-lofstead, dean-hildebrand, andreas-dilger, jean-luca-bez, julian-kunkel]
+addresses: [benchmark-validity]
+proposes: [domain-benchmark]
+targets: [hpc-storage-systems]
+summary_ko: "입출력 순위 벤치마크 위원회는 벤치마크를 계속 넓혀 옴. 가장 새로 더한 것은 무작위 4 KiB 읽기 단계임."
+claims:
+  - "첫 시도가 예상 밖의 결과를 내어 깊이 조사하고 처음부터 다시 구현함."
+  - "가장 좋은 방향을 정하려고 커뮤니티의 의견을 구함."

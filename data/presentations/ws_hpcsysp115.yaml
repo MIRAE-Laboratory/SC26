@@ -1,0 +1,16 @@
+id: ws_hpcsysp115
+type: Presentation
+kind: paper
+label: "Experiences with and Best Practices around Cooling Distribution Units (CDUs)"
+session: sess132
+time: "14:30-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess132&id=ws_hpcsysp115"
+authors: [jenett-tillotson]
+addresses: [chip-heat-density]
+proposes: [direct-liquid-cooling, infrastructure-telemetry]
+targets: [cooling-infrastructure]
+summary_ko: "시험·운영 시스템에서 냉각 분배 장치를 다룬 경험을 공유함. 최신 계산·네트워크 장비의 냉각 수요를 맞추려면 이 장치가 필요해짐."
+claims:
+  - "누수 찾기, 팽창 탱크 문제, 펌프 교체, 부품의 올바른 체결 토크를 다룸."
+  - "이 특수 부품을 다루는 모범 사례 목록을 제시함."
+  - "장치의 관리 인터페이스를 조회해 시계열 데이터베이스에 넣는 도구를 함께 공개함."

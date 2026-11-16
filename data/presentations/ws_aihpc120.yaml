@@ -1,0 +1,18 @@
+id: ws_aihpc120
+type: Presentation
+kind: paper
+label: "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware"
+session: sess141
+time: "14:37-14:49"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc120"
+authors: [farhana-amin, sabiha-afroz, mona-moghadampanah, dimitrios-s-nikolopoulos]
+addresses: [llm-serving-efficiency, benchmark-validity]
+proposes: [io-characterization]
+targets: [llm-inference]
+summary_ko: "확산형 언어 모델의 서빙을 GPU 하나에서 특성화함. 요청의 난이도는 11개의 고정된 디노이징 단계 수준으로 갈리며, 수락 시점의 어떤 신호도 이를 예측하지 못함."
+claims:
+  - "가장 좋은 예측 신호의 결정계수가 0.150임."
+  - "생성 예산이 약 320토큰 아래이면 잘림 때문에 서빙 변동을 과소평가함."
+  - "단일 요청 시간의 24%만 GPU 계산이고 나머지는 CPU 쪽 호출 부담임."
+  - "디노이징 단계마다 한 번의 순전파를 공유하면 묶음 크기 16에서 단일 요청 처리량의 16.0배에 이름."
+  - "포아송 도착에서의 묶음 대기 시간 안정 규칙을 유도함."

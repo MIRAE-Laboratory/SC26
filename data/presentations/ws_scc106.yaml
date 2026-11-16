@@ -1,0 +1,16 @@
+id: ws_scc106
+type: Presentation
+kind: talk
+label: "EESSI as a Vendor-Neutral, Community-Driven Stack for Heterogeneous HPC and Cloud"
+session: sess138
+time: "12:00-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess138&id=ws_scc106"
+authors: [helena-vela-beltran]
+addresses: [vendor-dependence, software-ecosystem-readiness, provenance-reproducibility]
+proposes: [community-governance, container-wheel-deployment]
+targets: [hpc-packaging, hpc-processors]
+summary_ko: "유럽 과학 소프트웨어 설치 환경(EESSI)은 커뮤니티가 관리하는 스택으로, x86, Arm, RISC-V CPU와 NVIDIA, AMD GPU에 걸친 벤더 중립적 기반을 목표로 함. EuroHPC의 지원을 받음."
+claims:
+  - "소프트웨어를 필요할 때 스트리밍으로 받아, 응용을 특정 호스트 운영체제와 단일 벤더 생태계에서 분리함."
+  - "마이크로아키텍처별로 최적화한 바이너리를 제공해 성능을 희생하지 않음."
+  - "기관 중립의 공유 생태계가 장기 재현성을 받치고 소프트웨어 거버넌스를 과학 커뮤니티로 돌려준다고 주장함."
