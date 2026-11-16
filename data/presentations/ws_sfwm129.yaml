@@ -1,0 +1,16 @@
+id: ws_sfwm129
+type: Presentation
+kind: paper
+label: "Hardware-Aware Compilation of LLM-Generated, QEC-Encoded Quantum Circuits via Constraint-Aware Graph Retrieval"
+session: sess112
+time: "16:15-16:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm129"
+authors: [sangram-deshpande, sharmin-afrose, nicholas-stapleton, nirajan-banjade, romit-ghosh, vicente-leyton-ortega, travis-s-humble, tirthankar-ghosal]
+addresses: [quantum-noise-fidelity, ai-code-evaluation]
+proposes: [deterministic-llm-split, comparative-benchmarking]
+targets: [quantum-compilers]
+summary_ko: "로컬에서 돌리는 LLM, 결정론적 오류 정정 부호화기, 하드웨어 제약을 고려한 그래프 검색을 묶은 종단 작업 흐름임. 컴파일 전략 여섯을 720가지 조합에서 평가함."
+claims:
+  - "최적화 없는 배치에 비해 여러 후보를 쓰는 하드웨어 인지 방식은 평균 깊이를 956에서 468로, 2큐비트 게이트를 657에서 268로 줄임."
+  - "표준 컴파일러에 비해서는 이득이 작음. 깊이 488에서 468, 게이트 281에서 268임."
+  - "탐욕적 검색 단독은 기준선보다 못함. 결과는 컴파일 효율만 다루며 논리 충실도가 아닌 대리 지표를 씀."

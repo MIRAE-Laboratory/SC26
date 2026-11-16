@@ -1,0 +1,16 @@
+id: ws_ss108
+type: Presentation
+kind: paper
+label: "Fast and Accurate ML Surrogates from Simulation: An HPC Liquid-Cooling Models Case Study"
+session: sess157
+time: "09:20-09:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss108"
+authors: [yishak-tadele-nigatu, wesley-brewer, jonathan-mcconnell, valentine-anantharaj, sandro-fiore]
+addresses: [simulation-scale-limits, chip-heat-density]
+proposes: [surrogate-substitution, digital-twin-coupling]
+targets: [cooling-infrastructure, neural-surrogates]
+summary_ko: "시설 디지털 트윈의 열유체 모의기가 비싸 딥러닝 대리모델로 대체함. 여러 신경망 구조를 비교함."
+claims:
+  - "학습 가능한 출력 1,799개 중 1,541개(85.7%)에서 단순 지속 예측을 앞섬."
+  - "출력 2,827개(냉각 분배 장치 257대)에서 평균 결정계수 0.926, 중앙값 0.999임."
+  - "장치 257대의 60초 구간 계산이 4.1 ms로, 기존 79.3초 대비 19,514배 빠름. 1만 개짜리 불확실성 앙상블이 220시간에서 41초로 줄어듦."

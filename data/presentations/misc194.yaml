@@ -1,0 +1,14 @@
+id: misc194
+type: Presentation
+kind: talk
+label: "Special Session - The open Quantum-HPC Software Ecosystem (openQSE)"
+session: sess112
+time: "11:30-12:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=misc194"
+authors: [amir-shehata, doug-oucharek, sebastian-stern, michael-ferguson]
+addresses: [quantum-hpc-integration, vendor-dependence]
+proposes: [quantum-resource-interface, community-governance]
+targets: [quantum-hpc-systems]
+summary_ko: "공개 양자-HPC 소프트웨어 생태계를 다루는 특별 세션으로 네 발표로 구성됨."
+claims:
+  - "소개, 참조 구현으로서의 미래, 양자를 갖춘 HPC 센터 구축, 오류 내성 양자 컴파일러 스택의 설계를 다룸. 공개 초록에는 수치가 없음."

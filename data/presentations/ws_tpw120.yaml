@@ -1,0 +1,16 @@
+id: ws_tpw120
+type: Presentation
+kind: paper
+label: "From Candidate to Confirmed: A Verification-First Agenda for Open Autonomous Science"
+session: sess149
+time: "11:09-11:22"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw120"
+authors: [rafael-ferreira-da-silva, laura-biven, ian-foster, tirthankar-ghosal, tom-gibbs, benjamin-mintz, woong-shin, frederic-suter, michela-taufer]
+addresses: [trust-in-automated-decisions, agentic-science-benchmarking, provenance-reproducibility]
+proposes: [provenance-logging, typed-agent-messaging, hybrid-evaluators]
+targets: [ai-agents, self-driving-labs]
+summary_ko: "자동화와 LLM은 사람이 검토할 수 있는 것보다 빠르게 가설을 만듦. 생성이 신뢰의 기반을 앞질렀다고 진단하는 입장 논문임."
+claims:
+  - "에이전트는 닫힌 질문에서 전문가 수준에 가깝지만 열린 연구 과제는 일부만 끝냄."
+  - "새 발견을 끝에서 끝까지 스스로 검증한 시스템은 없고, 널리 인용된 자율 발견 결과가 신규성 논란 뒤에 정정됐음."
+  - "제약은 생성이 아니라 검증임. 처방은 공개된 재현 가능 평가, 에이전트 워크플로의 종단 출처 기록, 상호운용되고 책임을 물을 수 있는 에이전트 인터페이스임."

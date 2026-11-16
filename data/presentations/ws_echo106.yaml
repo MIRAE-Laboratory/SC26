@@ -1,0 +1,15 @@
+id: ws_echo106
+type: Presentation
+kind: paper
+label: "PRISM: Task-aware Slimming for Edge-Cloud LLMs"
+session: sess156
+time: "10:42-10:54"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo106"
+authors: [su-wang, dmytro-kublytskyi, dong-chen]
+addresses: [edge-resource-limits, llm-serving-efficiency]
+proposes: [model-compression, mixed-precision, io-coalescing]
+targets: [edge-devices, llm-inference]
+summary_ko: "엣지와 클라우드에 걸친 LLM 서빙을 위한 과제 인지 틀임. 엣지 추론은 클라우드와 달리 주로 다층 퍼셉트론 층에 막히고, 층의 중요도는 과제마다 다름. 클라우드에서 과제별 민감도를 재서 층과 정밀도를 고른 추론 그래프를 만듦."
+claims:
+  - "엣지에서는 가중치를 흘려 올리고 입출력을 계산과 겹쳐 상주 메모리를 줄임."
+  - "소형 모델 두 종과 과제 넷에서 밀집 기준 대비 최대 메모리가 2.9배, 지연이 26% 줄어듦."

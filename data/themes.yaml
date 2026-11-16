@@ -8,7 +8,7 @@ themes:
                agent-state-fragmentation, unified-state-graph, data-stalls, agent-aware-memory, agent-inference-cost, llm-gating, llm-ops-assistant, performance-agent, agents-on-cyberinfrastructure,
                agent-job-execution, agent-boundaries, prompt-injection, origin-labeling, runtime-sandbox, event-driven-continuation, agentic-config-optimization, tool-augmented-reasoning,
                descriptive-execution, typed-agent-messaging, failure-attribution, human-in-outer-loop, serverless-execution,
-               ops-knowledge-loss, llm-gateway, opportunistic-inference, llm-serving-efficiency]
+               ops-knowledge-loss, llm-gateway, opportunistic-inference, llm-serving-efficiency, execution-integrity-guard]
     diagram:
       type: layers
       title: 에이전트가 놓이는 자리와 그 아래에서 바뀌는 것
@@ -37,6 +37,9 @@ themes:
       - head: 에이전트와 LLM 서비스가 운영 실무의 일부가 됨.
         text: 운영 현장에서는 에이전트가 절차 문서를 읽고 같은 작업 안에서 검증하고 보강하게 해 교대 사이에 사라지던 지식을 남겼음. 시뮬레이션 감시에서는 결정론적 조건이 걸러낸 상태만 멀티모달 에이전트가 판정해 틀린 계산의 39~68%를 아꼈음. 기관 자체의 LLM 서비스는 공정 배분 게이트웨이와 배치 시스템의 유휴 자원(노드 시간의 9.81%)을 쓰는 서빙으로 구성됨.
         refs: [ws_hpcsysp105, ws_pdswwip113, ws_hpcsysp112, ws_aihpc107, misc144, ws_canopie102, misc171]
+      - head: 실제 과학 현장에서의 평가가 나오기 시작함.
+        text: 핵연료 분야에서는 지식 저장소와 재사용 절차가 비용 증가보다 약 1.2~1.5배 더 답의 품질을 올렸음. 방사광 시설에서는 도구 61개를 조율하는 에이전트에 결정론적 검사 계층을 두자 위반이 200건 중 0건이었음. 우주론 분석에서는 에이전트와 과학자 팀이 서로 다른 것을 찾아 보완 관계임이 드러났음. 장애 조사 에이전트는 기관 안의 공개 모델로 요청의 89.2%를 처리했으나 진단 정확도는 아직 평가 전임.
+        refs: [ws_tpw111, ws_tpw139, ws_tpw130, ws_odalt102, ws_tpw120]
       - head: 한국 연구기관에의 적용(제안) - 사용자 지원과 운영 분석부터 시작하고, 계측과 기록을 먼저 갖춤.
         text: 위험이 낮고 효과를 재기 쉬운 영역은 사용자 지원과 운영 분석임. 과거 티켓, 문서, 기존 텔레메트리로 시작할 수 있고 외부로 데이터를 보내지 않는 로컬 모델로도 결과가 나왔음. 연구 코드와 실험 장비로 넓히기 전에 에이전트 사용량의 계측, 실행 경계, 행동 기록을 갖추는 순서를 권함.
         refs: [ws_hust106, ws_indis105, ws_pmbsf148, ws_aaihpc144]
@@ -48,7 +51,7 @@ themes:
                prov-loop-model, standardized-run-metadata, llm-domain-validity, untrusted-input, fuzzing, site-profiles, power-measurement-fidelity, multi-tier-power-metering,
                trust-in-automated-decisions, repair-loop, physical-feasibility, physics-aware-training, memory-safety,
                formal-verification, behavioral-equivalence-checks, exhaustive-oracle-testing, fp-exception-detection, probabilistic-error-analysis, fp-exceptions, numerical-error,
-               parallel-program-correctness, measurement-comparability, observability-overhead, performance-diagnosis-gap, hardware-counter-analysis, silent-training-failures, silent-data-corruption, dataset-reuse-context-loss, domain-bounds, deterministic-replay, failure-taxonomy, fault-injection]
+               parallel-program-correctness, compiler-defects, software-stack-drift, continuous-benchmarking, measurement-comparability, observability-overhead, performance-diagnosis-gap, hardware-counter-analysis, silent-training-failures, silent-data-corruption, dataset-reuse-context-loss, domain-bounds, deterministic-replay, failure-taxonomy, fault-injection]
     diagram:
       type: flow
       title: 검증의 사다리 - 아래로 갈수록 더 많은 오류를 잡음
@@ -79,6 +82,9 @@ themes:
       - head: 가장 찾기 어려운 것은 정상으로 보이는 실패임.
         text: 학습 작업이 끝나고 손실 곡선이 정상이어도 모델이 틀릴 수 있고, 이때 재시작은 결함을 이어 감. 값이 모두 정상 범위인 데이터도 만든 맥락을 벗어나면 결함이며, 계보 기록이 통과시킨 오용 18건 중 17건을 적용 범위 정보가 잡았음. 부동소수점 예외는 GPU 코드에서 조용히 퍼지고, 수학 라이브러리 일부는 스스로 밝힌 오차 한계를 넘었음.
         refs: [misc105, ws_ftxs103, ws_corr109, ws_corr108]
+      - head: 컴파일러와 시스템도 검증 대상임.
+        text: 포트란 GPU 컴파일러 셋에서 석 달에 결함 45개가 나왔고 15개는 조용히 틀린 답을 내어, 컴파일하고 실행하는 시험의 42%를 통과했음. 사양이 같은 노드도 최대 5% 달랐고 스택의 갱신이 성능 회귀를 만들어, 벤치마크를 운영 내내 돌리고 변경 이력과 연결하는 방식이 나옴. 결함 주입 결과는 레이블이 같아도 플랫폼마다 동작이 달랐음.
+        refs: [ws_hpct108, ws_hpct110, ws_hpct105, ws_hpct102]
       - head: 평가 기준은 아직 합의되지 않았음.
         text: 코드 변환, 보안, 운영 분석, 네트워크 텔레메트리 발표가 저마다 벤치마크를 새로 만들었음. 결과끼리 비교하기 어렵고, 무엇을 벤치마크할지 자체가 패널의 질문으로 올라옴. 재현율이 높은 구성이 답할 수 없는 질문은 가장 적게 거절했다는 결과는 지표 하나로 신뢰를 잴 수 없음을 보여 줌.
         refs: [ws_aaihpc109, ws_aaihpc132, ws_aaihpc146, ws_indis106, miscp120]
@@ -98,7 +104,8 @@ themes:
                portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning,
                gpu-io-path, gpu-native-io, shared-fabric-interference, node-local-staging, contention-aware-io-placement, large-data-migration, burst-buffer, cross-layer-tracing,
                fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, federated-allocation-platform, hardware-enforced-isolation, gpu-sharing, llm-training-scaling,
-               container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore]
+               container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore,
+               request-usage-mismatch, job-trace-analysis, embodied-carbon, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-reconstruction, rl-resource-scaling]
     diagram:
       type: flow
       loop: 결과와 결정이 다음 실험과 계산으로 되돌아감
@@ -132,9 +139,41 @@ themes:
       - head: 배정밀도와 통제권이 하드웨어 선택의 새 기준이 됨.
         text: 신형 GPU의 배정밀도 성능이 세대 사이에 37에서 1.25 TFLOP/s로 줄어, 배정밀도 코드는 에뮬레이션이나 혼합 정밀도 보정이 필요해졌음. 한편 스케줄러 개발사의 인수를 계기로, 시스템 관리와 소프트웨어 배포, 배분·정산 층을 공동 거버넌스 아래 두어 교체 가능성을 지키려는 움직임이 나옴.
         refs: [ws_haclph112, ws_haclph101, ws_scc104, ws_scc103, ws_scc106]
+      - head: 효율의 범위가 운영 기록과 장비의 생애주기로 넓어짐.
+        text: 작업 기록 420만 건의 분석에서 소수의 사용자가 수요와 낭비의 대부분을 만들었고, 요청을 실제에 맞추면 평균 대기가 67% 줄어든다는 모의 결과가 나옴. GPU 분할 구성을 수요 기록으로 정하자 충족률이 66.8%에서 98.1%로 올랐음. 장비 교체는 제조 탄소까지 따져야 총배출이 줄고, 작업별 GPU 클록 조정은 에너지를 14.25% 아꼈음.
+        refs: [ws_hpcoda112, ws_hpcoda136, ws_ss103, ws_ss109, ws_echo105]
       - head: 시설을 하나의 플랫폼으로 잇는 일은 서비스와 신원에서 시작함.
         text: 미국은 AI, 엑사스케일, 실험 시설, 자율 실험실을 한 플랫폼으로 묶는 사업에서 모델 배포, 언어 모델 접근, 데이터 기반, 출처 기록을 공용 서비스로 제공하고 이미 실제 워크플로에 쓰고 있음. 영국의 국가 AI 자원은 신원 관리가 숨은 최대 지원 부담임을 확인했고, 프랑스는 보안 규정과 공유 계정의 충돌을 서비스 계정으로 풀었음.
         refs: [misc199, ws_xloop110, ws_hppss105, ws_hust103, ws_worksp105]
       - head: 한국 연구기관에의 적용(제안) - 대형 실험시설과 계산 자원을 하나의 데이터 흐름으로 설계함.
         text: 가속기, 연구용 원자로, 핵융합 장치는 취득 단계의 축소와 실시간 처리를 전제로 한 데이터 체계가 필요함. GPU 클러스터를 들일 때는 전력 계측 해상도와 자기 워크로드의 측정을 평가 항목에 넣고, 노드 편차와 유휴 자원을 확인한 뒤 상한과 공동 실행을 적용함. 기관 간 연계는 계산 자원보다 신원 체계와 공용 서비스의 구분을 먼저 정함.
         refs: [misc155, ws_eesp144, ws_pmbsf126, ws_hust103]
+  - id: quantum
+    label: 양자 자원이 HPC 운영 안으로 들어옴
+    summary_ko: 양자 장치는 잡음이 크고 규모가 작아 단독으로는 쓰기 어렵고, 슈퍼컴퓨터와 묶인 혼합 워크플로에서 쓰임새를 찾고 있음. 논의의 중심은 양자 알고리즘보다, 양자 장치를 기존 스케줄러와 운영 체계에 어떻게 넣느냐로 옮겨 와 있음.
+    concepts: [quantum-hpc-integration, quantum-resource-scheduling, quantum-noise-fidelity, quantum-resource-interface, quantum-hpc-workflows, fidelity-aware-scheduling, quantum-hpc-systems, quantum-compilers]
+    diagram:
+      type: layers
+      title: 양자 자원을 HPC에 넣을 때 정해야 하는 층
+      items:
+        - {label: 응용, note: "화학, 재료, 최적화. 전처리부터 오류 완화와 검증까지 고전 계산이 맡음"}
+        - {label: 워크플로, note: "슈퍼컴퓨터가 양자 장치 둘을 조율한 시연. 컨테이너로 개발·시험 환경을 맞춤"}
+        - {label: 스케줄링, note: "양자 장치를 CPU, GPU처럼 스케줄. 장치별 충실도를 미리 예측해 배정"}
+        - {label: 인터페이스, note: 벤더 중립 인터페이스 두 종이 검증 단계}
+        - {label: 운영, note: "새로 생기는 역할 여섯과 각자가 필요로 하는 운영 데이터"}
+    sections:
+      - head: 양자 장치를 스케줄러가 다루는 자원으로 만드는 것이 첫 과제임.
+        text: 벤더 중립 인터페이스로 양자 자원을 CPU, GPU와 나란히 스케줄하게 했고, 배치 스케줄러와 클라우드 조율 플랫폼, 그래프 기반 스케줄러에서 검증했음. 소프트웨어 스택 전체를 장치 하나로 다루는 추상화도 제안됨. 공개 생태계가 세 워크숍에 걸쳐 소개됐음.
+        refs: [ws_sfwm112, ws_sfwm121, misc194, misc213]
+      - head: 잡음 때문에 어디서 어떻게 돌리느냐가 결과를 좌우함.
+        text: 같은 회로도 장치마다 충실도가 달라, 컴파일 전에 장치별 충실도를 예측해 배정하는 방식이 나옴. 20큐비트 장치에서는 전부 증폭하는 방식이 장치 시간을 6.7~104배 쓰고도 뚜렷한 이점이 없었고, 부분 결과를 묶어 쓰자 실행 횟수가 2.20~4.00배 줄었음.
+        refs: [ws_sfwm104, ws_sfwm118, ws_sfwm120]
+      - head: 실제 통합 사례는 일본과 미국, 유럽에서 나옴.
+        text: 후가쿠가 서로 다른 벤더의 양자 장치 둘을 조율해 화학 계산을 수행했고, 미국에서는 컨테이너 환경에서 양자와 고전 단계를 잇는 워크플로를 시험한 뒤 큰 시스템으로 옮겼음. 다섯 나라 기관이 통합 전략을 발표했으나 공개 초록에는 수치가 없음.
+        refs: [ws_sfwm111, misc141, misc214, misc211]
+      - head: 고전 계산 쪽의 부담도 함께 커짐.
+        text: 양자 회로를 고전적으로 모의하는 작업은 할당받은 노드의 배치 모양에 따라 1.73~2.31배 달라졌고, 실행 시간 예측에는 별도의 모델이 필요했음. 양자와 고전 자원이 섞인 클라우드에서는 반복 횟수가 임계점을 넘으면 대기가 급격히 늘었음.
+        refs: [ws_hpct103, ws_sfwm110, ws_sfwm102]
+      - head: 한국 연구기관에의 적용(제안) - 장치 도입과 운영 통합을 따로 계획함.
+        text: 양자 장치를 들이는 일과 기존 HPC 운영에 넣는 일은 별개임. 도입 사양에 스케줄러 연동 인터페이스를 넣고, 운영에 새로 생기는 역할과 필요한 데이터를 미리 정하며, 개발·시험 환경은 컨테이너로 먼저 맞추는 순서를 권함.
+        refs: [ws_sfwm112, ws_hpcoda123, misc141, misc221]

@@ -1,0 +1,14 @@
+id: misc213
+type: Presentation
+kind: talk
+label: "Software for Large Scale Application"
+session: sess130
+time: "14:00-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess130&id=misc213"
+authors: [amir-shehata, doug-oucharek, vanessa-sochat]
+addresses: [quantum-hpc-integration]
+proposes: [quantum-resource-interface, quantum-hpc-workflows]
+targets: [quantum-hpc-systems, workflow-systems]
+summary_ko: "대규모 양자-고전 응용을 가능하게 하는 소프트웨어 층을 살피는 발표 묶음임. 공개 양자 소프트웨어 생태계, 양자 자원을 HPC 시스템에 잇는 인터페이스, 그 위의 워크플로 도구와 라이브러리를 소개함."
+claims:
+  - "구성요소들이 어떻게 맞물리는지, 통합된 양자-HPC 시스템에서 실제 응용을 돌리려면 무엇이 필요한지 보임. 공개 초록에는 수치가 없음."

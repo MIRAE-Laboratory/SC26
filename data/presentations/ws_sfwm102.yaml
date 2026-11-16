@@ -1,0 +1,16 @@
+id: ws_sfwm102
+type: Presentation
+kind: paper
+label: "System Level Energy and Cost Characterization of Hybrid Quantum–Classical Cloud Workloads"
+session: sess112
+time: "11:15-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm102"
+authors: [waylon-luo, joao-vitor-macambira-donaton, priyabrata-senapati, qiang-guan]
+addresses: [quantum-resource-scheduling, energy-cost-carbon]
+proposes: [system-simulation]
+targets: [quantum-hpc-systems, cloud-science-environments]
+summary_ko: "양자와 고전 처리 장치가 섞인 클라우드의 전력, 에너지, 비용을 추정하는 모의 틀임. 작업 도착, 워크플로 반복, 장치의 전력 상태를 모델링하며 세부 양자 특성은 다루지 않음."
+claims:
+  - "다른 조건을 고정하고 변분 반복 횟수만 바꾸자 계산량과 작업당 에너지는 선형으로 늘어남."
+  - "임계 반복 횟수를 넘으면 양자 장치 점유와 처리 시간이 급격히 비선형이 됨."
+  - "양자 단계 시간의 거의 전부가 큐비트 연결을 기다리는 데 쓰이고, 작업당 처리 시간의 꼬리가 길어짐."

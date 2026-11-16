@@ -1,0 +1,13 @@
+id: misc208
+type: Presentation
+kind: talk
+label: "Rising Innovators Research Showcases"
+session: sess119
+time: "12:00-12:25"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess119&id=misc208"
+authors: [rabab-alomairy, giulia-guidi, tong-shu, floris-jan-willemsen, ruben-coll-sanchez]
+addresses: [talent-pipeline]
+proposes: []
+targets: []
+summary_ko: "초청된 신진 연구자 다섯의 5분 발표. 데이터 이동을 줄이는 구조 인지 알고리즘, 생명과학을 위한 희소 병렬 계산, 여러 적응 모듈을 함께 서빙하는 서버리스 방식, 이식성과 지속 가능성을 갖춘 HPC, 엑사스케일 AI 개발의 정형적 접근을 다룸. 공개 초록에는 수치가 없음."
+claims: []

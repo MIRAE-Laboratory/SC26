@@ -1,0 +1,16 @@
+id: ws_tpw126
+type: Presentation
+kind: paper
+label: "Pre-Training AuroraGPT on Intel XPUs"
+session: sess149
+time: "08:35-08:48"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw126"
+authors: [sam-foreman, nathan-nichols, varuni-katti-sastry, sam-wheeler, khalid-hossain, huihuo-zheng, murali-emani, filippo-simini, marieme-ngom, ethan-wong, venkatram-vishwanath]
+addresses: [llm-training-scaling, performance-portability, silent-training-failures]
+proposes: [portable-abstraction-layers]
+targets: [sci-foundation-models, distributed-training, leadership-facility]
+summary_ko: "약 12만 7천 개의 Intel 가속기를 가진 시스템에서 과학 파운데이션 모델을 사전학습함. 운영 중인 비 NVIDIA 시스템으로는 가장 큰 축에 듦. 다른 벤더의 프로그래밍·통신 스택을 쓰면서 이식성과 신뢰성의 공백이 드러남."
+claims:
+  - "스크립트 하나를 세 벤더의 가속기에서 고치지 않고 돌리는 실행기를 만듦."
+  - "20억 파라미터 모델이 7조 7,700억 토큰 학습을 마쳤고, 진행 중인 200억 모델은 약 17배 적은 토큰으로 그 최고 평가 점수에 이름."
+  - "손실 값을 조용히 틀리게 보고하는 버그, 최적화기 셋을 망가뜨린 800억 모델의 불안정, 2주 동안 잃은 실행 아홉 건의 수정을 다룸."

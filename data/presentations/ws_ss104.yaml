@@ -1,0 +1,16 @@
+id: ws_ss104
+type: Presentation
+kind: paper
+label: "From GPU-Accelerated Systems to Modern NVIDIA and AMD Superchips: Analyzing Energy and Power of a Heterogeneous SYCL Application"
+session: sess157
+time: "10:50-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss104"
+authors: [tim-thuring, malte-horst, alexander-strack, alexander-van-craen, dirk-pfluger]
+addresses: [energy-performance-tradeoff, hardware-selection]
+proposes: [energy-profiling, comparative-benchmarking]
+targets: [hpc-processors, amd-gpu-systems, parallel-programming-models]
+summary_ko: "HPC가 고전적인 GPU 가속에서 CPU와 GPU를 긴밀히 묶은 통합 칩으로 옮겨 갈 때 전력, 에너지, 성능이 어떻게 바뀌는지 조사함. CPU와 GPU의 공동 실행을 지원하는 이식형 응용을 씀."
+claims:
+  - "성능과 에너지의 절충은 최신 통합 칩에서도 유지됨."
+  - "한 통합 칩의 GPU 전용 실행은 기존 GPU 시스템보다 에너지를 크게 아낌. 주된 이유는 CPU 유휴 전력이 140 W 넘게 낮기 때문임."
+  - "다른 벤더의 통합 칩은 실행 시간이 거의 19% 짧고 에너지는 1.03배임."

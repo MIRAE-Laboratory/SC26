@@ -1,0 +1,16 @@
+id: ws_tpw112
+type: Presentation
+kind: paper
+label: "Can LLMs Write Task-Based Parallel Code?"
+session: sess149
+time: "08:48-09:01"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw112"
+authors: [eduardo-iraola, nestor-escola, francesc-lordan, rosa-m-badia]
+addresses: [ai-code-evaluation, llm-domain-validity]
+proposes: [domain-benchmark, context-retrieval]
+targets: [parallel-programming-models, task-runtimes]
+summary_ko: "병렬 코드 생성 벤치마크를 C++ 커널에서 작업 기반 파이썬 프레임워크 코드로 넓힘. 여러 단계의 프롬프트 방식을 제안하고 첫 두 단계를 평가함."
+claims:
+  - "모델 21개에서 정확성과 효율이 따로 감. 가장 정확한 모델이 가장 비효율적인 축에 들고, 둘 다 강한 것은 최신 모델 하나뿐임."
+  - "공개 가중치 모델은 프레임워크별 지침을 주면 이전 세대 상용 모델과 같아짐."
+  - "주된 장벽은 병렬 알고리즘이 아니라 프레임워크 지식임."

@@ -1,0 +1,15 @@
+id: ws_echo112
+type: Presentation
+kind: paper
+label: "Automated Task Placement for Hybrid HPC-Serverless Workflows"
+session: sess156
+time: "11:18-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo112"
+authors: [vijay-thurimella, anderson-andrei-da-silva, gourav-rattihalli, taina-coleman, rafael-ferreira-da-silva, dejan-milojicic]
+addresses: [workflow-scheduling, continuum-risk]
+proposes: [serverless-execution, multi-stage-scheduling]
+targets: [workflow-systems, cloud-science-environments, bioinformatics-workflows]
+summary_ko: "배치와 무관한 서버리스 적합성과, 배치에 따라 달라지는 자리 정하기를 분리함. 적합성은 실행 전에 정적 그래프 분석과 작업 유형당 한 번의 제한된 프로파일링으로 정함."
+claims:
+  - "세 워크플로의 단일 실행 실험에서 혼합 실행이 세 전략 중 가장 짧은 완료 시간을 냄. 이득은 워크플로가 용량에 얼마나 묶여 있는지를 따라 65.0%, 4.9%, 9.0%임."
+  - "부적합 판정을 받은 작업 유형을 빼면 완료 시간이 9.8~39.9% 더 줄고, 분배 비용의 중앙값은 221 µs임."

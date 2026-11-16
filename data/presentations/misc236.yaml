@@ -1,0 +1,14 @@
+id: misc236
+type: Presentation
+kind: invited
+label: "Scaling Computation, Expanding Discovery: From Medical Imaging to Continental-Scale Archaeology"
+session: sess148
+time: "09:30-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=misc236"
+authors: [yuankai-huo]
+addresses: [imaging-data-scale]
+proposes: []
+targets: [scientific-imaging]
+summary_ko: "과학 발견은 이제 데이터의 양보다 복잡한 정보를 시공간 규모에 걸쳐 분석하는 능력에 제약된다고 봄. 의료 영상에서 대륙 규모의 고고학까지의 사례를 듦."
+claims:
+  - "분야 과학자, AI 연구자, HPC 전문가의 협업으로 방대한 이기종 영상 데이터에서 통찰을 얻는 과정을 보임. 공개 초록에는 수치가 없음."

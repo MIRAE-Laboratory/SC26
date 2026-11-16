@@ -1,0 +1,16 @@
+id: ws_hpct108
+type: Presentation
+kind: paper
+label: "Diagnosing and delivering repairs for Fortran GPU offload compiler defects"
+session: sess155
+time: "10:50-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=ws_hpct108"
+authors: [spencer-bryngelson, daniel-vickers, benjamin-wilfong]
+addresses: [compiler-defects, translation-verification, software-ecosystem-readiness]
+proposes: [differential-testing, repair-loop]
+targets: [legacy-fortran, parallel-programming-models, scientific-apps]
+summary_ko: "포트란 GPU 오프로드 컴파일러는 미성숙하고, 시험 모음은 지시문 절의 조합을 놓침. 운영 중인 유동 해석 코드를 시험 도구로 써서 세 벤더의 도구 사슬을 조사함."
+claims:
+  - "석 달 동안 결함 45개를 찾고 수정 18개를 만듦."
+  - "15개는 조용히 틀린 답을 내므로, 42%가 컴파일하고 실행하는 시험 모음을 통과함."
+  - "수리의 전달이 늦음. 한 벤더의 컴파일러는 상류 수정이 서너 달 전에 나온 결함 둘을 그대로 싣고 있고, 병합된 수정 다섯이 109일째 빌드를 기다림."

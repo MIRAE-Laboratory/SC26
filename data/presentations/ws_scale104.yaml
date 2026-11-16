@@ -1,0 +1,15 @@
+id: ws_scale104
+type: Presentation
+kind: paper
+label: "Characterizing Low-bit Deployment of 3D Medical Image Analysis on Portable AI Supercomputer"
+session: sess148
+time: "11:20-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale104"
+authors: [chongyu-qu, zhengyi-lu, yanfan-zhu, junchao-zhu, yuechen-yang, juming-xiong, bennett-landman, yucheng-tang, yuankai-huo]
+addresses: [sensitive-data-governance, edge-resource-limits]
+proposes: [mixed-precision, comparative-benchmarking]
+targets: [scientific-imaging, edge-devices, llm-inference]
+summary_ko: "학습 후 저비트 양자화로 책상 위 장비에서 3차원 의료 영상 분할을 기관 안에서 안전하게 수행함. 570만에서 14억 6천만 파라미터까지의 분할 모델 아홉을 한 가지 작업 흐름으로 배치함."
+claims:
+  - "아홉 중 여덟이 가중치와 활성값을 8비트로 낮춰도 의미 있는 정확도 손실이 없음."
+  - "전체 정밀도 대비 추론이 3.9~7.2배 빠르고 메모리 사용이 크게 줄어듦."

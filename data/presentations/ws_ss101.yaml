@@ -1,0 +1,15 @@
+id: ws_ss101
+type: Presentation
+kind: paper
+label: "EcoShift: Performance-Aware Power Management for Power-Constrained Heterogeneous Systems"
+session: sess157
+time: "09:40-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss101"
+authors: [zhong-zheng, michael-papka, zhiling-lan]
+addresses: [power-cap-slowdown, energy-performance-tradeoff]
+proposes: [nonuniform-power-capping, analytical-performance-model]
+targets: [power-telemetry, hpc-processors]
+summary_ko: "전력이 제한된 HPC 시스템에서 CPU와 GPU를 함께 쓰는 응용을 위한 시스템 전체 전력 관리 틀임. 균등 배분과 사용률 기반 정책은 응용마다 전력 상한에 민감한 정도가 다른 점을 무시함. 온라인 성능 예측과 동적 계획법 배분기를 결합함."
+claims:
+  - "두 가지 이기종 플랫폼을 모의해 다양한 워크로드로 평가함."
+  - "기존 정책을 일관되게 앞서며, 시스템 전체 전력 제약을 지키면서 평균 성능이 최대 6% 높음."

@@ -1,0 +1,13 @@
+id: misc192
+type: Presentation
+kind: invited
+label: "Invited Talk #1 - The Future of Q-HPC Software Tools and Frameworks"
+session: sess112
+time: "09:05-09:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=misc192"
+authors: [travis-s-humble]
+addresses: []
+proposes: []
+targets: [quantum-hpc-systems]
+summary_ko: "양자-HPC 소프트웨어 도구와 틀의 미래를 다루는 초청 강연. 공개 페이지에 설명문이 없어 제목과 연사만 기록함."
+claims: []

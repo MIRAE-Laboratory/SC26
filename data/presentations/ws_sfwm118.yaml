@@ -1,0 +1,16 @@
+id: ws_sfwm118
+type: Presentation
+kind: paper
+label: "SemQBench: Benchmarking Decomposition-Aware Runtime Policies for Quantum-HPC Search"
+session: sess112
+time: "16:30-16:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm118"
+authors: [chandrachud-pati, yogesh-simmhan]
+addresses: [quantum-resource-scheduling, benchmark-validity]
+proposes: [domain-benchmark, reuse-first-retrieval]
+targets: [quantum-hpc-systems]
+summary_ko: "20큐비트 양자 프로세서에서 증폭, 실행 간 부분 결과 결합, 재시도 방식을 달리한 실행 정책 일곱을 비교함."
+claims:
+  - "전부 증폭하는 방식은 장치 시간을 6.7~104배 쓰고도 무작위 표본보다 뚜렷한 이점이 없음."
+  - "묶음 안에서 쓸 수 있는 부분 결과를 모으면 95% 신뢰에 필요한 실행 횟수가 2.20~4.00배 줄고, 108가지 부담 설정 중 99가지에서 이김."
+  - "실행 횟수가 줄어도 장치 시간이 줄지는 않음. 한 워크로드는 실행이 13회에서 4회로 줄었지만 장치 시간은 7.44에서 9.81 µs로 늘었음."

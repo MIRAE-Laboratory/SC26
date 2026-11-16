@@ -1,0 +1,16 @@
+id: ws_hpcoda122
+type: Presentation
+kind: paper
+label: "What is Your Cluster Actually Doing? Understanding Users, Utilization, and Performance Through Extensive Slurm Job Data Analysis"
+session: sess153
+time: "09:40-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda122"
+authors: [strahinja-trecakov, mohammad-al-tahat, jonathan-cook]
+addresses: [request-usage-mismatch, user-support-load]
+proposes: [job-trace-analysis]
+targets: [job-scheduler, campus-clusters]
+summary_ko: "대부분의 사이트가 이미 모으는 작업 정산 데이터를 새로운 네 갈래 작업 분류로 분석해 클러스터 활용을 살핌. 응용 사용과 사용자가 돌리는 병렬 구성을 추정함."
+claims:
+  - "HPC 사용의 큰 부분이 단일 노드 작업에서 나옴."
+  - "사용자가 적어 낸 실행 시간 한도는 실제 실행 시간과 대체로 무관함."
+  - "추정한 병렬 구성은 상당한 사용자 교육과 개선이 필요해 보임. 공개 초록에는 수치가 없음."

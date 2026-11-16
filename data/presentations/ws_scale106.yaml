@@ -1,0 +1,15 @@
+id: ws_scale106
+type: Presentation
+kind: paper
+label: "SkyMatch.jl: Fast, Differentiable Modeling for Millimeter-Sky Inference"
+session: sess148
+time: "11:10-11:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale106"
+authors: [vimarsh-sathia, kedar-phadke, siyuan-brant-qian, joaquin-vieira, william-moses]
+addresses: [simulation-scale-limits]
+proposes: [autotuning, surrogate-substitution]
+targets: [scientific-imaging, hpc-processors]
+summary_ko: "밀리미터파 하늘의 모의 지도와 목록을 계산하는 빠르고 미분 가능한 틀임. 현실적인 모의는 계산이 비싸 기존 도구는 하늘의 0.25% 미만만 모의했는데, 차세대 망원경은 약 25%를 관측함."
+claims:
+  - "컴파일러로 텐서 계산을 최적화해 CPU에서 최대 90배, GPU에서 3,300배 빨라짐."
+  - "최신 망원경 데이터의 현실적 모의와 천체 집단의 해석이 가능해짐."

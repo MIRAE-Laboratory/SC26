@@ -1,0 +1,15 @@
+id: ws_scale103
+type: Presentation
+kind: paper
+label: "SuperSAM: Crafting a SAM Supernetwork via Structured Pruning and Unstructured Parameter Prioritization"
+session: sess148
+time: "11:50-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale103"
+authors: [waqwoya-abebe, sadegh-jafari, sixing-yu, akash-dutta, jan-strube, nathan-tallent, luanzheng-guo, pablo-munoz, ali-jannesari]
+addresses: [edge-resource-limits, config-evaluation-cost]
+proposes: [model-compression, autotuning]
+targets: [scientific-imaging]
+summary_ko: "범용 영상 분할 모델에서 한 번의 학습으로 여러 부분망을 얻는 구조 탐색 공간을 만듦. 층별 구조적 가지치기와 활성값 기반 파라미터 우선순위로 탐색 공간을 설계함."
+claims:
+  - "배치 시점에 자동 튜너가 효율적인 부분망을 찾음."
+  - "찾은 모델은 원본보다 30~70% 작고, 일부는 사전학습된 원본을 앞섬."

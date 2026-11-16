@@ -1,0 +1,13 @@
+id: misc231
+type: Presentation
+kind: invited
+label: "Co-Designing the NIC and Transport: Simpler Hardware, Scalable Communication"
+session: sess146
+time: "15:55-16:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess146&id=misc231"
+authors: [keith-underwood]
+addresses: [network-congestion]
+proposes: [accelerated-transport]
+targets: [hpc-network]
+summary_ko: "네트워크 카드와 전송 계층을 함께 설계해 하드웨어를 단순하게 하고 통신을 확장하는 방안을 다루는 초청 발표. 공개 페이지에 설명문이 없어 제목과 연사만 기록함."
+claims: []

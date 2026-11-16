@@ -1,0 +1,16 @@
+id: ws_tpw115
+type: Presentation
+kind: paper
+label: "From Pilots to Production: Lessons in Cross-Institutional Federated Training and AI for Science"
+session: sess149
+time: "09:14-09:27"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw115"
+authors: [olivera-kotevska, max-carlson, yan-gao, francis-jeanson, yijiang-li, mohammad-naseri, minseok-ryu, sahil-tyagi, jerry-watkins, feiyi-wang, ravi-madduri, kibaek-kim]
+addresses: [sensitive-data-governance, institutional-privacy, cross-facility-integration]
+proposes: [federated-learning, privacy-assurance]
+targets: [federated-clusters, sci-foundation-models, leadership-facility]
+summary_ko: "값진 과학 데이터 가운데는 독점, 수출 통제, 기밀, 데이터 주권 때문에 한곳에 모을 수 없는 것이 많음. 연합 AI는 데이터를 기관에 둔 채 여러 기관에 걸쳐 모델을 학습함. 다섯 영역의 준비도 틀로 두 건의 대규모 배치를 살핌."
+claims:
+  - "하나는 서로 다른 벤더의 가속기를 쓰는 핵안보 연구소 셋에 걸친 LLM 연합 학습임."
+  - "다른 하나는 세 벤더의 시스템 넷에 걸친 시설 간 미세조정임."
+  - "메모리 효율, 신뢰성, 동기화, 프라이버시와 신뢰의 관행을 다루고, 비동기 연합, 유출 감사, 검증 표준, 데이터 계약의 통일을 남은 과제로 꼽음."

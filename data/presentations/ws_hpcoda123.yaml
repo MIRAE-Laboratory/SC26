@@ -1,0 +1,15 @@
+id: ws_hpcoda123
+type: Presentation
+kind: talk
+label: "Emerging Personas and Tools for Hybrid Quantum-HPC Systems"
+session: sess153
+time: "11:20-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda123"
+authors: [eun-lee, jessie-yu, claudio-carvalho, yoonho-park, marcelo-amaral, tim-osborne, woong-shin]
+addresses: [quantum-hpc-integration, ops-data-complexity]
+proposes: [standardized-run-metadata]
+targets: [quantum-hpc-systems, ops-telemetry]
+summary_ko: "수십에서 수백 큐비트의 양자 처리 장치가 HPC와 통합된 환경에서 나타나는 서로 다른 역할 여섯을 식별하고 특징을 정리함."
+claims:
+  - "역할마다 책임, 도구, 필요한 운영 데이터가 다름."
+  - "일관된 데이터 표현과 분석 틀이 필요하다고 봄. 공개 초록에는 수치가 없음."

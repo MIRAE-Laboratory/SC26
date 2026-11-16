@@ -1,0 +1,15 @@
+id: ws_scale105
+type: Presentation
+kind: paper
+label: "Toward a Foundation Plug-and-Play Prior for Computed Tomography Reconstruction via a Multimodal Diffusion Model"
+session: sess148
+time: "11:40-11:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale105"
+authors: [haley-duba-sullivan, patxi-fernandez-zelaia, obaidullah-rahman, amirkoushyar-ziabari]
+addresses: [delayed-feedback, imaging-data-scale]
+proposes: [generative-reconstruction]
+targets: [scientific-imaging, user-facility-beamline, nuclear-materials-research]
+summary_ko: "단층촬영의 처리량은 투영 수와 투영당 검출기 적분 시간에 따라 늘어나는 촬영 시간에 묶임. 적은 투영이나 낮은 선량으로 복원하려면 촬영 조건마다 학습한 사전 모델이 필요했음. 여러 영상 분야로 학습한 확산 모델 하나를 고정한 채 여러 단층촬영 문제의 사전 모델로 씀."
+claims:
+  - "촬영 방식, 빔 구조, 재료, 열화가 다른 세 데이터셋에서 평가함. 적층 제조 금속 부품의 원뿔빔 X선 촬영과 콘크리트의 평행빔 중성자 촬영이 포함됨."
+  - "세 경우 모두 해석적 복원을 앞섬. 공개 초록에는 수치가 없음."

@@ -1,0 +1,16 @@
+id: ws_echo108
+type: Presentation
+kind: paper
+label: "Placing the Control Plane: Cloud-Native Federated Learning Across Batch-Scheduled HPC"
+session: sess156
+time: "10:54-11:06"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo108"
+authors: [paul-j-wright]
+addresses: [container-hpc-mismatch, institutional-privacy, cross-facility-integration]
+proposes: [federated-learning, decoupled-service-ecosystem]
+targets: [federated-clusters, national-ai-infrastructure, job-scheduler, kubernetes-baremetal]
+summary_ko: "영국의 AI 연구 자원은 국가 슈퍼컴퓨터를 클라우드에 익숙한 사용자에게 열지만, 배치 방식 HPC는 시간 제한이 있는 할당을 주고 회수함. 연합학습이 오래 사는 제어 계층과 수명이 짧은 학습 사이의 긴장을 드러냄."
+claims:
+  - "조정 서버는 모델 갱신과 제어 메타데이터만 보므로 중립 인프라에 둘 수 있고, 클라이언트 제어 프로세스는 신뢰 경계 안에 있어야 함."
+  - "세 시스템에 걸친 기관 간 연합을 수정 없는 공개 프레임워크로 구성해 클라이언트 배치 비용을 측정함."
+  - "신뢰 경계 안의 자리로 서비스형 Kubernetes를 제안함. 공개 초록에는 수치가 없음."

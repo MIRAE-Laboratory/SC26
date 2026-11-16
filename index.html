@@ -103,7 +103,6 @@
   .grp .it.kr { --c: var(--c-korea); }
   .card:nth-child(4n+1) { --c: var(--c-decision); } .card:nth-child(4n+2) { --c: var(--c-trial); } .card:nth-child(4n+3) { --c: var(--c-korea); } .card:nth-child(4n+4) { --c: var(--c-extra); }
   .card { border-top: 3px solid var(--c, var(--link)); } .card b { color: var(--c, var(--link)) !important; }
-  .tcard:nth-of-type(1) { --c: var(--c-decision); } .tcard:nth-of-type(2) { --c: var(--c-trial); } .tcard:nth-of-type(3) { --c: var(--c-korea); }
   .tcard { border-left-color: var(--c, var(--link)) !important; } .tcard i { color: var(--c, var(--link)) !important; }
   /* ---- 근거 수준, 용어 풀이, 인쇄 ---- */
   .ev { float: right; font-size: .72em; font-weight: 500; border-radius: 999px; padding: 0 7px; margin-left: 8px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; line-height: 1.7; }
@@ -366,8 +365,8 @@
     if (!full || !(refs || []).length) return "";
     const c = { num: 0, qual: 0, none: 0 };
     refs.forEach((r) => { const e = evOf(r); if (e) c[e]++; });
-    if (c.num >= 2) return `<span class="ev a" title="수치를 제시한 발표 ${c.num}건이 근거임">근거 ${c.num}건</span>`;
-    if (c.num === 1) return `<span class="ev b" title="수치를 제시한 발표 1건이 근거임">근거 1건</span>`;
+    if (c.num >= 2) return `<span class="ev a" title="수치를 제시한 발표 ${c.num}건이 근거임">수치 근거 ${c.num}건</span>`;
+    if (c.num === 1) return `<span class="ev b" title="수치를 제시한 발표 1건이 근거임">수치 근거 1건</span>`;
     if (c.qual) return `<span class="ev c" title="근거 발표가 수치 없이 방법이나 입장을 설명함">정성 근거</span>`;
     return `<span class="ev d" title="근거 발표의 공개 설명문이 없어 제목만 확인함">제목만 확인</span>`;
   };
@@ -416,8 +415,8 @@
     if (!s) {                                                    // 첫 화면: 핵심 수치와 심층 요약 카드
       if ((overview.highlights || []).length) h += `<h3>핵심 수치</h3><div class="cards">` + overview.highlights.map((x) =>
         `<div class="card" data-id="${esc(x.ref || "")}"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("") + `</div>`;
-      if (themes.length) h += `<h3>심층 요약 <small>· 여러 세션을 가로지른 세 관점</small></h3>` + themes.map((th, i) =>
-        `<div class="tcard" data-sess="theme:${esc(th.id)}"><i>${i + 1}</i><b>${esc(th.label)}</b><span>${esc(th.summary_ko || "")}</span></div>`).join("");
+      if (themes.length) h += `<h3>심층 요약 <small>· 여러 세션을 가로지른 관점 ${themes.length}개</small></h3>` + themes.map((th, i) =>
+        `<div class="tcard" style="--c:var(--c-${["decision", "trial", "korea", "extra"][i % 4]})" data-sess="theme:${esc(th.id)}"><i>${i + 1}</i><b>${esc(th.label)}</b><span>${esc(th.summary_ko || "")}</span></div>`).join("");
     }
     h += diagramHtml(src.diagram);
     for (const [key, title, sub] of VIEWS) {
@@ -929,7 +928,7 @@
       cy.nodes().forEach((n) => {
         const d = nodes.get(n.id());
         const show = compact
-          ? (d.type === "Session" ? visible.Session && inScope(d.id) : A.cs.has(d.id) && visible[d.type] && (thSet ? thSet.has(d.id) : A.cs.get(d.id).size >= 4))
+          ? (d.type === "Session" ? visible.Session && inScope(d.id) : A.cs.has(d.id) && visible[d.type] && (thSet ? thSet.has(d.id) : A.cs.get(d.id).size >= Math.max(4, Math.round(sessions.length / 5))))
           : visible[d.type] && inScope(d.id);
         n.toggleClass("hidden", !show); n.toggleClass("big", compact);
       });

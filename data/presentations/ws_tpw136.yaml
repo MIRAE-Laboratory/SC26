@@ -1,0 +1,14 @@
+id: ws_tpw136
+type: Presentation
+kind: paper
+label: "Proper Rewards: Post-Training Time Series Foundation Models with Scoring-Rule GRPO"
+session: sess149
+time: "09:01-09:14"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw136"
+authors: [carlo-siebenschuh, brian-hsu, kyle-hippe, arvind-ramanathan, ian-foster, rick-stevens]
+addresses: [rollout-error, trust-in-automated-decisions]
+proposes: [foundation-model-finetuning]
+targets: [sci-foundation-models]
+summary_ko: "강화학습은 시계열 파운데이션 모델의 출력을 좁혀 과신하는 예측을 만들 수 있음. 집단 상대 정책 최적화와 올바른 채점 규칙 보상을 결합해 보정된 예측 분포를 끌어냄."
+claims:
+  - "다양한 동역학계 데이터에서 에너지 점수 보상이 사전학습 모델 대비 오차를 54%, 분포 내 함수 예측 오차를 57% 줄임."

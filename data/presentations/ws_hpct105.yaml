@@ -1,0 +1,14 @@
+id: ws_hpct105
+type: Presentation
+kind: paper
+label: "Tracking HPC Software Stack Drift and Performance with Benchpark"
+session: sess155
+time: "09:40-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=ws_hpct105"
+authors: [matthew-chung, joshua-vining, michael-mckinsey, stephanie-brink, olga-pearce]
+addresses: [software-stack-drift, performance-diagnosis-gap]
+proposes: [continuous-benchmarking, ci-automation, failure-attribution]
+targets: [hpc-packaging, amd-gpu-systems]
+summary_ko: "복잡한 HPC 시스템의 소프트웨어 스택은 응용과 별개로 계속 바뀜. 기존 벤치마크 틀은 이런 변화의 평가를 완전히 자동화하지 못하고, 합격·불합격 결과는 실패나 느려짐을 설명하지 못함. 스택의 변화를 추적하고 기능과 성능을 시험하며 원인이 된 변경을 식별하는 방법론을 제시함."
+claims:
+  - "두 계산 센터의 시스템에서 시연해, 성능 회귀를 GPU 런타임 라이브러리의 갱신에 귀속시킴. 공개 초록에는 수치가 없음."

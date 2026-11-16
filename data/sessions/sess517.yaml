@@ -6,7 +6,7 @@ date: "2026-11-15"
 time: "09:00-12:30 CST"
 room: W178a
 url: https://sc26.conference-program.com/session/?sess=sess517
-chairs: [chris-bording, elsa-j-gonsiorowski, lev-gorenstein, aaron-p-jezghani, ilya-zhukov]
+chairs: [chris-bording, elsa-j-gonsiorowski, lev-gorenstein, aaron-jezghani, ilya-zhukov]
 summary_ko: "시스템 관리자, 사용자 지원 인력, 도구 개발자, 정책 담당자, 최종 사용자가 복잡한 HPC 환경에서 연구자를 지원하는 과제를 논의하는 워크숍. 모범 사례, 사용자 지원 도구, 슈퍼컴퓨팅 센터의 지원 효율화가 주제임."
 diagram:
   type: flow

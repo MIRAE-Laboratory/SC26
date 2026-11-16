@@ -1,0 +1,15 @@
+id: ws_sfwm113
+type: Presentation
+kind: paper
+label: "PauLIB: HPC Strategies for Pauli-Arithmetic-Based Quantum Computing Workloads and Simulations"
+session: sess112
+time: "10:45-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm113"
+authors: [florian-krotz]
+addresses: [simulation-scale-limits]
+proposes: [mpi-parallelization]
+targets: [quantum-compilers, hpc-libraries]
+summary_ko: "양자 계산의 파울리 연산 워크로드를 위한 헤더 전용 C++ 라이브러리임. 비트로 압축한 표현으로 곱셈을 배타적 논리합과 비트 수 세기로 줄이고, 벡터 연산과 GPU에 맞는 자료 배치와 결정론적 병렬성을 씀."
+claims:
+  - "기존 두 도구보다 처리량이 자릿수 단위로 높고 메모리가 적으며, GPU 커널에서도 속도 향상을 보임."
+  - "두 사례 연구가 노트북 CPU에서 72코어 서버까지 수정 없이 확장됨. 공개 소프트웨어임."

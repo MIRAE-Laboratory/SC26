@@ -1,0 +1,15 @@
+id: ws_scale101
+type: Presentation
+kind: paper
+label: "AC-STRR: Training-Aware Visual Token Reduction for Scalable High-Resolution Medical Vision-Language Models"
+session: sess148
+time: "10:50-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale101"
+authors: [ye-tian, yiming-yin, xiaowen-chu, yizhou-yu, hong-xu, bo-li, chuan-wu]
+addresses: [high-resolution-scaling, llm-training-scaling]
+proposes: [model-compression, foundation-model-finetuning]
+targets: [scientific-imaging, distributed-training]
+summary_ko: "고해상도 흉부 방사선 영상의 긴 시각 토큰 열이 시각-언어 모델의 미세조정과 추론 비용을 키움. 배경 토큰을 거르고 특징적인 토큰을 남기며 중복 문맥을 합침. 학습과 추론에 같은 경로를 씀."
+claims:
+  - "GPU 하나에서 미세조정 시간이 24.9% 줄고, 여덟 개에서 전체 토큰 기준 대비 합산 9.07배 빨라짐."
+  - "원 해상도 데이터에서 토큰이 최대 63.5% 줄고, 조정한 설정은 판독문 품질을 기준 근처로 유지함."

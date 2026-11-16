@@ -1,0 +1,16 @@
+id: ws_tpw122
+type: Presentation
+kind: paper
+label: "Governed Agents: An Evidence-Based Architecture for the Computing Continuum"
+session: sess149
+time: "10:30-10:43"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw122"
+authors: [vipin-chaudhary, raghu-machiraju, dhabaleswar-k-dk-panda]
+addresses: [agent-boundaries, trust-in-automated-decisions, continuum-risk]
+proposes: [human-approval-gates, execution-integrity-guard, risk-contracts]
+targets: [ai-agents, edge-devices]
+summary_ko: "에이전트는 엣지, 클라우드, HPC에 걸쳐 모델 선택, 데이터 정리, 배치, 재학습, 복구를 자동화하지만, 불확실한 출력이 되돌릴 수 없는 행동을 일으킬 수 있음. 통제되는 에이전트는 기계가 확인할 수 있는 관문을 통과해야 함."
+claims:
+  - "관문은 문맥의 유효성, 결정의 불확실성, 정책 준수, 실행 가능성, 감사 가능성임."
+  - "감지, 결정, 행동, 학습의 순환 위에 통제 계층을 둠."
+  - "증거가 구성요소 수준이어서, 반증 가능한 실험 절차와 평가 지표, 실패 시험을 명시함."

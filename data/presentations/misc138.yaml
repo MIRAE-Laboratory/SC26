@@ -1,0 +1,16 @@
+id: misc138
+type: Presentation
+kind: invited
+label: "JUPITER: From Consistent Imaging to Continuous Benchmarking"
+session: sess155
+time: "08:35-09:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=misc138"
+authors: [benedikt-von-st-vieth]
+addresses: [env-configuration, software-stack-drift, site-deployment-effort]
+proposes: [layered-image-pipeline, continuous-benchmarking]
+targets: [leadership-facility, ai-supercomputer]
+summary_ko: "유럽의 엑사스케일 시스템 설치 과정을 빈 전산실에서 노드 6,000대를 일관되게 운영하기까지 되짚는 초청 강연임. 조달과 설계 때 구상한 관리 스택, 성능 평가용 벤치마크, 설치의 교훈을 다룸."
+claims:
+  - "기준 데이터베이스를 설정과 계산 노드 이미지로 바꾸는 방법을 설명함."
+  - "운영 중의 상시 벤치마크가 시간에 따른 성능 저하를 드러냄."
+  - "실패 사례와, AI가 강화된 차세대 엑사스케일 시스템을 위한 개선 계획으로 마무리함."

@@ -69,6 +69,16 @@ claims:
 - (147) High-Accuracy Computing on Low-Precision Hardware (2026-11-16)
 - (128) 8th International Workshop on Containers and New Orchestration Paradigms for Isolated Environments in HPC (CANOPIE-HPC) (2026-11-16)
 - (131) 8th Workshop on Programming and Performance Visualization Tools (ProTools) (2026-11-16)
+- (112) The 2nd International Workshop for Software Frameworks and Workload Management on Quantum-HPC Ecosystems (2026-11-15)
+- (119) RISE 2026: 1st International Workshop on Rising Innovators in Sustainable Exacomputing (2026-11-15)
+- (130) 2nd Annual Workshop on Large-Scale Quantum-Classical Computing (LSQCC) (2026-11-16)
+- (146) Sixth International Symposium on Quantitative Co-Design of Supercomputers (2026-11-16)
+- (148) Scale to See: Scalable AI for Scientific Imaging and Spatiotemporal Data (2026-11-20)
+- (149) 4th Annual Trillion Parameter Workshop: Building Open AI Infrastructure, Models, and Agentic Systems for Science (2026-11-20)
+- (153) Workshop on Operational Data Analytics in HPC (HPC-ODA) (2026-11-20)
+- (155) Fourth International Workshop on HPC Testing and Evaluation of Systems, Tools, and Software (HPCTESTS 2026) (2026-11-20)
+- (156) The 1st International Workshop on Edge-Cloud-HPC Operational Continuum (ECHO) (2026-11-20)
+- (157) Sustainable Supercomputing (2026-11-20)
 
 프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`, `ws_corr114`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
 

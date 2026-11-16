@@ -1,0 +1,15 @@
+id: ws_hpcoda103
+type: Presentation
+kind: talk
+label: "Towards MPI Communication Modeling From Passive Network Telemetry"
+session: sess153
+time: "11:50-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda103"
+authors: [rui-liu, paul-lin, evan-weinberg, dhruva-kulkarni, zhengji-zhao, ian-karlin, garima-kochhar, brian-austin]
+addresses: [observability-overhead, performance-diagnosis-gap]
+proposes: [infrastructure-telemetry, analytical-performance-model]
+targets: [hpc-network, mpi-simulations, leadership-facility]
+summary_ko: "메시지 크기 분포를 알려면 보통 응용 계측이나 통신 양상에 대한 사전 지식이 필요함. 네트워크 카드가 내고 시설이 거의 비용 없이 모으는 패킷 수준 계수기만으로 이를 복원하는 응용 무관 모델을 제안함."
+claims:
+  - "토폴로지, 상대, 연산 종류의 지식이 필요 없고 보관된 텔레메트리에 소급 적용할 수 있음."
+  - "한 시스템의 계수기에서 벤치마크의 메시지 수를 0.5% 이내로, 분자동역학 응용의 주요 크기 구간을 10% 이내로 추정함."

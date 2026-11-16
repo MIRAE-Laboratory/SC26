@@ -1,0 +1,15 @@
+id: ws_echo113
+type: Presentation
+kind: paper
+label: "PerfDecode: Accelerating LLM Decoding on Systolic Arrays via Performance Modeling"
+session: sess156
+time: "09:36-09:48"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo113"
+authors: [dinghong-song, rishabh-rajesh, karthick-gopalswamy, patrick-lange]
+addresses: [llm-serving-efficiency, memory-bound-performance]
+proposes: [analytical-performance-model, autotuning]
+targets: [llm-inference, hpc-processors]
+summary_ko: "성능 모델을 길잡이로 삼아 맞춤형 AI 칩에서 LLM 디코딩을 가속함. 토큰이 적은 행렬 곱은 처리 요소를 놀리고 연산 집약도가 낮음. 행렬 곱을 재구성해 유휴 요소를 쓰고 데이터 이동을 계산과 겹침."
+claims:
+  - "전송, 시작 부담, 계산, 축소, 되쓰기, 칩 내 메모리 한도를 담은 해석 모델이 행렬 모양마다 구획 설정을 고름."
+  - "80억과 700억 파라미터 모델의 디코드 연산자에서 타일 방식 대비 기하평균 2.73배, 2.85배 빠름."

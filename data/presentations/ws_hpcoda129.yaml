@@ -1,0 +1,15 @@
+id: ws_hpcoda129
+type: Presentation
+kind: talk
+label: "TULCA-Based Visual Analytics of HPC Operational Data: A Case Study of Fugaku Rack's Power Data"
+session: sess153
+time: "10:50-11:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda129"
+authors: [kazuki-miyake, naohisa-sakamoto, jorji-nonaka, masaaki-terai, yuji-iguchi, takanori-fujiwara]
+addresses: [ops-data-complexity, node-variation]
+proposes: [operations-visualization]
+targets: [power-telemetry, leadership-facility]
+summary_ko: "후가쿠의 랙 수준 전력 데이터(시간, 공간, 변수의 3차 텐서)에 텐서 비교 분석 기법을 적용함. 운영 기간 레이블이 붙은 집단 사이의 차이를 강조하는 저차원 표현을 얻음."
+claims:
+  - "계산 랙 432개와 두 운영 기간에 적용함."
+  - "기여가 큰 랙들은 날카롭고 짧은 전력 변동을 보였음."

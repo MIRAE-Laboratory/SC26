@@ -1,0 +1,15 @@
+id: misc214
+type: Presentation
+kind: panel
+label: "National Lab Strategies"
+session: sess130
+time: "16:00-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess130&id=misc214"
+authors: [mitsuhisa-sato, travis-s-humble, miwako-tsuji, javier-aizpurua, marco-de-pascale, nitin-shivaraman, laura-schulz]
+addresses: [quantum-hpc-integration, cross-facility-integration]
+proposes: []
+targets: [quantum-hpc-systems, national-ai-infrastructure]
+summary_ko: "양자 컴퓨팅을 HPC 시스템 옆에 구축하거나 운영 중인 국립연구소와 슈퍼컴퓨팅 센터의 대표들이 각 기관의 전략을 짧게 발표함. 미국, 일본, 스페인, 독일, 싱가포르의 기관이 참여함."
+claims:
+  - "계획, 교훈, 양자를 HPC에 통합하는 우선순위를 다룸."
+  - "이어지는 패널에서 공통 과제와 지역 간 협력을 논의함. 공개 초록에는 수치가 없음."

@@ -1,0 +1,15 @@
+id: ws_sfwm121
+type: Presentation
+kind: paper
+label: "Rethinking QDMI: Expanding the Quantum Device Abstraction to the Software Stack"
+session: sess112
+time: "11:00-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm121"
+authors: [ercument-kaya, muhammad-nufail-farooqi, marco-de-pascale, martin-schulz, jorge-echavarria]
+addresses: [quantum-hpc-integration, heterogeneity-complexity]
+proposes: [quantum-resource-interface]
+targets: [quantum-hpc-systems]
+summary_ko: "양자 장치가 HPC 센터에 직접 설치되며 표준 인터페이스의 수요가 생김. 떠오르는 장치 관리 인터페이스(QDMI)는 여러 양자 방식을 한 인터페이스로 다루는 저수준 추상화를 제공함. 소프트웨어 스택 전체를 장치 하나로 다루는 방식을 제안함."
+claims:
+  - "독일의 한 슈퍼컴퓨팅 센터 소프트웨어 스택을 장치로 구현한 개념 증명을 제시함."
+  - "소프트웨어 스택과 양자 작업의 생애주기 관리에서 얻은 교훈을 공유함. 공개 초록에는 수치가 없음."

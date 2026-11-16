@@ -1,0 +1,15 @@
+id: ws_hpcoda121
+type: Presentation
+kind: paper
+label: "On preprocessing heterogeneous HPC telemetry for use in foundation models and digital twins"
+session: sess153
+time: "08:55-09:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda121"
+authors: [wesley-brewer, ketan-maheshwari, qing-liu, sean-wilkinson, bertrand-cirou, gerard-gil, jean-luca-bez, kaveen-hiniduma, suren-byna]
+addresses: [ops-data-complexity, data-readiness, resource-prediction]
+proposes: [standardized-run-metadata, system-simulation, foundation-model-finetuning]
+targets: [ops-telemetry, leadership-facility, job-scheduler]
+summary_ko: "HPC 텔레메트리의 필드, 단위, 프라이버시 규칙이 제각각이어서 파운데이션 모델과 디지털 트윈에 쓰기 어려움. 기존 도구들을 HPC용 처리기와 에이전트 절차로 확장해 종단 처리 경로를 만듦."
+claims:
+  - "한 시스템의 기록을 다른 시스템의 트윈에 그대로 재생하자 표본의 10.23%가 전력 한도를 어겼고, 재정규화로 0.0042%가 됨."
+  - "정적인 스케줄러 메타데이터는 신호가 없었음. 익명화 전의 식별 임베딩을 쓰면 실행 시간 예측의 결정계수가 0.960이고, 그것 없이 처음 보는 시스템으로 옮기면 0.716임."

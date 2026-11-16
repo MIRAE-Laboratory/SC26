@@ -1,0 +1,13 @@
+id: misc232
+type: Presentation
+kind: invited
+label: "Co-Design for new processor and system architectures at JSC"
+session: sess146
+time: "16:20-16:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess146&id=misc232"
+authors: [hans-christian-hoppe]
+addresses: [hardware-selection, heterogeneity-complexity]
+proposes: [design-space-exploration]
+targets: [hpc-processors]
+summary_ko: "독일 슈퍼컴퓨팅 센터의 새 프로세서와 시스템 구조 공동 설계를 다루는 초청 발표. 공개 페이지에 설명문이 없어 제목과 연사만 기록함."
+claims: []

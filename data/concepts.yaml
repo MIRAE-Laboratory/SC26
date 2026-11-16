@@ -103,6 +103,15 @@ Problem:
   performance-diagnosis-gap: {label: Tools show where but not why, label_ko: 성능 문제의 원인을 알려 주지 못하는 도구, related: [ops-data-complexity]}
   observability-overhead: {label: Overhead and data volume of instrumentation, label_ko: 계측의 부담과 데이터 과다, related: [telemetry-misalignment]}
   measurement-comparability: {label: Incomparable vendor measurements, label_ko: 벤더 간 측정값의 비교 불가, related: [benchmark-validity]}
+  quantum-resource-scheduling: {label: Scheduling quantum resources alongside HPC, label_ko: 양자 자원을 HPC와 함께 스케줄링, related: [quantum-hpc-integration, workflow-scheduling]}
+  quantum-noise-fidelity: {label: Noise and fidelity limits of quantum devices, label_ko: 양자 장치의 잡음과 충실도 한계, related: [quantum-hpc-integration]}
+  imaging-data-scale: {label: Scale of scientific imaging data, label_ko: 과학 영상 데이터의 규모, related: [data-deluge, high-resolution-scaling]}
+  request-usage-mismatch: {label: Mismatch between requested and used resources, label_ko: 요청한 자원과 실제 사용의 불일치, related: [underused-resources, resource-prediction]}
+  software-stack-drift: {label: Performance regressions from software stack changes, label_ko: 소프트웨어 스택 변화로 인한 성능 회귀, related: [env-configuration]}
+  compiler-defects: {label: Defects in GPU offload compilers, label_ko: GPU 오프로드 컴파일러의 결함, related: [software-ecosystem-readiness]}
+  embodied-carbon: {label: Embodied carbon of hardware, label_ko: 하드웨어 제조에 든 내재 탄소, related: [energy-cost-carbon]}
+  edge-resource-limits: {label: Resource limits at the edge, label_ko: 엣지 장치의 자원 한계, related: [continuum-risk]}
+  talent-pipeline: {label: HPC and AI talent pipeline, label_ko: HPC·AI 인력 양성}
 Method:
   attack-trees: {label: Threat modeling with attack trees, label_ko: 공격 트리 기반 위협 모델링}
   tre-sde: {label: Trusted Research Environment (TRE/SDE), label_ko: 신뢰연구환경(TRE/SDE), related: [sensitive-data-governance]}
@@ -268,6 +277,19 @@ Method:
   ci-automation: {label: Automated build and test pipelines, label_ko: 빌드·시험 자동화 파이프라인}
   hardware-counter-analysis: {label: Hardware-counter based analysis, label_ko: 하드웨어 계수기 기반 분석, related: [analytical-performance-model]}
   tool-interface-spec: {label: Shared semantic interface for tools, label_ko: 도구 공용 의미 명세}
+  quantum-resource-interface: {label: Vendor-neutral quantum resource interface, label_ko: 벤더 중립 양자 자원 인터페이스, related: [tool-interface-spec]}
+  quantum-hpc-workflows: {label: Hybrid quantum-HPC workflow orchestration, label_ko: 양자-HPC 혼합 워크플로 조율}
+  fidelity-aware-scheduling: {label: Fidelity-aware quantum scheduling, label_ko: 충실도를 고려한 양자 스케줄링}
+  continuous-benchmarking: {label: Continuous benchmarking and regression testing, label_ko: 상시 벤치마크와 회귀 시험, related: [ci-automation, full-system-health-tests]}
+  model-compression: {label: Model pruning and token reduction, label_ko: 모델 가지치기와 토큰 축소, related: [mixed-precision]}
+  generative-reconstruction: {label: Generative priors for image reconstruction, label_ko: 생성 모델 기반 영상 복원}
+  execution-integrity-guard: {label: Deterministic guard on agent execution, label_ko: 에이전트 실행의 결정론적 검사, related: [runtime-sandbox, origin-labeling]}
+  job-trace-analysis: {label: Job accounting trace analysis, label_ko: 작업 기록 분석, related: [io-characterization]}
+  operations-visualization: {label: Visual analytics of operational data, label_ko: 운영 데이터의 시각 분석}
+  heat-reuse: {label: Waste heat reuse, label_ko: 폐열 재사용}
+  carbon-aware-upgrade: {label: Carbon-aware hardware refresh, label_ko: 탄소를 고려한 장비 교체}
+  edge-cloud-routing: {label: Edge-cloud task routing, label_ko: 엣지와 클라우드 사이의 작업 분배}
+  rl-resource-scaling: {label: Reinforcement learning for resource scaling, label_ko: 강화학습 기반 자원 조정, related: [rl-power-control]}
 System:
   ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터}
   kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스}
@@ -340,3 +362,7 @@ System:
   campus-clusters: {label: Campus and enterprise clusters, label_ko: 대학·기업 클러스터}
   container-runtimes: {label: HPC container runtimes, label_ko: HPC 컨테이너 런타임, related: [hpc-packaging]}
   performance-tools: {label: Performance measurement and analysis tools, label_ko: 성능 측정·분석 도구}
+  scientific-imaging: {label: Scientific and medical imaging, label_ko: 과학·의료 영상}
+  edge-devices: {label: Edge devices, label_ko: 엣지 장치, related: [edge-sensor-networks]}
+  cosmology-simulations: {label: Cosmology simulations, label_ko: 우주론 시뮬레이션, related: [ensemble-simulations]}
+  nuclear-materials-research: {label: Nuclear fuel and materials research, label_ko: 핵연료·원자력 재료 연구, related: [reactor-physics-codes]}

@@ -1,0 +1,15 @@
+id: ws_sfwm111
+type: Presentation
+kind: paper
+label: "Quantum-HPC Workflows Across Multiple Quantum Computing Platforms: Two Case Studies"
+session: sess112
+time: "09:45-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm111"
+authors: [philipp-seitz, miwako-tsuji, john-children, yuta-kikuchi, riku-masui, juan-pedersen, kentaro-yamamoto, ross-duncan]
+addresses: [quantum-hpc-integration]
+proposes: [quantum-hpc-workflows]
+targets: [quantum-hpc-systems, leadership-facility, molecular-design]
+summary_ko: "슈퍼컴퓨터 후가쿠, 서로 다른 벤더의 양자 장치 둘, 혼합 워크플로 소프트웨어를 결합한 양자-HPC 시스템을 설명하고 두 가지 시연을 제시함."
+claims:
+  - "첫째 시연에서는 후가쿠와 양자 장치 하나가 고전·양자 부분을 나눠 맡아 생체 분자계의 들뜬 상태를 계산함."
+  - "둘째 시연에서는 후가쿠가 양자 장치 둘을 조율해 단순한 계의 바닥 상태 에너지를 계산함. 공개 초록에는 수치가 없음."

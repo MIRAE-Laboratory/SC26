@@ -1,0 +1,15 @@
+id: misc211
+type: Presentation
+kind: talk
+label: "Algorithms & Applications"
+session: sess130
+time: "10:30-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess130&id=misc211"
+authors: [kenneth-merz, seiji-yunoki, kentaro-yamamoto]
+addresses: [quantum-hpc-integration, quantum-noise-fidelity]
+proposes: [quantum-hpc-workflows]
+targets: [quantum-hpc-systems, molecular-design, materials-workflows]
+summary_ko: "양자 알고리즘이 대규모 고전 계산과 함께 실제 과학 문제에 적용되는 모습을 다루는 발표 묶음임. 화학, 생의학, 재료과학의 종단 응용을 제시함."
+claims:
+  - "전처리와 후처리에서 오류 완화와 대규모 검증까지 HPC의 역할에 초점을 둠."
+  - "고전 인프라가 알고리즘 설계에 어떤 영향을 주는지 강조함. 공개 초록에는 수치가 없음."

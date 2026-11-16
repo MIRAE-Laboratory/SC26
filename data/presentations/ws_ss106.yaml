@@ -1,0 +1,15 @@
+id: ws_ss106
+type: Presentation
+kind: paper
+label: "The Economic Value of Heat Reuse"
+session: sess157
+time: "11:40-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss106"
+authors: [shaina-smith, michael-ott, ryan-grant]
+addresses: [energy-cost-carbon]
+proposes: [heat-reuse]
+targets: [cooling-infrastructure, ai-power-delivery]
+summary_ko: "AI 수요가 데이터센터의 에너지 사용을 끌어올려 수백 메가와트를 쓰는 시설이 나옴. 대기로 버리는 폐열은 다른 산업에 쓸모가 있을 수 있음. 맞춤 수요 함수와 수요 곡선으로 이 열의 가치를 매기는 경제 모델을 제안함."
+claims:
+  - "독일 한 슈퍼컴퓨팅 센터의 냉각 데이터로 검증함."
+  - "온도별 산업 활용 사례, 기반 시설 비용, 투자 수익과 회수 기간을 계산하는 공급식을 다룸. 공개 초록에는 금액 수치가 없음."

@@ -1,0 +1,16 @@
+id: ws_odalt102
+type: Presentation
+kind: talk
+label: "Perlmutter-Agent: Design and Early Deployment of a Local, Tool-Grounded LLM Assistant for HPC Incident Investigation"
+session: sess153
+time: "09:15-09:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_odalt102"
+authors: [siqi-deng]
+addresses: [ops-data-complexity, user-support-load, sensitive-data-governance]
+proposes: [llm-ops-assistant, mcp-tools, skill-files, multi-agent-workflow]
+targets: [ai-agents, ops-telemetry, leadership-facility]
+summary_ko: "슈퍼컴퓨터의 장애 조사를 위해 기관 안에 배치한, 도구에 근거를 둔 LLM 비서임. 조율자가 메신저의 요청을 지표, 로그, 티켓 하위 에이전트용 구조화 요청으로 바꾸고, 하위 에이전트가 사이트 전용 절차와 MCP 서버로 증거를 모아 가능한 원인을 요약함."
+claims:
+  - "모든 에이전트가 공개 가중치 모델을 내부 추론 서버로 돌려 데이터가 외부 제공자로 나가지 않음."
+  - "제한된 시범 운영에서 사용자 요청 380건 중 339건(89.2%)이 정상 완료됨."
+  - "진단 정확도와 운영자에게의 유용성은 아직 평가하지 않았음."

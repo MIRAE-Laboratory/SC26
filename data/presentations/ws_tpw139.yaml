@@ -1,0 +1,16 @@
+id: ws_tpw139
+type: Presentation
+kind: paper
+label: "APEXA: Execution-Integrity Enforcement for Multi-Agent LLM Automation of Synchrotron Data Reduction"
+session: sess149
+time: "10:43-10:56"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw139"
+authors: [pawan-tripathi, hemant-sharma, andrew-chuang, mathew-cherukara]
+addresses: [agent-boundaries, prompt-injection, manual-orchestration]
+proposes: [execution-integrity-guard, multi-agent-workflow, domain-benchmark]
+targets: [ai-agents, user-facility-beamline]
+summary_ko: "방사광 데이터 처리를 위해 도구 61개를 조율하는 운영 중인 다중 에이전트 틀임. 결정론적 실행 무결성 검사가 실제로 돌지 않은 도구 호출의 결과를 차단하고, 같은 계층이 장비 구동의 안전을 강제함."
+claims:
+  - "적대적 시나리오 50개와 모델 넷에서 모의 제어기에 대한 위반이 200건 중 0건이었고, 프롬프트만 쓴 기준은 15건이었음."
+  - "과학적 정확성과 물리적 결과로 순위를 매긴 시설 과제 58개의 벤치마크를 제공함."
+  - "빔라인 데이터에서 프롬프트 한 번으로 검출기 기하를 복구하고 감쇠·노출 측정 묶음 전체를 적분함."

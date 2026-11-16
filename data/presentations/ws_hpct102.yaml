@@ -1,0 +1,16 @@
+id: ws_hpct102
+type: Presentation
+kind: paper
+label: "Mechanism-Aware Analysis of Cross-Platform GPU Fault-Injection Outcomes"
+session: sess155
+time: "11:10-11:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=ws_hpct102"
+authors: [maisy-dunlavy, zhiling-lan, michael-papka]
+addresses: [silent-data-corruption, measurement-comparability, failure-data-incomparability]
+proposes: [fault-injection, failure-attribution]
+targets: [hpc-processors, amd-gpu-systems]
+summary_ko: "GPU 결함 주입 결과를 플랫폼 사이에서 해석하는 기전 인지 방법임. 결과 레이블이나 분포가 일치해도 동작이 비교 가능하다는 뜻은 아님. 세 벤더의 운영 GPU 시스템에서 재현 가능한 사례 여섯에 적용함."
+claims:
+  - "비트 위치에 따라 시험이 조용한 데이터 손상으로 끝날지 장치 고장으로 끝날지가 갈림."
+  - "맞춰 넣은 주입이 백엔드 변환 뒤에는 서로 다른 유효 결함이 될 수 있음."
+  - "모든 시험에 가벼운 실행 증거를 남기고, 플랫폼 간 결과가 같다고 선언하기 전에 핵심 사례의 전파 분석을 하라고 권함."

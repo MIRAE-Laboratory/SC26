@@ -1,0 +1,15 @@
+id: ws_echo110
+type: Presentation
+kind: paper
+label: "SplitFT: An Edge-Cloud Collaborative Federated Split Learning System for LLM Fine-Tuning"
+session: sess156
+time: "11:06-11:18"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo110"
+authors: [yimeng-shan, zhaorui-zhang, sheng-di, yu-liu, xiaoyi-lu, benben-liu]
+addresses: [edge-resource-limits, llm-training-scaling]
+proposes: [federated-learning, foundation-model-finetuning]
+targets: [edge-devices, distributed-training]
+summary_ko: "연합 분할 학습은 엣지 클라이언트의 계산 부담을 덜지만, LLM 미세조정에서는 자르는 층의 선택과 통신이 과제임. 클라이언트가 자원과 성능에 따라 서로 다른 층에서 자르게 하고, 자르는 층의 적응 차원을 낮춰 통신을 줄임."
+claims:
+  - "길이 기반의 데이터 분할 방식으로 현실의 데이터 이질성을 더 잘 흉내 냄."
+  - "널리 쓰이는 벤치마크에서 기존 방법보다 미세조정 효율과 모델 성능이 나음. 공개 초록에는 수치가 없음."

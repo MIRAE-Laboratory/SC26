@@ -1,0 +1,16 @@
+id: ws_sfwm110
+type: Presentation
+kind: paper
+label: "QSPredictor: Runtime Prediction for Tensor-Network based Quantum Circuit Simulation on GPUs"
+session: sess112
+time: "15:30-15:45"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm110"
+authors: [chianing-wang, david-quiroga, younghyun-cho]
+addresses: [resource-prediction, simulation-scale-limits]
+proposes: [workload-graph-prediction]
+targets: [quantum-compilers, hpc-processors]
+summary_ko: "텐서 네트워크 기반 양자 회로 시뮬레이션의 계획, 수축, 전체 실행 시간을 트랜스포머로 예측함. 회로의 구조적 성질과 회로 기술 텍스트를 입력으로 씀."
+claims:
+  - "얽힘이 큰 회로에서는 관련 지표의 계산 자체가 어려워 실행 전 예측이 중요함."
+  - "대표 학습 회로를 골라 데이터 효율을 높임."
+  - "전체 실행 시간의 평균 절대 백분율 오차는 7.09%, 로그 공간 결정계수는 0.9906임."

@@ -1,0 +1,16 @@
+id: ws_echo105
+type: Presentation
+kind: paper
+label: "VERA: Reinforcement Learning for Dynamic Memory Scaling of HPC Workloads in Kubernetes"
+session: sess156
+time: "10:30-10:42"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo105"
+authors: [ade-pramono, jie-ren, ivy-peng]
+addresses: [request-usage-mismatch, underused-resources, resource-prediction]
+proposes: [rl-resource-scaling]
+targets: [kubernetes-baremetal, cloud-science-environments, scientific-apps]
+summary_ko: "메모리를 넉넉히 잡는 관행이 Kubernetes의 HPC 워크로드 활용률을 낮춤. 기본 자동 조정 도구는 처음 도는 작업의 단계별 메모리 급증을 놓침. 수직 메모리 조정을 결정 과정으로 모델링한 강화학습 추천기를 실제 지표 기록 3,353건으로 학습시킴."
+claims:
+  - "실제 클라우드 클러스터에서 분자동역학, 그래프 분석, 인메모리 분석, 의료 영상 학습을 돌려 평가함."
+  - "강화학습 방식은 메모리 여유분의 31.6%를 회수하고 메모리 부족은 많아야 한 번이었음. 기본 도구는 -7.9%였음."
+  - "기본 도구의 권고는 30회 실행에서 메모리 부족을 피하기에 부족했을 것임."

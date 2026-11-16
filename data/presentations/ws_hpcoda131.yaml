@@ -1,0 +1,15 @@
+id: ws_hpcoda131
+type: Presentation
+kind: paper
+label: "Interactive Visualization of Data Center Monitoring Data on a 3D Cluster Model"
+session: sess153
+time: "10:30-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda131"
+authors: [marketa-faltynkova, petr-ptacek, kashaf-ad-dooja, milan-jaros, ondrej-vysocky, josef-pasek, tomas-stratil, petr-strakos, lubomir-riha]
+addresses: [ops-data-complexity]
+proposes: [operations-visualization, infrastructure-telemetry]
+targets: [cooling-infrastructure, ops-telemetry]
+summary_ko: "데이터센터 모니터링 데이터를 현실적인 3차원 클러스터 모형 위에 입혀, 2차원 도구에 없는 냉각과 네트워크 인프라의 공간적 맥락을 줌. 여러 층의 지표를 색 질감과 도표로 보여 시스템 전체 조망과 노드 수준 점검을 모두 지원함."
+claims:
+  - "공개 3차원 제작 도구를 써서 확장과 고품질 렌더링, 몰입형 탐색이 가능함."
+  - "한 클러스터의 현실적 모형으로 시연하고, 표 데이터를 3차원 장면 파일로 바꾸는 일반화된 처리 경로를 제공함."

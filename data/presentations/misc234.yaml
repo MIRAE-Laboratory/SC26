@@ -1,0 +1,14 @@
+id: misc234
+type: Presentation
+kind: invited
+label: "Scale to See: From Extreme-Scale Computing and Scalable AI to New Scientific Discovery"
+session: sess148
+time: "08:35-09:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=misc234"
+authors: [xiao-wang]
+addresses: [imaging-data-scale, high-resolution-scaling]
+proposes: []
+targets: [scientific-imaging, sci-foundation-models]
+summary_ko: "현대의 과학 문제는 더 빠른 계산이 아니라 근본적으로 새로운 계산 능력을 요구한다고 주장함. AI, 수학적 모델링, 극대 규모 계산의 결합이 이전에는 다가갈 수 없던 질문에 답하게 한다고 봄."
+claims:
+  - "계산 영상, 역문제, 지구 시스템 과학의 사례로, AI를 더 큰 모델과 더 세밀한 해상도, 더 큰 앙상블로 키우면 구조가 드러나고 불확실성을 정량화할 수 있음을 보임. 공개 초록에는 수치가 없음."

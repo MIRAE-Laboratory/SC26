@@ -1,0 +1,16 @@
+id: ws_sfwm104
+type: Presentation
+kind: paper
+label: "Fidelity-Aware Scheduling of Quantum Circuits on Multi-QPU Systems"
+session: sess112
+time: "14:40-14:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm104"
+authors: [innocenzo-fulginiti, antonio-tudisco, salvatore-zammuto, patrick-hopf, deborah-volpe, helmut-seidl, giovanna-turvani, robert-wille, christian-mendl, martin-schulz]
+addresses: [quantum-noise-fidelity, quantum-resource-scheduling]
+proposes: [fidelity-aware-scheduling, workload-graph-prediction]
+targets: [quantum-hpc-systems, quantum-compilers]
+summary_ko: "양자-HPC 플랫폼은 크기, 연결 구조, 기본 게이트, 잡음이 다른 양자 장치 여럿을 노출함. 충실도는 장치별 컴파일에 달려 있어 같은 회로가 장치마다 다르게 동작함. 부담이 낮은 충실도 인지 스케줄링 틀을 제시함."
+claims:
+  - "그래프 신경망이 컴파일 전에 각 회로의 장치별 기대 충실도를 추정함."
+  - "조정 가능한 스케줄러가 충실도와 병렬성을 절충함."
+  - "모든 장치에서 컴파일하는 전수 방식에 가까운 배정을 내면서 계산 자원을 아낌. 공개 초록에는 수치가 없음."

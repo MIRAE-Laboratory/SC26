@@ -1,0 +1,15 @@
+id: ws_scale107
+type: Presentation
+kind: paper
+label: "Out-of-View Depth and Motion Prediction in Robotic Endoscopy"
+session: sess148
+time: "11:30-11:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale107"
+authors: [md-siddique, neil-getty, leonardo-borgioli]
+addresses: [sparse-multimodal-data]
+proposes: [jepa, foundation-model-finetuning]
+targets: [scientific-imaging, robotics-digital-twin]
+summary_ko: "가려진 조직은 보이는 화소가 없어 깊이와 움직임을 예측해야 함. 영상 예측 모델의 인코더를 저차원 적응으로 맞추고, 가려진 영역의 깊이와 광류를 예측하는 디코더 둘을 붙임."
+claims:
+  - "마지막으로 본 깊이를 재사용하는 기준은 가장 긴 간격에서 오차가 9.05 mm에 이름."
+  - "장기 넷으로 하나씩 빼고 시험한 결과 깊이 오차가 6.852에서 6.197 mm로, 광류 오차가 3.285에서 3.004 화소로 줄어듦."

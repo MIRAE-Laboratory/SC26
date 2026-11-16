@@ -1,0 +1,15 @@
+id: ws_hpcoda113
+type: Presentation
+kind: paper
+label: "SORT: Slurm-Orchestrated ROCm Telemetry for Facility-wide GPU Observability on HPC Systems"
+session: sess153
+time: "09:20-09:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda113"
+authors: [awais-khan, nick-hagerty, ahmad-maroof-karimi, michael-e-rowan, jack-lange, matthew-ezell, christopher-zimmer, scott-atchley]
+addresses: [ops-data-complexity, hardware-selection, fp64-scarcity]
+proposes: [infrastructure-telemetry, hardware-counter-analysis, usage-based-capacity-planning]
+targets: [amd-gpu-systems, job-scheduler, leadership-facility]
+summary_ko: "한 리더십 시설은 해마다 약 300개 과제가 쓰고 약 30%가 바뀌어, 계획에 워크로드 전체의 가속기 사용 데이터가 필요함. 스케줄러의 작업 전후 스크립트로 할당마다 계수기 수집기를 돌리고 스케줄러 메타데이터와 연결함."
+claims:
+  - "한 시스템에서 작업 67,373건에 연결된 유효한 계수기 파일 88,269개를 모음."
+  - "명령, 메모리 요청, 배정밀도 활동을 워크로드 전체에서 볼 수 있고, 깊이 프로파일링할 작업을 가려냄."

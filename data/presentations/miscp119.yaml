@@ -1,0 +1,13 @@
+id: miscp119
+type: Presentation
+kind: panel
+label: "Panel Discussion and Q&A: Challenges in AI-enabled Q-HPC Integration"
+session: sess112
+time: "16:59-17:29"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=miscp119"
+authors: [katie-klymko, daan-camps, yoonho-park, kristen-pudenz, pooja-rao, aleksander-wennersteen]
+addresses: [quantum-hpc-integration]
+proposes: []
+targets: [quantum-hpc-systems]
+summary_ko: "AI를 활용한 양자-HPC 통합의 과제를 다루는 패널. 양자 하드웨어 벤더와 GPU 벤더, 소프트웨어 기업의 패널이 참여함. 공개 페이지에 설명문이 없음."
+claims: []

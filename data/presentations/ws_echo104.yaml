@@ -1,0 +1,16 @@
+id: ws_echo104
+type: Presentation
+kind: paper
+label: "How Much Can We Compress Field Images for Smart Agriculture?"
+session: sess156
+time: "09:24-09:36"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo104"
+authors: [daoce-wang, zonglin-yang, wei-zhen-liang, zhisen-lai, xiaoqian-zhang]
+addresses: [edge-resource-limits, benchmark-validity, data-deluge]
+proposes: [compression-quality-prediction, comparative-benchmarking]
+targets: [edge-sensor-networks, scientific-imaging]
+summary_ko: "압축한 농경지 영상이 잡초 탐지에 충분한 세부를 유지하는지 시험한 예비 연구임. 주석이 달린 사탕무 밭 영상 넷을 두 가지 방식으로 2~16배 압축하고, 같은 종 수준 탐지기를 복원 영상마다 다시 돌림."
+claims:
+  - "손실 압축은 탐지 성능을 유지하면서 크기를 크게 줄이고, 한 방식이 다른 방식을 일관되게 앞섬."
+  - "신호 대 잡음비가 비슷해도 탐지 유용성이 같지는 않음."
+  - "탐지 품질을 지키는 압축률에서도 전송량이 여전히 커, 농업에 특화한 압축 방법이 필요함."

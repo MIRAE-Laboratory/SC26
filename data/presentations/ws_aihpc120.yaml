@@ -5,7 +5,7 @@ label: "Serving Masked Diffusion LLMs: Characterization and Design Principles fr
 session: sess141
 time: "14:37-14:49"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess141&id=ws_aihpc120"
-authors: [farhana-amin, sabiha-afroz, mona-moghadampanah, dimitrios-s-nikolopoulos]
+authors: [farhana-amin, sabiha-afroz, mona-moghadampanah, dimitrios-nikolopoulos]
 addresses: [llm-serving-efficiency, benchmark-validity]
 proposes: [io-characterization]
 targets: [llm-inference]

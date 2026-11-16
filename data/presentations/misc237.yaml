@@ -1,0 +1,15 @@
+id: misc237
+type: Presentation
+kind: invited
+label: "Faster Scientific Multi-dimensional data analytics with NVIDIA cuPhoton"
+session: sess148
+time: "10:20-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=misc237"
+authors: [quynh-nguyen]
+addresses: [imaging-data-scale, delayed-feedback, gpu-io-path]
+proposes: [gpu-native-io]
+targets: [scientific-imaging, user-facility-beamline]
+summary_ko: "장비는 CPU에 묶인 처리 경로가 감당하는 것보다 빠르게 페타바이트의 영상 데이터를 쌓고, 분석에 몇 시간에서 몇 달, 때로 1년 이상이 걸림. 센서에서 판단까지 모든 단계를 GPU에서 처리하는 경로를 주장함."
+claims:
+  - "분광·광학 천문과 시간 영역 레이저·X선 분석을 위한 공개 GPU 도구 모음을 소개함."
+  - "센서 판독부터 분류까지 영상을 GPU에 두면 대기가 마이크로초 수준까지 줄어 대화형 연구가 가능해진다고 함."

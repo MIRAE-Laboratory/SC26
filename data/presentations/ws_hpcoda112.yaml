@@ -1,0 +1,16 @@
+id: ws_hpcoda112
+type: Presentation
+kind: paper
+label: "A case study on the resource utilisation and queue dynamics of an institutional HPC system"
+session: sess153
+time: "08:35-08:55"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda112"
+authors: [syed-ibtisam-tauhidi, steven-cousens, david-laverty, david-smyth, bronis-r-de-supinski, hans-vandierendonck]
+addresses: [request-usage-mismatch, underused-resources, workflow-scheduling]
+proposes: [job-trace-analysis, system-simulation]
+targets: [job-scheduler, campus-clusters]
+summary_ko: "한 기관 HPC 시스템의 1년 치 기록(사용자 596명, 작업 420만 건)으로, 수요가 쏠려 있을 때 집계 지표가 오도한다고 주장함. 소수의 집단이 계산 수요, 에너지 사용, 요청과 사용의 불일치 대부분을 만듦."
+claims:
+  - "대기열의 불공정은 작업의 모양에 달려 있음. 작고 끼워 넣기 쉬운 작업은 바로 시작하고 큰 작업은 기다림."
+  - "모의 결과 자원 요청의 크기를 맞추면 평균 대기가 67%, 가장 무거운 5%의 제출을 조절하면 82% 줄어듦."
+  - "낭비와 대기 위험 모두 제출 시점의 메타데이터로 예측할 수 있음."

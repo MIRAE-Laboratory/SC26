@@ -1,0 +1,15 @@
+id: ws_hpcoda102
+type: Presentation
+kind: paper
+label: "CQTwin: A Digital-Twin Toolkit for Operational Analytics of HPC Schedulers"
+session: sess153
+time: "11:00-11:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess153&id=ws_hpcoda102"
+authors: [kanglin-xu, yash-kurkure, yihe-zhang, michael-papka, zhiling-lan]
+addresses: [workflow-scheduling, config-evaluation-cost]
+proposes: [system-simulation, digital-twin-coupling]
+targets: [job-scheduler, leadership-facility]
+summary_ko: "HPC 스케줄링 데이터의 운영 분석을 위한 공개 디지털 트윈 도구 모음임. 충실도를 검증한 엔진과 브라우저 대시보드, 가정 시나리오 탐색 기능을 묶음."
+claims:
+  - "오프라인에서는 보관된 워크로드 기록을 다른 정책으로 재생하고, 온라인에서는 들어오는 작업 사건을 받아 대안 정책이 대기 중인 작업을 어떻게 처리할지 예측함."
+  - "한 리더십 시설의 2016~2023년 운영 기록으로 검증함."

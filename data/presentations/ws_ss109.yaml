@@ -1,0 +1,16 @@
+id: ws_ss109
+type: Presentation
+kind: paper
+label: "Predicting the Energy-Optimal GPU Clock for Production VASP Jobs Before They Run"
+session: sess157
+time: "11:20-11:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss109"
+authors: [kevin-menear]
+addresses: [energy-performance-tradeoff, config-evaluation-cost]
+proposes: [frequency-steering, resource-prediction]
+targets: [materials-workflows, hpc-processors]
+summary_ko: "GPU 클록을 낮추면 전자구조 계산 작업의 에너지를 제한된 속도 저하로 줄일 수 있지만 가장 좋은 클록은 작업마다 다름. 작업이 돌기 전에 입력 파일에서 클록을 고름."
+claims:
+  - "시스템 공통의 곡선에 작업별 민감도를 곱하면 작업 간 분산의 99.72%가 설명되어, 민감도만 예측하면 됨."
+  - "속도 저하 5% 예산 아래 운영 작업 310건에서 GPU 보드 에너지를 14.25% 아끼고 평균 속도 저하는 5.45%임."
+  - "오차는 가장 민감한 작업에 몰림. 보정 작업 한 건으로 다른 GPU 기종에 옮겨짐."

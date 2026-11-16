@@ -1,0 +1,14 @@
+id: misc111
+type: Presentation
+kind: invited
+label: "Invited Talk: Full stack sustainability: Looking at opportunities from Data Centres through to Applications, Adrian Jackson, EPCC"
+session: sess157
+time: "08:35-09:20"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=misc111"
+authors: [adrian-jackson]
+addresses: [energy-cost-carbon, energy-performance-tradeoff]
+proposes: []
+targets: [cooling-infrastructure, leadership-facility]
+summary_ko: "영국의 한 센터가 계산의 지속 가능성을 높이려고 하는 연구를 개관함. 자체 전산실을 운영하고 하드웨어·소프트웨어 연구자가 응용 개발자와 함께 일해, 계산 스택 전체에서 효율을 높일 수 있음."
+claims:
+  - "전산실 최적화, 계산 하드웨어의 혁신, 저장과 응용의 효율 개선, 떠오르는 AI 추론 워크로드의 성능을 다룸. 공개 초록에는 수치가 없음."

@@ -1,0 +1,16 @@
+id: ws_echo114
+type: Presentation
+kind: paper
+label: "SPEAR: Semantic Partitioning and Edge-Adapted Routing for Distributed LLM Serving"
+session: sess156
+time: "09:48-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess156&id=ws_echo114"
+authors: [dmytro-kublytskyi, su-wang, dong-chen]
+addresses: [edge-resource-limits, llm-serving-efficiency]
+proposes: [edge-cloud-routing, foundation-model-finetuning]
+targets: [edge-devices, llm-inference]
+summary_ko: "LLM 작업을 하위 과제 단위로 분배하고 배치 뒤에도 계속 적응함. 질의를 하위 과제로 나눠 능력 점수와 위험 임계값에 따라 엣지 장치로 보내고, 신뢰가 낮으면 클라우드 모델로 넘김."
+claims:
+  - "장치의 적응 파라미터를 클라우드 쪽 재학습 없이 클라우드의 피드백으로 갱신함."
+  - "소형 보드와 내장형 GPU, 서버로 된 시험대에서 분배 정확도 94.7%로 기존 방식을 앞서고 부담은 32.4 ms임."
+  - "로컬 적응으로 한 분류 과제의 정확도가 다섯 차례에 걸쳐 31.0%에서 56.5%로 오름."

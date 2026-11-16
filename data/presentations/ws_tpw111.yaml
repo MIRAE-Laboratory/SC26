@@ -1,0 +1,16 @@
+id: ws_tpw111
+type: Presentation
+kind: paper
+label: "AI Agents for Nuclear Science: Evaluation of Vaults, Skills, and Multi-Agent Verification"
+session: sess149
+time: "10:56-11:09"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw111"
+authors: [ana-gainaru, togo-odbadrakh, angel-diaz-abreu, cade-finney, miguel-kirby, kory-linton, denise-adorno-lopes]
+addresses: [llm-domain-validity, ai-code-evaluation, provenance-reproducibility]
+proposes: [skill-files, context-retrieval, hybrid-evaluators]
+targets: [ai-agents, nuclear-materials-research]
+summary_ko: "과학용 AI 에이전트는 범용 비서와 달리 분야 지식의 통합, 재현성, 정확성 검증, 지속적 적응이 필요함. 열린 연구부터 결정론적 작업 흐름 실행까지 걸친 핵연료 전문 에이전트 넷을 평가함."
+claims:
+  - "파운데이션 모델 다섯에서, 구조화한 지식 저장소와 재사용 가능한 절차는 실행 비용을 늘린 것보다 약 1.2~1.5배 더 답의 품질을 올림."
+  - "정확성 검증 에이전트가 인용된 참고문헌을 추적해 출력을 확인하며, 수작업 평가 대비 상대 채점 오차를 줄임."
+  - "이 설계를 따르는 에이전트들을 묶는 협업형 다중 에이전트 시스템으로 가는 길을 논의함."

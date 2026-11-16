@@ -1,0 +1,16 @@
+id: ws_scale108
+type: Presentation
+kind: paper
+label: "Scalable In-Domain Self-Supervised Foundation Model for Dense Representation Transfer in High-Resolution Plant Imaging"
+session: sess148
+time: "11:00-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=ws_scale108"
+authors: [junlin-guo, sharmin-majumder, isaac-lyngaas, john-lagergren, xiao-wang]
+addresses: [annotation-cost, high-resolution-scaling]
+proposes: [foundation-model-finetuning]
+targets: [scientific-imaging, sci-foundation-models, distributed-training]
+summary_ko: "고해상도 식물 영상은 화소 단위 레이블이 비싸고 촬영 조건이 달라짐. 여러 종의 식물 영상 조각 1,000만 장 이상으로 분산 사전학습한 분야 내 자기지도 모델을 제시함."
+claims:
+  - "제한된 지도, 시점 변화, 해상도 저하 조건에서 평균 분할 지표 0.8686, 합산 지표 0.8959를 냄."
+  - "일반 영상으로 사전학습한 모델보다 0.0694, 0.0613 높음."
+  - "사전학습 규모가 커질수록 전이가 더 좋아짐."

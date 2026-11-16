@@ -1,0 +1,15 @@
+id: misc235
+type: Presentation
+kind: invited
+label: "Exploring the Exascale Universe"
+session: sess148
+time: "09:00-09:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess148&id=misc235"
+authors: [j-d-emberson]
+addresses: [imaging-data-scale, data-deluge]
+proposes: []
+targets: [cosmology-simulations, leadership-facility, ai-agents]
+summary_ko: "최근의 엑사스케일 우주론 시뮬레이션은 다가올 관측 탐사를 지원하려고 수 페타바이트의 데이터셋을 만들어 냄. 우주 구조의 진화를 가시화하고 관측과 직접 비교할 합성 관측을 만듦."
+claims:
+  - "이 데이터는 에뮬레이터와 디지털 트윈 같은 AI의 입력이 됨."
+  - "전통적 탐색으로는 너무 크고 복잡한 데이터에서 여러 단계의 과학 질의를 단순하게 하는 에이전트 기반 방법에도 쓰임. 공개 초록에는 수치가 없음."

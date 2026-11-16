@@ -1,0 +1,15 @@
+id: ws_tpw134
+type: Presentation
+kind: paper
+label: "ArchAgent: Agentic AI for Heterogeneous System Design Across Chip, Scale-Up, and Scale-Out Domains"
+session: sess149
+time: "09:27-09:40"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess149&id=ws_tpw134"
+authors: [murali-emani, kashyap-r-manjusha]
+addresses: [hardware-selection, config-evaluation-cost]
+proposes: [multi-agent-workflow, deterministic-llm-split, design-space-exploration]
+targets: [ai-agents, heterogeneous-racks]
+summary_ko: "계층형 다중 에이전트 틀로, LLM 기반 계획자가 AI·HPC 시스템 설계를 칩, 확장, 분산의 하위 문제로 나눠 전문 에이전트에 맡김. 모든 성능 추정은 LLM이 아니라 결정론적 해석 평가기가 냄."
+claims:
+  - "1 MW 전력 예산의 AI·HPC 혼합 워크로드에서, 동종 GPU 기준 대비 가중 기하평균 1.93배 빠른 이기종 설계를 찾음."
+  - "18번의 평가만으로 100번 평가하는 언덕 오르기 탐색(1.65배)을 앞섬."

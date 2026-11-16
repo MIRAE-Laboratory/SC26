@@ -1,0 +1,16 @@
+id: ws_ss105
+type: Presentation
+kind: paper
+label: "Compositional Energy Modeling of Layer-Resolved GPU Training"
+session: sess157
+time: "10:30-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss105"
+authors: [amritanshu-verma, sarah-neuwirth]
+addresses: [power-measurement-fidelity, energy-performance-tradeoff]
+proposes: [energy-profiling, analytical-performance-model]
+targets: [distributed-training, amd-gpu-systems, hpc-processors]
+summary_ko: "두 벤더의 GPU에서 층 단위로 본 학습의 에너지를 조합식으로 모델링함. 행렬 곱, 대역폭에 묶인 층, 집합 통신 같은 작업 종류마다 에너지 계수를 줌."
+claims:
+  - "한 GPU에서 저수준 구현으로 얻은 계수가 수정하지 않은 프레임워크로 옮겨져, GPU 한 개에서 -7.3%, 열여섯 개에서 +8.5%로 에너지를 예측함."
+  - "다른 GPU에서는 주파수 의존 항으로 42개 동작점에서 평균 절대 오차 9.0%임."
+  - "전력 상한을 750 W에서 450 W로 낮추면 연산당 에너지가 20~41% 줄어듦."

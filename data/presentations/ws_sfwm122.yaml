@@ -1,0 +1,16 @@
+id: ws_sfwm122
+type: Presentation
+kind: paper
+label: "Deciding whether a generative quantum eigensolver can work before running it"
+session: sess112
+time: "15:45-16:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm122"
+authors: [soham-pal]
+addresses: [config-evaluation-cost, quantum-noise-fidelity]
+proposes: [selective-measurement]
+targets: [quantum-compilers]
+summary_ko: "한 모형을 시험대로 삼아, 대칭성 계산으로 생성형 양자 고유값 솔버의 연산자 집합, 기준 상태, 회로 깊이, 시뮬레이터를 제한함. 실행하거나 바닥 상태를 알 필요 없이 미리 가릴 수 있는 시험을 제시함."
+claims:
+  - "대칭성을 이용한 시뮬레이터가 칩 하나에서 스핀 1,000개에 도달함."
+  - "두 시험이 세 차례의 실험을 설명함."
+  - "미리 등록한 예측 둘 중 하나는 맞고 하나는 틀렸음."

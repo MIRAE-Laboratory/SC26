@@ -1,0 +1,17 @@
+id: ws_hpct103
+type: Presentation
+kind: paper
+label: "The Shape of Speed: Impacts of Partition Geometry and Rank Density in Distributed Quantum Circuit Simulations"
+session: sess155
+time: "10:30-10:50"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess155&id=ws_hpct103"
+authors: [yikai-mao, yuan-he, shaowen-li, masaaki-kondo]
+addresses: [network-congestion, benchmark-validity, energy-performance-tradeoff]
+proposes: [comparative-benchmarking, communication-aware-placement]
+targets: [hpc-network, leadership-facility, quantum-compilers]
+summary_ko: "후가쿠에서 764가지 구성(알고리즘 12개, 토러스 기하 13가지, 랭크 밀도 6가지, 39큐비트 회로, 1,024노드)을 돌려, 할당 구획의 기하가 실행 시간을 지배함을 보임."
+claims:
+  - "데이터 전송량이 같은데도 납작한 구획에서 정육면체에 가까운 구획보다 1.73~2.31배 느려, 네트워크 전달이 원인으로 지목됨."
+  - "벌점은 3차원 토러스의 종횡비에 따라 커짐."
+  - "랭크 밀도의 영향은 작음. 노드당 16랭크는 조밀한 기하에서만 실행 시간을 11% 줄임."
+  - "정육면체에 가까운 구획은 해답까지의 시간을 대략 절반으로 줄이지만 에너지를 1.82배 씀."

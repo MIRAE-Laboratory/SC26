@@ -1,0 +1,16 @@
+id: ws_sfwm120
+type: Presentation
+kind: paper
+label: "Dispatch Granularity in Quantum-HPC ADMM Optimization: Implications for Near-Real-Time Computing"
+session: sess112
+time: "16:00-16:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess112&id=ws_sfwm120"
+authors: [giuliana-siddi-moreau, manuela-profir, maria-laura-clemente, lorenzo-pisani, lidia-leoni]
+addresses: [quantum-resource-scheduling, delayed-feedback]
+proposes: [quantum-hpc-workflows, comparative-benchmarking]
+targets: [quantum-hpc-systems]
+summary_ko: "양자 장치 하나의 범위를 넘는 결합 문제를 하위 문제로 나눠 반복 합의로 푸는 방식을 다룸. 같은 하위 문제 880개에서 두 양자 기법과 모의 담금질을 비교함."
+claims:
+  - "같은 측정 횟수에서 두 양자 기법은 폭 7 이하에서 전수 계산과 일치했고 모의 담금질은 차이가 더 컸음."
+  - "54큐비트 장치의 실측 연결 구조에서 두 기법의 회로 깊이 차이는 최대 9%임."
+  - "한 기법은 블록당 회로 하나를 묶음으로 보내면 되고 다른 기법은 블록당 25번의 순차 평가가 필요함. 준실시간 혼합 최적화에서는 실행 방식이 솔버 선택보다 중요함."
