@@ -51,18 +51,21 @@ insights:
       stage: prep
       area: 검증·신뢰
       needs: 계약을 검토할 전문가와 정형 검사 도구
+      needs_group: 도구와 소프트웨어 도입
       text: 검증 요건이 엄격한 코드에서 LLM이 만든 검증물을 그대로 믿을 수 없음. 사람이 확인한 작은 계약과 결정론적 검사 도구의 조합은 인허가 대상 코드에 적용할 만한 구조임.
       refs: [ws_corr112, ws_corr111]
     - head: 핵심 수치 커널부터 작은 모델로 떼어 검증함.
       stage: prep
       area: 검증·신뢰
       needs: 검증할 커널 선정과 모델 검사 도구 숙련
+      needs_group: 도구와 소프트웨어 도입
       text: 대형 코드 전체의 검증은 불가능하지만, 보존 법칙처럼 물리적으로 중요한 속성을 가진 커널은 인터페이스만 뽑아 증명할 수 있음.
       refs: [ws_corr113]
     - head: GPU로 옮긴 코드의 수치 예외와 라이브러리 정확도를 확인함.
       stage: now
       area: 검증·신뢰
       needs: 예외 검출 도구 설치와 기준 입력
+      needs_group: 기준 출력과 시험 자산
       text: 예외는 조용히 퍼져 틀린 결과를 내고, 수학 라이브러리의 정확도는 함수와 입력에 따라 다름. 단정밀도로 옮길 때 특히 확인이 필요함.
       refs: [ws_corr103, ws_corr108, ws_corr101]
   extra:

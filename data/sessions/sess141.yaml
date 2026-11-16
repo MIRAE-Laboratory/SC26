@@ -50,18 +50,21 @@ insights:
       stage: prep
       area: 에이전트·AI 서비스
       needs: 유휴 자원 비율 측정과 선점 가능한 큐
+      needs_group: 계측과 측정 수단
       text: 배치 작업 사이의 빈 시간을 추론에 쓰는 방식과 GPU 공유 방식의 비교가 구체적 수치로 나와 있음. 먼저 자기 시스템의 유휴 비율을 재는 것이 출발점임.
       refs: [ws_aihpc107, ws_aihpc110]
     - head: AI 도구의 설치와 실행 절차를 표준 워크플로로 만듦.
       stage: now
       area: 운영·사용자 지원
       needs: 도구별 설치·실행 절차 문서
+      needs_group: 절차와 문서 정리
       text: 환경 구성, 의존성, 모델 확보, 공용 시스템에서의 실행법에 연구자의 시간이 많이 듦. 추론 서버와 구조 예측 도구 등 네 가지로 재현 가능한 절차를 보인 사례가 있음.
       refs: [misc106]
     - head: 학습의 에너지는 준비와 사후 단계까지 나눠서 봄.
       stage: prep
       area: 계측·에너지
       needs: 학습 단계별 전력 기록
+      needs_group: 계측과 측정 수단
       text: 실행만 한 덩어리로 재면 어디서 줄일지 알 수 없음. 운영 중인 슈퍼컴퓨터에서 단계와 사건별로 에너지를 귀속시킨 방법이 제시됨.
       refs: [ws_aihpc125, ws_aihpc128]
   extra:

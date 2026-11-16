@@ -57,12 +57,14 @@ insights:
       stage: now
       area: 운영·사용자 지원
       needs: 버전 관리 저장소와 기록 규칙
+      needs_group: 기록과 이력 체계
       text: 교대 근무 사이에 사라지는 지식을 4주 만에 구축한 작은 시스템으로 보존한 사례임. 구성요소 여섯 중 다섯은 대부분의 기관이 이미 갖고 있음.
       refs: [ws_hpcsysp105, ws_hpcsysp109]
     - head: 사용자 창구를 웹으로 통일하면 관리 부담이 줄어듦.
       stage: prep
       area: 운영·사용자 지원
       needs: 웹 포털 도입과 승인 절차 정의
+      needs_group: 권한, 신원, 정책
       text: 프로젝트, 저장소, 라이선스, 접근 권한을 승인 절차와 감사 기록이 붙은 자가 관리로 바꿨음. 기반 시스템은 바꾸지 않았음.
       refs: [ws_hpcsysp108]
   extra:

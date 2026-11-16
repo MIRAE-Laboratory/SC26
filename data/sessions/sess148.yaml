@@ -49,6 +49,7 @@ insights:
       stage: prep
       area: 실험시설 연계
       needs: 장비 옆 GPU와 처리 경로 재작성
+      needs_group: 장비와 자원 확보
       text: 센서 판독부터 분류까지 영상을 GPU에 둔 채 처리하는 공개 도구 모음이 소개됨. 장비 옆에서의 즉시 분석을 목표로 함. 공개 초록의 수치는 "마이크로초 수준까지"라는 표현뿐임.
       refs: [misc237]
   extra:

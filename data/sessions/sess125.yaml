@@ -58,24 +58,28 @@ insights:
       stage: now
       area: 계측·에너지
       needs: 도입 사양에 넣을 계측 주기 결정
+      needs_group: 계측과 측정 수단
       text: 분 단위 계측으로는 AI 부하의 빠른 맥동이 보이지 않음. 일부 랙이라도 고속 계측을 두면 수전 설비와 계약 전력을 실제 부하에 맞춰 설계할 수 있음.
       refs: [ws_eesp144]
     - head: 전력 상한 운영은 노드 편차와 펌웨어 배분을 확인한 뒤 적용함.
       stage: prep
       area: 계측·에너지
       needs: 노드별 응답 측정과 펌웨어 설정 확인
+      needs_group: 계측과 측정 수단
       text: 전력 예산 안에서 시스템을 운영해야 하는 전산센터라면, 일괄 상한을 걸기 전에 노드별 응답과 내부 배분을 측정하는 것이 먼저임.
       refs: [ws_eesp121, ws_eesp120]
     - head: 과제와 시스템 평가에 에너지 지표를 함께 적음.
       stage: now
       area: 계측·에너지
       needs: 평가 양식의 개정
+      needs_group: 절차와 문서 정리
       text: 성능 수치 옆에 에너지와 측정 조건을 병기하도록 하면, 빠르지만 비효율적인 구성을 걸러 낼 수 있음.
       refs: [ws_eesp141, ws_eesp135]
     - head: 시간대별 전기요금 차이가 크다면 야간 감축 운영을 검토함.
       stage: prep
       area: 계측·에너지
       needs: 시간대별 요금 자료와 중단 가능한 작업의 구분
+      needs_group: 기록과 이력 체계
       text: 스케줄러에 반복 셧다운을 넣는 방식은 가단성 작업의 비율이 조건이므로, 보유 워크로드에서 그 비율을 먼저 파악함.
       refs: [ws_eesp107]
   extra:

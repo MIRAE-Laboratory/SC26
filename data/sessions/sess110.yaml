@@ -61,6 +61,7 @@ insights:
       stage: now
       area: 도입 평가·하드웨어
       needs: 이식성 점수 계산에 쓸 자체 코드와 비교 대상 시스템
+      needs_group: 기준 출력과 시험 자산
       text: 한 벤더에서의 최고 성능이 아니라 여러 플랫폼에서의 효율을 함께 보면 벤더 종속 위험이 수치로 드러남.
       refs: [ws_p3hpc112, ws_p3hpc114]
   extra:

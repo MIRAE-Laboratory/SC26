@@ -44,6 +44,7 @@ insights:
       stage: prep
       area: 운영·사용자 지원
       needs: 작업별 이미지 저장소와 스케줄러 보완 도구
+      needs_group: 절차와 문서 정리
       text: CPU, GPU, FPGA가 섞인 연구실 규모 시스템은 환경 어긋남이 잦음. 기존 스케줄러를 바꾸지 않고 보완하는 구조여서 도입 부담이 작음.
       refs: [ws_ross106]
     - head: 양자 자원 도입을 준비한다면 시스템 소프트웨어 과제를 먼저 봄.

@@ -40,6 +40,7 @@ themes:
         stage: now
         area: 에이전트·AI 서비스
         needs: 과거 티켓과 기존 텔레메트리
+        needs_group: 계측과 측정 수단
         text: 위험이 낮고 효과를 재기 쉬운 영역은 사용자 지원과 운영 분석임. 과거 티켓, 문서, 기존 텔레메트리로 시작할 수 있고 외부로 데이터를 보내지 않는 로컬 모델로도 결과가 나왔음. 연구 코드와 실험 장비로 넓히기 전에 에이전트 사용량의 계측, 실행 경계, 행동 기록을 갖추는 순서를 권함.
         refs: [ws_hust106, ws_indis105, ws_pmbsf148, ws_aaihpc144]
   - id: verification
@@ -89,12 +90,13 @@ themes:
         stage: now
         area: 검증·신뢰
         needs: 기준 출력과 시험 사례의 목록화
+        needs_group: 기준 출력과 시험 자산
         text: 기준 출력, 시험 사례, 검증된 설정, 자체 벤치마크는 모델이 바뀌어도 남는 자산이며, AI가 만든 코드와 모델을 받아들일지 판단하는 유일한 근거임. 원자력 안전해석처럼 검증 요건이 엄격한 코드는 시험 사례가 실행하지 않는 경로를 따로 확인하는 절차가 필요함. 과제와 시스템 평가에는 측정 조건과 에너지를 함께 적게 함.
         refs: [ws_aaihpc114, ws_aaihpc139, ws_worksa103, ws_eesp141]
   - id: flows
     label: 데이터, 에너지, 자원의 흐름을 시설 규모에서 다시 설계함
     summary_ko: 데이터는 저장하고 옮기기에 너무 많아졌고, 전력은 예산이 되었으며, 하드웨어는 벤더와 종류가 늘었음. 발표들은 데이터가 생기는 곳에서 줄이고, 네트워크와 메모리에서 위치를 따지고, 전력을 계층마다 조정하고, 시설들을 하나의 플랫폼으로 잇는 방향으로 모임.
-    concepts: [data-deluge, in-situ-reduction, experiment-steering, delayed-feedback, wan-data-distribution, federated-caching, science-aware-networking, network-congestion, cross-facility-integration, genesis-platform, user-facility-beamline, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access, energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, rl-power-control, co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability, portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning, gpu-io-path, gpu-native-io, node-local-staging, contention-aware-io-placement, large-data-migration, cross-layer-tracing, fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, shared-identity-portal, hardware-enforced-isolation, gpu-sharing, llm-training-scaling, container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore, request-usage-mismatch, job-trace-analysis, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-vae]
+    concepts: [data-deluge, in-situ-reduction, experiment-steering, delayed-feedback, wan-data-distribution, federated-caching, science-aware-networking, network-congestion, cross-facility-integration, genesis-platform, user-facility-beamline, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access, energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, rl-power-control, co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability, portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning, gpu-io-path, gpu-native-io, node-local-staging, large-data-migration, cross-layer-tracing, fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, shared-identity-portal, hardware-enforced-isolation, gpu-sharing, llm-training-scaling, container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore, request-usage-mismatch, job-trace-analysis, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-vae]
     diagram:
       type: flow
       loop: 결과와 결정이 다음 실험과 계산으로 되돌아감
@@ -138,6 +140,7 @@ themes:
         stage: long
         area: 실험시설 연계
         needs: 시설과 전산 부서의 공동 설계 조직
+        needs_group: 기관 간 합의와 조직
         text: 가속기, 연구용 원자로, 핵융합 장치는 취득 단계의 축소와 실시간 처리를 전제로 한 데이터 체계가 필요함. GPU 클러스터를 들일 때는 전력 계측 해상도와 자기 워크로드의 측정을 평가 항목에 넣고, 노드 편차와 유휴 자원을 확인한 뒤 상한과 공동 실행을 적용함. 기관 간 연계는 계산 자원보다 신원 체계와 공용 서비스의 구분을 먼저 정함.
         refs: [misc155, ws_eesp144, ws_pmbsf126, ws_hust103]
   - id: quantum
@@ -170,5 +173,6 @@ themes:
         stage: prep
         area: 양자
         needs: 인터페이스 선정과 운영 역할 정의
+        needs_group: 조사와 대상 선정
         text: 양자 장치를 들이는 일과 기존 HPC 운영에 넣는 일은 별개임. 도입 사양에 스케줄러 연동 인터페이스를 넣고, 운영에 새로 생기는 역할과 필요한 데이터를 미리 정하며, 개발·시험 환경은 컨테이너로 먼저 맞추는 순서를 권함.
         refs: [ws_sfwm112, ws_hpcoda123, misc141, misc221]

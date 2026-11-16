@@ -16553,12 +16553,6 @@
    "label_ko": "에너지 프로파일링"
   },
   {
-   "@id": "sc26:llm-energy-refactoring",
-   "@type": "Method",
-   "label": "LLM refactoring with power feedback",
-   "label_ko": "전력 피드백 기반 LLM 리팩토링"
-  },
-  {
    "@id": "sc26:energy-aware-hpo",
    "@type": "Method",
    "label": "Energy-aware multi-objective HPO",
@@ -16937,20 +16931,14 @@
   {
    "@id": "sc26:communication-aware-placement",
    "@type": "Method",
-   "label": "Communication-aware task placement",
-   "label_ko": "통신 인지 작업 배치"
+   "label": "Communication- and contention-aware placement",
+   "label_ko": "통신·경합 인지 작업 배치"
   },
   {
    "@id": "sc26:dataflow-runtime",
    "@type": "Method",
    "label": "Dataflow runtime",
    "label_ko": "데이터플로 런타임"
-  },
-  {
-   "@id": "sc26:unequal-error-protection",
-   "@type": "Method",
-   "label": "Unequal error protection",
-   "label_ko": "차등 오류 보호"
   },
   {
    "@id": "sc26:fault-injection",
@@ -17071,12 +17059,6 @@
    "@type": "Method",
    "label": "Node-local staging and burst buffers",
    "label_ko": "노드 로컬 선반입·완충 저장"
-  },
-  {
-   "@id": "sc26:contention-aware-io-placement",
-   "@type": "Method",
-   "label": "Measured contention-aware placement",
-   "label_ko": "측정 기반 경합 회피 배치"
   },
   {
    "@id": "sc26:compression-quality-prediction",
@@ -20581,9 +20563,6 @@
     }
    ],
    "proposes": [
-    {
-     "@id": "sc26:llm-energy-refactoring"
-    },
     {
      "@id": "sc26:repair-loop"
     },
@@ -26892,7 +26871,7 @@
    ],
    "proposes": [
     {
-     "@id": "sc26:unequal-error-protection"
+     "@id": "sc26:resilient-campaign-execution"
     },
     {
      "@id": "sc26:federated-learning"
@@ -29834,7 +29813,7 @@
    ],
    "proposes": [
     {
-     "@id": "sc26:contention-aware-io-placement"
+     "@id": "sc26:communication-aware-placement"
     }
    ],
    "targets": [

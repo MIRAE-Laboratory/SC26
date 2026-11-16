@@ -121,6 +121,31 @@
   .area li { margin: 9px 0; line-height: 1.5; } .area li small { color: var(--muted); }
   .area ul { padding-left: 1.2em; margin: 4px 0; }
   .chk li { margin: 3px 0; }
+  details.guide { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; margin: 10px 0 4px; background: color-mix(in srgb, var(--link) 5%, transparent); }
+  details.guide summary { cursor: pointer; font-weight: 700; } details.guide ul { margin: 6px 0 4px; padding-left: 1.1em; } details.guide li { margin: 5px 0; line-height: 1.5; } details.guide li b { display: block; font-weight: 600; }
+  .deb { border: 1px solid var(--line); border-radius: 8px; padding: 2px 14px 10px; margin: 14px 0; break-inside: avoid; }
+  .deb .sides { display: grid; grid-template-columns: repeat(auto-fit, minmax(17em, 1fr)); gap: 12px; }
+  .deb .side { border-top: 3px solid var(--c-korea); background: color-mix(in srgb, var(--c-korea) 5%, transparent); border-radius: 0 0 6px 6px; padding: 4px 10px 8px; --c: var(--c-korea); }
+  .deb .side.s1 { border-color: var(--c-trial); background: color-mix(in srgb, var(--c-trial) 5%, transparent); --c: var(--c-trial); }
+  .deb .side p { margin: 6px 0; } .deb .sl { font-weight: 700; color: var(--c); } .deb .sl small { font-weight: 400; color: var(--muted); }
+  .deb .side b.n { color: var(--c); } .deb .rd { margin: 10px 0 0; padding: 8px 10px; border-left: 3px solid var(--c-decision); background: color-mix(in srgb, var(--c-decision) 5%, transparent); }
+  .doc.wide { max-width: 78em; }
+  table.mx.plan { font-size: .9em; } table.mx.plan thead th { padding: 6px 8px; white-space: nowrap; } table.mx.plan td { min-width: 4.5em; height: 2.4em; font-weight: 600; }
+  details.pg { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 8px 0; }
+  details.pg summary { cursor: pointer; line-height: 1.6; } details.pg .bar { display: block; margin-top: 4px; max-width: 30em; }
+  #view input[type=search], #view input[list] { padding: 6px 8px; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; min-width: 16em; max-width: 100%; margin: 0 0 10px; }
+  table.nums td.nv { white-space: nowrap; text-align: right; } table.nums td.nv b.n { color: var(--c-decision); } table.nums td.cond { font-size: .9em; min-width: 9em; } table.nums td:last-child { min-width: 12em; font-size: .9em; }
+  table.grp-t td { font-size: .95em; }
+  #cmap { position: relative; display: grid; grid-template-columns: 1fr 11% 1fr 11% 1fr; align-items: start; max-width: 72em; min-width: 40em; }
+  #cmap .ch { margin: 0 0 4px; }
+  #cmap .cn { position: relative; z-index: 1; border: 1px solid var(--line); border-left: 4px solid var(--tc); border-radius: 6px; padding: 4px 8px; margin: 6px 0; font-size: .86em; line-height: 1.3; background: var(--panel); cursor: pointer; }
+  #cmap .cn small { color: var(--muted); } #cmap .cn:hover { border-color: var(--tc); } #cmap .cn.dim { opacity: .3; }
+  #cmap svg { position: absolute; left: 0; top: 0; pointer-events: none; }
+  #cmap path { fill: none; stroke: var(--link); opacity: .28; pointer-events: stroke; cursor: pointer; }
+  #cmap path:hover, #cmap path.hot { opacity: .85; } #cmap path.dim { opacity: .03; }
+  .slide .big { display: flex; gap: 3cqw; align-items: baseline; margin: 1cqw 0 0; } .slide .big b { font-size: 4.6cqw; line-height: 1.1; color: var(--c-trial); white-space: nowrap; } .slide .big span { font-size: 1.5cqw; color: var(--muted); }
+  .slide .evd { position: absolute; left: 5cqw; right: 12cqw; bottom: 2.2cqw; font-size: 1.25cqw; color: var(--muted); border-top: 1px solid var(--line); padding-top: .8cqw; }
+  .slide .sb li b.n { font-weight: 700; }
   .tyt { display: inline-block; font-size: .78em; font-weight: 600; line-height: 1.5; padding: 0 5px; border-radius: 4px; color: var(--tc); background: color-mix(in srgb, var(--tc) 14%, transparent); white-space: nowrap; }
   table.mx tbody th.ty { border-left: 4px solid var(--tc); }
   .tyl { margin-left: 8px; font-size: .9em; }
@@ -145,7 +170,7 @@
   .doc sup.cite { color: var(--link); font-size: .72em; }
   .doc sup.cite a { position: relative; color: var(--link); text-decoration: none; padding: 0 1px; }
   .doc sup.cite a:hover { text-decoration: underline; }
-  .doc sup.cite a:hover::after { content: attr(data-tip); position: absolute; left: 50%; bottom: 1.5em; transform: translateX(-50%); width: max-content; max-width: 26em; padding: 6px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--text); font-size: 1.25em; font-weight: 400; line-height: 1.4; white-space: normal; text-align: left; box-shadow: 0 4px 14px rgba(0,0,0,.18); z-index: 20; pointer-events: none; }
+  #tip { position: fixed; z-index: 200; max-width: min(28em, calc(100vw - 16px)); padding: 6px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--text); font-size: .84em; line-height: 1.4; box-shadow: 0 4px 14px rgba(0,0,0,.18); pointer-events: none; }
   .ctable { border-collapse: collapse; width: 100%; font-size: .9em; margin: 8px 0; }
   .ctable th, .ctable td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; vertical-align: top; }
   .ctable th { white-space: nowrap; background: var(--panel); font-weight: 600; }
@@ -201,9 +226,13 @@
   mark { background: color-mix(in srgb, var(--link) 22%, transparent); color: inherit; border-radius: 2px; }
   /* ---- 오른쪽 보기 ---- */
   main { display: flex; flex-direction: column; }
-  #tabs { flex: none; display: flex; gap: 4px; padding: 8px 10px; border-bottom: 1px solid var(--line); background: var(--panel); overflow-x: auto; }
-  #tabs button { white-space: nowrap; border-color: transparent; color: var(--muted); }
-  #tabs button.on { border-color: var(--link); color: var(--link); font-weight: 600; }
+  #tabs { flex: none; padding: 8px 10px 6px; border-bottom: 1px solid var(--line); background: var(--panel); }
+  #tabs .tg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-bottom: 6px; }
+  #tabs .tg button { border: 0; border-radius: 0; border-right: 1px solid var(--line); font-weight: 600; padding: 4px 14px; }
+  #tabs .tg button:last-child { border-right: 0; } #tabs .tg button.on { background: var(--link); color: #fff; }
+  #tabs .tr { display: none; gap: 4px; flex-wrap: wrap; } #tabs .tr.on { display: flex; }
+  #tabs .tr button { white-space: nowrap; border-color: transparent; color: var(--muted); }
+  #tabs .tr button.on { border-color: var(--link); color: var(--link); font-weight: 600; }
   #view { flex: 1; overflow: auto; padding: 16px 20px 40px; min-height: 0; }
   #view h2 { font-size: 1.1em; margin: 0 0 4px; }
   #view h3 { font-size: .95em; margin: 22px 0 6px; padding-bottom: 3px; border-bottom: 2px solid var(--line); }
@@ -277,20 +306,31 @@
 <div id="split" role="separator" aria-orientation="vertical" title="끌어서 너비 조절 (두 번 누르면 초기화)"></div>
 <button id="toggle-graph">분석·온톨로지 펼치기 ▲</button>
 <main>
-  <div id="tabs" role="tablist">
-    <button data-v="heat" class="on">세션–개념 지도</button>
-    <button data-v="pm">문제–기법 대응</button>
-    <button data-v="bridge">세션 사이의 다리</button>
-    <button data-v="org">기관·협력 후보</button>
-    <button data-v="apply">적용 모아 보기</button>
-    <button data-v="graph">온톨로지 그래프</button>
-    <button data-v="check">데이터 점검</button>
-    <span class="sep" aria-hidden="true">자료</span>
-    <button data-v="report">고찰 보고서</button>
-    <button data-v="slides">슬라이드</button>
-    <button data-v="trend">동향 요약</button>
-    <button data-v="read">열람 목록</button>
-    <button data-v="export">내보내기</button>
+  <div id="tabs">
+    <div class="tg" role="tablist"><button data-g="an" class="on">분석</button><button data-g="doc">자료</button><button data-g="chk">점검·내보내기</button></div>
+    <div class="tr on" data-g="an">
+      <button data-v="heat" class="on">세션–개념 지도</button>
+      <button data-v="pm">문제–기법 대응</button>
+      <button data-v="bridge">세션 사이의 다리</button>
+      <button data-v="cmap">개념 관계</button>
+      <button data-v="org">기관</button>
+      <button data-v="people">인물·협력 후보</button>
+      <button data-v="graph">온톨로지 그래프</button>
+    </div>
+    <div class="tr" data-g="doc">
+      <button data-v="report">고찰 보고서</button>
+      <button data-v="slides">슬라이드</button>
+      <button data-v="trend">동향 요약</button>
+      <button data-v="debate">쟁점 대조</button>
+      <button data-v="orgp">기관 프로필</button>
+      <button data-v="plan">실행 계획표</button>
+      <button data-v="nums">수치 모음</button>
+      <button data-v="read">열람 목록</button>
+    </div>
+    <div class="tr" data-g="chk">
+      <button data-v="check">데이터 점검</button>
+      <button data-v="export">내보내기</button>
+    </div>
   </div>
   <div id="view"><p class="note">발표 데이터를 불러오는 중…</p></div>
   <div id="graph">
@@ -331,6 +371,7 @@
   const CREL = ["addresses", "proposes", "targets"];
 
   // ---------- 1단계: 고찰에 필요한 파일만 먼저 읽고 첫 화면을 그림 ----------
+  let debates = [], numbersX = {};
   let schema = {}, manifest, orgs = {}, people = {}, concepts = {}, sessions = [], presentations = [], overview = {}, themes = [], glossary = {}, changelog = [];
   const nodes = new Map(), edges = [], errors = [];
   let valid = [], full = false, cy = null, A = null;            // full: 발표까지 읽음, A: 온톨로지 분석 결과
@@ -473,7 +514,15 @@
     let h = `<div class="insight"><h2>${esc(s ? sTitle(s) : overview.label || "전체 세션 종합")}</h2>` +
       (s ? `<p class="muted">${esc([s.kind, s.date, s.time, s.room].filter(Boolean).join(" · "))} · <span class="link" data-id="${esc(s.id)}">발표 목록</span></p>` : "") +
       (src.summary_ko ? `<p>${esc(src.summary_ko)}</p>` : "");
-    if (!s) {                                                    // 첫 화면: 핵심 수치와 심층 요약 카드
+    if (!s) {                                                    // 첫 화면: 길잡이, 핵심 수치, 심층 요약 카드
+      const go = (v, l) => `<span class="link" data-go="${v}">${l}</span>`;
+      h += `<details class="guide" ${store.get("sc26-guide") === "0" ? "" : "open"}><summary>무엇부터 볼까</summary><ul>` +
+        `<li><b>대회의 흐름을 알고 싶다</b> ${themes[0] ? `<span class="link" data-sess="theme:${esc(themes[0].id)}">심층 요약</span> · ` : ""}${go("trend", "동향 요약")} · ${go("debate", "쟁점 대조")}</li>` +
+        `<li><b>우리 기관에 적용할 것을 찾는다</b> ${go("plan", "실행 계획표")}</li>` +
+        `<li><b>사람과 기관을 찾는다</b> ${go("org", "기관")} · ${go("orgp", "기관 프로필")} · ${go("people", "인물·협력 후보")}</li>` +
+        `<li><b>인용할 수치가 필요하다</b> ${go("nums", "수치 모음")} · ${go("read", "열람 목록")}</li>` +
+        `<li><b>보고하거나 발표해야 한다</b> ${go("report", "고찰 보고서")} · ${go("slides", "슬라이드")}</li>` +
+        `<li><b>특정 세션이나 낱말을 찾는다</b> 위의 세션 메뉴와 검색창</li></ul></details>`;
       if ((overview.highlights || []).length) h += `<h3>핵심 수치</h3><div class="cards">` + overview.highlights.map((x) =>
         `<div class="card" data-id="${esc(x.ref || "")}"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("") + `</div>`;
       if (themes.length) h += `<h3>심층 요약 <small>· 여러 세션을 가로지른 관점 ${themes.length}개</small></h3>` + themes.map((th, i) =>
@@ -618,11 +667,14 @@
     if (e.target.id === "back") { if (cy) cy.elements().removeClass("faded focus hl"); curNode = null; return (panel || showOverview)(); }
     if (e.target.id === "back0") { $("q").value = ""; if (cy) applyFilter(false); return showOverview(); }
     if (e.target.id === "tograph") return openGraph(e.target.dataset.id);
+    const gv = e.target.closest("[data-go]");
+    if (gv) return goView(gv.dataset.go);
     const go = e.target.closest("[data-sess]");
     if (go) return setSession(go.dataset.sess);
     const l = e.target.closest("[data-id]");
     if (l && l.dataset.id) select(l.dataset.id);
   });
+  $("detail").addEventListener("toggle", (e) => { if (e.target.classList && e.target.classList.contains("guide")) store.set("sc26-guide", e.target.open ? "1" : "0"); }, true);
   $("session").addEventListener("change", () => {
     syncSessBtn(); $("q").value = "";
     if (cy) { cy.elements().removeClass("focus hl"); applyFilter(true); }
@@ -728,15 +780,25 @@
     const top = [...O].sort((a, b) => b[1].ps.length - a[1].ps.length).slice(0, 24);
     const th = themes.map((t) => A.themeScope.get("theme:" + t.id).ps);
     const max = Math.max(...top.flatMap(([, o]) => th.map((s) => o.ps.filter((p) => s.has(p)).length)), 1);
+    return `<h2>기관</h2><p class="note">주제를 고르면 그 주제로 발표한 기관이 발표 수 순으로 나옴. 저자 소속을 따라 모은 것이며, 한 발표에 여러 기관이 있으면 각각 한 번씩 셈. 공개 페이지에 소속이 없는 발표자는 집계에서 빠짐. "프로필"을 누르면 그 기관의 한 쪽 요약으로, 사람은 "인물 연결망"에서 봄.</p>` +
+      `<select id="org-topic">${opts.map(([v, l]) => `<option value="${esc(v)}" ${v === orgTopic ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>` +
+      `<h3>기관 <small class="muted">· 발표 수 순</small></h3><div class="tw"><table class="mx"><thead><tr><th></th><th class="tot">발표</th><th class="tot">세션</th>${themes.map((t, i) => `<th data-sess="theme:${esc(t.id)}" title="${esc(t.label)}">요약 ${i + 1}</th>`).join("")}</tr></thead><tbody>` +
+      top.map(([o, x]) => `<tr><th data-id="${esc(o)}">${esc(nodes.get(o).label)}${KR.has(o) ? ` <span class="tagk">한국</span>` : ""} <span class="link" data-orgp="${esc(o)}">프로필</span></th><td ${cellAttr(nodes.get(o).label, "이 기관 소속 저자가 참여한 발표", x.ps)}>${x.ps.length}</td><td class="tot z">${x.ss.size}</td>` +
+        th.map((s, i) => { const v = x.ps.filter((p) => s.has(p)); return `<td ${tint(v.length, max)} ${v.length ? cellAttr(nodes.get(o).label, "심층 요약 " + (i + 1) + " 관련 발표", v) : ""}>${v.length || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody></table></div>`;
+  }
+  // 주제별 저자 목록 (인물 연결망에서 씀)
+  let netScope = "";
+  function peopleLists() {
+    const scope = scopeSet(netScope), inS = (pid) => !scope || scope.has(pid), KR = new Set(overview.korea_orgs || []), W = new Map(), Wall = new Map();
+    presentations.forEach((p) => (p.authors || []).forEach((a) => {
+      const y = Wall.get(a) || Wall.set(a, new Set()).get(a); y.add(p.session);
+      if (inS(p.id)) { const x = W.get(a) || W.set(a, { ps: [] }).get(a); x.ps.push(p.id); }
+    }));
     const who = [...W].filter(([a, x]) => x.ps.length >= 2 || Wall.get(a).size >= 3).sort((a, b) => b[1].ps.length - a[1].ps.length || Wall.get(b[0]).size - Wall.get(a[0]).size).slice(0, 24);
     const krP = [...W].filter(([a]) => (A.porg.get(a) || []).some((o) => KR.has(o)));
     const orgsOf = (a) => (A.porg.get(a) || []).map((o) => nodes.get(o).label).join(", ");
-    const person = ([a, x]) => `<li ${cellAttr(nodes.get(a).label, "참여한 발표", x.ps)}><span><b>${esc(nodes.get(a).label)}</b>${Wall.get(a).size >= 3 ? ` <span class="tagk x">여러 세션</span>` : ""}${(A.porg.get(a) || []).some((o) => KR.has(o)) ? ` <span class="tagk">한국</span>` : ""}<small>${esc(orgsOf(a) || "소속 미확인")} · 전체 세션 ${esc([...Wall.get(a)].map(sNum).sort().join(", "))}</small></span><em>발표 ${x.ps.length}</em></li>`;
-    return `<h2>기관·저자와 협력 후보</h2><p class="note">주제를 고르면 그 주제로 발표한 기관과 저자가 발표 수 순으로 나옴. 저자 소속을 따라 모은 것이며, 한 발표에 여러 기관이 있으면 각각 한 번씩 셈. 공개 페이지에 소속이 없는 발표자는 기관 집계에서 빠짐. "여러 세션"은 세 개 이상의 세션에 이름을 올린 사람, "한국"은 한국 기관 소속임.</p>` +
-      `<select id="org-topic">${opts.map(([v, l]) => `<option value="${esc(v)}" ${v === orgTopic ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>` +
-      `<h3>기관 <small class="muted">· 발표 수 순</small></h3><div class="tw"><table class="mx"><thead><tr><th></th><th class="tot">발표</th><th class="tot">세션</th>${themes.map((t, i) => `<th data-sess="theme:${esc(t.id)}" title="${esc(t.label)}">요약 ${i + 1}</th>`).join("")}</tr></thead><tbody>` +
-      top.map(([o, x]) => `<tr><th data-id="${esc(o)}">${esc(nodes.get(o).label)}${KR.has(o) ? ` <span class="tagk">한국</span>` : ""}</th><td ${cellAttr(nodes.get(o).label, "이 기관 소속 저자가 참여한 발표", x.ps)}>${x.ps.length}</td><td class="tot z">${x.ss.size}</td>` +
-        th.map((s, i) => { const v = x.ps.filter((p) => s.has(p)); return `<td ${tint(v.length, max)} ${v.length ? cellAttr(nodes.get(o).label, "심층 요약 " + (i + 1) + " 관련 발표", v) : ""}>${v.length || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody></table></div>` +
+    const person = ([a, x]) => `<li ${cellAttr(nodes.get(a).label, "참여한 발표", x.ps)}><span><b>${esc(nodes.get(a).label)}</b>${Wall.get(a).size >= 3 ? ` <span class="tagk x">여러 세션</span>` : ""}${(A.porg.get(a) || []).some((o) => KR.has(o)) ? ` <span class="tagk">한국</span>` : ""}<small><span class="link" data-who="${esc(a)}">닿는 길</span> · ${esc(orgsOf(a) || "소속 미확인")} · 전체 세션 ${esc([...Wall.get(a)].map(sNum).sort().join(", "))}</small></span><em>발표 ${x.ps.length}</em></li>`;
+    return `<h3>협력 후보 <small class="muted">· 주제를 고르면 그 주제의 저자만 남음</small></h3><p>${scopeSel("net-scope", netScope)}</p>` +
       `<div class="two"><div><h3>저자 <small class="muted">· 이 주제의 발표가 둘 이상이거나 여러 세션에 걸친 사람</small></h3><ul class="rank">${who.map(person).join("") || `<li><span class="muted">해당하는 저자가 없음.</span></li>`}</ul></div>` +
       `<div><h3>한국 기관 소속 발표자 <small class="muted">· ${krP.length}명</small></h3><ul class="rank">${krP.map(person).join("") || `<li><span class="muted">이 주제에는 한국 기관 소속 발표자가 없음.</span></li>`}</ul></div></div>`;
   }
@@ -756,8 +818,7 @@
     if (applyBy === "stage") STAGES.forEach(([k]) => groups.set(k, []));
     items.forEach((it) => { const k = applyBy === "stage" ? it[2].stage || "prep" : it[2].area || "그 밖"; (groups.get(k) || groups.set(k, []).get(k)).push(it); });
     const sl = Object.fromEntries(STAGES.map(([k, l, d]) => [k, [l, d]]));
-    return `<h2>적용 모아 보기</h2><p class="note">세션마다 적은 "한국 연구기관으로의 적용" 제안 ${items.length}개를 실행 단계 또는 영역으로 묶은 것임. 모두 공개 초록을 바탕으로 한 제안이며, 단계와 선행 조건은 제안의 성격을 보고 붙인 것이어서 기관 사정에 따라 달라질 수 있음. "복사"를 누르면 그 묶음이 글머리표 문단으로 복사됨.</p>` +
-      `<div class="seg" id="apply-by"><button data-b="stage" class="${applyBy === "stage" ? "on" : ""}">실행 단계별</button><button data-b="area" class="${applyBy === "area" ? "on" : ""}">영역별</button></div> <button id="print-view">이 화면 인쇄</button>` +
+    return `<h2>적용 제안 실행 계획표</h2><p class="note">적용 제안 ${items.length}개 전체를 ${applyBy === "stage" ? "실행 단계" : "영역"}별로 펼친 목록임. 모두 공개 초록을 바탕으로 한 제안이며, 단계와 선행 조건은 제안의 성격을 보고 붙인 것이어서 기관 사정에 따라 달라질 수 있음. "복사"를 누르면 그 묶음이 글머리표 문단으로 복사됨.</p>` + planSeg() +
       [...groups].filter(([, v]) => v.length).map(([k, v]) => `<div class="area"><h3>${esc(applyBy === "stage" ? sl[k][0] : k)} <small class="muted">${v.length}개${applyBy === "stage" ? " · " + esc(sl[k][1]) : ""}</small><button data-copy="${esc(applyBy === "stage" ? sl[k][0] : k)}">복사</button></h3><ul>` +
         v.map(([w, sid, o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small><span class="link" data-sess="${esc(sid)}">${esc(w)}</span> · ${esc(applyBy === "stage" ? o.area || "" : (sl[o.stage] || [""])[0])}</small>${o.needs ? `<br><span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""}<br>${(o.refs || []).map(refChip).join("")}</li>`).join("") + `</ul></div>`).join("");
   }
@@ -789,6 +850,12 @@
   }
   function buildSlides() {
     const S = [], ev = evCounts(), ins = overview.insights || {}, items = applyItems();
+    const numOf = (t) => { const m = String(t || "").match(NUM_G); return m ? (m.find((x) => /%|배/.test(x)) || m[0]).trim() : ""; };   // 비율과 배수를 먼저 고름
+    const bestRef = (refs) => (refs || []).filter((r) => nodes.has(r)).sort((a, b) => ({ num: 0, qual: 1, none: 2 }[evOf(a)] - { num: 0, qual: 1, none: 2 }[evOf(b)]))[0];
+    const evd = (refs) => { const r = bestRef(refs); if (!r) return ""; const p = nodes.get(r), cl = (p.claims || []).map((c) => (typeof c === "string" ? c : c.text)).find((c) => NUM_RE.test(c)); return `<p class="evd">근거 발표: <span class="link" data-id="${esc(r)}">${esc(p.label)}</span> (${esc(sNum(p.session))})${cl ? " · " + esc(cl) : ""}</p>`; };
+    const point = (title, o, kick) => { const r = bestRef(o.refs), p = r && nodes.get(r), cl = p && (p.claims || []).map((c) => (typeof c === "string" ? c : c.text)).find((c) => NUM_RE.test(c)), n = numOf(o.text);
+      S.push([title, (n ? `<div class="big"><b>${esc(n)}</b><span>본문의 대표 수치</span></div>` : "") + (kick ? `<p class="lead2"><b>${esc(kick)}</b></p>` : "") + `<p class="lead2">${emph(o.text || "")}</p>` + evd(o.refs)]); };
+    const heads = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((o) => { const v = numOf(o.text); return `<li>${esc(o.head)}${v ? ` <b class="n">${esc(v)}</b>` : ""}</li>`; }).join("")}</ul>`;
     const bullets = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
     S.push(["", `<div class="s-title"><h2>SC26 워크숍 고찰</h2><p>세션 ${sessions.length}개 · 발표 ${presentations.length}건의 초록에서 도출</p><p class="muted">기준일 ${esc((changelog[0] || {}).date || "")}</p></div>`]);
     S.push(["범위와 방법", `<ul><li>워크숍 ${sessions.length}개의 발표 ${presentations.length}건을 읽고, 다루는 문제·제안 기법·대상 시스템을 온톨로지로 정리함.</li><li>주제: ${esc(topics().join(", "))}</li><li>고찰 관점: 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용</li><li>근거: 수치를 제시한 발표 ${ev.num}건, 수치 없이 설명한 발표 ${ev.qual}건, 제목만 확인한 발표 ${ev.none}건. 모두 공개 초록 기준임.</li></ul>`]);
@@ -797,11 +864,13 @@
       const secs = (th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)), kr = (th.sections || []).find((s) => /^한국 연구기관/.test(s.head));
       S.push([`동향 ${i + 1}. ${th.label}`, `<p class="lead2">${esc(th.summary_ko || "")}</p>` + bullets(secs.map((s) => s.head), 7)]);
       if (th.diagram) S.push([`동향 ${i + 1}. ${th.label}`, diagramHtml(th.diagram)]);
-      secs.slice(0, 2).forEach((s) => S.push([`동향 ${i + 1}. ${s.head}`, `<p class="lead2">${emph(s.text)}</p><p>${(s.refs || []).slice(0, 4).map(refChip).join("")}</p>`]));
-      if (kr) S.push([`동향 ${i + 1}의 적용`, `<p class="lead2"><b>${esc(kr.head.replace(/^한국 연구기관에의 적용\(제안\) - /, ""))}</b></p><p class="lead2">${emph(kr.text)}</p>`]);
+      secs.slice(0, 2).forEach((s) => point(`동향 ${i + 1}. ${s.head}`, s));
+      if (kr) point(`동향 ${i + 1}의 적용`, kr, kr.head.replace(/^한국 연구기관에의 적용\(제안\) - /, ""));
     });
-    S.push(["시사점: 결정 주체와 기준", bullets((ins.decision || []).map((o) => o.head), 9)]);
-    S.push(["시사점: 시행착오와 조건", bullets((ins.trial || []).map((o) => o.head), 14)]);
+    S.push(["시사점: 결정 주체와 기준", heads(ins.decision || [], 9)]);
+    if ((ins.decision || [])[0]) point("결정 주체와 기준: " + ins.decision[0].head, ins.decision[0]);
+    S.push(["시사점: 시행착오와 조건", heads(ins.trial || [], 14)]);
+    const tn = (ins.trial || []).find((o) => numOf(o.text)); if (tn) point("시행착오와 조건: " + tn.head, tn);
     STAGES.filter(([k]) => k !== "ref").forEach(([k, l]) => { const v = items.filter((x) => (x[2].stage || "prep") === k); S.push([`후속 조치: ${l} (${v.length}개 중 일부)`, `<ul class="c2">${v.slice(0, 8).map(([, , o]) => `<li>${esc(o.head)}${o.needs ? `<br><span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""}</li>`).join("")}</ul>`]); });
     S.push(["한계와 다음 단계", `<ul><li>모든 내용은 공개 초록에 근거하며 논문 전문과 현장 발표는 반영하지 않았음.</li><li>제목만 확인한 발표 ${ev.none}건은 현장 자료로 보완이 필요함.</li><li>문제와 기법의 분류는 초록을 요약하며 붙인 것임.</li><li>적용 제안의 단계와 선행 조건은 기관 사정에 맞춘 검토가 필요함.</li></ul>`]);
     return S;
@@ -842,6 +911,10 @@
       f("export/nodes.csv", "nodes.csv", "노드 표. id, 종류, 이름, 한국어 이름, 세션, 근거 수준, 주소.") +
       f("export/edges.csv", "edges.csv", "관계 표. 출발 id, 관계, 도착 id.") +
       f("export/insights.csv", "insights.csv", "고찰 표. 출처(종합, 심층 요약, 세션), 관점, 요지, 풀이, 근거 발표, 실행 단계, 영역, 선행 조건.") +
+      f("export/numbers.csv", "numbers.csv", "수치 모음표. 수치, 주장 문장, 대상 시스템, 다루는 문제, 발표, 세션, 주소.") +
+      f("export/presentations.jsonl", "presentations.jsonl", "발표마다 한 줄. 요약, 주장, 저자와 소속, 개념 이름을 풀어 담아 검색 색인에 바로 넣을 수 있음.") +
+      f("export/AGENT.md", "AGENT.md", "에이전트용 설명서. 파일 구조, 관계의 뜻, 질문 유형별로 읽을 파일, 주의할 점.") +
+      f("export/queries.md", "queries.md", "예시 질의 모음. SPARQL과 파이썬으로 같은 질문에 답하는 방법.") +
       f("data/bundle-core.json", "bundle-core.json", "뷰어가 첫 화면에 읽는 묶음(스키마, 종합, 심층 요약, 세션).") +
       f("data/bundle-rest.json", "bundle-rest.json", "뷰어가 이어서 읽는 묶음(발표, 개념, 인물, 기관).") +
       `</ul><h3>구조</h3><table class="ctable">${Object.entries(classes()).map(([k, c]) => `<tr><th>${esc(c.label_ko || k)}</th><td>${esc(k)} · ${[...nodes.values()].filter((n) => n.type === k).length}개</td></tr>`).join("")}<tr><th>관계</th><td>${esc(Object.keys(schema.relations || {}).join(", "))} · ${valid.length}개</td></tr></table></div>`;
@@ -895,6 +968,165 @@
         return `<td ${tint(j, max)} ${sh.length ? cellAttr("(" + sNum(a.id) + ") 와 (" + sNum(b.id) + ") 의 공유 개념", sh.slice(0, 8).map(clab).join(", "), idsOf(a, b, sh)) : ""}>${sh.length || ""}</td>`;
       }).join("") + `</tr>`).join("") + `</tbody></table></div>`);
   }
+  // ---------- 실행 계획표, 수치 모음, 개념 관계, 인물 연결망 ----------
+  const scopeOpts = () => [["", "전체 발표"], ...themes.map((t, i) => ["theme:" + t.id, `심층 요약 ${i + 1}. ${t.label}`]), ...topics().map((t) => ["topic:" + t, "세션 주제: " + t])];
+  const scopeSet = (v) => !v ? null : v.startsWith("theme:") ? A.themeScope.get(v).ps : new Set(presentations.filter((p) => topicOf(nodes.get(p.session)) === v.slice(6)).map((p) => p.id));
+  const scopeSel = (id, v) => `<select id="${id}">${scopeOpts().map(([k, l]) => `<option value="${esc(k)}" ${k === v ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>`;
+  let planCell = "", planMode = "table";
+  const planSeg = () => `<div class="seg" id="plan-mode">${[["table", "계획표"], ["stage", "전체 목록: 단계별"], ["area", "전체 목록: 영역별"]].map(([k, l]) => `<button data-m="${k}" class="${k === planMode ? "on" : ""}">${l}</button>`).join("")}</div> <button id="print-view">이 화면 인쇄</button>`;
+  function viewPlan() {
+    if (planMode !== "table") { applyBy = planMode; return viewApply(); }
+    const items = applyItems().map(([w, sid, o]) => ({ w, sid, o, st: o.stage || "prep", ar: o.area || "그 밖" }));
+    const areas = [...new Set(items.map((x) => x.ar))].sort((a, b) => items.filter((x) => x.ar === b).length - items.filter((x) => x.ar === a).length);
+    const act = items.filter((x) => x.st !== "ref"), sl = Object.fromEntries(STAGES.map(([k, l]) => [k, l]));
+    const G = new Map();
+    act.forEach((x) => { if (x.o.needs) { const k = x.o.needs_group || "그 밖"; (G.get(k) || G.set(k, []).get(k)).push(x); } });
+    const groups = [...G].sort((a, b) => b[1].length - a[1].length), max = Math.max(...STAGES.flatMap(([k]) => areas.map((a) => items.filter((x) => x.st === k && x.ar === a).length)), 1);
+    const li = (x, tag) => `<li><b>${esc(x.o.head)}</b> <small class="muted"><span class="link" data-sess="${esc(x.sid)}">${esc(x.w)}</span> · ${esc(tag)}</small>${x.o.needs ? `<br><span class="needs">선행 조건: ${esc(x.o.needs)}</span>` : ""}</li>`;
+    const [cs, ca] = planCell.split("|"), sel = planCell ? items.filter((x) => (!cs || x.st === cs) && (!ca || x.ar === ca)) : [];
+    return `<div class="doc wide"><h2>적용 제안 실행 계획표</h2><p class="note">적용 제안 ${items.length}개를 실행 단계와 영역으로 펼치고, 선행 조건이 같은 종류인 제안을 묶은 것임. 단계, 영역, 선행 조건의 묶음은 초록을 바탕으로 붙인 분류이므로 기관 사정에 맞춘 조정이 필요함(세션 파일의 <code>stage</code>, <code>area</code>, <code>needs_group</code>을 고치면 바뀜).</p>${planSeg()}` +
+      `<h3>단계 × 영역 <small class="muted">· 칸을 누르면 해당 제안이 아래에 나옴</small></h3><div class="tw"><table class="mx plan"><thead><tr><th></th>${areas.map((a) => `<th data-plan="|${esc(a)}">${esc(a)}</th>`).join("")}<th class="tot">합계</th></tr></thead><tbody>` +
+      STAGES.map(([k, l]) => `<tr><th data-plan="${k}|">${esc(l)}</th>${areas.map((a) => { const n = items.filter((x) => x.st === k && x.ar === a).length; return `<td ${tint(n, max)} ${n ? `data-plan="${k}|${esc(a)}"` : ""}>${n || ""}</td>`; }).join("")}<td class="tot z">${items.filter((x) => x.st === k).length}</td></tr>`).join("") +
+      `<tr><th>합계</th>${areas.map((a) => `<td class="tot z">${items.filter((x) => x.ar === a).length}</td>`).join("")}<td class="tot z">${items.length}</td></tr></tbody></table></div>` +
+      (planCell ? `<div class="area"><h3>${esc([sl[cs], ca].filter(Boolean).join(" · "))} <small class="muted">${sel.length}개</small><button data-plan="">닫기</button></h3><ul>${sel.map((x) => li(x, cs ? x.ar : sl[x.st])).join("")}</ul></div>` : "") +
+      `<h3>먼저 갖출 것 <small class="muted">· 같은 종류의 선행 조건을 공유하는 제안 수 순</small></h3><p class="note">한 종류의 준비를 갖추면 그 아래 제안들을 시작할 수 있음. 위에 있을수록 한 번의 준비로 풀리는 제안이 많음. "참고 사례"와 선행 조건을 적지 않은 제안은 빠져 있음.</p>` +
+      groups.map(([g, v], i) => { const c = (k) => v.filter((x) => x.st === k).length; const ar = [...new Set(v.map((x) => x.ar))];
+        return `<details class="pg" ${i < 2 ? "open" : ""}><summary><b>${i + 1}. ${esc(g)}</b> <span class="tagk">제안 ${v.length}개</span> <small class="muted">바로 ${c("now")} · 준비 ${c("prep")} · 장기 ${c("long")} · ${esc(ar.join(", "))}</small><span class="bar"><i style="width:${(100 * v.length) / groups[0][1].length}%"></i></span></summary><ul>${["now", "prep", "long"].flatMap((k) => v.filter((x) => x.st === k)).map((x) => li(x, sl[x.st] + " · " + x.ar)).join("")}</ul></details>`; }).join("") +
+      `<h3>권장 순서</h3><ol>${["now", "prep", "long"].map((k) => { const v = act.filter((x) => x.st === k), top = [...new Set(v.map((x) => x.o.needs_group).filter(Boolean))].map((g) => [g, v.filter((x) => x.o.needs_group === g).length]).sort((a, b) => b[1] - a[1]).slice(0, 3);
+        return `<li><b>${esc(sl[k])}</b> <span class="muted">${v.length}개</span> · 주된 준비: ${top.map(([g, n]) => esc(g) + " " + n + "개").join(", ")}</li>`; }).join("")}</ol></div>`;
+  }
+  const NUM_G = new RegExp(NUM_RE.source, "g");
+  let numScope = "", numQ = "";
+  function numRows() {
+    const rows = [];
+    presentations.forEach((p) => (p.claims || []).forEach((c, k) => { const t = typeof c === "string" ? c : c.text || ""; const m = t.match(NUM_G); if (m && !/수치가 없/.test(t)) rows.push({ p, t, m, x: numbersX[p.id + "#" + k] || {}, src: typeof c === "string" ? "abstract" : c.source || "abstract" }); }));
+    return rows;
+  }
+  function viewNums() {
+    const sc = scopeSet(numScope), q = numQ.trim().toLowerCase();
+    const all = numRows(), rows = all.filter((r) => (!sc || sc.has(r.p.id)) && (!q || (r.t + " " + (r.x.what || "") + " " + (r.x.cond || "") + " " + r.p.label + " " + [...A.pc.get(r.p.id).all].map(clab).join(" ")).toLowerCase().includes(q)));
+    return `<div class="doc wide"><h2>수치 모음표</h2><p class="note">발표의 핵심 주장 가운데 단위가 붙은 수치가 있는 문장 ${all.length}개를 모은 것임. "무엇이"와 "어떤 조건에서"는 문장마다 초록 요약을 읽고 나눠 적은 것이고(<code>data/numbers.yaml</code>), "얼마나"는 문장에서 자동으로 뽑은 수치임. 아래 작은 글씨는 원래의 주장 문장과 발표에 붙인 태그임. 초록에 없는 측정 조건은 담지 못했으므로 인용 전에 프로그램 페이지나 논문에서 확인이 필요함. 같은 표는 내보내기의 <code>numbers.csv</code>로도 받을 수 있음.</p>` +
+      `<p>${scopeSel("num-scope", numScope)} <input id="num-q" type="search" placeholder="낱말로 거르기 (예: 전력, GPU, 에이전트)" value="${esc(numQ)}"> <button id="print-view">이 화면 인쇄</button></p>` +
+      `<p class="muted">${rows.length}개 문장 · 발표 ${new Set(rows.map((r) => r.p.id)).size}건</p><table class="ctable nums"><thead><tr><th>얼마나</th><th>무엇이</th><th>어떤 조건에서</th><th>발표</th></tr></thead><tbody>` +
+      rows.slice(0, 400).map((r) => { const v = A.pc.get(r.p.id);
+        return `<tr><td class="nv">${r.m.slice(0, 4).map((x) => `<b class="n">${esc(x.trim())}</b>`).join("<br>")}</td><td>${r.x.what ? `<b>${esc(r.x.what)}</b><br><small class="muted">${emph(r.t)}</small>` : emph(r.t)}${r.src !== "abstract" ? ` <span class="tagk x">${esc(SRC_KO[r.src] || r.src)}</span>` : ""}</td><td class="cond">${r.x.cond ? esc(r.x.cond) + "<br>" : ""}<small class="muted">${[...v.targets].map((c) => `<span class="link" data-id="${esc(c)}">${esc(clab(c))}</span>`).join(", ")}</small></td><td><span class="link" data-id="${esc(r.p.id)}">${esc(r.p.label)}</span> <span class="muted">(${esc(sNum(r.p.session))})</span>${r.p.url ? ` <a href="${esc(r.p.url)}" target="_blank" rel="noopener">↗</a>` : ""}</td></tr>`; }).join("") +
+      `</tbody></table>${rows.length > 400 ? `<p class="note">처음 400개만 표시함. 주제나 낱말로 좁히면 나머지가 보임.</p>` : ""}</div>`;
+  }
+  let cmapScope = "", cmapLinks = [];
+  function viewCmap() {
+    const sc = scopeSet(cmapScope), cnt = new Map(), pm = new Map(), ms = new Map();
+    const add = (m, k, pid) => (m.get(k) || m.set(k, []).get(k)).push(pid);
+    A.pc.forEach((v, pid) => {
+      if (sc && !sc.has(pid)) return;
+      v.all.forEach((c) => cnt.set(c, (cnt.get(c) || 0) + 1));
+      v.addresses.forEach((p) => v.proposes.forEach((m) => add(pm, p + "|" + m, pid)));
+      v.proposes.forEach((m) => v.targets.forEach((s) => add(ms, m + "|" + s, pid)));
+    });
+    const N = isNarrow() ? 8 : 14, top = (t) => [...cnt].filter(([c]) => nodes.get(c).type === t).sort((a, b) => b[1] - a[1]).slice(0, N).map(([c]) => c);
+    // 기법은 고른 문제·대상과 가장 많이 이어진 것을 고름
+    const P = top("Problem"), S = top("System"), mScore = new Map();
+    pm.forEach((v, k) => { const [p, m] = k.split("|"); if (P.includes(p)) mScore.set(m, (mScore.get(m) || 0) + v.length); });
+    ms.forEach((v, k) => { const [m, s] = k.split("|"); if (S.includes(s)) mScore.set(m, (mScore.get(m) || 0) + v.length); });
+    const M = [...mScore].sort((a, b) => b[1] - a[1]).slice(0, N).map(([m]) => m);
+    const min = sc ? 1 : 2;
+    cmapLinks = [...[...pm].filter(([k, v]) => { const [a, b] = k.split("|"); return P.includes(a) && M.includes(b) && v.length >= min; }), ...[...ms].filter(([k, v]) => { const [a, b] = k.split("|"); return M.includes(a) && S.includes(b) && v.length >= min; })]
+      .map(([k, v]) => { const [a, b] = k.split("|"); return { a, b, v, cell: cellAttr(clab(a) + " × " + clab(b), "두 개념을 함께 다룬 발표", v).slice(11, -1) }; });
+    const col = (title, ids, t) => `<div class="ccol"><p class="ch"><span class="tyt" style="--tc:${esc((classes()[t] || {}).color)}">${title}</span></p>${ids.map((c) => `<div class="cn" data-id="${esc(c)}" data-c="${esc(c)}" style="--tc:${esc((classes()[t] || {}).color)}">${esc(clab(c))} <small>${cnt.get(c)}</small></div>`).join("")}</div>`;
+    return `<h2>개념 관계 지도</h2><p class="note">세션을 빼고 문제, 기법, 대상 시스템만으로 그린 그림임. 선은 한 발표가 두 개념을 함께 다룬 경우이며 굵기는 발표 수에 비례함(전체 보기에서는 2건 이상만 그림). 개념에 마우스를 올리면 이어진 선만 남고, 선을 누르면 해당 발표 목록이, 개념을 누르면 개념 상세가 요약 칸에 나옴. 숫자는 그 개념을 다룬 발표 수임.</p>` +
+      `<p>${scopeSel("cmap-scope", cmapScope)}</p><div id="cmap">${col("다루는 문제", P, "Problem")}<div class="cgap"></div>${col("제안 기법", M, "Method")}<div class="cgap"></div>${col("대상 시스템", S, "System")}<svg></svg></div>`;
+  }
+  function drawCmap() {
+    const box = $("cmap"); if (!box) return;
+    const svg = box.querySelector("svg"), r0 = box.getBoundingClientRect(), pos = {};
+    box.querySelectorAll(".cn").forEach((el) => { const r = el.getBoundingClientRect(); pos[el.dataset.c] = { l: r.left - r0.left, r: r.right - r0.left, y: r.top - r0.top + r.height / 2 }; });
+    const mx = Math.max(...cmapLinks.map((l) => l.v.length), 1);
+    svg.setAttribute("width", r0.width); svg.setAttribute("height", r0.height);
+    svg.innerHTML = cmapLinks.map((l) => { const a = pos[l.a], b = pos[l.b]; if (!a || !b) return ""; const x1 = a.r, x2 = b.l, c = (x2 - x1) / 2;
+      return `<path d="M${x1},${a.y} C${x1 + c},${a.y} ${x2 - c},${b.y} ${x2},${b.y}" stroke-width="${(1 + 9 * l.v.length / mx).toFixed(1)}" data-a="${esc(l.a)}" data-b="${esc(l.b)}" data-cell="${l.cell}"><title>${esc(clab(l.a) + " × " + clab(l.b) + " · 발표 " + l.v.length + "건")}</title></path>`; }).join("");
+  }
+  // 인물 연결망: 공저와 좌장 관계
+  let netWho = "";
+  function coGraph() {
+    const co = new Map(), ps = new Map();
+    presentations.forEach((p) => { const a = p.authors || []; a.forEach((x) => { (ps.get(x) || ps.set(x, []).get(x)).push(p.id); a.forEach((y) => { if (x !== y) { const m = co.get(x) || co.set(x, new Map()).get(x); (m.get(y) || m.set(y, []).get(y)).push(p.id); } }); }); });
+    return { co, ps };
+  }
+  function viewPeople() {
+    const { co, ps } = coGraph(), KR = new Set(overview.korea_orgs || []), isKR = (a) => (A.porg.get(a) || []).some((o) => KR.has(o));
+    const orgsOf = (a) => (A.porg.get(a) || []).map((o) => nodes.get(o).label).join(", ") || "소속 미확인", nmP = (a) => nodes.get(a).label;
+    // 두 번 이상 함께 발표한 쌍으로 묶은 연구 그룹
+    const par = new Map(), find = (x) => { if (!par.has(x)) par.set(x, x); while (par.get(x) !== x) { par.set(x, par.get(par.get(x))); x = par.get(x); } return x; };
+    co.forEach((m, x) => m.forEach((v, y) => { if (v.length >= 2) { const a = find(x), b = find(y); if (a !== b) par.set(a, b); } }));
+    const G = new Map(); [...par.keys()].forEach((x) => { const r = find(x); (G.get(r) || G.set(r, []).get(r)).push(x); });
+    const groups = [...G.values()].map((mem) => { const pids = new Set(mem.flatMap((a) => ps.get(a))), og = new Map(); mem.forEach((a) => (A.porg.get(a) || []).forEach((o) => og.set(o, (og.get(o) || 0) + 1)));
+      const cc = new Map(); pids.forEach((p) => A.pc.get(p).all.forEach((c) => { if (A.cs.get(c).size <= 12) cc.set(c, (cc.get(c) || 0) + 1); }));
+      return { mem: mem.sort((a, b) => ps.get(b).length - ps.get(a).length), pids: [...pids], orgs: [...og].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([o]) => nodes.get(o).label), ss: [...new Set([...pids].map((p) => nodes.get(p).session))], cc: [...cc].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([c]) => clab(c)) }; })
+      .sort((a, b) => b.pids.length - a.pids.length || b.mem.length - a.mem.length).slice(0, 16);
+    // 여러 기관을 잇는 사람: 공저자의 소속 기관 수
+    const hubs = [...co].map(([a, m]) => { const os = new Set(); m.forEach((_, y) => (A.porg.get(y) || []).forEach((o) => os.add(o))); (A.porg.get(a) || []).forEach((o) => os.delete(o)); return [a, m.size, os.size]; }).sort((a, b) => b[2] - a[2] || b[1] - a[1]).slice(0, 14);
+    const chairs = sessions.flatMap((s) => (s.chairs || []).map((c) => [c, s])), chairOf = new Map(); chairs.forEach(([c, s]) => (chairOf.get(c) || chairOf.set(c, []).get(c)).push(s));
+    chairOf.forEach((_, c) => { if (!ps.has(c)) ps.set(c, []); });
+    const names = [...ps.keys()].sort((a, b) => nmP(a).localeCompare(nmP(b)));
+    let who = "";
+    if (netWho && nodes.has(netWho) && ps.has(netWho)) {
+      const m = co.get(netWho) || new Map(), direct = [...m].sort((a, b) => b[1].length - a[1].length);
+      const myS = [...new Set(ps.get(netWho).map((p) => nodes.get(p).session))];
+      // 한국 기관 소속 발표자에서 이 사람까지 공저 관계로 이어지는 가장 짧은 길
+      const prev = new Map([[netWho, null]]), q = [netWho]; const paths = [];
+      while (q.length) { const x = q.shift(); if (x !== netWho && isKR(x)) { const path = []; for (let y = x; y; y = prev.get(y)) path.push(y); paths.push(path); if (paths.length >= 4) break; continue; } (co.get(x) || new Map()).forEach((_, y) => { if (!prev.has(y)) { prev.set(y, x); q.push(y); } }); }
+      who = `<div class="area"><h3>${esc(nmP(netWho))} <small class="muted">${esc(orgsOf(netWho))}${isKR(netWho) ? " · 한국 기관" : ""}</small></h3>` +
+        `<p><span class="link" data-id="${esc(netWho)}">인물 상세</span> · <span class="link" ${cellAttr(nmP(netWho), "참여한 발표", ps.get(netWho))}>발표 ${ps.get(netWho).length}건</span> · 세션 ${esc(myS.map(sNum).join(", "))}${chairOf.has(netWho) ? ` · 좌장: ${esc(chairOf.get(netWho).map((s) => "(" + sNum(s.id) + ")").join(" "))}` : ""}</p>` +
+        `<p><b>직접 닿는 길</b></p><ul><li>함께 발표한 사람 ${direct.length}명: ${direct.slice(0, 12).map(([y, v]) => `<span class="link" data-who="${esc(y)}">${esc(nmP(y))}</span>${isKR(y) ? ` <span class="tagk">한국</span>` : ""} <small class="muted">${esc(orgsOf(y))}${v.length > 1 ? " · " + v.length + "건" : ""}</small>`).join("; ") || "없음"}${direct.length > 12 ? " 외" : ""}</li>` +
+        `<li>발표한 세션의 좌장: ${myS.flatMap((s) => (nodes.get(s).chairs || []).map((c) => `<span class="link" data-who="${esc(c)}">${esc(nmP(c))}</span> <small class="muted">(${esc(sNum(s))})</small>`)).join("; ") || "없음"}</li></ul>` +
+        `<p><b>한국 기관 소속 발표자에서 이어지는 길</b> <small class="muted">· 공저 관계를 따라 가장 짧은 순</small></p>` + (paths.length ? `<ul>${paths.map((p) => `<li>${p.map((y) => `<span class="link" data-who="${esc(y)}">${esc(nmP(y))}</span> <small class="muted">${esc(orgsOf(y))}</small>`).join(" → ")} <span class="muted">· ${p.length - 1}단계</span></li>`).join("")}</ul>` : `<p class="muted">이 자료 안에서는 공저 관계로 이어지는 한국 기관 소속 발표자가 없음.</p>`) + `</div>`;
+    }
+    const pl = (a, sub, em) => `<li data-who="${esc(a)}"><span><b>${esc(nmP(a))}</b>${isKR(a) ? ` <span class="tagk">한국</span>` : ""}<small>${esc(sub)}</small></span><em>${esc(em)}</em></li>`;
+    return `<h2>인물과 협력 후보</h2><p class="note">같은 발표에 이름을 올린 관계(공저)와 세션 좌장 관계로 사람 사이의 연결을 본 것임. 이 워크숍들의 발표만 반영하므로 실제 협력 관계의 일부임. 이름을 고르면 그 사람에게 닿는 길이 나옴. "여러 세션"은 세 개 이상의 세션에 이름을 올린 사람, "한국"은 한국 기관 소속임.</p>` +
+      `<p><input id="net-who" list="net-names" placeholder="이름을 입력하거나 고르기" value="${esc(netWho && nodes.has(netWho) ? nmP(netWho) : "")}"><datalist id="net-names">${names.map((a) => `<option value="${esc(nmP(a))}">`).join("")}</datalist></p>` + who +
+      peopleLists() +
+      `<h3>연구 그룹 <small class="muted">· 두 번 이상 함께 발표한 사람들을 이어 묶음, 발표 수 순</small></h3><div class="tw"><table class="ctable grp-t"><thead><tr><th>중심 인물</th><th>주요 기관</th><th>주로 다루는 개념</th><th>세션</th><th>인원</th><th>발표</th></tr></thead><tbody>` +
+      groups.map((g) => `<tr><td>${g.mem.slice(0, 4).map((a) => `<span class="link" data-who="${esc(a)}">${esc(nmP(a))}</span>`).join(", ")}${g.mem.length > 4 ? " 외" : ""}</td><td>${esc(g.orgs.join(", "))}</td><td>${esc(g.cc.join(", "))}</td><td>${esc(g.ss.map(sNum).sort().join(", "))}</td><td>${g.mem.length}</td><td><span class="link" ${cellAttr(nmP(g.mem[0]) + " 그룹", "이 그룹이 참여한 발표", g.pids)}>${g.pids.length}</span></td></tr>`).join("") + `</tbody></table></div>` +
+      `<div class="two"><div><h3>여러 기관을 잇는 사람</h3><p class="note">함께 발표한 사람들의 소속 기관이 다양한 순임. 다른 기관으로 통하는 연결 고리가 될 수 있음.</p><ul class="rank">${hubs.map(([a, n, o]) => pl(a, orgsOf(a), `다른 기관 ${o}곳 · 공저자 ${n}명`)).join("")}</ul></div>` +
+      `<div><h3>좌장</h3><p class="note">세션을 조직한 사람임. 그 세션의 발표자 전체와 닿아 있음.</p><ul class="rank">${[...chairOf].sort((a, b) => b[1].length - a[1].length).slice(0, 14).map(([c, ss]) => pl(c, orgsOf(c), ss.map((s) => "(" + sNum(s.id) + ")").join(" "))).join("")}</ul></div></div>`;
+  }
+  // ---------- 쟁점 대조표와 기관 프로필 ----------
+  function viewDebate() {
+    return `<div class="doc wide"><h2>쟁점 대조표</h2><p class="note">같은 질문에 발표들이 서로 다른 결과를 낸 곳 ${debates.length}가지를 나란히 놓은 것임. 초록을 읽고 정리한 대비이며 발표자들이 서로를 반박한 것은 아님. 조건이 다른 실험을 맞세운 경우가 많으므로 "차이를 읽는 법"을 함께 볼 것. 내용은 <code>data/debates.yaml</code>에 있음.</p><p><button id="print-view">이 화면 인쇄</button></p>` +
+      debates.map((d, i) => `<section class="deb"><h3>${i + 1}. ${esc(d.question)}</h3><div class="sides">${(d.sides || []).map((s, k) => `<div class="side s${k}"><p class="sl">${esc(s.label)} <small>${evBadge(s.refs)}</small></p><p>${emph(s.text || "")}</p><p>${(s.refs || []).map(refChip).join("")}</p></div>`).join("")}</div>${d.read ? `<p class="rd"><b>차이를 읽는 법</b> ${emph(d.read)}</p>` : ""}</section>`).join("") + `</div>`;
+  }
+  let orgSel = "";
+  function viewOrgProfile() {
+    const KR = new Set(overview.korea_orgs || []), byOrg = new Map();
+    A.po.forEach((set, pid) => set.forEach((o) => (byOrg.get(o) || byOrg.set(o, []).get(o)).push(pid)));
+    const list = [...byOrg].filter(([o, v]) => v.length >= 3 || KR.has(o)).sort((a, b) => b[1].length - a[1].length);
+    if (!orgSel || !byOrg.has(orgSel)) orgSel = list[0][0];
+    const ps = byOrg.get(orgSel), pset = new Set(ps), name = nodes.get(orgSel).label, tot = presentations.length;
+    const ss = [...new Set(ps.map((p) => nodes.get(p).session))], tp = topics().map((t) => [t, ps.filter((p) => topicOf(nodes.get(nodes.get(p).session)) === t)]).filter((x) => x[1].length);
+    const mem = [...nodes.values()].filter((n) => n.type === "Person" && (A.porg.get(n.id) || []).includes(orgSel)).map((n) => [n.id, presentations.filter((p) => pset.has(p.id) && (p.authors || []).includes(n.id)).map((p) => p.id)]).filter((x) => x[1].length).sort((a, b) => b[1].length - a[1].length);
+    const allCnt = new Map(); A.cs.forEach((m, c) => allCnt.set(c, [...m.values()].flat().length));
+    const focus = (rel) => { const c = new Map(); ps.forEach((p) => A.pc.get(p)[rel].forEach((x) => (c.get(x) || c.set(x, []).get(x)).push(p)));
+      return [...c].sort((a, b) => b[1].length - a[1].length).slice(0, 6).map(([x, v]) => { const lift = (v.length / ps.length) / (allCnt.get(x) / tot);
+        return `<li ${cellAttr(name + " · " + clab(x), "이 기관의 관련 발표", v)}><span><b>${esc(clab(x))}</b>${lift >= 2 && v.length >= 2 ? ` <span class="tagk x">특화</span>` : ""}<small>전체 발표 ${allCnt.get(x)}건 중 ${v.length}건이 이 기관</small></span><em>${v.length}건</em></li>`; }).join("") || `<li><span class="muted">없음</span></li>`; };
+    const co = new Map(); ps.forEach((p) => A.po.get(p).forEach((o) => { if (o !== orgSel) (co.get(o) || co.set(o, []).get(o)).push(p); }));
+    const partners = [...co].sort((a, b) => b[1].length - a[1].length).slice(0, 8);
+    const nums = ps.filter((p) => evOf(p) === "num").map((p) => { const n = nodes.get(p), cl = (n.claims || []).map((c) => (typeof c === "string" ? c : c.text)).find((c) => NUM_RE.test(c)); return [n, cl]; }).filter((x) => x[1]).slice(0, 6);
+    const ins = []; const scan = (w, sid, items) => (items || []).forEach((o) => { const hit = (o.refs || []).filter((r) => pset.has(r)); if (hit.length) ins.push([w, sid, o, hit.length]); });
+    Object.values(overview.insights || {}).forEach((it) => scan("전체 종합", "", it));
+    themes.forEach((t, i) => scan("심층 요약 " + (i + 1), "theme:" + t.id, t.sections));
+    ins.sort((a, b) => b[3] - a[3]);
+    const ev = { num: 0, qual: 0, none: 0 }; ps.forEach((p) => ev[evOf(p)]++);
+    const mx = Math.max(...tp.map((x) => x[1].length), 1);
+    return `<div class="doc wide"><h2>기관 프로필</h2><p class="note">기관을 고르면 그 기관 소속 저자가 참여한 발표를 바탕으로 무엇을 발표했는지, 어디에 집중하는지, 누구와 함께 하는지를 한 쪽으로 정리함. 이 워크숍들의 발표만 반영하며, 공동 저자의 소속을 따라 센 것이므로 주도 기관이 아닐 수도 있음. "특화"는 전체 평균보다 두 배 넘게 자주 다룬 개념임.</p>` +
+      `<p><select id="orgp-sel">${list.map(([o, v]) => `<option value="${esc(o)}" ${o === orgSel ? "selected" : ""}>${esc(nodes.get(o).label)} (${v.length})${KR.has(o) ? " · 한국" : ""}</option>`).join("")}</select> <button id="print-view">이 화면 인쇄</button></p>` +
+      `<h3>${esc(name)}${KR.has(orgSel) ? ` <span class="tagk">한국</span>` : ""}</h3><div class="cards" style="max-width:46em"><div class="card" ${cellAttr(name, "이 기관 소속 저자가 참여한 발표", ps)}><b>${ps.length}</b><span>발표 (누르면 목록)</span></div><div class="card"><b>${ss.length}</b><span>세션: ${esc(ss.map(sNum).sort().join(", "))}</span></div><div class="card"><b>${mem.length}</b><span>발표에 참여한 인물</span></div><div class="card"><b>${ev.num}</b><span>수치를 제시한 발표</span></div></div>` +
+      `<h3>주제별 발표</h3>${tp.map(([t, v]) => `<div class="bar-row" ${cellAttr(name + " · " + t, "주제별 발표", v)} style="cursor:pointer"><span>${esc(t)}</span><span class="bar"><i style="width:${(100 * v.length) / mx}%"></i></span><span>${v.length}</span></div>`).join("")}` +
+      `<p class="muted">심층 요약과의 관련: ${themes.map((t, i) => `${i + 1}. ${esc(t.label)} ${ps.filter((p) => A.themeScope.get("theme:" + t.id).ps.has(p)).length}건`).join(" · ")}</p>` +
+      `<div class="two three"><div><h3>집중하는 문제</h3><ul class="rank">${focus("addresses")}</ul></div><div><h3>쓰는 기법</h3><ul class="rank">${focus("proposes")}</ul></div><div><h3>대상 시스템</h3><ul class="rank">${focus("targets")}</ul></div></div>` +
+      `<div class="two"><div><h3>핵심 인물 <small class="muted">· 발표 수 순</small></h3><ul class="rank">${mem.slice(0, 8).map(([a, v]) => `<li ${cellAttr(nodes.get(a).label, "참여한 발표", v)}><span><b>${esc(nodes.get(a).label)}</b><small><span class="link" data-who="${esc(a)}">닿는 길 보기</span></small></span><em>발표 ${v.length}</em></li>`).join("")}</ul></div>` +
+      `<div><h3>함께 발표한 기관</h3><ul class="rank">${partners.map(([o, v]) => `<li ${cellAttr(name + " + " + nodes.get(o).label, "함께 이름을 올린 발표", v)}><span><b>${esc(nodes.get(o).label)}</b>${KR.has(o) ? ` <span class="tagk">한국</span>` : ""}<small>${byOrg.get(o).length >= 3 ? `<span class="link" data-orgp="${esc(o)}">이 기관의 프로필</span>` : ""}</small></span><em>${v.length}건</em></li>`).join("") || `<li><span class="muted">다른 기관과 함께 한 발표가 없음.</span></li>`}</ul></div></div>` +
+      (nums.length ? `<h3>수치를 제시한 발표</h3><ul>${nums.map(([n, cl]) => `<li><span class="link" data-id="${esc(n.id)}"><b>${esc(n.label)}</b></span> <span class="muted">(${esc(sNum(n.session))})</span><br>${emph(cl)}</li>`).join("")}</ul>` : "") +
+      (ins.length ? `<h3>이 기관의 발표가 근거가 된 고찰</h3><ul>${ins.slice(0, 8).map(([w, sid, o, n]) => `<li><b>${esc(o.head)}</b> <small class="muted"><span class="link" data-sess="${esc(sid)}">${esc(w)}</span> · 근거 ${n}건</small></li>`).join("")}</ul>` : "") + `</div>`;
+  }
   function viewCheck() {
     const noTag = presentations.filter((p) => !A.pc.get(p.id).all.size), none = presentations.filter((p) => evOf(p.id) === "none");
     const used = new Map(); A.cs.forEach((m, c) => used.set(c, [...m.values()].flat().length));
@@ -916,22 +1148,38 @@
       sec("어느 발표에도 쓰이지 않은 개념", "지워도 되는 후보임.", unused, (n) => `<li>${nodeLink(n.id)}</li>`) +
       sec("소속이 없는 인물", "공개 페이지에 소속이 없거나 페이지를 읽지 못한 경우임. 기관·저자 보기에서 빠짐.", noOrg, (n) => `<li>${nodeLink(n.id)}</li>`);
   }
-  const RVIEWS = { heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, apply: viewApply, check: viewCheck, report: viewReport, slides: viewSlides, trend: viewTrend, read: viewRead, export: viewExport };
-  function renderView() {
-    document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.v === curView));
+  const RVIEWS = { heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, check: viewCheck, report: viewReport, slides: viewSlides, trend: viewTrend, read: viewRead, export: viewExport, plan: viewPlan, nums: viewNums, cmap: viewCmap, people: viewPeople, debate: viewDebate, orgp: viewOrgProfile };
+  const lastIn = {};
+  function syncTabs() {
+    const cur = document.querySelector(`#tabs [data-v="${curView}"]`), g = cur ? cur.parentNode.dataset.g : "an";
+    lastIn[g] = curView;
+    document.querySelectorAll("#tabs [data-v]").forEach((b) => b.classList.toggle("on", b.dataset.v === curView));
+    document.querySelectorAll("#tabs [data-g]").forEach((b) => b.classList.toggle("on", b.dataset.g === g));
+  }
+  function renderView(keepTop) {
+    syncTabs();
     document.querySelector("main").classList.toggle("g", curView === "graph");
     if (curView === "graph") { syncHash(); return ensureGraph(); }
     if (!A) return;
     cells.clear();
     $("view").innerHTML = (RVIEWS[curView] || viewHeat)();
-    $("view").scrollTop = 0; syncHash();
+    $("view").scrollTop = keepTop || 0; syncHash();
+    if (curView === "cmap") drawCmap();
   }
-  $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { curView = b.dataset.v; renderView(); } });
+  $("tabs").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; curView = b.dataset.v || lastIn[b.dataset.g] || document.querySelector(`#tabs .tr[data-g="${b.dataset.g}"] button`).dataset.v; renderView(); });
+  const goView = (v) => { curView = v; if (matchMedia("(max-width: 760px)").matches) { document.body.classList.add("graph-open"); syncToggle(); } renderView(); };
+  addEventListener("resize", () => { if (curView === "cmap") drawCmap(); });
   $("view").addEventListener("click", (e) => {
     const t = e.target.closest("#heat-type button");
     if (t) { heatType = t.dataset.t; return renderView(); }
-    const ab = e.target.closest("#apply-by button");
-    if (ab) { applyBy = ab.dataset.b; return renderView(); }
+    const pl = e.target.closest("[data-plan]");
+    if (pl) { planCell = pl.dataset.plan; return renderView($("view").scrollTop); }
+    const wh = e.target.closest("[data-who]");
+    if (wh) { netWho = wh.dataset.who; curView = "people"; return renderView(); }
+    const op = e.target.closest("[data-orgp]");
+    if (op) { orgSel = op.dataset.orgp; curView = "orgp"; return renderView(); }
+    const pmd = e.target.closest("#plan-mode button");
+    if (pmd) { planMode = pmd.dataset.m; return renderView(); }
     if (e.target.id === "present") return present(0);
     if (e.target.id === "print-slides") { pageStyle.textContent = "@page { size: landscape; margin: 8mm; }"; document.body.classList.add("pv", "ps"); window.print(); return; }
     if (e.target.id === "print-view") { document.body.classList.add("pv"); window.print(); return; }
@@ -952,7 +1200,32 @@
   $("view").addEventListener("change", (e) => {
     if (e.target.id === "heat-sess") { heatSess = e.target.value; renderView(); }
     if (e.target.id === "org-topic") { orgTopic = e.target.value; renderView(); }
+    if (e.target.id === "net-scope") { netScope = e.target.value; renderView($("view").scrollTop); }
+    if (e.target.id === "orgp-sel") { orgSel = e.target.value; renderView(); }
+    if (e.target.id === "num-scope") { numScope = e.target.value; renderView(); }
+    if (e.target.id === "num-q") { if (numQ === e.target.value) return; numQ = e.target.value; setTimeout(renderView); }
+    if (e.target.id === "cmap-scope") { cmapScope = e.target.value; renderView(); }
+    if (e.target.id === "net-who") { const v = e.target.value.trim().toLowerCase(), hit = [...nodes.values()].find((n) => n.type === "Person" && n.label.toLowerCase() === v) || (v && [...nodes.values()].find((n) => n.type === "Person" && n.label.toLowerCase().includes(v))); const nw = hit ? hit.id : ""; if (nw === netWho) return; netWho = nw; setTimeout(renderView); }
   });
+  // 개념 관계 지도: 개념에 올리면 이어진 선만 남김
+  $("view").addEventListener("mouseover", (e) => {
+    const c = e.target.closest("#cmap .cn"); if (!c) return;
+    const id = c.dataset.c, on = new Set([id]);
+    document.querySelectorAll("#cmap path").forEach((p) => { const hit = p.dataset.a === id || p.dataset.b === id; p.classList.toggle("dim", !hit); p.classList.toggle("hot", hit); if (hit) { on.add(p.dataset.a); on.add(p.dataset.b); } });
+    document.querySelectorAll("#cmap .cn").forEach((n) => n.classList.toggle("dim", !on.has(n.dataset.c)));
+  });
+  $("view").addEventListener("mouseout", (e) => { if (e.target.closest("#cmap .cn")) document.querySelectorAll("#cmap .dim, #cmap .hot").forEach((x) => x.classList.remove("dim", "hot")); });
+  // 말풍선: 화면 밖으로 나가지 않게 위치를 맞춤
+  const tip = document.body.appendChild(Object.assign(document.createElement("div"), { id: "tip", hidden: true }));
+  document.addEventListener("mouseover", (e) => {
+    const t = e.target.closest && e.target.closest("[data-tip]");
+    if (!t) { tip.hidden = true; return; }
+    tip.textContent = t.dataset.tip; tip.hidden = false;
+    const r = t.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + "px";
+    tip.style.top = (r.top - h - 6 < 8 ? r.bottom + 6 : r.top - h - 6) + "px";
+  });
+  document.addEventListener("scroll", () => { tip.hidden = true; }, true);
   // 발표 모드: 슬라이드를 한 장씩 화면 가득 보여 줌
   const pageStyle = document.head.appendChild(document.createElement("style"));
   let slideAt = -1;
@@ -1276,7 +1549,7 @@
 
   // ---------- 첫 화면 ----------
   if (hash0.s && sessOptions.some((o) => o[0] === hash0.s)) { $("session").value = hash0.s; syncSessBtn(); }
-  if (hash0.v) { curView = hash0.v; document.querySelectorAll("#tabs button").forEach((b) => b.classList.toggle("on", b.dataset.v === curView)); if (curView !== "heat") { document.body.classList.add("graph-open"); syncToggle(); } }
+  if (hash0.v) { curView = hash0.v === "apply" ? (planMode = "stage", "plan") : hash0.v; syncTabs(); if (curView !== "heat") { document.body.classList.add("graph-open"); syncToggle(); } }
   const keepHash = location.hash;
   showOverview();
   if (keepHash) try { history.replaceState(null, "", keepHash); } catch (e) {}   // 2단계가 끝날 때까지 받은 주소를 유지
@@ -1286,10 +1559,12 @@
   // ---------- 2단계: 발표·개념·인물을 읽어 온톨로지를 완성하고 분석 보기를 채움 ----------
   const dataReady = (async () => {
     const rest = core ? await loadJson("data/" + manifest.bundle.rest) : null;
-    if (rest) { schema = core.schema; ({ orgs, people, concepts, presentations } = rest); }
+    if (rest) { schema = core.schema; ({ orgs, people, concepts, presentations } = rest); debates = rest.debates || []; numbersX = rest.numbers || {}; }
     else {
       [schema, orgs, people, concepts] = await Promise.all(["schema.yaml", "data/orgs.yaml", "data/people.yaml", "data/concepts.yaml"].map(loadYaml));
       presentations = await Promise.all((manifest.presentations || []).map((f) => loadYaml("data/" + f)));
+      if (manifest.debates) debates = (await loadYaml("data/" + manifest.debates)).debates || [];
+      if (manifest.numbers) numbersX = await loadYaml("data/" + manifest.numbers);
     }
     for (const [id, name] of Object.entries(orgs)) addNode(id, "Organization", { label: name });
     for (const [id, p] of Object.entries(people)) { addNode(id, "Person", { label: p.name }); (p.orgs || []).forEach((o) => addEdge(id, "affiliatedWith", o)); }

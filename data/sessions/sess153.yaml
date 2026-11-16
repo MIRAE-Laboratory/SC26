@@ -48,18 +48,21 @@ insights:
       stage: now
       area: 운영·사용자 지원
       needs: 스케줄러 정산 기록의 추출
+      needs_group: 기록과 이력 체계
       text: 대부분의 기관이 스케줄러 기록을 이미 갖고 있음. 요청과 실제 사용의 차이, 소수 사용자의 쏠림, 단일 노드 작업의 비중은 추가 계측 없이 확인할 수 있고 운영 정책의 근거가 됨.
       refs: [ws_hpcoda122, ws_hpcoda112]
     - head: GPU 분할 구성은 수요 기록으로 정함.
       stage: prep
       area: 운영·사용자 지원
       needs: GPU 수요 기록과 분할 설정 권한
+      needs_group: 기록과 이력 체계
       text: 연구용 GPU 클러스터에서 분할 구성을 감으로 정하지 않고 수요 행렬로 정한 사례임. 기존 스케줄러 설정으로 바로 배치됨.
       refs: [ws_hpcoda136]
     - head: 정책을 바꾸기 전에 스케줄러 트윈에서 먼저 돌려 봄.
       stage: prep
       area: 운영·사용자 지원
       needs: 과거 작업 기록과 모의 도구 설치
+      needs_group: 기록과 이력 체계
       text: 공개 도구가 과거 기록을 다른 정책으로 재생하고, 들어오는 작업에 대해 대안 정책의 결과를 예측함. 8년 치 운영 기록으로 검증됨.
       refs: [ws_hpcoda102]
   extra:

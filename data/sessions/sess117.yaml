@@ -56,24 +56,28 @@ insights:
       stage: long
       area: 실험시설 연계
       needs: 검출기 옆 계산 자원과 스트리밍 소프트웨어
+      needs_group: 장비와 자원 확보
       text: 방사광, 중성자, 핵융합 시설은 검출기 속도가 전송 속도를 넘는 상황에 대비해, 프레임 유실률을 지표로 삼는 처리 런타임을 검토할 만함.
       refs: [ws_xloop111, ws_xloop103]
     - head: 실험에 대리모델을 넣을 때는 이탈 감시를 함께 넣음.
       stage: prep
       area: 실험시설 연계
       needs: 학습 범위를 벗어났는지 볼 실측 신호
+      needs_group: 계측과 측정 수단
       text: 실험과 시뮬레이션을 잇는 디지털 트윈에서, 대리모델이 학습 범위를 벗어났는지 측정값으로 감시하는 장치는 안전이 중요한 분야에서 필수에 가까움.
       refs: [ws_xloop106]
     - head: 자율 실험실은 로봇보다 상태 관리와 장애 대응이 먼저임.
       stage: long
       area: 실험시설 연계
       needs: 장비 상태 기록 체계와 장애 대응 절차
+      needs_group: 기록과 이력 체계
       text: 장비 자동화가 끝난 뒤에도 사람을 거치게 만드는 것은 흩어진 상태와 장애 처리였음. 구축 계획에 이 둘을 앞에 둠.
       refs: [ws_xloop112, ws_xloop101]
     - head: 시설 데이터는 하나의 접근 인터페이스로 내보냄.
       stage: prep
       area: 데이터·저장
       needs: 데이터 접근 서비스와 권한 체계
+      needs_group: 권한, 신원, 정책
       text: 데이터와 분석 결과를 한 창구로 제공하면 계산 자원과 AI 서비스를 바꿔도 실험 쪽 코드는 그대로임.
       refs: [ws_xloop107]
   extra:

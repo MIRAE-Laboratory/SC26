@@ -4,6 +4,8 @@ overview: overview.yaml
 themes: themes.yaml
 glossary: glossary.yaml
 changelog: changelog.yaml
+debates: debates.yaml
+numbers: numbers.yaml
 sessions:
   - sessions/sess126.yaml
   - sessions/sess114.yaml

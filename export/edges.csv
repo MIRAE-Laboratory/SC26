@@ -2130,7 +2130,6 @@ ws_eesp109,authoredBy,xingfu-wu
 ws_eesp109,authoredBy,zhiling-lan
 ws_eesp109,authoredBy,valerie-taylor
 ws_eesp109,addresses,energy-performance-tradeoff
-ws_eesp109,proposes,llm-energy-refactoring
 ws_eesp109,proposes,repair-loop
 ws_eesp109,proposes,hybrid-evaluators
 ws_eesp109,targets,scientific-apps
@@ -3490,7 +3489,7 @@ ws_ftxs107,authoredBy,ruiwen-shan
 ws_ftxs107,authoredBy,jon-c-calhoun
 ws_ftxs107,addresses,failure-resilience
 ws_ftxs107,addresses,silent-data-corruption
-ws_ftxs107,proposes,unequal-error-protection
+ws_ftxs107,proposes,resilient-campaign-execution
 ws_ftxs107,proposes,federated-learning
 ws_ftxs107,targets,distributed-training
 misc223,partOf,sess134
@@ -4105,7 +4104,7 @@ ws_pdsw103,authoredBy,zhaobin-zhu
 ws_pdsw103,authoredBy,sarah-neuwirth
 ws_pdsw103,addresses,network-congestion
 ws_pdsw103,addresses,pipeline-config-tuning
-ws_pdsw103,proposes,contention-aware-io-placement
+ws_pdsw103,proposes,communication-aware-placement
 ws_pdsw103,targets,hpc-storage-systems
 ws_pdsw113,partOf,sess129
 ws_pdsw113,authoredBy,alexander-klassen

@@ -98,36 +98,42 @@ insights:
       stage: prep
       area: 에이전트·AI 서비스
       needs: 에이전트 사용량 계측 수단과 실행 기록 체계
+      needs_group: 계측과 측정 수단
       text: 사용량을 재고, 실행 경계와 책임을 정하고, 행동 기록을 남길 수단을 갖춘 뒤 에이전트를 연구 인프라에 들임.
       refs: [ws_aaihpc124, misc163, ws_aaihpc144]
     - head: 기관 고유의 검증 자산이 경쟁력임.
       stage: now
       area: 검증·신뢰
       needs: 기준 출력과 시험 사례의 목록화
+      needs_group: 기준 출력과 시험 자산
       text: 기준 출력, 시험 사례, 자체 벤치마크가 있어야 AI가 만든 코드와 모델을 받아들일지 판단할 수 있음. 모델은 바뀌어도 이 자산은 남음.
       refs: [ws_aaihpc114, ws_ai4s109]
     - head: 전문가의 절차를 파일로 남김.
       stage: now
       area: 에이전트·AI 서비스
       needs: 절차를 적어 둘 저장소와 담당 전문가의 시간
+      needs_group: 절차와 문서 정리
       text: 분석 절차를 스킬 파일로 관리하면 사람이 바뀌어도 절차가 유지되고, 에이전트가 그 절차를 따르게 할 수 있음.
       refs: [ws_ai4s131, ws_aaihpc126]
     - head: 성능 옆에 에너지와 측정 조건을 적음.
       stage: now
       area: 계측·에너지
       needs: 과제·시스템 평가 양식의 개정
+      needs_group: 절차와 문서 정리
       text: 빠른 구성과 효율적인 구성이 다르다는 결과가 반복됨. 평가 양식에 에너지 지표를 넣는 것은 비용이 거의 들지 않는 첫 조치임.
       refs: [ws_eesp141, ws_eesp135]
     - head: 가속기 다변화에 대비해 소프트웨어 이식성을 확인함.
       stage: prep
       area: 도입 평가·하드웨어
       needs: 주요 코드의 벤더 종속 구간 조사
+      needs_group: 조사와 대상 선정
       text: 특정 벤더에 묶인 코드와 프레임워크는 다른 시스템에서 배치 단계에 막힘.
       refs: [ws_hppss104, ws_aaihpc109]
     - head: 실험 시설과 계산 시설을 한 흐름으로 설계함.
       stage: long
       area: 실험시설 연계
       needs: 시설 간 데이터 체계 합의와 전용 처리 자원
+      needs_group: 기관 간 합의와 조직
       text: 검출기 옆의 실시간 처리, 원격 계산 자원, 공용 AI 서비스를 따로 구축하지 않고 하나의 데이터 흐름으로 묶는 것이 미국 발표들의 공통 구조임.
       refs: [misc155, ws_xloop111, ws_xloop110]
     - head: 일본의 국가 AI 컴퓨팅 추진 방식이 가까운 참고 사례임.
@@ -139,12 +145,14 @@ insights:
       stage: now
       area: 운영·사용자 지원
       needs: 버전 관리 저장소와 기록 담당자 지정
+      needs_group: 기록과 이력 체계
       text: 버전 관리되는 절차 문서를 에이전트가 읽고 같은 작업 안에서 보강하게 한 사례가 4주 만에 구축됨. 저장소 교체와 대규모 이전은 운영 중 수행을 전제로 계획함.
       refs: [ws_hpcsysp105, ws_hpcsysp104, ws_hpcsysp109]
     - head: 유휴 HPC 노드를 컨테이너 서비스로 돌려 쓰는 구조가 나와 있음.
       stage: prep
       area: 운영·사용자 지원
       needs: 컨테이너 클러스터 운영 인력과 스케줄러 연동
+      needs_group: 도구와 소프트웨어 도입
       text: 배치 파티션의 빈 노드를 필요할 때 컨테이너 클러스터로 바꾸고 사용자 본인 권한으로 실행해, 기존 파일시스템과 계정을 그대로 쓰며 노트북과 추론 서비스를 제공한 사례임. 스케줄러도 컨테이너 런타임을 플러그인으로 받아들이는 쪽으로 가고 있음.
       refs: [ws_canolt105, ws_canolt101, ws_aihpc107]
     - head: 원자력 분야 에이전트의 구성과 평가 사례가 공개됨.
@@ -156,12 +164,14 @@ insights:
       stage: prep
       area: 계측·에너지
       needs: 작업 기록 정리와 장비별 제조 탄소 자료
+      needs_group: 기록과 이력 체계
       text: 장비를 빨리 바꾸면 제조 탄소 때문에 총배출이 늘 수 있음. GPU 분할 구성과 대기열 정책은 이미 쌓인 작업 기록으로 정할 수 있고, 정책 변경은 스케줄러 트윈에서 먼저 돌려 볼 수 있음.
       refs: [ws_ss103, ws_hpcoda136, ws_hpcoda102]
     - head: 신원과 계정 체계가 공동 활용의 첫 관문임.
       stage: long
       area: 협력·거버넌스
       needs: 기관 간 신원 연동 합의
+      needs_group: 기관 간 합의와 조직
       text: 영국의 국가 AI 자원은 신원 문제가 숨은 최대 지원 부담이었고, 프랑스는 보안 규정과 공유 계정의 충돌을 서비스 계정으로 풀었음. 기관 간 자원 공유를 설계할 때 계산 자원보다 먼저 정할 사항임.
       refs: [ws_hust103, ws_worksp105]
     - head: 원자력 분야에 직접 닿는 발표가 여러 세션에 흩어져 있음.

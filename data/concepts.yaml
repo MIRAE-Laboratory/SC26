@@ -128,7 +128,6 @@ Method:
   selective-measurement: {label: Selective measurement, label_ko: 선택적 측정}
   typed-agent-messaging: {label: Typed inter-agent messaging, label_ko: 타입이 있는 에이전트 간 메시징}
   energy-profiling: {label: "Energy profiling (NVML, RAPL, PAPI)", label_ko: 에너지 프로파일링}
-  llm-energy-refactoring: {label: LLM refactoring with power feedback, label_ko: 전력 피드백 기반 LLM 리팩토링}
   energy-aware-hpo: {label: Energy-aware multi-objective HPO, label_ko: 에너지 인지 다목적 하이퍼파라미터 최적화}
   rl-power-control: {label: Reinforcement learning for power and resource control, label_ko: 강화학습 기반 전력·자원 제어}
   frequency-steering: {label: Multi-dimensional frequency steering, label_ko: 다차원 주파수 조향}
@@ -185,9 +184,8 @@ Method:
   portable-abstraction-layers: {label: "Portable abstraction layers (Kokkos, RAJA, Julia, Chapel, Mojo)", label_ko: 이식형 추상화 계층, related: [performance-portable-kernels]}
   autotuning: {label: Automated tuning, label_ko: 자동 튜닝}
   portability-metrics: {label: Performance-portability metrics, label_ko: 성능 이식성 지표}
-  communication-aware-placement: {label: Communication-aware task placement, label_ko: 통신 인지 작업 배치}
+  communication-aware-placement: {label: Communication- and contention-aware placement, label_ko: 통신·경합 인지 작업 배치}
   dataflow-runtime: {label: Dataflow runtime, label_ko: 데이터플로 런타임}
-  unequal-error-protection: {label: Unequal error protection, label_ko: 차등 오류 보호}
   fault-injection: {label: Fault injection and fuzzing, label_ko: 결함 주입·퍼징}
   formal-verification: {label: Formal verification and model checking, label_ko: 정형 검증과 모델 검사, related: [spec-first-validation]}
   fp-exception-detection: {label: Floating-point exception detection tools, label_ko: 부동소수점 예외 검출 도구}
@@ -203,7 +201,6 @@ Method:
   gpu-native-io: {label: GPU-native I/O and data movement, label_ko: GPU에서 직접 하는 입출력과 데이터 이동}
   cross-layer-tracing: {label: Cross-layer tracing and attribution, label_ko: 계층을 가로지르는 추적과 귀속, related: [io-characterization]}
   node-local-staging: {label: Node-local staging and burst buffers, label_ko: 노드 로컬 선반입·완충 저장}
-  contention-aware-io-placement: {label: Measured contention-aware placement, label_ko: 측정 기반 경합 회피 배치}
   compression-quality-prediction: {label: Compression quality prediction, label_ko: 압축 품질 예측, related: [in-situ-reduction]}
   fp64-emulation: {label: Double-precision emulation on low-precision units, label_ko: 저정밀 연산기로 배정밀도 구현, related: [mixed-precision]}
   unprivileged-containers: {label: Unprivileged HPC container runtimes, label_ko: 권한 없이 도는 HPC 컨테이너, related: [container-wheel-deployment]}

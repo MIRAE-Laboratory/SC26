@@ -7,7 +7,7 @@ time: "14:55-15:00"
 url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess125&id=ws_eesp109"
 authors: [matthew-dearing, yiheng-tao, xingfu-wu, zhiling-lan, valerie-taylor]
 addresses: [energy-performance-tradeoff]
-proposes: [llm-energy-refactoring, repair-loop, hybrid-evaluators]
+proposes: [repair-loop, hybrid-evaluators]
 targets: [scientific-apps]
 summary_ko: >
   실제 실행의 측정값을 주면 LLM이 에너지 효율적인 병렬 코드를 쓸 수 있는지 조사했음. LASSI-EE는 런타임 전력 프로파일링, 에너지 인지 프롬프트, 자기 수정 피드백 루프, 생성 코드를 걸러 내는 LLM 심사기를 결합한 자동 리팩토링 프레임워크임. LLM 출력이 실행마다 달라지므로, 실패한 시도까지 모두 반영하는 지표 energy-reduction@k를 제안함.
