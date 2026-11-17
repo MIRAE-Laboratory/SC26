@@ -88,6 +88,8 @@ claims:
 - (155) Fourth International Workshop on HPC Testing and Evaluation of Systems, Tools, and Software (HPCTESTS 2026) (2026-11-20)
 - (156) The 1st International Workshop on Edge-Cloud-HPC Operational Continuum (ECHO) (2026-11-20)
 - (157) Sustainable Supercomputing (2026-11-20)
+- (143) ExaMPI26: Workshop on Extreme-Scale MPI (2026-11-16)
+- (151) Eighth Workshop on Interactive and Urgent High Performance Computing (2026-11-20)
 
 프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`, `ws_corr114`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
 

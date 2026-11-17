@@ -287,3 +287,15 @@
 "ws_ss103#2": {what: "절충형 교체의 배출 변화", cond: "제조 효율 1.7배, 운영 효율 19배"}
 "ws_ss109#0": {what: "설명되는 작업 간 분산", cond: "시스템 공통 곡선 × 작업별 민감도"}
 "ws_ss109#1": {what: "GPU 보드 에너지 절감", cond: "운영 VASP 작업 310건, 속도 저하 5% 예산"}
+"ws_exampi106#0": {what: "네트워크 장치당 연결 수 감소", cond: "GPU 36개와 72개, Open MPI와 NCCL 대비"}
+"ws_exampi106#1": {what: "연결 수 감소 예측", cond: "해석 모델, GPU 1,152개까지"}
+"ws_exampi106#2": {what: "전 대 전 교환의 지연 감소", cond: "Open MPI와 MVAPICH-Plus 대비, NCCL과는 같은 수준"}
+"ws_exampi106#3": {what: "heFFTe 처리량", cond: "Open MPI와 MVAPICH-Plus 대비"}
+"ws_exampi107#1": {what: "노드 내 방송 연산 성능 향상", cond: "Polaris, 중간 정책"}
+"ws_exampi107#2": {what: "방송 연산의 가속", cond: "최종 정책, 기본 MPICH와 기존 자동 튜닝 도구 대비"}
+"ws_exampi108#0": {what: "시험 규모", cond: "GB200 시스템, 분산 전치·스텐실·LULESH"}
+"ws_exampi108#1": {what: "분산 전치 처리량", cond: "행렬 차수 1024, GPU 인지 MPI 대비"}
+"ws_exampi108#2": {what: "분산 전치 처리량", cond: "행렬 차수 6912, GPU 32개, GPU 인지 MPI 대비"}
+"ws_ius101#0": {what: "해답당 에너지 감소와 처리량 증가", cond: "평시 운용, 학습 자료 생성 중"}
+"ws_ius101#1": {what: "긴급 시 계산 비용 감소", cond: "신경망 역해석과 물리 해석, 동적 정밀화의 결합, 기존 방식 대비"}
+"ws_ius101#2": {what: "결과를 내는 목표 시한", cond: "지진 발생 뒤, 지반 운동의 시공간 분포"}

@@ -181,6 +181,7 @@ observed:
   - {pres: ws_tpw126, target: training-run, failure: silent-training, note: 손실 값을 조용히 틀리게 보고하는 버그}
   - {pres: ws_aaihpc146, target: agent-answer, failure: ungrounded, note: 사실을 가장 많이 찾는 구성이 답할 수 없는 질문을 가장 적게 거절}
   - {pres: ws_pmbss101, target: benchmark-score, failure: measure-error, note: 종합 점수가 단계별 관계를 가림}
+  - {pres: ws_exampi107, target: benchmark-score, failure: measure-error, note: 자동 튜닝의 벤치마크가 제약 때문에 조용히 대체된 다른 알고리즘을 측정함}
   - {pres: ws_corr_sh101, target: parallel-comm, failure: concurrency, note: 통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건}
   - {pres: ws_pmbsf137, target: node-perf, failure: regression, note: 사양이 같은 장치의 에너지가 36.9% 차이}
   - {pres: ws_tpw120, target: llm-proposal, failure: ungrounded, note: 새 발견을 끝까지 스스로 검증한 시스템이 없음}

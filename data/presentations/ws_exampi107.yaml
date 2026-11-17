@@ -1,0 +1,16 @@
+id: ws_exampi107
+type: Presentation
+kind: paper
+label: "Execution-Path- and Restriction-Aware Autotuning for MPI Collective Operations"
+session: sess143
+time: "16:42-17:06"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi107"
+authors: [kunting-qi, hui-zhou, ke-fan, michael-papka, sidharth-kumar, rajeev-thakur]
+addresses: [benchmark-validity, communication-scalability]
+proposes: [autotuning, selective-measurement]
+targets: [mpi-simulations, leadership-facility]
+summary_ko: "기계학습 자동 튜닝은 후보 알고리즘을 벤치마크해 구성마다 가장 빠른 것을 예측함. 기존 방식은 모든 후보가 구성 공간 전체에서 유효하고 측정이 실제 실행 경로를 반영한다고 가정함. 제약 때문에 다른 알고리즘으로 조용히 대체되거나, 조합형 알고리즘이 학습 중인 정책에 따라 달라지는 내부 집합 연산을 부르면 이 가정이 깨짐. 제약별로 구성 공간을 나눠 부분 모델을 학습하고 하나의 실행 정책으로 합침."
+claims:
+  - "MPICH의 방송(MPI_Bcast) 연산에 적용함."
+  - "Polaris에서 중간 정책이 노드 내 성능을 최대 2.275배 높임."
+  - "최종 정책은 기본 MPICH 대비 최대 30.71배, 기존 자동 튜닝 도구 대비 2.76배 빠름."

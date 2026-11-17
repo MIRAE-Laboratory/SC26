@@ -1,0 +1,17 @@
+id: ws_exampi108
+type: Presentation
+kind: paper
+label: "MPI Windows as an Abstraction for CUDA Interprocess Communication"
+session: sess143
+time: "17:06-17:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi108"
+authors: [varun-chotalia, joseph-schuchart, jeff-hammond]
+addresses: [gpu-io-path, heterogeneity-complexity]
+proposes: [mpi-rma-windows, portable-abstraction-layers]
+targets: [gpu-communication, hpc-processors]
+summary_ko: "GPU 프로세스 간 메모리 공유는 메모리 내보내기, 정보 교환, 상대별 가져오기, 포인터 보관, 실패 처리, 정리를 응용이 직접 해야 함. 기존 MPI 공유 윈도 질의로 이 단계들을 감쌀 수 있음을 보이고, 윈도 연산을 가로채는 라이브러리 WinIPC로 구현함."
+claims:
+  - "분산 행렬 전치, 5점 스텐실, GPU용 LULESH로 평가하고, GB200 시스템의 노드 8대, GPU 32개에서 상대 포인터 접근을 보임."
+  - "누적이 있는 분산 전치에서 행렬 차수 1024일 때 GPU 인지 MPI의 2.44배 처리량을 냄."
+  - "행렬 차수 6912, GPU 32개에서는 GPU 인지 MPI의 20배임."
+  - "컨테이너가 관리하는 GPU 버퍼에는 할당 시점의 제약 때문에 쓰기 어렵다는 한계를 밝힘."

@@ -1,0 +1,16 @@
+id: ws_ius101
+type: Presentation
+kind: paper
+label: "From Idle to Urgent: A Resource-Harvested HPC Workflow for High-Fidelity Seismic Estimation"
+session: sess151
+time: "09:30-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=ws_ius101"
+authors: [tsuyoshi-ichimura, kohei-fujita, hideaki-ito, wataru-sakurai, muneo-hori, lalith-maddegedara]
+addresses: [urgent-decision-latency, underused-resources, surrogate-payoff]
+proposes: [surrogate-substitution, opportunistic-inference]
+targets: [scientific-apps, neural-surrogates]
+summary_ko: "큰 지진 때의 빠른 결정을 돕기 위해 정밀한 3차원 비선형 해석과 대리 신경망을 잇는 긴급 대화형 HPC 워크플로를 제안함. 평시에는 유휴 계산 자원을 거둬 쓰고, 위기 때는 즉시 응답하는 두 목표를 둠. 이를 위해 전용 HPC 커널 둘을 개발함."
+claims:
+  - "평시 운용에서 학습 자료를 만들며 해답당 에너지를 76% 줄이고 처리량을 3.7배 높임."
+  - "긴급 시에는 신경망 기반 역해석과 물리 기반 모의, 동적 정밀화를 결합해 기존 계산 비용을 97.9% 넘게 줄임."
+  - "지진 뒤 30분 안에 신뢰도 높은 지반 운동의 시공간 분포를 내는 것이 목표임."

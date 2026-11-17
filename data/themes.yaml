@@ -69,8 +69,8 @@ themes:
         text: 알려진 문법은 컴파일러가, 연결 코드는 도구가, 장애 원인은 로그 추출이, 사이트 정보는 측정과 문서 검증이, 보안 판정은 모델 밖의 레이블 전파가 처리함. LLM은 처음 보는 경우와 서술을 맡음. 이 분업이 코드 변환, 사용자 지원, 워크플로 이식, 보안 중재에서 각각 독립적으로 나왔음.
         refs: [ws_aaihpc131, ws_aaihpc139, ws_hust122, ws_worksp111, ws_aaihpc132]
       - head: 측정 자체가 검증 대상임.
-        text: 같은 AI 워크로드를 세 해상도로 재면 값이 다르고, 성긴 계측은 오류 표시 없이 틀린 숫자를 냄. 스토리지 종합 점수는 단계별 관계를 가리고, 같은 하드웨어가 소프트웨어 빌드 하나로 2.1배 달라지며, 같은 사양의 장치가 에너지에서 36.9% 차이 남. 이식성은 응용에 따라 62%에서 89%까지 갈려 단일 수치로 말할 수 없음. 이름이 같은 GPU 계수기도 벤더마다 세는 것이 달라 최대 3.19배 차이가 났음.
-        refs: [ws_eesp144, ws_pmbss101, ws_pmbss103, ws_pmbsf137, ws_p3hpc112, ws_prot109]
+        text: 같은 AI 워크로드를 세 해상도로 재면 값이 다르고, 성긴 계측은 오류 표시 없이 틀린 숫자를 냄. 스토리지 종합 점수는 단계별 관계를 가리고, 같은 하드웨어가 소프트웨어 빌드 하나로 2.1배 달라지며, 같은 사양의 장치가 에너지에서 36.9% 차이 남. 이식성은 응용에 따라 62%에서 89%까지 갈려 단일 수치로 말할 수 없음. 이름이 같은 GPU 계수기도 벤더마다 세는 것이 달라 최대 3.19배 차이가 났음. 집합 통신의 자동 튜닝에서도 조용한 알고리즘 대체 때문에 측정이 실제 실행 경로와 어긋나는 문제가 지적됨.
+        refs: [ws_eesp144, ws_pmbss101, ws_pmbss103, ws_pmbsf137, ws_p3hpc112, ws_prot109, ws_exampi107]
       - head: 정형 검증이 AI와 결합해 실용 범위로 들어옴.
         text: 수치 라이브러리는 명세를 손으로 쓰기 어려워 정형 검증이 드물었음. LLM이 문서에서 작은 계약을 뽑고 결정론적 도구가 검사하는 방식으로 PETSc 함수의 버그를 찾았음. 대형 코드에서는 알고리즘이 필요로 하는 인터페이스만 작은 모델로 뽑아, 입력을 기호로 두고 질량 보존을 증명했음. 반대로 LLM 판정은 결함 변형 13개 중 3개를 받아들여 검증 수단이 되지 못했음.
         refs: [ws_corr112, ws_corr113, ws_corr111, ws_corr107]
@@ -96,7 +96,7 @@ themes:
   - id: flows
     label: 데이터, 에너지, 자원의 흐름을 시설 규모에서 다시 설계함
     summary_ko: 데이터는 저장하고 옮기기에 너무 많아졌고, 전력은 예산이 되었으며, 하드웨어는 벤더와 종류가 늘었음. 발표들은 데이터가 생기는 곳에서 줄이고, 네트워크와 메모리에서 위치를 따지고, 전력을 계층마다 조정하고, 시설들을 하나의 플랫폼으로 잇는 방향으로 모임.
-    concepts: [data-deluge, in-situ-reduction, experiment-steering, delayed-feedback, wan-data-distribution, federated-caching, science-aware-networking, network-congestion, cross-facility-integration, genesis-platform, user-facility-beamline, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access, energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, rl-power-control, co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability, portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning, gpu-io-path, gpu-native-io, node-local-staging, large-data-migration, cross-layer-tracing, fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, shared-identity-portal, hardware-enforced-isolation, gpu-sharing, llm-training-scaling, container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore, request-usage-mismatch, job-trace-analysis, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-vae]
+    concepts: [communication-scalability, urgent-decision-latency, mpi-rma-windows, data-deluge, in-situ-reduction, experiment-steering, delayed-feedback, wan-data-distribution, federated-caching, science-aware-networking, network-congestion, cross-facility-integration, genesis-platform, user-facility-beamline, self-driving-labs, event-driven-runtime, accelerated-transport, unified-data-access, energy-performance-tradeoff, power-cap-slowdown, node-variation, energy-cost-carbon, malleable-node-shutdown, nonuniform-power-capping, rl-power-control, co-scheduling, underused-resources, data-locality, memory-bound-performance, numa-aware-scheduling, communication-aware-placement, hardware-selection, performance-portability, portable-abstraction-layers, workload-portability, identity-access, service-composition, decoupled-service-ecosystem, federated-learning, gpu-io-path, gpu-native-io, node-local-staging, large-data-migration, cross-layer-tracing, fp64-scarcity, fp64-emulation, vendor-dependence, open-control-plane, community-governance, shared-identity-portal, hardware-enforced-isolation, gpu-sharing, llm-training-scaling, container-hpc-mismatch, unprivileged-containers, no-restart-elasticity, snapshot-restore, request-usage-mismatch, job-trace-analysis, carbon-aware-upgrade, heat-reuse, edge-resource-limits, edge-cloud-routing, imaging-data-scale, generative-vae]
     diagram:
       type: flow
       loop: 결과와 결정이 다음 실험과 계산으로 되돌아감
@@ -113,8 +113,8 @@ themes:
         text: 실험 시설의 원시 데이터율이 280 GB/s에서 1,120 GB/s로 가면서 전부 저장하는 방식은 불가능해졌음. 검출기 옆 스트리밍 런타임은 31 kHz를 유지했고, 시뮬레이션은 필드를 입자로 바꿔 98.1% 줄이거나 통계를 실행 중에 누적해 전송량을 60배 줄였음. 무엇을 남길지를 사람이 보기 전에 기계가 정하므로, 그 결정의 신뢰를 얻는 것이 남은 과제임.
         refs: [misc155, ws_xloop111, ws_isav111, ws_isav110, ws_isav106]
       - head: 옮길 때는 네트워크가 능동적으로 관여함.
-        text: 대용량 데이터는 사본을 늘리는 대신 원본과 캐시의 연합으로 배포하고, 데이터 대신 모델을 옮겨 광역 트래픽을 3.2~11.4배 줄임. 네트워크가 워크플로 수요를 예측해 스스로 조치하는 구상도 나왔음. 다만 예측 캐싱의 실측 이득은 전송량 1.6% 감소로 작았고, 혼잡 회피는 여유가 있는 전송에만 통했음.
-        refs: [ws_indis102, ws_indis111, ws_indis112, ws_indis117, ws_worksp115]
+        text: 대용량 데이터는 사본을 늘리는 대신 원본과 캐시의 연합으로 배포하고, 데이터 대신 모델을 옮겨 광역 트래픽을 3.2~11.4배 줄임. 네트워크가 워크플로 수요를 예측해 스스로 조치하는 구상도 나왔음. 다만 예측 캐싱의 실측 이득은 전송량 1.6% 감소로 작았고, 혼잡 회피는 여유가 있는 전송에만 통했음. 계산 노드 사이에서도 네트워크가 한계가 됨. 초대형 AI 인프라의 주된 병목이 네트워크라는 진단이 나왔고, GPU 사이의 전 대 전 교환은 직접 상대를 줄여 장치당 연결을 최대 98% 줄였음.
+        refs: [ws_indis102, ws_indis111, ws_indis112, ws_indis117, ws_worksp115, misc114, ws_exampi106]
       - head: 계산 노드 안에서는 데이터의 위치가 성능을 정함.
         text: 메모리 구조를 인지한 스케줄링으로 로컬 읽기 비율이 27.64%에서 68.33%로 올랐고, 이후 데이터 위치까지 고려한 배치로 복사량이 39~81% 줄었음. 중성자 확산 솔버는 모든 단계가 메모리에 묶여 있어 코어 수가 아니라 메모리 구조가 확장성을 정했음. 엑사스케일 벤치마크의 성능도 커널이 아니라 장치와 통신의 배치에서 나왔음.
         refs: [ws_worksp101, ws_ross101, ws_pmbsf107, ws_pmbsf139]
@@ -131,8 +131,8 @@ themes:
         text: 신형 GPU의 배정밀도 성능이 세대 사이에 37에서 1.25 TFLOP/s로 줄어, 배정밀도 코드는 에뮬레이션이나 혼합 정밀도 보정이 필요해졌음. 한편 스케줄러 개발사의 인수를 계기로, 시스템 관리와 소프트웨어 배포, 배분·정산 층을 공동 거버넌스 아래 두어 교체 가능성을 지키려는 움직임이 나옴.
         refs: [ws_haclph112, ws_haclph101, ws_scc104, ws_scc103, ws_scc106]
       - head: 효율의 범위가 운영 기록과 장비의 생애주기로 넓어짐.
-        text: 작업 기록 420만 건의 분석에서 소수의 사용자가 수요와 낭비의 대부분을 만들었고, 요청을 실제에 맞추면 평균 대기가 67% 줄어든다는 모의 결과가 나옴. GPU 분할 구성을 수요 기록으로 정하자 충족률이 66.8%에서 98.1%로 올랐음. 장비 교체는 제조 탄소까지 따져야 총배출이 줄고, 작업별 GPU 클록 조정은 에너지를 14.25% 아꼈음.
-        refs: [ws_hpcoda112, ws_hpcoda136, ws_ss103, ws_ss109, ws_echo105]
+        text: 작업 기록 420만 건의 분석에서 소수의 사용자가 수요와 낭비의 대부분을 만들었고, 요청을 실제에 맞추면 평균 대기가 67% 줄어든다는 모의 결과가 나옴. GPU 분할 구성을 수요 기록으로 정하자 충족률이 66.8%에서 98.1%로 올랐음. 장비 교체는 제조 탄소까지 따져야 총배출이 줄고, 작업별 GPU 클록 조정은 에너지를 14.25% 아꼈음. 유휴 자원의 쓰임도 넓어져, 평시에 대리모델을 준비해 지진 직후의 계산 비용을 97.9% 넘게 줄인 긴급 대응 사례가 나옴.
+        refs: [ws_hpcoda112, ws_hpcoda136, ws_ss103, ws_ss109, ws_echo105, ws_ius101]
       - head: 시설을 하나의 플랫폼으로 잇는 일은 서비스와 신원에서 시작함.
         text: 미국은 AI, 엑사스케일, 실험 시설, 자율 실험실을 한 플랫폼으로 묶는 사업에서 모델 배포, 언어 모델 접근, 데이터 기반, 출처 기록을 공용 서비스로 제공하고 이미 실제 워크플로에 쓰고 있음. 영국의 국가 AI 자원은 신원 관리가 숨은 최대 지원 부담임을 확인했고, 프랑스는 보안 규정과 공유 계정의 충돌을 서비스 계정으로 풀었음.
         refs: [misc199, ws_xloop110, ws_hppss105, ws_hust103, ws_worksp105]

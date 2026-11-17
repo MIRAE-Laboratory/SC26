@@ -36,6 +36,8 @@ sessions:
   - sessions/sess155.yaml
   - sessions/sess156.yaml
   - sessions/sess157.yaml
+  - sessions/sess143.yaml
+  - sessions/sess151.yaml
 presentations:
   - presentations/ws_shpc101.yaml
   - presentations/ws_shpc102.yaml
@@ -399,3 +401,13 @@ presentations:
   - presentations/ws_ss103.yaml
   - presentations/ws_ss109.yaml
   - presentations/ws_ss106.yaml
+  - presentations/misc114.yaml
+  - presentations/ws_exampi105.yaml
+  - presentations/ws_exampi103.yaml
+  - presentations/ws_exampi106.yaml
+  - presentations/ws_exampi107.yaml
+  - presentations/ws_exampi108.yaml
+  - presentations/misc176.yaml
+  - presentations/ws_ius101.yaml
+  - presentations/misc177.yaml
+  - presentations/miscp117.yaml

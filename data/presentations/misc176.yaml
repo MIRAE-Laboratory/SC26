@@ -1,0 +1,15 @@
+id: misc176
+type: Presentation
+kind: invited
+label: "Invited talk: From Streaming Data to Timely Decisions: Infrastructure for Urgent Science"
+session: sess151
+time: "08:40-09:30"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=misc176"
+authors: [manish-parashar]
+addresses: [urgent-decision-latency, workflow-composition-effort, data-readiness]
+proposes: [unified-data-access]
+targets: [data-federations, workflow-systems]
+summary_ko: "긴급 과학을 분산된 데이터 원천으로 중요한 결정을 뒷받침하는, 시한이 있는 데이터 기반 워크플로로 정의하는 초청 강연임. 데이터 원천과 계산 능력은 늘었지만 이런 워크플로를 만드는 일은 여전히 어렵다고 봄."
+claims:
+  - "응용 사례, 긴급 계산의 요구와 과제를 다룸."
+  - "국가 데이터 플랫폼(NDP)이 AI를 쓰는 긴급 과학 워크플로를 어떻게 지원할 수 있는지 논의함. 공개 초록에는 수치가 없음."

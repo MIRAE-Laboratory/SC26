@@ -1,0 +1,17 @@
+id: ws_exampi106
+type: Presentation
+kind: paper
+label: "Scalable Hierarchical Multi-NIC GPU-Aware MPI Alltoall via Hamiltonian Decomposition"
+session: sess143
+time: "16:18-16:42"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi106"
+authors: [amirreza-barati-sedeh, ryan-grant, ahmad-afsahi]
+addresses: [communication-scalability, network-congestion]
+proposes: [communication-aware-placement, analytical-performance-model]
+targets: [gpu-communication, hpc-network]
+summary_ko: "모든 프로세스가 서로 데이터를 주고받는 전 대 전 집합 연산은 상대마다 전용 연결이 필요해, 상대가 늘면 네트워크 장치의 메모리를 소진함. 벤더 전용 전송 없이, 전체 교환 그래프를 간선이 겹치지 않는 해밀턴 순환으로 나눠 각 프로세스의 직접 상대를 고정된 소수로 줄임. 노드 안과 노드 사이 통신을 겹치는 다중 장치 파이프라인도 씀."
+claims:
+  - "GPU 36개와 72개에서 장치당 연결 수가 Open MPI와 NCCL 대비 최대 98%, 93% 줄어듦."
+  - "해석 모델은 GPU 1,152개까지 66~98% 감소를 예측함."
+  - "지연은 Open MPI보다 최대 34%, MVAPICH-Plus보다 최대 36% 낮고, NCCL과 같은 수준임."
+  - "heFFTe 처리량은 Open MPI의 최대 1.2배, MVAPICH-Plus의 최대 1.66배임."

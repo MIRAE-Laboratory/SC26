@@ -1570,6 +1570,41 @@
    "label": "Lila Sciences"
   },
   {
+   "@id": "sc26:utah",
+   "@type": "Organization",
+   "label": "University of Utah"
+  },
+  {
+   "@id": "sc26:jamstec",
+   "@type": "Organization",
+   "label": "Japan Agency for Marine-Earth Science and Technology"
+  },
+  {
+   "@id": "sc26:temple",
+   "@type": "Organization",
+   "label": "Temple University"
+  },
+  {
+   "@id": "sc26:depaul",
+   "@type": "Organization",
+   "label": "DePaul University"
+  },
+  {
+   "@id": "sc26:argentic",
+   "@type": "Organization",
+   "label": "argentic"
+  },
+  {
+   "@id": "sc26:nersc",
+   "@type": "Organization",
+   "label": "National Energy Research Scientific Computing Center"
+  },
+  {
+   "@id": "sc26:alleninst",
+   "@type": "Organization",
+   "label": "Allen Institute"
+  },
+  {
    "@id": "sc26:andres-marquez",
    "@type": "Person",
    "label": "Andres Marquez",
@@ -15585,6 +15620,312 @@
    ]
   },
   {
+   "@id": "sc26:matthew-g-f-dosanjh",
+   "@type": "Person",
+   "label": "Matthew G. F. Dosanjh",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sandia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:william-schonbein",
+   "@type": "Person",
+   "label": "William Schonbein",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sandia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:amanda-j-bienz",
+   "@type": "Person",
+   "label": "Amanda J. Bienz",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:unm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:joseph-schuchart",
+   "@type": "Person",
+   "label": "Joseph Schuchart",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:stonybrook"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ehab-saleh",
+   "@type": "Person",
+   "label": "Ehab Saleh",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:lrz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:arnau-cinca",
+   "@type": "Person",
+   "label": "Arnau Cinca",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:bsc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kevin-sala",
+   "@type": "Person",
+   "label": "Kevin Sala",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:bsc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kiril-dichev",
+   "@type": "Person",
+   "label": "Kiril Dichev",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:independent"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:albert-jan-yzelman",
+   "@type": "Person",
+   "label": "Albert-Jan Yzelman",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:argentic"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:vicenc-beltran",
+   "@type": "Person",
+   "label": "Vicenç Beltran",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:bsc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:amirreza-barati-sedeh",
+   "@type": "Person",
+   "label": "Amirreza Barati Sedeh",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:queens"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ahmad-afsahi",
+   "@type": "Person",
+   "label": "Ahmad Afsahi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:queens"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kunting-qi",
+   "@type": "Person",
+   "label": "Kunting Qi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:uic"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:hui-zhou",
+   "@type": "Person",
+   "label": "Hui Zhou",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:anl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ke-fan",
+   "@type": "Person",
+   "label": "Ke Fan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:temple"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:varun-chotalia",
+   "@type": "Person",
+   "label": "Varun Chotalia",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:stonybrook"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jeff-hammond",
+   "@type": "Person",
+   "label": "Jeff Hammond",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:thierry-goubier",
+   "@type": "Person",
+   "label": "Thierry Goubier",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cea"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:bill-arndt",
+   "@type": "Person",
+   "label": "Bill Arndt",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:lbnl"
+    },
+    {
+     "@id": "sc26:nersc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:robert-henschel",
+   "@type": "Person",
+   "label": "Robert Henschel",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:michael-ringenburg",
+   "@type": "Person",
+   "label": "Michael Ringenburg",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:alleninst"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:manish-parashar",
+   "@type": "Person",
+   "label": "Manish Parashar",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utah"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tsuyoshi-ichimura",
+   "@type": "Person",
+   "label": "Tsuyoshi Ichimura",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utokyo"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kohei-fujita",
+   "@type": "Person",
+   "label": "Kohei Fujita",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utokyo"
+    },
+    {
+     "@id": "sc26:riken"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:hideaki-ito",
+   "@type": "Person",
+   "label": "Hideaki Ito",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utokyo"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:wataru-sakurai",
+   "@type": "Person",
+   "label": "Wataru Sakurai",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utokyo"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:muneo-hori",
+   "@type": "Person",
+   "label": "Muneo Hori",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:jamstec"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:lalith-maddegedara",
+   "@type": "Person",
+   "label": "Lalith Maddegedara",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utokyo"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:phuong-cao",
+   "@type": "Person",
+   "label": "Phuong Cao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:uiuc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:albert-reuther",
+   "@type": "Person",
+   "label": "Albert Reuther",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:mitll"
+    }
+   ]
+  },
+  {
    "@id": "sc26:multi-tenant-isolation",
    "@type": "Problem",
    "label": "Multi-tenant isolation",
@@ -16408,6 +16749,20 @@
      "@id": "sc26:continuum-risk"
     }
    ]
+  },
+  {
+   "@id": "sc26:communication-scalability",
+   "@type": "Problem",
+   "label": "Communication scalability and resource limits at scale",
+   "label_ko": "대규모 통신의 확장성과 자원 한계",
+   "broader": "sc26:category/Problem/성능·자원_활용"
+  },
+  {
+   "@id": "sc26:urgent-decision-latency",
+   "@type": "Problem",
+   "label": "Time-critical decisions in urgent computing",
+   "label_ko": "긴급 상황에서의 결정 시한",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:attack-trees",
@@ -17447,6 +17802,13 @@
    "label": "Edge-cloud task routing",
    "label_ko": "엣지와 클라우드 사이의 작업 분배",
    "broader": "sc26:category/Method/스케줄링·자원_관리"
+  },
+  {
+   "@id": "sc26:mpi-rma-windows",
+   "@type": "Method",
+   "label": "MPI one-sided communication and windows",
+   "label_ko": "MPI 단방향 통신과 윈도 활용",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:ai-supercomputer",
@@ -18710,6 +19072,53 @@
     },
     {
      "@id": "sc26:jim-rogers"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess143",
+   "@type": "Session",
+   "label": "ExaMPI26: Workshop on Extreme-Scale MPI",
+   "topic": "성능·도구",
+   "date": "2026-11-16",
+   "url": "https://sc26.conference-program.com/session/?sess=sess143",
+   "chairedBy": [
+    {
+     "@id": "sc26:matthew-g-f-dosanjh"
+    },
+    {
+     "@id": "sc26:william-schonbein"
+    },
+    {
+     "@id": "sc26:amanda-j-bienz"
+    },
+    {
+     "@id": "sc26:nikoli-dryden"
+    },
+    {
+     "@id": "sc26:joseph-schuchart"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess151",
+   "@type": "Session",
+   "label": "Eighth Workshop on Interactive and Urgent High Performance Computing",
+   "topic": "데이터·워크플로·네트워크",
+   "date": "2026-11-20",
+   "url": "https://sc26.conference-program.com/session/?sess=sess151",
+   "chairedBy": [
+    {
+     "@id": "sc26:thierry-goubier"
+    },
+    {
+     "@id": "sc26:bill-arndt"
+    },
+    {
+     "@id": "sc26:robert-henschel"
+    },
+    {
+     "@id": "sc26:michael-ringenburg"
     }
    ]
   },
@@ -35644,6 +36053,464 @@
     },
     {
      "@id": "sc26:ai-power-delivery"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:misc114",
+   "@type": "Presentation",
+   "label": "Invited Talk: Torsten Hoefler: AI Infrastructure at Hyperscale - The Role of (Ultra) Ethernet",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=misc114",
+   "partOf": [
+    {
+     "@id": "sc26:sess143"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:torsten-hoefler"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:communication-scalability"
+    },
+    {
+     "@id": "sc26:llm-serving-efficiency"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:hpc-network"
+    },
+    {
+     "@id": "sc26:llm-inference"
+    },
+    {
+     "@id": "sc26:ai-supercomputer"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ws_exampi105",
+   "@type": "Presentation",
+   "label": "MPI-CCOB: Benchmarking MPI Overlap on CPU and GPU Systems",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi105",
+   "partOf": [
+    {
+     "@id": "sc26:sess143"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:ehab-saleh"
+    },
+    {
+     "@id": "sc26:josef-weidendorfer"
+    },
+    {
+     "@id": "sc26:martin-schulz"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:communication-scalability"
+    },
+    {
+     "@id": "sc26:memory-bound-performance"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:comparative-benchmarking"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:mpi-simulations"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ws_exampi103",
+   "@type": "Presentation",
+   "label": "Extending MPI One-Sided Communication with Lightweight Notification-Based Synchronization",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi103",
+   "partOf": [
+    {
+     "@id": "sc26:sess143"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:arnau-cinca"
+    },
+    {
+     "@id": "sc26:kevin-sala"
+    },
+    {
+     "@id": "sc26:kiril-dichev"
+    },
+    {
+     "@id": "sc26:albert-jan-yzelman"
+    },
+    {
+     "@id": "sc26:vicenc-beltran"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:communication-scalability"
+    },
+    {
+     "@id": "sc26:heterogeneity-complexity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:mpi-rma-windows"
+    },
+    {
+     "@id": "sc26:mpi-parallelization"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:parallel-programming-models"
+    },
+    {
+     "@id": "sc26:task-runtimes"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ws_exampi106",
+   "@type": "Presentation",
+   "label": "Scalable Hierarchical Multi-NIC GPU-Aware MPI Alltoall via Hamiltonian Decomposition",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi106",
+   "partOf": [
+    {
+     "@id": "sc26:sess143"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:amirreza-barati-sedeh"
+    },
+    {
+     "@id": "sc26:ryan-grant"
+    },
+    {
+     "@id": "sc26:ahmad-afsahi"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:communication-scalability"
+    },
+    {
+     "@id": "sc26:network-congestion"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:communication-aware-placement"
+    },
+    {
+     "@id": "sc26:analytical-performance-model"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:gpu-communication"
+    },
+    {
+     "@id": "sc26:hpc-network"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ws_exampi107",
+   "@type": "Presentation",
+   "label": "Execution-Path- and Restriction-Aware Autotuning for MPI Collective Operations",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi107",
+   "partOf": [
+    {
+     "@id": "sc26:sess143"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:kunting-qi"
+    },
+    {
+     "@id": "sc26:hui-zhou"
+    },
+    {
+     "@id": "sc26:ke-fan"
+    },
+    {
+     "@id": "sc26:michael-papka"
+    },
+    {
+     "@id": "sc26:sidharth-kumar"
+    },
+    {
+     "@id": "sc26:rajeev-thakur"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:benchmark-validity"
+    },
+    {
+     "@id": "sc26:communication-scalability"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:autotuning"
+    },
+    {
+     "@id": "sc26:selective-measurement"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:mpi-simulations"
+    },
+    {
+     "@id": "sc26:leadership-facility"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ws_exampi108",
+   "@type": "Presentation",
+   "label": "MPI Windows as an Abstraction for CUDA Interprocess Communication",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi108",
+   "partOf": [
+    {
+     "@id": "sc26:sess143"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:varun-chotalia"
+    },
+    {
+     "@id": "sc26:joseph-schuchart"
+    },
+    {
+     "@id": "sc26:jeff-hammond"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:gpu-io-path"
+    },
+    {
+     "@id": "sc26:heterogeneity-complexity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:mpi-rma-windows"
+    },
+    {
+     "@id": "sc26:portable-abstraction-layers"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:gpu-communication"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:misc176",
+   "@type": "Presentation",
+   "label": "Invited talk: From Streaming Data to Timely Decisions: Infrastructure for Urgent Science",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=misc176",
+   "partOf": [
+    {
+     "@id": "sc26:sess151"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:manish-parashar"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:urgent-decision-latency"
+    },
+    {
+     "@id": "sc26:workflow-composition-effort"
+    },
+    {
+     "@id": "sc26:data-readiness"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:unified-data-access"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:data-federations"
+    },
+    {
+     "@id": "sc26:workflow-systems"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ws_ius101",
+   "@type": "Presentation",
+   "label": "From Idle to Urgent: A Resource-Harvested HPC Workflow for High-Fidelity Seismic Estimation",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=ws_ius101",
+   "partOf": [
+    {
+     "@id": "sc26:sess151"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:tsuyoshi-ichimura"
+    },
+    {
+     "@id": "sc26:kohei-fujita"
+    },
+    {
+     "@id": "sc26:hideaki-ito"
+    },
+    {
+     "@id": "sc26:wataru-sakurai"
+    },
+    {
+     "@id": "sc26:muneo-hori"
+    },
+    {
+     "@id": "sc26:lalith-maddegedara"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:urgent-decision-latency"
+    },
+    {
+     "@id": "sc26:underused-resources"
+    },
+    {
+     "@id": "sc26:surrogate-payoff"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:surrogate-substitution"
+    },
+    {
+     "@id": "sc26:opportunistic-inference"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:neural-surrogates"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:misc177",
+   "@type": "Presentation",
+   "label": "Lightning talks",
+   "evidence": "none",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=misc177",
+   "partOf": [
+    {
+     "@id": "sc26:sess151"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:phuong-cao"
+    },
+    {
+     "@id": "sc26:dante-d-sanchez-gallegos"
+    },
+    {
+     "@id": "sc26:albert-reuther"
+    },
+    {
+     "@id": "sc26:tanu-malik"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:urgent-decision-latency"
+    },
+    {
+     "@id": "sc26:failure-resilience"
+    },
+    {
+     "@id": "sc26:provenance-reproducibility"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:edge-devices"
+    },
+    {
+     "@id": "sc26:llm-inference"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:miscp117",
+   "@type": "Presentation",
+   "label": "Panel: Security of Interactive and Urgent sessions in the era of hacking AIs",
+   "evidence": "none",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=miscp117",
+   "partOf": [
+    {
+     "@id": "sc26:sess151"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:albert-reuther"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:urgent-decision-latency"
+    },
+    {
+     "@id": "sc26:agent-boundaries"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:ai-agents"
     }
    ]
   },

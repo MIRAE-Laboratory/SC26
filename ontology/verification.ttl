@@ -181,6 +181,7 @@
 :obs-01 rdf:type :Observation ; :onTarget :t-training-run ; :concernsFailure :f-silent-training ; :evidencedBy kg:ws_tpw126 ; rdfs:comment "손실 값을 조용히 틀리게 보고하는 버그"@ko .
 :obs-02 rdf:type :Observation ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :evidencedBy kg:ws_aaihpc146 ; rdfs:comment "사실을 가장 많이 찾는 구성이 답할 수 없는 질문을 가장 적게 거절"@ko .
 :obs-03 rdf:type :Observation ; :onTarget :t-benchmark-score ; :concernsFailure :f-measure-error ; :evidencedBy kg:ws_pmbss101 ; rdfs:comment "종합 점수가 단계별 관계를 가림"@ko .
-:obs-04 rdf:type :Observation ; :onTarget :t-parallel-comm ; :concernsFailure :f-concurrency ; :evidencedBy kg:ws_corr_sh101 ; rdfs:comment "통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건"@ko .
-:obs-05 rdf:type :Observation ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :evidencedBy kg:ws_pmbsf137 ; rdfs:comment "사양이 같은 장치의 에너지가 36.9% 차이"@ko .
-:obs-06 rdf:type :Observation ; :onTarget :t-llm-proposal ; :concernsFailure :f-ungrounded ; :evidencedBy kg:ws_tpw120 ; rdfs:comment "새 발견을 끝까지 스스로 검증한 시스템이 없음"@ko .
+:obs-04 rdf:type :Observation ; :onTarget :t-benchmark-score ; :concernsFailure :f-measure-error ; :evidencedBy kg:ws_exampi107 ; rdfs:comment "자동 튜닝의 벤치마크가 제약 때문에 조용히 대체된 다른 알고리즘을 측정함"@ko .
+:obs-05 rdf:type :Observation ; :onTarget :t-parallel-comm ; :concernsFailure :f-concurrency ; :evidencedBy kg:ws_corr_sh101 ; rdfs:comment "통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건"@ko .
+:obs-06 rdf:type :Observation ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :evidencedBy kg:ws_pmbsf137 ; rdfs:comment "사양이 같은 장치의 에너지가 36.9% 차이"@ko .
+:obs-07 rdf:type :Observation ; :onTarget :t-llm-proposal ; :concernsFailure :f-ungrounded ; :evidencedBy kg:ws_tpw120 ; rdfs:comment "새 발견을 끝까지 스스로 검증한 시스템이 없음"@ko .

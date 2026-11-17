@@ -1,0 +1,13 @@
+id: misc177
+type: Presentation
+kind: talk
+label: "Lightning talks"
+session: sess151
+time: "10:30-11:10"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=misc177"
+authors: [phuong-cao, dante-d-sanchez-gallegos, albert-reuther, tanu-malik]
+addresses: [urgent-decision-latency, failure-resilience, provenance-reproducibility]
+proposes: []
+targets: [edge-devices, llm-inference]
+summary_ko: "짧은 발표 네 건의 묶음임. 공개 페이지에는 발표자와 주제만 있고 설명문이 없어 제목만 기록함."
+claims: []

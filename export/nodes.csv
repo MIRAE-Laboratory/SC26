@@ -310,6 +310,13 @@ stuttgart,Organization,University of Stuttgart,,,,,,,
 keio,Organization,Keio University,,,,,,,
 csc-fi,Organization,CSC - IT Center for Science,,,,,,,
 lila,Organization,Lila Sciences,,,,,,,
+utah,Organization,University of Utah,,,,,,,
+jamstec,Organization,Japan Agency for Marine-Earth Science and Technology,,,,,,,
+temple,Organization,Temple University,,,,,,,
+depaul,Organization,DePaul University,,,,,,,
+argentic,Organization,argentic,,,,,,,
+nersc,Organization,National Energy Research Scientific Computing Center,,,,,,,
+alleninst,Organization,Allen Institute,,,,,,,
 andres-marquez,Person,Andres Marquez,,,,,,,
 yang-guo,Person,Yang Guo,,,,,,,
 kevin-barker,Person,Kevin J. Barker,,,,,,,
@@ -1696,6 +1703,36 @@ varsha-rao,Person,Varsha Rao,,,,,,,
 clarisse-cheung,Person,Clarisse Cheung,,,,,,,
 shaina-smith,Person,Shaina Smith,,,,,,,
 ryan-grant,Person,Ryan Grant,,,,,,,
+matthew-g-f-dosanjh,Person,Matthew G. F. Dosanjh,,,,,,,
+william-schonbein,Person,William Schonbein,,,,,,,
+amanda-j-bienz,Person,Amanda J. Bienz,,,,,,,
+joseph-schuchart,Person,Joseph Schuchart,,,,,,,
+ehab-saleh,Person,Ehab Saleh,,,,,,,
+arnau-cinca,Person,Arnau Cinca,,,,,,,
+kevin-sala,Person,Kevin Sala,,,,,,,
+kiril-dichev,Person,Kiril Dichev,,,,,,,
+albert-jan-yzelman,Person,Albert-Jan Yzelman,,,,,,,
+vicenc-beltran,Person,Vicenç Beltran,,,,,,,
+amirreza-barati-sedeh,Person,Amirreza Barati Sedeh,,,,,,,
+ahmad-afsahi,Person,Ahmad Afsahi,,,,,,,
+kunting-qi,Person,Kunting Qi,,,,,,,
+hui-zhou,Person,Hui Zhou,,,,,,,
+ke-fan,Person,Ke Fan,,,,,,,
+varun-chotalia,Person,Varun Chotalia,,,,,,,
+jeff-hammond,Person,Jeff Hammond,,,,,,,
+thierry-goubier,Person,Thierry Goubier,,,,,,,
+bill-arndt,Person,Bill Arndt,,,,,,,
+robert-henschel,Person,Robert Henschel,,,,,,,
+michael-ringenburg,Person,Michael Ringenburg,,,,,,,
+manish-parashar,Person,Manish Parashar,,,,,,,
+tsuyoshi-ichimura,Person,Tsuyoshi Ichimura,,,,,,,
+kohei-fujita,Person,Kohei Fujita,,,,,,,
+hideaki-ito,Person,Hideaki Ito,,,,,,,
+wataru-sakurai,Person,Wataru Sakurai,,,,,,,
+muneo-hori,Person,Muneo Hori,,,,,,,
+lalith-maddegedara,Person,Lalith Maddegedara,,,,,,,
+phuong-cao,Person,Phuong Cao,,,,,,,
+albert-reuther,Person,Albert Reuther,,,,,,,
 multi-tenant-isolation,Problem,Multi-tenant isolation,멀티테넌트 격리,보안·프라이버시·통제권,,,,,
 sensitive-data-governance,Problem,Sensitive-data governance,민감데이터 거버넌스,보안·프라이버시·통제권,,,,,
 institutional-privacy,Problem,Institution-level privacy leakage,기관 수준 프라이버시 누출,보안·프라이버시·통제권,,,,,
@@ -1788,6 +1825,8 @@ imaging-data-scale,Problem,Scale of scientific imaging data,과학 영상 데이
 request-usage-mismatch,Problem,Mismatch between requested and used resources,요청한 자원과 실제 사용의 불일치,성능·자원 활용,,,,,
 software-stack-drift,Problem,Performance regressions from software stack changes,소프트웨어 스택 변화로 인한 성능 회귀,코드·소프트웨어 생산성,,,,,
 edge-resource-limits,Problem,Resource limits at the edge,엣지 장치의 자원 한계,데이터·저장·네트워크,,,,,
+communication-scalability,Problem,Communication scalability and resource limits at scale,대규모 통신의 확장성과 자원 한계,성능·자원 활용,,,,,
+urgent-decision-latency,Problem,Time-critical decisions in urgent computing,긴급 상황에서의 결정 시한,워크플로·실험 연계,,,,,
 attack-trees,Method,Threat modeling with attack trees,공격 트리 기반 위협 모델링,보안·격리·거버넌스,,,,,
 portable-governance,Method,Portable governance,이식 가능한 거버넌스,보안·격리·거버넌스,,,,,
 privacy-assurance,Method,Privacy as assurance (claim register),보증 문제로서의 프라이버시(주장 등록부),검증·시험,,,,,
@@ -1915,6 +1954,7 @@ operations-visualization,Method,Visual analytics of operational data,운영 데�
 heat-reuse,Method,Waste heat reuse,폐열 재사용,에너지·전력 제어,,,,,
 carbon-aware-upgrade,Method,Carbon-aware hardware refresh,탄소를 고려한 장비 교체,에너지·전력 제어,,,,,
 edge-cloud-routing,Method,Edge-cloud task routing,엣지와 클라우드 사이의 작업 분배,스케줄링·자원 관리,,,,,
+mpi-rma-windows,Method,MPI one-sided communication and windows,MPI 단방향 통신과 윈도 활용,프로그래밍 모델·수치 기법,,,,,
 ai-supercomputer,System,Multi-tenant AI supercomputer,멀티테넌트 AI 슈퍼컴퓨터,계산 시설·클러스터,,,,,
 kubernetes-baremetal,System,Kubernetes on bare metal,베어메탈 쿠버네티스,계산 시설·클러스터,,,,,
 leadership-facility,System,Leadership-class facility,리더십급 컴퓨팅 시설,계산 시설·클러스터,,,,,
@@ -2012,6 +2052,8 @@ sess153,Session,Workshop on Operational Data Analytics in HPC (HPC-ODA),,,,운�
 sess155,Session,"Fourth International Workshop on HPC Testing and Evaluation of Systems, Tools, and Software (HPCTESTS 2026)",,,,검증·신뢰,2026-11-20,,https://sc26.conference-program.com/session/?sess=sess155
 sess156,Session,The 1st International Workshop on Edge-Cloud-HPC Operational Continuum (ECHO),,,,데이터·워크플로·네트워크,2026-11-20,,https://sc26.conference-program.com/session/?sess=sess156
 sess157,Session,Sustainable Supercomputing,,,,에너지·지속 가능성,2026-11-20,,https://sc26.conference-program.com/session/?sess=sess157
+sess143,Session,ExaMPI26: Workshop on Extreme-Scale MPI,,,,성능·도구,2026-11-16,,https://sc26.conference-program.com/session/?sess=sess143
+sess151,Session,Eighth Workshop on Interactive and Urgent High Performance Computing,,,,데이터·워크플로·네트워크,2026-11-20,,https://sc26.conference-program.com/session/?sess=sess151
 ws_shpc101,Presentation,A Threat Model for Sensitive-Data Workloads on Multi-Tenant AI Supercomputers,,,sess126,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc101
 ws_shpc102,Presentation,Privacy Foundations for Multi-Institutional Scientific Artificial Intelligence,,,sess126,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc102
 ws_shpc104,Presentation,A First Look at Conventional Attacks on Scientific Applications,,,sess126,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess126&id=ws_shpc104
@@ -2374,3 +2416,13 @@ ws_ss104,Presentation,From GPU-Accelerated Systems to Modern NVIDIA and AMD Supe
 ws_ss103,Presentation,Does New Hardware Improve Carbon Impact of HPC systems?,,,sess157,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss103
 ws_ss109,Presentation,Predicting the Energy-Optimal GPU Clock for Production VASP Jobs Before They Run,,,sess157,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss109
 ws_ss106,Presentation,The Economic Value of Heat Reuse,,,sess157,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess157&id=ws_ss106
+misc114,Presentation,Invited Talk: Torsten Hoefler: AI Infrastructure at Hyperscale - The Role of (Ultra) Ethernet,,,sess143,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=misc114
+ws_exampi105,Presentation,MPI-CCOB: Benchmarking MPI Overlap on CPU and GPU Systems,,,sess143,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi105
+ws_exampi103,Presentation,Extending MPI One-Sided Communication with Lightweight Notification-Based Synchronization,,,sess143,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi103
+ws_exampi106,Presentation,Scalable Hierarchical Multi-NIC GPU-Aware MPI Alltoall via Hamiltonian Decomposition,,,sess143,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi106
+ws_exampi107,Presentation,Execution-Path- and Restriction-Aware Autotuning for MPI Collective Operations,,,sess143,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi107
+ws_exampi108,Presentation,MPI Windows as an Abstraction for CUDA Interprocess Communication,,,sess143,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi108
+misc176,Presentation,Invited talk: From Streaming Data to Timely Decisions: Infrastructure for Urgent Science,,,sess151,,,qual,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=misc176
+ws_ius101,Presentation,From Idle to Urgent: A Resource-Harvested HPC Workflow for High-Fidelity Seismic Estimation,,,sess151,,,num,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=ws_ius101
+misc177,Presentation,Lightning talks,,,sess151,,,none,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=misc177
+miscp117,Presentation,Panel: Security of Interactive and Urgent sessions in the era of hacking AIs,,,sess151,,,none,https://sc26.conference-program.com/?post_type=page&p=16&sess=sess151&id=miscp117

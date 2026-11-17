@@ -1,0 +1,16 @@
+id: misc114
+type: Presentation
+kind: invited
+label: "Invited Talk: Torsten Hoefler: AI Infrastructure at Hyperscale - The Role of (Ultra) Ethernet"
+session: sess143
+time: "14:00-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=misc114"
+authors: [torsten-hoefler]
+addresses: [communication-scalability, llm-serving-efficiency]
+proposes: []
+targets: [hpc-network, llm-inference, ai-supercomputer]
+summary_ko: "생성형 AI의 성장으로 초대형 인프라가 커지고 효율이 최우선 과제가 됐다고 진단하는 초청 강연임. 전용 가속기의 이점은 확장 가능한 네트워크에 달려 있음. 가속기 구조, 대규모 추론 시스템, 분산 워크로드의 통신 문제를 함께 설계하는 방식을 다룸."
+claims:
+  - "최신 AI 서비스는 하루 수조 개의 토큰을 만들어 내어 더 큰 클러스터를 요구함."
+  - "네트워크가 이런 시스템의 주된 병목이 됐다고 봄."
+  - "개방형 고성능 네트워크 플랫폼을 지향하는 Ultra Ethernet의 구상을 제시함. 공개 초록에는 측정 수치가 없음."

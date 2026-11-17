@@ -1,0 +1,16 @@
+id: ws_exampi105
+type: Presentation
+kind: paper
+label: "MPI-CCOB: Benchmarking MPI Overlap on CPU and GPU Systems"
+session: sess143
+time: "15:30-15:54"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess143&id=ws_exampi105"
+authors: [ehab-saleh, josef-weidendorfer, martin-schulz]
+addresses: [communication-scalability, memory-bound-performance]
+proposes: [comparative-benchmarking]
+targets: [mpi-simulations, hpc-processors]
+summary_ko: "MPI 응용이 통신과 계산을 얼마나 겹쳐 수행하는지 재는 설정형 벤치마크 MPI-CCOB를 제시함. 영역 분할 응용을 본떠 1~3차원 격자 배치로 이웃 교환의 동시 요청 수를 바꾸고, 계산 위주와 메모리 위주 작업을 고를 수 있음. 비동기 진행을 지원하지 않는 구현을 위해 사용자 수준 진행 스레드를 선택 사항으로 둠."
+claims:
+  - "MPICH와 Open MPI를 시험함."
+  - "진행이 활성일 때 계산 위주 작업은 거의 완전한 겹침에 이름."
+  - "메모리 위주 작업은 통신이 계속 진행할 기회를 받아도 CPU와 GPU 모두에서 겹침이 크게 줄어듦. 공개 초록에는 수치가 없음."

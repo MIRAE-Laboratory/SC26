@@ -1384,3 +1384,33 @@ varsha-rao: {name: "Varsha Rao", orgs: [uchicago]}
 clarisse-cheung: {name: "Clarisse Cheung", orgs: [uchicago]}
 shaina-smith: {name: "Shaina Smith", orgs: [queens]}
 ryan-grant: {name: "Ryan Grant", orgs: [queens]}
+matthew-g-f-dosanjh: {name: "Matthew G. F. Dosanjh", orgs: [sandia]}
+william-schonbein: {name: "William Schonbein", orgs: [sandia]}
+amanda-j-bienz: {name: "Amanda J. Bienz", orgs: [unm]}
+joseph-schuchart: {name: "Joseph Schuchart", orgs: [stonybrook]}
+ehab-saleh: {name: "Ehab Saleh", orgs: [lrz]}
+arnau-cinca: {name: "Arnau Cinca", orgs: [bsc]}
+kevin-sala: {name: "Kevin Sala", orgs: [bsc]}
+kiril-dichev: {name: "Kiril Dichev", orgs: [independent]}
+albert-jan-yzelman: {name: "Albert-Jan Yzelman", orgs: [argentic]}
+vicenc-beltran: {name: "Vicenç Beltran", orgs: [bsc]}
+amirreza-barati-sedeh: {name: "Amirreza Barati Sedeh", orgs: [queens]}
+ahmad-afsahi: {name: "Ahmad Afsahi", orgs: [queens]}
+kunting-qi: {name: "Kunting Qi", orgs: [uic]}
+hui-zhou: {name: "Hui Zhou", orgs: [anl]}
+ke-fan: {name: "Ke Fan", orgs: [temple]}
+varun-chotalia: {name: "Varun Chotalia", orgs: [stonybrook]}
+jeff-hammond: {name: "Jeff Hammond", orgs: [nvidia]}
+thierry-goubier: {name: "Thierry Goubier", orgs: [cea]}
+bill-arndt: {name: "Bill Arndt", orgs: [lbnl, nersc]}
+robert-henschel: {name: "Robert Henschel", orgs: [iu]}
+michael-ringenburg: {name: "Michael Ringenburg", orgs: [alleninst]}
+manish-parashar: {name: "Manish Parashar", orgs: [utah]}
+tsuyoshi-ichimura: {name: "Tsuyoshi Ichimura", orgs: [utokyo]}
+kohei-fujita: {name: "Kohei Fujita", orgs: [utokyo, riken]}
+hideaki-ito: {name: "Hideaki Ito", orgs: [utokyo]}
+wataru-sakurai: {name: "Wataru Sakurai", orgs: [utokyo]}
+muneo-hori: {name: "Muneo Hori", orgs: [jamstec]}
+lalith-maddegedara: {name: "Lalith Maddegedara", orgs: [utokyo]}
+phuong-cao: {name: "Phuong Cao", orgs: [uiuc]}
+albert-reuther: {name: "Albert Reuther", orgs: [mitll]}
