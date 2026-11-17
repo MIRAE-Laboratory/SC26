@@ -121,6 +121,35 @@
   .area li { margin: 9px 0; line-height: 1.5; } .area li small { color: var(--muted); }
   .area ul { padding-left: 1.2em; margin: 4px 0; }
   .chk li { margin: 3px 0; }
+  .cards.hl, .rep .cards { grid-template-columns: repeat(auto-fill, minmax(13.5em, 1fr)); }
+  .card em { display: block; margin-top: 7px; padding-top: 6px; border-top: 1px dashed var(--line); font-style: normal; font-size: .84em; line-height: 1.5; color: var(--text); }
+  .card em i { font-style: normal; font-weight: 700; color: var(--c, var(--link)); margin-right: 3px; }
+  :root { --c-muted2: var(--muted); }
+  .rep .rs { margin: 26px 0 0; }
+  .rep .rs > h3 { display: flex; align-items: center; gap: 10px; font-size: 1.12em !important; color: var(--c); border-bottom: 2px solid var(--c) !important; padding-bottom: 6px !important; margin: 0 0 10px !important; }
+  .rep .rn { display: inline-block; min-width: 1.9em; padding: 1px 7px; margin-right: 8px; border-radius: 5px; background: var(--c); color: #fff; font-size: .86em; font-weight: 700; text-align: center; }
+  :root[data-theme="dark"] .rep .rn { color: #111; }
+  .rep .sub { border-left: 4px solid var(--c); padding: 2px 0 2px 14px; margin: 18px 0; }
+  .rep .sub > h4 { color: var(--c); font-size: 1em; margin: 0 0 6px; }
+  .rep .sub > h4 small { font-weight: 400; }
+  .rep .lead3 { background: color-mix(in srgb, var(--c) 7%, transparent); border-radius: 6px; padding: 8px 10px; margin: 6px 0 8px; }
+  .rep ul { list-style: none; padding-left: 0; margin: 6px 0; }
+  .rep li.ri { margin: 0; padding: 9px 0; border-top: 1px solid var(--line); }
+  .rep li.ri:first-child { border-top: 0; }
+  .rep .rh { display: block; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .rep .rh::before { content: "▸ "; color: var(--c); }
+  .rep .rb { display: block; padding-left: 1.05em; color: color-mix(in srgb, var(--text) 86%, var(--muted)); }
+  .rep b.n { color: var(--c); font-weight: 700; }
+  .rep .callout { border: 1px solid var(--c-trial); border-left-width: 4px; border-radius: 6px; background: color-mix(in srgb, var(--c-trial) 6%, transparent); padding: 9px 12px; margin: 12px 0; }
+  .rep .callout > b:first-child { color: var(--c-trial); margin-right: 6px; }
+  .ev-n { color: var(--c-korea); } .ev-q { color: var(--c-decision); } .ev-0 { color: var(--c-trial); }
+  .rep .badge { font-size: .8em; font-weight: 700; color: #fff; background: var(--c); border-radius: 999px; padding: 1px 9px; } :root[data-theme="dark"] .rep .badge { color: #111; }
+  .rep p.ah { color: var(--c) !important; border-bottom: 1px dashed color-mix(in srgb, var(--c) 45%, transparent); padding-bottom: 2px; margin: 14px 0 0 !important; } .rep p.ah small { color: var(--muted); font-weight: 400; }
+  .rep .needs { display: inline-block; background: color-mix(in srgb, var(--c-trial) 9%, transparent); border-radius: 4px; padding: 0 6px; margin-right: 4px; } .rep .needs b { font-weight: 700; }
+  .rep .sn2, .rep th.sn2 { color: var(--link); white-space: nowrap; }
+  .rep .ctable tr.mh th { background: color-mix(in srgb, var(--link) 9%, var(--panel)); color: var(--link); }
+  .rep .cards .card span sup { margin-left: 2px; }
+  .rep sup.cite { color: var(--muted); } .rep sup.cite a { color: var(--link); }
   .onto .ans { font-weight: 400; color: var(--text); } .onto details.pg li { margin: 8px 0; }
   table.mx.onto td { font-size: 1.1em; } table.mx.onto tbody th { min-width: 15em; }
   table.mt tr.mh th { background: color-mix(in srgb, var(--link) 8%, var(--panel)); } table.mt td { font-size: .95em; }
@@ -529,8 +558,8 @@
         `<li><b>인용할 수치가 필요하다</b> ${go("nums", "수치 모음")} · ${go("read", "열람 목록")}</li>` +
         `<li><b>보고하거나 발표해야 한다</b> ${go("report", "고찰 보고서")} · ${go("slides", "슬라이드")}</li>` +
         `<li><b>특정 세션이나 낱말을 찾는다</b> 위의 세션 메뉴와 검색창</li></ul></details>`;
-      if ((overview.highlights || []).length) h += `<h3>핵심 수치</h3><div class="cards">` + overview.highlights.map((x) =>
-        `<div class="card" data-id="${esc(x.ref || "")}"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("") + `</div>`;
+      if ((overview.highlights || []).length) h += `<h3>핵심 수치 <small>· 누르면 근거 발표로 이동</small></h3><div class="cards hl">` + overview.highlights.map((x) =>
+        `<div class="card" data-id="${esc(x.ref || "")}"><b>${esc(x.value)}</b><span>${esc(x.label)}</span>${x.note ? `<em><i>쉽게 말하면</i> ${esc(x.note)}</em>` : ""}</div>`).join("") + `</div>`;
       if (themes.length) h += `<h3>심층 요약 <small>· 여러 세션을 가로지른 관점 ${themes.length}개</small></h3>` + themes.map((th, i) =>
         `<div class="tcard" style="--c:var(--c-${["decision", "trial", "korea", "extra"][i % 4]})" data-sess="theme:${esc(th.id)}"><i>${i + 1}</i><b>${esc(th.label)}</b><span>${esc(th.summary_ko || "")}</span></div>`).join("");
     }
@@ -856,23 +885,25 @@
   function viewReport() {
     const cited = [], cite = (refs) => { const ns = (refs || []).filter((r) => nodes.has(r)).map((r) => { let i = cited.indexOf(r); if (i < 0) i = cited.push(r) - 1; return i + 1; }); return ns.length ? `<sup class="cite">[${ns.map((n) => { const p = nodes.get(cited[n - 1]), tip = p.label + " · (" + sNum(p.session || "") + ") " + ({ num: "수치 제시", qual: "수치 없이 설명", none: "제목만 확인" }[evOf(p.id)] || ""); return `<a ${p.url ? `href="${esc(p.url)}" target="_blank" rel="noopener"` : `href="#ref-${n}"`} data-tip="${esc(tip)}" aria-label="${esc(tip)}">${n}</a>`; }).join(", ")}]</sup>` : ""; };
     const weak = (refs) => { const l = evLevel(refs); return l === "none" ? ` <span class="weak">근거 약함: 제목만 확인</span>` : l === "qual" ? ` <span class="weak q">수치 없는 근거</span>` : ""; };
-    const item = (o) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")}${cite(o.refs)}${weak(o.refs)}</li>`;
+    const item = (o) => `<li class="ri"><b class="rh">${esc(o.head)}</b><span class="rb">${emph(o.text || "")}${cite(o.refs)}${weak(o.refs)}</span></li>`;
+    const sec = (key, n, title, body) => `<section class="rs" style="--c:var(--c-${key})"><h3><span class="rn">${n}</span>${title}</h3>${body}</section>`;
+    const TC = ["decision", "trial", "korea", "extra"], SC = { now: "korea", prep: "trial", long: "extra" };
     const ev = evCounts(), tp = topics(), days = {};
     sessions.forEach((s) => (days[s.date] = (days[s.date] || 0) + 1));
     const ins = overview.insights || {}, items = applyItems();
-    let h = `<div class="doc"><h2>SC26 고찰 보고서</h2><p class="muted">세션 ${sessions.length}개 · 발표 ${presentations.length}건 · 기준일 ${esc((changelog[0] || {}).date || "")} · 근거는 공개 프로그램 페이지의 초록임</p><p><button id="print-view">이 보고서 인쇄·PDF 저장</button></p>` +
-      `<h3>1. 개요</h3><p>SC26의 워크숍과 논문 세션 ${sessions.length}개(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 발표 ${presentations.length}건의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 지식그래프로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용이라는 세 관점을 기본으로 삼았음.</p>` +
-      `<table class="ctable"><tr><th>주제</th><th>세션</th></tr>${tp.map((t) => `<tr><th>${esc(t)}</th><td>${sessions.filter((s) => topicOf(s) === t).map((s) => esc(sTitle(s))).join("<br>")}</td></tr>`).join("")}</table>` +
-      `<p><b>근거의 한계.</b> 발표 ${presentations.length}건 가운데 수치를 제시한 것이 ${ev.num}건, 수치 없이 방법이나 입장을 설명한 것이 ${ev.qual}건, 공개 설명문이 없어 제목만 확인한 것이 ${ev.none}건임. 모든 내용은 초록에 근거하며 논문 전문과 현장 발표는 반영하지 않았음. 근거가 약한 항목은 본문에 따로 표시함.</p>` +
-      ((overview.highlights || []).length ? `<p><b>핵심 수치.</b></p><ul>${overview.highlights.map((x) => `<li><b class="n">${esc(x.value)}</b> ${esc(x.label)}${cite([x.ref])}</li>`).join("")}</ul>` : "") +
-      `<h3>2. 주요 동향</h3>` + themes.map((th, i) => `<h4>2.${i + 1} ${esc(th.label)}</h4><p>${esc(th.summary_ko || "")}</p><ul>${(th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)).map(item).join("")}</ul>`).join("") +
-      `<h3>3. 시사점</h3><h4>3.1 결정 주체와 기준</h4><ul>${(ins.decision || []).map(item).join("")}</ul><h4>3.2 시행착오와 조건</h4><ul>${(ins.trial || []).map(item).join("")}</ul>` + ((ins.extra || []).length ? `<h4>3.3 그 밖의 포인트</h4><ul>${ins.extra.map(item).join("")}</ul>` : "") +
-      `<h3>4. 후속 조치</h3><p>한국 연구기관에 적용할 제안 ${items.filter((x) => x[2].stage !== "ref").length}개를 실행 단계로 나눔. 초록을 바탕으로 한 제안이므로 기관의 사정에 맞춘 검토가 필요함.</p>` +
+    let h = `<div class="doc rep"><h2>SC26 고찰 보고서</h2><p class="muted">세션 ${sessions.length}개 · 발표 ${presentations.length}건 · 기준일 ${esc((changelog[0] || {}).date || "")} · 근거는 공개 프로그램 페이지의 초록임</p><p><button id="print-view">이 보고서 인쇄·PDF 저장</button></p>` +
+      sec("decision", "1", "개요", `<p>SC26의 워크숍과 논문 <b>세션 ${sessions.length}개</b>(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 <b>발표 ${presentations.length}건</b>의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 지식그래프로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 <b style="color:var(--c-decision)">결정 주체와 기준</b>, <b style="color:var(--c-trial)">시행착오와 조건</b>, <b style="color:var(--c-korea)">한국 연구기관으로의 적용</b>이라는 세 관점을 기본으로 삼았음.</p>` +
+      `<table class="ctable"><tr><th>주제</th><th>세션</th></tr>${tp.map((t) => `<tr><th>${esc(t)}<br><small class="muted">${sessions.filter((s) => topicOf(s) === t).length}개</small></th><td>${sessions.filter((s) => topicOf(s) === t).map((s) => `<b class="sn2">(${esc(sNum(s.id))})</b> ${esc(s.label)}${s.kind === "Paper" ? ` <span class="tagk x">논문</span>` : ""}`).join("<br>")}</td></tr>`).join("")}</table>` +
+      `<div class="callout"><b>근거의 한계</b> 발표 ${presentations.length}건 가운데 <b class="ev-n">● 수치를 제시한 것 ${ev.num}건</b>, <b class="ev-q">○ 수치 없이 방법이나 입장을 설명한 것 ${ev.qual}건</b>, <b class="ev-0">◌ 공개 설명문이 없어 제목만 확인한 것 ${ev.none}건</b>임. 모든 내용은 <b>초록에 근거</b>하며 논문 전문과 현장 발표는 반영하지 않았음. 근거가 약한 항목은 본문에 따로 표시함.</div>` +
+      ((overview.highlights || []).length ? `<h4>핵심 수치</h4><div class="cards">${overview.highlights.map((x) => `<div class="card"><b>${esc(x.value)}</b><span>${esc(x.label)}${cite([x.ref])}</span>${x.note ? `<em><i>쉽게 말하면</i> ${esc(x.note)}</em>` : ""}</div>`).join("")}</div>` : "")) +
+      sec("extra", "2", "주요 동향", themes.map((th, i) => `<div class="sub" style="--c:var(--c-${TC[i % 4]})"><h4><span class="rn">2.${i + 1}</span>${esc(th.label)}</h4><p class="lead3">${emph(th.summary_ko || "")}</p><ul>${(th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)).map(item).join("")}</ul></div>`).join("")) +
+      sec("trial", "3", "시사점", `<div class="sub" style="--c:var(--c-decision)"><h4><span class="rn">3.1</span>결정 주체와 기준 <small class="muted">누가, 무엇을 근거로 판단하는가</small></h4><ul>${(ins.decision || []).map(item).join("")}</ul></div><div class="sub" style="--c:var(--c-trial)"><h4><span class="rn">3.2</span>시행착오와 조건 <small class="muted">무엇이 안 됐고, 어떤 조건에서 됐는가</small></h4><ul>${(ins.trial || []).map(item).join("")}</ul></div>` + ((ins.extra || []).length ? `<div class="sub" style="--c:var(--c-extra)"><h4><span class="rn">3.3</span>그 밖의 포인트</h4><ul>${ins.extra.map(item).join("")}</ul></div>` : "")) +
+      sec("korea", "4", "후속 조치", `<p>한국 연구기관에 적용할 <b>제안 ${items.filter((x) => x[2].stage !== "ref").length}개</b>를 실행 단계로 나눔. <b>초록을 바탕으로 한 제안</b>이므로 기관의 사정에 맞춘 검토가 필요함.</p>` +
       STAGES.filter(([k]) => k !== "ref").map(([k, l, d], i) => { const v = items.filter((x) => (x[2].stage || "prep") === k); const areas = [...new Set(v.map((x) => x[2].area || "그 밖"))];
-        return `<h4>4.${i + 1} ${esc(l)} <small class="muted">${v.length}개 · ${esc(d)}</small></h4>` + areas.map((a) => `<p class="ah">${esc(a)}</p><ul>${v.filter((x) => (x[2].area || "그 밖") === a).map(([w, , o]) => `<li><b>${esc(o.head)}</b>${o.needs ? ` <span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""} <small class="muted">${esc(w)}</small>${cite(o.refs)}${weak(o.refs)}</li>`).join("")}</ul>`).join(""); }).join("") +
-      `<h4>4.4 참고 사례</h4><ul>${items.filter((x) => x[2].stage === "ref").map(([w, , o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small class="muted">${esc(w)}</small>${cite(o.refs)}</li>`).join("")}</ul>` +
-      `<h3>부록 A. 세션별 요약</h3><table class="ctable">${sessions.map((s) => `<tr><th>(${esc(sNum(s.id))})</th><td><b>${esc(s.label)}</b> <span class="muted">${esc(s.date || "")} · 발표 ${presentations.filter((p) => p.session === s.id).length}건</span><br>${esc(firstSentence(s.summary_ko))}</td></tr>`).join("")}</table>`;
-    h += `<h3>부록 B. 근거 발표</h3><p class="muted">● 수치 제시 · ○ 수치 없이 설명 · ◌ 제목만 확인</p><ol class="refs">${cited.map((r, i) => { const p = nodes.get(r); return `<li id="ref-${i + 1}">${EV_MARK[evOf(r)] || ""} ${esc(p.label)} <span class="muted">(${esc(sNum(p.session || ""))})</span>${p.url ? ` <a href="${esc(p.url)}" target="_blank" rel="noopener">프로그램 페이지</a>` : ""}</li>`; }).join("")}</ol></div>`;
+        return `<div class="sub" style="--c:var(--c-${SC[k]})"><h4><span class="rn">4.${i + 1}</span>${esc(l)} <span class="badge">${v.length}개</span> <small class="muted">${esc(d)}</small></h4>` + areas.map((a) => `<p class="ah">${esc(a)} <small>${v.filter((x) => (x[2].area || "그 밖") === a).length}</small></p><ul>${v.filter((x) => (x[2].area || "그 밖") === a).map(([w, , o]) => `<li class="ri"><b class="rh">${esc(o.head)}</b><span class="rb">${o.needs ? `<span class="needs"><b>선행 조건</b> ${esc(o.needs)}</span> ` : ""}<small class="muted">${esc(w)}</small>${cite(o.refs)}${weak(o.refs)}</span></li>`).join("")}</ul>`).join("") + `</div>`; }).join("") +
+      `<div class="sub" style="--c:var(--muted)"><h4><span class="rn">4.4</span>참고 사례 <small class="muted">실행 항목이 아니라 지켜보거나 비교할 사례</small></h4><ul>${items.filter((x) => x[2].stage === "ref").map(([w, , o]) => `<li class="ri"><b class="rh">${esc(o.head)}</b><span class="rb">${emph(o.text || "")} <small class="muted">${esc(w)}</small>${cite(o.refs)}</span></li>`).join("")}</ul></div>`) +
+      sec("muted2", "A", "부록: 세션별 요약", `<table class="ctable">${sessions.map((s, i) => (i && topicOf(sessions[i - 1]) === topicOf(s) ? "" : `<tr class="mh"><th colspan="2">${esc(topicOf(s))}</th></tr>`) + `<tr><th class="sn2">(${esc(sNum(s.id))})</th><td><b>${esc(s.label)}</b>${s.kind === "Paper" ? ` <span class="tagk x">논문</span>` : ""} <span class="muted">${esc(s.date || "")} · 발표 ${presentations.filter((p) => p.session === s.id).length}건</span><br>${emph(firstSentence(s.summary_ko))}</td></tr>`).join("")}</table>`);
+    h += sec("muted2", "B", "부록: 근거 발표", `<p class="muted"><b class="ev-n">● 수치 제시</b> · <b class="ev-q">○ 수치 없이 설명</b> · <b class="ev-0">◌ 제목만 확인</b></p><ol class="refs">${cited.map((r, i) => { const p = nodes.get(r); return `<li id="ref-${i + 1}"><b class="ev-${{ num: "n", qual: "q", none: "0" }[evOf(r)]}">${EV_MARK[evOf(r)] || ""}</b> ${esc(p.label)} <span class="muted">(${esc(sNum(p.session || ""))})</span>${p.url ? ` <a href="${esc(p.url)}" target="_blank" rel="noopener">프로그램 페이지</a>` : ""}</li>`; }).join("")}</ol>`) + `</div>`;
     return h;
   }
   function buildSlides() {
