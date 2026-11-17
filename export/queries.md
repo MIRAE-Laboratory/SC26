@@ -1,6 +1,6 @@
 # 예시 질의
 
-같은 질문을 파이썬(표준 라이브러리)과 SPARQL로 푸는 예임. SPARQL은 `ontology.jsonld`를 RDF 저장소에 올리거나 rdflib로 읽어 실행함.
+같은 질문을 파이썬(표준 라이브러리)과 SPARQL로 푸는 예임. SPARQL은 `graph.jsonld`를 RDF 저장소에 올리거나 rdflib로 읽어 실행함.
 파이썬 예시는 실제 데이터로 돌려 확인했음. **SPARQL 예시는 실행 환경이 없어 돌려 보지 못했으므로** 처음 쓸 때 결과를 파이썬 예시와 대조해 볼 것.
 
 ## 준비
@@ -14,7 +14,7 @@ N = list(csv.DictReader(open("export/numbers.csv", encoding="utf-8-sig")))
 
 ```python
 from rdflib import Graph
-g = Graph().parse("export/ontology.jsonld", format="json-ld")
+g = Graph().parse("export/graph.jsonld", format="json-ld")
 PRE = "PREFIX s: <https://hogeony.github.io/SC26/schema#> PREFIX id: <https://hogeony.github.io/SC26/id/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
 ```
 

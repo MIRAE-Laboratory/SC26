@@ -7,7 +7,7 @@
 만드는 파일
   data/bundle-core.json   첫 화면용 (스키마, 종합, 심층 요약, 세션, 용어, 갱신 이력)
   data/bundle-rest.json   이어서 읽는 부분 (기관, 인물, 개념, 발표)
-  export/ontology.jsonld  JSON-LD 그래프
+  export/graph.jsonld  JSON-LD 그래프
   export/nodes.csv, export/edges.csv, export/insights.csv
 
 YAML을 손으로 고친 뒤에는 이 스크립트를 다시 돌려야 뷰어에 반영됨.
@@ -58,7 +58,7 @@ for i, p in people.items():
     for o in p.get("orgs") or []: E(i, "affiliatedWith", o)
 for t, items in concepts.items():
     for i, c in (items or {}).items():
-        N(i, t, c["label"], label_ko=c.get("label_ko", ""))
+        N(i, t, c["label"], label_ko=c.get("label_ko", ""), group=c.get("group", ""))
         for r in c.get("related") or []: E(i, "relatedTo", r)
 for s in sessions:
     N(s["id"], "Session", s["label"], topic=s.get("topic", ""), date=str(s.get("date", "")), url=s.get("url", ""))
@@ -77,7 +77,7 @@ for s, r, t in edges:
     elif not rule or ids[s] not in rule["from"] or ids[t] not in rule["to"]: bad.append(f"{r}: {ids[s]}({s}) -> {ids[t]}({t}) 허용되지 않음")
 
 X = ROOT / "export"; X.mkdir(exist_ok=True)
-cols = ["id", "type", "label", "label_ko", "session", "topic", "date", "evidence", "url"]
+cols = ["id", "type", "label", "label_ko", "group", "session", "topic", "date", "evidence", "url"]
 with open(X / "nodes.csv", "w", newline="", encoding="utf-8-sig") as f:
     w = csv.writer(f); w.writerow(cols); [w.writerow([n.get(c, "") for c in cols]) for n in nodes]
 with open(X / "edges.csv", "w", newline="", encoding="utf-8-sig") as f:
@@ -120,9 +120,9 @@ with open(X / "presentations.jsonl", "w", encoding="utf-8") as f:
                    summary_ko=p.get("summary_ko", ""), claims=[c if isinstance(c, str) else c.get("text", "") for c in p.get("claims") or []], evidence=evidence(p))
         f.write(json.dumps(rec, ensure_ascii=False, default=str) + "\n")
 nC = sum(len(v or {}) for v in concepts.values())
-(X / "AGENT.md").write_text(f"""# SC26 워크숍 온톨로지: 에이전트용 설명서
+(X / "AGENT.md").write_text(f"""# SC26 워크숍 지식그래프: 에이전트용 설명서
 
-이 폴더는 SC26(2026년 11월, 시카고) 워크숍 {len(sessions)}개의 발표 {len(pres)}건을 정리한 온톨로지를 기계가 읽는 형식으로 담고 있음.
+이 폴더는 SC26(2026년 11월, 시카고) 워크숍 {len(sessions)}개의 발표 {len(pres)}건을 정리한 지식그래프를 기계가 읽는 형식으로 담고 있음.
 주소: {BASE}export/ (뷰어는 {BASE})
 
 ## 먼저 알아 둘 것
@@ -142,7 +142,7 @@ nC = sum(len(v or {}) for v in concepts.values())
 | `numbers.csv` | 수치가 든 주장 문장을 무엇이(`what`), 얼마나(`numbers`), 어떤 조건에서(`condition`)로 나눈 표 | 정량 근거를 찾는 질문 |
 | `debates.csv` | 같은 질문에 발표들이 다른 결과를 낸 쟁점. 입장별 요약과 근거 발표, 차이를 읽는 법 | "의견이 갈리는 곳은?" 같은 질문. 정리한 사람의 대비이며 발표자 간 반박이 아님 |
 | `nodes.csv`, `edges.csv` | 노드 {len(nodes)}개와 관계 {len(edges)}개 | 표 계산, 그래프 분석 |
-| `ontology.jsonld` | 같은 그래프의 JSON-LD | RDF 저장소, SPARQL |
+| `graph.jsonld` | 같은 그래프의 JSON-LD | RDF 저장소, SPARQL |
 | `queries.md` | 예시 질의 | 아래 질문 유형의 구현 예 |
 
 ## 구조
@@ -161,6 +161,7 @@ nC = sum(len(v or {}) for v in concepts.values())
 | `relatedTo` | 개념 ↔ 개념 | 관련 개념 |
 
 id 규칙: 세션은 `sess126`, 발표는 프로그램의 id(`ws_...`, `misc...`), 개념과 인물과 기관은 영문 소문자와 붙임표. JSON-LD에서는 `{BASE}id/<id>`.
+개념의 상위 범주: 문제·기법·대상 개념마다 `group`(nodes.csv)과 `skos:broader`(JSON-LD)로 상위 범주 하나가 붙어 있음. 범주는 종류별로 따로 있고 한 층뿐임. 이 자료는 형식 온톨로지가 아니라 가벼운 스키마와 분류 체계를 갖춘 지식그래프이며, 공리나 추론 규칙은 없음.
 insights.csv의 `stage`: `now` 바로 할 수 있음, `prep` 준비 필요, `long` 장기 과제, `ref` 참고 사례.
 세션의 `topic`: {", ".join(overview.get("topics") or [])}.
 
@@ -184,7 +185,7 @@ insights.csv의 `stage`: `now` 바로 할 수 있음, `prep` 준비 필요, `lon
 """, encoding="utf-8")
 (X / "queries.md").write_text("""# 예시 질의
 
-같은 질문을 파이썬(표준 라이브러리)과 SPARQL로 푸는 예임. SPARQL은 `ontology.jsonld`를 RDF 저장소에 올리거나 rdflib로 읽어 실행함.
+같은 질문을 파이썬(표준 라이브러리)과 SPARQL로 푸는 예임. SPARQL은 `graph.jsonld`를 RDF 저장소에 올리거나 rdflib로 읽어 실행함.
 파이썬 예시는 실제 데이터로 돌려 확인했음. **SPARQL 예시는 실행 환경이 없어 돌려 보지 못했으므로** 처음 쓸 때 결과를 파이썬 예시와 대조해 볼 것.
 
 ## 준비
@@ -198,7 +199,7 @@ N = list(csv.DictReader(open("export/numbers.csv", encoding="utf-8-sig")))
 
 ```python
 from rdflib import Graph
-g = Graph().parse("export/ontology.jsonld", format="json-ld")
+g = Graph().parse("export/graph.jsonld", format="json-ld")
 PRE = "PREFIX s: <""" + BASE + """schema#> PREFIX id: <""" + BASE + """id/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
 ```
 
@@ -292,16 +293,24 @@ with open(X / "debates.csv", "w", newline="", encoding="utf-8-sig") as f:
         for sd in d.get("sides") or []: w.writerow([d["question"], sd.get("label", ""), sd.get("text", ""), " ".join(sd.get("refs") or []), d.get("read", "")])
 rels = {}
 for s, r, t in edges: rels.setdefault(s, {}).setdefault(r, []).append({"@id": "sc26:" + t})
-ctx = {"@vocab": BASE + "schema#", "sc26": BASE + "id/", "label": "http://www.w3.org/2000/01/rdf-schema#label", "url": {"@id": "http://schema.org/url", "@type": "@id"}}
+ctx = {"@vocab": BASE + "schema#", "skos": "http://www.w3.org/2004/02/skos/core#", "broader": {"@id": "skos:broader", "@type": "@id"}, "sc26": BASE + "id/", "label": "http://www.w3.org/2000/01/rdf-schema#label", "url": {"@id": "http://schema.org/url", "@type": "@id"}}
 graph = []
 for n in nodes:
     g = {"@id": "sc26:" + n["id"], "@type": n["type"], "label": n["label"]}
     for k in ("label_ko", "topic", "date", "evidence", "url"):
         if n.get(k): g[k] = n[k]
+    if n.get("group"): g["broader"] = "sc26:category/" + n["type"] + "/" + n["group"].replace(" ", "_")
     g.update(rels.get(n["id"], {}))
     graph.append(g)
-(X / "ontology.jsonld").write_text(json.dumps({"@context": ctx, "@graph": graph}, ensure_ascii=False, indent=1), encoding="utf-8")
+for t, gs in (overview.get("concept_groups") or {}).items():
+    for gname in gs: graph.append({"@id": "sc26:category/" + t + "/" + gname.replace(" ", "_"), "@type": "skos:Concept", "label": gname, "categoryOf": t})
+(X / "graph.jsonld").write_text(json.dumps({"@context": ctx, "@graph": graph}, ensure_ascii=False, indent=1), encoding="utf-8")
 
 print(f"세션 {len(sessions)} · 발표 {len(pres)} · 노드 {len(nodes)} · 관계 {len(edges)} · 고찰 {len(rows)}")
 if bad:
-    print("스키마 경고 %d건" % len(bad)); print("\n".join(bad)); sys.exit(1)
+    print("스키마 경고 %d건" % len(bad)); print("\n".join(bad))
+
+# 검증 온톨로지도 함께 다시 만듦 (ontology/verification.yaml 이 있을 때)
+if (ROOT / "ontology" / "verification.yaml").exists():
+    import subprocess
+    sys.exit(subprocess.call([sys.executable, str(ROOT / "tools" / "build_ontology.py")]))

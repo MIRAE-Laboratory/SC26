@@ -1,4 +1,4 @@
-# SC26 온톨로지 스키마 — 클래스와 관계는 여기 정의된 것만 허용 (build.py가 검증)
+# SC26 지식그래프의 스키마(가벼운 온톨로지) — 클래스와 관계는 여기 정의된 것만 허용. 개념의 상위 범주는 data/concepts.yaml의 group에 적음
 classes:
   Session:      {color: "#6b7280", label_ko: 세션}
   Presentation: {color: "#2563eb", label_ko: 발표}

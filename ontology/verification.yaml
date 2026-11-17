@@ -1,0 +1,222 @@
+# 검증 온톨로지 (SC26 지식그래프의 "검증" 심층 요약에서 추려 구성)
+# 원천: data/ 의 큐레이션된 지식그래프(공개 초록 요약). 여기의 분류와 사례 판정은 초록 요약을 읽고 정리한 것임.
+# tools/build_ontology.py 가 이 파일에서 OWL(Turtle)과 도출 결과를 만듦.
+id: verification
+label: 과학 계산과 AI의 검증 온톨로지
+scope: 심층 요약 2 "기준이 '돌아간다'에서 '검증된다'로 옮겨 감"의 범위. 검증 수단이 어떤 대상의 어떤 실패를 잡거나 놓쳤는지를 다룸.
+
+questions:   # 역량 질문: 온톨로지가 답해야 하는 것
+  - {id: Q1, text: 컴파일과 실행 성공만 확인하면 어떤 실패 유형을 놓치는가, rule: missed_by_baseline}
+  - {id: Q2, text: 어떤 대상의 어떤 실패가 보고됐는데 그것을 잡은 수단은 보고되지 않았는가, rule: gaps}
+  - {id: Q3, text: 한 가지 수단에만 기대고 있는 실패 유형은 무엇인가, rule: single_line}
+  - {id: Q4, text: 어떤 수단이 놓친 실패를 다른 어떤 수단이 잡았는가, rule: complements}
+  - {id: Q5, text: 어떤 자산 하나를 갖추면 가장 많은 검증 수단을 쓸 수 있게 되는가, rule: asset_leverage}
+  - {id: Q6, text: 시험한 입력에서만 성립하는 보증에 머물러 있는 곳은 어디인가, rule: sampled_only}
+  - {id: Q7, text: 결정론적이지 않은 판정에만 기대는 곳은 어디인가, rule: nondeterministic_only}
+  - {id: Q8, text: 한 대상에서 통한 수단을 아직 쓰지 않은 다른 대상에 옮겨 볼 만한 곳은 어디인가, rule: transfer}
+
+targets:    # 검증 대상
+  code: {label: 코드}
+  gen-code: {label: AI가 생성·변환한 코드, parent: code}
+  sci-app: {label: 과학 응용 코드, parent: code}
+  num-lib: {label: 수치 라이브러리·커널, parent: code}
+  compiler: {label: 컴파일러·도구 사슬, parent: code}
+  parallel-comm: {label: 병렬 통신 프로그램, parent: code}
+  ai-model: {label: AI 모델}
+  surrogate: {label: 신경망 대리모델, parent: ai-model}
+  fm-rollout: {label: 파운데이션 모델의 연속 예측, parent: ai-model}
+  training-run: {label: 대규모 학습 작업, parent: ai-model}
+  agent: {label: 에이전트}
+  agent-action: {label: 에이전트의 도구 호출과 제어 행동, parent: agent}
+  agent-answer: {label: 에이전트의 답과 인용, parent: agent}
+  llm-proposal: {label: LLM의 과학적 제안(설계안), parent: agent}
+  workflow: {label: 워크플로(생성물과 유지보수 수리)}
+  data: {label: 재사용되는 데이터셋}
+  measurement: {label: 측정값}
+  power-measure: {label: 전력 계측, parent: measurement}
+  hw-counter: {label: 하드웨어 계수기, parent: measurement}
+  benchmark-score: {label: 벤치마크 종합 점수, parent: measurement}
+  platform: {label: 시스템 플랫폼}
+  node-perf: {label: 노드와 소프트웨어 스택의 성능, parent: platform}
+  hardware-fault: {label: 하드웨어 결함 거동, parent: platform}
+
+failures:   # 실패 유형
+  visible: {label: 스스로 드러나는 실패}
+  crash: {label: 크래시와 실행 실패, parent: visible}
+  silent: {label: 드러나지 않는 실패}
+  wrong-result: {label: 조용히 틀린 결과, parent: silent}
+  convention: {label: 실행은 되지만 전문가 관례를 어김, parent: silent}
+  semantic-drift: {label: 결과의 과학적 의미가 바뀜, parent: silent}
+  fake-work: {label: 하지 않은 일을 한 것처럼 보고함, parent: silent}
+  out-of-domain: {label: 적용 범위를 벗어난 사용, parent: silent}
+  physical-violation: {label: 물리·도메인 제약 위반, parent: silent}
+  error-accumulation: {label: 예측 오차의 누적, parent: silent}
+  numeric: {label: 수치 오차와 부동소수점 예외, parent: silent}
+  silent-training: {label: 정상으로 보이는 학습 실패, parent: silent}
+  sdc: {label: 조용한 데이터 손상, parent: silent}
+  concurrency: {label: 교착과 경합, parent: silent}
+  measure-error: {label: 측정이 틀린 값을 냄, parent: silent}
+  regression: {label: 성능 회귀와 노드 간 편차, parent: silent}
+  boundary: {label: 경계를 넘는 행동}
+  unsafe-action: {label: 허용되지 않은 행동의 실행, parent: boundary}
+  invalid-invocation: {label: 불완전하거나 잘못된 입력으로 실행, parent: boundary}
+  ungrounded: {label: 근거 없는 답과 위조 인용, parent: boundary}
+  exploitable: {label: 악용 가능한 취약점, parent: boundary}
+
+assets:     # 수단이 전제하는 자산
+  ref-output: {label: 기준 출력(원본 코드나 기준 실행의 결과)}
+  test-inputs: {label: 시험 입력과 시나리오 모음}
+  independent-impl: {label: 독립 구현이나 독립 시뮬레이터}
+  high-prec-ref: {label: 고정밀 기준값}
+  spec: {label: 사람이 검토한 명세와 수용 기준}
+  contract: {label: 함수 단위 계약}
+  abstract-model: {label: 검증용으로 뽑아낸 작은 모델}
+  physics-eq: {label: 물리 제약식}
+  domain-tools: {label: 도메인 계산 도구}
+  live-sensor: {label: 실측 신호}
+  domain-meta: {label: 데이터의 적용 범위 정보}
+  exec-log: {label: 실행 기록(출처 기록)}
+  policy: {label: 허용 행동 정책과 값의 출처 레이블}
+  fault-set: {label: 주입할 결함 모음}
+  benchmark-suite: {label: 고정된 벤치마크 모음}
+  hi-res-meter: {label: 고해상도 계측기}
+  expert-time: {label: 전문가의 검토 시간}
+
+# 검증 수단. det: 결정론적인가. assurance: sample(시험한 입력에서만) | scope(정한 범위의 모든 입력) | runtime(실행 중 매번) | judgment(판단에 의존)
+# applies: 쓸 수 있는 대상(상위 대상을 적으면 하위 대상 전체). kg: 지식그래프의 대응 개념 id
+methods:
+  exec-test: {label: 실행 기반 시험}
+  compile-run: {label: 컴파일과 실행 성공 확인, parent: exec-test, det: true, assurance: sample, requires: [test-inputs], applies: [code, workflow, ai-model], baseline: true}
+  output-compare: {label: 기준 출력과의 동등성 시험, parent: exec-test, det: true, assurance: sample, requires: [ref-output, test-inputs], applies: [code, workflow], kg: [differential-testing]}
+  bit-identical: {label: 비트 단위 재현 관문, parent: output-compare, det: true, assurance: sample, requires: [ref-output, test-inputs], applies: [code], kg: [bit-identical-gates]}
+  independent-sim: {label: 독립 시뮬레이터에서의 출력 분포 비교, parent: output-compare, det: true, assurance: sample, requires: [independent-impl, test-inputs], applies: [code], kg: [differential-testing]}
+  exhaustive-input: {label: 입력 전수 비교, parent: exec-test, det: true, assurance: scope, requires: [high-prec-ref], applies: [num-lib]}
+  metamorphic: {label: 불변식·관측 동등성·변형 관계 검사, parent: exec-test, det: true, assurance: sample, requires: [ref-output, test-inputs], applies: [code, workflow]}
+  fuzzing: {label: 퍼징, parent: exec-test, det: false, assurance: sample, requires: [test-inputs], applies: [code], kg: [fault-injection]}
+  fault-injection: {label: 결함 주입(검증 수단과 내성의 시험), parent: exec-test, det: true, assurance: sample, requires: [fault-set], applies: [code, ai-model, platform], kg: [fault-injection]}
+  continuous-bench: {label: 상시 벤치마크와 회귀 시험, parent: exec-test, det: true, assurance: runtime, requires: [benchmark-suite], applies: [platform], kg: [continuous-benchmarking]}
+  spec-based: {label: 명세 기반 검증}
+  spec-check: {label: 사람이 검토한 명세와의 대조, parent: spec-based, det: true, assurance: scope, requires: [spec, expert-time], applies: [workflow, code], kg: [spec-first-validation]}
+  schema-guard: {label: 스키마로 입력을 확인하고 실행을 막음, parent: spec-based, det: true, assurance: runtime, requires: [spec], applies: [agent], kg: [spec-first-validation]}
+  contract-check: {label: 계약 검사(LLM이 쓴 작은 계약을 결정론적 도구로 대조), parent: spec-based, det: true, assurance: scope, requires: [contract, expert-time], applies: [code], kg: [formal-verification, deterministic-llm-split]}
+  formal: {label: 정형 검증}
+  model-checking: {label: 모델 검사(입력을 기호로 둠), parent: formal, det: true, assurance: scope, requires: [abstract-model, spec], applies: [code], kg: [formal-verification]}
+  deductive: {label: 연역 검증, parent: formal, det: true, assurance: scope, requires: [contract], applies: [code], kg: [formal-verification]}
+  domain-constraint: {label: 도메인 제약에 의한 검증}
+  physics-constraint: {label: 물리 제약의 학습과 검사, parent: domain-constraint, det: true, assurance: sample, requires: [physics-eq], applies: [ai-model], kg: [physics-aware-training]}
+  domain-bounds: {label: 적용 범위 정보의 대조, parent: domain-constraint, det: true, assurance: runtime, requires: [domain-meta], applies: [data, ai-model], kg: [standardized-run-metadata]}
+  tool-in-loop: {label: 도메인 도구를 넣은 추론 루프, parent: domain-constraint, det: false, assurance: judgment, requires: [domain-tools], applies: [agent], kg: [tool-augmented-reasoning]}
+  runtime-monitor: {label: 실행 중 감시}
+  exec-guard: {label: 모델 밖의 결정론적 실행 검사와 중재, parent: runtime-monitor, det: true, assurance: runtime, requires: [policy], applies: [agent], kg: [execution-integrity-guard, runtime-sandbox]}
+  residual-monitor: {label: 실측과의 잔차 감시, parent: runtime-monitor, det: true, assurance: runtime, requires: [live-sensor], applies: [ai-model], kg: [residual-monitoring]}
+  fp-exception: {label: 부동소수점 예외 검출, parent: runtime-monitor, det: true, assurance: runtime, requires: [], applies: [code], kg: [fp-exception-detection]}
+  checksum: {label: 물리 기반 체크섬, parent: runtime-monitor, det: true, assurance: runtime, requires: [physics-eq], applies: [code]}
+  run-evidence: {label: 실행 증거 남기기(재생 가능한 기록), parent: runtime-monitor, det: true, assurance: runtime, requires: [exec-log], applies: [code, ai-model, agent, workflow], kg: [provenance-logging]}
+  record-audit: {label: 계보와 설명 기록의 확인, parent: runtime-monitor, det: true, assurance: judgment, requires: [exec-log], applies: [data, workflow], kg: [provenance-logging]}
+  judgment: {label: 판단에 의한 검증}
+  human-gate: {label: 사람의 승인 관문, parent: judgment, det: false, assurance: judgment, requires: [expert-time], applies: [code, workflow, agent], kg: [human-approval-gates]}
+  llm-judge: {label: LLM 판정(코드와 출력만 읽음), parent: judgment, det: false, assurance: judgment, requires: [], applies: [code, agent]}
+  llm-eval-hybrid: {label: 결정론적 검사와 LLM 평가의 결합, parent: judgment, det: false, assurance: judgment, requires: [test-inputs], applies: [code, workflow, agent], kg: [hybrid-evaluators]}
+  prompt-only: {label: 프롬프트 지시만으로 통제, parent: judgment, det: false, assurance: judgment, requires: [], applies: [agent]}
+  measure-check: {label: 측정의 검증}
+  multi-resolution: {label: 여러 해상도의 동시 계측, parent: measure-check, det: true, assurance: sample, requires: [hi-res-meter], applies: [power-measure], kg: [infrastructure-telemetry]}
+  cross-vendor: {label: 벤더 간 계수기 대조, parent: measure-check, det: true, assurance: sample, requires: [benchmark-suite], applies: [hw-counter], kg: [hardware-counter-analysis]}
+
+# 검증 사례: 발표가 보고한 "수단이 대상의 실패를 잡았는가". outcome: caught(잡음) | partial(일부만) | missed(놓침) | used(관문으로 채택했으나 탐지 결과는 보고 없음)
+cases:
+  - {pres: ws_shpc104, target: sci-app, method: fuzzing, failure: crash, outcome: caught, note: 과학 응용 넷에서 고유 크래시 약 1,000건}
+  - {pres: ws_shpc104, target: sci-app, method: fuzzing, failure: exploitable, outcome: caught, note: 임의 코드 실행 가능 취약점 110개 이상}
+  - {pres: ws_ai4s109, target: gen-code, method: compile-run, failure: convention, outcome: missed, note: 실행되는 코드가 라이브러리 관례를 어김}
+  - {pres: ws_ai4s109, target: gen-code, method: llm-eval-hybrid, failure: convention, outcome: caught, note: 14개 평가기가 다섯 범주로 평가}
+  - {pres: ws_worksp117, target: workflow, method: compile-run, failure: wrong-result, outcome: missed, note: 실패 기반 디버깅이 조용한 오류 3건을 놓침}
+  - {pres: ws_worksp117, target: workflow, method: spec-check, failure: wrong-result, outcome: caught, note: 명세 대조가 조용한 오류 3건을 잡음(작업 1,700개가 무작위 데이터로 학습)}
+  - {pres: ws_aaihpc114, target: gen-code, method: bit-identical, failure: wrong-result, outcome: used, note: 병합 기준으로 채택, 표준 시험 51개 통과}
+  - {pres: ws_aaihpc114, target: gen-code, method: human-gate, failure: wrong-result, outcome: used, note: 소수의 승인 관문}
+  - {pres: ws_aaihpc139, target: gen-code, method: bit-identical, failure: wrong-result, outcome: partial, note: 주입 결함 14개 중 3개가 두 관문을 통과}
+  - {pres: ws_aaihpc139, target: gen-code, method: fault-injection, failure: wrong-result, outcome: caught, note: 결함 주입으로 관문의 빈틈을 드러냄}
+  - {pres: ws_aaihpc131, target: gen-code, method: independent-sim, failure: wrong-result, outcome: used, note: 회로-방언 쌍 70개가 게이트 단위로 정확}
+  - {pres: ws_aaihpc107, target: gen-code, method: compile-run, failure: wrong-result, outcome: missed, note: 컴파일·실행 검사를 통과한 거짓 양성}
+  - {pres: ws_aaihpc107, target: gen-code, method: llm-eval-hybrid, failure: wrong-result, outcome: caught, note: 오프라인 검증이 거짓 양성을 잡음}
+  - {pres: ws_corr111, target: gen-code, method: metamorphic, failure: wrong-result, outcome: caught, note: 기준이 잡은 결함 13개를 모두 거부}
+  - {pres: ws_corr111, target: gen-code, method: llm-judge, failure: wrong-result, outcome: partial, note: 결함 13개 중 3개를 받아들임}
+  - {pres: ws_corr111, target: gen-code, method: run-evidence, failure: fake-work, outcome: caught, note: LLM이 측정 대상 작업을 지운 사례에 시드 기반 증거 사슬로 대응}
+  - {pres: ws_worksa106, target: workflow, method: compile-run, failure: semantic-drift, outcome: missed, note: 기능 검사를 통과한 수리가 과학적 검사에 실패}
+  - {pres: ws_worksa106, target: workflow, method: spec-check, failure: semantic-drift, outcome: caught, note: 보존해야 할 과학적 속성에 비춘 평가(시범 과제 12개)}
+  - {pres: ws_corr112, target: num-lib, method: contract-check, failure: wrong-result, outcome: caught, note: PETSc MatAYPX의 버그 발견}
+  - {pres: ws_corr113, target: sci-app, method: output-compare, failure: wrong-result, outcome: missed, note: 무작위 시드 시험이 결함을 놓침}
+  - {pres: ws_corr113, target: sci-app, method: model-checking, failure: wrong-result, outcome: caught, note: 기호 입력으로 놓친 결함을 드러냄}
+  - {pres: ws_corr113, target: sci-app, method: model-checking, failure: physical-violation, outcome: caught, note: 질량 보존을 증명}
+  - {pres: ws_corr113, target: sci-app, method: model-checking, failure: concurrency, outcome: caught, note: 범위 안에서 교착과 경합 없음을 확인}
+  - {pres: ws_corr107, target: parallel-comm, method: deductive, failure: concurrency, outcome: used, note: 프로세스 수가 매개변수인 프로그램의 검증(평가 수치 없음)}
+  - {pres: ws_corr108, target: num-lib, method: exhaustive-input, failure: numeric, outcome: caught, note: 일부 함수가 명시한 정확도 한계를 넘음}
+  - {pres: ws_corr109, target: sci-app, method: fp-exception, failure: numeric, outcome: partial, note: 검사를 줄이고도 검출률 90% 이상}
+  - {pres: ws_corr103, target: sci-app, method: fp-exception, failure: numeric, outcome: caught, note: 벤더 공통 검출, 속도 저하 1.30~1.70배}
+  - {pres: ws_ftxs103, target: data, method: record-audit, failure: out-of-domain, outcome: missed, note: 계보와 설명 기록이 주입 오용 18건을 받아들임}
+  - {pres: ws_ftxs103, target: data, method: domain-bounds, failure: out-of-domain, outcome: caught, note: 18건 중 17건을 잡음}
+  - {pres: misc105, target: training-run, method: compile-run, failure: silent-training, outcome: missed, note: 작업이 끝나고 손실 곡선이 정상이어도 모델이 틀림}
+  - {pres: misc105, target: training-run, method: run-evidence, failure: silent-training, outcome: used, note: 결정론적 기록·재생을 다음 기본 수단으로 제안}
+  - {pres: ws_ftxs104, target: sci-app, method: checksum, failure: sdc, outcome: caught, note: 물리 기반 체크섬이 노드에서 손상을 잡음}
+  - {pres: ws_ftxs106, target: training-run, method: fault-injection, failure: sdc, outcome: used, note: 정밀도를 낮춘 모델의 비트 반전 민감도 조사}
+  - {pres: ws_hpct102, target: hardware-fault, method: fault-injection, failure: sdc, outcome: partial, note: 결과 레이블이 같아도 플랫폼마다 동작이 다름}
+  - {pres: ws_hpct108, target: compiler, method: compile-run, failure: wrong-result, outcome: missed, note: 조용히 틀린 답 15개의 42%가 컴파일·실행 시험을 통과}
+  - {pres: ws_hpct108, target: compiler, method: output-compare, failure: wrong-result, outcome: caught, note: 운영 중인 유동 해석 코드를 시험 도구로 써서 결함 45개 발견}
+  - {pres: ws_hpct110, target: node-perf, method: continuous-bench, failure: regression, outcome: caught, note: 사양이 같은 노드 사이 편차 5%}
+  - {pres: ws_hpct105, target: node-perf, method: continuous-bench, failure: regression, outcome: caught, note: 회귀를 GPU 런타임 갱신에 귀속}
+  - {pres: ws_xloop106, target: surrogate, method: residual-monitor, failure: out-of-domain, outcome: caught, note: 영역 밖 운용을 와류 방출 6주기 안에 탐지}
+  - {pres: ws_ai4s139, target: surrogate, method: physics-constraint, failure: physical-violation, outcome: partial, note: 제약 위반이 약 19배 줄어듦}
+  - {pres: ws_ai4s140, target: fm-rollout, method: residual-monitor, failure: error-accumulation, outcome: caught, note: 센서와의 차이가 임계를 넘으면 보정, 속도 오차 48.05%에서 6.29%}
+  - {pres: ws_aaihpc117, target: llm-proposal, method: tool-in-loop, failure: physical-violation, outcome: partial, note: 합성 결과 예측 정확도 12%에서 40%}
+  - {pres: ws_worksp110, target: agent-action, method: schema-guard, failure: invalid-invocation, outcome: caught, note: 입력이 불완전하면 실행을 막음, 시나리오 300건 통과}
+  - {pres: ws_aaihpc132, target: agent-action, method: exec-guard, failure: unsafe-action, outcome: partial, note: 고정 공격 32개 중 19개 차단, 적응형 공격은 평균 28~31개 통과}
+  - {pres: ws_aaihpc132, target: agent-answer, method: exec-guard, failure: ungrounded, outcome: caught, note: 송신 차단을 더해 위조 인용 5개를 모두 막음}
+  - {pres: ws_tpw139, target: agent-action, method: prompt-only, failure: unsafe-action, outcome: missed, note: 프롬프트만 쓴 기준은 위반 15건}
+  - {pres: ws_tpw139, target: agent-action, method: exec-guard, failure: unsafe-action, outcome: caught, note: 위반 200건 중 0건}
+  - {pres: ws_tpw139, target: agent-action, method: exec-guard, failure: fake-work, outcome: caught, note: 실제로 돌지 않은 도구 호출의 결과를 차단}
+  - {pres: ws_tpw111, target: agent-answer, method: llm-eval-hybrid, failure: ungrounded, outcome: partial, note: 검증 에이전트가 인용을 추적해 채점 오차를 줄임}
+  - {pres: ws_eesp144, target: power-measure, method: multi-resolution, failure: measure-error, outcome: caught, note: 성긴 계측이 오류 표시 없이 틀린 값을 냄을 세 해상도 동시 기록으로 확인}
+  - {pres: ws_prot109, target: hw-counter, method: cross-vendor, failure: measure-error, outcome: caught, note: 이름이 같은 계수기가 최대 3.19배 다르게 보고}
+
+# 실패가 보고됐으나 그것을 잡은 수단은 보고되지 않은 관찰
+observed:
+  - {pres: ws_tpw126, target: training-run, failure: silent-training, note: 손실 값을 조용히 틀리게 보고하는 버그}
+  - {pres: ws_aaihpc146, target: agent-answer, failure: ungrounded, note: 사실을 가장 많이 찾는 구성이 답할 수 없는 질문을 가장 적게 거절}
+  - {pres: ws_pmbss101, target: benchmark-score, failure: measure-error, note: 종합 점수가 단계별 관계를 가림}
+  - {pres: ws_corr_sh101, target: parallel-comm, failure: concurrency, note: 통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건}
+  - {pres: ws_pmbsf137, target: node-perf, failure: regression, note: 사양이 같은 장치의 에너지가 36.9% 차이}
+  - {pres: ws_tpw120, target: llm-proposal, failure: ungrounded, note: 새 발견을 끝까지 스스로 검증한 시스템이 없음}
+
+# 구성 과정의 기록 (지식그래프 → 온톨로지)
+process:
+  promoted: 지식그래프의 기법 개념 가운데 검증 수단으로 올린 것은 kg 항목에 적은 16개임. 문제 개념은 그대로 올리지 않고 "대상"과 "실패 유형"으로 나눠 다시 정의함.
+  split:
+    - 지식그래프의 "결함 주입·퍼징"은 한 개념이었으나, 취약점을 찾는 퍼징과 검증 수단 자체를 시험하는 결함 주입은 전제 자산과 잡는 실패가 달라 둘로 나눔.
+    - 지식그래프의 "출력·동작 동등성 시험"은 기준 출력 비교, 비트 단위 재현, 독립 시뮬레이터 비교, 변형 관계 검사로 나눔. 보증 수준과 필요한 자산이 서로 다름.
+    - 지식그래프의 "실행 기록·출처 로깅"은 실행 증거 남기기(재생 가능)와 계보 기록의 확인(읽기만 함)으로 나눔. 뒤쪽은 적용 범위 이탈을 놓친 사례가 있음.
+    - 지식그래프의 "정형 검증과 모델 검사"는 모델 검사, 연역 검증, 계약 검사로 나눔.
+  added:
+    - 실패 유형 클래스 전체. 지식그래프에는 실패 유형이 없어 문제 개념과 발표 요약 문장 속에 흩어져 있었음.
+    - 전제 자산 클래스 전체. 지식그래프에서는 적용 제안의 "선행 조건" 문장으로만 존재했음.
+    - 검증 사례(수단, 대상, 실패, 결과)라는 4항 관계. 지식그래프의 "발표가 기법을 제안함"으로는 잡았는지 놓쳤는지를 표현할 수 없었음.
+    - 수단의 속성인 결정론 여부와 보증 수준.
+    - 기준선 수단 "컴파일과 실행 성공 확인"과 "프롬프트 지시만", "LLM 판정". 발표가 제안한 것이 아니라 비교 대상으로 등장해 지식그래프에는 개념이 없었음.
+  dropped: 검증·시험 범주의 기법 가운데 "실패 원인 분류와 자기 개선", "위험 지향 계약", "보증 문제로서의 프라이버시", "확률적 오차 한계 분석"은 실패를 잡는 수단이 아니라 분류, 계약, 분석 틀이어서 올리지 않음. 검증과 무관한 발표(범위 안 97건 가운데 사례로 쓰지 않은 것)는 제외함.
+  blind_spots:
+    - 지식그래프의 "문제 / 기법 / 대상" 구분에는 "결과(잡음, 놓침)"를 담을 자리가 없었음. 온톨로지에서 가장 쓸모 있는 정보가 여기서 나옴.
+    - 지식그래프의 "대상 시스템"은 무엇에 적용했는지(예를 들어 리더십급 시설)였고, 무엇을 검증하는지(예를 들어 변환된 코드)가 아니었음. 검증 대상을 따로 정의해야 했음.
+    - 처음부터 온톨로지를 설계했다면 검증 수단의 위계는 교과서 분류(정적, 동적, 정형)를 따랐을 것임. 발표를 먼저 모은 덕에 "모델 밖 실행 검사", "적용 범위 정보", "실행 증거"처럼 교과서에 없는 수단이 주요 항목으로 들어감.
+
+# 도출 결과의 평가 (결과를 본 뒤 사람이 적음)
+findings:
+  new:
+    - 대규모 학습 작업의 "정상으로 보이는 실패"는 잡았다고 보고한 수단이 하나도 없음. 실행 확인은 놓쳤고, 기록과 재생은 제안 단계이며, 다른 발표는 같은 실패를 겪었다고만 보고함. 이 범위에서 가장 뚜렷한 빈칸임.
+    - 말단 실패 유형 18개 가운데 12개는 잡았다고 보고된 수단이 한 가지뿐임. 고찰에서는 "단일 방어선은 버티지 못함"을 사례 셋으로 적었으나, 구조로 보면 단일 방어선이 예외가 아니라 일반적인 상태임.
+    - 전제 자산별로 보면 "사람이 검토한 명세"가 가장 많은 실패 유형(5종)을 잡는 수단들의 전제임. "기준 출력"은 수단 셋이 요구하지만 잡은 실패는 "조용히 틀린 결과" 한 종류뿐임. 적용 제안에서는 기준 출력의 정비를 앞세웠는데, 넓이로는 명세와 수용 기준을 적어 두는 일이 더 큼.
+    - AI가 생성·변환한 코드의 조용한 오류에는 수단 일곱 가지가 쓰였으나 모두 시험한 입력에서만 성립하거나 판단에 의존하는 보증임. 정한 범위 전체를 보증하는 수단(계약 검사, 모델 검사)은 사람이 쓴 수치 라이브러리와 응용 코드에서만 보고됨.
+    - 옮겨 볼 만한 조합 둘이 나옴. 응용 코드에서 교착과 경합을 잡은 모델 검사를 병렬 통신 프로그램에, 에이전트의 위조 인용을 막은 모델 밖 실행 검사를 LLM의 과학적 제안에 적용하는 것임.
+  known:
+    - 컴파일과 실행 성공 확인이 네 가지 실패 유형을 놓친다는 것(Q1)은 심층 요약의 "실행 성공은 다섯 가지 방식으로 틀릴 수 있음"과 같은 내용임.
+    - LLM 판정, 프롬프트 지시, 계보 기록이 놓친 것을 다른 수단이 잡았다는 것(Q4의 대부분)도 고찰과 쟁점 대조표에 이미 있음.
+  limits:
+    - 사례 51건, 근거 발표 39건의 작은 온톨로지임. "보고 없음"은 공개 초록 요약에 없다는 뜻이며 그런 연구가 없다는 뜻이 아님.
+    - 대상, 실패 유형, 결과의 판정은 한 사람이 초록 요약을 읽고 내린 것임. 다른 사람이 하면 달라질 수 있음.
+    - 도출 규칙은 파이썬으로 구현했고 OWL 추론기는 쓰지 않았음. Turtle 파일은 문법 검사기로 확인하지 못했음.

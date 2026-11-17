@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SC26 고찰과 온톨로지</title>
+<title>SC26 고찰과 지식그래프</title>
 <style>
   :root { --bg:#fafaf9; --panel:#fff; --line:#e7e5e4; --text:#1c1917; --muted:#78716c; --link:#2563eb; --chip:#f5f5f4; --scale:1; }
   :root[data-theme="dark"] { --bg:#1c1917; --panel:#292524; --line:#44403c; --text:#f5f5f4; --muted:#a8a29e; --link:#93c5fd; --chip:#3a3532; }
@@ -121,6 +121,11 @@
   .area li { margin: 9px 0; line-height: 1.5; } .area li small { color: var(--muted); }
   .area ul { padding-left: 1.2em; margin: 4px 0; }
   .chk li { margin: 3px 0; }
+  .onto .ans { font-weight: 400; color: var(--text); } .onto details.pg li { margin: 8px 0; }
+  table.mx.onto td { font-size: 1.1em; } table.mx.onto tbody th { min-width: 15em; }
+  table.mt tr.mh th { background: color-mix(in srgb, var(--link) 8%, var(--panel)); } table.mt td { font-size: .95em; }
+  .two.four { grid-template-columns: repeat(auto-fit, minmax(14em, 1fr)); } .two.four ul { padding-left: 1.1em; margin: 4px 0; } .two.four li { margin: 2px 0; font-size: .92em; }
+  table.mx tr.gt > * { border-top: 2px solid var(--muted); } #heat-level { margin-left: 6px; }
   details.guide { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; margin: 10px 0 4px; background: color-mix(in srgb, var(--link) 5%, transparent); }
   details.guide summary { cursor: pointer; font-weight: 700; } details.guide ul { margin: 6px 0 4px; padding-left: 1.1em; } details.guide li { margin: 5px 0; line-height: 1.5; } details.guide li b { display: block; font-weight: 600; }
   .deb { border: 1px solid var(--line); border-radius: 8px; padding: 2px 14px 10px; margin: 14px 0; break-inside: avoid; }
@@ -282,7 +287,7 @@
 <aside>
   <header>
     <div>
-      <h1>SC26 고찰과 온톨로지</h1>
+      <h1>SC26 고찰과 지식그래프</h1>
       <p id="stats">불러오는 중…</p>
     </div>
     <div class="tools">
@@ -304,7 +309,7 @@
 </aside>
 <div id="gloss" hidden></div>
 <div id="split" role="separator" aria-orientation="vertical" title="끌어서 너비 조절 (두 번 누르면 초기화)"></div>
-<button id="toggle-graph">분석·온톨로지 펼치기 ▲</button>
+<button id="toggle-graph">분석·지식그래프 펼치기 ▲</button>
 <main>
   <div id="tabs">
     <div class="tg" role="tablist"><button data-g="an" class="on">분석</button><button data-g="doc">자료</button><button data-g="chk">점검·내보내기</button></div>
@@ -315,13 +320,14 @@
       <button data-v="cmap">개념 관계</button>
       <button data-v="org">기관</button>
       <button data-v="people">인물·협력 후보</button>
-      <button data-v="graph">온톨로지 그래프</button>
+      <button data-v="graph">관계 그래프</button>
     </div>
     <div class="tr" data-g="doc">
       <button data-v="report">고찰 보고서</button>
       <button data-v="slides">슬라이드</button>
       <button data-v="trend">동향 요약</button>
       <button data-v="debate">쟁점 대조</button>
+      <button data-v="onto">검증 온톨로지</button>
       <button data-v="orgp">기관 프로필</button>
       <button data-v="plan">실행 계획표</button>
       <button data-v="nums">수치 모음</button>
@@ -374,7 +380,7 @@
   let debates = [], numbersX = {};
   let schema = {}, manifest, orgs = {}, people = {}, concepts = {}, sessions = [], presentations = [], overview = {}, themes = [], glossary = {}, changelog = [];
   const nodes = new Map(), edges = [], errors = [];
-  let valid = [], full = false, cy = null, A = null;            // full: 발표까지 읽음, A: 온톨로지 분석 결과
+  let valid = [], full = false, cy = null, A = null;            // full: 발표까지 읽음, A: 지식그래프 분석 결과
   const addNode = (id, type, attrs) => {
     if (nodes.has(id)) errors.push("중복 id: " + id);
     nodes.set(id, Object.assign({ id, type }, attrs));
@@ -517,7 +523,7 @@
     if (!s) {                                                    // 첫 화면: 길잡이, 핵심 수치, 심층 요약 카드
       const go = (v, l) => `<span class="link" data-go="${v}">${l}</span>`;
       h += `<details class="guide" ${store.get("sc26-guide") === "0" ? "" : "open"}><summary>무엇부터 볼까</summary><ul>` +
-        `<li><b>대회의 흐름을 알고 싶다</b> ${themes[0] ? `<span class="link" data-sess="theme:${esc(themes[0].id)}">심층 요약</span> · ` : ""}${go("trend", "동향 요약")} · ${go("debate", "쟁점 대조")}</li>` +
+        `<li><b>대회의 흐름을 알고 싶다</b> ${themes[0] ? `<span class="link" data-sess="theme:${esc(themes[0].id)}">심층 요약</span> · ` : ""}${go("trend", "동향 요약")} · ${go("debate", "쟁점 대조")} · ${go("onto", "검증 온톨로지")}</li>` +
         `<li><b>우리 기관에 적용할 것을 찾는다</b> ${go("plan", "실행 계획표")}</li>` +
         `<li><b>사람과 기관을 찾는다</b> ${go("org", "기관")} · ${go("orgp", "기관 프로필")} · ${go("people", "인물·협력 후보")}</li>` +
         `<li><b>인용할 수치가 필요하다</b> ${go("nums", "수치 모음")} · ${go("read", "열람 목록")}</li>` +
@@ -593,7 +599,9 @@
     if (n.type !== "System" && co.System.size) s += ` 대상은 주로 ${names("System")}임.`;
     if (m.size === 1) s += " 한 세션에서만 나온 고유 주제임.";
     const row = (title, t) => rank(t).length ? `<tr><th>${title}</th><td>${rank(t).map(([c, k]) => `${nodeLink(c)} <span class="muted">${k}</span>`).join(" · ")}</td></tr>` : "";
+    const sib = [...nodes.values()].filter((x) => x.type === n.type && x.group === n.group && x.id !== id && A.cs.has(x.id)).sort((a, b) => [...A.cs.get(b.id).values()].flat().length - [...A.cs.get(a.id).values()].flat().length);
     return `<h3>한눈에 보기</h3><p>${esc(s)}</p><table class="ctable">` +
+      `<tr><th>상위 범주</th><td><b>${esc(n.group)}</b>${sib.length ? ` <span class="muted">· 같은 범주:</span> ${sib.slice(0, 8).map((x) => nodeLink(x.id)).join(" · ")}${sib.length > 8 ? " 외" : ""}` : ""}</td></tr>` +
       `<tr><th>세션별 발표</th><td>${top.map(([sid, v]) => `<span class="link" data-sess="${esc(sid)}">(${esc(sNum(sid))})</span> <span class="muted">${v.length}</span>`).join(" · ")}</td></tr>` +
       row("함께 나온 문제", "Problem") + row("함께 나온 기법", "Method") + row("함께 나온 대상", "System") + `</table>`;
   }
@@ -683,7 +691,7 @@
     if (A && ["heat"].includes(curView)) renderView();
   });
 
-  // ---------- 3. 오른쪽: 온톨로지에서 계산한 보기들 ----------
+  // ---------- 3. 오른쪽: 지식그래프에서 계산한 보기들 ----------
   let curView = "heat", heatType = "all";
   const tint = (v, max) => v ? `style="background:color-mix(in srgb, var(--link) ${Math.round(12 + 70 * Math.min(1, v / max))}%, transparent)"` : `class="z"`;
   const cells = new Map();                                      // 표의 칸 → 발표 목록
@@ -725,7 +733,15 @@
   const isNarrow = () => matchMedia("(max-width: 760px)").matches;
   const topicOf = (s) => s.topic || "그 밖";
   const topics = () => { const order = overview.topics || []; return [...new Set([...order, ...sessions.map(topicOf)])].filter((t) => sessions.some((s) => topicOf(s) === t)); };
-  let heatSess = "";
+  let heatSess = "", heatLevel = "concept";
+  const groupOrder = (t) => (overview.concept_groups || {})[t] || [];
+  // 범주 → 세션 → 발표(중복 없이). 범주는 종류(문제, 기법, 대상)마다 따로 있음.
+  function groupRows(types) {
+    const G = new Map();
+    A.cs.forEach((m, c) => { const n = nodes.get(c); if (!types.includes(n.type)) return; const k = n.type + "|" + n.group, g = G.get(k) || G.set(k, { type: n.type, name: n.group, cs: [], m: new Map() }).get(k);
+      g.cs.push(c); m.forEach((ps, sid) => { const set = g.m.get(sid) || g.m.set(sid, new Set()).get(sid); ps.forEach((p) => set.add(p)); }); });
+    return [...G.values()].sort((a, b) => types.indexOf(a.type) - types.indexOf(b.type) || groupOrder(a.type).indexOf(a.name) - groupOrder(b.type).indexOf(b.name));
+  }
   const tcol = (c) => esc((classes()[nodes.get(c).type] || {}).color || "var(--muted)");
   const tyTag = (c) => (heatType === "all" ? `<span class="tyt" style="--tc:${tcol(c)}">${TYPE_KO[nodes.get(c).type]}</span> ` : "");   // 종류 표시는 전체 보기에서만, 색으로 구분
   const tyLegend = () => (heatType === "all" ? ` <span class="tyl">${["Problem", "Method", "System"].map((t) => `<span class="tyt" style="--tc:${esc((classes()[t] || {}).color || "var(--muted)")}">${TYPE_KO[t]}</span>`).join(" ")}</span>` : "");
@@ -734,7 +750,18 @@
       .map(([c, m]) => [c, m, [...m.values()].reduce((s, v) => s + v.length, 0)])
       .sort((a, b) => b[1].size - a[1].size || b[2] - a[2]).slice(0, 34);
     const cur = $("session").value;
-    const seg = `<div class="seg" id="heat-type">${[["all", "전체"], ["Problem", "문제"], ["Method", "기법"], ["System", "대상 시스템"]].map(([v, l]) => `<button data-t="${v}" class="${v === heatType ? "on" : ""}">${l}</button>`).join("")}</div>` + tyLegend();
+    const seg = `<div class="seg" id="heat-type">${[["all", "전체"], ["Problem", "문제"], ["Method", "기법"], ["System", "대상 시스템"]].map(([v, l]) => `<button data-t="${v}" class="${v === heatType ? "on" : ""}">${l}</button>`).join("")}</div> <div class="seg" id="heat-level">${[["concept", "개념"], ["group", "범주"]].map(([v, l]) => `<button data-l="${v}" class="${v === heatLevel ? "on" : ""}">${l}</button>`).join("")}</div>` + tyLegend();
+    if (heatLevel === "group" && !isNarrow()) {
+      const gs = groupRows(heatType === "all" ? ["Problem", "Method", "System"] : [heatType]), tp = topics(), all = (g) => new Set([...g.m.values()].flatMap((x) => [...x]));
+      const max = Math.max(...gs.flatMap((g) => [...g.m.values()].map((v) => v.size)), 1);
+      return `<h2>세션–개념 지도</h2><p class="note">개념 ${[...A.cs.keys()].length}개를 상위 범주 ${gs.length}개로 묶어 본 것임. 칸의 숫자는 그 세션에서 해당 범주의 개념을 하나라도 다룬 발표 수이며, 칸을 누르면 발표 목록이, 범주 이름을 누르면 범주에 속한 개념이 요약 칸에 나옴. 범주는 초록을 읽고 붙인 분류임(<code>data/concepts.yaml</code>의 <code>group</code>).</p>` + seg +
+        `<div class="tw"><table class="mx"><thead><tr class="tg"><th></th>${tp.map((t) => `<th colspan="${sessions.filter((s) => topicOf(s) === t).length}">${esc(t)}</th>`).join("")}<th colspan="2"></th></tr>` +
+        `<tr><th></th>${sessions.map((s, i) => `<th data-sess="${esc(s.id)}" title="${esc(s.label)}" class="${i && topicOf(sessions[i - 1]) !== topicOf(s) ? "gl" : ""}" ${s.id === cur ? 'style="color:var(--link)"' : ""}>${esc(sNum(s.id))}</th>`).join("")}<th class="tot gl">개념</th><th class="tot">발표</th></tr></thead><tbody>` +
+        gs.map((g, gi) => { const tc = esc((classes()[g.type] || {}).color || "var(--muted)"), first = !gi || gs[gi - 1].type !== g.type;
+          return `<tr class="${first && gi ? "gt" : ""}"><th class="ty" style="--tc:${tc}" data-grp="${esc(g.type + "|" + g.name)}">${heatType === "all" ? `<span class="tyt" style="--tc:${tc}">${TYPE_KO[g.type]}</span> ` : ""}${esc(g.name)}</th>` +
+          sessions.map((s, i) => { const v = [...(g.m.get(s.id) || [])], gl = i && topicOf(sessions[i - 1]) !== topicOf(s); return `<td ${v.length ? `class="${gl ? "gl" : ""}" style="background:color-mix(in srgb, var(--link) ${Math.round(12 + 70 * Math.min(1, v.length / max))}%, transparent)"` : `class="z${gl ? " gl" : ""}"`} ${v.length ? cellAttr(g.name, sTitle(s), v) : ""}>${v.length || ""}</td>`; }).join("") +
+          `<td class="tot z gl">${g.cs.length}</td><td class="tot z">${all(g).size}</td></tr>`; }).join("") + `</tbody></table></div>`;
+    }
     if (isNarrow()) {                                           // 좁은 화면: 세션 하나를 골라 그 세션의 개념을 세로 목록으로
       const sid = heatSess || (/^sess/.test(cur) ? cur : sessions[0].id), s = sessions.find((x) => x.id === sid);
       const list = [...A.cs].filter(([c, m]) => m.has(sid) && (heatType === "all" || nodes.get(c).type === heatType)).map(([c, m]) => [c, m.get(sid), m.size]).sort((a, b) => b[1].length - a[1].length || b[2] - a[2]);
@@ -822,7 +849,7 @@
       [...groups].filter(([, v]) => v.length).map(([k, v]) => `<div class="area"><h3>${esc(applyBy === "stage" ? sl[k][0] : k)} <small class="muted">${v.length}개${applyBy === "stage" ? " · " + esc(sl[k][1]) : ""}</small><button data-copy="${esc(applyBy === "stage" ? sl[k][0] : k)}">복사</button></h3><ul>` +
         v.map(([w, sid, o]) => `<li><b>${esc(o.head)}</b> ${emph(o.text || "")} <small><span class="link" data-sess="${esc(sid)}">${esc(w)}</span> · ${esc(applyBy === "stage" ? o.area || "" : (sl[o.stage] || [""])[0])}</small>${o.needs ? `<br><span class="needs">선행 조건: ${esc(o.needs)}</span>` : ""}<br>${(o.refs || []).map(refChip).join("")}</li>`).join("") + `</ul></div>`).join("");
   }
-  // ---------- 자료: 온톨로지에서 만들어 내는 보고서, 슬라이드, 동향 요약, 열람 목록 ----------
+  // ---------- 자료: 지식그래프에서 만들어 내는 보고서, 슬라이드, 동향 요약, 열람 목록 ----------
   const evLevel = (refs) => { const c = { num: 0, qual: 0, none: 0 }; (refs || []).forEach((r) => { const e = evOf(r); if (e) c[e]++; }); return c.num ? "num" : c.qual ? "qual" : (refs || []).length ? "none" : ""; };
   const firstSentence = (t) => { const s = String(t || ""); const i = s.indexOf(". "); return i > 0 ? s.slice(0, i + 1) : s; };
   const evCounts = () => { const ev = { num: 0, qual: 0, none: 0 }; presentations.forEach((p) => ev[evOf(p.id)]++); return ev; };
@@ -834,7 +861,7 @@
     sessions.forEach((s) => (days[s.date] = (days[s.date] || 0) + 1));
     const ins = overview.insights || {}, items = applyItems();
     let h = `<div class="doc"><h2>SC26 워크숍 고찰 보고서</h2><p class="muted">세션 ${sessions.length}개 · 발표 ${presentations.length}건 · 기준일 ${esc((changelog[0] || {}).date || "")} · 근거는 공개 프로그램 페이지의 초록임</p><p><button id="print-view">이 보고서 인쇄·PDF 저장</button></p>` +
-      `<h3>1. 개요</h3><p>SC26의 워크숍 ${sessions.length}개(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 발표 ${presentations.length}건의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 온톨로지로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용이라는 세 관점을 기본으로 삼았음.</p>` +
+      `<h3>1. 개요</h3><p>SC26의 워크숍 ${sessions.length}개(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 발표 ${presentations.length}건의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 지식그래프로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용이라는 세 관점을 기본으로 삼았음.</p>` +
       `<table class="ctable"><tr><th>주제</th><th>세션</th></tr>${tp.map((t) => `<tr><th>${esc(t)}</th><td>${sessions.filter((s) => topicOf(s) === t).map((s) => esc(sTitle(s))).join("<br>")}</td></tr>`).join("")}</table>` +
       `<p><b>근거의 한계.</b> 발표 ${presentations.length}건 가운데 수치를 제시한 것이 ${ev.num}건, 수치 없이 방법이나 입장을 설명한 것이 ${ev.qual}건, 공개 설명문이 없어 제목만 확인한 것이 ${ev.none}건임. 모든 내용은 초록에 근거하며 논문 전문과 현장 발표는 반영하지 않았음. 근거가 약한 항목은 본문에 따로 표시함.</p>` +
       ((overview.highlights || []).length ? `<p><b>핵심 수치.</b></p><ul>${overview.highlights.map((x) => `<li><b class="n">${esc(x.value)}</b> ${esc(x.label)}${cite([x.ref])}</li>`).join("")}</ul>` : "") +
@@ -858,7 +885,7 @@
     const heads = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((o) => { const v = numOf(o.text); return `<li>${esc(o.head)}${v ? ` <b class="n">${esc(v)}</b>` : ""}</li>`; }).join("")}</ul>`;
     const bullets = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
     S.push(["", `<div class="s-title"><h2>SC26 워크숍 고찰</h2><p>세션 ${sessions.length}개 · 발표 ${presentations.length}건의 초록에서 도출</p><p class="muted">기준일 ${esc((changelog[0] || {}).date || "")}</p></div>`]);
-    S.push(["범위와 방법", `<ul><li>워크숍 ${sessions.length}개의 발표 ${presentations.length}건을 읽고, 다루는 문제·제안 기법·대상 시스템을 온톨로지로 정리함.</li><li>주제: ${esc(topics().join(", "))}</li><li>고찰 관점: 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용</li><li>근거: 수치를 제시한 발표 ${ev.num}건, 수치 없이 설명한 발표 ${ev.qual}건, 제목만 확인한 발표 ${ev.none}건. 모두 공개 초록 기준임.</li></ul>`]);
+    S.push(["범위와 방법", `<ul><li>워크숍 ${sessions.length}개의 발표 ${presentations.length}건을 읽고, 다루는 문제·제안 기법·대상 시스템을 지식그래프로 정리함.</li><li>주제: ${esc(topics().join(", "))}</li><li>고찰 관점: 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용</li><li>근거: 수치를 제시한 발표 ${ev.num}건, 수치 없이 설명한 발표 ${ev.qual}건, 제목만 확인한 발표 ${ev.none}건. 모두 공개 초록 기준임.</li></ul>`]);
     if ((overview.highlights || []).length) S.push(["핵심 수치", `<div class="cards">${overview.highlights.map((x) => `<div class="card"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("")}</div>`]);
     themes.forEach((th, i) => {
       const secs = (th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)), kr = (th.sections || []).find((s) => /^한국 연구기관/.test(s.head));
@@ -877,7 +904,7 @@
   }
   function viewSlides() {
     const S = buildSlides();
-    return `<h2>고찰 슬라이드</h2><p class="note">온톨로지와 고찰에서 자동으로 엮은 ${S.length}장임. 데이터가 바뀌면 슬라이드도 바뀜. "발표 모드"에서는 화살표 키나 화면 좌우를 눌러 넘기고 Esc로 닫음. 인쇄하면 한 쪽에 한 장씩 가로로 나옴.</p>` +
+    return `<h2>고찰 슬라이드</h2><p class="note">지식그래프와 고찰에서 자동으로 엮은 ${S.length}장임. 데이터가 바뀌면 슬라이드도 바뀜. "발표 모드"에서는 화살표 키나 화면 좌우를 눌러 넘기고 Esc로 닫음. 인쇄하면 한 쪽에 한 장씩 가로로 나옴.</p>` +
       `<p><button id="present">발표 모드</button> <button id="print-slides">인쇄·PDF 저장</button></p><div id="slides">` +
       S.map(([t, b], i) => `<section class="slide" data-i="${i}">${t ? `<h3>${esc(t)}</h3>` : ""}<div class="sb insight grp">${b}</div><span class="sn">${i + 1} / ${S.length}</span></section>`).join("") + `</div>`;
   }
@@ -906,8 +933,8 @@
   }
   function viewExport() {
     const f = (href, name, desc) => `<li><a href="${href}" target="_blank" rel="noopener"><b>${name}</b></a> ${desc}</li>`;
-    return `<div class="doc"><h2>내보내기</h2><p class="note">온톨로지를 다른 도구에서 읽을 수 있는 형식으로 내려받음. 기관의 지식그래프에 싣거나 에이전트의 검색 자료로 쓸 수 있음. 파일은 데이터를 갱신할 때 <code>tools/make_bundle.py</code>가 함께 만듦.</p><ul>` +
-      f("export/ontology.jsonld", "ontology.jsonld", "JSON-LD 그래프. 세션, 발표, 인물, 기관, 개념을 노드로, 관계를 속성으로 담음.") +
+    return `<div class="doc"><h2>내보내기</h2><p class="note">지식그래프를 다른 도구에서 읽을 수 있는 형식으로 내려받음. 기관의 지식그래프에 싣거나 에이전트의 검색 자료로 쓸 수 있음. 파일은 데이터를 갱신할 때 <code>tools/make_bundle.py</code>가 함께 만듦.</p><ul>` +
+      f("export/graph.jsonld", "graph.jsonld", "JSON-LD 그래프. 세션, 발표, 인물, 기관, 개념을 노드로, 관계를 속성으로 담음. 개념의 상위 범주는 skos:broader로 이음.") +
       f("export/nodes.csv", "nodes.csv", "노드 표. id, 종류, 이름, 한국어 이름, 세션, 근거 수준, 주소.") +
       f("export/edges.csv", "edges.csv", "관계 표. 출발 id, 관계, 도착 id.") +
       f("export/insights.csv", "insights.csv", "고찰 표. 출처(종합, 심층 요약, 세션), 관점, 요지, 풀이, 근거 발표, 실행 단계, 영역, 선행 조건.") +
@@ -928,6 +955,11 @@
     const max = Math.max(...rows.flatMap((p) => cols.map((m) => (pair.get(p + "|" + m) || []).length)), 1);
     const li = (id, main, sub, ids) => `<li ${cellAttr(clab(id), sub, ids)}><span><b>${esc(clab(id))}</b><small>${esc(sub)}</small></span><em>${esc(main)}</em></li>`;
     return `<h2>문제–기법 대응</h2><p class="note">발표마다 붙인 "다루는 문제"와 "제안 기법"을 짝지어 센 것임. 어떤 문제에 어떤 기법이 몰리는지, 어느 문제가 아직 해법이 적은지 볼 수 있음. 태그는 공개 초록을 요약하며 붙인 것이라 초록에 없는 내용은 반영되지 않음.</p>` +
+      (() => { const PG = groupOrder("Problem"), MG = groupOrder("Method"), cell = new Map();
+        A.pc.forEach((v, pid) => { const pg = new Set([...v.addresses].map((c) => nodes.get(c).group)), mg = new Set([...v.proposes].map((c) => nodes.get(c).group)); pg.forEach((a) => mg.forEach((b) => { const k = a + "|" + b; (cell.get(k) || cell.set(k, []).get(k)).push(pid); })); });
+        const mx = Math.max(...[...cell.values()].map((v) => v.length), 1);
+        return isNarrow() ? "" : `<h3>범주 대응표 <small class="muted">· 문제 범주 ${PG.length}개 × 기법 범주 ${MG.length}개, 칸은 발표 수</small></h3><p class="note">개념을 상위 범주로 묶어 본 큰 그림임. 대각선 밖의 짙은 칸은 한 분야의 문제를 다른 분야의 수단으로 푸는 곳임.</p><div class="tw"><table class="mx"><thead><tr><th></th>${MG.map((g) => `<th class="v"><span>${esc(g)}</span></th>`).join("")}</tr></thead><tbody>` +
+          PG.map((a) => `<tr><th data-grp="Problem|${esc(a)}">${esc(a)}</th>${MG.map((b) => { const v = cell.get(a + "|" + b) || []; return `<td ${tint(v.length, mx)} ${v.length ? cellAttr(a + " × " + b, "이 범주의 문제에 이 범주의 기법을 쓴 발표", v) : ""}>${v.length || ""}</td>`; }).join("")}</tr>`).join("") + `</tbody></table></div>`; })() +
       `<div class="two"><div><h3>발표 수에 비해 기법이 적은 문제</h3><p class="note">관심은 모였으나 접근이 한두 갈래뿐인 영역임.</p><ul class="rank">` +
       few.map(([p, o]) => li(p, `발표 ${o.ps.length} · 기법 ${o.ms.size}`, [...o.ms].slice(0, 3).map(clab).join(", ") || "제안 기법 없음", o.ps)).join("") + `</ul></div>` +
       `<div><h3>해법이 가장 여러 갈래인 문제</h3><p class="note">접근이 아직 수렴하지 않은 영역임.</p><ul class="rank">` +
@@ -1127,6 +1159,57 @@
       (nums.length ? `<h3>수치를 제시한 발표</h3><ul>${nums.map(([n, cl]) => `<li><span class="link" data-id="${esc(n.id)}"><b>${esc(n.label)}</b></span> <span class="muted">(${esc(sNum(n.session))})</span><br>${emph(cl)}</li>`).join("")}</ul>` : "") +
       (ins.length ? `<h3>이 기관의 발표가 근거가 된 고찰</h3><ul>${ins.slice(0, 8).map(([w, sid, o, n]) => `<li><b>${esc(o.head)}</b> <small class="muted"><span class="link" data-sess="${esc(sid)}">${esc(w)}</span> · 근거 ${n}건</small></li>`).join("")}</ul>` : "") + `</div>`;
   }
+  // ---------- 검증 온톨로지: 지식그래프에서 추려 따로 구성한 온톨로지와 그 도출 결과 ----------
+  let onto = null, ontoErr = "";
+  function viewOnto() {
+    if (!onto) {
+      if (!ontoErr) loadJson("ontology/verification.json").then((j) => { if (j) onto = j; else ontoErr = "ontology/verification.json 을 읽지 못함."; if (curView === "onto") renderView(); });
+      return `<h2>검증 온톨로지</h2><p class="note">${esc(ontoErr || "불러오는 중…")}</p>`;
+    }
+    const o = onto, R = o.results, c = o.counts, ids = (refs) => [...new Set((refs || []).map((r) => r.pres).filter((p) => nodes.has(p)))];
+    const OUT = { caught: ["●", "잡음", "var(--c-korea)"], partial: ["◐", "일부만 잡음", "var(--c-trial)"], used: ["○", "채택만 보고", "var(--c-decision)"], missed: ["✕", "놓침만 보고", "#dc2626"], observed: ["?", "수단 보고 없음", "#dc2626"] };
+    const AS = { sample: "시험한 입력에서만", scope: "정한 범위 전체", runtime: "실행 중 매번", judgment: "판단에 의존" };
+    const tree = (list) => { const kids = (p) => list.filter((x) => (x.parent || "") === p); const walk = (p) => kids(p).length ? `<ul>${kids(p).map((x) => `<li>${esc(x.label)}${walk(x.id)}</li>`).join("")}</ul>` : ""; return walk(""); };
+    const chips = (refs) => (refs || []).filter((r) => nodes.has(r.pres)).map((r) => `<span class="ref" data-id="${esc(r.pres)}" data-tip="${esc(r.note || "")}">${r.outcome && OUT[r.outcome] ? `<i>${OUT[r.outcome][0]}</i>` : ""}${esc(r.title)}</span>`).join("");
+    const qa = (id, summary, body) => { const q = o.questions.find((x) => x.id === id); return `<details class="pg"><summary><b>${esc(id)}. ${esc(q.text)}</b><br><span class="ans">${summary}</span></summary>${body}</details>`; };
+    const M = o.matrix, tg = [...new Set(M.targets.map((t) => t.parent || t.label))];
+    const mtx = `<div class="tw"><table class="mx onto"><thead><tr><th></th>${M.failures.map((f) => `<th class="v" title="${esc(f.parent)}"><span>${esc(f.label)}</span></th>`).join("")}</tr></thead><tbody>` +
+      M.targets.map((t, i) => `<tr class="${i && (M.targets[i - 1].parent || M.targets[i - 1].label) !== (t.parent || t.label) ? "gt" : ""}"><th>${t.parent ? `<span class="muted">${esc(t.parent)} ›</span> ` : ""}${esc(t.label)}</th>${M.failures.map((f) => { const x = M.cells[t.id + "|" + f.id]; if (!x) return `<td class="z"></td>`; const s = OUT[x.status];
+        return `<td style="color:${s[2]};font-weight:700" title="${esc(s[1])}" ${cellAttr(t.label + " × " + f.label, s[1] + " · " + x.refs.map((r) => r.note).filter(Boolean).join(" / "), ids(x.refs))}>${s[0]}</td>`; }).join("")}</tr>`).join("") + `</tbody></table></div>` +
+      `<p class="muted">${Object.values(OUT).map((s) => `<b style="color:${s[2]}">${s[0]}</b> ${s[1]}`).join(" · ")} · 빈칸은 보고가 없는 조합</p>`;
+    const li = (html, refs) => `<li>${html}<br>${chips(refs)}</li>`;
+    const noBase = R.Q1.filter((x) => !x.caught_by.length), q2n = R.Q2.filter((x) => x.kind === "수단 보고 없음" || x.kind === "놓침만 보고됨" || x.kind === "채택만 보고됨");
+    const a5 = R.Q5.filter((x) => x.failures.length);
+    return `<div class="doc wide onto"><h2>검증 온톨로지</h2>` +
+      `<p class="note">지식그래프에서 "검증"(심층 요약 2)에 해당하는 부분을 추려, 검증 대상, 실패 유형, 검증 수단, 전제 자산을 정의하고 발표를 "어떤 수단이 어떤 대상의 어떤 실패를 잡았는가"라는 사례로 다시 적은 것임. 그 위에 규칙 여덟 개를 적용해 아래 답을 냈음. 원천은 공개 초록 요약이고 분류와 판정은 그것을 읽고 내린 것이므로, "보고 없음"은 초록 요약에 없다는 뜻임.</p>` +
+      `<div class="cards" style="max-width:52em"><div class="card"><b>${c.cases}</b><span>검증 사례 (근거 발표 ${c.presentations}건)</span></div><div class="card"><b>${c.methods}</b><span>검증 수단 (지식그래프 개념 ${c.kg_concepts}개에서)</span></div><div class="card"><b>${c.failures}</b><span>실패 유형 (새로 정의)</span></div><div class="card"><b>${c.assets}</b><span>전제 자산 (새로 정의)</span></div></div>` +
+      `<p>파일: <a href="ontology/verification.yaml" target="_blank" rel="noopener">verification.yaml</a>(정의와 사례) · <a href="ontology/verification.ttl" target="_blank" rel="noopener">verification.ttl</a>(OWL) · <a href="ontology/README.md" target="_blank" rel="noopener">README.md</a>(방법과 결과) <button id="print-view">이 화면 인쇄</button></p>` +
+      (o.errors.length ? `<p class="weak">제약 위반 ${o.errors.length}건: ${esc(o.errors.join(" / "))}</p>` : "") +
+      `<h3>새로 나온 것</h3><ul>${(o.findings.new || []).map((x) => `<li>${emph(x)}</li>`).join("")}</ul>` +
+      `<details><summary>이미 고찰에 있던 것과 한계</summary><ul>${(o.findings.known || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ul><ul>${(o.findings.limits || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ul></details>` +
+      `<h3>대상 × 실패 유형 <small class="muted">· 칸을 누르면 근거 발표가 요약 칸에 나옴</small></h3>` + (isNarrow() ? `<p class="note">이 표는 넓은 화면에서 볼 수 있음.</p>` : mtx) +
+      `<h3>역량 질문과 답</h3><p class="note">온톨로지를 만들기 전에 정한 질문 여덟 개와, 규칙을 적용해 얻은 답임. 발표 꼬리표에 마우스를 올리면 판정 근거가 나옴.</p>` +
+      qa("Q1", `실패 유형 ${R.Q1.length}가지를 놓침: ${R.Q1.map((x) => esc(x.label)).join(", ")}.${noBase.length ? ` 이 가운데 ${noBase.map((x) => esc(x.label)).join(", ")}은(는) 다른 수단으로 잡았다는 보고도 없음.` : ""}`,
+        `<ul>${R.Q1.map((x) => li(`<b>${esc(x.label)}</b> <span class="muted">· 대상: ${esc(x.targets.join(", "))}</span><br>잡은 수단: ${esc(x.caught_by.join(", ") || "보고 없음")}`, x.refs)).join("")}</ul>`) +
+      qa("Q2", `${R.Q2.length}개 조합에서 "잡았다"는 보고가 없음. 수단 자체가 없거나 놓침·채택만 보고된 것이 ${q2n.length}개, 일부만 잡은 것이 ${R.Q2.length - q2n.length}개임.`,
+        `<ul>${R.Q2.map((x) => li(`<span class="tagk ${x.kind === "일부만 잡음" ? "" : "x"}">${esc(x.kind)}</span> <b>${esc(x.tl)}</b> × ${esc(x.fl)}${x.methods.length ? ` <span class="muted">· 쓰인 수단: ${esc(x.methods.join(", "))}</span>` : ""}`, x.refs)).join("")}</ul>`) +
+      qa("Q3", `말단 실패 유형 ${o.trees.failures.filter((f) => !o.trees.failures.some((g) => g.parent === f.id)).length}개 가운데 ${R.Q3.length}개가 한 가지 수단에만 기댐.`,
+        `<ul>${R.Q3.map((x) => li(`<b>${esc(x.fl)}</b> ← ${esc(x.method)}`, x.refs)).join("")}</ul>`) +
+      qa("Q4", `보완 관계 ${R.Q4.length}쌍. 약한 쪽으로 가장 자주 나온 것은 ${(() => { const k = {}; R.Q4.forEach((x) => (k[x.weak] = (k[x.weak] || 0) + 1)); return Object.entries(k).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([n, v]) => esc(n) + " " + v + "쌍").join(", "); })()}임.`,
+        `<table class="ctable"><tr><th>대상 × 실패</th><th>놓치거나 일부만 잡은 수단</th><th>잡은 수단</th></tr>${R.Q4.map((x) => `<tr><td>${esc(x.tl)} × ${esc(x.fl)}</td><td>${esc(x.weak)} <span class="muted">(${x.weak_outcome === "missed" ? "놓침" : "일부"})</span></td><td>${esc(x.strong)}</td></tr>`).join("")}</table>`) +
+      qa("Q5", `가장 넓은 것은 "${esc(a5[0].label)}"으로, 이를 전제로 하는 수단이 실패 유형 ${a5[0].failures.length}종을 잡았음. 다음은 "${esc(a5[1].label)}"(${a5[1].failures.length}종)임.`,
+        `<table class="ctable"><tr><th>자산</th><th>전제로 하는 수단</th><th>그 수단이 잡은 실패 유형</th></tr>${a5.map((x) => `<tr><th>${esc(x.label)}</th><td>${esc(x.methods.join(", "))}</td><td><b>${x.failures.length}종</b> · ${esc(x.failures.join(", "))}</td></tr>`).join("")}</table>`) +
+      qa("Q6", `${R.Q6.length}개 조합이 시험한 입력에서만 성립하거나 판단에 의존하는 보증에 머묾.`,
+        `<ul>${R.Q6.map((x) => li(`<b>${esc(x.tl)}</b> × ${esc(x.fl)} <span class="muted">· ${esc(x.methods.join(", "))}</span>`, x.refs)).join("")}</ul>`) +
+      qa("Q7", `${R.Q7.length}개 조합이 결정론적이지 않은 수단에만 기댐.`,
+        `<ul>${R.Q7.map((x) => li(`<b>${esc(x.tl)}</b> × ${esc(x.fl)} <span class="muted">· ${esc(x.methods.join(", "))}</span>`, x.refs)).join("")}</ul>`) +
+      qa("Q8", `옮겨 볼 만한 조합 ${R.Q8.length}개. 다른 대상에서 같은 실패를 잡았고, 수단의 적용 범위 안에 있으며, 아직 시도 보고가 없는 것임.`,
+        `<ul>${R.Q8.map((x) => li(`<b>${esc(x.to)}</b>의 ${esc(x.fl)} ← <b>${esc(x.method)}</b> <span class="muted">· ${esc(x.frm)}에서 잡음</span><br><span class="needs">전제 자산: ${esc(x.requires.join(", ") || "없음")}</span>`, x.refs)).join("")}</ul>`) +
+      `<h3>검증 수단 <small class="muted">· ${o.methods.length}개, 계열별</small></h3><div class="tw"><table class="ctable mt"><thead><tr><th>수단</th><th>결정론</th><th>보증 수준</th><th>전제 자산</th><th>잡음</th><th>일부</th><th>놓침</th><th>채택</th></tr></thead><tbody>` +
+      o.methods.map((m, i) => (i && o.methods[i - 1].path[0] === m.path[0] ? "" : `<tr class="mh"><th colspan="8">${esc(m.path[0])}</th></tr>`) + `<tr><td ${cellAttr(m.label, "이 수단이 쓰인 사례", ids(m.refs))} class="link">${esc(m.label)}</td><td>${m.det ? "예" : "아니오"}</td><td>${esc(AS[m.assurance])}</td><td>${esc(m.requires.join(", "))}</td><td>${m.caught || ""}</td><td>${m.partial || ""}</td><td>${m.missed || ""}</td><td>${m.used || ""}</td></tr>`).join("") + `</tbody></table></div>` +
+      `<h3>구조</h3><div class="two four"><details open><summary><b>검증 대상</b> ${c.targets}</summary>${tree(o.trees.targets)}</details><details open><summary><b>실패 유형</b> ${c.failures}</summary>${tree(o.trees.failures)}</details><details><summary><b>검증 수단</b> ${c.methods}</summary>${tree(o.trees.methods)}</details><details><summary><b>전제 자산</b> ${c.assets}</summary>${tree(o.trees.assets)}</details></div>` +
+      `<h3>지식그래프에서 온톨로지로: 구성 과정의 기록</h3><p><b>올린 것.</b> ${esc(o.process.promoted)}</p><p><b>나눈 것.</b></p><ul>${o.process.split.map((x) => `<li>${esc(x)}</li>`).join("")}</ul><p><b>새로 만든 것.</b></p><ul>${o.process.added.map((x) => `<li>${esc(x)}</li>`).join("")}</ul><p><b>올리지 않은 것.</b> ${esc(o.process.dropped)}</p><p><b>지식그래프의 맹점과 순서의 효과.</b></p><ul>${o.process.blind_spots.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`;
+  }
   function viewCheck() {
     const noTag = presentations.filter((p) => !A.pc.get(p.id).all.size), none = presentations.filter((p) => evOf(p.id) === "none");
     const used = new Map(); A.cs.forEach((m, c) => used.set(c, [...m.values()].flat().length));
@@ -1139,7 +1222,7 @@
     const ev = { num: 0, qual: 0, none: 0 }; presentations.forEach((p) => ev[evOf(p.id)]++);
     const sec = (title, note, list, f) => `<h3>${esc(title)} <small class="muted">${list.length}건</small></h3><p class="note">${esc(note)}</p>` + (list.length ? `<details><summary>목록 보기</summary><ul class="chk">${list.map(f).join("")}</ul></details>` : "");
     const pl = (p) => `<li>${nodeLink(p.id)} <span class="muted">(${esc(sNum(p.session))})</span></li>`;
-    return `<h2>데이터 점검</h2><p class="note">분석 보기의 정확도는 발표마다 붙인 태그와 저자 정보에 달려 있음. 아래는 온톨로지에서 비어 있거나 약한 곳임. 스키마 위반은 화면 왼쪽 위에 따로 경고로 표시됨.</p>` +
+    return `<h2>데이터 점검</h2><p class="note">분석 보기의 정확도는 발표마다 붙인 태그와 저자 정보에 달려 있음. 아래는 지식그래프에서 비어 있거나 약한 곳임. 스키마 위반은 화면 왼쪽 위에 따로 경고로 표시됨.</p>` +
       `<div class="cards" style="max-width:46em"><div class="card"><b>${ev.num}</b><span>● 수치를 제시한 발표</span></div><div class="card"><b>${ev.qual}</b><span>○ 수치 없이 설명한 발표</span></div><div class="card"><b>${ev.none}</b><span>◌ 제목만 확인한 발표</span></div><div class="card"><b>${errors.length}</b><span>스키마 경고</span></div></div>` +
       sec("공개 설명문이 없는 발표", "제목과 연사만 기록함. 녹취록이나 사진이 있으면 채울 수 있음.", none, pl) +
       sec("문제·기법·대상 태그가 하나도 없는 발표", "세션–개념 지도와 문제–기법 대응에서 빠짐.", noTag, pl) +
@@ -1148,7 +1231,7 @@
       sec("어느 발표에도 쓰이지 않은 개념", "지워도 되는 후보임.", unused, (n) => `<li>${nodeLink(n.id)}</li>`) +
       sec("소속이 없는 인물", "공개 페이지에 소속이 없거나 페이지를 읽지 못한 경우임. 기관·저자 보기에서 빠짐.", noOrg, (n) => `<li>${nodeLink(n.id)}</li>`);
   }
-  const RVIEWS = { heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, check: viewCheck, report: viewReport, slides: viewSlides, trend: viewTrend, read: viewRead, export: viewExport, plan: viewPlan, nums: viewNums, cmap: viewCmap, people: viewPeople, debate: viewDebate, orgp: viewOrgProfile };
+  const RVIEWS = { heat: viewHeat, pm: viewPM, bridge: viewBridge, org: viewOrg, check: viewCheck, report: viewReport, slides: viewSlides, trend: viewTrend, read: viewRead, export: viewExport, plan: viewPlan, nums: viewNums, cmap: viewCmap, people: viewPeople, debate: viewDebate, orgp: viewOrgProfile, onto: viewOnto };
   const lastIn = {};
   function syncTabs() {
     const cur = document.querySelector(`#tabs [data-v="${curView}"]`), g = cur ? cur.parentNode.dataset.g : "an";
@@ -1170,6 +1253,11 @@
   const goView = (v) => { curView = v; if (matchMedia("(max-width: 760px)").matches) { document.body.classList.add("graph-open"); syncToggle(); } renderView(); };
   addEventListener("resize", () => { if (curView === "cmap") drawCmap(); });
   $("view").addEventListener("click", (e) => {
+    const hl = e.target.closest("#heat-level button");
+    if (hl) { heatLevel = hl.dataset.l; return renderView(); }
+    const gr = e.target.closest("[data-grp]");
+    if (gr) { const [ty, nm2] = gr.dataset.grp.split("|"), g = groupRows([ty]).find((x) => x.name === nm2); if (g) { if (matchMedia("(max-width: 760px)").matches) { document.body.classList.remove("graph-open"); syncToggle(); }
+      return showList(TYPE_KO[ty] + " 범주: " + nm2, "속한 개념 " + g.cs.length + "개: " + g.cs.sort((a, b) => [...A.cs.get(b).values()].flat().length - [...A.cs.get(a).values()].flat().length).map(clab).join(", "), [...new Set([...g.m.values()].flatMap((x) => [...x]))]); } }
     const t = e.target.closest("#heat-type button");
     if (t) { heatType = t.dataset.t; return renderView(); }
     const pl = e.target.closest("[data-plan]");
@@ -1251,7 +1339,7 @@
   }, true);
   matchMedia("(max-width: 760px)").addEventListener("change", () => { if (A && curView !== "graph") renderView(); });
 
-  // ---------- 4. 온톨로지 그래프: 탭을 처음 열 때 라이브러리를 받아 그림 ----------
+  // ---------- 4. 지식그래프 그래프: 탭을 처음 열 때 라이브러리를 받아 그림 ----------
   const visible = {};
   const nodeSize = (n) => (n.hasClass("big") ? Math.min(420, 70 + 13 * (n.data("deg") || 0)) : Math.min(120, 12 + 2.4 * (n.data("deg") || 0)));   // 노드 크기는 보이는 연결 수에 비례
   const edgeWidth = (e) => (e.hasClass("agg") ? Math.min(90, 6 * e.data("count")) : 1);   // 굵은 선은 세션–개념 요약선: 발표 수에 비례
@@ -1539,7 +1627,7 @@
   split.addEventListener("pointerup", endDrag);
   split.addEventListener("pointercancel", endDrag);
   split.addEventListener("dblclick", () => { root.style.removeProperty("--aside-w"); store.set("sc26-aside-w", ""); resized(); });
-  const syncToggle = () => { $("toggle-graph").textContent = document.body.classList.contains("graph-open") ? "분석·온톨로지 접기 ▼" : "분석·온톨로지 펼치기 ▲"; };
+  const syncToggle = () => { $("toggle-graph").textContent = document.body.classList.contains("graph-open") ? "분석·지식그래프 접기 ▼" : "분석·지식그래프 펼치기 ▲"; };
   $("toggle-graph").addEventListener("click", () => {       // 모바일: 오른쪽 보기 펼치기/접기
     document.body.classList.toggle("graph-open"); syncToggle();
     if (cy && curView === "graph") { cy.resize(); cy.fit(cy.elements().not(".hidden"), 30); }
@@ -1556,7 +1644,7 @@
   $("stats").textContent = `세션 ${sessions.length}개 · 발표를 불러오는 중…`;
   window.__first = true;
 
-  // ---------- 2단계: 발표·개념·인물을 읽어 온톨로지를 완성하고 분석 보기를 채움 ----------
+  // ---------- 2단계: 발표·개념·인물을 읽어 지식그래프를 완성하고 분석 보기를 채움 ----------
   const dataReady = (async () => {
     const rest = core ? await loadJson("data/" + manifest.bundle.rest) : null;
     if (rest) { schema = core.schema; ({ orgs, people, concepts, presentations } = rest); debates = rest.debates || []; numbersX = rest.numbers || {}; }
@@ -1569,7 +1657,7 @@
     for (const [id, name] of Object.entries(orgs)) addNode(id, "Organization", { label: name });
     for (const [id, p] of Object.entries(people)) { addNode(id, "Person", { label: p.name }); (p.orgs || []).forEach((o) => addEdge(id, "affiliatedWith", o)); }
     for (const [type, items] of Object.entries(concepts))
-      for (const [id, c] of Object.entries(items || {})) { addNode(id, type, { label: c.label, label_ko: c.label_ko }); (c.related || []).forEach((r) => addEdge(id, "relatedTo", r)); }
+      for (const [id, c] of Object.entries(items || {})) { addNode(id, type, { label: c.label, label_ko: c.label_ko, group: c.group || "그 밖" }); (c.related || []).forEach((r) => addEdge(id, "relatedTo", r)); }
     for (const s of sessions) (s.chairs || []).forEach((c) => addEdge(s.id, "chairedBy", c));
     const FIELD_REL = { authors: "authoredBy", addresses: "addresses", proposes: "proposes", targets: "targets" };
     for (const p of presentations) {

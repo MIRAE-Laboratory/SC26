@@ -1,6 +1,11 @@
 {
  "@context": {
   "@vocab": "https://hogeony.github.io/SC26/schema#",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "broader": {
+   "@id": "skos:broader",
+   "@type": "@id"
+  },
   "sc26": "https://hogeony.github.io/SC26/id/",
   "label": "http://www.w3.org/2000/01/rdf-schema#label",
   "url": {
@@ -15583,25 +15588,29 @@
    "@id": "sc26:multi-tenant-isolation",
    "@type": "Problem",
    "label": "Multi-tenant isolation",
-   "label_ko": "멀티테넌트 격리"
+   "label_ko": "멀티테넌트 격리",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:sensitive-data-governance",
    "@type": "Problem",
    "label": "Sensitive-data governance",
-   "label_ko": "민감데이터 거버넌스"
+   "label_ko": "민감데이터 거버넌스",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:institutional-privacy",
    "@type": "Problem",
    "label": "Institution-level privacy leakage",
-   "label_ko": "기관 수준 프라이버시 누출"
+   "label_ko": "기관 수준 프라이버시 누출",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:metadata-side-channel",
    "@type": "Problem",
    "label": "Metadata & telemetry side channels",
    "label_ko": "메타데이터·텔레메트리 부채널",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권",
    "relatedTo": [
     {
      "@id": "sc26:job-scheduler"
@@ -15612,31 +15621,36 @@
    "@id": "sc26:memory-safety",
    "@type": "Problem",
    "label": "Memory and input safety",
-   "label_ko": "메모리·입력 안전성"
+   "label_ko": "메모리·입력 안전성",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:agent-boundaries",
    "@type": "Problem",
    "label": "AI agent autonomy boundaries",
-   "label_ko": "AI 에이전트 권한 경계"
+   "label_ko": "AI 에이전트 권한 경계",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:attack-detection",
    "@type": "Problem",
    "label": "Attack detection in HPC",
-   "label_ko": "HPC 공격 탐지"
+   "label_ko": "HPC 공격 탐지",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:he-scalability",
    "@type": "Problem",
    "label": "Scalability of encrypted computation",
-   "label_ko": "암호화 연산의 확장성"
+   "label_ko": "암호화 연산의 확장성",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권"
   },
   {
    "@id": "sc26:compliance-governance",
    "@type": "Problem",
    "label": "Standards, compliance, governance",
    "label_ko": "표준·컴플라이언스·거버넌스",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권",
    "relatedTo": [
     {
      "@id": "sc26:sensitive-data-governance"
@@ -15647,37 +15661,43 @@
    "@id": "sc26:env-configuration",
    "@type": "Problem",
    "label": "Environment configuration & reconstruction",
-   "label_ko": "실행 환경 구성·재구성"
+   "label_ko": "실행 환경 구성·재구성",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:inverse-design-information-loss",
    "@type": "Problem",
    "label": "Information loss in many-to-one inverse design",
-   "label_ko": "다대일 역설계의 정보 손실"
+   "label_ko": "다대일 역설계의 정보 손실",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:surrogate-payoff",
    "@type": "Problem",
    "label": "When neural surrogates actually pay off",
-   "label_ko": "대리모델의 실효 가속 여부"
+   "label_ko": "대리모델의 실효 가속 여부",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:manual-orchestration",
    "@type": "Problem",
    "label": "Manual orchestration of multi-step analysis",
-   "label_ko": "다단계 분석의 수작업 조율"
+   "label_ko": "다단계 분석의 수작업 조율",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:provenance-reproducibility",
    "@type": "Problem",
    "label": "Reproducibility & provenance",
-   "label_ko": "재현성·출처 추적"
+   "label_ko": "재현성·출처 추적",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:ai-code-evaluation",
    "@type": "Problem",
    "label": "Evaluating AI-generated scientific code",
    "label_ko": "AI 생성 과학 코드의 평가",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:ai-exploit-generation"
@@ -15688,55 +15708,64 @@
    "@id": "sc26:data-stalls",
    "@type": "Problem",
    "label": "Data stalls from unpredictable agent access",
-   "label_ko": "에이전트의 예측 불가 접근에 따른 데이터 정체"
+   "label_ko": "에이전트의 예측 불가 접근에 따른 데이터 정체",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:annotation-cost",
    "@type": "Problem",
    "label": "Labor-intensive annotation & proofreading",
-   "label_ko": "주석·교정의 인력 비용"
+   "label_ko": "주석·교정의 인력 비용",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:high-resolution-scaling",
    "@type": "Problem",
    "label": "Scaling to high-resolution data",
-   "label_ko": "고해상도 데이터 확장성"
+   "label_ko": "고해상도 데이터 확장성",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크"
   },
   {
    "@id": "sc26:rollout-error",
    "@type": "Problem",
    "label": "Autoregressive rollout error accumulation",
-   "label_ko": "자기회귀 롤아웃의 오차 누적"
+   "label_ko": "자기회귀 롤아웃의 오차 누적",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:sparse-multimodal-data",
    "@type": "Problem",
    "label": "Sparse multimodal diagnostics",
-   "label_ko": "희소·다중모달 진단 데이터"
+   "label_ko": "희소·다중모달 진단 데이터",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:physical-feasibility",
    "@type": "Problem",
    "label": "Physical feasibility of surrogate outputs",
-   "label_ko": "대리모델 출력의 물리적 타당성"
+   "label_ko": "대리모델 출력의 물리적 타당성",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:code-translation",
    "@type": "Problem",
    "label": "Code translation across programming models",
-   "label_ko": "프로그래밍 모델 간 코드 변환"
+   "label_ko": "프로그래밍 모델 간 코드 변환",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:legacy-modernization",
    "@type": "Problem",
    "label": "Legacy code modernization at scale",
-   "label_ko": "레거시 코드의 대규모 현대화"
+   "label_ko": "레거시 코드의 대규모 현대화",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:translation-verification",
    "@type": "Problem",
    "label": "Verifying translated code (oracle bottleneck)",
    "label_ko": "변환 코드의 검증(오라클 병목)",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:ai-code-evaluation"
@@ -15747,25 +15776,29 @@
    "@id": "sc26:workload-portability",
    "@type": "Problem",
    "label": "Portability across schedulers and sites",
-   "label_ko": "스케줄러·사이트 간 이식성"
+   "label_ko": "스케줄러·사이트 간 이식성",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:llm-domain-validity",
    "@type": "Problem",
    "label": "LLM proposals violating domain validity",
-   "label_ko": "도메인 타당성을 어기는 LLM 제안"
+   "label_ko": "도메인 타당성을 어기는 LLM 제안",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:human-centric-hpc",
    "@type": "Problem",
    "label": "HPC interfaces designed for humans, not agents",
-   "label_ko": "사람 기준으로 설계된 HPC와 에이전트"
+   "label_ko": "사람 기준으로 설계된 HPC와 에이전트",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:agent-state-fragmentation",
    "@type": "Problem",
    "label": "Fragmented agent state across stores",
    "label_ko": "저장소별로 흩어진 에이전트 상태",
+   "broader": "sc26:category/Problem/에이전트·AI_운용",
    "relatedTo": [
     {
      "@id": "sc26:data-stalls"
@@ -15776,19 +15809,22 @@
    "@id": "sc26:ops-data-complexity",
    "@type": "Problem",
    "label": "Operational data complexity",
-   "label_ko": "운영 데이터의 복잡성"
+   "label_ko": "운영 데이터의 복잡성",
+   "broader": "sc26:category/Problem/운영·사용자_지원"
   },
   {
    "@id": "sc26:agent-job-execution",
    "@type": "Problem",
    "label": "Executing fine-grained agent jobs at scale",
-   "label_ko": "잘게 쪼개진 에이전트 작업의 대규모 실행"
+   "label_ko": "잘게 쪼개진 에이전트 작업의 대규모 실행",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:prompt-injection",
    "@type": "Problem",
    "label": "Prompt injection & unsupported citations",
    "label_ko": "프롬프트 주입·근거 없는 인용",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권",
    "relatedTo": [
     {
      "@id": "sc26:agent-boundaries"
@@ -15799,13 +15835,15 @@
    "@id": "sc26:config-evaluation-cost",
    "@type": "Problem",
    "label": "Evaluating training configurations before running",
-   "label_ko": "실행 전 학습 구성 평가 비용"
+   "label_ko": "실행 전 학습 구성 평가 비용",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:power-measurement-fidelity",
    "@type": "Problem",
    "label": "Power measurement resolution & fidelity",
    "label_ko": "전력 계측의 해상도와 충실도",
+   "broader": "sc26:category/Problem/에너지·전력",
    "relatedTo": [
     {
      "@id": "sc26:metadata-side-channel"
@@ -15816,97 +15854,113 @@
    "@id": "sc26:energy-performance-tradeoff",
    "@type": "Problem",
    "label": "Energy-performance trade-off",
-   "label_ko": "에너지와 성능의 절충"
+   "label_ko": "에너지와 성능의 절충",
+   "broader": "sc26:category/Problem/에너지·전력"
   },
   {
    "@id": "sc26:power-cap-slowdown",
    "@type": "Problem",
    "label": "Performance loss under power caps",
-   "label_ko": "전력 상한에서의 성능 손실"
+   "label_ko": "전력 상한에서의 성능 손실",
+   "broader": "sc26:category/Problem/에너지·전력"
   },
   {
    "@id": "sc26:node-variation",
    "@type": "Problem",
    "label": "Node-to-node power-performance variation",
-   "label_ko": "노드 간 전력·성능 편차"
+   "label_ko": "노드 간 전력·성능 편차",
+   "broader": "sc26:category/Problem/에너지·전력"
   },
   {
    "@id": "sc26:energy-cost-carbon",
    "@type": "Problem",
    "label": "Electricity cost and carbon, including embodied",
-   "label_ko": "전기료·탄소 제약(제조 탄소 포함)"
+   "label_ko": "전기료·탄소 제약(제조 탄소 포함)",
+   "broader": "sc26:category/Problem/에너지·전력"
   },
   {
    "@id": "sc26:chip-heat-density",
    "@type": "Problem",
    "label": "Chip-level heat density",
-   "label_ko": "칩 수준 열 밀도"
+   "label_ko": "칩 수준 열 밀도",
+   "broader": "sc26:category/Problem/에너지·전력"
   },
   {
    "@id": "sc26:python-at-scale",
    "@type": "Problem",
    "label": "Scaling Python on supercomputers",
-   "label_ko": "슈퍼컴퓨터에서의 파이썬 확장"
+   "label_ko": "슈퍼컴퓨터에서의 파이썬 확장",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:software-ecosystem-readiness",
    "@type": "Problem",
    "label": "Non-CUDA software ecosystem readiness",
-   "label_ko": "비 CUDA 소프트웨어 생태계 준비도"
+   "label_ko": "비 CUDA 소프트웨어 생태계 준비도",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:service-composition",
    "@type": "Problem",
    "label": "Composing HPC/AI capabilities as services",
-   "label_ko": "HPC·AI 기능의 서비스 조합"
+   "label_ko": "HPC·AI 기능의 서비스 조합",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:agentic-science-benchmarking",
    "@type": "Problem",
    "label": "What to benchmark for agentic science",
-   "label_ko": "에이전틱 과학의 벤치마크 기준"
+   "label_ko": "에이전틱 과학의 벤치마크 기준",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:data-deluge",
    "@type": "Problem",
    "label": "Data volume exceeds storage & I/O",
-   "label_ko": "저장·입출력을 넘는 데이터량"
+   "label_ko": "저장·입출력을 넘는 데이터량",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크"
   },
   {
    "@id": "sc26:delayed-feedback",
    "@type": "Problem",
    "label": "Post hoc analysis delays feedback",
-   "label_ko": "사후 분석으로 인한 피드백 지연"
+   "label_ko": "사후 분석으로 인한 피드백 지연",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:trust-in-automated-decisions",
    "@type": "Problem",
    "label": "Trust in decisions made before humans see data",
-   "label_ko": "사람이 보기 전에 내린 결정에 대한 신뢰"
+   "label_ko": "사람이 보기 전에 내린 결정에 대한 신뢰",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:site-deployment-effort",
    "@type": "Problem",
    "label": "Duplicate effort deploying robots to new sites",
-   "label_ko": "현장 배치 때의 중복 작업"
+   "label_ko": "현장 배치 때의 중복 작업",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:exascale-workflow-scaling",
    "@type": "Problem",
    "label": "Scaling experiment workflows on exascale machines",
-   "label_ko": "엑사스케일에서의 실험 워크플로 확장"
+   "label_ko": "엑사스케일에서의 실험 워크플로 확장",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:pipeline-config-tuning",
    "@type": "Problem",
    "label": "Brittle manual tuning of streaming pipelines",
-   "label_ko": "스트리밍 파이프라인의 수동 튜닝"
+   "label_ko": "스트리밍 파이프라인의 수동 튜닝",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:cross-facility-integration",
    "@type": "Problem",
    "label": "Integrating cross-facility workflows",
    "label_ko": "시설 간 워크플로 통합",
+   "broader": "sc26:category/Problem/워크플로·실험_연계",
    "relatedTo": [
     {
      "@id": "sc26:workload-portability"
@@ -15917,61 +15971,71 @@
    "@id": "sc26:human-in-outer-loop",
    "@type": "Problem",
    "label": "Outer experiment loop still runs through a person",
-   "label_ko": "사람을 거치는 바깥 실험 루프"
+   "label_ko": "사람을 거치는 바깥 실험 루프",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:workflow-composition-effort",
    "@type": "Problem",
    "label": "Building and maintaining workflows by hand",
-   "label_ko": "워크플로 작성·유지의 수작업 부담"
+   "label_ko": "워크플로 작성·유지의 수작업 부담",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:workflow-scheduling",
    "@type": "Problem",
    "label": "Workflow scheduling decisions",
-   "label_ko": "워크플로 스케줄링 결정"
+   "label_ko": "워크플로 스케줄링 결정",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:resource-prediction",
    "@type": "Problem",
    "label": "Predicting memory and runtime needs",
-   "label_ko": "메모리·실행 시간 수요 예측"
+   "label_ko": "메모리·실행 시간 수요 예측",
+   "broader": "sc26:category/Problem/성능·자원_활용"
   },
   {
    "@id": "sc26:data-locality",
    "@type": "Problem",
    "label": "Data movement and locality bottleneck",
-   "label_ko": "데이터 이동·지역성 병목"
+   "label_ko": "데이터 이동·지역성 병목",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크"
   },
   {
    "@id": "sc26:agent-inference-cost",
    "@type": "Problem",
    "label": "Cost and latency of LLM calls in agents",
-   "label_ko": "에이전트의 LLM 호출 비용·지연"
+   "label_ko": "에이전트의 LLM 호출 비용·지연",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:continuum-risk",
    "@type": "Problem",
    "label": "Non-functional risks across edge and cloud",
-   "label_ko": "에지·클라우드 연속체의 비기능 위험"
+   "label_ko": "에지·클라우드 연속체의 비기능 위험",
+   "broader": "sc26:category/Problem/워크플로·실험_연계"
   },
   {
    "@id": "sc26:failure-resilience",
    "@type": "Problem",
    "label": "Failures at scale",
-   "label_ko": "대규모 실행 중 장애"
+   "label_ko": "대규모 실행 중 장애",
+   "broader": "sc26:category/Problem/운영·사용자_지원"
   },
   {
    "@id": "sc26:data-readiness",
    "@type": "Problem",
    "label": "Scattered and inconsistent domain data",
-   "label_ko": "흩어지고 불일치하는 도메인 데이터"
+   "label_ko": "흩어지고 불일치하는 도메인 데이터",
+   "broader": "sc26:category/Problem/에이전트·AI_운용"
   },
   {
    "@id": "sc26:identity-access",
    "@type": "Problem",
    "label": "Identity and account lifecycle",
    "label_ko": "신원·계정 수명주기",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권",
    "relatedTo": [
     {
      "@id": "sc26:compliance-governance"
@@ -15983,6 +16047,7 @@
    "@type": "Problem",
    "label": "Distributing large datasets over wide-area networks",
    "label_ko": "광역망을 통한 대용량 데이터 배포",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:data-deluge"
@@ -15993,19 +16058,22 @@
    "@id": "sc26:network-congestion",
    "@type": "Problem",
    "label": "Network congestion and shared-fabric interference",
-   "label_ko": "네트워크 혼잡과 공유망 간섭"
+   "label_ko": "네트워크 혼잡과 공유망 간섭",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크"
   },
   {
    "@id": "sc26:hardware-selection",
    "@type": "Problem",
    "label": "Matching workloads to hardware",
-   "label_ko": "워크로드에 맞는 하드웨어 선택"
+   "label_ko": "워크로드에 맞는 하드웨어 선택",
+   "broader": "sc26:category/Problem/성능·자원_활용"
   },
   {
    "@id": "sc26:benchmark-validity",
    "@type": "Problem",
    "label": "Validity and comparability of benchmarks and measurements",
    "label_ko": "벤치마크·측정값의 타당성과 비교 가능성",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:agentic-science-benchmarking"
@@ -16016,19 +16084,22 @@
    "@id": "sc26:simulation-scale-limits",
    "@type": "Problem",
    "label": "Scale limits of system simulators and emulators",
-   "label_ko": "시스템 시뮬레이터·에뮬레이터의 규모 한계"
+   "label_ko": "시스템 시뮬레이터·에뮬레이터의 규모 한계",
+   "broader": "sc26:category/Problem/성능·자원_활용"
   },
   {
    "@id": "sc26:underused-resources",
    "@type": "Problem",
    "label": "Idle resources inside allocated nodes",
-   "label_ko": "할당된 노드 안의 유휴 자원"
+   "label_ko": "할당된 노드 안의 유휴 자원",
+   "broader": "sc26:category/Problem/성능·자원_활용"
   },
   {
    "@id": "sc26:memory-bound-performance",
    "@type": "Problem",
    "label": "Memory-bound performance",
    "label_ko": "메모리 대역폭에 묶인 성능",
+   "broader": "sc26:category/Problem/성능·자원_활용",
    "relatedTo": [
     {
      "@id": "sc26:data-locality"
@@ -16039,13 +16110,15 @@
    "@id": "sc26:user-support-load",
    "@type": "Problem",
    "label": "Recurring user-support load",
-   "label_ko": "반복되는 사용자 지원 부담"
+   "label_ko": "반복되는 사용자 지원 부담",
+   "broader": "sc26:category/Problem/운영·사용자_지원"
   },
   {
    "@id": "sc26:performance-portability",
    "@type": "Problem",
    "label": "Performance portability across architectures",
    "label_ko": "아키텍처 간 성능 이식성",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성",
    "relatedTo": [
     {
      "@id": "sc26:software-ecosystem-readiness"
@@ -16056,19 +16129,22 @@
    "@id": "sc26:heterogeneity-complexity",
    "@type": "Problem",
    "label": "Programming and managing heterogeneous systems",
-   "label_ko": "이기종 시스템의 프로그래밍·관리 복잡성"
+   "label_ko": "이기종 시스템의 프로그래밍·관리 복잡성",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:quantum-hpc-integration",
    "@type": "Problem",
    "label": "Integrating quantum resources with HPC",
-   "label_ko": "양자 자원과 HPC의 통합"
+   "label_ko": "양자 자원과 HPC의 통합",
+   "broader": "sc26:category/Problem/양자_통합"
   },
   {
    "@id": "sc26:silent-data-corruption",
    "@type": "Problem",
    "label": "Silent data corruption",
    "label_ko": "조용한 데이터 손상(SDC)",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:failure-resilience"
@@ -16080,6 +16156,7 @@
    "@type": "Problem",
    "label": "Silent failures in AI training",
    "label_ko": "드러나지 않는 AI 학습 실패",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:silent-data-corruption"
@@ -16094,6 +16171,7 @@
    "@type": "Problem",
    "label": "Incomparable failure reporting",
    "label_ko": "비교할 수 없는 장애 보고",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:benchmark-validity"
@@ -16104,13 +16182,15 @@
    "@id": "sc26:numerical-error",
    "@type": "Problem",
    "label": "Numerical error and floating-point exceptions",
-   "label_ko": "수치 오차와 부동소수점 예외"
+   "label_ko": "수치 오차와 부동소수점 예외",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰"
   },
   {
    "@id": "sc26:parallel-program-correctness",
    "@type": "Problem",
    "label": "Correctness of parallel communication",
    "label_ko": "병렬 통신의 정확성",
+   "broader": "sc26:category/Problem/정확성·검증·신뢰",
    "relatedTo": [
     {
      "@id": "sc26:memory-safety"
@@ -16122,6 +16202,7 @@
    "@type": "Problem",
    "label": "Vendor dependence of critical infrastructure software",
    "label_ko": "핵심 인프라 소프트웨어의 벤더 의존",
+   "broader": "sc26:category/Problem/보안·프라이버시·통제권",
    "relatedTo": [
     {
      "@id": "sc26:software-ecosystem-readiness"
@@ -16136,6 +16217,7 @@
    "@type": "Problem",
    "label": "Efficiency of LLM serving on HPC",
    "label_ko": "HPC에서의 LLM 서빙 효율",
+   "broader": "sc26:category/Problem/에이전트·AI_운용",
    "relatedTo": [
     {
      "@id": "sc26:underused-resources"
@@ -16147,6 +16229,7 @@
    "@type": "Problem",
    "label": "Scaling LLM training on diverse accelerators",
    "label_ko": "다양한 가속기에서의 LLM 학습 확장",
+   "broader": "sc26:category/Problem/에이전트·AI_운용",
    "relatedTo": [
     {
      "@id": "sc26:performance-portability"
@@ -16158,6 +16241,7 @@
    "@type": "Problem",
    "label": "Loss of operational knowledge",
    "label_ko": "운영 지식의 유실",
+   "broader": "sc26:category/Problem/운영·사용자_지원",
    "relatedTo": [
     {
      "@id": "sc26:user-support-load"
@@ -16168,13 +16252,15 @@
    "@id": "sc26:large-data-migration",
    "@type": "Problem",
    "label": "Large-scale data migration",
-   "label_ko": "대규모 데이터 이전"
+   "label_ko": "대규모 데이터 이전",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크"
   },
   {
    "@id": "sc26:gpu-io-path",
    "@type": "Problem",
    "label": "Host-mediated I/O for GPU applications",
    "label_ko": "호스트를 거치는 GPU 입출력",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:data-stalls"
@@ -16186,6 +16272,7 @@
    "@type": "Problem",
    "label": "Shrinking double-precision capability of accelerators",
    "label_ko": "가속기의 배정밀도 성능 축소",
+   "broader": "sc26:category/Problem/성능·자원_활용",
    "relatedTo": [
     {
      "@id": "sc26:hardware-selection"
@@ -16199,13 +16286,15 @@
    "@id": "sc26:software-sustainability",
    "@type": "Problem",
    "label": "Sustainability and maintenance of community software",
-   "label_ko": "커뮤니티 소프트웨어의 유지·지속 가능성"
+   "label_ko": "커뮤니티 소프트웨어의 유지·지속 가능성",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성"
   },
   {
    "@id": "sc26:container-hpc-mismatch",
    "@type": "Problem",
    "label": "Mismatch between cloud container practice and HPC",
    "label_ko": "클라우드식 컨테이너 관행과 HPC의 충돌",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성",
    "relatedTo": [
     {
      "@id": "sc26:env-configuration"
@@ -16220,6 +16309,7 @@
    "@type": "Problem",
    "label": "Tools show where but not why",
    "label_ko": "성능 문제의 원인을 알려 주지 못하는 도구",
+   "broader": "sc26:category/Problem/성능·자원_활용",
    "relatedTo": [
     {
      "@id": "sc26:ops-data-complexity"
@@ -16231,6 +16321,7 @@
    "@type": "Problem",
    "label": "Overhead and data volume of instrumentation",
    "label_ko": "계측의 부담과 데이터 과다",
+   "broader": "sc26:category/Problem/성능·자원_활용",
    "relatedTo": [
     {
      "@id": "sc26:ops-data-complexity"
@@ -16242,6 +16333,7 @@
    "@type": "Problem",
    "label": "Scheduling quantum resources alongside HPC",
    "label_ko": "양자 자원을 HPC와 함께 스케줄링",
+   "broader": "sc26:category/Problem/양자_통합",
    "relatedTo": [
     {
      "@id": "sc26:quantum-hpc-integration"
@@ -16256,6 +16348,7 @@
    "@type": "Problem",
    "label": "Noise and fidelity limits of quantum devices",
    "label_ko": "양자 장치의 잡음과 충실도 한계",
+   "broader": "sc26:category/Problem/양자_통합",
    "relatedTo": [
     {
      "@id": "sc26:quantum-hpc-integration"
@@ -16267,6 +16360,7 @@
    "@type": "Problem",
    "label": "Scale of scientific imaging data",
    "label_ko": "과학 영상 데이터의 규모",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:data-deluge"
@@ -16281,6 +16375,7 @@
    "@type": "Problem",
    "label": "Mismatch between requested and used resources",
    "label_ko": "요청한 자원과 실제 사용의 불일치",
+   "broader": "sc26:category/Problem/성능·자원_활용",
    "relatedTo": [
     {
      "@id": "sc26:underused-resources"
@@ -16295,6 +16390,7 @@
    "@type": "Problem",
    "label": "Performance regressions from software stack changes",
    "label_ko": "소프트웨어 스택 변화로 인한 성능 회귀",
+   "broader": "sc26:category/Problem/코드·소프트웨어_생산성",
    "relatedTo": [
     {
      "@id": "sc26:env-configuration"
@@ -16306,6 +16402,7 @@
    "@type": "Problem",
    "label": "Resource limits at the edge",
    "label_ko": "엣지 장치의 자원 한계",
+   "broader": "sc26:category/Problem/데이터·저장·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:continuum-risk"
@@ -16316,25 +16413,29 @@
    "@id": "sc26:attack-trees",
    "@type": "Method",
    "label": "Threat modeling with attack trees",
-   "label_ko": "공격 트리 기반 위협 모델링"
+   "label_ko": "공격 트리 기반 위협 모델링",
+   "broader": "sc26:category/Method/보안·격리·거버넌스"
   },
   {
    "@id": "sc26:portable-governance",
    "@type": "Method",
    "label": "Portable governance",
-   "label_ko": "이식 가능한 거버넌스"
+   "label_ko": "이식 가능한 거버넌스",
+   "broader": "sc26:category/Method/보안·격리·거버넌스"
   },
   {
    "@id": "sc26:privacy-assurance",
    "@type": "Method",
    "label": "Privacy as assurance (claim register)",
-   "label_ko": "보증 문제로서의 프라이버시(주장 등록부)"
+   "label_ko": "보증 문제로서의 프라이버시(주장 등록부)",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:ai-exploit-generation",
    "@type": "Method",
    "label": "Coding-agent exploit generation",
    "label_ko": "코딩 에이전트의 익스플로잇 생성",
+   "broader": "sc26:category/Method/에이전트·LLM_구성",
    "relatedTo": [
     {
      "@id": "sc26:ai-agents"
@@ -16346,6 +16447,7 @@
    "@type": "Method",
    "label": "Runtime isolation & policy enforcement",
    "label_ko": "런타임 격리·정책 강제",
+   "broader": "sc26:category/Method/보안·격리·거버넌스",
    "relatedTo": [
     {
      "@id": "sc26:multi-tenant-isolation"
@@ -16356,19 +16458,22 @@
    "@id": "sc26:zero-trust",
    "@type": "Method",
    "label": "Zero trust",
-   "label_ko": "제로 트러스트"
+   "label_ko": "제로 트러스트",
+   "broader": "sc26:category/Method/보안·격리·거버넌스"
   },
   {
    "@id": "sc26:streaming-detector",
    "@type": "Method",
    "label": "Semi-supervised streaming detection",
-   "label_ko": "준지도 스트리밍 탐지"
+   "label_ko": "준지도 스트리밍 탐지",
+   "broader": "sc26:category/Method/보안·격리·거버넌스"
   },
   {
    "@id": "sc26:homomorphic-encryption",
    "@type": "Method",
    "label": "Homomorphic encryption (BGV)",
    "label_ko": "동형암호(BGV)",
+   "broader": "sc26:category/Method/보안·격리·거버넌스",
    "relatedTo": [
     {
      "@id": "sc26:privacy-assurance"
@@ -16379,13 +16484,15 @@
    "@id": "sc26:mpi-parallelization",
    "@type": "Method",
    "label": "Distributed-memory parallelization (MPI)",
-   "label_ko": "분산메모리 병렬화(MPI)"
+   "label_ko": "분산메모리 병렬화(MPI)",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:multi-agent-workflow",
    "@type": "Method",
    "label": "Multi-agent LLM workflow",
    "label_ko": "다중 LLM 에이전트 워크플로",
+   "broader": "sc26:category/Method/에이전트·LLM_구성",
    "relatedTo": [
     {
      "@id": "sc26:ai-agents"
@@ -16396,19 +16503,22 @@
    "@id": "sc26:domain-benchmark",
    "@type": "Method",
    "label": "Domain-specific benchmarks",
-   "label_ko": "도메인 특화 벤치마크"
+   "label_ko": "도메인 특화 벤치마크",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:in-situ-inference",
    "@type": "Method",
    "label": "HPC-native in-situ inference",
-   "label_ko": "HPC 네이티브 인시투 추론"
+   "label_ko": "HPC 네이티브 인시투 추론",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:mcp-tools",
    "@type": "Method",
    "label": "Typed tools via Model Context Protocol (MCP)",
    "label_ko": "MCP 기반 도구 노출",
+   "broader": "sc26:category/Method/에이전트·LLM_구성",
    "relatedTo": [
     {
      "@id": "sc26:ai-agents"
@@ -16419,13 +16529,15 @@
    "@id": "sc26:skill-files",
    "@type": "Method",
    "label": "Agent skills (versioned skill files)",
-   "label_ko": "에이전트 스킬(버전 관리되는 스킬 파일)"
+   "label_ko": "에이전트 스킬(버전 관리되는 스킬 파일)",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:provenance-logging",
    "@type": "Method",
    "label": "Provenance logging and replay",
    "label_ko": "실행 기록·출처 로깅과 재생",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:provenance-reproducibility"
@@ -16436,241 +16548,281 @@
    "@id": "sc26:hybrid-evaluators",
    "@type": "Method",
    "label": "Deterministic checks + LLM evaluators",
-   "label_ko": "결정론적 검사와 LLM 평가의 결합"
+   "label_ko": "결정론적 검사와 LLM 평가의 결합",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:agent-aware-memory",
    "@type": "Method",
    "label": "Agent-aware memory management",
-   "label_ko": "에이전트 인지 메모리 관리"
+   "label_ko": "에이전트 인지 메모리 관리",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:generative-vae",
    "@type": "Method",
    "label": "Generative models (VAE, flows, diffusion)",
-   "label_ko": "생성 모델(VAE·흐름·확산)"
+   "label_ko": "생성 모델(VAE·흐름·확산)",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:mesh-coarsening",
    "@type": "Method",
    "label": "Geometry-based mesh coarsening",
-   "label_ko": "형상 기반 격자 조대화"
+   "label_ko": "형상 기반 격자 조대화",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:jepa",
    "@type": "Method",
    "label": "Joint-embedding predictive architecture (JEPA)",
-   "label_ko": "결합 임베딩 예측 구조"
+   "label_ko": "결합 임베딩 예측 구조",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:physics-aware-training",
    "@type": "Method",
    "label": "Physics-aware training (augmented Lagrangian)",
-   "label_ko": "물리 인지 학습(증강 라그랑지안)"
+   "label_ko": "물리 인지 학습(증강 라그랑지안)",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:scaling-laws",
    "@type": "Method",
    "label": "Scaling-law analysis",
-   "label_ko": "스케일링 법칙 분석"
+   "label_ko": "스케일링 법칙 분석",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:repair-loop",
    "@type": "Method",
    "label": "Execution feedback & iterative repair",
-   "label_ko": "실행 피드백 기반 반복 수리"
+   "label_ko": "실행 피드백 기반 반복 수리",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:context-retrieval",
    "@type": "Method",
    "label": "Target knowledge & context retrieval",
-   "label_ko": "대상 지식·컨텍스트 검색"
+   "label_ko": "대상 지식·컨텍스트 검색",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:deterministic-llm-split",
    "@type": "Method",
    "label": "Deterministic path + LLM only where needed",
-   "label_ko": "결정론적 경로와 LLM의 역할 분리"
+   "label_ko": "결정론적 경로와 LLM의 역할 분리",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:differential-testing",
    "@type": "Method",
    "label": "Output and behavioral equivalence testing",
-   "label_ko": "출력·동작 동등성 시험"
+   "label_ko": "출력·동작 동등성 시험",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:bit-identical-gates",
    "@type": "Method",
    "label": "Bit-identical reproduction gates",
-   "label_ko": "비트 단위 재현 관문"
+   "label_ko": "비트 단위 재현 관문",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:human-approval-gates",
    "@type": "Method",
    "label": "Human approval gates",
-   "label_ko": "사람의 승인 관문"
+   "label_ko": "사람의 승인 관문",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:tool-augmented-reasoning",
    "@type": "Method",
    "label": "Tool-augmented reasoning loop",
-   "label_ko": "도구 결합 추론 루프"
+   "label_ko": "도구 결합 추론 루프",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:io-characterization",
    "@type": "Method",
    "label": "Cross-state I/O characterization",
-   "label_ko": "교차 상태 I/O 특성 분석"
+   "label_ko": "교차 상태 I/O 특성 분석",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:agent-execution-layer",
    "@type": "Method",
    "label": "Agent execution layer and middleware",
-   "label_ko": "에이전트용 실행 계층·미들웨어"
+   "label_ko": "에이전트용 실행 계층·미들웨어",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:workload-graph-prediction",
    "@type": "Method",
    "label": "Workload-graph timing prediction",
-   "label_ko": "워크로드 그래프 기반 시간 예측"
+   "label_ko": "워크로드 그래프 기반 시간 예측",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:selective-measurement",
    "@type": "Method",
    "label": "Selective measurement",
-   "label_ko": "선택적 측정"
+   "label_ko": "선택적 측정",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:typed-agent-messaging",
    "@type": "Method",
    "label": "Typed inter-agent messaging",
-   "label_ko": "타입이 있는 에이전트 간 메시징"
+   "label_ko": "타입이 있는 에이전트 간 메시징",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:energy-profiling",
    "@type": "Method",
    "label": "Energy profiling (NVML, RAPL, PAPI)",
-   "label_ko": "에너지 프로파일링"
+   "label_ko": "에너지 프로파일링",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:energy-aware-hpo",
    "@type": "Method",
    "label": "Energy-aware multi-objective HPO",
-   "label_ko": "에너지 인지 다목적 하이퍼파라미터 최적화"
+   "label_ko": "에너지 인지 다목적 하이퍼파라미터 최적화",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:rl-power-control",
    "@type": "Method",
    "label": "Reinforcement learning for power and resource control",
-   "label_ko": "강화학습 기반 전력·자원 제어"
+   "label_ko": "강화학습 기반 전력·자원 제어",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:frequency-steering",
    "@type": "Method",
    "label": "Multi-dimensional frequency steering",
-   "label_ko": "다차원 주파수 조향"
+   "label_ko": "다차원 주파수 조향",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:nonuniform-power-capping",
    "@type": "Method",
    "label": "Variation-aware non-uniform power capping",
-   "label_ko": "편차 인지 비균일 전력 상한"
+   "label_ko": "편차 인지 비균일 전력 상한",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:malleable-node-shutdown",
    "@type": "Method",
    "label": "Scheduled node shutdown with malleable jobs",
-   "label_ko": "가단성 작업을 이용한 노드 셧다운"
+   "label_ko": "가단성 작업을 이용한 노드 셧다운",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:infrastructure-telemetry",
    "@type": "Method",
    "label": "Synchronized infrastructure-wide telemetry",
-   "label_ko": "시설 전체 동기 계측"
+   "label_ko": "시설 전체 동기 계측",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:mixed-precision",
    "@type": "Method",
    "label": "Mixed-precision kernels",
-   "label_ko": "혼합 정밀도 커널"
+   "label_ko": "혼합 정밀도 커널",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:direct-liquid-cooling",
    "@type": "Method",
    "label": "Direct-to-chip liquid cooling",
-   "label_ko": "칩 직접 액체 냉각"
+   "label_ko": "칩 직접 액체 냉각",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:container-wheel-deployment",
    "@type": "Method",
    "label": "Container & wheel deployment",
-   "label_ko": "컨테이너·휠 배치"
+   "label_ko": "컨테이너·휠 배치",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:python-orchestration",
    "@type": "Method",
    "label": "Python as orchestration layer",
-   "label_ko": "조율 계층으로서의 파이썬"
+   "label_ko": "조율 계층으로서의 파이썬",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:decoupled-service-ecosystem",
    "@type": "Method",
    "label": "Decoupled service ecosystem",
-   "label_ko": "분리형 서비스 생태계"
+   "label_ko": "분리형 서비스 생태계",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:in-situ-reduction",
    "@type": "Method",
    "label": "In situ data reduction",
-   "label_ko": "인시투 데이터 축소"
+   "label_ko": "인시투 데이터 축소",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:experiment-steering",
    "@type": "Method",
    "label": "Real-time steering",
-   "label_ko": "실시간 조향"
+   "label_ko": "실시간 조향",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:particle-based-rendering",
    "@type": "Method",
    "label": "In situ rendering techniques",
-   "label_ko": "인시투 렌더링·가시화 기법"
+   "label_ko": "인시투 렌더링·가시화 기법",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:digital-twin-coupling",
    "@type": "Method",
    "label": "Digital twin - simulator coupling",
-   "label_ko": "디지털 트윈과 시뮬레이터 결합"
+   "label_ko": "디지털 트윈과 시뮬레이터 결합",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:multi-stage-scheduling",
    "@type": "Method",
    "label": "Multi-stage task scheduling",
-   "label_ko": "다단계 작업 스케줄링"
+   "label_ko": "다단계 작업 스케줄링",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:surrogate-substitution",
    "@type": "Method",
    "label": "Surrogate substitution under typed contracts",
-   "label_ko": "입출력 계약을 유지한 대리모델 치환"
+   "label_ko": "입출력 계약을 유지한 대리모델 치환",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:residual-monitoring",
    "@type": "Method",
    "label": "Residual-based out-of-regime alarm",
-   "label_ko": "잔차 기반 영역 이탈 경보"
+   "label_ko": "잔차 기반 영역 이탈 경보",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:foundation-model-finetuning",
    "@type": "Method",
    "label": "Fine-tuning vision foundation models",
-   "label_ko": "비전 파운데이션 모델 미세조정"
+   "label_ko": "비전 파운데이션 모델 미세조정",
+   "broader": "sc26:category/Method/AI_모델·학습_기법"
   },
   {
    "@id": "sc26:event-driven-runtime",
    "@type": "Method",
    "label": "Event-driven streaming runtime",
    "label_ko": "이벤트 기반 스트리밍 런타임",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:agent-execution-layer"
@@ -16681,25 +16833,29 @@
    "@id": "sc26:agentic-config-optimization",
    "@type": "Method",
    "label": "Agentic configuration optimization",
-   "label_ko": "에이전트 기반 구성 최적화"
+   "label_ko": "에이전트 기반 구성 최적화",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:accelerated-transport",
    "@type": "Method",
    "label": "FPGA-accelerated data transport (EJFAT)",
-   "label_ko": "FPGA 가속 데이터 전송"
+   "label_ko": "FPGA 가속 데이터 전송",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:unified-data-access",
    "@type": "Method",
    "label": "Single data-access service (Tiled)",
-   "label_ko": "단일 데이터 접근 서비스"
+   "label_ko": "단일 데이터 접근 서비스",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:agentic-workflow-composition",
    "@type": "Method",
    "label": "Agentic workflow composition",
    "label_ko": "에이전트 기반 워크플로 구성",
+   "broader": "sc26:category/Method/에이전트·LLM_구성",
    "relatedTo": [
     {
      "@id": "sc26:multi-agent-workflow"
@@ -16711,6 +16867,7 @@
    "@type": "Method",
    "label": "Reuse-first retrieval of workflow modules",
    "label_ko": "재사용 우선의 모듈 검색",
+   "broader": "sc26:category/Method/에이전트·LLM_구성",
    "relatedTo": [
     {
      "@id": "sc26:context-retrieval"
@@ -16722,6 +16879,7 @@
    "@type": "Method",
    "label": "Specification and schema-based validation",
    "label_ko": "명세·스키마 기반 검증",
+   "broader": "sc26:category/Method/검증·시험",
    "relatedTo": [
     {
      "@id": "sc26:hybrid-evaluators"
@@ -16732,19 +16890,22 @@
    "@id": "sc26:serverless-execution",
    "@type": "Method",
    "label": "Federated serverless execution",
-   "label_ko": "연합 서버리스 실행"
+   "label_ko": "연합 서버리스 실행",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:numa-aware-scheduling",
    "@type": "Method",
    "label": "Memory-topology-aware scheduling",
-   "label_ko": "메모리 구조 인지 스케줄링"
+   "label_ko": "메모리 구조 인지 스케줄링",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:standardized-run-metadata",
    "@type": "Method",
    "label": "Standardized run metadata (RO-Crate)",
    "label_ko": "표준화된 실행 메타데이터",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크",
    "relatedTo": [
     {
      "@id": "sc26:provenance-logging"
@@ -16755,61 +16916,71 @@
    "@id": "sc26:io-coalescing",
    "@type": "Method",
    "label": "Offset-aware I/O coalescing",
-   "label_ko": "오프셋 인지 I/O 병합"
+   "label_ko": "오프셋 인지 I/O 병합",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:decentralized-scheduling",
    "@type": "Method",
    "label": "Decentralized consensus scheduling",
-   "label_ko": "분산 합의 스케줄링"
+   "label_ko": "분산 합의 스케줄링",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:llm-gating",
    "@type": "Method",
    "label": "Learned gating between LLM and surrogate",
-   "label_ko": "LLM 호출 여부를 정하는 학습 정책"
+   "label_ko": "LLM 호출 여부를 정하는 학습 정책",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:site-profiles",
    "@type": "Method",
    "label": "Evidence-backed HPC site profiles",
-   "label_ko": "근거가 붙은 사이트 프로파일"
+   "label_ko": "근거가 붙은 사이트 프로파일",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:risk-contracts",
    "@type": "Method",
    "label": "Risk-oriented contracts",
-   "label_ko": "위험 지향 계약"
+   "label_ko": "위험 지향 계약",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:resilient-campaign-execution",
    "@type": "Method",
    "label": "Failure recovery and resilience design",
-   "label_ko": "장애 복구·복원 설계"
+   "label_ko": "장애 복구·복원 설계",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:data-lakehouse",
    "@type": "Method",
    "label": "Lakehouse data management",
-   "label_ko": "레이크하우스 데이터 관리"
+   "label_ko": "레이크하우스 데이터 관리",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:science-aware-networking",
    "@type": "Method",
    "label": "Science-aware network control",
-   "label_ko": "과학 인지 네트워크 제어"
+   "label_ko": "과학 인지 네트워크 제어",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:federated-caching",
    "@type": "Method",
    "label": "Federated data caching",
-   "label_ko": "연합 데이터 캐싱"
+   "label_ko": "연합 데이터 캐싱",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:federated-learning",
    "@type": "Method",
    "label": "Federated learning",
    "label_ko": "연합학습",
+   "broader": "sc26:category/Method/AI_모델·학습_기법",
    "relatedTo": [
     {
      "@id": "sc26:privacy-assurance"
@@ -16820,55 +16991,64 @@
    "@id": "sc26:llm-ops-assistant",
    "@type": "Method",
    "label": "LLM assistants for operations and support",
-   "label_ko": "운영·지원용 LLM 보조 도구"
+   "label_ko": "운영·지원용 LLM 보조 도구",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:failure-attribution",
    "@type": "Method",
    "label": "Failure attribution and self-improvement",
-   "label_ko": "실패 원인 분류와 자기 개선"
+   "label_ko": "실패 원인 분류와 자기 개선",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:comparative-benchmarking",
    "@type": "Method",
    "label": "Comparative hardware benchmarking",
-   "label_ko": "하드웨어 비교 벤치마킹"
+   "label_ko": "하드웨어 비교 벤치마킹",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:design-space-exploration",
    "@type": "Method",
    "label": "Automated design-space exploration",
-   "label_ko": "자동 설계 공간 탐색"
+   "label_ko": "자동 설계 공간 탐색",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:system-simulation",
    "@type": "Method",
    "label": "System simulation and emulation",
-   "label_ko": "시스템 시뮬레이션·에뮬레이션"
+   "label_ko": "시스템 시뮬레이션·에뮬레이션",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:roofline-analysis",
    "@type": "Method",
    "label": "Roofline analysis",
-   "label_ko": "루프라인 분석"
+   "label_ko": "루프라인 분석",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:co-scheduling",
    "@type": "Method",
    "label": "Co-scheduling on shared nodes",
-   "label_ko": "노드 공유 공동 스케줄링"
+   "label_ko": "노드 공유 공동 스케줄링",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:analytical-performance-model",
    "@type": "Method",
    "label": "Analytical performance models",
-   "label_ko": "해석적 성능 모델"
+   "label_ko": "해석적 성능 모델",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:performance-agent",
    "@type": "Method",
    "label": "LLM performance-analysis agent",
    "label_ko": "LLM 성능 분석 에이전트",
+   "broader": "sc26:category/Method/에이전트·LLM_구성",
    "relatedTo": [
     {
      "@id": "sc26:ai-agents"
@@ -16879,37 +17059,43 @@
    "@id": "sc26:shared-identity-portal",
    "@type": "Method",
    "label": "Shared portal, identity and allocation layer",
-   "label_ko": "공용 포털·신원·배분 계층"
+   "label_ko": "공용 포털·신원·배분 계층",
+   "broader": "sc26:category/Method/보안·격리·거버넌스"
   },
   {
    "@id": "sc26:usage-based-capacity-planning",
    "@type": "Method",
    "label": "Usage-based capacity planning",
-   "label_ko": "사용 패턴 기반 용량 계획"
+   "label_ko": "사용 패턴 기반 용량 계획",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:user-dashboards",
    "@type": "Method",
    "label": "User-facing dashboards and monitoring",
-   "label_ko": "사용자용 대시보드·모니터링"
+   "label_ko": "사용자용 대시보드·모니터링",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:dataset-catalog",
    "@type": "Method",
    "label": "Federated dataset catalog",
-   "label_ko": "연합 데이터셋 카탈로그"
+   "label_ko": "연합 데이터셋 카탈로그",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:environment-wrapper",
    "@type": "Method",
    "label": "Architecture-aware environment wrapper",
-   "label_ko": "아키텍처 인지 환경 래퍼"
+   "label_ko": "아키텍처 인지 환경 래퍼",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:portable-abstraction-layers",
    "@type": "Method",
    "label": "Portable abstraction layers (Kokkos, RAJA, Julia, Chapel, Mojo)",
    "label_ko": "이식형 추상화 계층",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법",
    "relatedTo": [
     {
      "@id": "sc26:performance-portable-kernels"
@@ -16920,37 +17106,43 @@
    "@id": "sc26:autotuning",
    "@type": "Method",
    "label": "Automated tuning",
-   "label_ko": "자동 튜닝"
+   "label_ko": "자동 튜닝",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:portability-metrics",
    "@type": "Method",
    "label": "Performance-portability metrics",
-   "label_ko": "성능 이식성 지표"
+   "label_ko": "성능 이식성 지표",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:communication-aware-placement",
    "@type": "Method",
    "label": "Communication- and contention-aware placement",
-   "label_ko": "통신·경합 인지 작업 배치"
+   "label_ko": "통신·경합 인지 작업 배치",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:dataflow-runtime",
    "@type": "Method",
    "label": "Dataflow runtime",
-   "label_ko": "데이터플로 런타임"
+   "label_ko": "데이터플로 런타임",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
    "@id": "sc26:fault-injection",
    "@type": "Method",
    "label": "Fault injection and fuzzing",
-   "label_ko": "결함 주입·퍼징"
+   "label_ko": "결함 주입·퍼징",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:formal-verification",
    "@type": "Method",
    "label": "Formal verification and model checking",
    "label_ko": "정형 검증과 모델 검사",
+   "broader": "sc26:category/Method/검증·시험",
    "relatedTo": [
     {
      "@id": "sc26:spec-first-validation"
@@ -16961,25 +17153,29 @@
    "@id": "sc26:fp-exception-detection",
    "@type": "Method",
    "label": "Floating-point exception detection tools",
-   "label_ko": "부동소수점 예외 검출 도구"
+   "label_ko": "부동소수점 예외 검출 도구",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:probabilistic-error-analysis",
    "@type": "Method",
    "label": "Probabilistic rounding-error analysis",
-   "label_ko": "확률적 오차 한계 분석"
+   "label_ko": "확률적 오차 한계 분석",
+   "broader": "sc26:category/Method/검증·시험"
   },
   {
    "@id": "sc26:community-governance",
    "@type": "Method",
    "label": "Community governance of open software",
-   "label_ko": "공개 소프트웨어의 공동 거버넌스"
+   "label_ko": "공개 소프트웨어의 공동 거버넌스",
+   "broader": "sc26:category/Method/보안·격리·거버넌스"
   },
   {
    "@id": "sc26:open-control-plane",
    "@type": "Method",
    "label": "Open composable system management",
    "label_ko": "공개형 시스템 관리 계층",
+   "broader": "sc26:category/Method/보안·격리·거버넌스",
    "relatedTo": [
     {
      "@id": "sc26:community-governance"
@@ -16991,6 +17187,7 @@
    "@type": "Method",
    "label": "Opportunistic inference on idle capacity",
    "label_ko": "유휴 자원을 쓰는 기회적 추론",
+   "broader": "sc26:category/Method/스케줄링·자원_관리",
    "relatedTo": [
     {
      "@id": "sc26:co-scheduling"
@@ -17002,6 +17199,7 @@
    "@type": "Method",
    "label": "GPU sharing and partitioning",
    "label_ko": "GPU 공유와 분할",
+   "broader": "sc26:category/Method/스케줄링·자원_관리",
    "relatedTo": [
     {
      "@id": "sc26:co-scheduling"
@@ -17013,6 +17211,7 @@
    "@type": "Method",
    "label": "Hardware-enforced performance isolation",
    "label_ko": "하드웨어 수준의 성능 격리",
+   "broader": "sc26:category/Method/보안·격리·거버넌스",
    "relatedTo": [
     {
      "@id": "sc26:co-scheduling"
@@ -17023,31 +17222,36 @@
    "@id": "sc26:llm-gateway",
    "@type": "Method",
    "label": "Fair multi-tenant LLM gateway",
-   "label_ko": "공정 배분형 LLM 게이트웨이"
+   "label_ko": "공정 배분형 LLM 게이트웨이",
+   "broader": "sc26:category/Method/에이전트·LLM_구성"
   },
   {
    "@id": "sc26:layered-image-pipeline",
    "@type": "Method",
    "label": "Versioned layered OS image pipeline",
-   "label_ko": "버전 관리되는 계층형 OS 이미지"
+   "label_ko": "버전 관리되는 계층형 OS 이미지",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:infrastructure-inventory",
    "@type": "Method",
    "label": "Single source of infrastructure records",
-   "label_ko": "인프라 기록의 단일 출처"
+   "label_ko": "인프라 기록의 단일 출처",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:gpu-native-io",
    "@type": "Method",
    "label": "GPU-native I/O and data movement",
-   "label_ko": "GPU에서 직접 하는 입출력과 데이터 이동"
+   "label_ko": "GPU에서 직접 하는 입출력과 데이터 이동",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:cross-layer-tracing",
    "@type": "Method",
    "label": "Cross-layer tracing and attribution",
    "label_ko": "계층을 가로지르는 추적과 귀속",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델",
    "relatedTo": [
     {
      "@id": "sc26:io-characterization"
@@ -17058,13 +17262,15 @@
    "@id": "sc26:node-local-staging",
    "@type": "Method",
    "label": "Node-local staging and burst buffers",
-   "label_ko": "노드 로컬 선반입·완충 저장"
+   "label_ko": "노드 로컬 선반입·완충 저장",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
   },
   {
    "@id": "sc26:compression-quality-prediction",
    "@type": "Method",
    "label": "Compression quality prediction",
    "label_ko": "압축 품질 예측",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델",
    "relatedTo": [
     {
      "@id": "sc26:in-situ-reduction"
@@ -17076,6 +17282,7 @@
    "@type": "Method",
    "label": "Double-precision emulation on low-precision units",
    "label_ko": "저정밀 연산기로 배정밀도 구현",
+   "broader": "sc26:category/Method/프로그래밍_모델·수치_기법",
    "relatedTo": [
     {
      "@id": "sc26:mixed-precision"
@@ -17087,6 +17294,7 @@
    "@type": "Method",
    "label": "Unprivileged HPC container runtimes",
    "label_ko": "권한 없이 도는 HPC 컨테이너",
+   "broader": "sc26:category/Method/배포·운영_도구",
    "relatedTo": [
     {
      "@id": "sc26:container-wheel-deployment"
@@ -17098,6 +17306,7 @@
    "@type": "Method",
    "label": "Runtime rescaling without restart",
    "label_ko": "재시작 없는 실행 중 규모 조정",
+   "broader": "sc26:category/Method/스케줄링·자원_관리",
    "relatedTo": [
     {
      "@id": "sc26:resilient-campaign-execution"
@@ -17108,19 +17317,22 @@
    "@id": "sc26:snapshot-restore",
    "@type": "Method",
    "label": "Checkpoint snapshot restore for fast start",
-   "label_ko": "스냅숏 복원을 통한 빠른 기동"
+   "label_ko": "스냅숏 복원을 통한 빠른 기동",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:ci-automation",
    "@type": "Method",
    "label": "Automated build and test pipelines",
-   "label_ko": "빌드·시험 자동화 파이프라인"
+   "label_ko": "빌드·시험 자동화 파이프라인",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:hardware-counter-analysis",
    "@type": "Method",
    "label": "Hardware-counter based analysis",
    "label_ko": "하드웨어 계수기 기반 분석",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델",
    "relatedTo": [
     {
      "@id": "sc26:analytical-performance-model"
@@ -17131,13 +17343,15 @@
    "@id": "sc26:tool-interface-spec",
    "@type": "Method",
    "label": "Shared semantic interface for tools",
-   "label_ko": "도구 공용 의미 명세"
+   "label_ko": "도구 공용 의미 명세",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델"
   },
   {
    "@id": "sc26:quantum-resource-interface",
    "@type": "Method",
    "label": "Vendor-neutral quantum resource interface",
    "label_ko": "벤더 중립 양자 자원 인터페이스",
+   "broader": "sc26:category/Method/스케줄링·자원_관리",
    "relatedTo": [
     {
      "@id": "sc26:tool-interface-spec"
@@ -17148,19 +17362,22 @@
    "@id": "sc26:quantum-hpc-workflows",
    "@type": "Method",
    "label": "Hybrid quantum-HPC workflow orchestration",
-   "label_ko": "양자-HPC 혼합 워크플로 조율"
+   "label_ko": "양자-HPC 혼합 워크플로 조율",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:fidelity-aware-scheduling",
    "@type": "Method",
    "label": "Fidelity-aware quantum scheduling",
-   "label_ko": "충실도를 고려한 양자 스케줄링"
+   "label_ko": "충실도를 고려한 양자 스케줄링",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:continuous-benchmarking",
    "@type": "Method",
    "label": "Continuous benchmarking and regression testing",
    "label_ko": "상시 벤치마크와 회귀 시험",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델",
    "relatedTo": [
     {
      "@id": "sc26:ci-automation"
@@ -17172,6 +17389,7 @@
    "@type": "Method",
    "label": "Model pruning and token reduction",
    "label_ko": "모델 가지치기와 토큰 축소",
+   "broader": "sc26:category/Method/AI_모델·학습_기법",
    "relatedTo": [
     {
      "@id": "sc26:mixed-precision"
@@ -17183,6 +17401,7 @@
    "@type": "Method",
    "label": "Deterministic guard on agent execution",
    "label_ko": "에이전트 실행의 결정론적 검사",
+   "broader": "sc26:category/Method/검증·시험",
    "relatedTo": [
     {
      "@id": "sc26:runtime-sandbox"
@@ -17194,6 +17413,7 @@
    "@type": "Method",
    "label": "Job accounting trace analysis",
    "label_ko": "작업 기록 분석",
+   "broader": "sc26:category/Method/측정·벤치마크·성능_모델",
    "relatedTo": [
     {
      "@id": "sc26:io-characterization"
@@ -17204,85 +17424,99 @@
    "@id": "sc26:operations-visualization",
    "@type": "Method",
    "label": "Visual analytics of operational data",
-   "label_ko": "운영 데이터의 시각 분석"
+   "label_ko": "운영 데이터의 시각 분석",
+   "broader": "sc26:category/Method/배포·운영_도구"
   },
   {
    "@id": "sc26:heat-reuse",
    "@type": "Method",
    "label": "Waste heat reuse",
-   "label_ko": "폐열 재사용"
+   "label_ko": "폐열 재사용",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:carbon-aware-upgrade",
    "@type": "Method",
    "label": "Carbon-aware hardware refresh",
-   "label_ko": "탄소를 고려한 장비 교체"
+   "label_ko": "탄소를 고려한 장비 교체",
+   "broader": "sc26:category/Method/에너지·전력_제어"
   },
   {
    "@id": "sc26:edge-cloud-routing",
    "@type": "Method",
    "label": "Edge-cloud task routing",
-   "label_ko": "엣지와 클라우드 사이의 작업 분배"
+   "label_ko": "엣지와 클라우드 사이의 작업 분배",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
   },
   {
    "@id": "sc26:ai-supercomputer",
    "@type": "System",
    "label": "Multi-tenant AI supercomputer",
-   "label_ko": "멀티테넌트 AI 슈퍼컴퓨터"
+   "label_ko": "멀티테넌트 AI 슈퍼컴퓨터",
+   "broader": "sc26:category/System/계산_시설·클러스터"
   },
   {
    "@id": "sc26:kubernetes-baremetal",
    "@type": "System",
    "label": "Kubernetes on bare metal",
-   "label_ko": "베어메탈 쿠버네티스"
+   "label_ko": "베어메탈 쿠버네티스",
+   "broader": "sc26:category/System/계산_시설·클러스터"
   },
   {
    "@id": "sc26:leadership-facility",
    "@type": "System",
    "label": "Leadership-class facility",
-   "label_ko": "리더십급 컴퓨팅 시설"
+   "label_ko": "리더십급 컴퓨팅 시설",
+   "broader": "sc26:category/System/계산_시설·클러스터"
   },
   {
    "@id": "sc26:job-scheduler",
    "@type": "System",
    "label": "Job scheduler",
-   "label_ko": "작업 스케줄러"
+   "label_ko": "작업 스케줄러",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구"
   },
   {
    "@id": "sc26:scientific-apps",
    "@type": "System",
    "label": "Scientific applications (Enzo, GROMACS, Laghos, LAMMPS)",
-   "label_ko": "과학 응용 코드"
+   "label_ko": "과학 응용 코드",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:ai-agents",
    "@type": "System",
    "label": "AI agents",
-   "label_ko": "AI 에이전트"
+   "label_ko": "AI 에이전트",
+   "broader": "sc26:category/System/AI_시스템"
   },
   {
    "@id": "sc26:hpc-network",
    "@type": "System",
    "label": "HPC network",
-   "label_ko": "HPC 네트워크"
+   "label_ko": "HPC 네트워크",
+   "broader": "sc26:category/System/저장·네트워크·데이터_기반"
   },
   {
    "@id": "sc26:power-telemetry",
    "@type": "System",
    "label": "Power telemetry (RAPL)",
-   "label_ko": "전력 텔레메트리"
+   "label_ko": "전력 텔레메트리",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:cloud-science-environments",
    "@type": "System",
    "label": "Cloud science environments",
-   "label_ko": "클라우드 과학 실행 환경"
+   "label_ko": "클라우드 과학 실행 환경",
+   "broader": "sc26:category/System/계산_시설·클러스터"
   },
   {
    "@id": "sc26:mpi-simulations",
    "@type": "System",
    "label": "MPI simulation codes",
    "label_ko": "MPI 시뮬레이션 코드",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:mpi-parallelization"
@@ -17294,6 +17528,7 @@
    "@type": "System",
    "label": "User-facility beamline (NSLS-II)",
    "label_ko": "사용자 시설 빔라인",
+   "broader": "sc26:category/System/실험_시설·자율_실험",
    "relatedTo": [
     {
      "@id": "sc26:leadership-facility"
@@ -17305,6 +17540,7 @@
    "@type": "System",
    "label": "Production HPC libraries (PETSc)",
    "label_ko": "실전 HPC 라이브러리",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:scientific-apps"
@@ -17315,61 +17551,71 @@
    "@id": "sc26:storage-memory-hierarchy",
    "@type": "System",
    "label": "Storage-memory hierarchy",
-   "label_ko": "저장장치·메모리 계층"
+   "label_ko": "저장장치·메모리 계층",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:neural-surrogates",
    "@type": "System",
    "label": "Neural surrogate models",
-   "label_ko": "신경망 대리모델"
+   "label_ko": "신경망 대리모델",
+   "broader": "sc26:category/System/AI_시스템"
   },
   {
    "@id": "sc26:sci-foundation-models",
    "@type": "System",
    "label": "Scientific foundation models",
-   "label_ko": "과학 파운데이션 모델"
+   "label_ko": "과학 파운데이션 모델",
+   "broader": "sc26:category/System/AI_시스템"
   },
   {
    "@id": "sc26:sciml-training",
    "@type": "System",
    "label": "SciML training & inference (PyTorch)",
-   "label_ko": "과학 ML 학습·추론"
+   "label_ko": "과학 ML 학습·추론",
+   "broader": "sc26:category/System/AI_시스템"
   },
   {
    "@id": "sc26:lattice-boltzmann",
    "@type": "System",
    "label": "Lattice Boltzmann flows",
-   "label_ko": "격자 볼츠만 유동"
+   "label_ko": "격자 볼츠만 유동",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:tokamak-plasma",
    "@type": "System",
    "label": "Tokamak plasma (MAST)",
-   "label_ko": "토카막 플라즈마"
+   "label_ko": "토카막 플라즈마",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:power-grid",
    "@type": "System",
    "label": "Power grid optimization (ACOPF)",
-   "label_ko": "전력망 최적조류"
+   "label_ko": "전력망 최적조류",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:wafer-scale-systems",
    "@type": "System",
    "label": "Wafer-scale systems (Cerebras CSL)",
-   "label_ko": "웨이퍼 스케일 시스템"
+   "label_ko": "웨이퍼 스케일 시스템",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:quantum-compilers",
    "@type": "System",
    "label": "Quantum compilers (MLIR/QIR)",
-   "label_ko": "양자 컴파일러"
+   "label_ko": "양자 컴파일러",
+   "broader": "sc26:category/System/양자_시스템"
   },
   {
    "@id": "sc26:parallel-programming-models",
    "@type": "System",
    "label": "Parallel programming models (OpenMP, MPI, SYCL, CUDA)",
    "label_ko": "병렬 프로그래밍 모델",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:mpi-parallelization"
@@ -17381,6 +17627,7 @@
    "@type": "System",
    "label": "Legacy Fortran codes (GAMESS, OpenFAST)",
    "label_ko": "레거시 포트란 코드",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:scientific-apps"
@@ -17391,19 +17638,22 @@
    "@id": "sc26:molecular-design",
    "@type": "System",
    "label": "Molecular design",
-   "label_ko": "분자 설계"
+   "label_ko": "분자 설계",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:federated-clusters",
    "@type": "System",
    "label": "Federated HPC clusters",
-   "label_ko": "연합 HPC 클러스터"
+   "label_ko": "연합 HPC 클러스터",
+   "broader": "sc26:category/System/계산_시설·클러스터"
   },
   {
    "@id": "sc26:ops-telemetry",
    "@type": "System",
    "label": "HPC operational telemetry",
    "label_ko": "HPC 운영 텔레메트리",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:power-telemetry"
@@ -17415,6 +17665,7 @@
    "@type": "System",
    "label": "HPC package management (Spack)",
    "label_ko": "HPC 패키지 관리",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:hpc-libraries"
@@ -17425,13 +17676,15 @@
    "@id": "sc26:materials-workflows",
    "@type": "System",
    "label": "Computational materials workflows",
-   "label_ko": "계산재료 워크플로"
+   "label_ko": "계산재료 워크플로",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:distributed-training",
    "@type": "System",
    "label": "Distributed LLM training (Megatron)",
    "label_ko": "분산 LLM 학습",
+   "broader": "sc26:category/System/AI_시스템",
    "relatedTo": [
     {
      "@id": "sc26:sciml-training"
@@ -17442,25 +17695,29 @@
    "@id": "sc26:ai-power-delivery",
    "@type": "System",
    "label": "AI data-center power delivery (GPU racks)",
-   "label_ko": "AI 데이터센터 전력 공급"
+   "label_ko": "AI 데이터센터 전력 공급",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:llm-inference",
    "@type": "System",
    "label": "LLM inference serving",
-   "label_ko": "LLM 추론 서빙"
+   "label_ko": "LLM 추론 서빙",
+   "broader": "sc26:category/System/AI_시스템"
   },
   {
    "@id": "sc26:datalog-engines",
    "@type": "System",
    "label": "GPU Datalog engines",
-   "label_ko": "GPU Datalog 엔진"
+   "label_ko": "GPU Datalog 엔진",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:performance-portable-kernels",
    "@type": "System",
    "label": "Performance-portable kernels (Kokkos)",
    "label_ko": "성능 이식성 커널",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:parallel-programming-models"
@@ -17471,19 +17728,22 @@
    "@id": "sc26:cooling-infrastructure",
    "@type": "System",
    "label": "Cooling infrastructure",
-   "label_ko": "냉각 설비"
+   "label_ko": "냉각 설비",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:amd-gpu-systems",
    "@type": "System",
    "label": "AMD GPU supercomputers",
-   "label_ko": "AMD GPU 슈퍼컴퓨터"
+   "label_ko": "AMD GPU 슈퍼컴퓨터",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:genesis-platform",
    "@type": "System",
    "label": "Genesis Mission platform (American Science Cloud)",
    "label_ko": "Genesis Mission 플랫폼",
+   "broader": "sc26:category/System/계산_시설·클러스터",
    "relatedTo": [
     {
      "@id": "sc26:federated-clusters"
@@ -17494,43 +17754,50 @@
    "@id": "sc26:in-situ-visualization",
    "@type": "System",
    "label": "In situ visualization pipelines",
-   "label_ko": "인시투 가시화 파이프라인"
+   "label_ko": "인시투 가시화 파이프라인",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:ensemble-simulations",
    "@type": "System",
    "label": "Ensemble simulations",
-   "label_ko": "앙상블 시뮬레이션"
+   "label_ko": "앙상블 시뮬레이션",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:robotics-digital-twin",
    "@type": "System",
    "label": "Experiment and robotics digital twins",
-   "label_ko": "실험·로봇 디지털 트윈"
+   "label_ko": "실험·로봇 디지털 트윈",
+   "broader": "sc26:category/System/실험_시설·자율_실험"
   },
   {
    "@id": "sc26:hep-pipelines",
    "@type": "System",
    "label": "High-energy physics experiment pipelines",
-   "label_ko": "고에너지 물리 실험 파이프라인"
+   "label_ko": "고에너지 물리 실험 파이프라인",
+   "broader": "sc26:category/System/실험_시설·자율_실험"
   },
   {
    "@id": "sc26:self-driving-labs",
    "@type": "System",
    "label": "Autonomous (self-driving) laboratories",
-   "label_ko": "자율 실험실"
+   "label_ko": "자율 실험실",
+   "broader": "sc26:category/System/실험_시설·자율_실험"
   },
   {
    "@id": "sc26:workflow-systems",
    "@type": "System",
    "label": "Workflow management systems (Pegasus, COMPSs, Nextflow, Parsl)",
-   "label_ko": "워크플로 관리 시스템"
+   "label_ko": "워크플로 관리 시스템",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구"
   },
   {
    "@id": "sc26:research-networks",
    "@type": "System",
    "label": "Research and education networks",
    "label_ko": "연구·교육망",
+   "broader": "sc26:category/System/저장·네트워크·데이터_기반",
    "relatedTo": [
     {
      "@id": "sc26:hpc-network"
@@ -17541,19 +17808,22 @@
    "@id": "sc26:data-federations",
    "@type": "System",
    "label": "Data federations (OSDF, Pelican, XRootD)",
-   "label_ko": "데이터 연합"
+   "label_ko": "데이터 연합",
+   "broader": "sc26:category/System/저장·네트워크·데이터_기반"
   },
   {
    "@id": "sc26:hpc-processors",
    "@type": "System",
    "label": "CPU and GPU processors",
-   "label_ko": "CPU·GPU 프로세서"
+   "label_ko": "CPU·GPU 프로세서",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:reactor-physics-codes",
    "@type": "System",
    "label": "Neutron transport and reactor physics codes",
    "label_ko": "중성자 수송·노물리 코드",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:scientific-apps"
@@ -17564,13 +17834,15 @@
    "@id": "sc26:user-support-services",
    "@type": "System",
    "label": "HPC user support services",
-   "label_ko": "HPC 사용자 지원 서비스"
+   "label_ko": "HPC 사용자 지원 서비스",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구"
   },
   {
    "@id": "sc26:quantum-hpc-systems",
    "@type": "System",
    "label": "Quantum-HPC systems",
    "label_ko": "양자-HPC 시스템",
+   "broader": "sc26:category/System/양자_시스템",
    "relatedTo": [
     {
      "@id": "sc26:quantum-compilers"
@@ -17581,37 +17853,43 @@
    "@id": "sc26:autonomous-driving-evaluation",
    "@type": "System",
    "label": "Autonomous-driving evaluation campaigns",
-   "label_ko": "자율주행 평가 캠페인"
+   "label_ko": "자율주행 평가 캠페인",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:edge-sensor-networks",
    "@type": "System",
    "label": "Distributed edge sensor networks",
-   "label_ko": "분산 에지 센서망"
+   "label_ko": "분산 에지 센서망",
+   "broader": "sc26:category/System/저장·네트워크·데이터_기반"
   },
   {
    "@id": "sc26:os-kernel",
    "@type": "System",
    "label": "Operating-system kernel",
-   "label_ko": "운영체제 커널"
+   "label_ko": "운영체제 커널",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구"
   },
   {
    "@id": "sc26:heterogeneous-racks",
    "@type": "System",
    "label": "Heterogeneous rack-scale systems",
-   "label_ko": "이기종 랙 규모 시스템"
+   "label_ko": "이기종 랙 규모 시스템",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:task-runtimes",
    "@type": "System",
    "label": "Task-graph runtimes",
-   "label_ko": "작업 그래프 런타임"
+   "label_ko": "작업 그래프 런타임",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구"
   },
   {
    "@id": "sc26:fhe-workloads",
    "@type": "System",
    "label": "Fully homomorphic encryption workloads",
    "label_ko": "완전동형암호 워크로드",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:homomorphic-encryption"
@@ -17622,13 +17900,15 @@
    "@id": "sc26:bioinformatics-workflows",
    "@type": "System",
    "label": "Bioinformatics workflows",
-   "label_ko": "생명정보 워크플로"
+   "label_ko": "생명정보 워크플로",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:linear-solvers",
    "@type": "System",
    "label": "Iterative linear solvers",
    "label_ko": "반복 선형 솔버",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:hpc-libraries"
@@ -17640,6 +17920,7 @@
    "@type": "System",
    "label": "Multi-GPU communication libraries",
    "label_ko": "다중 GPU 통신 라이브러리",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:hpc-network"
@@ -17651,6 +17932,7 @@
    "@type": "System",
    "label": "Parallel file systems and object stores",
    "label_ko": "병렬 파일시스템과 객체 저장소",
+   "broader": "sc26:category/System/저장·네트워크·데이터_기반",
    "relatedTo": [
     {
      "@id": "sc26:storage-memory-hierarchy"
@@ -17662,6 +17944,7 @@
    "@type": "System",
    "label": "National AI and HPC infrastructure programs",
    "label_ko": "국가 AI·HPC 인프라 사업",
+   "broader": "sc26:category/System/계산_시설·클러스터",
    "relatedTo": [
     {
      "@id": "sc26:ai-supercomputer"
@@ -17673,6 +17956,7 @@
    "@type": "System",
    "label": "Dense linear algebra kernels",
    "label_ko": "밀집 선형대수 커널",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:hpc-libraries"
@@ -17683,19 +17967,22 @@
    "@id": "sc26:processing-in-memory",
    "@type": "System",
    "label": "Processing-in-memory hardware",
-   "label_ko": "메모리 내 연산 장치"
+   "label_ko": "메모리 내 연산 장치",
+   "broader": "sc26:category/System/하드웨어·장치"
   },
   {
    "@id": "sc26:campus-clusters",
    "@type": "System",
    "label": "Campus and enterprise clusters",
-   "label_ko": "대학·기업 클러스터"
+   "label_ko": "대학·기업 클러스터",
+   "broader": "sc26:category/System/계산_시설·클러스터"
   },
   {
    "@id": "sc26:container-runtimes",
    "@type": "System",
    "label": "HPC container runtimes",
    "label_ko": "HPC 컨테이너 런타임",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구",
    "relatedTo": [
     {
      "@id": "sc26:hpc-packaging"
@@ -17706,19 +17993,22 @@
    "@id": "sc26:performance-tools",
    "@type": "System",
    "label": "Performance measurement and analysis tools",
-   "label_ko": "성능 측정·분석 도구"
+   "label_ko": "성능 측정·분석 도구",
+   "broader": "sc26:category/System/시스템_소프트웨어·도구"
   },
   {
    "@id": "sc26:scientific-imaging",
    "@type": "System",
    "label": "Scientific and medical imaging",
-   "label_ko": "과학·의료 영상"
+   "label_ko": "과학·의료 영상",
+   "broader": "sc26:category/System/과학_응용·코드"
   },
   {
    "@id": "sc26:edge-devices",
    "@type": "System",
    "label": "Edge devices",
    "label_ko": "엣지 장치",
+   "broader": "sc26:category/System/하드웨어·장치",
    "relatedTo": [
     {
      "@id": "sc26:edge-sensor-networks"
@@ -17730,6 +18020,7 @@
    "@type": "System",
    "label": "Cosmology simulations",
    "label_ko": "우주론 시뮬레이션",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:ensemble-simulations"
@@ -17741,6 +18032,7 @@
    "@type": "System",
    "label": "Nuclear fuel and materials research",
    "label_ko": "핵연료·원자력 재료 연구",
+   "broader": "sc26:category/System/과학_응용·코드",
    "relatedTo": [
     {
      "@id": "sc26:reactor-physics-codes"
@@ -35354,6 +35646,174 @@
      "@id": "sc26:ai-power-delivery"
     }
    ]
+  },
+  {
+   "@id": "sc26:category/Problem/보안·프라이버시·통제권",
+   "@type": "skos:Concept",
+   "label": "보안·프라이버시·통제권",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/정확성·검증·신뢰",
+   "@type": "skos:Concept",
+   "label": "정확성·검증·신뢰",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/에이전트·AI_운용",
+   "@type": "skos:Concept",
+   "label": "에이전트·AI 운용",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/코드·소프트웨어_생산성",
+   "@type": "skos:Concept",
+   "label": "코드·소프트웨어 생산성",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/워크플로·실험_연계",
+   "@type": "skos:Concept",
+   "label": "워크플로·실험 연계",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/데이터·저장·네트워크",
+   "@type": "skos:Concept",
+   "label": "데이터·저장·네트워크",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/에너지·전력",
+   "@type": "skos:Concept",
+   "label": "에너지·전력",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/성능·자원_활용",
+   "@type": "skos:Concept",
+   "label": "성능·자원 활용",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/운영·사용자_지원",
+   "@type": "skos:Concept",
+   "label": "운영·사용자 지원",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Problem/양자_통합",
+   "@type": "skos:Concept",
+   "label": "양자 통합",
+   "categoryOf": "Problem"
+  },
+  {
+   "@id": "sc26:category/Method/에이전트·LLM_구성",
+   "@type": "skos:Concept",
+   "label": "에이전트·LLM 구성",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/검증·시험",
+   "@type": "skos:Concept",
+   "label": "검증·시험",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/보안·격리·거버넌스",
+   "@type": "skos:Concept",
+   "label": "보안·격리·거버넌스",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/AI_모델·학습_기법",
+   "@type": "skos:Concept",
+   "label": "AI 모델·학습 기법",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/측정·벤치마크·성능_모델",
+   "@type": "skos:Concept",
+   "label": "측정·벤치마크·성능 모델",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/에너지·전력_제어",
+   "@type": "skos:Concept",
+   "label": "에너지·전력 제어",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/스케줄링·자원_관리",
+   "@type": "skos:Concept",
+   "label": "스케줄링·자원 관리",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/데이터·입출력·네트워크",
+   "@type": "skos:Concept",
+   "label": "데이터·입출력·네트워크",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/프로그래밍_모델·수치_기법",
+   "@type": "skos:Concept",
+   "label": "프로그래밍 모델·수치 기법",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/Method/배포·운영_도구",
+   "@type": "skos:Concept",
+   "label": "배포·운영 도구",
+   "categoryOf": "Method"
+  },
+  {
+   "@id": "sc26:category/System/계산_시설·클러스터",
+   "@type": "skos:Concept",
+   "label": "계산 시설·클러스터",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/하드웨어·장치",
+   "@type": "skos:Concept",
+   "label": "하드웨어·장치",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/시스템_소프트웨어·도구",
+   "@type": "skos:Concept",
+   "label": "시스템 소프트웨어·도구",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/저장·네트워크·데이터_기반",
+   "@type": "skos:Concept",
+   "label": "저장·네트워크·데이터 기반",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/AI_시스템",
+   "@type": "skos:Concept",
+   "label": "AI 시스템",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/과학_응용·코드",
+   "@type": "skos:Concept",
+   "label": "과학 응용·코드",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/실험_시설·자율_실험",
+   "@type": "skos:Concept",
+   "label": "실험 시설·자율 실험",
+   "categoryOf": "System"
+  },
+  {
+   "@id": "sc26:category/System/양자_시스템",
+   "@type": "skos:Concept",
+   "label": "양자 시스템",
+   "categoryOf": "System"
   }
  ]
 }
