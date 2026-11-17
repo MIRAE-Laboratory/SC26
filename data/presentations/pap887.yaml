@@ -1,0 +1,16 @@
+id: pap887
+type: Presentation
+kind: paper
+label: "EmuGEMM: Fused Tensor Core Kernels for Precision Emulation in Matrix Multiplication"
+session: sess225
+time: "13:52-14:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap887"
+authors: [denghui-lu, alexander-maeder, mathieu-luisier, alexandros-nikolaos-ziogas]
+addresses: [fp64-scarcity, memory-bound-performance]
+proposes: [fp64-emulation, mixed-precision]
+targets: [dense-linear-algebra, hpc-processors]
+summary_ko: "최신 GPU는 칩 면적의 더 큰 몫을 저정밀 행렬곱 연산기에 써서 과학 계산의 정밀도와 처리량 사이 간격이 벌어짐. 저정밀 연산으로 고정밀 행렬곱을 재구성하는 방식이 있으나, 기존 구현은 중간 결과를 전역 메모리에 반복해 써 데이터 이동이 주된 병목임. EmuGEMM은 두 세대의 GPU용 융합 정수 커널로 이 왕복을 없앰."
+claims:
+  - "한 방식에서 Hopper 최대 1,639 Top/s(8비트 정수 최고 성능의 83%), Blackwell 3,654 Top/s(81%)에 이름."
+  - "큰 행렬에서 벤더 라이브러리의 처리량을 Hopper 최대 1.4배, Blackwell 1.7배 넘고 정확도는 비슷함."
+  - "다른 방식은 복소 연산을 지원하며 벤더의 복소 행렬곱을 Hopper 최대 2.3배, Blackwell 5.5배 넘음."

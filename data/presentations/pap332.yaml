@@ -1,0 +1,14 @@
+id: pap332
+type: Presentation
+kind: paper
+label: "Improving Progressive Compression with Adaptive Interpolation and Coefficient Decomposition"
+session: sess203
+time: "15:30-15:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap332"
+authors: [wenbo-li, xuan-wu, qian-gong, jiao-pu, jieyang-chen, qing-liu, norbert-podhorszki, scott-klasky, xin-liang]
+addresses: [data-deluge]
+proposes: [error-bounded-compression, in-situ-reduction]
+targets: [scientific-apps, hpc-storage-systems]
+summary_ko: "엑사스케일 시뮬레이션은 저장하거나 분석할 수 있는 것보다 빠르게 데이터를 냄. 오차 통제 손실 압축은 압축할 때 허용 오차를 정해야 하고, 점진적 압축은 그 제한을 풀지만 고정된 재구성 전략에 묶여 있고 분해된 계수 사이의 상관을 다 쓰지 못함. 오차 한계와 신호 대 잡음비라는 두 목표에서 꺼내 쓰는 효율을 높이는 적응형 점진 압축 틀을 제시함."
+claims:
+  - "공개 초록에는 수치와 데이터셋 이름이 없음."

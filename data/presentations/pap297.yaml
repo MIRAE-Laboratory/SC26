@@ -1,0 +1,14 @@
+id: pap297
+type: Presentation
+kind: paper
+label: "What Bloats Your Floats? Right-Sizing Numerical Precision for Scientific Computing"
+session: sess224
+time: "08:30-08:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap297"
+authors: [pratyai-mazumder, alexandru-calotoiu, marcin-copik, yakup-koray-budanaz, shriram-chandran, torsten-hoefler]
+addresses: [fp64-scarcity, numerical-error]
+proposes: [mixed-precision, design-space-exploration]
+targets: [scientific-apps, hpc-processors]
+summary_ko: "배정밀도는 여전히 과학 계산의 표준이지만 하드웨어는 AI용 저정밀 형식 위주로 만들어지고 있음. 편미분방정식 모의에 높은 정밀도가 필요한지 묻고, 공간·시간 이산화 오차가 물리적 잡음 바닥을 이루어 배정밀도의 하위 비트를 가린다고 봄. 격자 세분화 아래의 신호 대 잡음비로 정밀도를 낮출 수 있는지 판정하는 기준과, 복잡한 응용의 일부 부분 그래프만 정밀도를 낮추는 데이터 흐름 중심의 자동 작업 흐름을 제시함."
+claims:
+  - "기상·기후 응용의 대규모 평가에서 선택적 정밀도 축소로 GPU에서 최대 1.8배 빨라지고 물리적 충실도를 유지함."

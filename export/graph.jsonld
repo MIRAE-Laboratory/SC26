@@ -1605,6 +1605,166 @@
    "label": "Allen Institute"
   },
   {
+   "@id": "sc26:duke",
+   "@type": "Organization",
+   "label": "Duke University"
+  },
+  {
+   "@id": "sc26:ubc",
+   "@type": "Organization",
+   "label": "University of British Columbia"
+  },
+  {
+   "@id": "sc26:hust-cn",
+   "@type": "Organization",
+   "label": "Huazhong University of Science and Technology"
+  },
+  {
+   "@id": "sc26:pku",
+   "@type": "Organization",
+   "label": "Peking University"
+  },
+  {
+   "@id": "sc26:ict-cas",
+   "@type": "Organization",
+   "label": "Institute of Computing Technology, Chinese Academy of Sciences"
+  },
+  {
+   "@id": "sc26:tsinghua",
+   "@type": "Organization",
+   "label": "Tsinghua University"
+  },
+  {
+   "@id": "sc26:leeds",
+   "@type": "Organization",
+   "label": "University of Leeds"
+  },
+  {
+   "@id": "sc26:nudt",
+   "@type": "Organization",
+   "label": "National University of Defense Technology"
+  },
+  {
+   "@id": "sc26:sysu",
+   "@type": "Organization",
+   "label": "Sun Yat-sen University"
+  },
+  {
+   "@id": "sc26:nus",
+   "@type": "Organization",
+   "label": "National University of Singapore"
+  },
+  {
+   "@id": "sc26:qiji",
+   "@type": "Organization",
+   "label": "Shanghai Qiji Zhifeng Co., Ltd."
+  },
+  {
+   "@id": "sc26:infrawaves",
+   "@type": "Organization",
+   "label": "infrawaves"
+  },
+  {
+   "@id": "sc26:sii",
+   "@type": "Organization",
+   "label": "Shanghai Innovation Institute"
+  },
+  {
+   "@id": "sc26:cuhk-sz",
+   "@type": "Organization",
+   "label": "The Chinese University of Hong Kong, Shenzhen"
+  },
+  {
+   "@id": "sc26:nuaa",
+   "@type": "Organization",
+   "label": "Nanjing University of Aeronautics and Astronautics"
+  },
+  {
+   "@id": "sc26:zju",
+   "@type": "Organization",
+   "label": "Zhejiang University"
+  },
+  {
+   "@id": "sc26:iie-cas",
+   "@type": "Organization",
+   "label": "Institute of Information Engineering, Chinese Academy of Sciences"
+  },
+  {
+   "@id": "sc26:bit",
+   "@type": "Organization",
+   "label": "Beijing Institute of Technology"
+  },
+  {
+   "@id": "sc26:fordham",
+   "@type": "Organization",
+   "label": "Fordham University"
+  },
+  {
+   "@id": "sc26:iqm",
+   "@type": "Organization",
+   "label": "IQM Quantum Computers"
+  },
+  {
+   "@id": "sc26:upc-china",
+   "@type": "Organization",
+   "label": "China University of Petroleum (East China)"
+  },
+  {
+   "@id": "sc26:astar",
+   "@type": "Organization",
+   "label": "Agency for Science, Technology and Research (A*STAR)"
+  },
+  {
+   "@id": "sc26:pcl",
+   "@type": "Organization",
+   "label": "Pengcheng Laboratory"
+  },
+  {
+   "@id": "sc26:hsu-hk",
+   "@type": "Organization",
+   "label": "The Hang Seng University of Hong Kong"
+  },
+  {
+   "@id": "sc26:snowflake",
+   "@type": "Organization",
+   "label": "Snowflake, Inc"
+  },
+  {
+   "@id": "sc26:sapienza",
+   "@type": "Organization",
+   "label": "Sapienza University of Rome"
+  },
+  {
+   "@id": "sc26:enea",
+   "@type": "Organization",
+   "label": "ENEA"
+  },
+  {
+   "@id": "sc26:njit",
+   "@type": "Organization",
+   "label": "New Jersey Institute of Technology"
+  },
+  {
+   "@id": "sc26:uiowa",
+   "@type": "Organization",
+   "label": "University of Iowa"
+  },
+  {
+   "@id": "sc26:shibaura",
+   "@type": "Organization",
+   "label": "Shibaura Institute of Technology"
+  },
+  {
+   "@id": "sc26:sjtu",
+   "@type": "Organization",
+   "label": "Shanghai Jiao Tong University"
+  },
+  {
+   "@id": "sc26:enflame",
+   "@type": "Organization",
+   "label": "Shanghai Enflame Technology Co., Ltd."
+  },
+  {
    "@id": "sc26:andres-marquez",
    "@type": "Person",
    "label": "Andres Marquez",
@@ -15926,6 +16086,2440 @@
    ]
   },
   {
+   "@id": "sc26:dilma-da-silva",
+   "@type": "Person",
+   "label": "Dilma Da Silva"
+  },
+  {
+   "@id": "sc26:ankush-jain",
+   "@type": "Person",
+   "label": "Ankush Jain",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cmu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sheng-jiang",
+   "@type": "Person",
+   "label": "Sheng Jiang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cmu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:charles-cranor",
+   "@type": "Person",
+   "label": "Charles Cranor",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cmu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:qing-zheng",
+   "@type": "Person",
+   "label": "Qing Zheng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:lanl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:brian-atkinson",
+   "@type": "Person",
+   "label": "Brian Atkinson",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:lanl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:george-amvrosiadis",
+   "@type": "Person",
+   "label": "George Amvrosiadis",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cmu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:gary-grider",
+   "@type": "Person",
+   "label": "Gary Grider",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:lanl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:leah-huk",
+   "@type": "Person",
+   "label": "Leah Huk",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ornl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:rachel-palumbo",
+   "@type": "Person",
+   "label": "Rachel Palumbo",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ornl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:michael-sandoval",
+   "@type": "Person",
+   "label": "Michael Sandoval",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ornl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:corwin-lester",
+   "@type": "Person",
+   "label": "Corwin Lester",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ornl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chris-egersdoerfer",
+   "@type": "Person",
+   "label": "Chris Egersdoerfer",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:udel"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:orcun-yildiz",
+   "@type": "Person",
+   "label": "Orcun Yildiz",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:anl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:robert-latham",
+   "@type": "Person",
+   "label": "Robert Latham",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:anl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:robert-ross",
+   "@type": "Person",
+   "label": "Robert Ross",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:anl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:constantinos-makrides",
+   "@type": "Person",
+   "label": "Constantinos Makrides",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hpe"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:j-austin-ellis",
+   "@type": "Person",
+   "label": "J. Austin Ellis",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:amd"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:stephen-abbott",
+   "@type": "Person",
+   "label": "Stephen Abbott",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hpe"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:luke-roskop",
+   "@type": "Person",
+   "label": "Luke Roskop",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hpe"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ramesh-pankajakshan",
+   "@type": "Person",
+   "label": "Ramesh Pankajakshan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:llnl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:james-elliott",
+   "@type": "Person",
+   "label": "James Elliott",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sandia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:anna-pietarila-graham",
+   "@type": "Person",
+   "label": "Anna Pietarila Graham",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:lanl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:david-f-richards",
+   "@type": "Person",
+   "label": "David F. Richards",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:llnl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:judith-c-hill",
+   "@type": "Person",
+   "label": "Judith Hill",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:llnl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mackenzie-boyd",
+   "@type": "Person",
+   "label": "MacKenzie Boyd"
+  },
+  {
+   "@id": "sc26:wenbo-li",
+   "@type": "Person",
+   "label": "Wenbo Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:oregonstate"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xuan-wu",
+   "@type": "Person",
+   "label": "Xuan Wu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:oregonstate"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jiao-pu",
+   "@type": "Person",
+   "label": "Jiao Pu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:uky"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jieyang-chen",
+   "@type": "Person",
+   "label": "Jieyang Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:uoregon"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xin-liang",
+   "@type": "Person",
+   "label": "Xin Liang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:oregonstate"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yanliang-li",
+   "@type": "Person",
+   "label": "Yanliang Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:uoregon"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:youyuan-liu",
+   "@type": "Person",
+   "label": "Youyuan Liu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:temple"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:bo-jiang",
+   "@type": "Person",
+   "label": "Bo Jiang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:temple"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:taolue-yang",
+   "@type": "Person",
+   "label": "Taolue Yang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:temple"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:robert-underwood",
+   "@type": "Person",
+   "label": "Robert Underwood",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:anl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sian-jin",
+   "@type": "Person",
+   "label": "Sian Jin",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:temple"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:bohan-zhang",
+   "@type": "Person",
+   "label": "Bohan Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yafan-huang",
+   "@type": "Person",
+   "label": "Yafan Huang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:uiowa"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:guanpeng-li",
+   "@type": "Person",
+   "label": "Guanpeng Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jeffrey-s-vetter",
+   "@type": "Person",
+   "label": "Jeffrey S. Vetter"
+  },
+  {
+   "@id": "sc26:jianxiong-liao",
+   "@type": "Person",
+   "label": "Jianxiong Liao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sysu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tiannan-fu",
+   "@type": "Person",
+   "label": "Tiannan Fu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sysu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ruibo-fan",
+   "@type": "Person",
+   "label": "Ruibo Fan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhenheng-tang",
+   "@type": "Person",
+   "label": "Zhenheng Tang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhi-zhou",
+   "@type": "Person",
+   "label": "Zhi Zhou",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sysu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xu-chen",
+   "@type": "Person",
+   "label": "Xu Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sysu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ziming-liu",
+   "@type": "Person",
+   "label": "Ziming Liu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nus"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:boyu-tian",
+   "@type": "Person",
+   "label": "Boyu Tian",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:qiji"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:guoteng-wang",
+   "@type": "Person",
+   "label": "Guoteng Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:qiji"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhen-jiang",
+   "@type": "Person",
+   "label": "Zhen Jiang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:qiji"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:peng-sun",
+   "@type": "Person",
+   "label": "Peng Sun",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:qiji"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhenhua-han",
+   "@type": "Person",
+   "label": "Zhenhua Han",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:qiji"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tian-tang",
+   "@type": "Person",
+   "label": "Tian Tang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:qiji"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xiaohe-hu",
+   "@type": "Person",
+   "label": "Xiaohe Hu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:infrawaves"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yanmin-jia",
+   "@type": "Person",
+   "label": "Yanmin Jia",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:infrawaves"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yan-zhang",
+   "@type": "Person",
+   "label": "Yan Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:infrawaves"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:he-liu",
+   "@type": "Person",
+   "label": "He Liu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:infrawaves"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mingjun-zhang",
+   "@type": "Person",
+   "label": "Mingjun Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:infrawaves"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yiqi-zhang",
+   "@type": "Person",
+   "label": "Yiqi Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nus"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:qiaoling-chen",
+   "@type": "Person",
+   "label": "Qiaoling Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ntu-sg"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:shenggan-cheng",
+   "@type": "Person",
+   "label": "Shenggan Cheng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nus"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mingyu-gao",
+   "@type": "Person",
+   "label": "Mingyu Gao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:tsinghua"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yang-you",
+   "@type": "Person",
+   "label": "Yang You",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nus"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:siyuan-feng",
+   "@type": "Person",
+   "label": "Siyuan Feng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sii"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chao-wang",
+   "@type": "Person",
+   "label": "Chao Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk-sz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pengfei-zuo",
+   "@type": "Person",
+   "label": "Pengfei Zuo",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:huawei"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhangyu-chen",
+   "@type": "Person",
+   "label": "Zhangyu Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:huawei"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yunkai-liang",
+   "@type": "Person",
+   "label": "Yunkai Liang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sysu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhou-yu",
+   "@type": "Person",
+   "label": "Zhou Yu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:huawei"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ming-chang-yang",
+   "@type": "Person",
+   "label": "Ming-Chang Yang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk-sz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:fernando-posada",
+   "@type": "Person",
+   "label": "Fernando Posada"
+  },
+  {
+   "@id": "sc26:tiancheng-hu",
+   "@type": "Person",
+   "label": "Tiancheng Hu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pku"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jin-qin",
+   "@type": "Person",
+   "label": "Jin Qin",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:lei-chen",
+   "@type": "Person",
+   "label": "Lei Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:junhao-hu",
+   "@type": "Person",
+   "label": "Junhao Hu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pku"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yuzheng-wang",
+   "@type": "Person",
+   "label": "Yuzheng Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pku"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mingxing-zhang",
+   "@type": "Person",
+   "label": "Mingxing Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:tsinghua"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chunwei-xia",
+   "@type": "Person",
+   "label": "Chunwei Xia",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:leeds"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yizhou-shan",
+   "@type": "Person",
+   "label": "Yizhou Shan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:independent"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:huimin-cui",
+   "@type": "Person",
+   "label": "Huimin Cui",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ting-cao",
+   "@type": "Person",
+   "label": "Ting Cao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:tsinghua"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zheng-wang",
+   "@type": "Person",
+   "label": "Zheng Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:leeds"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xie-tao",
+   "@type": "Person",
+   "label": "Xie Tao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pku"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chenxi-wang",
+   "@type": "Person",
+   "label": "Chenxi Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yiqin-dai",
+   "@type": "Person",
+   "label": "Yiqin Dai",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:huize-zhang",
+   "@type": "Person",
+   "label": "Huize Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yifu-gao",
+   "@type": "Person",
+   "label": "Yifu Gao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yong-dong",
+   "@type": "Person",
+   "label": "Yong Dong",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:juan-chen",
+   "@type": "Person",
+   "label": "Juan Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ruibo-wang",
+   "@type": "Person",
+   "label": "Ruibo Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xinghua-cheng",
+   "@type": "Person",
+   "label": "Xinghua Cheng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yuhan-cai",
+   "@type": "Person",
+   "label": "Yuhan Cai",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zekai-li",
+   "@type": "Person",
+   "label": "Zekai Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chun-fan",
+   "@type": "Person",
+   "label": "Chun Fan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pku"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kai-lu",
+   "@type": "Person",
+   "label": "Kai Lu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nudt"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:minqiu-sun",
+   "@type": "Person",
+   "label": "Minqiu Sun",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:udel"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xin-huang",
+   "@type": "Person",
+   "label": "Xin Huang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:riken"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:nathan-r-tallent",
+   "@type": "Person",
+   "label": "Nathan R. Tallent",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pnnl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kento-sato",
+   "@type": "Person",
+   "label": "Kento Sato",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:riken"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jing-gu",
+   "@type": "Person",
+   "label": "Jing Gu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhuang-xing",
+   "@type": "Person",
+   "label": "Zhuang Xing",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yiheng-yang",
+   "@type": "Person",
+   "label": "Yiheng Yang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:bowen-lv",
+   "@type": "Person",
+   "label": "Bowen Lv",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jiale-wang",
+   "@type": "Person",
+   "label": "Jiale Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:shuo-yuan",
+   "@type": "Person",
+   "label": "Shuo Yuan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nuaa"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zijin-chen",
+   "@type": "Person",
+   "label": "Zijin Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jin-zhao",
+   "@type": "Person",
+   "label": "Jin Zhao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:long-zheng",
+   "@type": "Person",
+   "label": "Long Zheng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xiaofei-liao",
+   "@type": "Person",
+   "label": "Xiaofei Liao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:hai-jin",
+   "@type": "Person",
+   "label": "Hai Jin",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:qinbin-li",
+   "@type": "Person",
+   "label": "Qinbin Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sameh-abdulah",
+   "@type": "Person",
+   "label": "Sameh Abdulah",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:kaust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yuki-uchino",
+   "@type": "Person",
+   "label": "Yuki Uchino",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:riken"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:katsuhisa-ozaki",
+   "@type": "Person",
+   "label": "Katsuhisa Ozaki",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:shibaura"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:heng-shi",
+   "@type": "Person",
+   "label": "Heng Shi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:enflame"
+    },
+    {
+     "@id": "sc26:sjtu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:qiqi-gu",
+   "@type": "Person",
+   "label": "Qiqi Gu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sjtu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chenpeng-wu",
+   "@type": "Person",
+   "label": "Chenpeng Wu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sjtu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xiaofeng-guan",
+   "@type": "Person",
+   "label": "Xiaofeng Guan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sjtu"
+    },
+    {
+     "@id": "sc26:enflame"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sijie-wu",
+   "@type": "Person",
+   "label": "Sijie Wu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:enflame"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:enmin-fan",
+   "@type": "Person",
+   "label": "Enmin Fan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:enflame"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:guoqing-bao",
+   "@type": "Person",
+   "label": "Guoqing Bao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:enflame"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jianguo-yao",
+   "@type": "Person",
+   "label": "Jianguo Yao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sjtu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:nikhil-kodali",
+   "@type": "Person",
+   "label": "Nikhil Kodali",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:gourab-panigrahi",
+   "@type": "Person",
+   "label": "Gourab Panigrahi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:nishant-gupta",
+   "@type": "Person",
+   "label": "Nishant Gupta",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sundaresan-gourishanker",
+   "@type": "Person",
+   "label": "Sundaresan GouriShanker",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kartick-ramakrishnan",
+   "@type": "Person",
+   "label": "Kartick Ramakrishnan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:rudra-panch",
+   "@type": "Person",
+   "label": "Rudra Panch",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sambit-das",
+   "@type": "Person",
+   "label": "Sambit Das",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:umich"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:vishwas-rao",
+   "@type": "Person",
+   "label": "Vishwas Rao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:anl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:phani-motamarri",
+   "@type": "Person",
+   "label": "Phani Motamarri",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iisc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pratyai-mazumder",
+   "@type": "Person",
+   "label": "Pratyai Mazumder",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:eth"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:alexandru-calotoiu",
+   "@type": "Person",
+   "label": "Alexandru Calotoiu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:eth"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:marcin-copik",
+   "@type": "Person",
+   "label": "Marcin Copik",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:eth"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yakup-koray-budanaz",
+   "@type": "Person",
+   "label": "Yakup Koray Budanaz",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:eth"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:shriram-chandran",
+   "@type": "Person",
+   "label": "Shriram Chandran",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:eth"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:changqing-li",
+   "@type": "Person",
+   "label": "Changqing Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:oregonstate"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kai-zhao",
+   "@type": "Person",
+   "label": "Kai Zhao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xiangyu-meng",
+   "@type": "Person",
+   "label": "Xiangyu Meng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:upc-china"
+    },
+    {
+     "@id": "sc26:astar"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:peng-chen",
+   "@type": "Person",
+   "label": "Peng Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:riken"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mingzhen-li",
+   "@type": "Person",
+   "label": "Mingzhen Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jianmin-wang",
+   "@type": "Person",
+   "label": "Jianmin Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sen-wang",
+   "@type": "Person",
+   "label": "Sen Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:upc-china"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:guangming-tan",
+   "@type": "Person",
+   "label": "Guangming Tan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:weile-jia",
+   "@type": "Person",
+   "label": "Weile Jia",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ict-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tao-luo",
+   "@type": "Person",
+   "label": "Tao Luo",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:astar"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xun-wang",
+   "@type": "Person",
+   "label": "Xun Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:upc-china"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:weicheng-xue",
+   "@type": "Person",
+   "label": "Weicheng Xue",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kai-yang",
+   "@type": "Person",
+   "label": "Kai Yang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yongxiang-liu",
+   "@type": "Person",
+   "label": "Yongxiang Liu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:baisong-xu",
+   "@type": "Person",
+   "label": "Baisong Xu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:dengdong-fan",
+   "@type": "Person",
+   "label": "Dengdong Fan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xianglin-liu",
+   "@type": "Person",
+   "label": "Xianglin Liu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yonghong-tian",
+   "@type": "Person",
+   "label": "Yonghong Tian",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pengxiang-xu",
+   "@type": "Person",
+   "label": "Pengxiang Xu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:pcl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:marzio-vallero",
+   "@type": "Person",
+   "label": "Marzio Vallero",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:gioele-casagranda",
+   "@type": "Person",
+   "label": "Gioele Casagranda",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:flavio-vella",
+   "@type": "Person",
+   "label": "Flavio Vella",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:paolo-rech",
+   "@type": "Person",
+   "label": "Paolo Rech",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:rafael-billig-tonetto",
+   "@type": "Person",
+   "label": "Rafael Billig Tonetto",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:rennes"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pedro-foletto-pimenta",
+   "@type": "Person",
+   "label": "Pedro Foletto Pimenta",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:abraham-chan",
+   "@type": "Person",
+   "label": "Abraham Chan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ubc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:karthik-pattabiraman",
+   "@type": "Person",
+   "label": "Karthik Pattabiraman",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ubc"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:fernando-fernandes-dos-santos",
+   "@type": "Person",
+   "label": "Fernando Fernandes dos Santos",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:rennes"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:marcello-traiola",
+   "@type": "Person",
+   "label": "Marcello Traiola",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:rennes"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:angeliki-kritikakou",
+   "@type": "Person",
+   "label": "Angeliki Kritikakou",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:rennes"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kenneth-sebastian",
+   "@type": "Person",
+   "label": "Kenneth Sebastian",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:devendra-ayalasomayajula",
+   "@type": "Person",
+   "label": "Devendra Ayalasomayajula",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:annu-jolly",
+   "@type": "Person",
+   "label": "Annu Jolly",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:rashi-motwani",
+   "@type": "Person",
+   "label": "Rashi Motwani",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:abby-kuang",
+   "@type": "Person",
+   "label": "Abby Kuang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:giorgio-di-guardia",
+   "@type": "Person",
+   "label": "Giorgio Di Guardia",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:aman-miryala",
+   "@type": "Person",
+   "label": "Aman Miryala",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sivakumar-arayandi-thottakara",
+   "@type": "Person",
+   "label": "Sivakumar Arayandi Thottakara",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ranjitha-prasanna",
+   "@type": "Person",
+   "label": "Ranjitha Prasanna",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:satvir-kooner",
+   "@type": "Person",
+   "label": "Satvir Kooner",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:abhishek-tyagi",
+   "@type": "Person",
+   "label": "Abhishek Tyagi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:rochester"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:saurabh-hukerikar",
+   "@type": "Person",
+   "label": "Saurabh Hukerikar",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:nirmal-saxena",
+   "@type": "Person",
+   "label": "Nirmal Saxena",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yanxiang-huang",
+   "@type": "Person",
+   "label": "Yanxiang Huang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:philip-shirvani",
+   "@type": "Person",
+   "label": "Philip Shirvani",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:chung-hsuan-tung",
+   "@type": "Person",
+   "label": "Chung-Hsuan Tung",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:duke"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yuhao-zhu",
+   "@type": "Person",
+   "label": "Yuhao Zhu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:rochester"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:runjin-wu",
+   "@type": "Person",
+   "label": "Runjin Wu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:meng-zhang",
+   "@type": "Person",
+   "label": "Meng Zhang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:you-zhou",
+   "@type": "Person",
+   "label": "You Zhou",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xuda-zheng",
+   "@type": "Person",
+   "label": "Xuda Zheng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tianwei-gui",
+   "@type": "Person",
+   "label": "Tianwei Gui",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:runjie-yu",
+   "@type": "Person",
+   "label": "Runjie Yu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zeming-ma",
+   "@type": "Person",
+   "label": "Zeming Ma",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:aoxin-wei",
+   "@type": "Person",
+   "label": "Aoxin Wei",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:changsheng-xie",
+   "@type": "Person",
+   "label": "Changsheng Xie",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:fei-wu",
+   "@type": "Person",
+   "label": "Fei Wu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hust-cn"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ahmer-jamil",
+   "@type": "Person",
+   "label": "Ahmer Jamil",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:md-hasanur-rahman",
+   "@type": "Person",
+   "label": "Md Hasanur Rahman",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:bingzhe-li",
+   "@type": "Person",
+   "label": "Bingzhe Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:utdallas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:abdullah-naveed",
+   "@type": "Person",
+   "label": "Abdullah Naveed",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mahina-sheikh",
+   "@type": "Person",
+   "label": "Mahina Sheikh",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ufl"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:qi-luo",
+   "@type": "Person",
+   "label": "Qi Luo",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust-gz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kunlin-li",
+   "@type": "Person",
+   "label": "Kunlin Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust-gz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:changxi-liu",
+   "@type": "Person",
+   "label": "Changxi Liu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nus"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:dongsheng-wang",
+   "@type": "Person",
+   "label": "Dongsheng Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:tsinghua"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yun-chen",
+   "@type": "Person",
+   "label": "Yun Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yicheng-feng",
+   "@type": "Person",
+   "label": "Yicheng Feng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kin-hang-sew",
+   "@type": "Person",
+   "label": "Kin Hang Sew",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:yuetao-chen",
+   "@type": "Person",
+   "label": "Yuetao Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:kaiwen-chen",
+   "@type": "Person",
+   "label": "Kaiwen Chen",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jingzong-li",
+   "@type": "Person",
+   "label": "Jingzong Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hsu-hk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tianyuan-wu",
+   "@type": "Person",
+   "label": "Tianyuan Wu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust-gz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zheng-zhou",
+   "@type": "Person",
+   "label": "Zheng Zhou",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sysu"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:peng-cheng",
+   "@type": "Person",
+   "label": "Peng Cheng",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:microsoft"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:wei-wang",
+   "@type": "Person",
+   "label": "Wei Wang",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:hkust-gz"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tsung-yi-ho",
+   "@type": "Person",
+   "label": "Tsung-Yi Ho",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:cuhk"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mahmoud-ahmed",
+   "@type": "Person",
+   "label": "Mahmoud Ahmed",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:kaust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:olatunji-ruwase",
+   "@type": "Person",
+   "label": "Olatunji Ruwase",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:snowflake"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sam-ade-jacobs",
+   "@type": "Person",
+   "label": "Sam Ade Jacobs",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:microsoft"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mathis-bode",
+   "@type": "Person",
+   "label": "Mathis Bode",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:fzj"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mohamed-elhoseiny",
+   "@type": "Person",
+   "label": "Mohamed Elhoseiny",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:kaust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:david-e-keyes",
+   "@type": "Person",
+   "label": "David E. Keyes",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:kaust"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jacopo-raffi",
+   "@type": "Person",
+   "label": "Jacopo Raffi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:thomas-pasquali",
+   "@type": "Person",
+   "label": "Thomas Pasquali",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:lorenzo-piarulli",
+   "@type": "Person",
+   "label": "Lorenzo Piarulli",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sapienza"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:filippo-spiga",
+   "@type": "Person",
+   "label": "Filippo Spiga",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:nvidia"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:marco-faltelli",
+   "@type": "Person",
+   "label": "Marco Faltelli",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:enea"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:domenico-siracusa",
+   "@type": "Person",
+   "label": "Domenico Siracusa",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:trento"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:daniele-de-sensi",
+   "@type": "Person",
+   "label": "Daniele De Sensi",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:sapienza"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:mar-tejedor-ninou",
+   "@type": "Person",
+   "label": "Mar Tejedor Ninou"
+  },
+  {
+   "@id": "sc26:lukas-burgholzer",
+   "@type": "Person",
+   "label": "Lukas Burgholzer",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:tum"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:marcel-walter",
+   "@type": "Person",
+   "label": "Marcel Walter",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:tum"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:alvaro-caride-tabares-sanchez",
+   "@type": "Person",
+   "label": "Álvaro Caride-Tabarés Sánchez",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iqm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:teemu-mattsson",
+   "@type": "Person",
+   "label": "Teemu Mattsson",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iqm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:bernd-hoffmann",
+   "@type": "Person",
+   "label": "Bernd Hoffmann",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iqm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:noora-farkkila",
+   "@type": "Person",
+   "label": "Noora Färkkilä",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iqm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:daniel-bulmash",
+   "@type": "Person",
+   "label": "Daniel Bulmash",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iqm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:eric-mansfield",
+   "@type": "Person",
+   "label": "Eric Mansfield",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iqm"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ziming-zhao",
+   "@type": "Person",
+   "label": "Ziming Zhao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:zju"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:tingting-li",
+   "@type": "Person",
+   "label": "Tingting Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:zju"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:zhaoxuan-li",
+   "@type": "Person",
+   "label": "Zhaoxuan Li",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:iie-cas"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:xiaofei-yue",
+   "@type": "Person",
+   "label": "Xiaofei Yue",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:bit"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jiongchi-yu",
+   "@type": "Person",
+   "label": "Jiongchi Yu",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:ntu-sg"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:jianwei-yin",
+   "@type": "Person",
+   "label": "Jianwei Yin",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:zju"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:panayiotis-christou",
+   "@type": "Person",
+   "label": "Panayiotis Christou",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:fordham"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:shuwen-kan",
+   "@type": "Person",
+   "label": "Shuwen Kan",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:fordham"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:ying-mao",
+   "@type": "Person",
+   "label": "Ying Mao",
+   "affiliatedWith": [
+    {
+     "@id": "sc26:fordham"
+    }
+   ]
+  },
+  {
    "@id": "sc26:multi-tenant-isolation",
    "@type": "Problem",
    "label": "Multi-tenant isolation",
@@ -17811,6 +20405,27 @@
    "broader": "sc26:category/Method/프로그래밍_모델·수치_기법"
   },
   {
+   "@id": "sc26:error-propagation-modeling",
+   "@type": "Method",
+   "label": "Error propagation modeling",
+   "label_ko": "오류·오차 전파 모델링",
+   "broader": "sc26:category/Method/검증·시험"
+  },
+  {
+   "@id": "sc26:error-bounded-compression",
+   "@type": "Method",
+   "label": "Error-bounded lossy compression",
+   "label_ko": "오차 한계 손실 압축",
+   "broader": "sc26:category/Method/데이터·입출력·네트워크"
+  },
+  {
+   "@id": "sc26:serving-disaggregation",
+   "@type": "Method",
+   "label": "Disaggregated and partitioned inference serving",
+   "label_ko": "추론 서빙의 분리와 자원 분할",
+   "broader": "sc26:category/Method/스케줄링·자원_관리"
+  },
+  {
    "@id": "sc26:ai-supercomputer",
    "@type": "System",
    "label": "Multi-tenant AI supercomputer",
@@ -19119,6 +21734,139 @@
     },
     {
      "@id": "sc26:michael-ringenburg"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess201",
+   "@type": "Session",
+   "label": "Observability and Operational Intelligence for Leadership Systems",
+   "topic": "운영·인프라",
+   "date": "2026-11-17",
+   "url": "https://sc26.conference-program.com/session/?sess=sess201",
+   "chairedBy": [
+    {
+     "@id": "sc26:dilma-da-silva"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess203",
+   "@type": "Session",
+   "label": "Trustworthy GPU Lossy Compression",
+   "topic": "데이터·워크플로·네트워크",
+   "date": "2026-11-17",
+   "url": "https://sc26.conference-program.com/session/?sess=sess203",
+   "chairedBy": [
+    {
+     "@id": "sc26:mackenzie-boyd"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess235",
+   "@type": "Session",
+   "label": "Papers in Conversation: AI Inference Becomes an HPC Systems Problem",
+   "topic": "AI·에이전트",
+   "date": "2026-11-18",
+   "url": "https://sc26.conference-program.com/session/?sess=sess235",
+   "chairedBy": [
+    {
+     "@id": "sc26:jeffrey-s-vetter"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess213",
+   "@type": "Session",
+   "label": "LLM Systems: Inference, Agents, and HPC Operations",
+   "topic": "AI·에이전트",
+   "date": "2026-11-18",
+   "url": "https://sc26.conference-program.com/session/?sess=sess213",
+   "chairedBy": [
+    {
+     "@id": "sc26:fernando-posada"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess225",
+   "@type": "Session",
+   "label": "Precision Engineering for Matrix Computation",
+   "topic": "성능·도구",
+   "date": "2026-11-18",
+   "url": "https://sc26.conference-program.com/session/?sess=sess225",
+   "chairedBy": [
+    {
+     "@id": "sc26:sameh-abdulah"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess224",
+   "@type": "Session",
+   "label": "Adapting Scientific Computing to AI-Oriented Accelerators",
+   "topic": "성능·도구",
+   "date": "2026-11-19",
+   "url": "https://sc26.conference-program.com/session/?sess=sess224",
+   "chairedBy": [
+    {
+     "@id": "sc26:valerie-taylor"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess223",
+   "@type": "Session",
+   "label": "Fault Injection and Resilience Across Emerging Platforms",
+   "topic": "검증·신뢰",
+   "date": "2026-11-19",
+   "url": "https://sc26.conference-program.com/session/?sess=sess223",
+   "chairedBy": [
+    {
+     "@id": "sc26:david-martin"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess228",
+   "@type": "Session",
+   "label": "Detecting and Containing Silent Errors",
+   "topic": "검증·신뢰",
+   "date": "2026-11-19",
+   "url": "https://sc26.conference-program.com/session/?sess=sess228",
+   "chairedBy": [
+    {
+     "@id": "sc26:scott-levy"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess227",
+   "@type": "Session",
+   "label": "Energy and Contention in Large-Scale AI Training",
+   "topic": "에너지·지속 가능성",
+   "date": "2026-11-19",
+   "url": "https://sc26.conference-program.com/session/?sess=sess227",
+   "chairedBy": [
+    {
+     "@id": "sc26:rong-ge"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:sess234",
+   "@type": "Session",
+   "label": "Papers in Conversation: Quantum–HPC Integration Moves to Real Systems",
+   "topic": "양자",
+   "date": "2026-11-19",
+   "url": "https://sc26.conference-program.com/session/?sess=sess234",
+   "chairedBy": [
+    {
+     "@id": "sc26:rosa-m-badia"
+    },
+    {
+     "@id": "sc26:mar-tejedor-ninou"
     }
    ]
   },
@@ -36511,6 +39259,2377 @@
    "targets": [
     {
      "@id": "sc26:ai-agents"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap275",
+   "@type": "Presentation",
+   "label": "ORCA: Steerable Observability for Bulk-Synchronous Parallel Applications",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap275",
+   "partOf": [
+    {
+     "@id": "sc26:sess201"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:ankush-jain"
+    },
+    {
+     "@id": "sc26:sheng-jiang"
+    },
+    {
+     "@id": "sc26:charles-cranor"
+    },
+    {
+     "@id": "sc26:qing-zheng"
+    },
+    {
+     "@id": "sc26:brian-atkinson"
+    },
+    {
+     "@id": "sc26:george-amvrosiadis"
+    },
+    {
+     "@id": "sc26:gary-grider"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:performance-diagnosis-gap"
+    },
+    {
+     "@id": "sc26:observability-overhead"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:cross-layer-tracing"
+    },
+    {
+     "@id": "sc26:in-situ-reduction"
+    },
+    {
+     "@id": "sc26:experiment-steering"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:mpi-simulations"
+    },
+    {
+     "@id": "sc26:performance-tools"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap535",
+   "@type": "Presentation",
+   "label": "Constructing a Job-Centric Frontier Telemetry Dataset to Accelerate HPC Operations, Systems, and Energy Research",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap535",
+   "partOf": [
+    {
+     "@id": "sc26:sess201"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:leah-huk"
+    },
+    {
+     "@id": "sc26:rachel-palumbo"
+    },
+    {
+     "@id": "sc26:woong-shin"
+    },
+    {
+     "@id": "sc26:tim-osborne"
+    },
+    {
+     "@id": "sc26:ryan-adamson"
+    },
+    {
+     "@id": "sc26:michael-sandoval"
+    },
+    {
+     "@id": "sc26:corwin-lester"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:ops-data-complexity"
+    },
+    {
+     "@id": "sc26:power-measurement-fidelity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:standardized-run-metadata"
+    },
+    {
+     "@id": "sc26:job-trace-analysis"
+    },
+    {
+     "@id": "sc26:infrastructure-telemetry"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:ops-telemetry"
+    },
+    {
+     "@id": "sc26:leadership-facility"
+    },
+    {
+     "@id": "sc26:power-telemetry"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap908",
+   "@type": "Presentation",
+   "label": "Understanding Reliability Bottlenecks in LLM Agents for HPC I/O Telemetry Analysis",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap908",
+   "partOf": [
+    {
+     "@id": "sc26:sess201"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:chris-egersdoerfer"
+    },
+    {
+     "@id": "sc26:orcun-yildiz"
+    },
+    {
+     "@id": "sc26:kevin-harms"
+    },
+    {
+     "@id": "sc26:robert-latham"
+    },
+    {
+     "@id": "sc26:robert-ross"
+    },
+    {
+     "@id": "sc26:dong-dai"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:ops-data-complexity"
+    },
+    {
+     "@id": "sc26:llm-domain-validity"
+    },
+    {
+     "@id": "sc26:agent-inference-cost"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:domain-benchmark"
+    },
+    {
+     "@id": "sc26:llm-ops-assistant"
+    },
+    {
+     "@id": "sc26:context-retrieval"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:ai-agents"
+    },
+    {
+     "@id": "sc26:ops-telemetry"
+    },
+    {
+     "@id": "sc26:hpc-storage-systems"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap1017",
+   "@type": "Presentation",
+   "label": "The Design and Organization of the El Capitan Center of Excellence for Application Readiness",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap1017",
+   "partOf": [
+    {
+     "@id": "sc26:sess201"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:constantinos-makrides"
+    },
+    {
+     "@id": "sc26:j-austin-ellis"
+    },
+    {
+     "@id": "sc26:stephen-abbott"
+    },
+    {
+     "@id": "sc26:luke-roskop"
+    },
+    {
+     "@id": "sc26:michael-e-rowan"
+    },
+    {
+     "@id": "sc26:ramesh-pankajakshan"
+    },
+    {
+     "@id": "sc26:james-elliott"
+    },
+    {
+     "@id": "sc26:anna-pietarila-graham"
+    },
+    {
+     "@id": "sc26:david-f-richards"
+    },
+    {
+     "@id": "sc26:judith-c-hill"
+    },
+    {
+     "@id": "sc26:bronis-r-de-supinski"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:site-deployment-effort"
+    },
+    {
+     "@id": "sc26:software-ecosystem-readiness"
+    },
+    {
+     "@id": "sc26:software-stack-drift"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:community-governance"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:amd-gpu-systems"
+    },
+    {
+     "@id": "sc26:leadership-facility"
+    },
+    {
+     "@id": "sc26:scientific-apps"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap332",
+   "@type": "Presentation",
+   "label": "Improving Progressive Compression with Adaptive Interpolation and Coefficient Decomposition",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap332",
+   "partOf": [
+    {
+     "@id": "sc26:sess203"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:wenbo-li"
+    },
+    {
+     "@id": "sc26:xuan-wu"
+    },
+    {
+     "@id": "sc26:qian-gong"
+    },
+    {
+     "@id": "sc26:jiao-pu"
+    },
+    {
+     "@id": "sc26:jieyang-chen"
+    },
+    {
+     "@id": "sc26:qing-liu"
+    },
+    {
+     "@id": "sc26:norbert-podhorszki"
+    },
+    {
+     "@id": "sc26:scott-klasky"
+    },
+    {
+     "@id": "sc26:xin-liang"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:data-deluge"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:error-bounded-compression"
+    },
+    {
+     "@id": "sc26:in-situ-reduction"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:hpc-storage-systems"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap496",
+   "@type": "Presentation",
+   "label": "BlockMGARD: Accelerating Adaptive Scientific Data Reduction with Region-of-Interest Error Control on GPUs",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap496",
+   "partOf": [
+    {
+     "@id": "sc26:sess203"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:yanliang-li"
+    },
+    {
+     "@id": "sc26:qian-gong"
+    },
+    {
+     "@id": "sc26:qing-liu"
+    },
+    {
+     "@id": "sc26:jaemoon-lee"
+    },
+    {
+     "@id": "sc26:norbert-podhorszki"
+    },
+    {
+     "@id": "sc26:scott-klasky"
+    },
+    {
+     "@id": "sc26:xin-liang"
+    },
+    {
+     "@id": "sc26:jieyang-chen"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:data-deluge"
+    },
+    {
+     "@id": "sc26:gpu-io-path"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:error-bounded-compression"
+    },
+    {
+     "@id": "sc26:in-situ-reduction"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap529",
+   "@type": "Presentation",
+   "label": "TOPIQ: Statistical Error Propagation for Quantity-of-Interest Prediction Under Lossy Compression",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap529",
+   "partOf": [
+    {
+     "@id": "sc26:sess203"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:youyuan-liu"
+    },
+    {
+     "@id": "sc26:bo-jiang"
+    },
+    {
+     "@id": "sc26:taolue-yang"
+    },
+    {
+     "@id": "sc26:sheng-di"
+    },
+    {
+     "@id": "sc26:robert-underwood"
+    },
+    {
+     "@id": "sc26:sian-jin"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:trust-in-automated-decisions"
+    },
+    {
+     "@id": "sc26:data-deluge"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:error-propagation-modeling"
+    },
+    {
+     "@id": "sc26:error-bounded-compression"
+    },
+    {
+     "@id": "sc26:compression-quality-prediction"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:sci-foundation-models"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap886",
+   "@type": "Presentation",
+   "label": "From Error-Bounded to Fixed-Ratio: Efficient Sampling-Guided GPU Lossy Compression",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap886",
+   "partOf": [
+    {
+     "@id": "sc26:sess203"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:bohan-zhang"
+    },
+    {
+     "@id": "sc26:yafan-huang"
+    },
+    {
+     "@id": "sc26:sheng-di"
+    },
+    {
+     "@id": "sc26:guanpeng-li"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:data-deluge"
+    },
+    {
+     "@id": "sc26:memory-bound-performance"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:error-bounded-compression"
+    },
+    {
+     "@id": "sc26:selective-measurement"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap104",
+   "@type": "Presentation",
+   "label": "CoreFlow: Context-Centric Resource Management for LLM-Based Agentic Workflows",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess235&id=pap104",
+   "partOf": [
+    {
+     "@id": "sc26:sess235"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:jianxiong-liao"
+    },
+    {
+     "@id": "sc26:tiannan-fu"
+    },
+    {
+     "@id": "sc26:ruibo-fan"
+    },
+    {
+     "@id": "sc26:zhenheng-tang"
+    },
+    {
+     "@id": "sc26:zhi-zhou"
+    },
+    {
+     "@id": "sc26:xu-chen"
+    },
+    {
+     "@id": "sc26:xiaowen-chu"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:llm-serving-efficiency"
+    },
+    {
+     "@id": "sc26:agent-inference-cost"
+    },
+    {
+     "@id": "sc26:agent-job-execution"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:serving-disaggregation"
+    },
+    {
+     "@id": "sc26:analytical-performance-model"
+    },
+    {
+     "@id": "sc26:agent-aware-memory"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:llm-inference"
+    },
+    {
+     "@id": "sc26:ai-agents"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap132",
+   "@type": "Presentation",
+   "label": "Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-Scale MoE Serving",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess235&id=pap132",
+   "partOf": [
+    {
+     "@id": "sc26:sess235"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:ziming-liu"
+    },
+    {
+     "@id": "sc26:boyu-tian"
+    },
+    {
+     "@id": "sc26:guoteng-wang"
+    },
+    {
+     "@id": "sc26:zhen-jiang"
+    },
+    {
+     "@id": "sc26:peng-sun"
+    },
+    {
+     "@id": "sc26:zhenhua-han"
+    },
+    {
+     "@id": "sc26:tian-tang"
+    },
+    {
+     "@id": "sc26:xiaohe-hu"
+    },
+    {
+     "@id": "sc26:yanmin-jia"
+    },
+    {
+     "@id": "sc26:yan-zhang"
+    },
+    {
+     "@id": "sc26:he-liu"
+    },
+    {
+     "@id": "sc26:mingjun-zhang"
+    },
+    {
+     "@id": "sc26:yiqi-zhang"
+    },
+    {
+     "@id": "sc26:qiaoling-chen"
+    },
+    {
+     "@id": "sc26:shenggan-cheng"
+    },
+    {
+     "@id": "sc26:mingyu-gao"
+    },
+    {
+     "@id": "sc26:yang-you"
+    },
+    {
+     "@id": "sc26:siyuan-feng"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:llm-serving-efficiency"
+    },
+    {
+     "@id": "sc26:failure-resilience"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:serving-disaggregation"
+    },
+    {
+     "@id": "sc26:decoupled-service-ecosystem"
+    },
+    {
+     "@id": "sc26:resilient-campaign-execution"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:llm-inference"
+    },
+    {
+     "@id": "sc26:ai-supercomputer"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap819",
+   "@type": "Presentation",
+   "label": "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess235&id=pap819",
+   "partOf": [
+    {
+     "@id": "sc26:sess235"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:chao-wang"
+    },
+    {
+     "@id": "sc26:pengfei-zuo"
+    },
+    {
+     "@id": "sc26:zhangyu-chen"
+    },
+    {
+     "@id": "sc26:yunkai-liang"
+    },
+    {
+     "@id": "sc26:zhou-yu"
+    },
+    {
+     "@id": "sc26:ming-chang-yang"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:llm-serving-efficiency"
+    },
+    {
+     "@id": "sc26:benchmark-validity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:serving-disaggregation"
+    },
+    {
+     "@id": "sc26:multi-stage-scheduling"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:llm-inference"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap264",
+   "@type": "Presentation",
+   "label": "FluidGPU: Fine-Grained Kernel Disaggregation for Large Model Inference on Heterogeneous GPUs",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap264",
+   "partOf": [
+    {
+     "@id": "sc26:sess213"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:tiancheng-hu"
+    },
+    {
+     "@id": "sc26:jin-qin"
+    },
+    {
+     "@id": "sc26:lei-chen"
+    },
+    {
+     "@id": "sc26:junhao-hu"
+    },
+    {
+     "@id": "sc26:yuzheng-wang"
+    },
+    {
+     "@id": "sc26:mingxing-zhang"
+    },
+    {
+     "@id": "sc26:chunwei-xia"
+    },
+    {
+     "@id": "sc26:yizhou-shan"
+    },
+    {
+     "@id": "sc26:huimin-cui"
+    },
+    {
+     "@id": "sc26:ting-cao"
+    },
+    {
+     "@id": "sc26:zheng-wang"
+    },
+    {
+     "@id": "sc26:xie-tao"
+    },
+    {
+     "@id": "sc26:chenxi-wang"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:llm-serving-efficiency"
+    },
+    {
+     "@id": "sc26:hardware-selection"
+    },
+    {
+     "@id": "sc26:heterogeneity-complexity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:serving-disaggregation"
+    },
+    {
+     "@id": "sc26:communication-aware-placement"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:llm-inference"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap753",
+   "@type": "Presentation",
+   "label": "How Much Can Large Language Models Optimize Job Management in HPC Systems?",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap753",
+   "partOf": [
+    {
+     "@id": "sc26:sess213"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:yiqin-dai"
+    },
+    {
+     "@id": "sc26:huize-zhang"
+    },
+    {
+     "@id": "sc26:yifu-gao"
+    },
+    {
+     "@id": "sc26:yong-dong"
+    },
+    {
+     "@id": "sc26:juan-chen"
+    },
+    {
+     "@id": "sc26:ruibo-wang"
+    },
+    {
+     "@id": "sc26:xinghua-cheng"
+    },
+    {
+     "@id": "sc26:yuhan-cai"
+    },
+    {
+     "@id": "sc26:zekai-li"
+    },
+    {
+     "@id": "sc26:chun-fan"
+    },
+    {
+     "@id": "sc26:kai-lu"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:resource-prediction"
+    },
+    {
+     "@id": "sc26:workflow-scheduling"
+    },
+    {
+     "@id": "sc26:ops-data-complexity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:llm-ops-assistant"
+    },
+    {
+     "@id": "sc26:context-retrieval"
+    },
+    {
+     "@id": "sc26:multi-agent-workflow"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:job-scheduler"
+    },
+    {
+     "@id": "sc26:ai-agents"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap681",
+   "@type": "Presentation",
+   "label": "ZOCheck: CPU-Shadow Checkpointing for Zeroth-Order LLM Fine-Tuning",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap681",
+   "partOf": [
+    {
+     "@id": "sc26:sess213"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:minqiu-sun"
+    },
+    {
+     "@id": "sc26:xin-huang"
+    },
+    {
+     "@id": "sc26:luanzheng-guo"
+    },
+    {
+     "@id": "sc26:nathan-r-tallent"
+    },
+    {
+     "@id": "sc26:kento-sato"
+    },
+    {
+     "@id": "sc26:dong-dai"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:failure-resilience"
+    },
+    {
+     "@id": "sc26:llm-training-scaling"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:resilient-campaign-execution"
+    },
+    {
+     "@id": "sc26:provenance-logging"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:distributed-training"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap285",
+   "@type": "Presentation",
+   "label": "Maze: A Distributed Framework for Large Language Model Agents",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap285",
+   "partOf": [
+    {
+     "@id": "sc26:sess213"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:jing-gu"
+    },
+    {
+     "@id": "sc26:zhuang-xing"
+    },
+    {
+     "@id": "sc26:yiheng-yang"
+    },
+    {
+     "@id": "sc26:bowen-lv"
+    },
+    {
+     "@id": "sc26:jiale-wang"
+    },
+    {
+     "@id": "sc26:shuo-yuan"
+    },
+    {
+     "@id": "sc26:zijin-chen"
+    },
+    {
+     "@id": "sc26:jin-zhao"
+    },
+    {
+     "@id": "sc26:pengfei-zuo"
+    },
+    {
+     "@id": "sc26:long-zheng"
+    },
+    {
+     "@id": "sc26:xiaofei-liao"
+    },
+    {
+     "@id": "sc26:hai-jin"
+    },
+    {
+     "@id": "sc26:qinbin-li"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:agent-job-execution"
+    },
+    {
+     "@id": "sc26:llm-serving-efficiency"
+    },
+    {
+     "@id": "sc26:underused-resources"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:agent-execution-layer"
+    },
+    {
+     "@id": "sc26:multi-stage-scheduling"
+    },
+    {
+     "@id": "sc26:gpu-sharing"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:ai-agents"
+    },
+    {
+     "@id": "sc26:llm-inference"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap276",
+   "@type": "Presentation",
+   "label": "Double-Precision Matrix Multiplication Emulation via Ozaki-II Scheme with FP8 Quantization",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap276",
+   "partOf": [
+    {
+     "@id": "sc26:sess225"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:yuki-uchino"
+    },
+    {
+     "@id": "sc26:katsuhisa-ozaki"
+    },
+    {
+     "@id": "sc26:toshiyuki-imamura"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:fp64-scarcity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:fp64-emulation"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:dense-linear-algebra"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap887",
+   "@type": "Presentation",
+   "label": "EmuGEMM: Fused Tensor Core Kernels for Precision Emulation in Matrix Multiplication",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap887",
+   "partOf": [
+    {
+     "@id": "sc26:sess225"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:denghui-lu"
+    },
+    {
+     "@id": "sc26:alexander-maeder"
+    },
+    {
+     "@id": "sc26:mathieu-luisier"
+    },
+    {
+     "@id": "sc26:alexandros-nikolaos-ziogas"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:fp64-scarcity"
+    },
+    {
+     "@id": "sc26:memory-bound-performance"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:fp64-emulation"
+    },
+    {
+     "@id": "sc26:mixed-precision"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:dense-linear-algebra"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap1104",
+   "@type": "Presentation",
+   "label": "Pushing the Limits of Structured Sparse GEMM on Hopper GPUs via Analytical Modeling",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap1104",
+   "partOf": [
+    {
+     "@id": "sc26:sess225"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:heng-shi"
+    },
+    {
+     "@id": "sc26:qiqi-gu"
+    },
+    {
+     "@id": "sc26:chenpeng-wu"
+    },
+    {
+     "@id": "sc26:xiaofeng-guan"
+    },
+    {
+     "@id": "sc26:sijie-wu"
+    },
+    {
+     "@id": "sc26:enmin-fan"
+    },
+    {
+     "@id": "sc26:guoqing-bao"
+    },
+    {
+     "@id": "sc26:jianguo-yao"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:memory-bound-performance"
+    },
+    {
+     "@id": "sc26:config-evaluation-cost"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:analytical-performance-model"
+    },
+    {
+     "@id": "sc26:autotuning"
+    },
+    {
+     "@id": "sc26:roofline-analysis"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:dense-linear-algebra"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    },
+    {
+     "@id": "sc26:llm-inference"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap1109",
+   "@type": "Presentation",
+   "label": "Towards Exascale Fully Relativistic Pseudopotential Density Functional Theory Calculations with Mixed-Precision Computation and Compressed Communication Using Residual-Based Subspace Iteration",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap1109",
+   "partOf": [
+    {
+     "@id": "sc26:sess225"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:nikhil-kodali"
+    },
+    {
+     "@id": "sc26:gourab-panigrahi"
+    },
+    {
+     "@id": "sc26:nishant-gupta"
+    },
+    {
+     "@id": "sc26:sundaresan-gourishanker"
+    },
+    {
+     "@id": "sc26:kartick-ramakrishnan"
+    },
+    {
+     "@id": "sc26:rudra-panch"
+    },
+    {
+     "@id": "sc26:sambit-das"
+    },
+    {
+     "@id": "sc26:vishwas-rao"
+    },
+    {
+     "@id": "sc26:phani-motamarri"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:fp64-scarcity"
+    },
+    {
+     "@id": "sc26:communication-scalability"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:mixed-precision"
+    },
+    {
+     "@id": "sc26:error-bounded-compression"
+    },
+    {
+     "@id": "sc26:mpi-parallelization"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:materials-workflows"
+    },
+    {
+     "@id": "sc26:leadership-facility"
+    },
+    {
+     "@id": "sc26:scientific-apps"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap297",
+   "@type": "Presentation",
+   "label": "What Bloats Your Floats? Right-Sizing Numerical Precision for Scientific Computing",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap297",
+   "partOf": [
+    {
+     "@id": "sc26:sess224"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:pratyai-mazumder"
+    },
+    {
+     "@id": "sc26:alexandru-calotoiu"
+    },
+    {
+     "@id": "sc26:marcin-copik"
+    },
+    {
+     "@id": "sc26:yakup-koray-budanaz"
+    },
+    {
+     "@id": "sc26:shriram-chandran"
+    },
+    {
+     "@id": "sc26:torsten-hoefler"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:fp64-scarcity"
+    },
+    {
+     "@id": "sc26:numerical-error"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:mixed-precision"
+    },
+    {
+     "@id": "sc26:design-space-exploration"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap282",
+   "@type": "Presentation",
+   "label": "LLM Agents Meet Lossy Compression: Benchmark, Demystify, and Optimize Across HPC Architectures",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap282",
+   "partOf": [
+    {
+     "@id": "sc26:sess224"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:changqing-li"
+    },
+    {
+     "@id": "sc26:sheng-di"
+    },
+    {
+     "@id": "sc26:kai-zhao"
+    },
+    {
+     "@id": "sc26:wenqian-dong"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:code-translation"
+    },
+    {
+     "@id": "sc26:ai-code-evaluation"
+    },
+    {
+     "@id": "sc26:performance-portability"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:domain-benchmark"
+    },
+    {
+     "@id": "sc26:multi-agent-workflow"
+    },
+    {
+     "@id": "sc26:repair-loop"
+    },
+    {
+     "@id": "sc26:error-bounded-compression"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:ai-agents"
+    },
+    {
+     "@id": "sc26:wafer-scale-systems"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap341",
+   "@type": "Presentation",
+   "label": "Scalable High-Fidelity Macromolecular Docking for GPU-Accelerated Supercomputers",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap341",
+   "partOf": [
+    {
+     "@id": "sc26:sess224"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:xiangyu-meng"
+    },
+    {
+     "@id": "sc26:peng-chen"
+    },
+    {
+     "@id": "sc26:mingzhen-li"
+    },
+    {
+     "@id": "sc26:jianmin-wang"
+    },
+    {
+     "@id": "sc26:sen-wang"
+    },
+    {
+     "@id": "sc26:guangming-tan"
+    },
+    {
+     "@id": "sc26:weile-jia"
+    },
+    {
+     "@id": "sc26:mohamed-wahib"
+    },
+    {
+     "@id": "sc26:tao-luo"
+    },
+    {
+     "@id": "sc26:xun-wang"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:hardware-selection"
+    },
+    {
+     "@id": "sc26:memory-bound-performance"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:analytical-performance-model"
+    },
+    {
+     "@id": "sc26:multi-stage-scheduling"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    },
+    {
+     "@id": "sc26:molecular-design"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap575",
+   "@type": "Presentation",
+   "label": "Bridging Precision and Performance Gaps: Scientific Computing on AI-Oriented Architectures",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap575",
+   "partOf": [
+    {
+     "@id": "sc26:sess224"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:weicheng-xue"
+    },
+    {
+     "@id": "sc26:kai-yang"
+    },
+    {
+     "@id": "sc26:yongxiang-liu"
+    },
+    {
+     "@id": "sc26:baisong-xu"
+    },
+    {
+     "@id": "sc26:dengdong-fan"
+    },
+    {
+     "@id": "sc26:xianglin-liu"
+    },
+    {
+     "@id": "sc26:yonghong-tian"
+    },
+    {
+     "@id": "sc26:pengxiang-xu"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:fp64-scarcity"
+    },
+    {
+     "@id": "sc26:hardware-selection"
+    },
+    {
+     "@id": "sc26:software-ecosystem-readiness"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:mixed-precision"
+    },
+    {
+     "@id": "sc26:portable-abstraction-layers"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:hpc-processors"
+    },
+    {
+     "@id": "sc26:scientific-apps"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap468",
+   "@type": "Presentation",
+   "label": "TETRIS-Q: Tiling-Based Effective Transient-Fault Reduction on Interleaved Superconducting Qubits",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap468",
+   "partOf": [
+    {
+     "@id": "sc26:sess223"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:marzio-vallero"
+    },
+    {
+     "@id": "sc26:gioele-casagranda"
+    },
+    {
+     "@id": "sc26:flavio-vella"
+    },
+    {
+     "@id": "sc26:paolo-rech"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:quantum-noise-fidelity"
+    },
+    {
+     "@id": "sc26:silent-data-corruption"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:resilient-campaign-execution"
+    },
+    {
+     "@id": "sc26:system-simulation"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:quantum-hpc-systems"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap495",
+   "@type": "Presentation",
+   "label": "The Anatomy of a Misprediction: Tracking Terrestrial and Orbital Radiation-Induced Errors in Systolic Arrays",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap495",
+   "partOf": [
+    {
+     "@id": "sc26:sess223"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:rafael-billig-tonetto"
+    },
+    {
+     "@id": "sc26:pedro-foletto-pimenta"
+    },
+    {
+     "@id": "sc26:abraham-chan"
+    },
+    {
+     "@id": "sc26:karthik-pattabiraman"
+    },
+    {
+     "@id": "sc26:fernando-fernandes-dos-santos"
+    },
+    {
+     "@id": "sc26:marcello-traiola"
+    },
+    {
+     "@id": "sc26:angeliki-kritikakou"
+    },
+    {
+     "@id": "sc26:paolo-rech"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:silent-data-corruption"
+    },
+    {
+     "@id": "sc26:failure-data-incomparability"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:fault-injection"
+    },
+    {
+     "@id": "sc26:error-propagation-modeling"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:hpc-processors"
+    },
+    {
+     "@id": "sc26:sciml-training"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap521",
+   "@type": "Presentation",
+   "label": "BitIR: Cross-Architecture Fault Injection for Resilience Analysis of Heterogeneous GPU Applications",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap521",
+   "partOf": [
+    {
+     "@id": "sc26:sess223"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:maisy-dunlavy"
+    },
+    {
+     "@id": "sc26:zhiling-lan"
+    },
+    {
+     "@id": "sc26:michael-papka"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:silent-data-corruption"
+    },
+    {
+     "@id": "sc26:failure-data-incomparability"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:fault-injection"
+    },
+    {
+     "@id": "sc26:comparative-benchmarking"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:hpc-processors"
+    },
+    {
+     "@id": "sc26:amd-gpu-systems"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap652",
+   "@type": "Presentation",
+   "label": "GPU Faults Across Cloud Providers: Characterization and Operational Insights at Scale",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap652",
+   "partOf": [
+    {
+     "@id": "sc26:sess223"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:kenneth-sebastian"
+    },
+    {
+     "@id": "sc26:devendra-ayalasomayajula"
+    },
+    {
+     "@id": "sc26:annu-jolly"
+    },
+    {
+     "@id": "sc26:rashi-motwani"
+    },
+    {
+     "@id": "sc26:abby-kuang"
+    },
+    {
+     "@id": "sc26:giorgio-di-guardia"
+    },
+    {
+     "@id": "sc26:aman-miryala"
+    },
+    {
+     "@id": "sc26:sivakumar-arayandi-thottakara"
+    },
+    {
+     "@id": "sc26:ranjitha-prasanna"
+    },
+    {
+     "@id": "sc26:satvir-kooner"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:failure-resilience"
+    },
+    {
+     "@id": "sc26:ops-data-complexity"
+    },
+    {
+     "@id": "sc26:failure-data-incomparability"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:failure-attribution"
+    },
+    {
+     "@id": "sc26:job-trace-analysis"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:ai-supercomputer"
+    },
+    {
+     "@id": "sc26:cloud-science-environments"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap134",
+   "@type": "Presentation",
+   "label": "LLM-PRISM: Characterizing Silent Data Corruption from Permanent GPU Faults in LLM Training",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap134",
+   "partOf": [
+    {
+     "@id": "sc26:sess228"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:abhishek-tyagi"
+    },
+    {
+     "@id": "sc26:saurabh-hukerikar"
+    },
+    {
+     "@id": "sc26:nirmal-saxena"
+    },
+    {
+     "@id": "sc26:yanxiang-huang"
+    },
+    {
+     "@id": "sc26:philip-shirvani"
+    },
+    {
+     "@id": "sc26:chung-hsuan-tung"
+    },
+    {
+     "@id": "sc26:yuhao-zhu"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:silent-data-corruption"
+    },
+    {
+     "@id": "sc26:silent-training-failures"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:fault-injection"
+    },
+    {
+     "@id": "sc26:system-simulation"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:distributed-training"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap186",
+   "@type": "Presentation",
+   "label": "COPPER: Improving DRAM Reliability with Low Overheads via Cooperative Parallelized Error-Correcting Codes",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap186",
+   "partOf": [
+    {
+     "@id": "sc26:sess228"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:runjin-wu"
+    },
+    {
+     "@id": "sc26:meng-zhang"
+    },
+    {
+     "@id": "sc26:you-zhou"
+    },
+    {
+     "@id": "sc26:xuda-zheng"
+    },
+    {
+     "@id": "sc26:tianwei-gui"
+    },
+    {
+     "@id": "sc26:runjie-yu"
+    },
+    {
+     "@id": "sc26:zeming-ma"
+    },
+    {
+     "@id": "sc26:aoxin-wei"
+    },
+    {
+     "@id": "sc26:changsheng-xie"
+    },
+    {
+     "@id": "sc26:fei-wu"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:silent-data-corruption"
+    },
+    {
+     "@id": "sc26:failure-resilience"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:resilient-campaign-execution"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:storage-memory-hierarchy"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap433",
+   "@type": "Presentation",
+   "label": "Temporal Modeling of Soft Error Propagation Using Dynamic Bayesian Networks",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap433",
+   "partOf": [
+    {
+     "@id": "sc26:sess228"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:ahmer-jamil"
+    },
+    {
+     "@id": "sc26:md-hasanur-rahman"
+    },
+    {
+     "@id": "sc26:bingzhe-li"
+    },
+    {
+     "@id": "sc26:xiaoyi-lu"
+    },
+    {
+     "@id": "sc26:guanpeng-li"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:silent-data-corruption"
+    },
+    {
+     "@id": "sc26:simulation-scale-limits"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:error-propagation-modeling"
+    },
+    {
+     "@id": "sc26:fault-injection"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:scientific-apps"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap435",
+   "@type": "Presentation",
+   "label": "Low-Overhead Silent Error Detection for Large Language Model Inference at Scale",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap435",
+   "partOf": [
+    {
+     "@id": "sc26:sess228"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:abdullah-naveed"
+    },
+    {
+     "@id": "sc26:mahina-sheikh"
+    },
+    {
+     "@id": "sc26:guanpeng-li"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:silent-data-corruption"
+    },
+    {
+     "@id": "sc26:observability-overhead"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:residual-monitoring"
+    },
+    {
+     "@id": "sc26:selective-measurement"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:llm-inference"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap117",
+   "@type": "Presentation",
+   "label": "PHANTOM: Phase-Aware Power Management for Energy-Efficient LLM Training",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap117",
+   "partOf": [
+    {
+     "@id": "sc26:sess227"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:qi-luo"
+    },
+    {
+     "@id": "sc26:kunlin-li"
+    },
+    {
+     "@id": "sc26:changxi-liu"
+    },
+    {
+     "@id": "sc26:dongsheng-wang"
+    },
+    {
+     "@id": "sc26:yun-chen"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:energy-performance-tradeoff"
+    },
+    {
+     "@id": "sc26:power-measurement-fidelity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:frequency-steering"
+    },
+    {
+     "@id": "sc26:rl-power-control"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:distributed-training"
+    },
+    {
+     "@id": "sc26:power-telemetry"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap347",
+   "@type": "Presentation",
+   "label": "Scalable and Efficient Simulation of LLM Training",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap347",
+   "partOf": [
+    {
+     "@id": "sc26:sess227"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:yicheng-feng"
+    },
+    {
+     "@id": "sc26:kin-hang-sew"
+    },
+    {
+     "@id": "sc26:yuetao-chen"
+    },
+    {
+     "@id": "sc26:kaiwen-chen"
+    },
+    {
+     "@id": "sc26:jingzong-li"
+    },
+    {
+     "@id": "sc26:tianyuan-wu"
+    },
+    {
+     "@id": "sc26:zheng-zhou"
+    },
+    {
+     "@id": "sc26:peng-cheng"
+    },
+    {
+     "@id": "sc26:chuan-wu"
+    },
+    {
+     "@id": "sc26:wei-wang"
+    },
+    {
+     "@id": "sc26:tsung-yi-ho"
+    },
+    {
+     "@id": "sc26:hong-xu"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:simulation-scale-limits"
+    },
+    {
+     "@id": "sc26:config-evaluation-cost"
+    },
+    {
+     "@id": "sc26:llm-training-scaling"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:system-simulation"
+    },
+    {
+     "@id": "sc26:workload-graph-prediction"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:distributed-training"
+    },
+    {
+     "@id": "sc26:hpc-network"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap448",
+   "@type": "Presentation",
+   "label": "Cross-Layer Energy Analysis of Multimodal Training on Grace Hopper Superchips",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap448",
+   "partOf": [
+    {
+     "@id": "sc26:sess227"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:mahmoud-ahmed"
+    },
+    {
+     "@id": "sc26:sameh-abdulah"
+    },
+    {
+     "@id": "sc26:olatunji-ruwase"
+    },
+    {
+     "@id": "sc26:sam-ade-jacobs"
+    },
+    {
+     "@id": "sc26:mathis-bode"
+    },
+    {
+     "@id": "sc26:mohamed-elhoseiny"
+    },
+    {
+     "@id": "sc26:david-e-keyes"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:energy-performance-tradeoff"
+    },
+    {
+     "@id": "sc26:memory-bound-performance"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:energy-profiling"
+    },
+    {
+     "@id": "sc26:cross-layer-tracing"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:distributed-training"
+    },
+    {
+     "@id": "sc26:hpc-processors"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap1162",
+   "@type": "Presentation",
+   "label": "Characterizing the Scalability and Performance of Large-Scale AI Training Under Multi-Tenancy",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap1162",
+   "partOf": [
+    {
+     "@id": "sc26:sess227"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:jacopo-raffi"
+    },
+    {
+     "@id": "sc26:thomas-pasquali"
+    },
+    {
+     "@id": "sc26:lorenzo-piarulli"
+    },
+    {
+     "@id": "sc26:filippo-spiga"
+    },
+    {
+     "@id": "sc26:marco-faltelli"
+    },
+    {
+     "@id": "sc26:andreas-herten"
+    },
+    {
+     "@id": "sc26:domenico-siracusa"
+    },
+    {
+     "@id": "sc26:daniele-de-sensi"
+    },
+    {
+     "@id": "sc26:flavio-vella"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:llm-training-scaling"
+    },
+    {
+     "@id": "sc26:network-congestion"
+    },
+    {
+     "@id": "sc26:benchmark-validity"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:comparative-benchmarking"
+    },
+    {
+     "@id": "sc26:system-simulation"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:distributed-training"
+    },
+    {
+     "@id": "sc26:hpc-network"
+    },
+    {
+     "@id": "sc26:ai-supercomputer"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap634",
+   "@type": "Presentation",
+   "label": "Practical HPCQC Integration with QDMI: A Real-Hardware Case Study with IQM Systems",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess234&id=pap634",
+   "partOf": [
+    {
+     "@id": "sc26:sess234"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:lukas-burgholzer"
+    },
+    {
+     "@id": "sc26:marcel-walter"
+    },
+    {
+     "@id": "sc26:patrick-hopf"
+    },
+    {
+     "@id": "sc26:alvaro-caride-tabares-sanchez"
+    },
+    {
+     "@id": "sc26:teemu-mattsson"
+    },
+    {
+     "@id": "sc26:bernd-hoffmann"
+    },
+    {
+     "@id": "sc26:noora-farkkila"
+    },
+    {
+     "@id": "sc26:daniel-bulmash"
+    },
+    {
+     "@id": "sc26:robert-wille"
+    },
+    {
+     "@id": "sc26:eric-mansfield"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:quantum-hpc-integration"
+    },
+    {
+     "@id": "sc26:vendor-dependence"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:quantum-resource-interface"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:quantum-hpc-systems"
+    },
+    {
+     "@id": "sc26:job-scheduler"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap662",
+   "@type": "Presentation",
+   "label": "End-to-End Modeling and Trace-Driven Replay for Hybrid Quantum-Classical Supercomputing",
+   "evidence": "qual",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess234&id=pap662",
+   "partOf": [
+    {
+     "@id": "sc26:sess234"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:ziming-zhao"
+    },
+    {
+     "@id": "sc26:tingting-li"
+    },
+    {
+     "@id": "sc26:zhaoxuan-li"
+    },
+    {
+     "@id": "sc26:xiaofei-yue"
+    },
+    {
+     "@id": "sc26:jiongchi-yu"
+    },
+    {
+     "@id": "sc26:jianwei-yin"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:quantum-hpc-integration"
+    },
+    {
+     "@id": "sc26:performance-diagnosis-gap"
+    },
+    {
+     "@id": "sc26:provenance-reproducibility"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:cross-layer-tracing"
+    },
+    {
+     "@id": "sc26:system-simulation"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:quantum-hpc-systems"
+    },
+    {
+     "@id": "sc26:workflow-systems"
+    }
+   ]
+  },
+  {
+   "@id": "sc26:pap943",
+   "@type": "Presentation",
+   "label": "A GPU-Accelerated and Geometry-Aware Quantum-Classical Framework for Optimized PES Scans with CUDA-Q",
+   "evidence": "num",
+   "url": "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess234&id=pap943",
+   "partOf": [
+    {
+     "@id": "sc26:sess234"
+    }
+   ],
+   "authoredBy": [
+    {
+     "@id": "sc26:panayiotis-christou"
+    },
+    {
+     "@id": "sc26:shuwen-kan"
+    },
+    {
+     "@id": "sc26:ying-mao"
+    }
+   ],
+   "addresses": [
+    {
+     "@id": "sc26:quantum-resource-scheduling"
+    },
+    {
+     "@id": "sc26:config-evaluation-cost"
+    }
+   ],
+   "proposes": [
+    {
+     "@id": "sc26:quantum-hpc-workflows"
+    },
+    {
+     "@id": "sc26:selective-measurement"
+    }
+   ],
+   "targets": [
+    {
+     "@id": "sc26:quantum-hpc-systems"
+    },
+    {
+     "@id": "sc26:molecular-design"
     }
    ]
   },

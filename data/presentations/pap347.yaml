@@ -1,0 +1,16 @@
+id: pap347
+type: Presentation
+kind: paper
+label: "Scalable and Efficient Simulation of LLM Training"
+session: sess227
+time: "10:52-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap347"
+authors: [yicheng-feng, kin-hang-sew, yuetao-chen, kaiwen-chen, jingzong-li, tianyuan-wu, zheng-zhou, peng-cheng, chuan-wu, wei-wang, tsung-yi-ho, hong-xu]
+addresses: [simulation-scale-limits, config-evaluation-cost, llm-training-scaling]
+proposes: [system-simulation, workload-graph-prediction]
+targets: [distributed-training, hpc-network]
+summary_ko: "기계학습 클러스터와 분산 학습이 커지며 시스템 거동의 추정과 외삽에 모의가 더 중요해짐. Echo는 장치마다의 실행 중 학습 워크로드를 현장 밖에서 기록해 장치 한 대로 GPU 1,000장 규모 학습의 실제 실행 그래프를 만들고, 이산 사건 네트워크 모의의 부담 없이 집합 통신을 추정하며, 한 장치에서 통신과 계산 커널이 겹칠 때의 느려짐을 모델링함."
+claims:
+  - "GPU 256장 클러스터에서 1,750억 파라미터 모델의 3차원 병렬 학습을 모의해 학습 스텝의 평균 오차가 8%임."
+  - "기존 모의기보다 오차가 약 3배 낮음."
+  - "모의는 3분 안에 끝남."

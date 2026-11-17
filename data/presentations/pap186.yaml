@@ -1,0 +1,16 @@
+id: pap186
+type: Presentation
+kind: paper
+label: "COPPER: Improving DRAM Reliability with Low Overheads via Cooperative Parallelized Error-Correcting Codes"
+session: sess228
+time: "10:52-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap186"
+authors: [runjin-wu, meng-zhang, you-zhou, xuda-zheng, tianwei-gui, runjie-yu, zeming-ma, aoxin-wei, changsheng-xie, fei-wu]
+addresses: [silent-data-corruption, failure-resilience]
+proposes: [resilient-campaign-execution]
+targets: [storage-memory-hierarchy, hpc-processors]
+summary_ko: "메모리의 미세화로 결함률이 올라 더 강하고 효율적인 오류 정정이 필요함. 메모리 칩 안의 부호와 메모리 제어기의 부호가 서로 조율되지 않아 저장, 신뢰성, 성능의 비용이 생김. COPPER는 칩 안의 부호가 찾은 오류 위치 단서를 제어기로 넘겨, 전송을 멈추지 않고 교차 확인과 복호를 병렬로 수행하는 협력 방식임."
+claims:
+  - "메모리 칩 면적 0.007%, CPU 면적 최대 0.001%만 더 듦."
+  - "저장 부담 19.5%에서 검출됐으나 정정 못 한 오류의 비율을 최대 15배, 조용한 데이터 손상률을 최대 430배 줄임."
+  - "결함률이 높을 때 기존 협력 방식보다 성능이 최대 2.1배 높음."

@@ -223,6 +223,9 @@ Method:
   carbon-aware-upgrade: {label: Carbon-aware hardware refresh, label_ko: 탄소를 고려한 장비 교체, group: 에너지·전력 제어}
   edge-cloud-routing: {label: Edge-cloud task routing, label_ko: 엣지와 클라우드 사이의 작업 분배, group: 스케줄링·자원 관리}
   mpi-rma-windows: {label: MPI one-sided communication and windows, label_ko: MPI 단방향 통신과 윈도 활용, group: 프로그래밍 모델·수치 기법}
+  error-propagation-modeling: {label: Error propagation modeling, label_ko: 오류·오차 전파 모델링, group: 검증·시험}
+  error-bounded-compression: {label: Error-bounded lossy compression, label_ko: 오차 한계 손실 압축, group: 데이터·입출력·네트워크}
+  serving-disaggregation: {label: Disaggregated and partitioned inference serving, label_ko: 추론 서빙의 분리와 자원 분할, group: 스케줄링·자원 관리}
 System:
   ai-supercomputer: {label: Multi-tenant AI supercomputer, label_ko: 멀티테넌트 AI 슈퍼컴퓨터, group: 계산 시설·클러스터}
   kubernetes-baremetal: {label: Kubernetes on bare metal, label_ko: 베어메탈 쿠버네티스, group: 계산 시설·클러스터}

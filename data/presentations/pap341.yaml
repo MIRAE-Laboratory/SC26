@@ -1,0 +1,16 @@
+id: pap341
+type: Presentation
+kind: paper
+label: "Scalable High-Fidelity Macromolecular Docking for GPU-Accelerated Supercomputers"
+session: sess224
+time: "09:15-09:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap341"
+authors: [xiangyu-meng, peng-chen, mingzhen-li, jianmin-wang, sen-wang, guangming-tan, weile-jia, mohamed-wahib, tao-luo, xun-wang]
+addresses: [hardware-selection, memory-bound-performance]
+proposes: [analytical-performance-model, multi-stage-scheduling]
+targets: [scientific-apps, hpc-processors, molecular-design]
+summary_ko: "유연한 거대분자 도킹은 정확하지만 대규모로 돌리기에는 너무 비쌈. 기존 도구는 병렬성이 제한되고 계산이 불규칙하며 부하 불균형이 심해 GPU 슈퍼컴퓨터에서 효율이 낮음. SparkleDock은 탐색 알고리즘을 개체 수준의 세밀한 병렬성이 드러나게 다시 설계하고, 지배적인 에너지 점수 계산을 구조화된 행렬 연산으로 바꿔 텐서 연산기에서 돌리며, 성능 모델 기반 스케줄링으로 부하를 맞춤."
+claims:
+  - "기존 도구 대비 A100 한 장에서 9.7배, H100 한 장에서 18.9배 빠름."
+  - "대규모에서는 두 자릿수 넘는 가속을 냄."
+  - "GPU 512장에서 도킹 시간이 시간 단위에서 초 단위로 줄어듦."

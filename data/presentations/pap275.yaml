@@ -1,0 +1,16 @@
+id: pap275
+type: Presentation
+kind: paper
+label: "ORCA: Steerable Observability for Bulk-Synchronous Parallel Applications"
+session: sess201
+time: "10:30-10:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap275"
+authors: [ankush-jain, sheng-jiang, charles-cranor, qing-zheng, brian-atkinson, george-amvrosiadis, gary-grider]
+addresses: [performance-diagnosis-gap, observability-overhead]
+proposes: [cross-layer-tracing, in-situ-reduction, experiment-steering]
+targets: [mpi-simulations, performance-tools]
+summary_ko: "대규모 과학 시뮬레이션과 기계학습 학습의 바탕인 대량 동기 병렬 응용은 프로세서 수만 개에서 돌아 작은 성능 변동을 진단하기 어려움. 방대한 추적을 사후에 분석하는 방식은 느리고 굳어 있음. ORCA는 운영자가 실행 중인 응용의 보기를 그때그때 만들고 조치할 수 있는 상시 관측 시스템으로, 트리 기반 오버레이로 수집, 현장 SQL 분석, 시간 단계 수준의 일관된 제어를 제공함."
+claims:
+  - "4,096 랭크의 적응 격자 코드에서 같은 추적을 약 2% 부담으로 수집함. 다른 방식은 56~81%임."
+  - "분석이 최대 7,275배 빠르고 현장 데이터 축소가 99.999%임."
+  - "LLM이 조향하는 평가에서, 수동으로 몇 달 걸렸던 성능 이상을 27분 만에 좁힘."

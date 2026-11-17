@@ -1,0 +1,17 @@
+id: pap496
+type: Presentation
+kind: paper
+label: "BlockMGARD: Accelerating Adaptive Scientific Data Reduction with Region-of-Interest Error Control on GPUs"
+session: sess203
+time: "15:52-16:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap496"
+authors: [yanliang-li, qian-gong, qing-liu, jaemoon-lee, norbert-podhorszki, scott-klasky, xin-liang, jieyang-chen]
+addresses: [data-deluge, gpu-io-path]
+proposes: [error-bounded-compression, in-situ-reduction]
+targets: [scientific-apps, hpc-processors]
+summary_ko: "다단계 분해를 쓰는 변환 기반 압축기는 압축률이 좋지만 GPU 구조에 잘 맞지 않음. BlockMGARD는 관심 영역의 오차를 따로 통제하는 적응형 GPU 손실 압축기로, GPU 내부 메모리와 상수 조회표를 쓰는 블록 분해, 블록과 전역 분해를 섞은 계층, 특징을 지키는 세밀한 오차 통제를 결합함."
+claims:
+  - "실제 데이터셋 다섯으로 평가함."
+  - "기존 MGARD-X 대비 압축 처리량이 최대 4.2배, 압축 해제 처리량이 최대 9.1배임."
+  - "관심 영역 오차 통제에서 균일 허용 오차 기준보다 압축률이 최대 8.63배 높음."
+  - "GPU 네 장에서 거의 선형으로 확장하고 입출력 비용을 최대 1.58배 줄임."

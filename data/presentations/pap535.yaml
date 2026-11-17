@@ -1,0 +1,15 @@
+id: pap535
+type: Presentation
+kind: paper
+label: "Constructing a Job-Centric Frontier Telemetry Dataset to Accelerate HPC Operations, Systems, and Energy Research"
+session: sess201
+time: "10:52-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap535"
+authors: [leah-huk, rachel-palumbo, woong-shin, tim-osborne, ryan-adamson, michael-sandoval, corwin-lester]
+addresses: [ops-data-complexity, power-measurement-fidelity]
+proposes: [standardized-run-metadata, job-trace-analysis, infrastructure-telemetry]
+targets: [ops-telemetry, leadership-facility, power-telemetry]
+summary_ko: "HPC 시스템을 분석하려면 워크로드의 실행과 시스템의 거동을 이어야 함. 지금은 노드 텔레메트리와 스케줄러 기록이 따로 수집·분석되어 어느 응용이 어느 데이터를 냈는지 가리는 데 수작업이 듦. 스케줄러의 작업 기록과 노드 수준 측정을 합쳐 워크로드마다 전력, 온도, 성능 특성을 붙인 작업 중심 데이터셋을 제시함."
+claims:
+  - "Frontier의 2년 치 운영을 담음."
+  - "수집, 정규화, 텔레메트리와 작업 메타데이터의 대응 절차를 설명하고, 데이터셋을 논문과 함께 공개할 계획임. 공개 초록에는 분석 수치가 없음."

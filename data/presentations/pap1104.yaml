@@ -1,0 +1,16 @@
+id: pap1104
+type: Presentation
+kind: paper
+label: "Pushing the Limits of Structured Sparse GEMM on Hopper GPUs via Analytical Modeling"
+session: sess225
+time: "14:15-14:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap1104"
+authors: [heng-shi, qiqi-gu, chenpeng-wu, xiaofeng-guan, sijie-wu, enmin-fan, guoqing-bao, jianguo-yao]
+addresses: [memory-bound-performance, config-evaluation-cost]
+proposes: [analytical-performance-model, autotuning, roofline-analysis]
+targets: [dense-linear-algebra, hpc-processors, llm-inference]
+summary_ko: "2:4 구조적 희소 행렬곱은 LLM 추론과 과학 계산에 도움이 되지만, 최신 GPU의 새 실행 기능이 설계 공간을 어떻게 바꾸는지 연구된 바 없음. 루프라인 한계, 캐시 재사용, 파이프라인 겹침을 담은 해석 모델을 구성 탐색의 길잡이로 삼고, 이를 따라 자동 튜닝된 커널을 만듦."
+claims:
+  - "H800 GPU에서 같은 문제 구성의 95가지 모양 중 80가지(84%)에서 벤더 라이브러리를 앞섬."
+  - "평균 속도 향상은 16.7%, 최대 1.4배임."
+  - "모델이 컴파일 전에 메모리 병목을 찾아 구성 공간을 좁혀 튜닝 비용을 줄임."

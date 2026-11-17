@@ -1,0 +1,16 @@
+id: pap264
+type: Presentation
+kind: paper
+label: "FluidGPU: Fine-Grained Kernel Disaggregation for Large Model Inference on Heterogeneous GPUs"
+session: sess213
+time: "13:30-13:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap264"
+authors: [tiancheng-hu, jin-qin, lei-chen, junhao-hu, yuzheng-wang, mingxing-zhang, chunwei-xia, yizhou-shan, huimin-cui, ting-cao, zheng-wang, xie-tao, chenxi-wang]
+addresses: [llm-serving-efficiency, hardware-selection, heterogeneity-complexity]
+proposes: [serving-disaggregation, communication-aware-placement]
+targets: [llm-inference, hpc-processors]
+summary_ko: "이기종 GPU에서 대형 모델 추론의 성능과 비용 효율을 높이는 커널 분할 시스템 FluidGPU를 제시함. 한 응용 안의 커널마다 자원 수요가 다르므로 커널이 계산과 하드웨어를 맞추기에 가장 알맞은 단위라고 봄. 오프라인 분석과 온라인 적응을 결합하고, 중간 표현에서 커널 간 의존을 정확히 뽑아 정확성을 지키며, 통신과 계산을 겹치는 파이프라인 실행을 씀."
+claims:
+  - "이기종 GPU 다섯 종, 모델 구조 넷, GPU 16장까지 평가함."
+  - "기존 분할 방식 대비 서빙 처리량이 최대 2.3배, 비용 효율이 최대 1.6배임."
+  - "이기종 GPU 한 쌍이 같은 고급 GPU 두 장의 처리량을 더 낮은 비용으로 넘을 수 있다고 보고함."

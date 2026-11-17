@@ -1,0 +1,15 @@
+id: pap495
+type: Presentation
+kind: paper
+label: "The Anatomy of a Misprediction: Tracking Terrestrial and Orbital Radiation-Induced Errors in Systolic Arrays"
+session: sess223
+time: "08:52-09:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap495"
+authors: [rafael-billig-tonetto, pedro-foletto-pimenta, abraham-chan, karthik-pattabiraman, fernando-fernandes-dos-santos, marcello-traiola, angeliki-kritikakou, paolo-rech]
+addresses: [silent-data-corruption, failure-data-incomparability]
+proposes: [fault-injection, error-propagation-modeling]
+targets: [hpc-processors, sciml-training]
+summary_ko: "자율주행차와 우주 시스템 같은 안전 필수 환경에서 AI 가속에 쓰이는 배열 장치의 신뢰성을 다룸. 기존 연구는 한 추상화 수준에서만 결함을 보아, 방사선이 일으킨 하드웨어 사건이 시스템 수준의 실패가 되는 과정을 보기 어려움. 결함을 실리콘의 발생 지점에서 AI 모델에 미치는 영향까지 따라가는 교차 계층 분석을 제안함."
+claims:
+  - "텐서 처리 장치를 중성자와 양성자 빔으로 지상과 궤도 환경의 가속 방사선에 노출함."
+  - "하드웨어 수준 모의와 소프트웨어 수준 결함 주입을 결합해 잘못된 예측에 이르는 오류 양상과 전파 기전을 식별함. 공개 초록에는 수치가 없음."

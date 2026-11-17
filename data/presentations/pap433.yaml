@@ -1,0 +1,15 @@
+id: pap433
+type: Presentation
+kind: paper
+label: "Temporal Modeling of Soft Error Propagation Using Dynamic Bayesian Networks"
+session: sess228
+time: "11:15-11:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap433"
+authors: [ahmer-jamil, md-hasanur-rahman, bingzhe-li, xiaoyi-lu, guanpeng-li]
+addresses: [silent-data-corruption, simulation-scale-limits]
+proposes: [error-propagation-modeling, fault-injection]
+targets: [scientific-apps, hpc-processors]
+summary_ko: "트랜지스터가 작아지며 일시 오류가 늘어 조용한 데이터 손상을 일으킴. 기존 해석 모델은 정적 가정을 써서 오류의 시간적 거동을 놓치고, 결함 주입은 최종 결과만 보여 줌. Hydra는 프로그램의 실행 추적에서 동적 베이즈 망을 만들어 손상된 값이 데이터 흐름, 제어 흐름, 메모리 의존을 따라 옮겨 가는 과정을 모델링함. 가려짐, 재활성, 여러 단계의 전파를 담음."
+claims:
+  - "다양한 벤치마크에서 예측한 손상 확률이 결함 주입 결과와 평균 절대 오차 2.2%포인트로 일치함."
+  - "반복 주입 없이 프로그램 수준의 손상 확률을 추정해 계산 비용을 크게 줄이고, 해석 가능한 전파 경로를 냄."

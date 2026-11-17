@@ -1,0 +1,17 @@
+id: pap282
+type: Presentation
+kind: paper
+label: "LLM Agents Meet Lossy Compression: Benchmark, Demystify, and Optimize Across HPC Architectures"
+session: sess224
+time: "08:52-09:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap282"
+authors: [changqing-li, sheng-di, kai-zhao, wenqian-dong]
+addresses: [code-translation, ai-code-evaluation, performance-portability]
+proposes: [domain-benchmark, multi-agent-workflow, repair-loop, error-bounded-compression]
+targets: [ai-agents, wafer-scale-systems, hpc-processors]
+summary_ko: "LLM 코딩 에이전트가 성능이 중요한 HPC 커널을 여러 가속기로 옮기고 최적화할 수 있는지 조사함. 기존 벤치마크는 대상 플랫폼에 맞는 코드를 쓰는 능력과 정확성을 지키며 처리량을 높이는 능력을 섞어 평가함. 이를 가르기 위해 과학용 손실 압축을 대상으로 세 가속기 환경, 커널 아홉, 응용 다섯의 벤치마크 SZ-BENCH를 제시함. 생성, 측정, 검증을 결합한 다중 에이전트 작업 흐름 SZ-GEN도 제안함."
+claims:
+  - "LLM 넷과 에이전트 작업 흐름 둘을 평가함."
+  - "GPU에서는 성능 편차가 크고, 처리 요소 중심의 웨이퍼 규모 대상에서는 일관되게 실패함."
+  - "추론 반복을 늘리면 결과가 나빠지는 경우가 많음."
+  - "SZ-GEN은 한 압축기의 GPU 구현에서 최대 30.05/190.32 GB/s에 이르러 기준을 앞서지만 탐색 반복이 더 듦."

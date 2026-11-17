@@ -1,0 +1,16 @@
+id: pap1017
+type: Presentation
+kind: paper
+label: "The Design and Organization of the El Capitan Center of Excellence for Application Readiness"
+session: sess201
+time: "11:37-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap1017"
+authors: [constantinos-makrides, j-austin-ellis, stephen-abbott, luke-roskop, michael-e-rowan, ramesh-pankajakshan, james-elliott, anna-pietarila-graham, david-f-richards, judith-c-hill, bronis-r-de-supinski]
+addresses: [site-deployment-effort, software-ecosystem-readiness, software-stack-drift]
+proposes: [community-governance]
+targets: [amd-gpu-systems, leadership-facility, scientific-apps]
+summary_ko: "미국의 첫 국가안보용 엑사스케일 시스템 El Capitan을 지원하는 응용 준비 조직을 다룸. 목표는 인도 첫날부터 응용이 통합 프로세서와 인터커넥트를 잘 쓰게 하고 이후에도 개선을 이어 가는 것임. 기술 범위, 참여 방식, 조직 구조를 설명하고 사례 다섯을 제시함."
+claims:
+  - "두 벤더의 엔지니어 8명이 세 국립연구소의 응용 약 20개를 지원함."
+  - "분기마다 합동 작업을 열었고 참가자가 50명을 넘기도 함."
+  - "소프트웨어와 하드웨어의 잦은 갱신 속에서 기능과 성능을 맞추느라 실험적 소프트웨어로 문제를 우회한 사례를 다룸. 공개 초록에는 성능 수치가 없음."

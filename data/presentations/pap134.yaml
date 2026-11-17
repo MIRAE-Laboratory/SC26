@@ -1,0 +1,17 @@
+id: pap134
+type: Presentation
+kind: paper
+label: "LLM-PRISM: Characterizing Silent Data Corruption from Permanent GPU Faults in LLM Training"
+session: sess228
+time: "10:30-10:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap134"
+authors: [abhishek-tyagi, saurabh-hukerikar, nirmal-saxena, yanxiang-huang, philip-shirvani, chung-hsuan-tung, yuhao-zhu]
+addresses: [silent-data-corruption, silent-training-failures]
+proposes: [fault-injection, system-simulation]
+targets: [distributed-training, hpc-processors]
+summary_ko: "대규모 LLM 학습은 제조 결함과 노화한 실리콘에서 오는 하드웨어 결함의 영향을 점점 더 받으며, 이는 학습 중 기울기와 파라미터를 바꾸는 조용한 데이터 손상을 일으킴. LLM-PRISM은 LLM 사전학습이 하드웨어 결함에 얼마나 견디는지 재는 방법으로, 회로 수준의 GPU 결함 모의와 학습 프레임워크에 넣은 무작위 결함 주입 엔진을 결합함."
+claims:
+  - "세 가지 수치 형식(FP16, BF16, FP8)에서 학습 7,664회를 수행함."
+  - "LLM은 빈도가 낮은 결함은 잘 견디지만 영향의 편차가 큼."
+  - "임계 데이터 경로의 결함과 일부 정밀도 형식은 보통 수준의 결함 빈도에서도 학습을 파국적으로 발산시킴."
+  - "사전학습의 손상 내성을 하드웨어에 근거해 특성화한 첫 연구라고 밝힘."

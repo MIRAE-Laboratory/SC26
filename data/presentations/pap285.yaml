@@ -1,0 +1,16 @@
+id: pap285
+type: Presentation
+kind: paper
+label: "Maze: A Distributed Framework for Large Language Model Agents"
+session: sess213
+time: "14:37-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap285"
+authors: [jing-gu, zhuang-xing, yiheng-yang, bowen-lv, jiale-wang, shuo-yuan, zijin-chen, jin-zhao, pengfei-zuo, long-zheng, xiaofei-liao, hai-jin, qinbin-li]
+addresses: [agent-job-execution, llm-serving-efficiency, underused-resources]
+proposes: [agent-execution-layer, multi-stage-scheduling, gpu-sharing]
+targets: [ai-agents, llm-inference]
+summary_ko: "LLM 에이전트가 단일 기계에서 대규모 다중 사용자 서비스로 옮겨 가면서, 사용자 요청 하나가 여러 종류의 작업이 섞인 긴 워크플로가 됨. 기존 에이전트 시스템은 자원을 고려하지 않고 굵게 배치하거나 에이전트 워크로드의 특성을 무시함. Maze는 에이전트의 논리를 작업 수준 배치에 잇는 분산 프레임워크로, 워크로드 특징과 가치 밀도 점수로 가치 있는 워크플로와 임계 작업을 앞세우는 스케줄러를 둠."
+claims:
+  - "최신 프레임워크 대비 처리량이 최대 2.9배임."
+  - "95분위 지연이 54.2% 줄고 GPU 사용률이 50% 오름."
+  - "추론 엔진의 탄력적 확장과 닫힌 고리 결함 허용을 포함함."

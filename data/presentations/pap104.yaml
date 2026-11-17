@@ -1,0 +1,15 @@
+id: pap104
+type: Presentation
+kind: paper
+label: "CoreFlow: Context-Centric Resource Management for LLM-Based Agentic Workflows"
+session: sess235
+time: "10:30-10:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess235&id=pap104"
+authors: [jianxiong-liao, tiannan-fu, ruibo-fan, zhenheng-tang, zhi-zhou, xu-chen, xiaowen-chu]
+addresses: [llm-serving-efficiency, agent-inference-cost, agent-job-execution]
+proposes: [serving-disaggregation, analytical-performance-model, agent-aware-memory]
+targets: [llm-inference, ai-agents]
+summary_ko: "여러 LLM 에이전트가 협업하는 워크플로에서는 서빙이 여러 단계의 문맥 주도 과정이 되어, 문맥 길이 분포가 크게 치우치고 에이전트마다 KV 캐시 재사용 양상이 다름. 기존 자원 관리는 이를 무시함. CoreFlow는 문맥 길이 변동과 캐시 재사용 불균형을 담는 계층적 성능 모델, 워크플로 수준 배분과 문맥 길이별 분할의 이중 최적화, 분할에 맞춘 적응형 캐시 관리로 구성됨."
+claims:
+  - "대표 워크플로에서 종단 지연을 57.6% 줄임."
+  - "워크플로 처리량을 63.1% 높임."

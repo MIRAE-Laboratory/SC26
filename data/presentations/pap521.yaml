@@ -1,0 +1,15 @@
+id: pap521
+type: Presentation
+kind: paper
+label: "BitIR: Cross-Architecture Fault Injection for Resilience Analysis of Heterogeneous GPU Applications"
+session: sess223
+time: "09:15-09:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap521"
+authors: [maisy-dunlavy, zhiling-lan, michael-papka]
+addresses: [silent-data-corruption, failure-data-incomparability]
+proposes: [fault-injection, comparative-benchmarking]
+targets: [hpc-processors, amd-gpu-systems]
+summary_ko: "GPU 신뢰성 연구는 대부분 한 구조만 다뤄, HPC에 쓰이는 여러 벤더의 GPU에서 결함이 어떻게 다르게 나타나는지 불분명함. BitIR은 세 벤더의 GPU에서 직접 비교할 수 있는 결과를 내는 결함 주입 틀로, 벤더별 변환 전의 중간 표현 수준에서 결정론적 결함을 넣어 각 벤더가 같은 비트 수준 교란을 받게 함."
+claims:
+  - "운영 시스템에서 대표 GPU 벤치마크로 대규모 주입을 수행하고 결과를 가려짐, 조용한 데이터 손상, 실패, 멈춤으로 분류함."
+  - "같은 결함이 벤더마다 다르게 거동함. 한 벤더는 대개 가리지만 새어 나오면 멈춤이 많고, 다른 벤더는 드러나는 실패가 많으며, 또 다른 벤더는 벤치마크와 결함 위치에 따라 조용한 손상과 실패 사이를 오감. 공개 초록에는 수치가 없음."

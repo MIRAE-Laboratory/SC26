@@ -1,0 +1,16 @@
+id: pap435
+type: Presentation
+kind: paper
+label: "Low-Overhead Silent Error Detection for Large Language Model Inference at Scale"
+session: sess228
+time: "11:37-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess228&id=pap435"
+authors: [abdullah-naveed, mahina-sheikh, guanpeng-li]
+addresses: [silent-data-corruption, observability-overhead]
+proposes: [residual-monitoring, selective-measurement]
+targets: [llm-inference]
+summary_ko: "대형 언어 모델이 도는 대규모 시스템에서 일시 오류는 결과를 조용히 손상시켜 출력 품질을 낮춤. 기존 보호는 너무 넓게 감시하거나 비싼 검사를 써서 실행 부담이 큼. TRACE는 결함이 났을 때 가장 정보가 많은 소수의 핵심 층을 찾아 추론 중 활성값 기반 징후 감시기를 두고, 학습된 모델이 출력의 손상 여부를 판정함."
+claims:
+  - "LLM 15개와 데이터셋 셋에서 평균 결함 검출 범위 95.3%를 냄."
+  - "실행 부담은 0.56%로, 기존 LLM 결함 허용 기법보다 6.1배 적음."
+  - "여러 비트 결함과 여러 데이터셋 프로파일링에서도 효과가 유지된다고 보고함."

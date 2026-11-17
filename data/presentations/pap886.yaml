@@ -1,0 +1,16 @@
+id: pap886
+type: Presentation
+kind: paper
+label: "From Error-Bounded to Fixed-Ratio: Efficient Sampling-Guided GPU Lossy Compression"
+session: sess203
+time: "16:37-17:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap886"
+authors: [bohan-zhang, yafan-huang, sheng-di, guanpeng-li]
+addresses: [data-deluge, memory-bound-performance]
+proposes: [error-bounded-compression, selective-measurement]
+targets: [scientific-apps, hpc-processors]
+summary_ko: "오차 한계 압축은 품질을 보장하지만 출력 크기를 예측할 수 없어 메모리 계획이 어렵고, 고정 비율 압축은 크기는 예측되나 오차를 통제하지 못함. MILIO는 차원 인지 표본 추출, 세밀한 비율 측정, 다중 스트림 동기화로 사용자가 정한 압축률을 맞추면서 오차 통제도 지원하는 GPU 압축 틀임."
+claims:
+  - "실제 과학 데이터셋 아홉에서 A100 한 장으로 압축 처리량 257.1 GB/s를 냄."
+  - "비슷한 압축률에서 cuZFP의 3.25배임."
+  - "여러 GPU에서 거의 최적으로 확장한다고 보고함. 다중 GPU의 수치는 초록에 없음."

@@ -1,0 +1,15 @@
+id: pap575
+type: Presentation
+kind: paper
+label: "Bridging Precision and Performance Gaps: Scientific Computing on AI-Oriented Architectures"
+session: sess224
+time: "09:37-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess224&id=pap575"
+authors: [weicheng-xue, kai-yang, yongxiang-liu, baisong-xu, dengdong-fan, xianglin-liu, yonghong-tian, pengxiang-xu]
+addresses: [fp64-scarcity, hardware-selection, software-ecosystem-readiness]
+proposes: [mixed-precision, portable-abstraction-layers]
+targets: [hpc-processors, scientific-apps]
+summary_ko: "저정밀 AI 가속기가 수치 견고성, 불규칙한 메모리 접근, 확장성을 요구하는 과학 워크로드를 받칠 수 있는지 묻는 사례 연구임. 텐서 중심의 AI 전용 처리 장치를 대상으로 정밀도, 실행, 메모리 계층의 병목을 식별하고, 이기종 실행, 혼합 정밀도 수치 기법, 계층적 메모리 관리, 통신과 계산의 겹침을 결합한 워크로드별 대응을 설계함."
+claims:
+  - "커널, 수치 솔버, 양자 모의, 몬테카를로 응용으로 평가함."
+  - "병목을 함께 다루면 수치 견고성, 견줄 만한 성능, 만족스러운 확장성에 이를 수 있다고 결론지음. 공개 초록에는 수치가 없음."

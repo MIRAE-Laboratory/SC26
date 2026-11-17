@@ -1,0 +1,15 @@
+id: pap662
+type: Presentation
+kind: paper
+label: "End-to-End Modeling and Trace-Driven Replay for Hybrid Quantum-Classical Supercomputing"
+session: sess234
+time: "13:52-14:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess234&id=pap662"
+authors: [ziming-zhao, tingting-li, zhaoxuan-li, xiaofei-yue, jiongchi-yu, jianwei-yin]
+addresses: [quantum-hpc-integration, performance-diagnosis-gap, provenance-reproducibility]
+proposes: [cross-layer-tracing, system-simulation]
+targets: [quantum-hpc-systems, workflow-systems]
+summary_ko: "혼합 양자-고전 응용은 HPC 노드, 모의기, 워크플로 런타임, 네트워크 서비스, 원격 양자 장치에 걸친 여러 단계의 워크플로로 돎. 임계 경로가 관측과 제어 방식이 맞지 않는 구성요소를 가로질러 결과를 재현, 비교, 외삽하기 어려움. QTrace는 통합 교차 계층 추적 형식과, 워크플로의 인과를 지키며 장치 지연, 스케줄링 정책, 신뢰성 효과를 바꿔 볼 수 있는 추적 기반 재생 엔진을 결합함."
+claims:
+  - "반복형과 적응형 워크로드를 모의기와 원격 장치 환경에서 평가함."
+  - "관측된 실행을 낮은 재생 오차로 재현하고, 장치 중심 지표가 놓치는 병목을 드러낸다고 보고함. 공개 초록에는 수치가 없음."

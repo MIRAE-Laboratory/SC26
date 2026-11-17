@@ -1,0 +1,14 @@
+id: pap276
+type: Presentation
+kind: paper
+label: "Double-Precision Matrix Multiplication Emulation via Ozaki-II Scheme with FP8 Quantization"
+session: sess225
+time: "13:30-13:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap276"
+authors: [yuki-uchino, katsuhisa-ozaki, toshiyuki-imamura]
+addresses: [fp64-scarcity]
+proposes: [fp64-emulation]
+targets: [dense-linear-algebra, hpc-processors]
+summary_ko: "많은 HPC 응용이 기대는 배정밀도 행렬곱을 저정밀 행렬 곱셈-누적 연산기로 구성하는 방법을 제안함. 한 계열의 방식은 정수와 부동소수점 구현이 같은 구조를 공유하지만, 다른 계열은 정수 구현만 있고 원래 알고리즘을 8비트 부동소수점 연산기에 바로 쓸 수 없음. 최근 구조에서 8비트 정수 성능이 줄어 정수에만 기대기 어려워, 8비트 부동소수점 연산기에서 도는 기법을 도입함."
+claims:
+  - "같은 연산기를 쓰는 기존 방식보다 계산 비용을 크게 줄인다고 보고함. 공개 초록에는 수치가 없음."

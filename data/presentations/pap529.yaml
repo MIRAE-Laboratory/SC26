@@ -1,0 +1,17 @@
+id: pap529
+type: Presentation
+kind: paper
+label: "TOPIQ: Statistical Error Propagation for Quantity-of-Interest Prediction Under Lossy Compression"
+session: sess203
+time: "16:15-16:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess203&id=pap529"
+authors: [youyuan-liu, bo-jiang, taolue-yang, sheng-di, robert-underwood, sian-jin]
+addresses: [trust-in-automated-decisions, data-deluge]
+proposes: [error-propagation-modeling, error-bounded-compression, compression-quality-prediction]
+targets: [scientific-apps, sci-foundation-models]
+summary_ko: "원소별 오차 한계는 지역 평균, 신경망 예측, 여러 필드에서 유도한 양 같은 하류 관심량으로 이어지지 않음. TOPIQ는 작은 압축 메타데이터로 관심량 수준의 편향과 불확실성을 예측하는 통계 틀임. 관심량을 기본 연산자로 나누고, 공간적 오차 상관과 오차 간 결합을 반영한 닫힌 형태의 전파 규칙을 적용함. 새 관심량은 연산자를 조합해 재학습 없이 지원함."
+claims:
+  - "메타데이터는 원본의 0.1% 미만임."
+  - "데이터셋 넷, 압축기 셋, 관심량 계열 넷, 오차 한계 여덟의 552가지 평가에서 93.1%가 잘 보정된 예측을 냄."
+  - "미리 계산한 메타데이터로 임의 영역의 불확실성을 직접 계산보다 56~402배 빠르게 구함."
+  - "AI 분석 파이프라인에 연결해 동적으로 조합되는 질의의 신뢰 구간을 내는 사례를 보임."

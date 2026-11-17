@@ -120,9 +120,9 @@ with open(X / "presentations.jsonl", "w", encoding="utf-8") as f:
                    summary_ko=p.get("summary_ko", ""), claims=[c if isinstance(c, str) else c.get("text", "") for c in p.get("claims") or []], evidence=evidence(p))
         f.write(json.dumps(rec, ensure_ascii=False, default=str) + "\n")
 nC = sum(len(v or {}) for v in concepts.values())
-(X / "AGENT.md").write_text(f"""# SC26 워크숍 지식그래프: 에이전트용 설명서
+(X / "AGENT.md").write_text(f"""# SC26 지식그래프: 에이전트용 설명서
 
-이 폴더는 SC26(2026년 11월, 시카고) 워크숍 {len(sessions)}개의 발표 {len(pres)}건을 정리한 지식그래프를 기계가 읽는 형식으로 담고 있음.
+이 폴더는 SC26(2026년 11월, 시카고) 워크숍과 논문 세션 {len(sessions)}개의 발표 {len(pres)}건을 정리한 지식그래프를 기계가 읽는 형식으로 담고 있음.
 주소: {BASE}export/ (뷰어는 {BASE})
 
 ## 먼저 알아 둘 것

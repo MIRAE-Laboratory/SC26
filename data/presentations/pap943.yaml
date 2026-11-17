@@ -1,0 +1,16 @@
+id: pap943
+type: Presentation
+kind: paper
+label: "A GPU-Accelerated and Geometry-Aware Quantum-Classical Framework for Optimized PES Scans with CUDA-Q"
+session: sess234
+time: "14:15-14:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess234&id=pap943"
+authors: [panayiotis-christou, shuwen-kan, ying-mao]
+addresses: [quantum-resource-scheduling, config-evaluation-cost]
+proposes: [quantum-hpc-workflows, selective-measurement]
+targets: [quantum-hpc-systems, molecular-design]
+summary_ko: "양자화학의 퍼텐셜 에너지 곡면 탐색처럼 묶음으로 도는 혼합 워크로드는 계수만 다른 구조적으로 유사한 해밀토니안을 많이 다룸. 기존 방식은 매개변수를 재사용하지만 양자-고전 자원을 고정해 두고 구조적 유사성을 무시함. OptiPESS는 가벼운 기하 인지 유사도 지표로 반복과 측정 예산을 거리에 따라 배분하고, 각 문제를 건너뛸지, 짧게 풀지, 완전히 최적화할지 예측하는 GPU 가속 런타임임."
+claims:
+  - "고전·양자 평가를 최대 78.3% 줄임."
+  - "실행 시간을 최대 74.8% 줄이면서 기준의 정확도를 유지함."
+  - "다중 GPU에서 거의 선형으로 확장함."

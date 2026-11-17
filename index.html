@@ -410,7 +410,7 @@
     const opt = ([id, l]) => `<div role="option" data-v="${esc(id)}" class="${id === v ? "on" : ""}">${esc(l)}</div>`;
     const tps = [...new Set(sessions.map((s) => s.topic || "그 밖"))];
     $("sess-menu").innerHTML = sessOptions.slice(0, 1 + themes.length).map(opt).join("") +
-      tps.map((t) => { const ss = sessions.filter((s) => (s.topic || "그 밖") === t); return `<details ${ss.some((s) => s.id === v) ? "open" : ""}><summary>${esc(t)} <small>${ss.length}개</small></summary>${ss.map((s) => opt([s.id, sTitle(s)])).join("")}</details>`; }).join("");
+      tps.map((t) => { const ss = sessions.filter((s) => (s.topic || "그 밖") === t); return `<details ${ss.some((s) => s.id === v) ? "open" : ""}><summary>${esc(t)} <small>${ss.length}개</small></summary>${ss.map((s) => opt([s.id, sTitle(s) + (s.kind === "Paper" ? " · 논문 세션" : "")])).join("")}</details>`; }).join("");
   };
   syncSessBtn();
   const setSession = (v) => { $("session").value = v; $("session").dispatchEvent(new Event("change")); };
@@ -860,8 +860,8 @@
     const ev = evCounts(), tp = topics(), days = {};
     sessions.forEach((s) => (days[s.date] = (days[s.date] || 0) + 1));
     const ins = overview.insights || {}, items = applyItems();
-    let h = `<div class="doc"><h2>SC26 워크숍 고찰 보고서</h2><p class="muted">세션 ${sessions.length}개 · 발표 ${presentations.length}건 · 기준일 ${esc((changelog[0] || {}).date || "")} · 근거는 공개 프로그램 페이지의 초록임</p><p><button id="print-view">이 보고서 인쇄·PDF 저장</button></p>` +
-      `<h3>1. 개요</h3><p>SC26의 워크숍 ${sessions.length}개(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 발표 ${presentations.length}건의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 지식그래프로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용이라는 세 관점을 기본으로 삼았음.</p>` +
+    let h = `<div class="doc"><h2>SC26 고찰 보고서</h2><p class="muted">세션 ${sessions.length}개 · 발표 ${presentations.length}건 · 기준일 ${esc((changelog[0] || {}).date || "")} · 근거는 공개 프로그램 페이지의 초록임</p><p><button id="print-view">이 보고서 인쇄·PDF 저장</button></p>` +
+      `<h3>1. 개요</h3><p>SC26의 워크숍과 논문 세션 ${sessions.length}개(${Object.entries(days).sort().map(([d, n]) => esc(d.slice(5)) + " " + n + "개").join(", ")})에서 공개된 발표 ${presentations.length}건의 초록을 읽고, 발표마다 다루는 문제, 제안 기법, 대상 시스템을 지식그래프로 정리한 뒤 세션을 가로질러 고찰을 도출함. 고찰은 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용이라는 세 관점을 기본으로 삼았음.</p>` +
       `<table class="ctable"><tr><th>주제</th><th>세션</th></tr>${tp.map((t) => `<tr><th>${esc(t)}</th><td>${sessions.filter((s) => topicOf(s) === t).map((s) => esc(sTitle(s))).join("<br>")}</td></tr>`).join("")}</table>` +
       `<p><b>근거의 한계.</b> 발표 ${presentations.length}건 가운데 수치를 제시한 것이 ${ev.num}건, 수치 없이 방법이나 입장을 설명한 것이 ${ev.qual}건, 공개 설명문이 없어 제목만 확인한 것이 ${ev.none}건임. 모든 내용은 초록에 근거하며 논문 전문과 현장 발표는 반영하지 않았음. 근거가 약한 항목은 본문에 따로 표시함.</p>` +
       ((overview.highlights || []).length ? `<p><b>핵심 수치.</b></p><ul>${overview.highlights.map((x) => `<li><b class="n">${esc(x.value)}</b> ${esc(x.label)}${cite([x.ref])}</li>`).join("")}</ul>` : "") +
@@ -884,8 +884,8 @@
       S.push([title, (n ? `<div class="big"><b>${esc(n)}</b><span>본문의 대표 수치</span></div>` : "") + (kick ? `<p class="lead2"><b>${esc(kick)}</b></p>` : "") + `<p class="lead2">${emph(o.text || "")}</p>` + evd(o.refs)]); };
     const heads = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((o) => { const v = numOf(o.text); return `<li>${esc(o.head)}${v ? ` <b class="n">${esc(v)}</b>` : ""}</li>`; }).join("")}</ul>`;
     const bullets = (arr, n) => `<ul class="${Math.min(arr.length, n) > 8 ? "c2" : ""}">${arr.slice(0, n).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`;
-    S.push(["", `<div class="s-title"><h2>SC26 워크숍 고찰</h2><p>세션 ${sessions.length}개 · 발표 ${presentations.length}건의 초록에서 도출</p><p class="muted">기준일 ${esc((changelog[0] || {}).date || "")}</p></div>`]);
-    S.push(["범위와 방법", `<ul><li>워크숍 ${sessions.length}개의 발표 ${presentations.length}건을 읽고, 다루는 문제·제안 기법·대상 시스템을 지식그래프로 정리함.</li><li>주제: ${esc(topics().join(", "))}</li><li>고찰 관점: 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용</li><li>근거: 수치를 제시한 발표 ${ev.num}건, 수치 없이 설명한 발표 ${ev.qual}건, 제목만 확인한 발표 ${ev.none}건. 모두 공개 초록 기준임.</li></ul>`]);
+    S.push(["", `<div class="s-title"><h2>SC26 고찰</h2><p>세션 ${sessions.length}개 · 발표 ${presentations.length}건의 초록에서 도출</p><p class="muted">기준일 ${esc((changelog[0] || {}).date || "")}</p></div>`]);
+    S.push(["범위와 방법", `<ul><li>워크숍과 논문 세션 ${sessions.length}개의 발표 ${presentations.length}건을 읽고, 다루는 문제·제안 기법·대상 시스템을 지식그래프로 정리함.</li><li>주제: ${esc(topics().join(", "))}</li><li>고찰 관점: 결정 주체와 기준, 시행착오와 조건, 한국 연구기관으로의 적용</li><li>근거: 수치를 제시한 발표 ${ev.num}건, 수치 없이 설명한 발표 ${ev.qual}건, 제목만 확인한 발표 ${ev.none}건. 모두 공개 초록 기준임.</li></ul>`]);
     if ((overview.highlights || []).length) S.push(["핵심 수치", `<div class="cards">${overview.highlights.map((x) => `<div class="card"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("")}</div>`]);
     themes.forEach((th, i) => {
       const secs = (th.sections || []).filter((s) => !/^한국 연구기관/.test(s.head)), kr = (th.sections || []).find((s) => /^한국 연구기관/.test(s.head));
@@ -1113,7 +1113,7 @@
         `<p><b>한국 기관 소속 발표자에서 이어지는 길</b> <small class="muted">· 공저 관계를 따라 가장 짧은 순</small></p>` + (paths.length ? `<ul>${paths.map((p) => `<li>${p.map((y) => `<span class="link" data-who="${esc(y)}">${esc(nmP(y))}</span> <small class="muted">${esc(orgsOf(y))}</small>`).join(" → ")} <span class="muted">· ${p.length - 1}단계</span></li>`).join("")}</ul>` : `<p class="muted">이 자료 안에서는 공저 관계로 이어지는 한국 기관 소속 발표자가 없음.</p>`) + `</div>`;
     }
     const pl = (a, sub, em) => `<li data-who="${esc(a)}"><span><b>${esc(nmP(a))}</b>${isKR(a) ? ` <span class="tagk">한국</span>` : ""}<small>${esc(sub)}</small></span><em>${esc(em)}</em></li>`;
-    return `<h2>인물과 협력 후보</h2><p class="note">같은 발표에 이름을 올린 관계(공저)와 세션 좌장 관계로 사람 사이의 연결을 본 것임. 이 워크숍들의 발표만 반영하므로 실제 협력 관계의 일부임. 이름을 고르면 그 사람에게 닿는 길이 나옴. "여러 세션"은 세 개 이상의 세션에 이름을 올린 사람, "한국"은 한국 기관 소속임.</p>` +
+    return `<h2>인물과 협력 후보</h2><p class="note">같은 발표에 이름을 올린 관계(공저)와 세션 좌장 관계로 사람 사이의 연결을 본 것임. 수록한 세션의 발표만 반영하므로 실제 협력 관계의 일부임. 이름을 고르면 그 사람에게 닿는 길이 나옴. "여러 세션"은 세 개 이상의 세션에 이름을 올린 사람, "한국"은 한국 기관 소속임.</p>` +
       `<p><input id="net-who" list="net-names" placeholder="이름을 입력하거나 고르기" value="${esc(netWho && nodes.has(netWho) ? nmP(netWho) : "")}"><datalist id="net-names">${names.map((a) => `<option value="${esc(nmP(a))}">`).join("")}</datalist></p>` + who +
       peopleLists() +
       `<h3>연구 그룹 <small class="muted">· 두 번 이상 함께 발표한 사람들을 이어 묶음, 발표 수 순</small></h3><div class="tw"><table class="ctable grp-t"><thead><tr><th>중심 인물</th><th>주요 기관</th><th>주로 다루는 개념</th><th>세션</th><th>인원</th><th>발표</th></tr></thead><tbody>` +
@@ -1148,7 +1148,7 @@
     ins.sort((a, b) => b[3] - a[3]);
     const ev = { num: 0, qual: 0, none: 0 }; ps.forEach((p) => ev[evOf(p)]++);
     const mx = Math.max(...tp.map((x) => x[1].length), 1);
-    return `<div class="doc wide"><h2>기관 프로필</h2><p class="note">기관을 고르면 그 기관 소속 저자가 참여한 발표를 바탕으로 무엇을 발표했는지, 어디에 집중하는지, 누구와 함께 하는지를 한 쪽으로 정리함. 이 워크숍들의 발표만 반영하며, 공동 저자의 소속을 따라 센 것이므로 주도 기관이 아닐 수도 있음. "특화"는 전체 평균보다 두 배 넘게 자주 다룬 개념임.</p>` +
+    return `<div class="doc wide"><h2>기관 프로필</h2><p class="note">기관을 고르면 그 기관 소속 저자가 참여한 발표를 바탕으로 무엇을 발표했는지, 어디에 집중하는지, 누구와 함께 하는지를 한 쪽으로 정리함. 수록한 세션의 발표만 반영하며, 공동 저자의 소속을 따라 센 것이므로 주도 기관이 아닐 수도 있음. "특화"는 전체 평균보다 두 배 넘게 자주 다룬 개념임.</p>` +
       `<p><select id="orgp-sel">${list.map(([o, v]) => `<option value="${esc(o)}" ${o === orgSel ? "selected" : ""}>${esc(nodes.get(o).label)} (${v.length})${KR.has(o) ? " · 한국" : ""}</option>`).join("")}</select> <button id="print-view">이 화면 인쇄</button></p>` +
       `<h3>${esc(name)}${KR.has(orgSel) ? ` <span class="tagk">한국</span>` : ""}</h3><div class="cards" style="max-width:46em"><div class="card" ${cellAttr(name, "이 기관 소속 저자가 참여한 발표", ps)}><b>${ps.length}</b><span>발표 (누르면 목록)</span></div><div class="card"><b>${ss.length}</b><span>세션: ${esc(ss.map(sNum).sort().join(", "))}</span></div><div class="card"><b>${mem.length}</b><span>발표에 참여한 인물</span></div><div class="card"><b>${ev.num}</b><span>수치를 제시한 발표</span></div></div>` +
       `<h3>주제별 발표</h3>${tp.map(([t, v]) => `<div class="bar-row" ${cellAttr(name + " · " + t, "주제별 발표", v)} style="cursor:pointer"><span>${esc(t)}</span><span class="bar"><i style="width:${(100 * v.length) / mx}%"></i></span><span>${v.length}</span></div>`).join("")}` +

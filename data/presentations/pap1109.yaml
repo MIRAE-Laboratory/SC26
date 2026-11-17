@@ -1,0 +1,17 @@
+id: pap1109
+type: Presentation
+kind: paper
+label: "Towards Exascale Fully Relativistic Pseudopotential Density Functional Theory Calculations with Mixed-Precision Computation and Compressed Communication Using Residual-Based Subspace Iteration"
+session: sess225
+time: "14:37-15:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess225&id=pap1109"
+authors: [nikhil-kodali, gourab-panigrahi, nishant-gupta, sundaresan-gourishanker, kartick-ramakrishnan, rudra-panch, sambit-das, vishwas-rao, phani-motamarri]
+addresses: [fp64-scarcity, communication-scalability]
+proposes: [mixed-precision, error-bounded-compression, mpi-parallelization]
+targets: [materials-workflows, leadership-facility, scientific-apps]
+summary_ko: "비공선 자성이나 강한 스핀 궤도 결합을 가진 물질의 모의는 2성분 스피너가 필요해 일반 밀도범함수 계산보다 훨씬 비쌈. GPU 중심의 엑사스케일 유한요소 틀을 제시하며, 잔차 기반 체비쇼프 필터 부분공간 반복법으로 부정확한 행렬-다중벡터 곱을 허용하고 블록 부동소수점으로 MPI 통신을 압축함."
+claims:
+  - "통신 데이터를 배정밀도 대비 4~6.4배 압축하면서 배정밀도의 견고함을 유지함."
+  - "Aurora와 Frontier에서 강한 확장을 보이고 체비쇼프 필터가 최대 3.4배 빠름."
+  - "Aurora에서 자기 일관장 풀이 전체 시간이 2배 줄어듦."
+  - "800노드(GPU 9,600장)에서 전자 약 80,000개의 완전 상대론적 계산이 반복당 7분 안에 끝남."

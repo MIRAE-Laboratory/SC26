@@ -1,0 +1,15 @@
+id: pap468
+type: Presentation
+kind: paper
+label: "TETRIS-Q: Tiling-Based Effective Transient-Fault Reduction on Interleaved Superconducting Qubits"
+session: sess223
+time: "08:30-08:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap468"
+authors: [marzio-vallero, gioele-casagranda, flavio-vella, paolo-rech]
+addresses: [quantum-noise-fidelity, silent-data-corruption]
+proposes: [resilient-campaign-execution, system-simulation]
+targets: [quantum-hpc-systems]
+summary_ko: "외부 방사선은 한 기판 위 여러 큐비트에 상관된 결함을 일으켜 양자 오류 정정 부호를 무력화할 수 있음. TETRIS-Q는 기판 수준의 포논 차단 구조와 평면 격자 타일링 알고리즘에 의한 오류 정정 부호의 교차 배치를 결합함."
+claims:
+  - "여러 차단 구조와 교차 배치 구성에서 방사선 유발 일시 결함을 모의함."
+  - "오류 정정 부호의 실행이나 복호 시간에 추가 비용이 없다고 보고함. 공개 초록에는 수치가 없음."

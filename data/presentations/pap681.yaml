@@ -1,0 +1,16 @@
+id: pap681
+type: Presentation
+kind: paper
+label: "ZOCheck: CPU-Shadow Checkpointing for Zeroth-Order LLM Fine-Tuning"
+session: sess213
+time: "14:15-14:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess213&id=pap681"
+authors: [minqiu-sun, xin-huang, luanzheng-guo, nathan-r-tallent, kento-sato, dong-dai]
+addresses: [failure-resilience, llm-training-scaling]
+proposes: [resilient-campaign-execution, provenance-logging]
+targets: [distributed-training]
+summary_ko: "영차 최적화는 적은 메모리로 LLM을 미세조정하지만 결함 허용은 거의 연구되지 않았음. 진행을 시드와 스칼라의 작은 기록으로 남길 수 있어 복구가 가능하나, 기록만 재생하면 비용이 학습과 함께 늘고 지름길 재생은 부동소수점 실행 경로를 정확히 재현하지 못함. ZOCheck는 CPU 그림자 프로세스가 기록된 갱신을 계속 재생해 GPU의 주 경로 밖에서 일관된 복구 이미지를 만들어 비동기로 저장함."
+claims:
+  - "비동기 전체 상태 체크포인트 대비 체크포인트 부담이 최대 219.7배 줄어듦."
+  - "복구 지연이 평균 1.55배 나아짐."
+  - "종단 낭비 시간이 최대 21.3배 줄고, 정확한 복구 거동을 유지함."

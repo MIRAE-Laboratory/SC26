@@ -1,0 +1,15 @@
+id: pap819
+type: Presentation
+kind: paper
+label: "Prefill-Decode Aggregation or Disaggregation? Unifying Both for Goodput-Optimized LLM Serving"
+session: sess235
+time: "11:15-11:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess235&id=pap819"
+authors: [chao-wang, pengfei-zuo, zhangyu-chen, yunkai-liang, zhou-yu, ming-chang-yang]
+addresses: [llm-serving-efficiency, benchmark-validity]
+proposes: [serving-disaggregation, multi-stage-scheduling]
+targets: [llm-inference]
+summary_ko: "LLM 서빙에서 프리필과 디코드를 한 인스턴스에 두는 통합형과 나누는 분리형을 비교함. 첫 토큰 시간과 토큰 간 시간의 두 지연 목표 아래, 통합형은 첫 토큰 목표가 빡빡할 때, 분리형은 반대일 때 낫고, 목표가 균형이면 둘 다 목표 충족 처리량에서 크게 뒤처짐. 원인은 쓰이지 않는 지연 여유로, 많은 요청이 목표보다 훨씬 일찍 끝나는 동안 다른 요청은 위반 직전임. 요청과 단계 사이에서 여유를 옮기는 원칙을 제안하고 혼합 방식 서빙 시스템 TaiChi로 구현함."
+claims:
+  - "최신 통합형·분리형 시스템 대비 목표 충족 처리량이 최대 40% 높음."
+  - "90분위 첫 토큰 시간을 최대 5.3배, 90분위 토큰 간 시간을 최대 1.6배 줄임."

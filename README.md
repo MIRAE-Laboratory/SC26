@@ -91,6 +91,19 @@ claims:
 - (143) ExaMPI26: Workshop on Extreme-Scale MPI (2026-11-16)
 - (151) Eighth Workshop on Interactive and Urgent High Performance Computing (2026-11-20)
 
+본 학회 논문 세션 (워크숍과 구분해 `kind: Paper`로 기록)
+
+- (201) Observability and Operational Intelligence for Leadership Systems (2026-11-17)
+- (203) Trustworthy GPU Lossy Compression (2026-11-17)
+- (235) Papers in Conversation: AI Inference Becomes an HPC Systems Problem (2026-11-18)
+- (213) LLM Systems: Inference, Agents, and HPC Operations (2026-11-18)
+- (225) Precision Engineering for Matrix Computation (2026-11-18)
+- (224) Adapting Scientific Computing to AI-Oriented Accelerators (2026-11-19)
+- (223) Fault Injection and Resilience Across Emerging Platforms (2026-11-19)
+- (228) Detecting and Containing Silent Errors (2026-11-19)
+- (227) Energy and Contention in Large-Scale AI Training (2026-11-19)
+- (234) Papers in Conversation: Quantum–HPC Integration Moves to Real Systems (2026-11-19)
+
 프로그램 페이지를 열지 못해 제목과 저자만 기록한 발표: `ws_hust101`, `ws_p3hpc125`, `ws_corr114`. 공개된 설명이 없는 초청 강연과 패널도 제목과 연사만 기록했습니다.
 
 ## 화면 구성

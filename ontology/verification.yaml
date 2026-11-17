@@ -26,6 +26,7 @@ targets:    # 검증 대상
   surrogate: {label: 신경망 대리모델, parent: ai-model}
   fm-rollout: {label: 파운데이션 모델의 연속 예측, parent: ai-model}
   training-run: {label: 대규모 학습 작업, parent: ai-model}
+  inference-run: {label: 대규모 LLM 추론, parent: ai-model}
   agent: {label: 에이전트}
   agent-action: {label: 에이전트의 도구 호출과 제어 행동, parent: agent}
   agent-answer: {label: 에이전트의 답과 인용, parent: agent}
@@ -39,6 +40,7 @@ targets:    # 검증 대상
   platform: {label: 시스템 플랫폼}
   node-perf: {label: 노드와 소프트웨어 스택의 성능, parent: platform}
   hardware-fault: {label: 하드웨어 결함 거동, parent: platform}
+  memory-hw: {label: 메모리 장치, parent: platform}
 
 failures:   # 실패 유형
   visible: {label: 스스로 드러나는 실패}
@@ -109,6 +111,8 @@ methods:
   runtime-monitor: {label: 실행 중 감시}
   exec-guard: {label: 모델 밖의 결정론적 실행 검사와 중재, parent: runtime-monitor, det: true, assurance: runtime, requires: [policy], applies: [agent], kg: [execution-integrity-guard, runtime-sandbox]}
   residual-monitor: {label: 실측과의 잔차 감시, parent: runtime-monitor, det: true, assurance: runtime, requires: [live-sensor], applies: [ai-model], kg: [residual-monitoring]}
+  symptom-monitor: {label: 핵심 층의 활성값 징후 감시, parent: runtime-monitor, det: true, assurance: runtime, requires: [fault-set], applies: [ai-model], kg: [residual-monitoring]}
+  ecc: {label: 오류 정정 부호, parent: runtime-monitor, det: true, assurance: runtime, requires: [], applies: [platform]}
   fp-exception: {label: 부동소수점 예외 검출, parent: runtime-monitor, det: true, assurance: runtime, requires: [], applies: [code], kg: [fp-exception-detection]}
   checksum: {label: 물리 기반 체크섬, parent: runtime-monitor, det: true, assurance: runtime, requires: [physics-eq], applies: [code]}
   run-evidence: {label: 실행 증거 남기기(재생 가능한 기록), parent: runtime-monitor, det: true, assurance: runtime, requires: [exec-log], applies: [code, ai-model, agent, workflow], kg: [provenance-logging]}
@@ -158,6 +162,10 @@ cases:
   - {pres: ws_ftxs104, target: sci-app, method: checksum, failure: sdc, outcome: caught, note: 물리 기반 체크섬이 노드에서 손상을 잡음}
   - {pres: ws_ftxs106, target: training-run, method: fault-injection, failure: sdc, outcome: used, note: 정밀도를 낮춘 모델의 비트 반전 민감도 조사}
   - {pres: ws_hpct102, target: hardware-fault, method: fault-injection, failure: sdc, outcome: partial, note: 결과 레이블이 같아도 플랫폼마다 동작이 다름}
+  - {pres: pap134, target: training-run, method: fault-injection, failure: sdc, outcome: used, note: 학습 7,664회에 결함을 주입해 내성을 특성화함. 검출 수단은 제시하지 않음}
+  - {pres: pap435, target: inference-run, method: symptom-monitor, failure: sdc, outcome: caught, note: LLM 15개에서 평균 검출 범위 95.3%, 실행 부담 0.56%}
+  - {pres: pap186, target: memory-hw, method: ecc, failure: sdc, outcome: partial, note: 두 층의 부호를 협력시켜 조용한 손상률을 최대 430배 줄임}
+  - {pres: pap521, target: hardware-fault, method: fault-injection, failure: sdc, outcome: partial, note: 같은 결함이 세 벤더의 GPU에서 다르게 거동함}
   - {pres: ws_hpct108, target: compiler, method: compile-run, failure: wrong-result, outcome: missed, note: 조용히 틀린 답 15개의 42%가 컴파일·실행 시험을 통과}
   - {pres: ws_hpct108, target: compiler, method: output-compare, failure: wrong-result, outcome: caught, note: 운영 중인 유동 해석 코드를 시험 도구로 써서 결함 45개 발견}
   - {pres: ws_hpct110, target: node-perf, method: continuous-bench, failure: regression, outcome: caught, note: 사양이 같은 노드 사이 편차 5%}
@@ -182,6 +190,7 @@ observed:
   - {pres: ws_aaihpc146, target: agent-answer, failure: ungrounded, note: 사실을 가장 많이 찾는 구성이 답할 수 없는 질문을 가장 적게 거절}
   - {pres: ws_pmbss101, target: benchmark-score, failure: measure-error, note: 종합 점수가 단계별 관계를 가림}
   - {pres: ws_exampi107, target: benchmark-score, failure: measure-error, note: 자동 튜닝의 벤치마크가 제약 때문에 조용히 대체된 다른 알고리즘을 측정함}
+  - {pres: pap908, target: agent-answer, failure: ungrounded, note: 통찰을 내는 과제에서는 조율을 더해도 신뢰도가 오르지 않음}
   - {pres: ws_corr_sh101, target: parallel-comm, failure: concurrency, note: 통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건}
   - {pres: ws_pmbsf137, target: node-perf, failure: regression, note: 사양이 같은 장치의 에너지가 36.9% 차이}
   - {pres: ws_tpw120, target: llm-proposal, failure: ungrounded, note: 새 발견을 끝까지 스스로 검증한 시스템이 없음}
@@ -210,14 +219,14 @@ process:
 findings:
   new:
     - 대규모 학습 작업의 "정상으로 보이는 실패"는 잡았다고 보고한 수단이 하나도 없음. 실행 확인은 놓쳤고, 기록과 재생은 제안 단계이며, 다른 발표는 같은 실패를 겪었다고만 보고함. 이 범위에서 가장 뚜렷한 빈칸임.
-    - 말단 실패 유형 18개 가운데 12개는 잡았다고 보고된 수단이 한 가지뿐임. 고찰에서는 "단일 방어선은 버티지 못함"을 사례 셋으로 적었으나, 구조로 보면 단일 방어선이 예외가 아니라 일반적인 상태임.
+    - 말단 실패 유형 18개 가운데 11개는 잡았다고 보고된 수단이 한 가지뿐임. 고찰에서는 "단일 방어선은 버티지 못함"을 사례 셋으로 적었으나, 구조로 보면 단일 방어선이 예외가 아니라 일반적인 상태임.
     - 전제 자산별로 보면 "사람이 검토한 명세"가 가장 많은 실패 유형(5종)을 잡는 수단들의 전제임. "기준 출력"은 수단 셋이 요구하지만 잡은 실패는 "조용히 틀린 결과" 한 종류뿐임. 적용 제안에서는 기준 출력의 정비를 앞세웠는데, 넓이로는 명세와 수용 기준을 적어 두는 일이 더 큼.
     - AI가 생성·변환한 코드의 조용한 오류에는 수단 일곱 가지가 쓰였으나 모두 시험한 입력에서만 성립하거나 판단에 의존하는 보증임. 정한 범위 전체를 보증하는 수단(계약 검사, 모델 검사)은 사람이 쓴 수치 라이브러리와 응용 코드에서만 보고됨.
-    - 옮겨 볼 만한 조합 둘이 나옴. 응용 코드에서 교착과 경합을 잡은 모델 검사를 병렬 통신 프로그램에, 에이전트의 위조 인용을 막은 모델 밖 실행 검사를 LLM의 과학적 제안에 적용하는 것임.
+    - 옮겨 볼 만한 조합 셋이 나옴. 응용 코드에서 교착과 경합을 잡은 모델 검사를 병렬 통신 프로그램에, 에이전트의 위조 인용을 막은 모델 밖 실행 검사를 LLM의 과학적 제안에, LLM 추론에서 조용한 손상을 잡은 활성값 징후 감시를 대규모 학습 작업에 적용하는 것임. 셋째는 본 학회 논문 세션을 넣은 뒤에 새로 나온 조합으로, 학습 쪽은 결함 주입에 의한 특성화만 있고 검출 수단의 보고가 없음.
   known:
     - 컴파일과 실행 성공 확인이 네 가지 실패 유형을 놓친다는 것(Q1)은 심층 요약의 "실행 성공은 다섯 가지 방식으로 틀릴 수 있음"과 같은 내용임.
     - LLM 판정, 프롬프트 지시, 계보 기록이 놓친 것을 다른 수단이 잡았다는 것(Q4의 대부분)도 고찰과 쟁점 대조표에 이미 있음.
   limits:
-    - 사례 51건, 근거 발표 39건의 작은 온톨로지임. "보고 없음"은 공개 초록 요약에 없다는 뜻이며 그런 연구가 없다는 뜻이 아님.
+    - 사례 55건, 근거 발표 45건의 작은 온톨로지임. "보고 없음"은 공개 초록 요약에 없다는 뜻이며 그런 연구가 없다는 뜻이 아님.
     - 대상, 실패 유형, 결과의 판정은 한 사람이 초록 요약을 읽고 내린 것임. 다른 사람이 하면 달라질 수 있음.
     - 도출 규칙은 파이썬으로 구현했고 OWL 추론기는 쓰지 않았음. Turtle 파일은 문법 검사기로 확인하지 못했음.

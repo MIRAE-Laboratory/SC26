@@ -38,6 +38,16 @@ sessions:
   - sessions/sess157.yaml
   - sessions/sess143.yaml
   - sessions/sess151.yaml
+  - sessions/sess201.yaml
+  - sessions/sess203.yaml
+  - sessions/sess235.yaml
+  - sessions/sess213.yaml
+  - sessions/sess225.yaml
+  - sessions/sess224.yaml
+  - sessions/sess223.yaml
+  - sessions/sess228.yaml
+  - sessions/sess227.yaml
+  - sessions/sess234.yaml
 presentations:
   - presentations/ws_shpc101.yaml
   - presentations/ws_shpc102.yaml
@@ -411,3 +421,41 @@ presentations:
   - presentations/ws_ius101.yaml
   - presentations/misc177.yaml
   - presentations/miscp117.yaml
+  - presentations/pap275.yaml
+  - presentations/pap535.yaml
+  - presentations/pap908.yaml
+  - presentations/pap1017.yaml
+  - presentations/pap332.yaml
+  - presentations/pap496.yaml
+  - presentations/pap529.yaml
+  - presentations/pap886.yaml
+  - presentations/pap104.yaml
+  - presentations/pap132.yaml
+  - presentations/pap819.yaml
+  - presentations/pap264.yaml
+  - presentations/pap753.yaml
+  - presentations/pap681.yaml
+  - presentations/pap285.yaml
+  - presentations/pap276.yaml
+  - presentations/pap887.yaml
+  - presentations/pap1104.yaml
+  - presentations/pap1109.yaml
+  - presentations/pap297.yaml
+  - presentations/pap282.yaml
+  - presentations/pap341.yaml
+  - presentations/pap575.yaml
+  - presentations/pap468.yaml
+  - presentations/pap495.yaml
+  - presentations/pap521.yaml
+  - presentations/pap652.yaml
+  - presentations/pap134.yaml
+  - presentations/pap186.yaml
+  - presentations/pap433.yaml
+  - presentations/pap435.yaml
+  - presentations/pap117.yaml
+  - presentations/pap347.yaml
+  - presentations/pap448.yaml
+  - presentations/pap1162.yaml
+  - presentations/pap634.yaml
+  - presentations/pap662.yaml
+  - presentations/pap943.yaml

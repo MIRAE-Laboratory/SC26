@@ -1,0 +1,16 @@
+id: pap652
+type: Presentation
+kind: paper
+label: "GPU Faults Across Cloud Providers: Characterization and Operational Insights at Scale"
+session: sess223
+time: "09:37-10:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess223&id=pap652"
+authors: [kenneth-sebastian, devendra-ayalasomayajula, annu-jolly, rashi-motwani, abby-kuang, giorgio-di-guardia, aman-miryala, sivakumar-arayandi-thottakara, ranjitha-prasanna, satvir-kooner]
+addresses: [failure-resilience, ops-data-complexity, failure-data-incomparability]
+proposes: [failure-attribution, job-trace-analysis]
+targets: [ai-supercomputer, cloud-science-environments, hpc-processors]
+summary_ko: "여러 클라우드 사업자에 걸친 대규모 GPU 학습 인프라의 신뢰성을 다룸. 기존 GPU 결함 연구는 사업자를 넘나드는 장애 관리의 자동화나 지속적 개선 방법을 설명하지 않음. 확장 자동화, 사업자별 조치가 붙은 장애 분류, 반복 고장 노드 관리의 세 축으로 된 수리 체계를 소개하고, 수리 시간, 자동 분류 성공률, 노드 재발률의 지표와 파레토 기반 개선 방법을 제시함."
+claims:
+  - "주요 사업자 전체에 걸친 연간 약 10억 GPU 시간 규모의 학습 인프라를 운영함."
+  - "가용성 98% 이상인 세 사업자의 운영 클러스터 셋을 대상으로 함."
+  - "5~7개월간 노드 5,065대의 장애 19,564건을 분석함."

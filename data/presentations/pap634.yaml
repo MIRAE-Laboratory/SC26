@@ -1,0 +1,15 @@
+id: pap634
+type: Presentation
+kind: paper
+label: "Practical HPCQC Integration with QDMI: A Real-Hardware Case Study with IQM Systems"
+session: sess234
+time: "13:30-13:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess234&id=pap634"
+authors: [lukas-burgholzer, marcel-walter, patrick-hopf, alvaro-caride-tabares-sanchez, teemu-mattsson, bernd-hoffmann, noora-farkkila, daniel-bulmash, robert-wille, eric-mansfield]
+addresses: [quantum-hpc-integration, vendor-dependence]
+proposes: [quantum-resource-interface]
+targets: [quantum-hpc-systems, job-scheduler]
+summary_ko: "양자 컴퓨터가 HPC 센터로 들어오면서 주된 걸림돌이 접근이 아니라 통합이 됐다고 봄. 지금의 소프트웨어 경로는 사용자 도구, 스케줄러, 장치 인터페이스를 잇는 벤더별 연결 사슬에 기대어 운영을 어렵게 함. 양자 장치 관리 인터페이스(QDMI)에 기반한 통합 경로를 제안하고, 초전도 장치를 사례로 인터페이스 계층을 만들어 배치 스케줄러 기반 작업 실행과 기존 사용자 워크플로에 연결함."
+claims:
+  - "구현을 공개 저장소에 올림."
+  - "소프트웨어와 하드웨어의 경계를 표준화하면 스택의 많은 부분을 사업자와 배치 방식을 넘어 다시 쓸 수 있다고 주장함. 모든 과제를 푼다고 주장하지는 않음. 공개 초록에는 수치가 없음."

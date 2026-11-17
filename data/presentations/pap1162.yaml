@@ -1,0 +1,15 @@
+id: pap1162
+type: Presentation
+kind: paper
+label: "Characterizing the Scalability and Performance of Large-Scale AI Training Under Multi-Tenancy"
+session: sess227
+time: "11:37-12:00"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap1162"
+authors: [jacopo-raffi, thomas-pasquali, lorenzo-piarulli, filippo-spiga, marco-faltelli, andreas-herten, domenico-siracusa, daniele-de-sensi, flavio-vella]
+addresses: [llm-training-scaling, network-congestion, benchmark-validity]
+proposes: [comparative-benchmarking, system-simulation]
+targets: [distributed-training, hpc-network, ai-supercomputer]
+summary_ko: "AI 워크로드가 최신 HPC 시스템에서 단독으로 돌 때와 다른 작업과 자원을 나눌 때 어떻게 거동하는지 조사함. 병렬화 전략, 네트워크 혼잡, 계산 능력, 인터커넥트 기술의 상호작용을 보고, 동시에 도는 학습 작업의 간섭을 현실적인 잡음 모델로 모델링함. AI 모델의 벤치마크 모음을 만들어 병렬화 전략 다섯을 평가함."
+claims:
+  - "GPU 2,400장까지 확장성을 시험함."
+  - "유럽의 슈퍼컴퓨터 넷과 최신 랙 규모 시스템 등 여섯 환경에서 평가함. 공개 초록에는 성능 결과 수치가 없음."

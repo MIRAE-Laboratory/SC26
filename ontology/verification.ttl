@@ -36,6 +36,7 @@
 :t-surrogate rdf:type :Target ; rdfs:label "신경망 대리모델"@ko ; skos:broader :t-ai-model .
 :t-fm-rollout rdf:type :Target ; rdfs:label "파운데이션 모델의 연속 예측"@ko ; skos:broader :t-ai-model .
 :t-training-run rdf:type :Target ; rdfs:label "대규모 학습 작업"@ko ; skos:broader :t-ai-model .
+:t-inference-run rdf:type :Target ; rdfs:label "대규모 LLM 추론"@ko ; skos:broader :t-ai-model .
 :t-agent rdf:type :Target ; rdfs:label "에이전트"@ko .
 :t-agent-action rdf:type :Target ; rdfs:label "에이전트의 도구 호출과 제어 행동"@ko ; skos:broader :t-agent .
 :t-agent-answer rdf:type :Target ; rdfs:label "에이전트의 답과 인용"@ko ; skos:broader :t-agent .
@@ -49,6 +50,7 @@
 :t-platform rdf:type :Target ; rdfs:label "시스템 플랫폼"@ko .
 :t-node-perf rdf:type :Target ; rdfs:label "노드와 소프트웨어 스택의 성능"@ko ; skos:broader :t-platform .
 :t-hardware-fault rdf:type :Target ; rdfs:label "하드웨어 결함 거동"@ko ; skos:broader :t-platform .
+:t-memory-hw rdf:type :Target ; rdfs:label "메모리 장치"@ko ; skos:broader :t-platform .
 
 :f-visible rdf:type :FailureMode ; rdfs:label "스스로 드러나는 실패"@ko .
 :f-crash rdf:type :FailureMode ; rdfs:label "크래시와 실행 실패"@ko ; skos:broader :f-visible .
@@ -114,6 +116,8 @@
 :m-runtime-monitor rdf:type :VerificationMethod ; rdfs:label "실행 중 감시"@ko .
 :m-exec-guard rdf:type :VerificationMethod ; rdfs:label "모델 밖의 결정론적 실행 검사와 중재"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :requires :a-policy ; :appliesTo :t-agent ; skos:closeMatch kg:execution-integrity-guard , kg:runtime-sandbox .
 :m-residual-monitor rdf:type :VerificationMethod ; rdfs:label "실측과의 잔차 감시"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :requires :a-live-sensor ; :appliesTo :t-ai-model ; skos:closeMatch kg:residual-monitoring .
+:m-symptom-monitor rdf:type :VerificationMethod ; rdfs:label "핵심 층의 활성값 징후 감시"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :requires :a-fault-set ; :appliesTo :t-ai-model ; skos:closeMatch kg:residual-monitoring .
+:m-ecc rdf:type :VerificationMethod ; rdfs:label "오류 정정 부호"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :appliesTo :t-platform .
 :m-fp-exception rdf:type :VerificationMethod ; rdfs:label "부동소수점 예외 검출"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :appliesTo :t-code ; skos:closeMatch kg:fp-exception-detection .
 :m-checksum rdf:type :VerificationMethod ; rdfs:label "물리 기반 체크섬"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :requires :a-physics-eq ; :appliesTo :t-code .
 :m-run-evidence rdf:type :VerificationMethod ; rdfs:label "실행 증거 남기기(재생 가능한 기록)"@ko ; skos:broader :m-runtime-monitor ; :deterministic true ; :assuranceLevel "runtime" ; :requires :a-exec-log ; :appliesTo :t-code , :t-ai-model , :t-agent , :t-workflow ; skos:closeMatch kg:provenance-logging .
@@ -161,27 +165,32 @@
 :case-32 rdf:type :VerificationCase ; :usesMethod :m-checksum ; :onTarget :t-sci-app ; :concernsFailure :f-sdc ; :outcome "caught" ; :evidencedBy kg:ws_ftxs104 ; rdfs:comment "물리 기반 체크섬이 노드에서 손상을 잡음"@ko .
 :case-33 rdf:type :VerificationCase ; :usesMethod :m-fault-injection ; :onTarget :t-training-run ; :concernsFailure :f-sdc ; :outcome "used" ; :evidencedBy kg:ws_ftxs106 ; rdfs:comment "정밀도를 낮춘 모델의 비트 반전 민감도 조사"@ko .
 :case-34 rdf:type :VerificationCase ; :usesMethod :m-fault-injection ; :onTarget :t-hardware-fault ; :concernsFailure :f-sdc ; :outcome "partial" ; :evidencedBy kg:ws_hpct102 ; rdfs:comment "결과 레이블이 같아도 플랫폼마다 동작이 다름"@ko .
-:case-35 rdf:type :VerificationCase ; :usesMethod :m-compile-run ; :onTarget :t-compiler ; :concernsFailure :f-wrong-result ; :outcome "missed" ; :evidencedBy kg:ws_hpct108 ; rdfs:comment "조용히 틀린 답 15개의 42%가 컴파일·실행 시험을 통과"@ko .
-:case-36 rdf:type :VerificationCase ; :usesMethod :m-output-compare ; :onTarget :t-compiler ; :concernsFailure :f-wrong-result ; :outcome "caught" ; :evidencedBy kg:ws_hpct108 ; rdfs:comment "운영 중인 유동 해석 코드를 시험 도구로 써서 결함 45개 발견"@ko .
-:case-37 rdf:type :VerificationCase ; :usesMethod :m-continuous-bench ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :outcome "caught" ; :evidencedBy kg:ws_hpct110 ; rdfs:comment "사양이 같은 노드 사이 편차 5%"@ko .
-:case-38 rdf:type :VerificationCase ; :usesMethod :m-continuous-bench ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :outcome "caught" ; :evidencedBy kg:ws_hpct105 ; rdfs:comment "회귀를 GPU 런타임 갱신에 귀속"@ko .
-:case-39 rdf:type :VerificationCase ; :usesMethod :m-residual-monitor ; :onTarget :t-surrogate ; :concernsFailure :f-out-of-domain ; :outcome "caught" ; :evidencedBy kg:ws_xloop106 ; rdfs:comment "영역 밖 운용을 와류 방출 6주기 안에 탐지"@ko .
-:case-40 rdf:type :VerificationCase ; :usesMethod :m-physics-constraint ; :onTarget :t-surrogate ; :concernsFailure :f-physical-violation ; :outcome "partial" ; :evidencedBy kg:ws_ai4s139 ; rdfs:comment "제약 위반이 약 19배 줄어듦"@ko .
-:case-41 rdf:type :VerificationCase ; :usesMethod :m-residual-monitor ; :onTarget :t-fm-rollout ; :concernsFailure :f-error-accumulation ; :outcome "caught" ; :evidencedBy kg:ws_ai4s140 ; rdfs:comment "센서와의 차이가 임계를 넘으면 보정"@ko .
-:case-42 rdf:type :VerificationCase ; :usesMethod :m-tool-in-loop ; :onTarget :t-llm-proposal ; :concernsFailure :f-physical-violation ; :outcome "partial" ; :evidencedBy kg:ws_aaihpc117 ; rdfs:comment "합성 결과 예측 정확도 12%에서 40%"@ko .
-:case-43 rdf:type :VerificationCase ; :usesMethod :m-schema-guard ; :onTarget :t-agent-action ; :concernsFailure :f-invalid-invocation ; :outcome "caught" ; :evidencedBy kg:ws_worksp110 ; rdfs:comment "입력이 불완전하면 실행을 막음"@ko .
-:case-44 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-action ; :concernsFailure :f-unsafe-action ; :outcome "partial" ; :evidencedBy kg:ws_aaihpc132 ; rdfs:comment "고정 공격 32개 중 19개 차단"@ko .
-:case-45 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :outcome "caught" ; :evidencedBy kg:ws_aaihpc132 ; rdfs:comment "송신 차단을 더해 위조 인용 5개를 모두 막음"@ko .
-:case-46 rdf:type :VerificationCase ; :usesMethod :m-prompt-only ; :onTarget :t-agent-action ; :concernsFailure :f-unsafe-action ; :outcome "missed" ; :evidencedBy kg:ws_tpw139 ; rdfs:comment "프롬프트만 쓴 기준은 위반 15건"@ko .
-:case-47 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-action ; :concernsFailure :f-unsafe-action ; :outcome "caught" ; :evidencedBy kg:ws_tpw139 ; rdfs:comment "위반 200건 중 0건"@ko .
-:case-48 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-action ; :concernsFailure :f-fake-work ; :outcome "caught" ; :evidencedBy kg:ws_tpw139 ; rdfs:comment "실제로 돌지 않은 도구 호출의 결과를 차단"@ko .
-:case-49 rdf:type :VerificationCase ; :usesMethod :m-llm-eval-hybrid ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :outcome "partial" ; :evidencedBy kg:ws_tpw111 ; rdfs:comment "검증 에이전트가 인용을 추적해 채점 오차를 줄임"@ko .
-:case-50 rdf:type :VerificationCase ; :usesMethod :m-multi-resolution ; :onTarget :t-power-measure ; :concernsFailure :f-measure-error ; :outcome "caught" ; :evidencedBy kg:ws_eesp144 ; rdfs:comment "성긴 계측이 오류 표시 없이 틀린 값을 냄을 세 해상도 동시 기록으로 확인"@ko .
-:case-51 rdf:type :VerificationCase ; :usesMethod :m-cross-vendor ; :onTarget :t-hw-counter ; :concernsFailure :f-measure-error ; :outcome "caught" ; :evidencedBy kg:ws_prot109 ; rdfs:comment "이름이 같은 계수기가 최대 3.19배 다르게 보고"@ko .
+:case-35 rdf:type :VerificationCase ; :usesMethod :m-fault-injection ; :onTarget :t-training-run ; :concernsFailure :f-sdc ; :outcome "used" ; :evidencedBy kg:pap134 ; rdfs:comment "학습 7"@ko .
+:case-36 rdf:type :VerificationCase ; :usesMethod :m-symptom-monitor ; :onTarget :t-inference-run ; :concernsFailure :f-sdc ; :outcome "caught" ; :evidencedBy kg:pap435 ; rdfs:comment "LLM 15개에서 평균 검출 범위 95.3%"@ko .
+:case-37 rdf:type :VerificationCase ; :usesMethod :m-ecc ; :onTarget :t-memory-hw ; :concernsFailure :f-sdc ; :outcome "partial" ; :evidencedBy kg:pap186 ; rdfs:comment "두 층의 부호를 협력시켜 조용한 손상률을 최대 430배 줄임"@ko .
+:case-38 rdf:type :VerificationCase ; :usesMethod :m-fault-injection ; :onTarget :t-hardware-fault ; :concernsFailure :f-sdc ; :outcome "partial" ; :evidencedBy kg:pap521 ; rdfs:comment "같은 결함이 세 벤더의 GPU에서 다르게 거동함"@ko .
+:case-39 rdf:type :VerificationCase ; :usesMethod :m-compile-run ; :onTarget :t-compiler ; :concernsFailure :f-wrong-result ; :outcome "missed" ; :evidencedBy kg:ws_hpct108 ; rdfs:comment "조용히 틀린 답 15개의 42%가 컴파일·실행 시험을 통과"@ko .
+:case-40 rdf:type :VerificationCase ; :usesMethod :m-output-compare ; :onTarget :t-compiler ; :concernsFailure :f-wrong-result ; :outcome "caught" ; :evidencedBy kg:ws_hpct108 ; rdfs:comment "운영 중인 유동 해석 코드를 시험 도구로 써서 결함 45개 발견"@ko .
+:case-41 rdf:type :VerificationCase ; :usesMethod :m-continuous-bench ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :outcome "caught" ; :evidencedBy kg:ws_hpct110 ; rdfs:comment "사양이 같은 노드 사이 편차 5%"@ko .
+:case-42 rdf:type :VerificationCase ; :usesMethod :m-continuous-bench ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :outcome "caught" ; :evidencedBy kg:ws_hpct105 ; rdfs:comment "회귀를 GPU 런타임 갱신에 귀속"@ko .
+:case-43 rdf:type :VerificationCase ; :usesMethod :m-residual-monitor ; :onTarget :t-surrogate ; :concernsFailure :f-out-of-domain ; :outcome "caught" ; :evidencedBy kg:ws_xloop106 ; rdfs:comment "영역 밖 운용을 와류 방출 6주기 안에 탐지"@ko .
+:case-44 rdf:type :VerificationCase ; :usesMethod :m-physics-constraint ; :onTarget :t-surrogate ; :concernsFailure :f-physical-violation ; :outcome "partial" ; :evidencedBy kg:ws_ai4s139 ; rdfs:comment "제약 위반이 약 19배 줄어듦"@ko .
+:case-45 rdf:type :VerificationCase ; :usesMethod :m-residual-monitor ; :onTarget :t-fm-rollout ; :concernsFailure :f-error-accumulation ; :outcome "caught" ; :evidencedBy kg:ws_ai4s140 ; rdfs:comment "센서와의 차이가 임계를 넘으면 보정"@ko .
+:case-46 rdf:type :VerificationCase ; :usesMethod :m-tool-in-loop ; :onTarget :t-llm-proposal ; :concernsFailure :f-physical-violation ; :outcome "partial" ; :evidencedBy kg:ws_aaihpc117 ; rdfs:comment "합성 결과 예측 정확도 12%에서 40%"@ko .
+:case-47 rdf:type :VerificationCase ; :usesMethod :m-schema-guard ; :onTarget :t-agent-action ; :concernsFailure :f-invalid-invocation ; :outcome "caught" ; :evidencedBy kg:ws_worksp110 ; rdfs:comment "입력이 불완전하면 실행을 막음"@ko .
+:case-48 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-action ; :concernsFailure :f-unsafe-action ; :outcome "partial" ; :evidencedBy kg:ws_aaihpc132 ; rdfs:comment "고정 공격 32개 중 19개 차단"@ko .
+:case-49 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :outcome "caught" ; :evidencedBy kg:ws_aaihpc132 ; rdfs:comment "송신 차단을 더해 위조 인용 5개를 모두 막음"@ko .
+:case-50 rdf:type :VerificationCase ; :usesMethod :m-prompt-only ; :onTarget :t-agent-action ; :concernsFailure :f-unsafe-action ; :outcome "missed" ; :evidencedBy kg:ws_tpw139 ; rdfs:comment "프롬프트만 쓴 기준은 위반 15건"@ko .
+:case-51 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-action ; :concernsFailure :f-unsafe-action ; :outcome "caught" ; :evidencedBy kg:ws_tpw139 ; rdfs:comment "위반 200건 중 0건"@ko .
+:case-52 rdf:type :VerificationCase ; :usesMethod :m-exec-guard ; :onTarget :t-agent-action ; :concernsFailure :f-fake-work ; :outcome "caught" ; :evidencedBy kg:ws_tpw139 ; rdfs:comment "실제로 돌지 않은 도구 호출의 결과를 차단"@ko .
+:case-53 rdf:type :VerificationCase ; :usesMethod :m-llm-eval-hybrid ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :outcome "partial" ; :evidencedBy kg:ws_tpw111 ; rdfs:comment "검증 에이전트가 인용을 추적해 채점 오차를 줄임"@ko .
+:case-54 rdf:type :VerificationCase ; :usesMethod :m-multi-resolution ; :onTarget :t-power-measure ; :concernsFailure :f-measure-error ; :outcome "caught" ; :evidencedBy kg:ws_eesp144 ; rdfs:comment "성긴 계측이 오류 표시 없이 틀린 값을 냄을 세 해상도 동시 기록으로 확인"@ko .
+:case-55 rdf:type :VerificationCase ; :usesMethod :m-cross-vendor ; :onTarget :t-hw-counter ; :concernsFailure :f-measure-error ; :outcome "caught" ; :evidencedBy kg:ws_prot109 ; rdfs:comment "이름이 같은 계수기가 최대 3.19배 다르게 보고"@ko .
 :obs-01 rdf:type :Observation ; :onTarget :t-training-run ; :concernsFailure :f-silent-training ; :evidencedBy kg:ws_tpw126 ; rdfs:comment "손실 값을 조용히 틀리게 보고하는 버그"@ko .
 :obs-02 rdf:type :Observation ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :evidencedBy kg:ws_aaihpc146 ; rdfs:comment "사실을 가장 많이 찾는 구성이 답할 수 없는 질문을 가장 적게 거절"@ko .
 :obs-03 rdf:type :Observation ; :onTarget :t-benchmark-score ; :concernsFailure :f-measure-error ; :evidencedBy kg:ws_pmbss101 ; rdfs:comment "종합 점수가 단계별 관계를 가림"@ko .
 :obs-04 rdf:type :Observation ; :onTarget :t-benchmark-score ; :concernsFailure :f-measure-error ; :evidencedBy kg:ws_exampi107 ; rdfs:comment "자동 튜닝의 벤치마크가 제약 때문에 조용히 대체된 다른 알고리즘을 측정함"@ko .
-:obs-05 rdf:type :Observation ; :onTarget :t-parallel-comm ; :concernsFailure :f-concurrency ; :evidencedBy kg:ws_corr_sh101 ; rdfs:comment "통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건"@ko .
-:obs-06 rdf:type :Observation ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :evidencedBy kg:ws_pmbsf137 ; rdfs:comment "사양이 같은 장치의 에너지가 36.9% 차이"@ko .
-:obs-07 rdf:type :Observation ; :onTarget :t-llm-proposal ; :concernsFailure :f-ungrounded ; :evidencedBy kg:ws_tpw120 ; rdfs:comment "새 발견을 끝까지 스스로 검증한 시스템이 없음"@ko .
+:obs-05 rdf:type :Observation ; :onTarget :t-agent-answer ; :concernsFailure :f-ungrounded ; :evidencedBy kg:pap908 ; rdfs:comment "통찰을 내는 과제에서는 조율을 더해도 신뢰도가 오르지 않음"@ko .
+:obs-06 rdf:type :Observation ; :onTarget :t-parallel-comm ; :concernsFailure :f-concurrency ; :evidencedBy kg:ws_corr_sh101 ; rdfs:comment "통신 라이브러리에서 정의되지 않은 동작이 관측되는 조건"@ko .
+:obs-07 rdf:type :Observation ; :onTarget :t-node-perf ; :concernsFailure :f-regression ; :evidencedBy kg:ws_pmbsf137 ; rdfs:comment "사양이 같은 장치의 에너지가 36.9% 차이"@ko .
+:obs-08 rdf:type :Observation ; :onTarget :t-llm-proposal ; :concernsFailure :f-ungrounded ; :evidencedBy kg:ws_tpw120 ; rdfs:comment "새 발견을 끝까지 스스로 검증한 시스템이 없음"@ko .

@@ -1,0 +1,16 @@
+id: pap117
+type: Presentation
+kind: paper
+label: "PHANTOM: Phase-Aware Power Management for Energy-Efficient LLM Training"
+session: sess227
+time: "10:30-10:52"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap117"
+authors: [qi-luo, kunlin-li, changxi-liu, dongsheng-wang, yun-chen]
+addresses: [energy-performance-tradeoff, power-measurement-fidelity]
+proposes: [frequency-steering, rl-power-control]
+targets: [distributed-training, power-telemetry]
+summary_ko: "GPU 기반 LLM 학습의 높은 에너지 사용과 급격한 전력 변동을 다룸. 지금의 GPU 전력 관리는 대개 반응형이고 학습 반복 안에서 되풀이되는 단계 구조를 무시함. PHANTOM은 다중 GPU 학습을 위한 예측형, 단계 인지 전압·주파수 조절 틀로, 가벼운 시간 합성곱 망으로 단기 GPU 전력을 예측하고 다목적 최적화로 단계 전환 전에 주파수를 고름."
+claims:
+  - "기본 하드웨어 정책 대비 에너지를 15~16% 줄임."
+  - "정규화한 전력 변화율을 9~15%, 에너지-지연 곱을 10~11% 줄임."
+  - "학습 워크플로를 고치지 않고 온라인으로 쓸 수 있을 만큼 가벼움."

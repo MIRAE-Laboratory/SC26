@@ -1,0 +1,17 @@
+id: pap908
+type: Presentation
+kind: paper
+label: "Understanding Reliability Bottlenecks in LLM Agents for HPC I/O Telemetry Analysis"
+session: sess201
+time: "11:15-11:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess201&id=pap908"
+authors: [chris-egersdoerfer, orcun-yildiz, kevin-harms, robert-latham, robert-ross, dong-dai]
+addresses: [ops-data-complexity, llm-domain-validity, agent-inference-cost]
+proposes: [domain-benchmark, llm-ops-assistant, context-retrieval]
+targets: [ai-agents, ops-telemetry, hpc-storage-systems]
+summary_ko: "HPC 시설은 입출력 텔레메트리를 많이 모으지만 이를 운영자의 통찰로 바꾸는 일은 전문가의 수작업임. 도구를 쓰는 LLM 에이전트가 현실적인 텔레메트리 분석 과제에서 얼마나 믿을 만한지 조사함. 평가 틀 CIODI-Bench는 Polaris의 2년 넘는 공개 운영 텔레메트리로 만든 전문가 과제 49개임."
+claims:
+  - "신뢰도의 주된 병목은 과제의 구조에 따라 다름."
+  - "제한된 추출 과제에서는 정리된 의미 정보를 주자 성능이 73.0%에서 93.5%로 오름."
+  - "데이터 분석 과제에서는 절차를 아는 검토가 기준보다 13.2% 나음."
+  - "통찰을 내는 과제에서는 조율을 더해도 나아지지 않고 출력 비용이 약 3배가 됨."

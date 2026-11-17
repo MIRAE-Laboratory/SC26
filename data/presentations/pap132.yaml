@@ -1,0 +1,16 @@
+id: pap132
+type: Presentation
+kind: paper
+label: "Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-Scale MoE Serving"
+session: sess235
+time: "10:52-11:15"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess235&id=pap132"
+authors: [ziming-liu, boyu-tian, guoteng-wang, zhen-jiang, peng-sun, zhenhua-han, tian-tang, xiaohe-hu, yanmin-jia, yan-zhang, he-liu, mingjun-zhang, yiqi-zhang, qiaoling-chen, shenggan-cheng, mingyu-gao, yang-you, siyuan-feng]
+addresses: [llm-serving-efficiency, failure-resilience]
+proposes: [serving-disaggregation, decoupled-service-ecosystem, resilient-campaign-execution]
+targets: [llm-inference, ai-supercomputer]
+summary_ko: "전문가 혼합(MoE) 모델은 전문가를 드문드문 예측 불가하게 활성화해, 밀집 구조에 맞춘 서빙 시스템을 불안정하게 함. EaaS는 MoE 모듈을 독립된 상태 없는 서비스로 나눠 각각 따로 확장하게 하고, 계산 단위가 분리되어 하나의 장애가 전체를 멈추지 않게 함. CPU에 기대지 않는 고성능 P2P 통신 라이브러리로 부담을 낮춤."
+claims:
+  - "통짜 구조를 멈추게 할 모의 하드웨어 장애에서 처리량 손실이 2% 미만임."
+  - "서빙 트래픽에 맞춰 자원을 조정해 계산 자원을 최대 37.5% 아낌."
+  - "성능은 통짜 시스템과 비슷하다고 보고함."

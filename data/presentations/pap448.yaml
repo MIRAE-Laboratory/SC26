@@ -1,0 +1,16 @@
+id: pap448
+type: Presentation
+kind: paper
+label: "Cross-Layer Energy Analysis of Multimodal Training on Grace Hopper Superchips"
+session: sess227
+time: "11:15-11:37"
+url: "https://sc26.conference-program.com/?post_type=page&p=16&sess=sess227&id=pap448"
+authors: [mahmoud-ahmed, sameh-abdulah, olatunji-ruwase, sam-ade-jacobs, mathis-bode, mohamed-elhoseiny, david-e-keyes]
+addresses: [energy-performance-tradeoff, memory-bound-performance]
+proposes: [energy-profiling, cross-layer-tracing]
+targets: [distributed-training, hpc-processors]
+summary_ko: "글, 이미지, 영상을 함께 다루는 다중 모달 학습은 모델과 시퀀스가 커지며 메모리와 데이터 이동의 한계에 부딪힘. CPU로 내리기, 활성값 체크포인트, 시퀀스 병렬화가 이를 풀지만 통신과 시스템 활동을 더해 에너지 효율을 바꿈. 통합 칩 시스템에서 응용, 런타임, 하드웨어 세 층에 걸쳐 전력, 에너지, 실행 시간, 처리량을 측정함."
+claims:
+  - "에너지 효율은 가속기 사용률이 아니라 데이터 이동과 계산·통신의 겹침에 주로 달려 있음."
+  - "가장 빠른 구성이 항상 가장 에너지 효율적이지는 않음."
+  - "내리기 방식, 시퀀스 병렬화 정도, 하드웨어 인지 일정의 선택 지침을 제시함. 공개 초록에는 수치가 없음."
